@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 07 — The SPA: Structure, Recitals &amp; Definitions · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="07">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 07</div>
+    <h1>The SPA: Structure, Recitals &amp; Definitions</h1>
+    <p class="subtitle">The architecture of a private-company Sale and Purchase Agreement, the legal status of recitals, and the small number of definitions that quietly drive the deal economics.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Walk through the conventional architecture of a private-company <span class="term" data-term="spa">Sale and Purchase Agreement (SPA)</span>, block by block, and explain what each block does and why it sits where it sits.</li>
+      <li>Distinguish <span class="term" data-term="recitals">recitals</span> from operative provisions and explain the legal status of recitals under English and Delaware law (interpretive aid; not themselves operative; can give rise to <span class="term" data-term="estoppel-by-deed">estoppel by deed</span> in limited circumstances).</li>
+      <li>Read and use a definitions schedule competently — recognise drafting conventions ("means" vs. "includes", "shall mean", capitalisation), identify the small number of definitions that drive the deal economics, and spot pitfalls in cross-references.</li>
+      <li>Distinguish the four kinds of schedules / annexes / exhibits attached to an SPA — <span class="term" data-term="disclosure-schedules">Disclosure Schedules</span>, Operative Schedules, Form Schedules, Closing Deliverables Schedules — and know what role each plays.</li>
+      <li>Read the source-deck "Loss" definition, "Closing EBITDA" formula and "Audit Expert" definition critically; understand the negotiation that sits behind each.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The SPA is the contract that allocates risk between buyer and seller and governs the exchange of money for shares. It is also a document that is read, in anger, only when something has gone wrong — by litigators, by tax authorities, by indemnity claimants. Every word matters. Industry folklore reports eight-figure losses turning on comma placement and missing cross-references in indemnity definitions; a missing cross-reference in the definition of "Permitted Leakage" can convert what was a clean walk-away into months of litigation. The architecture and the definitions are the foundations on which everything else — the warranties, the indemnification regime, the closing mechanics, the price adjustment — rest. Get them wrong and nothing else can save you.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A partner drops one of these phrases in a definitions walk-through, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Are we on a tipping basket or a true deductible?"</strong> &mdash; a <span class="term" data-term="tipping-basket">tipping basket</span> means once the threshold is crossed, the seller pays from dollar one; a <span class="term" data-term="true-deductible">true deductible</span> means the seller pays only the excess above the threshold. Same number, very different economics.</li>
+      <li><strong>"Is there a knowledge scrape?"</strong> &mdash; a <span class="term" data-term="knowledge-scrape">knowledge scrape</span> is a buyer-side win that strips the "to the seller's knowledge" qualifier from each warranty for the purposes of calculating losses (the qualifier still gates whether there has been a breach but does not gate damages).</li>
+      <li><strong>"What's the survival on tax?"</strong> &mdash; how long after closing can a tax warranty still be the basis for a claim? Often the longer of 6&ndash;7 years or the relevant statute of limitations; <span class="term" data-term="fundamental-rw">fundamental representations</span> often run perpetually or to the contract limitation.</li>
+      <li><strong>"Are we sandbagging-friendly?"</strong> &mdash; can the buyer claim damages on a warranty it knew was breached at signing? Delaware default leans <strong>pro-sandbagging</strong> (silence helps the buyer); UK / English law default leans <strong>anti-sandbagging</strong>. The clause to look for is the express pro- or anti-sandbagging provision.</li>
+      <li><strong>"What's our Disclosure Letter bring-down at closing?"</strong> &mdash; in UK practice the Disclosure Letter is generally locked at signing, but PE seller deals increasingly permit a closing-date <span class="term" data-term="bring-down-disclosure">bring-down disclosure</span> that updates the schedules; the buyer's leverage is whether updates "cure" only the bring-down condition or also indemnification.</li>
+      <li><strong>"Specific indemnity escrow on the environmental issue?"</strong> &mdash; a known issue carved out of the cap and held in escrow as a dollar-one specific indemnity, not a warranty claim.</li>
+      <li><strong>"What's the fundamental rep cap?"</strong> &mdash; fundamental representations (title, capacity, no insolvency, ownership) are typically capped at the <em>full purchase price</em> rather than the lower general-warranty cap; non-fundamentals at 10&ndash;25% of purchase price.</li>
+      <li><strong>"Is the MAC carve-out post-COVID style?"</strong> &mdash; does the carve-out list explicitly include "pandemics, epidemics or public-health emergencies" with a disproportionate-effect qualifier, or is COVID excluded only by silence?</li>
+    </ul>
+  </aside>
+
+  <h2>The conventional architecture of a private SPA</h2>
+
+  <p>Most private-company SPAs follow a recognisable structure, though the precise order differs by jurisdiction and house style. The source deck (an Italian-law-flavoured SPA from the Ughi e Nunziante / Accuracy course) groups the document into the following blocks, which translate cleanly into both UK and US practice:</p>
+
+  <ol>
+    <li><strong>Epigraph and parties</strong> (also "Preamble"). The first paragraph(s) identifying the document, the date, and each party with full legal name, registered seat, identifying number (Company number in UK; jurisdiction-of-incorporation in US; <em>codice fiscale</em> / <em>partita IVA</em> in Italy; <em>Registergericht</em> and HRB number in Germany), and the capacity in which each is acting (e.g. "in its capacity as Seller of the Shares").</li>
+    <li><strong><span class="term" data-term="recitals">Recitals</span></strong> (UK / EU usage) — also called <strong>"<span class="term" data-term="whereas-clauses">Whereas clauses</span>"</strong> in US practice. A series of background paragraphs introduced by "Whereas" or "It is acknowledged that…" setting out the factual matrix and the parties' intent.</li>
+    <li><strong><span class="term" data-term="defined-terms">Definitions</span></strong>. A schedule (sometimes inline as Article 1) listing every defined term used in capitalised form throughout the agreement.</li>
+    <li><strong>Object / Commitment to sell</strong> (Article 3 in the source deck). The operative obligation: who sells what to whom for what.</li>
+    <li><strong>Purchase price and price-adjustment mechanic</strong>. The locked-box or completion-accounts machinery, including the formula and any earn-out (covered in detail in Module 11).</li>
+    <li><strong>Conditions Precedent (CPs)</strong>. The matters that must be satisfied or waived before closing is required (Module 08).</li>
+    <li><strong>Interim management / Conduct of Business covenants</strong>. Constraints on how the seller runs the target between signing and closing (Module 09).</li>
+    <li><strong>Closing</strong> (Article 5 in the source deck). The choreography of the closing meeting — what is delivered by whom, in what order (Module 10).</li>
+    <li><strong>Post-closing covenants</strong>. Non-compete, non-solicit, transitional services, post-closing tax filings, integration support.</li>
+    <li><strong>Representations and Warranties (R&amp;Ws)</strong>. Statements of fact about the target as at signing and / or closing (Module 12).</li>
+    <li><strong>Indemnification</strong>. The damages regime: what is recoverable, by whom, against what limits, with what survival period (Module 13).</li>
+    <li><strong>Miscellaneous (also "Boilerplate")</strong>. Notices, assignment, severability, entire agreement, no third-party beneficiaries, counterparts, language.</li>
+    <li><strong>Governing law and dispute resolution / arbitration</strong> (Module 16).</li>
+  </ol>
+
+  <h2>Recitals — the "Whereas" paragraphs</h2>
+
+  <p>A recital is a narrative paragraph that frames the operative deal. It typically explains: who the seller is and how it came to own the shares; who the target is and what it does; that the buyer wants to acquire and the seller wants to sell; that the parties have negotiated and reached agreement.</p>
+
+  <h3>Legal status — UK</h3>
+
+  <p>Under English law, recitals are not themselves operative provisions and cannot create rights or obligations independently. They are admissible as an aid to construction of the operative parts when there is ambiguity (the "factual matrix" doctrine, <em>Investors Compensation Scheme Ltd v. West Bromwich Building Society</em> [1998] 1 WLR 896, House of Lords; <em>Mannai Investment Co. Ltd v. Eagle Star Life Assurance Co. Ltd</em> [1997] AC 749, on the principle that contracts are read as a reasonable person with the parties' background knowledge would read them). Where an operative provision is clear, however, recitals cannot be used to contradict it.</p>
+
+  <p>A recital can also give rise to a limited form of <strong><span class="term" data-term="estoppel-by-deed">estoppel by deed</span></strong> — a doctrine preventing a party from denying a fact stated in a deed to which it is a party — provided the recital is a "distinct, precise and unambiguous" statement of fact intended to be the basis of the transaction (<em>Greer v. Kettle</em> [1938] AC 156).</p>
+
+  <h3>Legal status — Delaware</h3>
+
+  <p>Delaware courts treat recitals similarly: not themselves operative, but admissible as evidence of the parties' intent and as an aid to interpretation of ambiguous operative provisions. <em>Riverbend Community, LLC v. Green Stone Engineering, LLC</em> (Del. Super. 2012, Slights, J.), aff'd, 55 A.3d 330 (Del. 2012) is the conventional citation: recitals can inform the court's reading of the operative agreement but cannot create independent obligations. The Delaware Chancery has also confirmed that recitals can supply factual context relevant to specific-performance and fraud-in-the-inducement claims.</p>
+
+  <aside class="lever">
+    <h5>Negotiation lever — recitals</h5>
+    <div class="row">
+      <div><strong>Buyer wants:</strong> factual recitals that lock in seller's pre-contractual representations about the business — e.g. "Whereas the Seller is the sole legal and beneficial owner of the Sale Shares" — so that any inaccuracy supports a fraud or misrepresentation claim independently of the warranties.</div>
+      <div><strong>Seller wants:</strong> minimal, neutral recitals; expressly state that recitals are background only and not operative; "non-reliance" / "entire agreement" carve-outs in the boilerplate.</div>
+      <div><strong>Typical compromise:</strong> brief, factual recitals; an express interpretation clause confirming that recitals form part of the agreement and may be used to construe the operative provisions; entire-agreement clause that does not exclude liability for fraud (because such an exclusion is generally unenforceable in both England — <em>HIH Casualty v. Chase Manhattan Bank</em> [2003] UKHL 6 — and Delaware — <em>ABRY Partners V, L.P. v. F&amp;W Acquisition LLC</em>, 891 A.2d 1032 (Del. Ch. 2006)).</div>
+    </div>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — recitals</h5>
+    <ul>
+      <li>Reciting facts that are not strictly true ("Whereas the Buyer has conducted full due diligence on the Target" — buyer may not have, and may not want to admit it). Recitals can come back as admissions.</li>
+      <li>Putting binding obligations in recitals by mistake. If a recital says "and the parties agree that…", you have arguably created an operative provision in the wrong place.</li>
+      <li>Forgetting to update recitals when the deal changes between drafts (e.g. the recital still refers to "100% of the issued share capital" after the deal has been recut as 75%).</li>
+    </ul>
+  </aside>
+
+  <h2>Definitions — the SPA's hidden negotiation</h2>
+
+  <p>Every SPA contains a list of capitalised <span class="term" data-term="defined-terms">Defined Terms</span>, usually located as Schedule 1, Article 1, or Annex 1. The convention is uniform: a defined term is signalled by initial capitals throughout the document (e.g. "Closing Date", "Encumbrance", "Loss"). Where a term appears without capitalisation, the natural English meaning applies.</p>
+
+  <h3>"Means" vs. "includes" — a small word with big consequences</h3>
+
+  <ul>
+    <li><strong>"X means [definition]"</strong> — exhaustive. The term has the meaning set out, and nothing else. A buyer who needs maximum scope will resist "means" and push for "includes" or for the addition of broad sweep-up language like "without limitation".</li>
+    <li><strong>"X includes [definition]"</strong> — non-exhaustive. The defined term has at least the meaning set out, but may extend further as context requires.</li>
+    <li><strong>"X shall mean [definition]"</strong> — equivalent in modern drafting to "means". Older British drafting preferred "shall mean"; modern drafting (UK, US, EU) increasingly drops the modal "shall" as a clarity / plain-English improvement. Both are equally enforceable.</li>
+  </ul>
+
+  <aside class="source-deck">
+    <h5>From the source deck — the "Loss" definition</h5>
+    <blockquote>
+      <p><strong>Loss or Losses</strong>: Means any actual losses, damages, liabilities, fines, penalties, costs and expenses, including reasonable attorneys' fees and amounts paid in settlement, suffered or incurred by either the Buyer or any of the Target Companies which is a direct consequence of a breach of any of the representations and warranties indicated in <strong>Annex 8.1</strong>, it being understood that, to the maximum extent permitted under applicable law, in no case any special, indirect, incidental or consequential damages, loss of profits or revenue, loss of goodwill, loss of business or of business opportunity shall be considered as a Loss.</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> defining the universe of recoverable damages on an indemnity claim. What an M&amp;A lawyer reads here:
+      <ol>
+        <li><strong>"actual losses"</strong> — only realised losses count, not contingent or hypothetical ones. Compare with broader US-style drafting that captures "diminution in value of the Shares" or "reduction in EBITDA multiples" — both heavily contested.</li>
+        <li><strong>"Buyer or any of the Target Companies"</strong> — extends standing to claim to the target group, not just the buyer entity. This is buyer-friendly, because losses inside the target are economically the buyer's losses but not directly the buyer's losses in legal form. (Without this, the buyer would have to argue it has suffered loss equal to the diminution in the value of its shares — possible but litigation-heavy.)</li>
+        <li><strong>"direct consequence"</strong> — narrows recoverable loss to those flowing directly from the breach, excluding remote / consequential chains of causation. This is seller-friendly.</li>
+        <li><strong>"in no case…special, indirect, incidental or consequential damages, loss of profits or revenue, loss of goodwill, loss of business or of business opportunity"</strong> — the consequential damages exclusion. Heavily seller-friendly. "Lost profits" is the big one — a buyer seeing 30% revenue collapse after closing would want to claim lost future profits, but the carve-out blocks that. Sophisticated buyers fight to (a) limit the carve-out to <em>unforeseeable</em> indirect losses (preserving foreseeable ones), (b) carve back specific known categories (e.g. tax indemnity loss, leakage loss), or (c) excise the lost-profits exclusion entirely for fraud or specific indemnities.</li>
+      </ol>
+    </div>
+  </aside>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>"Indirect or consequential loss" is a term of art under English law. It does <em>not</em> mean what a businessperson thinks it means — it has been judicially confined to losses that fall within the second limb of <em>Hadley v. Baxendale</em> (1854), i.e. losses arising not naturally from the breach but from special circumstances known to the breaching party. Lost profits that flow naturally from the breach are recoverable as direct loss under English law (<em>Saint Line v. Richardsons</em> [1940] 2 KB 99; <em>British Sugar v. NEI Power Projects</em> (1997) 87 BLR 42). So a UK exclusion of "indirect or consequential" loss may not exclude lost profits at all, contrary to popular assumption.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>"Consequential damages" is interpreted more broadly in US case law (and in UCC §2-715 for goods) to include lost profits as a default. Drafters in the US must explicitly carve out lost profits if that is the intent (which the source-deck definition does, sensibly).</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law systems generally distinguish between direct loss (<em>danno emergente</em> — loss actually suffered) and lost profits (<em>lucro cessante</em> — earnings foregone), with both heads recoverable as a matter of code default unless excluded by the contract. The English term-of-art subtleties of <em>Hadley v. Baxendale</em> do not translate.</p></aside>
+  </div>
+
+  <aside class="source-deck">
+    <h5>From the source deck — the "Closing EBITDA" formula</h5>
+    <blockquote>
+      <p><strong>Closing Ebitda</strong>: Means the adjusted EBITDA of the Target as at the Closing Date, to be calculated using the formula indicated here below, using the data that will arise out of the profit and loss account (<em>conto economico</em>) of the Target as per article 2425 of the Italian Civil Code, as a part of the Closing Accounts of the Target:</p>
+      <p>(+) ITEM A Turnover  €[•]<br>
+      (–) ITEM B Production Costs  €[•]<br>
+      (+) ITEM B10 Amortization and Depreciation (in particular subheadings/items B10a — Amortization of intangible assets; B10b — Depreciation of tangible assets; B10c — Other depreciation of fixed assets)  €[•]<br>
+      (+) ITEM B12 Risk accruals (Excluding events referring to current fiscal year)  €[•]<br>
+      (+) ITEM B13 Other accruals (Excluding events referring to current fiscal year)  €[•]<br>
+      Total  €[•]</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> contractually defining EBITDA so that <span class="term" data-term="closing-ebitda">Closing EBITDA</span> can drive a price adjustment without re-litigating accounting choices. Article 2425 of the Italian Civil Code prescribes the format and line-item content of the statutory profit and loss account (<em>conto economico</em>) for an Italian <em>società per azioni</em> / <em>società a responsabilità limitata</em>. Items A and B are the top-line revenue and production-costs blocks; items B10, B12 and B13 are sub-categories of operating costs (depreciation, risk provisions, other provisions). In <strong>UK practice</strong> the equivalent formula would be tied to FRS 102 (the UK Generally Accepted Accounting Principles framework for medium-sized entities) or, for IFRS adopters, to International Financial Reporting Standards line items. In <strong>US practice</strong> the formula would be tied to US GAAP, with operating income (or "income from operations") as the starting point, plus D&amp;A, plus identified add-backs. Modern SPAs often append a sample EBITDA calculation as a schedule, calculated from the most recent management accounts, with explicit "agreed adjustments" (one-off restructuring costs, transaction expenses, normalised owner compensation) hard-coded into the definition.
+      <br><br>
+      <strong>What an M&amp;A lawyer fights about in this definition:</strong> the accounting standard to be applied (IFRS vs. local GAAP; consistency with prior periods); the definition of "extraordinary" or "non-recurring" — an enormous source of disputes; specific add-backs (management bonuses, transaction-related costs, COVID / one-time disruption add-backs, R&amp;D capitalisation policy); treatment of foreign exchange, pension / lease / share-based-payment adjustments, intercompany pricing adjustments; the role of the "Reporting Accountant" / "Audit Expert" as tie-breaker.
+    </div>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>From the source deck — the "Audit Expert"</h5>
+    <blockquote>
+      <p>The source deck refers to an "<strong>Audit Expert</strong>" — the third-party accountant called in to resolve disputes over the EBITDA / completion-accounts calculation.</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> nominating an independent tie-breaker so that an EBITDA dispute does not have to go to court (or arbitration on the merits). The mechanism used is <span class="term" data-term="expert-determination">expert determination</span>: the accountant acts as expert, not arbitrator; their determination is final and binding except in cases of manifest error or fraud. The UK equivalent term is "<span class="term" data-term="reporting-accountant">Reporting Accountant</span>"; the US equivalent is "<span class="term" data-term="independent-accountant">Independent Accountant</span>" or "Independent Accounting Firm".
+    </div>
+  </aside>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>"Reporting Accountant" — a Big Four (Deloitte, EY, KPMG, PwC) or other accountancy firm, mutually agreed, whose determination is contractually binding under an "expert determination" mechanism (distinct from arbitration). The Reporting Accountant acts as expert, not arbitrator; their determination is final and binding except in cases of manifest error or fraud. Process is governed by the SPA, often supplemented by a separate Reporting Accountant's engagement letter.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>"Independent Accountant" or "Independent Accounting Firm". Functionally identical. Disputes over completion accounts are typically referred under a similar expert-determination model. American Arbitration Association (AAA) accountants' protocol or AICPA standards may be incorporated by reference.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Practice mirrors UK; the firm appointed is sometimes referred to as <em>perito</em> (Italian) or <em>expert-comptable indépendant</em> (French) but the mechanic is the same expert-determination model.</p></aside>
+  </div>
+
+  <h3>Definitions that drive the indemnity economics</h3>
+
+  <p>The same Schedule 1 / Article 1 that contains "Loss" also contains the cluster of definitions that, taken together, define the buyer's recovery envelope. A definitions walk-through with a partner is in practice an indemnity-economics walk-through. The cluster the partner will work through:</p>
+
+  <aside class="lever both">
+    <h5>Cluster: Loss + Cap + Basket + Tipping vs. Deductible + De Minimis + Survival + Fundamental Reps</h5>
+    <ul>
+      <li><strong>Loss</strong> &mdash; what damages count (covered above).</li>
+      <li><strong><span class="term" data-term="cap">Cap</span></strong> &mdash; the maximum recoverable. Typical: 10&ndash;25% of purchase price for general warranties; <em>up to the full purchase price</em> for <span class="term" data-term="fundamental-rw">fundamental representations</span> (title, capacity, ownership of shares, no insolvency); often <em>uncapped</em> for fraud and (sometimes) tax indemnity.</li>
+      <li><strong><span class="term" data-term="basket">Basket</span> / threshold</strong> &mdash; minimum aggregate loss before any claim is payable. Typical 0.5&ndash;1.0% of purchase price.</li>
+      <li><strong><span class="term" data-term="tipping-basket">Tipping basket</span> vs. <span class="term" data-term="true-deductible">True deductible</span></strong> &mdash; <em>tipping</em>: once the basket is crossed, recovery is from dollar one. <em>True deductible</em>: only the excess over the basket is recoverable. Same number, often a several-million-dollar difference at the cap. The partner's question "tipping or true deductible?" is the test for whether you have read the indemnity schedule.</li>
+      <li><strong><span class="term" data-term="de-minimis">De minimis</span></strong> (Latin: "of the smallest things") &mdash; per-claim threshold. Claims below the de minimis do not count even toward the basket. Typical 0.05&ndash;0.1% of purchase price.</li>
+      <li><strong><span class="term" data-term="survival-period">Survival</span></strong> &mdash; how long after closing the warranty can be the basis for a claim. Typical: 12&ndash;24 months for general reps; 6&ndash;7 years or statute of limitations for tax; longer or perpetual for fundamental reps.</li>
+      <li><strong>Fundamental reps</strong> &mdash; the carved-out reps with the higher cap and longer survival (title, capacity, ownership, no insolvency, sometimes the capitalisation rep).</li>
+      <li><strong>Knowledge / <span class="term" data-term="knowledge-scrape">knowledge scrape</span></strong> &mdash; whether the "to the seller's knowledge" qualifier is read out for damages calculations.</li>
+      <li><strong>Material Adverse Change (MAC)</strong> &mdash; the contractual deal-killer (Module 09).</li>
+    </ul>
+    <p><strong>Why partners read these as a cluster:</strong> change one and the others must move. Tighten Loss to exclude lost profits and the cap may have to widen; lengthen survival on tax and the cap-on-tax-claims often comes down. Forward-link Module 13 (indemnification mechanics, including the buyer's "right to recover" architecture) and Module 14 (W&amp;I insurance, where the policy retention and cap are calibrated against the contractual cluster).</p>
+  </aside>
+
+  <h3>Knowledge qualifier and the "knowledge scrape"</h3>
+
+  <p>"Knowledge of the Sellers" is one of the most consequential single defined terms in any SPA. Two structural questions:</p>
+
+  <ol>
+    <li><strong>Whose knowledge counts?</strong> Common drafting: a list of named individuals (the "Knowledge Parties" &mdash; typically CEO, CFO, GC, head of HR, head of operations) attached as a schedule. Buyer wants the list as broad as possible (and sometimes "any officer or director"); seller wants it short and named.</li>
+    <li><strong>What standard of knowledge?</strong>
+      <ul>
+        <li><strong>"Actual knowledge"</strong> &mdash; what the named individuals actually knew. Seller-friendly.</li>
+        <li><strong>"Constructive knowledge"</strong> / "knowledge that would have been gained on reasonable enquiry" &mdash; what they would have known had they made a reasonable inquiry. Buyer-friendly.</li>
+        <li><strong>"Actual knowledge after due and reasonable enquiry"</strong> &mdash; the typical compromise. The Knowledge Parties are deemed to have asked reasonable questions of their direct reports before signing.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>The <strong><span class="term" data-term="knowledge-scrape">knowledge scrape</span></strong> is the buyer's counter-move on the back end. Many warranties are qualified by knowledge ("To the Sellers' knowledge, no material litigation has been threatened against the Target"). A knowledge qualifier is helpful to the seller because it converts an absolute statement of fact into a statement about awareness; if the seller did not know, there is no breach. The knowledge scrape strips the qualifier <em>for damages purposes</em>: the qualifier still gates whether there has been a breach (a knowledge-qualified warranty cannot be breached unless the Knowledge Parties knew), but once breached, the loss is calculated as if the qualifier were not there. Buyers fight for it; sellers resist; in PE auctions where W&amp;I insurance covers the warranty layer, sellers increasingly accept it because the carrier underwrites the exposure.</p>
+
+  <h3>Other defined terms an M&amp;A lawyer always reads first</h3>
+
+  <ul>
+    <li><strong>Business Day</strong>: a day other than a Saturday, Sunday, or public holiday in [specified jurisdictions]. Critical for timing — UK / US / EU SPAs typically reference "Business Day in London and New York" or similar. A 5-Business-Day notice clock can mean very different things depending on whose calendar.</li>
+    <li><strong>Closing / Completion</strong>: the moment at which all CPs are satisfied (or waived) and the closing-mechanics actions are performed. UK uses "Completion"; US uses "Closing"; both terms appear in EU practice.</li>
+    <li><strong>Closing Date / Completion Date</strong>: the date on which Closing actually takes place.</li>
+    <li><strong><span class="term" data-term="encumbrance">Encumbrance</span> / Lien / Security Interest</strong>: any mortgage, charge, pledge, lien, security interest, or other third-party right; bundled into the seller's title warranty ("the Sale Shares are sold free of any Encumbrance").</li>
+    <li><strong>Material Adverse Change (MAC) / Material Adverse Effect (MAE)</strong>: a contractually defined "deal killer" that allows the buyer to walk away or refuse to close. Discussed in detail in Module 08 and Module 09.</li>
+    <li><strong><span class="term" data-term="permitted-leakage">Permitted Leakage</span></strong>: in a locked-box transaction, the categories of value transfer from the target to the seller between the locked-box date and closing that are pre-agreed and do not give rise to a price reduction (e.g. agreed dividends, agreed management bonuses, transaction expenses).</li>
+    <li><strong>Subsidiary</strong>: typically defined by reference to the relevant Companies Act / corporation law concept (Companies Act 2006 §1159 in the UK).</li>
+    <li><strong><span class="term" data-term="affiliate">Affiliate</span></strong>: any entity controlling, controlled by, or under common control with another entity. "Control" itself is then defined — typically 50% of voting rights, sometimes lower.</li>
+    <li><strong>Group</strong>: the seller (or buyer) and all its Subsidiaries.</li>
+    <li><strong>Person</strong>: any individual, company, partnership, trust, governmental entity or unincorporated association — a sweep-up term to ensure the operative provisions catch every conceivable counterparty type.</li>
+    <li><strong>Tax</strong>: defined extremely broadly (any tax, levy, duty, contribution, social security charge, customs duty, withholding, or similar imposition by any Tax Authority, including interest and penalties). The breadth of "Tax" matters because it underpins the tax indemnity.</li>
+  </ul>
+
+  <h2>Schedules, Annexes and Exhibits — a four-part typology</h2>
+
+  <p>SPAs come bundled with a thick set of attachments. M&amp;A lawyers distinguish four categories.</p>
+
+  <h3>(a) Disclosure Schedules / Disclosure Letter</h3>
+
+  <p>The seller's qualifications to its representations and warranties. A representation reads "the Target is not a party to any litigation, <strong>other than as disclosed</strong>". The "as disclosed" carve-out is then particularised in the Disclosure Schedule, which lists the specific claims, judgments, regulatory enquiries and threatened actions that the seller is acknowledging.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Disclosure is typically delivered in a <strong><span class="term" data-term="disclosure-letter">Disclosure Letter</span></strong> — a separate document delivered at signing (and updated to closing in some deals). Has its own structure: a "general" section disclosing matters that are publicly available or in the data room, plus a "specific" section linked to numbered warranties.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>Disclosure is typically structured as <span class="term" data-term="disclosure-schedules">disclosure schedules</span> numbered to track the warranty section numbers (Schedule 3.7(a) qualifies §3.7(a)) and attached to the SPA itself.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Practice varies; both styles are seen.</p></aside>
+  </div>
+
+  <h3>(b) Operative Schedules</h3>
+
+  <p>Schedules that supply data the operative provisions need to function: list of Sale Shares and their owners; list of Group Companies; list of Real Properties; list of Material Contracts; cap table; calculation of locked-box adjustments; sample EBITDA / Closing Accounts.</p>
+
+  <h3>(c) Form Schedules</h3>
+
+  <p>Drafts of ancillary documents to be executed at Closing in agreed form: form of stock transfer, form of director resignation letter, form of Escrow Agreement, form of Transitional Services Agreement, form of Disclosure Letter, form of Closing Certificate (the document by which the seller confirms the warranties remain true at closing).</p>
+
+  <h3>(d) Closing Deliverables Schedules</h3>
+
+  <p>Lists of the documents and items each party must deliver at Closing — board resolutions of the seller authorising the sale, audit work-papers, bank account signatories' lists, original share certificates, indemnity / tax certificates, lender release letters, regulatory clearances. These are essentially the closing checklist in contractual form.</p>
+
+  <h2>Object / Commitment to sell (Article 3 in the source deck)</h2>
+
+  <p>The operative core: who sells what to whom for what consideration, subject to what conditions. Often a single dense clause. Modules 10 and 11 cover the related closing mechanics and price machinery in detail.</p>
+
+  <p>The source deck Clause 3 is reproduced in the Module 06 source-deck callout — both as an example of share-deal mechanics and as the specimen "obligation to sell and purchase" clause. The key features: subject-to-CPs, free-of-Encumbrance sale obligation, and cross-reference to the Closing-mechanics clause.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 03 (Pre-Signing Documents) &mdash; the LOI / term sheet sets the macro economic terms that the SPA's defined terms must operationalise. Module 04 (Due Diligence) &mdash; the Knowledge Parties list, the Material Contract threshold, and the Permitted Encumbrance schedule are populated from the DD process; the QofE report populates the agreed add-backs in the Closing EBITDA definition. Module 05 (Valuation) &mdash; the equity bridge logic generates the definitions of Cash, Debt, Debt-Like Items and Working Capital used here. Module 06 (Deal Structures) &mdash; share vs. asset deal drives the choice of operative provisions (e.g., transfer of assets schedule on an asset deal).</li>
+      <li><strong>Forwards:</strong> Module 08 (CPs) &mdash; the CP article cross-refers back to defined terms (Bring-Down, Material Adverse Effect, Fundamental Warranties). Module 09 (Interim &amp; MAC) &mdash; the MAC definition lives here in skeleton; the carve-out architecture (systemic / industry / target-specific) is set in this module. Module 11 (Purchase Price) &mdash; Closing EBITDA, Permitted Leakage and the Audit Expert all originate as Definitions. Module 12 (R&amp;Ws) &mdash; the warranties are pinned to the defined terms (Encumbrance, Knowledge, Material Contract). Module 13 (Indemnification) &mdash; Loss + Cap + Basket + Tipping vs. Deductible + De Minimis + Survival + Fundamental Reps are the cluster that lives in the Definitions but does its work in the indemnification regime. Module 14 (W&amp;I) &mdash; the insurer prices the policy against the contractual cluster; the policy's "Loss" definition tracks the SPA's. Module 16 (Disputes) &mdash; the Audit Expert / Reporting Accountant nominate-and-bind mechanic feeds into the dispute escalation ladder.</li>
+      <li><strong>Domino effect:</strong> if you tighten Loss to exclude lost profits, the cap may need to widen because the recoverable damages base is smaller; the tax indemnity may need an explicit carve-back from the lost-profits exclusion; the W&amp;I policy needs to track the contractual definition of Loss; the buyer's specific-performance and remedy clauses need to be checked for consistency. Change one definition in the cluster and three or four others have to move.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>SPA architecture (broadly): parties → recitals → definitions → object → price → CPs → interim covenants → closing → post-closing covenants → R&amp;Ws → indemnification → boilerplate → governing law.</li>
+      <li>Recitals are not operative but inform construction (UK <em>ICS v West Bromwich</em>; Delaware <em>Riverbend</em>); precise factual recitals can also create estoppel by deed (UK, <em>Greer v Kettle</em>).</li>
+      <li>"Means" vs. "includes" — exhaustive vs. non-exhaustive. Buyers prefer "includes"; sellers prefer "means".</li>
+      <li>"Indirect or consequential loss" is an English-law term of art. It does not exclude lost profits that flow naturally from a breach; first-limb <em>Hadley v Baxendale</em> losses survive a generic carve-out.</li>
+      <li>Source-deck "Loss" definition: actual losses only, direct consequence, attorneys' fees and settlements in, lost profits / goodwill / business opportunity out.</li>
+      <li>Source-deck "Closing EBITDA" formula: tied to specific Italian Civil Code line items; in UK / US the equivalent is tied to FRS 102 / IFRS / US GAAP. The "Audit Expert" is the expert-determination tie-breaker (UK: Reporting Accountant; US: Independent Accountant).</li>
+      <li>Four kinds of schedules: Disclosure (UK letter / US schedules), Operative, Form, Closing Deliverables.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="06-deal-structures.html" class="prev">Deal Structures</a>
+    <a href="08-conditions-precedent.html" class="next">Conditions Precedent &amp; Regulatory Clearances</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

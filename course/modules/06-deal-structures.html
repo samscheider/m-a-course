@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 06 — Deal Structures · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="06">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 06</div>
+    <h1>Deal Structures</h1>
+    <p class="subtitle">Share deal vs. asset deal vs. statutory merger vs. UK scheme vs. tender offer — the structural choice that locks in tax, liability, regulatory perimeter and timetable for everything that follows.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Distinguish a <span class="term" data-term="share-deal">share deal</span> from an <span class="term" data-term="asset-deal">asset deal</span> and identify, for any given fact pattern, which structure each side will prefer (and why) on tax, liability, contractual continuity and employment grounds.</li>
+      <li>Explain the principal statutory mechanics for acquiring a public company in each core jurisdiction: a <span class="term" data-term="dgcl-251">Delaware General Corporation Law (DGCL) §251</span> statutory merger (including <span class="term" data-term="forward-triangular-merger">forward-</span> and <span class="term" data-term="reverse-triangular-merger">reverse-triangular</span> variants), a UK <span class="term" data-term="scheme-of-arrangement">scheme of arrangement</span> under Part 26 of the Companies Act 2006, a UK contractual offer under the <span class="term" data-term="takeover-code">City Code on Takeovers and Mergers</span>, and a US <span class="term" data-term="tender-offer">tender offer</span> under the <span class="term" data-term="williams-act">Williams Act</span> provisions of the Securities Exchange Act 1934 §14(d) and §14(e).</li>
+      <li>Identify the basic forms of deal consideration (cash, stock, mixed, contingent value rights), the strategic and tax implications of each, and the threshold securities-law issues that arise when stock is used.</li>
+      <li>Describe how reverse mergers, <span class="term" data-term="spac">Special Purpose Acquisition Companies (SPACs)</span>, and going-private transactions sit alongside the conventional toolkit, and outline the going-public-via-M&amp;A vs. Initial Public Offering (IPO) trade-off.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Every M&amp;A transaction starts with a structural choice that locks in the tax treatment, the liability profile, the regulatory perimeter, the timetable and even the negotiation dynamics for everything that follows. A buyer who agrees in a Letter of Intent (LOI) to "acquire the business" without specifying share-vs.-asset has just thrown away one of the largest single negotiating chips in the deal — and possibly inherited an environmental clean-up liability, a class action, a tax assessment from three years before signing, or an unknown product-liability tail. On the public-company side, picking between a one-step Delaware merger and a two-step tender offer, or between a UK scheme and a UK contractual offer, will determine whether the deal closes in 8 weeks or 16, whether you need 50.01%, 66.67%, 75% or 90% acceptances, and whether the bidder must table cash by law or can use paper.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a structuring meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Are we hell-or-high-water on antitrust?"</strong> &mdash; <span class="term" data-term="hell-or-high-water">HOHW</span> is the strongest possible buyer covenant: divest <em>whatever</em> the regulator demands, no materiality cap. Partners reach for it on seller-led auctions where the seller wants total deal-certainty.</li>
+      <li><strong>"Do we have a PUSU letter from the Panel?"</strong> &mdash; <span class="term" data-term="pusu">"Put-Up or Shut-Up" (PUSU)</span> is City Code Rule 2.6: once a possible offer is leaked or named, the Panel typically gives the bidder 28 days to either announce a firm intention under Rule 2.7 or walk away (subject to a 6-month lock-out under Rule 2.8).</li>
+      <li><strong>"Have we issued the Practice Statement Letter yet?"</strong> &mdash; on a UK <span class="term" data-term="scheme-of-arrangement">scheme of arrangement</span>, the <span class="term" data-term="practice-statement-letter">Practice Statement Letter</span> is sent to scheme creditors / shareholders before the convening hearing, identifying the proposed class composition. Missing it is how schemes go off the rails.</li>
+      <li><strong>"We need a reverse triangular &mdash; the Microsoft EA terminates on a forward merger."</strong> &mdash; <span class="term" data-term="reverse-triangular-merger">RTM</span> preserves target identity (regulatory licences, FDA approvals, software-licence covenants); <span class="term" data-term="forward-triangular-merger">FTM</span> dissolves it, which can trip "by operation of law" anti-assignment clauses.</li>
+      <li><strong>"§338(h)(10) gross-up at 50/50?"</strong> &mdash; the seller demands compensation for the incremental tax of the deemed asset sale; buyer compares the gross-up cost to the present value of the new depreciation. A 50/50 split of the buyer's PV deduction value is one common landing zone.</li>
+      <li><strong>"Watch the carve-out scope creep."</strong> &mdash; on carve-out deals, every additional shared service, IP licence or contract added to the perimeter is a TSA workstream, a third-party consent and potentially an antitrust filing waiting to happen.</li>
+      <li><strong>"Are we on §251(h) or vanilla §251?"</strong> &mdash; <span class="term" data-term="dgcl-251h">§251(h)</span> is the two-step tender / short-form back-end (no proxy timetable). It compresses 12&ndash;16 weeks to 5&ndash;6.</li>
+    </ul>
+  </aside>
+
+  <h2>Share deal — the surgical structure</h2>
+
+  <p>In a <span class="term" data-term="share-deal">share deal</span> (also called a stock deal or share purchase), the buyer purchases the equity — shares of stock, or membership interests in a Limited Liability Company (LLC), or <em>quote</em> in an Italian <em>società a responsabilità limitata</em> (S.r.l.) — of the target legal entity. The target itself is unchanged: it keeps its company number, its tax identification, its bank accounts, its contracts, its employees, its licences and — crucially — its liabilities, <em>known and unknown</em>. What changes is who owns it. Legally this is the most surgical of structures: ownership transfers by a single act (a stock transfer form in the UK; a share purchase / endorsement on the share certificates in the US; a notarised deed of transfer (<em>atto di cessione di quote</em>) for an Italian S.r.l. or French <em>société par actions simplifiée</em> (SAS)).</p>
+
+  <p>Because the target's legal personality is preserved, contracts to which it is a party generally continue without needing to be re-papered. The big exception is <strong><span class="term" data-term="change-of-control-clause">change-of-control (CoC) clauses</span></strong> — provisions in commercial agreements, leases, loan facilities, joint venture agreements and licences that say "if there is a change in the ultimate beneficial owner of [Counterparty], the other side may terminate / requires consent / triggers a price review". Identifying every CoC trigger across the target's contract estate is one of the major workstreams of due diligence on a share deal.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Share deal is documented as a Share Purchase Agreement (SPA). Stamp Duty (a transfer tax) of 0.5% of consideration is payable by the buyer on transfers of UK-incorporated company shares. No Value Added Tax (VAT) on the share transfer.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Documented as a Stock Purchase Agreement (also "SPA"). No federal stamp-duty equivalent. State-level transfer taxes are minimal for stock transfers.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Varies. France imposes a <em>droits d'enregistrement</em> of 0.1% on shares of a <em>société anonyme</em> (SA) or SAS, 3% on shares of a <em>société à responsabilité limitée</em> (SARL) (subject to an abatement). Italy imposes a small fixed registration tax (€200) plus notary fees on quota transfers of an S.r.l.; share transfers in an S.p.A. (<em>società per azioni</em>) are typically exempt.</p></aside>
+  </div>
+
+  <h3>Tax treatment — the core point a buyer will fight over</h3>
+
+  <p>On a share deal, the buyer takes the target's existing tax basis in its assets (sometimes called "carry-over basis"). There is <strong>no <span class="term" data-term="step-up">step-up</span> in asset basis</strong> — meaning the buyer cannot re-set the depreciable / amortisable value of plant, machinery, intangibles or goodwill to reflect the price paid. The tax-deductible depreciation and amortisation schedule continues exactly as it was in the seller's hands.</p>
+
+  <p>For the seller, by contrast, a share sale is usually the cleanest exit: capital gains tax (CGT) on the gain at the corporate-shareholder or individual-shareholder level, and (in the EU) potential application of a <em>participation exemption</em> if the seller is a corporate that has held a sufficient stake for a sufficient period (e.g. UK Substantial Shareholding Exemption (SSE), German <em>Schachtelprivileg</em>, Italian <em>participation exemption</em> (PEX), French <em>régime mère-fille</em> / long-term capital gains regime).</p>
+
+  <aside class="lever">
+    <h5>Negotiation lever — share vs. asset</h5>
+    <div class="row">
+      <div><strong>Buyer wants:</strong> asset deal where possible (step-up + cherry-pick liabilities); failing that, maximum tax indemnities and warranties on a share deal; pre-completion tax covenants; specific indemnities for known issues identified in due diligence.</div>
+      <div><strong>Seller wants:</strong> share deal (clean break, single capital gains event, often eligible for participation exemption or equivalent shareholder relief); seller wants to avoid the "double tax" leakage of an asset deal in which the corporate entity is taxed on the gain, then the shareholder is taxed again on distribution.</div>
+      <div><strong>Typical compromise:</strong> in the US private-company mid-market, a frequent middle ground is the "<span class="term" data-term="338-h-10-election">§338(h)(10) election</span>" or the related "§336(e) election" — a US tax election that allows a transaction structured legally as a stock sale to be treated <em>as if</em> it were an asset sale for federal income tax purposes. This gives the buyer the step-up but requires the seller's cooperation; the parties typically negotiate a "gross-up" payment to compensate the seller for the resulting higher tax burden. <strong>Eligibility limits:</strong> the §338(h)(10) election is available only where the target is an S-corporation or a subsidiary member of a consolidated group, and the buyer (a corporation) acquires at least 80% of the stock in a "qualified stock purchase". For other targets, parties consider the §336(e) election (broader scope, allows individual sellers in some cases) or fall back to a true asset deal. The gross-up calculation is itself negotiated: the seller demands compensation for the <em>incremental</em> tax above what a stock sale alone would have generated, present-valued; the buyer compares that cost against the present value of the new depreciation deductions over the §197 15-year intangible amortisation period &mdash; a 50/50 split of the buyer's PV deduction value is one common landing zone.</div>
+    </div>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — share deal</h5>
+    <ul>
+      <li>Failing to flag CoC clauses in critical contracts during due diligence, then discovering at signing that the largest customer can terminate.</li>
+      <li>Over-broad tax indemnity that effectively turns the deal into an asset deal economically, without the asset-deal mechanical flexibility.</li>
+      <li>Missing minority-shareholder consents or pre-emption rights (rights of first refusal) buried in shareholders' agreements.</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p>"Subject to the fulfilment of the Conditions Precedent and in accordance with the terms and conditions set forth in this Agreement: (a) The Seller undertakes to sell at Closing to the Buyer the Quota, free of any Encumbrance, and the Buyer undertakes to purchase at Closing the Quota from the Seller, against payment by the Buyer of the Purchase Price. (b) The Parties further undertake to perform at Closing all the actions and transactions indicated under Clause 5 below."</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> this is the binding commitment to transact (in UK / US drafting often called the "Sale and Purchase" clause), located early in the operative provisions. Three things to notice for a non-lawyer:
+      <ol>
+        <li>The phrase "Subject to the fulfilment of the <span class="term" data-term="condition-precedent">Conditions Precedent</span>" makes the obligation conditional. Until the CPs are satisfied or waived, neither side is required to close; once they are, both sides <em>must</em> close, on pain of breach-of-contract damages and, in some jurisdictions, the equitable remedy of specific performance (a court order compelling performance, available where damages would be inadequate — far more readily granted in England than in the US).</li>
+        <li>"The Quota" is the Italian-law equivalent of the share / membership interest; on a UK / US deal you would see "the Sale Shares" or "the Shares". The phrase "free of any <span class="term" data-term="encumbrance">Encumbrance</span>" signals that the seller is warranting clean title — this is then mirrored in a title-and-capacity warranty later in the agreement.</li>
+        <li>The "actions and transactions indicated under Clause 5" cross-reference is to the Closing-mechanics clause, which lists every choreographed exchange of documents and money to take place at Closing.</li>
+      </ol>
+    </div>
+  </aside>
+
+  <h2>Asset deal — the cherry-picking structure</h2>
+
+  <p>In an <span class="term" data-term="asset-deal">asset deal</span> (also "business and assets sale"), the buyer cherry-picks specific assets ("Transferred Assets" defined in a schedule) and assumes specified liabilities ("Assumed Liabilities" defined in a schedule). Everything not listed stays with the seller entity. This is the buyer-friendly structure: liability ring-fencing plus, on the tax side, a fresh basis in the acquired assets equal to the allocated portion of the purchase price (the "step-up"), generating future depreciation and amortisation deductions.</p>
+
+  <p>The cost of cherry-picking is administrative: each asset must transfer by its own appropriate legal mechanism. Real estate by deed of conveyance (UK) or deed of grant (US), with land-registry registration. Intellectual property (IP) by assignment (registered marks/patents need recording at the relevant registry — UK Intellectual Property Office (UKIPO), US Patent and Trademark Office (USPTO), European Union Intellectual Property Office (EUIPO)). Tangible assets by bill of sale (US) or simple delivery and possession (UK). Contracts by <strong><span class="term" data-term="novation">novation</span></strong> (Latin / French-derived legal term meaning the substitution of a new party for an old one in a contract, with the consent of the remaining party — the contract is technically terminated and a new one created with the new party) or by <strong>assignment</strong> (transfer of the benefit of the contract; the burden cannot be assigned without the counterparty's consent under English law and most US states' law, hence the practical need for a novation when there are ongoing obligations).</p>
+
+  <h3>Employment transfer — the asset deal's biggest gotcha</h3>
+
+  <p>When a business is sold as a going concern via an asset sale, employees do not automatically come with the assets. Three regimes govern what happens.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Transfer of Undertakings (Protection of Employment) Regulations 2006 — <span class="term" data-term="tupe">TUPE 2006</span> — implementing the EU Acquired Rights Directive (Council Directive 2001/23/EC). Employees of the business being transferred move automatically to the buyer on their existing terms. Dismissals connected with the transfer are automatically unfair unless for an "economic, technical or organisational" (ETO) reason. Information and consultation obligations apply pre-transfer. Liability for past employment claims passes to the buyer with the employees.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p><span class="term" data-term="acquired-rights-directive">Acquired Rights Directive 2001/23/EC</span>, as transposed in each member state — Italy <em>Articolo 2112 del Codice Civile</em> (Article 2112 Italian Civil Code); Germany §613a <em>Bürgerliches Gesetzbuch</em> (German Civil Code, BGB); France <em>Article L. 1224-1 Code du Travail</em> (French Labour Code). Mechanics broadly mirror TUPE. Information / consultation requirements with works councils are heavy in Germany, France, Netherlands.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>Default position is "at-will" employment (employees can be terminated for any non-discriminatory reason at any time, and likewise can leave). On an asset sale the buyer is typically free to choose which employees to offer employment to — but <strong>successor liability</strong> doctrines, varying by state, can pull through certain liabilities (mass-tort, environmental, ERISA pension) on a "substantial continuation of enterprise" or "de facto merger" theory. The Worker Adjustment and Retraining Notification Act 1988 (WARN Act) requires 60 days' notice of mass layoffs over certain thresholds.</p></aside>
+  </div>
+
+  <aside class="lever">
+    <h5>Negotiation lever — asset deal</h5>
+    <div class="row">
+      <div><strong>Buyer wants:</strong> asset deal with narrow definition of "Assumed Liabilities", broad definition of "Excluded Liabilities", explicit exclusion of pre-completion environmental, tax, product-liability and pension obligations.</div>
+      <div><strong>Seller wants:</strong> broad assumption of liabilities (or share deal so the entity goes away); avoid stranded liabilities in a shell that the seller cannot wind up; in the US, no §338(h)(10) election unless grossed up.</div>
+      <div><strong>Typical compromise:</strong> in regulated industries (banking, insurance, healthcare) the asset-vs.-share choice may be partly forced because regulatory licences are non-transferable on an asset basis. Carve-outs are typically asset deals for the carved-out business unit; whole-company sales of regulated targets are typically share deals.</div>
+    </div>
+  </aside>
+
+  <h2>Statutory mergers — the US public-company workhorse</h2>
+
+  <p>A merger is a creature of statute. Two corporations combine, with one (the surviving company) absorbing the other (the disappearing company) by operation of law. The disappearing company ceases to exist; all its assets, contracts and liabilities pass into the surviving entity automatically. There is no need to convey individual assets or novate individual contracts — the merger statute does the conveyance in a single step.</p>
+
+  <p><span class="term" data-term="dgcl-251">Delaware General Corporation Law (DGCL) §251</span> is the workhorse: a merger between any two domestic corporations, requiring a board resolution, a written agreement of merger, and a stockholder vote (typically a majority of outstanding shares entitled to vote).</p>
+
+  <h3>Triangular mergers — forward and reverse</h3>
+
+  <p>Buyer creates a wholly-owned shell subsidiary ("Merger Sub"). Two variants:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="forward-triangular-merger">Forward triangular merger</span>:</strong> Target merges <em>into</em> Merger Sub (the shell). Target disappears; Merger Sub survives as the holder of all Target's assets and a subsidiary of Buyer. Because Target legally disappears, contracts to which Target was a party may be treated as having been <em>assigned</em> by operation of the merger — which may trigger anti-assignment clauses depending on contract language and applicable case law. <em>Star Cellular Tel. Co. v. Baton Rouge CGSA Inc.</em> (Delaware Chancery 1993) itself <em>upheld</em> the merger against the anti-assignment claim on the specific contract language, but later decisions have split: most modern Delaware reads a forward-triangular merger <em>into</em> Sub as a transfer triggering "by operation of law" anti-assignment clauses (<em>MTA Canada Royalty Corp.</em>, Del. Super. 2020 is the modern restatement), while reverse-triangular generally does not. The doctrinal split means contract review must look at the precise wording of every anti-assignment clause in the target's material contract estate.</li>
+    <li><strong><span class="term" data-term="reverse-triangular-merger">Reverse triangular merger</span>:</strong> Merger Sub merges <em>into</em> Target. Merger Sub disappears; Target survives, now wholly-owned by Buyer. Target's contracts continue with the same legal entity as counterparty, so anti-assignment clauses are generally not triggered. The Delaware Chancery's decision in <em>Meso Scale Diagnostics, LLC v. Roche Diagnostics GmbH</em> (2013) confirmed that, under Delaware law, a reverse triangular merger does <em>not</em> effect an assignment of the target's contracts. This is the dominant US public-company structure for that reason — combined with tax efficiency where the deal is structured to qualify as a tax-free reorganisation under Internal Revenue Code (IRC) §368(a)(2)(E).</li>
+  </ul>
+
+  <h3>One-step merger vs. two-step tender offer</h3>
+
+  <ul>
+    <li><strong>One-step merger.</strong> Sign a merger agreement; file a proxy statement with the Securities and Exchange Commission (SEC); hold a stockholder meeting; close. Timetable: typically 12–16 weeks from signing, dominated by SEC review of the proxy. Stockholder approval requires a majority of outstanding shares (under DGCL §251(c) — <em>not</em> a majority of those voting). Dissenting stockholders may exercise statutory <span class="term" data-term="appraisal-rights">appraisal rights</span> under DGCL §262, asking the Court of Chancery to determine the "fair value" of their shares (post-<em>Aruba Networks</em> (2019) and <em>DFC Global</em> (2017), Delaware courts have moved closer to deal price as the appropriate measure in arm's-length transactions, but litigation risk remains).</li>
+    <li><strong>Two-step tender offer.</strong> Sign a merger agreement; bidder launches a tender offer for all outstanding shares directly to stockholders (no proxy required); after acceptance threshold is met, bidder uses <span class="term" data-term="dgcl-251h">DGCL §251(h)</span> (added by amendment effective 2013) to short-form squeeze-out the remaining minority <em>without a stockholder vote</em>, provided that (i) the merger agreement explicitly contemplates §251(h), (ii) the tender offer was for any and all shares (not a partial offer), (iii) the bidder ends up holding sufficient shares to approve the merger by a stockholder vote (now reduced effectively to majority), and (iv) the consideration in the merger is the same as in the tender offer. Timetable: as fast as 5–6 weeks because the SEC's tender-offer rules under Securities Exchange Act §14(d) are far less time-consuming than proxy review.</li>
+  </ul>
+
+  <h3>US tender offer mechanics</h3>
+
+  <p>The <span class="term" data-term="williams-act">Williams Act (1968)</span> added §§13(d), 13(g), 14(d) and 14(e) to the Securities Exchange Act 1934. Key requirements for any tender offer for an SEC-registered class of equity:</p>
+  <ul>
+    <li>Schedule TO filed with the SEC on commencement.</li>
+    <li>Minimum 20-business-day open period.</li>
+    <li>Withdrawal rights for tendering stockholders throughout the offer.</li>
+    <li>Pro-rata acceptance if oversubscribed (for partial offers).</li>
+    <li>"Best price" rule (§14(d)(7)): all stockholders accepting the offer must receive the highest consideration paid to any other accepting stockholder.</li>
+    <li>Anti-fraud catch-all under §14(e): no untrue statements or omissions in connection with a tender offer.</li>
+  </ul>
+
+  <h2>UK take-privates — Scheme vs. Offer</h2>
+
+  <p>For a public company incorporated in the UK and with shares admitted to trading on a UK regulated market or multilateral trading facility, there are two principal acquisition mechanics, both governed by the <span class="term" data-term="takeover-code">City Code on Takeovers and Mergers</span> ("Takeover Code") administered by the Panel on Takeovers and Mergers (the "Panel").</p>
+
+  <h3>Scheme of arrangement (Companies Act 2006 Part 26)</h3>
+
+  <p>A <span class="term" data-term="scheme-of-arrangement">scheme of arrangement</span> is a statutory court-supervised procedure. Mechanics:</p>
+  <ol>
+    <li>Bidder and target agree the scheme; Bidder Co. is not a party to the scheme itself — the scheme is between the target and its shareholders.</li>
+    <li>Court convenes a meeting of each "class" of scheme shareholders (a class is a group of shareholders whose rights are sufficiently similar that they can consult together with a common interest — <em>Re Hawk Insurance</em> (Court of Appeal, 2001)).</li>
+    <li>Scheme is approved if it receives the affirmative vote of (i) <strong>a majority in number</strong> of scheme shareholders present and voting (in person or by proxy), AND (ii) <strong>at least 75% in value</strong> of the scheme shares voted at the meeting. Both tests must be met <em>in each class</em>.</li>
+    <li>Court hears a sanction application; if satisfied that the statutory majority was met, classes were correctly constituted, and the scheme is one a reasonable shareholder could approve, the court sanctions the scheme.</li>
+    <li>Court order is filed at Companies House. Scheme becomes effective. All scheme shares transfer to bidder. <strong>All</strong> shareholders are bound, including those who voted against — there is no concept of "dissenting" un-acquired minority. This is the scheme's killer feature: <strong>100% acquisition in a single step</strong>, no squeeze-out needed.</li>
+  </ol>
+
+  <p>Schemes account for the majority of UK take-privates. The trade-off is that the scheme is target-driven (the target's directors propose it; bidder is in a more passive role), and it cannot be unilaterally raised in price by another bidder mid-process without engaging the Panel's auction procedures.</p>
+
+  <h3>Contractual offer (City Code rules)</h3>
+
+  <p>A bidder makes a public offer to all target shareholders to acquire their shares at a stated price. The offer is open for a minimum of 21 days. Acceptance threshold is set by the bidder but cannot be less than acceptances giving the bidder more than 50% of the target's voting rights (this is the Code's mandatory "acceptance condition" — Rule 10).</p>
+
+  <p>To <span class="term" data-term="squeeze-out">squeeze out</span> the remaining minority shareholders, the bidder needs to reach <strong>90% in value AND 90% of the voting rights of the shares</strong> to which the offer relates (Companies Act 2006 §979 — the squeeze-out threshold). Below 90% the bidder is left with a minority that it must either buy out at later (more expensive) prices or live with as a public-company minority.</p>
+
+  <aside class="juris uk">
+    <h5>Key Code rules to know</h5>
+    <ul>
+      <li>Rule 9: <span class="term" data-term="mandatory-offer">mandatory offer</span> triggered if a person's holding crosses 30% of voting rights, or if a holder of 30%-50% acquires more — must offer to acquire the rest at the highest price paid in the prior 12 months, in cash (or with a cash alternative).</li>
+      <li>Rule 11: cash consideration mandatory if the bidder has bought 10%+ of the target's shares for cash in the 12 months before the offer period.</li>
+      <li>Rule 19: high standards of accuracy in all communications; no misleading statements.</li>
+      <li>Rule 21: target board cannot take "frustrating action" (e.g. issuing new shares, undertaking material disposals) once an offer is in contemplation, without shareholder approval.</li>
+      <li>Rule 35: 12-month "lock-out" — a bidder whose offer fails or is withdrawn cannot make a new offer for the same target for 12 months, absent Panel consent.</li>
+    </ul>
+  </aside>
+
+  <h2>Consideration — cash, stock, mixed, contingent</h2>
+
+  <ul>
+    <li><strong>All-cash:</strong> simplest. Buyer needs financing. Target shareholders get certainty of value but realise tax on disposal immediately. In US public M&amp;A, all-cash deals avoid having to register the buyer's shares with the SEC under the Securities Act 1933 (a major time-saver).</li>
+    <li><strong>All-stock:</strong> buyer issues its own shares to target shareholders. No cash strain on buyer. Target shareholders receive shares whose value will move with the buyer's stock between signing and closing (giving rise to "fixed exchange ratio" vs. "floating exchange ratio" / "collar" negotiations). In US, can qualify as a tax-free reorganisation under IRC §368 if structural requirements are met; in UK, can qualify for "share-for-share rollover" relief under Taxation of Chargeable Gains Act 1992 §§135–138, deferring CGT on the seller's gain.</li>
+    <li><strong>Mixed:</strong> typically cash plus stock. Common in mega-deals where buyer wants to share dilution and currency risk.</li>
+    <li><strong>Contingent Value Rights (CVRs):</strong> a tradeable or non-tradeable right to receive future payments contingent on milestones (e.g. drug approval, regulatory clearance, achievement of revenue targets). A way to bridge valuation gaps; common in life-sciences M&amp;A.</li>
+  </ul>
+
+  <h2>Reverse mergers and SPACs</h2>
+
+  <ul>
+    <li>A <strong>reverse merger</strong> uses the merger mechanic to take a private company public: the private company merges with a small public shell, with the private company's shareholders ending up owning most of the combined entity. Historically a back-door listing technique, often associated with lower-quality issuers.</li>
+    <li>A <strong><span class="term" data-term="spac">Special Purpose Acquisition Company (SPAC)</span></strong> is a shell company that completes an IPO to raise cash, then goes hunting for a private operating company to acquire (a "<strong>de-SPAC</strong>" transaction). The de-SPAC is structured as a reverse merger into the SPAC. SPACs boomed in 2020&ndash;2021 and crashed in 2022&ndash;2023 amid SEC enforcement. The SEC adopted final SPAC rules on <strong>24 January 2024</strong>, imposing more onerous line-item and projection-disclosure standards and aligning de-SPAC liability with traditional IPOs in important respects. Notably, the SEC <strong>abandoned</strong> proposed <strong>Rule 140a</strong>, which would have expressly extended underwriter liability to de-SPAC transactions; in its place the SEC issued non-binding interpretive guidance reaffirming the existing flexible "facts and circumstances" approach. The headline change is therefore on disclosure, not on a formal expansion of underwriter liability.</li>
+  </ul>
+
+  <h2>Going-private vs. going-public via M&amp;A</h2>
+
+  <p>A private company contemplating its first liquidity event has two main paths:</p>
+  <ul>
+    <li><strong>IPO:</strong> sell a minority stake to public-market investors via a registered offering. Pros: existing shareholders retain control; ongoing access to public equity markets. Cons: ongoing public-company disclosure and governance burden, share-price volatility, SOX (Sarbanes-Oxley Act 2002) compliance costs, lock-up restrictions on insider sales.</li>
+    <li><strong>M&amp;A sale:</strong> sell the whole company (or a controlling stake) to a strategic buyer or financial sponsor. Pros: full liquidity in one transaction; certainty of price; faster exit for existing shareholders. Cons: loss of independence; potential for rejection by buyer's board / shareholders; transaction risk between signing and closing.</li>
+  </ul>
+
+  <p>Going-private (taking a public company private) is the inverse: a financial sponsor or controlling shareholder acquires all public shares, typically via a one-step merger (US) or scheme (UK). The principal protections for minority public shareholders against an unfair price are the Delaware <span class="term" data-term="mfw-framework">MFW framework</span> and, in the UK, Listing Rule 11 related-party provisions plus the Code's independent-shareholders vote requirement.</p>
+
+  <p>The Delaware shorthand &mdash; "independent committee plus majority-of-the-minority vote" &mdash; is a two-prong distillation of what is actually a <strong>six-prong test</strong> in <em>Kahn v. M &amp; F Worldwide Corp.</em>, 88 A.3d 635 (Del. 2014). To get business-judgment-rule deference, the controller's going-private must condition the deal <em>ab initio</em> (Latin: "from the beginning") on: (1) approval by an independent special committee; (2) the committee being empowered to negotiate and to "say no"; (3) the committee meeting its duty of care; (4) a majority-of-the-minority stockholder vote; (5) the minority being fully informed; and (6) the absence of coercion. <em>Flood v. Synutra International, Inc.</em>, 195 A.3d 754 (Del. 2018) clarified the <em>ab initio</em> requirement (the dual protections must be set up before substantive economic negotiations begin). <em>In re Match Group Derivative Litigation</em> (Del. Sup. 2024) extended the MFW framework to <em>all</em> controlling-stockholder conflicted transactions, not just freezeouts &mdash; a 2024 development a senior Delaware-focused partner will assume the user knows.</p>
+
+  <h2>Tax structuring and the step plan</h2>
+
+  <p>Once the basic legal mechanic (share / asset / merger / scheme) is settled, the tax adviser determines the <em>structuring</em> &mdash; the chain of holding entities, intra-group debt, elections and reorganisations that delivers an optimised post-closing footprint. This is no longer a back-room exercise: post-2024 the structuring choices are tightly constrained by the OECD's BEPS 2.0 minimum tax (Base Erosion and Profit Shifting Project, Pillar Two), the EU Anti-Tax-Avoidance Directives (ATAD I and II), and a thicket of national interest-deduction and hybrid-mismatch rules. A structurer who ignores these will produce a paper that no Big-Four tax partner will sign off and a deal that under-prices its true effective tax rate.</p>
+
+  <h3>Pillar Two / GloBE 15% minimum tax</h3>
+
+  <p>The OECD/G20-led <span class="term" data-term="pillar-two">Pillar Two</span> regime imposes a <strong>15% minimum effective tax rate (ETR)</strong> on each jurisdiction in which a multinational enterprise (MNE) group operates, calculated on a jurisdiction-by-jurisdiction basis under the <span class="term" data-term="globe-rules">Global Anti-Base Erosion (GloBE) rules</span>. The regime applies to MNE groups with consolidated revenue of <strong>&euro;750 million or more</strong> in at least two of the four preceding fiscal years &mdash; the same threshold used for country-by-country reporting under BEPS Action 13.</p>
+
+  <p>The regime is built on three interlocking charges. The <span class="term" data-term="iir">Income Inclusion Rule (IIR)</span> requires the ultimate parent (or a designated intermediate parent) to pay a top-up tax equal to the shortfall between 15% and the actual jurisdictional ETR of any low-taxed constituent entity. The <span class="term" data-term="utpr">Undertaxed Profits Rule (UTPR)</span> is a backstop: if no IIR applies (e.g. parent is in a non-implementing state), other group jurisdictions deny deductions or make an equivalent adjustment until the top-up is collected. A <span class="term" data-term="qdmtt">Qualified Domestic Minimum Top-up Tax (QDMTT)</span> allows the source jurisdiction itself to charge the top-up first, keeping the revenue locally and pre-empting the IIR/UTPR claim by other states.</p>
+
+  <p>Pillar Two is in force across the EU under <strong>Directive (EU) 2022/2523</strong> of 14 December 2022 (transposition deadline 31 December 2023; first fiscal year typically 2024). The UK implemented an equivalent <em>Multinational Top-up Tax</em> and a <em>Domestic Top-up Tax</em> in <strong>Finance (No. 2) Act 2023, Part 3</strong>, applying to accounting periods beginning on or after 31 December 2023. The US has not enacted a Pillar Two regime &mdash; its <em>Global Intangible Low-Taxed Income</em> (GILTI) regime under IRC &sect;951A is treated by the OECD as not yet a "qualified" IIR &mdash; which means that US-parented groups expanding into Pillar-Two jurisdictions face UTPR exposure on their non-US subsidiaries.</p>
+
+  <div class="juris-grid">
+    <aside class="juris eu"><h5>EU</h5><p>Directive (EU) 2022/2523. IIR and QDMTT for fiscal years from 31 December 2023; UTPR from 31 December 2024 in most member states.</p></aside>
+    <aside class="juris uk"><h5>UK</h5><p>Multinational Top-up Tax and Domestic Top-up Tax under Finance (No. 2) Act 2023, Part 3 &mdash; matching the GloBE design. UTPR added by Finance Act 2024 from accounting periods on or after 31 December 2024.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>No qualifying IIR/QDMTT enacted. GILTI (IRC &sect;951A) does not currently qualify as an IIR. Result: US-parented groups face UTPR exposure in EU/UK constituent jurisdictions on their non-US ETR shortfalls.</p></aside>
+  </div>
+
+  <p><strong>What this means for M&amp;A.</strong> First, tax due diligence must compute the target's <em>jurisdictional</em> ETRs &mdash; not the consolidated effective rate, which can mask a sub-15% Irish, Luxembourg, Hungarian or Swiss subsidiary inside a higher-rate consolidated number. Second, post-closing the buyer's group inherits Pillar Two filing obligations and must integrate the target's data into the group's <strong>GloBE Information Return</strong> (a single return covering all constituent entities, due 15 months after fiscal year-end &mdash; 18 months in the first year). Third, holding-company structures historically built around low-tax intermediate jurisdictions (e.g. Luxembourg ParentCo with sub-12% economic ETR; Irish IP-licensing ParentCo) lose much of their efficiency &mdash; the top-up will claw back the saving and will be paid somewhere in the chain. Acquisition models built before 2024 routinely overstate post-tax cash flow for any target where Pillar Two now bites.</p>
+
+  <h3>BEPS / ATAD anti-hybrid and interest-deduction limits</h3>
+
+  <p>A second layer of constraint runs through every PE acquisition structure: the EU Anti-Tax-Avoidance Directives, transposed national rules and the UK's parallel regime. Together they curtail the classic LBO toolkit (shareholder-loan PIK debt; check-the-box mismatches; intra-group debt push-down).</p>
+
+  <p><span class="term" data-term="atad">ATAD I (Directive (EU) 2016/1164)</span> imposes four substantive rules across all member states. <strong>Article 4 &mdash; the <span class="term" data-term="interest-barrier">interest barrier</span></strong> &mdash; caps the deductibility of net borrowing costs at <strong>30% of EBITDA</strong> (Earnings Before Interest, Tax, Depreciation and Amortisation), with a <em>de minimis</em> exemption (typically &euro;3 million) and limited group-ratio escape carve-outs. <strong>Articles 7 and 8 &mdash; CFC rules</strong> (Controlled Foreign Company) &mdash; reattribute the passive income of a low-taxed foreign subsidiary to the EU parent. <strong>Article 5 &mdash; exit taxation</strong> &mdash; charges accrued capital gains on transfer of assets out of an EU jurisdiction. <strong>Article 6 &mdash; the General Anti-Abuse Rule (GAAR)</strong> &mdash; lets tax authorities disregard arrangements lacking commercial substance the main purpose of which was a tax advantage.</p>
+
+  <p><span class="term" data-term="hybrid-mismatch">ATAD II (Directive (EU) 2017/952)</span> extends ATAD I to neutralise <em>hybrid mismatches</em> &mdash; arrangements that exploit different characterisations of an entity or instrument across two jurisdictions to produce <em>double deduction</em> (D/D) or <em>deduction without inclusion</em> (D/NI) outcomes. The classic targets are US <em>check-the-box</em> elections on Luxembourg or Netherlands intermediate entities (treated as transparent in the US, opaque in Europe, generating phantom interest deductions on both sides) and hybrid debt instruments treated as equity in one state and debt in the other. The remedy is to deny the deduction or include the income, depending on which state is "primary."</p>
+
+  <p>The UK retains an equivalent regime post-Brexit. The <span class="term" data-term="cir">Corporate Interest Restriction (CIR)</span>, in <strong>TIOPA 2010 Part 10</strong> (Taxation (International and Other Provisions) Act 2010), implements an interest barrier closely modelled on ATAD Article 4 with a 30% EBITDA cap, a &pound;2 million <em>de minimis</em>, and group-ratio and worldwide-debt-cap escape rules. UK hybrid-mismatch rules sit at <strong>TIOPA 2010 Part 6A</strong> and broadly track ATAD II.</p>
+
+  <p><strong>Practical effect on PE structures.</strong> The classic shareholder-loan PIK (<em>payment-in-kind</em>) note &mdash; sponsor lends to BidCo at a high coupon, interest accrues but is not paid in cash, deductible in BidCo and ultimately offsetting Target's operating profits &mdash; is now usually stranded above the 30% EBITDA cap, with the excess interest carried forward but valueless if the cap continues to bind. Every structuring memo therefore must include an ATAD/CIR sensitivity (model interest deductibility under varying EBITDA scenarios; identify whether the group-ratio rule rescues the structure; quantify the present value of disallowed interest). Pillar Two then sits on top: even where interest is deductible, the resulting low ETR may attract a top-up.</p>
+
+  <h3>The tax structure paper / step plan as a workproduct</h3>
+
+  <p>Before signing, the tax adviser produces a <span class="term" data-term="step-plan">step plan</span> (also called the <em>structure memo</em> or <em>structure paper</em>): a numbered sequence of every entity formation, asset or share transfer, dividend, debt push-down, loan novation, election and filing required to deliver the agreed post-closing structure. Each step is tagged with: (i) the jurisdiction in which it occurs, (ii) the taxable event (gain, deemed dividend, transfer-tax trigger, stamp-duty event), (iii) the withholding-tax analysis (and any applicable treaty relief or EU directive exemption such as the Parent-Subsidiary Directive 2011/96/EU), (iv) the cash flow movement, (v) the timing constraint (some steps must precede signing; some sit at closing; some are post-closing within a fixed window for an election to be valid).</p>
+
+  <p>The step plan is the single document that controls how the deal is choreographed across borders. It is shared with corporate counsel because the SPA's <strong>Conditions Precedent</strong>, <strong>Pre-Closing Reorganisation covenants</strong>, <strong>Funds Flow</strong> and <strong>Closing Mechanics</strong> must mirror it precisely &mdash; for example, if the step plan contemplates a pre-closing distribution from Target to Seller of locked-up cash, the SPA must (i) carve that distribution out of the leakage definition under a locked-box mechanism, (ii) authorise it as a pre-closing reorganisation step, and (iii) sequence it ahead of the share transfer in the funds flow. If the step plan calls for a US &sect;338(h)(10) election, the SPA needs the seller's covenant to make and not revoke the election, with a tax gross-up for the seller's incremental burden.</p>
+
+  <aside class="pitfall">
+    <h5>Step-plan / SPA divergence</h5>
+    <p>Undocumented divergence between the SPA mechanics and the step plan is one of the most common causes of post-closing tax leakage. Typical pathologies: (i) a tax election deadline expires because the SPA failed to identify which party makes the filing and by when; (ii) a pre-closing reorganisation breaches an interim-period covenant because the covenant schedule was not updated to reflect the structure paper; (iii) the funds flow pays consideration in a sequence that triggers withholding the structure assumed away; (iv) a step that depends on the buyer being treaty-resident at closing fails because the buyer used an unanticipated AcquisitionCo. Always run a final reconciliation between the step plan and the SPA in the week before signing.</p>
+  </aside>
+
+  <h3>UK SDLT, UK stamp duty / SDRT and civil-law transfer duties</h3>
+
+  <p>Almost every deal triggers some form of transfer tax. These are typically out of scope for the deal multiple and the financial DD's <em>quality of earnings</em> work, but they land on the funds flow and they materially affect the buyer's all-in cost.</p>
+
+  <p><span class="term" data-term="sdlt">UK Stamp Duty Land Tax (SDLT)</span> (Finance Act 2003) is the UK transfer tax on land. An asset deal that includes UK real estate triggers SDLT on the consideration apportioned to the land, at rates up to <strong>5% on commercial / mixed-use</strong> property and up to <strong>17% on residential property where the buyer is a non-resident corporate</strong> (the 2% non-resident surcharge plus the 15% corporate-purchase rate). SDLT also reaches share acquisitions of <em>property-rich</em> companies under Schedule 7A FA 2003 in narrow circumstances, but most UK share deals are SDLT-free.</p>
+
+  <p><span class="term" data-term="stamp-duty">UK stamp duty</span> and <span class="term" data-term="sdrt">Stamp Duty Reserve Tax (SDRT)</span> apply at <strong>0.5% of consideration</strong> on transfers of UK-incorporated company shares. Stamp duty applies to the paper instrument of transfer; SDRT applies to electronic / dematerialised transfers (e.g. through CREST). One of the headline advantages of a UK <em>scheme of arrangement</em> over a contractual offer is that the scheme transfers shares by court order rather than by instrument of transfer, so 0.5% stamp duty is generally not chargeable &mdash; on a &pound;5bn deal that is &pound;25m of saving.</p>
+
+  <p>Civil-law systems impose their own transfer duties on share and asset deals. France charges <em>droits d'enregistrement</em> (registration duty) at 0.1% on transfers of <em>actions</em> in an SA or SAS, 3% on <em>parts sociales</em> in an SARL (with an abatement of &euro;23,000 prorated by holding), and 5% on transfers of <em>soci&eacute;t&eacute;s &agrave; pr&eacute;pond&eacute;rance immobili&egrave;re</em> (real-estate-rich entities &mdash; companies whose assets are predominantly French real property). Germany charges <span class="term" data-term="grunderwerbsteuer">Grunderwerbsteuer</span> at <strong>3.5&ndash;6.5%</strong> of consideration depending on the federal state (<em>Bundesland</em>), triggered not only on direct transfers of German real estate but also on indirect transfers of <strong>more than 90% of the shares</strong> in any company with German real estate within a 10-year window under &sect;1(2a)&ndash;(3a) GrEStG (Grunderwerbsteuergesetz). Italy charges <em>imposta di registro</em> (proportional registration tax, with rates of 9% on real estate and various lower rates on going concerns and shares).</p>
+
+  <aside class="juris compare"><h5>Default allocation rule</h5><p>The civil-law default is that the <strong>buyer pays</strong> transfer duty unless the parties agree otherwise. UK SDLT is statutorily a buyer obligation; UK stamp duty / SDRT is also typically a buyer obligation by market practice. Always reflect the transfer-tax allocation as an explicit clause in the SPA &mdash; for cross-border deals where the structure crosses several jurisdictions, the allocation question multiplies.</p></aside>
+
+  <h2>Antitrust effort clauses &mdash; HOHW vs. RBE vs. CRE</h2>
+
+  <p>Structure choice and antitrust risk allocation are inseparable. Whichever statutory mechanic is used (share, asset, merger, scheme, offer), the SPA's <em>regulatory-effort</em> covenant decides how hard the buyer must push to clear the deal &mdash; and what divestitures it must accept before it can walk. The market spectrum (in increasing order of buyer commitment):</p>
+
+  <ol>
+    <li><strong>"Reasonable best efforts" (RBE)</strong> &mdash; buyer must do what a reasonable person in its commercial position would do, but is not obliged to take steps that would adversely affect its own commercial interests in a material way. Default in mid-market US M&amp;A.</li>
+    <li><strong>"Commercially reasonable efforts" (CRE)</strong> &mdash; broadly equivalent to RBE in modern Delaware practice; "commercially" emphasises that the buyer is not obliged to act <em>against</em> its commercial interest. Some courts read CRE as marginally less demanding than RBE.</li>
+    <li><strong><span class="term" data-term="hell-or-high-water">"Hell-or-high-water" (HOHW)</span></strong> &mdash; the strongest possible commitment: the buyer agrees to take <em>any and all</em> action necessary to clear regulatory hurdles, including divesting any business or asset, accepting any behavioural condition, paying any "tax" of regulatory remedies. Buyer cannot use regulatory burden as an excuse to walk away. Highly seller-friendly. Typical in seller-led auctions where the seller wants total deal-certainty.</li>
+  </ol>
+
+  <p><strong>The divestiture cap &mdash; the modal industry compromise.</strong> Pure HOHW is rare. Most large-deal SPAs land on RBE coupled with a hard <strong>divestiture cap</strong> (the buyer agrees to RBE up to a defined ceiling of forced divestitures, and is free to walk if the regulator demands more). The cap is denominated either by revenue ("no obligation to divest assets generating in aggregate more than US$X of consolidated revenue") or by EBITDA ("no obligation to divest assets representing more than Y% of target consolidated EBITDA"). A "burdensome condition" carve-out runs alongside it: buyer can refuse to accept any condition that would have a defined material adverse effect on the combined company.</p>
+
+  <p>A concrete example of how this matters: in <em>AT&amp;T / Time Warner</em> (2018), the merger agreement contained a <strong>"reasonable best efforts"</strong> antitrust covenant. When the U.S. Department of Justice (DOJ) sued to block the deal, AT&amp;T litigated through a seven-week trial (<em>US v. AT&amp;T, Inc.</em>, 310 F. Supp. 3d 161 (D.D.C. 2018)) and prevailed, closing the deal. Had Time Warner extracted a HOHW covenant, AT&amp;T would have been on the hook for whatever divestitures the DOJ demanded, no matter how value-destructive. Conversely, the failed 2011 AT&amp;T / T-Mobile deal showed what happens when the buyer cannot deliver: AT&amp;T paid Deutsche Telekom US$3 billion in cash plus US$1 billion in spectrum.</p>
+
+  <p>Module 08 develops the regulatory-clearance machinery (timing agreements, pull-and-refile, hold-separate trustees, IEOs); Module 09 covers the interaction with the MAC clause and the interim-period covenants. The structural choice anchored here in Module 06 controls where these clearances sit in the deal architecture.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 04 (Due Diligence) &mdash; anti-assignment review on critical contracts dictates whether a forward or reverse triangular merger is viable; the contract estate populates the third-party-consent CP list. Module 05 (Valuation) &mdash; the §338(h)(10) gross-up calculation feeds back into the equity bridge; the structuring choice affects whether step-up depreciation deductions land in the LBO model.</li>
+      <li><strong>Forwards:</strong> Module 07 (SPA) &mdash; share deals trigger broader R&amp;W packages (buyer inherits all liabilities); asset deals run on heavier specific indemnities for excluded liabilities. Module 08 (CPs) &mdash; structure choice drives which regulatory CPs sit where, and the antitrust effort clause anchors here. Module 11 (Purchase Price) &mdash; asset deals almost always run on Completion Accounts (asset perimeter and working-capital allocation finalised at completion); share deals can use either, with Locked Box more common in PE share-deal exits. Module 14 (W&amp;I) &mdash; insurers price asset-deal vs. share-deal policies differently because the underlying liability transfer mechanics differ.</li>
+      <li><strong>Domino effect:</strong> if a deal switches mid-process from a scheme to a contractual offer (a real scenario when target shareholder support softens), the squeeze-out threshold moves from ~75% scheme to 90% offer (CA 2006 §979); the timetable changes (offer is faster but riskier); cash-confirmation requirements re-engage; the financing certainty test under LMA / SunGard re-cuts; and the Code stamping consequences flip. A partner runs that decision tree in 30 seconds &mdash; the user needs the map.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Share deal = buyer takes the entity (and all liabilities); asset deal = buyer cherry-picks. Buyer prefers asset, seller prefers share; the §338(h)(10) election bridges the gap in the US.</li>
+      <li>On a share deal, contracts run on but change-of-control clauses can bite. On an asset deal, contracts must be novated and TUPE / Acquired Rights Directive transfers employees automatically in UK / EU (US default is at-will).</li>
+      <li>Reverse triangular merger is the US public-company workhorse because target survives — anti-assignment clauses are generally not triggered (<em>Meso Scale</em>, 2013).</li>
+      <li>UK take-privates: scheme of arrangement (court-sanctioned, 75% in value AND majority in number, 100% in one step) vs. contractual offer (50% to take effect, 90% to squeeze out under CA 2006 §979).</li>
+      <li>Williams Act tender-offer mechanics: Schedule TO, 20-business-day open, withdrawal rights, best-price rule, anti-fraud under §14(e).</li>
+      <li>City Code Rule 9 mandatory offer triggers at 30% of voting rights, in cash, at the highest price paid in the prior 12 months.</li>
+      <li>Consideration: cash (certainty, faster), stock (no cash strain, possible tax-free reorganisation under IRC §368 / share-for-share rollover under TCGA 1992), mixed, CVRs for milestone bridges.</li>
+      <li>Pillar Two / GloBE: 15% jurisdictional minimum ETR for groups with €750m+ revenue, in force in EU (Directive 2022/2523) and UK (Finance (No. 2) Act 2023) from FY2024; tax DD must compute jurisdictional ETRs and quantify IIR/UTPR exposure.</li>
+      <li>ATAD I (Directive 2016/1164) Article 4 caps interest at 30% of EBITDA; ATAD II neutralises hybrid mismatches; UK equivalents in TIOPA 2010 Parts 10 and 6A. Effect: classic shareholder-loan PIK structures often stranded above the cap.</li>
+      <li>The tax step plan / structure paper is the master choreography document: numbered steps with jurisdiction, taxable event, withholding analysis and timing — and the SPA's CPs, pre-closing reorg covenants and funds flow must mirror it precisely.</li>
+      <li>Transfer taxes: UK SDLT (Finance Act 2003, up to 5% commercial / 17% residential non-resident corporate) on land; UK stamp duty / SDRT 0.5% on share consideration (often saved on schemes); German Grunderwerbsteuer 3.5–6.5% triggered by indirect transfer of >90% of shares in a real-estate-rich company under §1(2a)–(3a) GrEStG; civil-law default: buyer pays unless agreed otherwise.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="05-valuation.html" class="prev">Valuation &amp; Deal Economics</a>
+    <a href="07-spa-structure.html" class="next">The SPA: Structure, Recitals &amp; Definitions</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

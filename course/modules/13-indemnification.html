@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 13 — The Indemnification Regime · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="13">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 13</div>
+    <h1>The Indemnification Regime</h1>
+    <p class="subtitle">The operational link between R&amp;W breach and money damages — the basket, cap, survival period, third-party-claim procedure and exclusive-remedy clause that determine who actually pays, how much, and when.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Map the <span class="term" data-term="indemnification">indemnification</span> clause's three operative components: the indemnification obligation, the claim procedure, and the limitations (time, monetary, and exclusions).</li>
+      <li>Distinguish a <span class="term" data-term="loss">"Loss"</span> under common-law contract damages (<span class="term" data-term="hadley-baxendale">Hadley v. Baxendale</span>) from a "Loss" as contractually defined in modern SPAs, and identify the typical exclusions (consequential, lost goodwill, lost profits).</li>
+      <li>Apply the difference between a <span class="term" data-term="tipping-basket">Tipping Basket</span> and a <span class="term" data-term="deductible-basket">Deductible Basket</span>, and explain why each is friendlier to one party.</li>
+      <li>Calculate the practical effect of a <span class="term" data-term="de-minimis">de minimis</span>, <span class="term" data-term="basket">basket</span> and <span class="term" data-term="cap">cap</span> on a hypothetical claim portfolio.</li>
+      <li>Identify the standard carve-outs from monetary limitations (fraud, fundamental R&amp;Ws, tax, employment, environmental) and explain why each typically falls outside the cap.</li>
+      <li>Manage <span class="term" data-term="third-party-claim">Third-Party Claims</span> procedure: notice, defence rights, settlement consent, conflicts of interest.</li>
+      <li>Explain the operation of the <span class="term" data-term="exclusive-remedy">Exclusive Remedy</span> clause and the irreducible carve-out for fraud.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> A breach of a warranty is meaningless unless it produces money. The indemnification regime is the operational link between R&amp;W breach and money damages. Every parameter — the basket size, the cap, the survival period, the carve-outs, the deductions — directly determines how much the seller actually pays when something goes wrong, and whether the buyer can recover at all. Imagine a &euro;200 million deal where the buyer discovers &euro;5 million of undisclosed tax liabilities post-Closing. With a 1% basket (&euro;2 million), 10% cap (&euro;20 million), no de minimis, and a tax carve-out: the buyer recovers &euro;5 million. Same deal with a 2% basket (&euro;4 million), 10% cap, no carve-out for tax: the buyer recovers &euro;1 million. Same deal with a 2% deductible basket (&euro;4 million) and tax carve-out from monetary limits: the buyer recovers &euro;5 million. The drafting of a single sub-clause moves &euro;4 million between buyer and seller. Spend half your negotiation time on the R&amp;W list, and half on the indemnification sub-clauses.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in an indemnification meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Materiality scrape (double scrape)"</strong> — provision that reads materiality qualifiers <em>out</em> of the warranties for indemnification purposes (single scrape = damages only; double scrape = both breach and damages). Now in 82% of US private deals per ABA 2025.</li>
+      <li><strong>"Knowledge scrape"</strong> — the W&amp;I-driven equivalent that strips knowledge qualifiers under the policy. Standard in W&amp;I-backed deals.</li>
+      <li><strong>"Tax tail"</strong> — the long survival period for tax claims (typically tax statute of limitations + 30–60 days), and the practical fact that tax matters often run under a separate Tax Covenant / Tax Deed with its own procedure rather than the SPA's general indemnification regime.</li>
+      <li><strong>"No-multiplier clause"</strong> — Loss-definition provision that prevents diminution-in-value damages calculated by applying the deal's EBITDA multiple to recurring liabilities. Exception typically preserved for breach of financial-statements warranties.</li>
+      <li><strong>"Stacked recovery vs sole recourse"</strong> — stacked = buyer can recover under both SPA indemnity and W&amp;I policy, capped at one full loss; sole recourse = buyer's only remedy is the policy (synthetic / no-recourse exits).</li>
+      <li><strong>"Tower"</strong> — the W&amp;I tower a partner draws on a whiteboard: SPA cap (~0.5–1% with W&amp;I) → policy retention → policy primary layer (~10% of EV) → excess layers stacked above.</li>
+      <li><strong>"True-up vs stand-alone"</strong> — does an indemnity claim interact with a closing-accounts working-capital true-up (M11)? An anti-double-recovery rule prevents the buyer from collecting the same dollars twice (once via the price true-up, once via warranty indemnity).</li>
+      <li><strong>"Tipping vs deductible"</strong> — basket type. Tipping = aggregate exceeds basket → buyer recovers whole amount. Deductible = only excess recoverable.</li>
+      <li><strong>"Save-for-fraud"</strong> — the carve-out that survives every limitation: cap, basket, survival, exclusive remedy. UK: <em>Lazarus Estates</em> / <em>HIH Casualty</em>; US: <em>ABRY Partners</em>.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> M04 (DD — knowledge of issues from DD interacts with sandbagging and reduces the practical value of indemnity); M11 (Closing Accounts — working-capital true-up may capture the same under-accrual that the buyer wants to claim under indemnity; anti-double-recovery clause needed); M12 (R&amp;Ws — survival, cap, basket are the indemnification mechanics that give R&amp;Ws their teeth).</li>
+      <li><strong>Forwards:</strong> M14 (W&amp;I — with W&amp;I, SPA cap collapses to escrow / €1; survival shortens at SPA level but extends under policy; fraud and fundamentals remain at SPA level; subrogation waivers and no-claims-known declarations apply); M16 (Disputes — burden of proof on Loss; expert determination for quantum; arbitrator posture differs sharply on fraud vs warranty breach).</li>
+      <li><strong>Domino effect:</strong> Shorten survival from 24 to 12 months → escrow release schedule shortens, W&amp;I term shortens, audit cycle alignment may break. Flip from tipping to deductible → buyer asks for higher cap, more carve-outs, lower de minimis, materiality scrape in compensation. Introduce W&amp;I → SPA cap collapses to escrow; survival shortens at SPA level but extends under policy; fraud and fundamentals sharpen because they remain seller exposure.</li>
+    </ul>
+  </aside>
+
+  <h2>The indemnification obligation: trigger and operative wording</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.1 — Indemnification obligation:</strong> "The Sellers shall defend, indemnify, and hold harmless the Buyer or the Target Company (as requested from time to time by the Buyer but in any case, without duplication) against and in respect of any and all Losses by reason of, or arising out of, any of the Sellers' Representations and Warranties being untrue, incorrect, or misleading."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> setting up the core indemnification trigger. Two operative elements. (1) <strong>Breach of R&amp;W</strong> — the trigger; "untrue, incorrect or misleading" is a deliberately broad standard ("untrue" = strictly false; "incorrect" might cover a statement technically accurate but creating a false impression; "misleading" extends to half-truths and omissions). (2) <strong>Loss</strong> — the consequence to be indemnified. The phrase <span class="term" data-term="indemnify-defend-hold-harmless">"defend, indemnify, and hold harmless"</span> is American legal-triplet boilerplate. The indemnitee can be either the Buyer or the Target Company (some losses fall on the Target — e.g., a tax assessment levied on the Target — and pushing them up to the Buyer involves circuitous accounting). The "without duplication" wording prevents double-counting.</div>
+  </aside>
+
+  <h2>What is a "Loss"?</h2>
+
+  <p>The indemnification obligation runs to "Losses". The contractual definition of "Loss" is critical and often hard-fought.</p>
+
+  <h3>The common-law starting point</h3>
+
+  <p>Under English law, ordinary contract damages are measured under the rule in <strong><em>Hadley v. Baxendale</em> (1854) 9 Exch 341</strong>:</p>
+
+  <ul>
+    <li><strong>First limb</strong>: damages for losses arising naturally, in the usual course of things, from the breach (direct damages).</li>
+    <li><strong>Second limb</strong>: damages for losses that may reasonably be supposed to have been in the contemplation of both parties at the time of contracting as the probable result of the breach (consequential damages, foreseeable special damages).</li>
+  </ul>
+
+  <p>Subject to the duty of mitigation (the claimant cannot recover for losses it could have avoided) and the foreseeability rule. US law tracks this approach (see <em>Hadley v. Baxendale</em> as adopted by the Restatement (Second) of Contracts &sect;351 — foreseeability test).</p>
+
+  <h3>The contractual narrowing</h3>
+
+  <p>Modern SPAs typically narrow this default position substantially. A common contractual definition of "Loss" is:</p>
+
+  <blockquote>"<strong>Loss</strong>" means any direct loss, damage, liability, claim, deficiency, action, judgment, settlement, interest, award, penalty, fine, cost or expense (including reasonable legal fees and expenses) actually incurred by the Indemnified Party, <strong>excluding to the maximum extent permitted under applicable law any indirect, consequential, special, punitive or exemplary damages, lost profits, lost business opportunity, loss of goodwill or diminution in value of the Target</strong>.</blockquote>
+
+  <p>The exclusions reflect the seller's drafting goals: convert a claim that might naturally include lost profits and lost business opportunity (which a court would award under <em>Hadley v. Baxendale</em>'s second limb) into a claim limited to direct, out-of-pocket cost.</p>
+
+  <h3>The diminution-in-value problem</h3>
+
+  <p>A key interpretive question: where the breach causes the <strong>value of the Target as a whole</strong> to be lower than the buyer paid, can the buyer recover the <span class="term" data-term="diminution-in-value">diminution in value</span>? Three possible measures:</p>
+
+  <ol>
+    <li><strong>Cost of cure</strong> — the cost of remedying the breach (e.g., the cost of cleaning up the contamination that should not have been there).</li>
+    <li><strong>Diminution in value</strong> — the difference between the price paid and the value of the Target as actually delivered (a per-share or per-business measure).</li>
+    <li><strong>Indemnity-style "make whole"</strong> — a payment that puts the buyer in the same financial position it would have been in had the warranty been true.</li>
+  </ol>
+
+  <p>UK case law: <em>Lion Nathan Ltd v. C-C Bottlers Ltd</em> [1996] 1 WLR 1438 (Privy Council) — the appropriate measure of damages for breach of an SPA warranty is generally the difference between the value of the Target as warranted and the value as actually delivered (i.e., diminution in value), but the cost-of-cure measure may be appropriate where the buyer reasonably remedies the defect.</p>
+
+  <p>The analysis often turns on the multiple paid (if the Target was bought at a 10x EBITDA multiple, an undisclosed &euro;1m of recurring liabilities arguably reduces value by &euro;10m, not &euro;1m). The seller resists this by negotiating an explicit "<strong>no multiplier</strong>" provision in the Loss definition: "for the avoidance of doubt, no Loss shall be calculated by applying a multiplier to any reduction in earnings, profits or cash flow." The "no multiplier" clause is increasingly common in US deals and heavily negotiated; recent ABA Deal Points Studies show the related diminution-in-value / consequential-damages carve-outs at the substantial-majority level, and partners typically pair the no-multiplier carve-out with an exception preserving multiple-driven measure for breach of <em>financial-statements</em> warranties (where the multiplier is the proper measure since the buyer paid a multiple of the warranted earnings).</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — Loss definition</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> broad definition including direct and reasonably foreseeable consequential losses, lost profits, diminution in value calculated using applicable multipliers.</li>
+      <li><strong>Seller wants:</strong> narrow definition limited to direct out-of-pocket losses; explicit exclusion of consequential, indirect, special, punitive, lost profits, lost goodwill, lost business opportunity, and diminution in value; explicit "no multiplier" provision.</li>
+      <li><strong>Typical compromise:</strong> direct losses plus reasonably foreseeable consequential losses, but exclude lost profits and lost goodwill; "no multiplier" clause but with an exception for breaches of financial-statements warranties (where the multiplier is the proper measure since the buyer paid a multiple of the warranted earnings).</li>
+    </ul>
+  </aside>
+
+  <h2>Claim procedure (non-third-party claims)</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.2 — Claims:</strong> "If any event occurs which could give rise to the Sellers' liability under Clause 7.1 above (an 'Indemnification Event'), the following provisions shall apply: (i) Any claim for indemnification pursuant to this Clause 7 (the 'Claim') shall be notified by the Buyer to the Sellers not later than 60 (sixty) Business Days from which the Buyer has become aware of the existence of the Indemnification Event. Any Claim shall give a reasonable summary of such Indemnification Event. (ii) The Sellers shall have a period of 30 (thirty) Business Days from receipt of the Claim (the 'Acceptance Deadline') either to allow or contest said Claim and shall send a notice to the Buyer of their determinations within the Acceptance Deadline. In the event of failure by the Sellers to give such notice within the Acceptance Deadline, the Claim shall be deemed accepted by the Sellers. (iii) In the event the Claim of the Buyer is disputed, in whole or in part, by the Sellers, the Sellers and the Buyer shall endeavour to settle the dispute amicably as provided for under Clause 10.2 below. Should no agreement be reached within 30 (thirty) Business Days from the receipt by the Buyer of the Sellers' notice of disagreement, then the Sellers or the Buyer may refer the matter to arbitration according to Clause 10.3 below."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> hard-wiring the claim procedure into the SPA. Five elements: (1) Notice deadline — 60 Business Days from buyer becoming aware (typical compromise; buyer wants longer, seller wants shorter); (2) Notice content — "reasonable summary" (vague — buyer-friendly) versus "full and reasonable detail of the basis of the claim" (specific — seller-friendly); (3) <span class="term" data-term="acceptance-deadline">Acceptance Deadline</span> — 30 Business Days, with failure to respond = "deemed acceptance" (powerful protection for the buyer against a passive seller); (4) Good-faith negotiation period — 30 Business Days; (5) Escalation to arbitration / litigation. The "deemed acceptance" mechanic is the key buyer protection: the seller cannot defeat a claim by simply ignoring it.</div>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — claim procedure</h5>
+    <ul>
+      <li><strong>Notice deadline starting from "becoming aware"</strong> versus "objectively could reasonably have become aware" — the latter creates a constructive-knowledge claim trigger that the buyer cannot accidentally extend by ignoring evidence.</li>
+      <li>Failure to specify the <strong>form of notice</strong> (email, courier, registered post, all of the above) — leads to disputes about valid service.</li>
+      <li>"Deemed acceptance" without a corresponding "deemed dispute" — if the buyer fails to respond to the seller's notice of dispute, what happens? Symmetric drafting helps.</li>
+      <li>Confusing the <strong>existence</strong> of a Claim with the <strong>quantum</strong> — a buyer that has notified existence within the deadline should not lose the claim because the precise amount is established later. Modern drafting: notice triggers the time stop; quantum can be developed.</li>
+    </ul>
+  </aside>
+
+  <h2>Third-Party Claims</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.3 — Third-Party Claims:</strong> "Should any claim, action, suit or proceeding be asserted or initiated by a third party against the Company constituting an Indemnification Event (the 'Third-Party Claim'), the Buyer shall give written notice to the Sellers promptly and, in any case, within any term required by the applicable law in the case of a limitation period (decadenza) and shall inform in writing the Sellers with all reasonable information and shall promptly make available to the latter all relevant documentation which may be available. The Sellers may participate, at their own expenses, in the defense of such Third-Party Claim (by giving notice to the Buyer within the Acceptance Deadline) and designate, at their own costs and expenses, one or more attorney(s) of their choice to be appointed by the Target Company, in which case the Target Company shall confer to such attorney(s) the necessary powers so that the Sellers can actively participate in the defense of the Third-Party Claim. If the Sellers decide not to participate in the defence or if they fail to continue their participation in the defence of any such Third-Party Claim, the Target Company may defend against any such Third-Party Claim in such manner as it may deem appropriate and without further consultation. The Target Company may settle such Third-Party Claim on such terms as it may deem appropriate but subject to the Sellers' prior approval, such approval not to be unreasonably denied or withheld; provided, however, that any such settlement shall be deemed approved by the Sellers if they fail to object thereto, by written notice to the Buyer, within 7 (seven) Business Days after the Sellers' receipt of the terms and conditions of such settlement. The Sellers shall promptly reimburse the Target Company for all reasonable expenses, legal and otherwise, incurred by the Target Company in connection with the defence and settlement of such claim or action."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> a complete third-party-claim procedural framework. Five sub-mechanics. (1) <strong>Notice</strong> — buyer notifies "promptly", and crucially within any statutory limitation period (Italian: <em>decadenza</em>; Spanish: <em>caducidad</em>) — UK has no equivalent statutory regime so the contractual deadline is the only one. (2) <strong>Information sharing</strong> — buyer gives reasonable information and documentation. (3) <strong>Election by seller to take over defence</strong> — seller may "step in" and run the defence with its own counsel; the target company appoints those attorneys so the seller has actual control. (4) <strong>Step-in rights</strong> — if the seller declines or fails to defend, the buyer / Target retain the right to defend. (5) <strong>Settlement consent</strong> — seller's approval required, "not to be unreasonably denied or withheld", with deemed approval if no objection within 7 Business Days. The Italian-law reference to <em>decadenza</em> is jurisdiction-specific but illustrates the wider point: in some civil-law systems, statutory limitation periods operate independently of contractual notice provisions.</div>
+  </aside>
+
+  <h3>Conflicts of interest in third-party defence</h3>
+
+  <p>The seller's interest is to <strong>minimise the payout under the indemnity</strong>; the Target's interest is to <strong>protect its business and reputation</strong>. These can conflict:</p>
+
+  <ul>
+    <li>A regulator's investigation: the seller wants to settle quickly with a payment; the Target wants to fight to avoid public admission of wrongdoing.</li>
+    <li>A customer warranty claim: the seller wants to fight; the Target wants to settle to preserve the customer relationship.</li>
+    <li>A class action: the seller wants narrow settlement; the Target wants global resolution.</li>
+  </ul>
+
+  <p>The standard modern compromise: seller takes over defence with seller's choice of counsel; buyer / Target have a right to participate at their own cost (with separate counsel if material conflicts arise); settlement requires both parties' consent.</p>
+
+  <p>A more buyer-friendly variation: buyer / Target retain control of the defence at all times; seller is consulted and bears the cost; the buyer cannot settle without the seller's consent (not to be unreasonably withheld). Used when the deal includes Warranty &amp; Indemnity (W&amp;I) insurance (where the insurer's interest in defence control is also at play).</p>
+
+  <h2>Time limitations / Survival periods</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.4(a) — Time limitation:</strong> "The Sellers shall not be liable hereunder for any Loss unless the claim, fact, action or circumstances giving rise to such Loss have occurred within 24 (twenty-four) months after the Effective Date (the '<span class="term" data-term="indemnity-notice-period">Indemnity Notice Period</span>'); provided, however, that: (i) With respect to any Loss arising from any breach of a representation and warranty of the Sellers relating to Taxes, or any Tax liability arising from periods prior to the date hereof, the Indemnity Notice Period shall extend until 40 (forty) days after the expiry of the term prescribed by the applicable law for the assessment of the payment of both direct and indirect Taxes by the relevant authorities; (ii) The Indemnity Notice Period shall extend until 40 (forty) days after the expiry of the applicable statute of limitation for indemnity claims for Losses arising out of fraud or intentional breach or misrepresentation and for Losses exclusively arising from a breach of Sellers' Representations and Warranties indicated under (1), (2) and (3) below: (1) No. 8 (Employment, Agency and Pension Matters) and No. 9 (Agents and distributors); (2) No. 14 (Subsidies); (3) No. 20 (Environment); (iii) The Indemnity Notice Period shall extend until 5 (five) years after the Effective Date for indemnity claims relating to any sanction imposed over the Buyer and/or the Target Company pursuant to Legislative Decree no. 231 of June 8, 2001; (iv) In case a Claim is notified to the Sellers within the Indemnity Notice Period, the Sellers shall remain liable for such Claim even after the expiry of the Indemnity Notice Period and until the amount covered by the Claim is finally ascertained and paid, subject to the ordinary statutes of limitation (prescrizione)."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> the layered survival regime. (a) <strong>General period</strong> — 24 months for ordinary business R&amp;Ws (typical 18-24 months; covers one full audit cycle so the buyer's first post-acquisition audit can flush out anomalies, but short enough to give the seller a quasi-clean-break). (b) <strong>Tax carve-out</strong> — extends to applicable tax statute of limitations + 40 days, because tax authorities operate on their own statutory clock. (c) <strong>Long-tail carve-outs</strong> — fraud, employment, agency, pensions, subsidies, environment. (d) <strong>Italian-law-specific 5-year carve-out</strong> for Legislative Decree 231/2001 — Italian corporate criminal liability for offences committed in the company's interest. The closer comparators are the <strong>UK Bribery Act 2010</strong> (corporate offence of failure to prevent bribery) and the <strong>UK Criminal Finances Act 2017</strong> (failure to prevent facilitation of tax evasion); the <strong>US FCPA 1977</strong> is the US anti-bribery analogue. SOX 2002 is principally a financial-reporting / auditing-controls statute (not a corporate criminal liability regime in the D.Lgs 231 sense) and is a weaker analogue. (e) <strong>The freeze rule</strong> in (iv) — once a claim is notified within the period, the seller remains liable for that claim even after the period expires until the amount is ascertained and paid. This is critical: without it, the buyer would have to fully prove and quantify before the survival period ran out, often impossible (especially for tax assessments that take years to resolve). <strong>Timely notice freezes the clock.</strong></div>
+  </aside>
+
+  <h3>Typical durations</h3>
+
+  <ul>
+    <li><strong>Business R&amp;Ws (general):</strong> 18 to 24 months.</li>
+    <li><strong>Fundamental R&amp;Ws:</strong> 6 to 7 years (often aligned to the relevant statute of limitations) or perpetual.</li>
+    <li><strong>Tax R&amp;Ws:</strong> statute of limitations + a buffer (typical 30-60 days). UK: under the Taxes Management Act 1970 (TMA 1970) ss.34, 36 and 36A as amended by the Finance Act 2008, the assessment time limits are 4 years for ordinary cases, 6 years for careless behaviour, and 20 years for deliberate behaviour. US federal income tax: 3 years generally, 6 years for substantial omission (&gt;25%) per Internal Revenue Code &sect;6501.</li>
+    <li><strong>Specific carve-outs (per source deck):</strong> Employment / Agency / Pension; Agents and distributors; Subsidies; Environmental — typically extended periods given the long-tail nature.</li>
+    <li><strong>Anti-bribery / corporate criminal:</strong> often 5-10 years from Closing — UK Bribery Act 2010 (corporate offence of failure to prevent bribery — defence of "adequate procedures"); UK Criminal Finances Act 2017 (failure to prevent facilitation of tax evasion); US FCPA 1977.</li>
+    <li><strong>Fraud / wilful misconduct:</strong> statute of limitations (no contractual short-stop). Cannot be capped by public policy.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — survival</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> longer survival across the board; broader carve-outs (anything that might be a long-tail liability — pensions, environment, tax, employment, regulatory); statute-of-limitations carve-out for fundamental R&amp;Ws and fraud; "claim notified" language preserving claims past the deadline.</li>
+      <li><strong>Seller wants:</strong> short survival (12 months for business R&amp;Ws); narrow carve-outs only for those where statute compels (tax); cap on residual liability post-period.</li>
+      <li><strong>Typical compromise (deal without W&amp;I):</strong> 18-24 months general; 5-7 years for fundamentals; tax aligned to statute + 30 days; specific 3-5 year carve-outs for environment, employment, regulatory.</li>
+      <li><strong>Typical compromise (deal with W&amp;I, the dominant pattern at 63% of US deals per ABA 2025):</strong> 18 months general at the SPA level (with the W&amp;I policy then extending to 24-36 months); 6-7 years for fundamentals and tax under the policy; minimal seller liability beyond the SPA period. Per ABA 2025: 41% of deals have R&amp;Ws not surviving Closing at all (up from 30% in the prior 2023 study).</li>
+    </ul>
+  </aside>
+
+  <h2>Monetary limitations: De Minimis, Basket and Cap</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.4(b) — Monetary Thresholds:</strong> "Sellers shall not be liable under this Clause 7: (1) (De Minimis) If the amount due in connection with any Indemnification Event does not exceed &euro; 15,000.00 (fifteen thousand/00); (2) (Basket) Until the aggregate of all amounts that would otherwise be due in respect of all other claims against the Sellers exceeds &euro; 100,000.00 (one hundred thousand), it being understood that, if such limit is exceeded, the Sellers shall be liable for the whole amount of the claim and not merely the excess; (3) (Cap) For any amount in excess of &euro; 1,300,000.00 (one million three hundred thousand) (the 'Cap'); (ii) the monetary thresholds provided in this Clause 7.4(b) shall not apply in case of any Losses arising out of (1) fraud or intentional breach or misrepresentation or (2) breach of any of the Fundamental Representations."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> applying the three monetary devices serially. (1) <strong>De Minimis</strong> — &euro;15,000 per-claim floor (Latin: "of the smallest things"; below this, claims are not even counted, avoiding administrative burden of micro-claims). Typical: 0.05% to 0.1% of the purchase price. (2) <strong>Basket</strong> — &euro;100,000 cumulative threshold; the wording "if such limit is exceeded, the Sellers shall be liable for the whole amount of the claim and not merely the excess" makes this a <strong>tipping basket</strong> (also "first-dollar basket"; buyer-friendly). Typical sizing: 0.5% to 1% of the purchase price. (3) <strong>Cap</strong> — &euro;1,300,000 aggregate liability ceiling. The cap of &euro;1.3m on a basket of &euro;100k (13x) suggests a deal of roughly &euro;13m enterprise value (basket at ~1%, cap at 10%). (ii) <strong>Carve-outs</strong> — fraud and Fundamental R&amp;Ws are unlimited. The carve-outs are not a small matter: they are the seller's residual long-tail exposure regardless of what cap was negotiated.</div>
+  </aside>
+
+  <h3>(1) De Minimis</h3>
+
+  <p>Threshold below which a single claim is not even counted. Most US deals include a de minimis (sometimes called "<strong>mini-basket</strong>" or "<strong>single-claim threshold</strong>"). Market norm is approximately <strong>0.05–0.1% of transaction value</strong> (per ABA Deal Points Studies and Morse / Cassels practitioner summaries; precise prevalence figures should be checked against the latest ABA edition before relied on in a meeting). Buyer wants: low de minimis or none (every claim counts). Seller wants: high de minimis (small claims excluded).</p>
+
+  <h3>(2) Basket / Threshold / Deductible</h3>
+
+  <p>The cumulative claims threshold below which the seller has no liability. Two flavours:</p>
+
+  <ul>
+    <li><strong>Tipping Basket</strong> (also "First-Dollar Basket") — once aggregate claims <strong>exceed</strong> the basket, the <strong>whole amount is recoverable</strong> (not just the excess). The basket "tips over" and gives the buyer everything. Per source deck wording: "if such limit is exceeded, the Sellers shall be liable for the whole amount of the claim and not merely the excess." <strong>Buyer-friendly.</strong></li>
+    <li><strong>Deductible Basket</strong> (also "True Deductible") — only amounts <strong>above the basket</strong> are recoverable. The basket is a permanent excess that the buyer absorbs. <strong>Seller-friendly.</strong></li>
+  </ul>
+
+  <p><strong>Numerical example.</strong> Basket = &euro;100,000. Aggregate claims = &euro;500,000.</p>
+  <ul>
+    <li>Tipping basket: buyer recovers &euro;500,000 (the whole amount).</li>
+    <li>Deductible basket: buyer recovers &euro;400,000 (&euro;500,000 &minus; &euro;100,000 deductible).</li>
+    <li>Difference: &euro;100,000.</li>
+  </ul>
+
+  <p>Per <strong>ABA 2025 Private Target M&amp;A Deal Points Study</strong> (139-deal sample, transactions in 2024–Q1 2025; published December 2025): <strong>45%</strong> of deals had baskets at 0.5% of transaction value or less; <strong>95%</strong> had baskets at 1% or less; deductible baskets remain the most prevalent type. Representations &amp; Warranties Insurance (RWI) deals tend to have smaller baskets than non-RWI deals.</p>
+
+  <h3>(3) Cap</h3>
+
+  <p>Aggregate liability ceiling. The seller's maximum exposure under the indemnification regime. Typical: <strong>10-30% of the purchase price</strong> without W&amp;I; <strong>10-25% with W&amp;I</strong> (the policy takes over above the cap). Per the <strong>ABA 2025 Private Target M&amp;A Deal Points Study</strong>: <strong>deals where R&amp;Ws do not survive Closing rose from 30% to 41%</strong> (the comparator being the prior 2023 study) — driven by the rise in RWI deals where the SPA cap is essentially zero (or "$1") and the buyer's recourse is wholly to the W&amp;I policy. RWI is referenced in <strong>63%</strong> of deals in the 2025 study.</p>
+
+  <p><strong>Special caps:</strong></p>
+  <ul>
+    <li><strong><span class="term" data-term="fundamental-rw-cap">Fundamental R&amp;Ws</span> and fraud:</strong> 100% of purchase price or uncapped — public policy doesn't allow capping fraud, and the buyer cannot meaningfully be limited where the seller had no good title to sell.</li>
+    <li><strong>Tax:</strong> usually 100% of purchase price or higher — because tax authorities don't respect contractual caps.</li>
+    <li><strong>Specific known issues</strong> (environmental, regulatory): often subject to specific indemnity caps separately negotiated.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — monetary limits</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> low or no de minimis; low basket; <strong>tipping</strong> structure; high cap (50%+ of purchase price for general R&amp;Ws; 100%+ for fundamentals); broad carve-outs from cap.</li>
+      <li><strong>Seller wants:</strong> high de minimis; high basket; <strong>deductible</strong> structure; low cap (10% of purchase price for general; 50% or capped at price for fundamentals); narrow carve-outs.</li>
+      <li><strong>Typical compromise (no W&amp;I):</strong> de minimis 0.1%, basket 0.5-1% (split between tipping and deductible), cap 10-15% for general / 100% for fundamental.</li>
+      <li><strong>Typical compromise (with W&amp;I):</strong> de minimis 0.05-0.1%, basket 0.5%, cap 0.5-1% at SPA level (with W&amp;I policy at 10% of EV), 100% for fundamental at SPA level.</li>
+    </ul>
+  </aside>
+
+  <h3>Worked example: hypothetical claim portfolio</h3>
+
+  <p>Deal: &euro;200 million purchase price. De minimis = &euro;100,000 (0.05%). Basket = &euro;1,000,000 (0.5%) — <strong>tipping</strong>. Cap = &euro;20,000,000 (10%).</p>
+
+  <p>Six post-Closing claims:</p>
+
+  <ul>
+    <li>Claim A: tax assessment, &euro;3,000,000.</li>
+    <li>Claim B: undisclosed customer dispute settlement, &euro;450,000.</li>
+    <li>Claim C: minor IP licence renegotiation cost, &euro;75,000 — <strong>falls below de minimis, not counted</strong>.</li>
+    <li>Claim D: environmental clean-up cost (carved out from cap), &euro;15,000,000.</li>
+    <li>Claim E: employment dismissal settlement, &euro;200,000.</li>
+    <li>Claim F: fundamental — title defect, &euro;30,000,000 (uncapped).</li>
+  </ul>
+
+  <p>Counted claims (excluding C): A &euro;3,000,000 + B &euro;450,000 + D &euro;15,000,000 + E &euro;200,000 = &euro;18,650,000. Plus claim F (separate cap).</p>
+
+  <p>Aggregate exceeds basket: tipping &rarr; buyer recovers all &euro;18,650,000 in respect of those four claims. Subject to the cap (&euro;20,000,000) on general claims, the buyer recovers &euro;18,650,000 (within cap) — <strong>except</strong> to the extent that environmental is carved out of the cap. If environmental is carved out, then the cap applies to &euro;3,650,000 (claims A+B+E) — well within the &euro;20m cap, and the buyer recovers the full &euro;15m on D separately.</p>
+
+  <p>Plus claim F: fundamental, uncapped, &euro;30,000,000 fully recoverable (subject to the seller's solvency and any escrow / W&amp;I title cover).</p>
+
+  <p><strong>Total recovery: &euro;18,650,000 + &euro;30,000,000 = &euro;48,650,000 against a &euro;200m purchase price.</strong> A &euro;15,000,000 reduction (negotiating out the environmental carve-out from cap and the fundamental separate cap) would have moved value to the seller.</p>
+
+  <h2>Carve-outs from monetary limitations</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Carve-outs from Monetary Limitations:</strong> "Notwithstanding any de minimis, basket or cap, the Sellers' liability is typically not subject to monetary limitations in the following cases: <strong>Fraud or wilful misconduct</strong> — Any Losses arising from fraud, wilful misconduct or intentional misrepresentation by the Sellers. <strong>Breach of Fundamental Representations &amp; Warranties</strong> — Losses arising from a breach of Fundamental Representations &amp; Warranties (such as title, authority and ownership), which are usually subject to higher or uncapped liability. <strong>Tax matters</strong> — Losses relating to Taxes, including tax assessments, penalties or interest, often aligned with the applicable tax statute of limitations. <strong>Employment and social security matters</strong> — Losses arising from breaches of employment, agency or pension-related representations, often subject to specific survival periods and carve-outs. <strong>Environmental matters</strong> — Environmental liabilities, which are frequently excluded from general monetary limits due to their potentially long-term and unpredictable nature."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> listing the standard carve-outs from monetary limits with the rationale for each. <strong>Fraud / wilful misconduct</strong> — cannot be excluded by contract as a matter of public policy. The classic dictum "<em>fraud unravels everything</em>" is Lord Denning MR in <em>Lazarus Estates Ltd v Beasley</em> [1956] 1 QB 702 (CA): "No court in this land will allow a person to keep an advantage which he has obtained by fraud. … Fraud unravels everything." The modern commercial-contract restatement is <em>HIH Casualty &amp; General Insurance v Chase Manhattan Bank</em> [2003] UKHL 6 — a contractual exclusion of liability for fraud requires "clear and unmistakable terms." US analogue: <em>ABRY Partners</em>. <strong>Fundamental R&amp;Ws</strong> — title, capacity, authority, ownership; the buyer paid for the existential right to own the Target. <strong>Tax</strong> — assessments operate on statutory timelines exceeding contractual deadlines; tax authorities don't respect contractual caps. <strong>Employment / social security</strong> — long-tail liabilities (pension underfunding, accrued holiday, disability claims); jurisdiction-specific (UK: TUPE — Transfer of Undertakings (Protection of Employment) Regulations 2006; US: ERISA — Employee Retirement Income Security Act 1974; EU: Acquired Rights Directive). <strong>Environmental</strong> — long-tail liabilities; strict liability under most environmental statutes (UK: Environmental Protection Act 1990; US: Comprehensive Environmental Response, Compensation, and Liability Act 1980 — "CERCLA" / "Superfund" — joint-and-several liability for remediation).</div>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — carve-outs</h5>
+    <ul>
+      <li><strong>"Fraud" undefined</strong> — the seller will argue actual fraud only (proving subjective intent to deceive — almost impossible); the buyer will argue any reckless or constructive misstatement counts. Define explicitly.</li>
+      <li><strong>Carve-outs not symmetric</strong> — some carve out from the basket and the cap; others only from the cap; others only from survival. List which carve-outs apply to which limitations to avoid disputes.</li>
+      <li><strong>Tax carve-out doubled-up with the tax indemnity</strong> — the SPA usually has both an R&amp;W indemnification regime and a separate <span class="term" data-term="tax-deed">Tax Covenant / Tax Deed</span> with its own procedures. Resolve interplay (typically Tax Deed prevails for tax matters).</li>
+    </ul>
+  </aside>
+
+  <h2>Deductions</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Clause 7.4(c) — <span class="term" data-term="deductions">Deductions</span>:</strong> "The amount of any Claim under this Clause 7 shall be reduced: (i) by any compensation or indemnity received by the Company from third parties (including under or as a result of insurance policies or guarantees) in connection with the specific matter that is the subject of the Claim; (ii) by the amount of any payments received by the Company from third parties (including insurance companies) on any basis in respect of the amounts due by the Sellers in performance of their indemnity obligation; (iii) by the amount of funds, provisions, or other specific corrective items relating to the Losses subject to indemnification that are recorded in the Financial Statements to the extent not yet used; (iv) by the value of any tax benefits arising from the Losses, but only to the extent actually realised by the Buyer and/or the Company and provided that such benefits do not constitute taxable income for either of them, it being understood that, if the tax benefit is realised after the payment of the indemnity by the Sellers, the Buyer and/or the Company, as the case may be, shall be obliged to return to the Sellers the difference between the indemnity paid and the indemnity recalculated by deducting from the relevant Loss the amount of the tax benefit realised."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> the Loss is <strong>net</strong> of recoveries. Three categories. (1) <strong>Third-party recoveries</strong> — insurance proceeds, indemnities from prior owners, recoveries from a contractual counterparty; logic: the buyer should not get a windfall by recovering twice. (2) <strong>Provisions / reserves in the financial statements</strong> — if the Target's financial statements (which the buyer relied on in pricing) include a reserve for the matter, the buyer has already paid a price reduced by the reserve; indemnifying on top would double-count. (3) <strong>Tax benefits actually realised</strong> — if the Loss creates a deductible expense that reduces the Target's tax bill, the buyer's net out-of-pocket loss is reduced. "Actually realised" so the seller can't get a credit for theoretical future benefits that may never materialise. The "claw-back" mechanism in (iv) — if the tax benefit is realised after the indemnity payment, the buyer must return the difference — is unusual but logical: the indemnity should equal the net loss, no more, no less.</div>
+  </aside>
+
+  <p>Negotiation: the seller wants broad deductions (any potential offset reduces the indemnity); the buyer wants narrow ("actually received in cash by the Target", excluding contingent or hypothetical recoveries).</p>
+
+  <h2>Mitigation duty</h2>
+
+  <p>The common law imposes a duty on the indemnitee to take reasonable steps to <span class="term" data-term="mitigation">mitigate</span> its loss. UK: <em>Banco de Portugal v. Waterlow</em> [1932] AC 452 — the claimant must take reasonable steps to minimise loss. US: Restatement (Second) of Contracts &sect;350.</p>
+
+  <p>Modern SPAs typically restate this contractually, sometimes with refinements:</p>
+  <ul>
+    <li>"The Buyer shall use reasonable endeavours / commercially reasonable efforts to mitigate any Loss."</li>
+    <li>Negative formulation: "The Sellers shall not be liable for any Loss to the extent it is attributable to the Buyer's failure to mitigate."</li>
+    <li>Express exclusion of mitigation: occasionally for fundamental R&amp;Ws (where the breach is so existential that mitigation is meaningless).</li>
+  </ul>
+
+  <p>The buyer wants a soft "reasonable endeavours" standard with the burden on the seller to prove failure to mitigate; the seller wants a "best endeavours" standard or specific mitigation actions (e.g., "shall promptly enforce all rights against any third party").</p>
+
+  <h2>Penalty doctrine and liquidated damages</h2>
+
+  <p>An English-law contract cannot impose a sum payable on breach that is, in substance, a punishment for the breach rather than a genuine remedy &mdash; the historical penalty rule. The doctrine bites on a number of M&amp;A staples (break fees, reverse-break fees, earn-out forfeitures, restrictive-covenant damages clauses, deposit-forfeitures), and the modern test changed in 2015 in a direction that &mdash; if drafters know how to use it &mdash; gives commercial flexibility but, if they do not, sinks otherwise standard provisions.</p>
+
+  <h3>The Cavendish reformulation</h3>
+
+  <p>For nearly a century the test was the one in <em>Dunlop Pneumatic Tyre Co Ltd v New Garage and Motor Co Ltd</em> [1915] AC 79: a contractual sum payable on breach was a permissible <em>liquidated damages</em> clause if it was a "genuine pre-estimate of loss" at the time of contracting, and an unenforceable <em>penalty</em> if it was instead "extravagant and unconscionable" or designed <em>in terrorem</em> as a deterrent against breach. The dichotomy was rigid: anything that did not look like a forecast of compensation tended to be struck down.</p>
+
+  <p>In <em><span class="term" data-term="cavendish-rule">Cavendish Square Holding BV v Talal El Makdessi</span></em> [2015] UKSC 67 (heard with <em>ParkingEye Ltd v Beavis</em>), the UK Supreme Court reformulated the test. Per Lords Neuberger and Sumption (with whom the majority agreed), the true test is whether the impugned provision is a <em>secondary obligation that imposes a detriment on the contract-breaker out of all proportion to any legitimate interest of the innocent party in the enforcement of the primary obligation.</em> A clause that protects a legitimate commercial interest of the innocent party (which can include broader interests than mere compensation &mdash; e.g. preserving a customer relationship, ensuring the integrity of a long-term commercial scheme, vindicating a non-compete that protects goodwill) will be enforceable even if it goes beyond what damages would compensate.</p>
+
+  <p>The facts of <em>Cavendish</em> matter for M&amp;A: the seller of an advertising business sold a controlling stake to Cavendish, with deferred consideration and a provision under which the seller forfeited the deferred sums and was required to sell remaining shares at a low formula price if he breached restrictive covenants. The Court of Appeal had held the forfeiture was a penalty; the Supreme Court reversed, finding that the buyer had a <em>legitimate interest in maintaining the seller's loyalty</em> to the joint enterprise &mdash; a legitimate interest extending well beyond the value of any breach-of-covenant damages. The provision survived.</p>
+
+  <h3>Where the doctrine bites in M&amp;A</h3>
+
+  <p>The reformulated test applies across a broad range of M&amp;A drafting. <strong>Break fees and reverse-break fees</strong> &mdash; pre-agreed sums payable by one party on termination &mdash; are not penalties when they protect a legitimate commercial interest such as compensating the counterparty for opportunity cost, deal expense, locked-up capital or reputational exposure. The 2.5&ndash;4% range typical in US public M&amp;A is comfortably within the <em>Cavendish</em> test; UK contractual reverse break fees on regulatory failure are similarly defensible. (Buyer-benefiting break fees in UK public M&amp;A face a separate Code Rule 21.2 prohibition discussed in Module 18; that is a Code rule, not a penalty rule.)</p>
+
+  <p><strong>Earn-out forfeiture-on-leaver provisions</strong> &mdash; the clause that makes a manager/seller's deferred earn-out conditional on remaining employed and observing restrictive covenants &mdash; are vulnerable if drafted purely as <em>punishment</em> for departure. Drafted as protecting the buyer's legitimate interest in continuity of management, alignment of incentives, and goodwill protection (the <em>Cavendish</em> framing), they survive. Best practice: characterise the clause as a price adjustment (the deferred consideration was always priced for performance plus continued service) rather than as a forfeiture for bad behaviour.</p>
+
+  <p><strong>Restrictive-covenant <span class="term" data-term="liquidated-damages">liquidated-damages</span> clauses</strong> &mdash; a fixed sum payable per day or per breach of a non-compete &mdash; are vulnerable if disproportionate. The standard defensive drafting is (i) a relatively modest per-event sum within demonstrable damage range, (ii) an express recital of the legitimate interest being protected (preservation of goodwill, customer relationships, confidential information), and (iii) preservation of the right to seek further damages or injunctive relief, so the clause is not the exclusive remedy. <strong>Deposit-forfeiture mechanisms</strong> in auction processes &mdash; bidder pays a deposit, deposit is forfeit if bidder withdraws &mdash; are commonly enforceable but can be challenged where the deposit is many multiples of the seller's actual loss.</p>
+
+  <h3>Drafting response</h3>
+
+  <p>Three drafting moves materially improve the survival prospects of any M&amp;A clause that imposes a financial consequence on breach. (1) <strong>Re-characterise as a primary obligation or price adjustment.</strong> The penalty doctrine reaches only <em>secondary</em> obligations &mdash; sums payable on breach. A clause structured as a conditional primary price (e.g. "the consideration for the shares is &pound;100m, of which &pound;30m is payable only if the seller is in continuous service and not in breach of covenant on the second anniversary") is outside the doctrine. (2) <strong>Document the legitimate commercial interest.</strong> The negotiating record (including board papers and legal-advice letters) should articulate why the sum is set at the chosen level and what interest beyond mere compensation it protects. <em>Cavendish</em> permits the court to look at this. (3) <strong>Avoid deterrent / punishment language.</strong> The recital and the operative clause should describe the sum as a price adjustment, an indemnification of opportunity cost, or compensation for a defined harm &mdash; not as a "penalty," "forfeiture for breach," or "to discourage" the conduct in question.</p>
+
+  <h3>Civil-law treatment</h3>
+
+  <p>French and German law treat the same problem differently and arguably more flexibly: the <em>clause p&eacute;nale</em> (French) or <em>Vertragsstrafe</em> (German) is enforceable as such, but the court has a power of judicial reduction if the sum is manifestly excessive.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p><em>Cavendish Square Holding BV v Talal El Makdessi</em> [2015] UKSC 67. Test: whether the secondary obligation imposes a detriment out of all proportion to any legitimate interest of the innocent party. Survives if it protects a legitimate interest beyond mere compensation.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>Restatement (Second) of Contracts &sect;356(1) and the Uniform Commercial Code &sect;2-718(1) similarly distinguish enforceable liquidated damages from unenforceable penalties; the test focuses on whether the amount is reasonable in light of anticipated or actual harm and the difficulties of proof of loss. Delaware courts uphold negotiated liquidated damages between sophisticated parties unless plainly disproportionate.</p></aside>
+    <aside class="juris eu"><h5>EU (civil law)</h5><p>France: Code civil article 1231-5 &mdash; the agreed penalty applies as written, but the judge may, even of his own motion, <em>r&eacute;duire</em> (reduce) or <em>augmenter</em> (increase) it if it is manifestly excessive or derisory. Germany: BGB &sect;&sect;339&ndash;345 &mdash; a <em>Vertragsstrafe</em> is enforceable, but under &sect;343 the court may, on application, <em>herabsetzen</em> (reduce) a disproportionately high penalty (this protection does not apply between merchants in commercial contracts, &sect;348 HGB). Italy: Codice civile articles 1382&ndash;1384 &mdash; comparable framework, with judicial reduction where the penalty is manifestly excessive having regard to the creditor's interest in performance.</p></aside>
+  </div>
+
+  <aside class="pitfall">
+    <h5>Common pitfalls &mdash; penalty / liquidated damages drafting</h5>
+    <ul>
+      <li>Labelling a sum a "penalty" in the operative clause &mdash; while the label is not decisive, it is unhelpful and gives the breaching party a foothold to argue intent to deter rather than to protect a legitimate interest.</li>
+      <li>Setting an across-the-board sum (e.g. &pound;100,000 per breach) without graduating by severity &mdash; the same headline number applied to both trivial and severe breaches signals lack of proportionality.</li>
+      <li>Characterising restrictive-covenant damages as the <em>exclusive</em> remedy &mdash; excluding the buyer's right to seek injunctive relief or further damages can convert the sum into an arbitrary cap on liability that the court reads as a penalty.</li>
+      <li>Forgetting that civil-law courts can <em>reduce</em> a penalty even where the parties agreed it &mdash; for cross-border deals with French or German seats of arbitration, draft with the reduction power in mind, e.g. by including detailed recitals on the chosen quantum.</li>
+    </ul>
+  </aside>
+
+  <h2>Exclusive Remedy</h2>
+
+  <p>The capstone clause: the indemnification regime is the buyer's <strong>sole and exclusive remedy</strong> for any breach of the SPA, and all other statutory and common-law remedies are excluded. Sample wording:</p>
+
+  <blockquote>"The remedies of the Buyer under this Article [X] shall be the sole and exclusive remedies of the Buyer with respect to any breach of any representation, warranty, covenant, or obligation set forth in this Agreement, and the Buyer hereby waives, to the maximum extent permitted by applicable law, any and all other remedies that may be available, whether at common law, in equity, by statute or otherwise, including (without limitation) any rights of rescission and any claims under the Misrepresentation Act 1967 or for the tort of negligent misstatement."</blockquote>
+
+  <p>Two important features:</p>
+  <ul>
+    <li><strong>Survival of fraud:</strong> the clause must carve out fraud — courts will not enforce exclusion of fraud as a matter of public policy. UK: the classic dictum "fraud unravels everything" is Lord Denning MR in <em>Lazarus Estates Ltd v Beasley</em> [1956] 1 QB 702 (CA); the modern commercial-contract restatement is <em>HIH Casualty &amp; General Insurance v Chase Manhattan Bank</em> [2003] UKHL 6 — a contractual exclusion of liability for fraud requires "clear and unmistakable terms." US: <em>ABRY Partners</em>.</li>
+    <li><strong>Carve-out for <span class="term" data-term="specific-performance">specific performance</span></strong> (Latin: an equitable remedy compelling a party to perform its contractual obligations): the buyer typically wants to retain the right to specific performance for failure-to-close (so the seller cannot walk away by paying damages). The seller wants to limit specific performance.</li>
+  </ul>
+
+  <p>Per <strong>ABA 2025 Deal Points Study</strong>: exclusive remedy clauses appear in the substantial majority of US deals; specific performance carve-outs are common.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — exclusive remedy</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> narrow exclusive remedy (carve out fraud, fundamental R&amp;Ws, specific performance, equitable remedies, tort claims based on fraud).</li>
+      <li><strong>Seller wants:</strong> broad exclusive remedy (channel everything into the indemnification regime; only fraud as defined remains).</li>
+      <li><strong>Typical compromise:</strong> exclusive remedy for breaches of warranties; carve out fraud and equitable remedies (specific performance, injunctions); express preservation of statutory remedies that cannot be excluded.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>The indemnification clause has three operative components: the obligation (Clause 7.1 — defend, indemnify and hold harmless against losses arising from R&amp;W breach), the claim procedure (Clauses 7.2-7.3 — notice deadline, Acceptance Deadline, deemed acceptance, third-party defence rights, settlement consent), and the limitations (Clause 7.4 — time, monetary, deductions).</li>
+      <li>"Loss" is contractually defined and typically narrowed from the <em>Hadley v. Baxendale</em> default — direct losses only, with consequential / lost profits / lost goodwill / diminution-in-value carve-outs heavily negotiated. The "no multiplier" clause is the seller's chief defence against multiple-driven enterprise-value damages.</li>
+      <li>Three monetary devices applied serially: De Minimis (per-claim floor, ~0.05-0.1% of price); Basket (cumulative threshold, ~0.5-1% of price; tipping is buyer-friendly, deductible is seller-friendly); Cap (aggregate ceiling, 10-30% of price without W&amp;I).</li>
+      <li>Standard carve-outs from monetary limits: fraud, fundamental R&amp;Ws, tax, employment/social security, environmental. Each has a structural rationale (public policy, existential, statutory clock, long-tail).</li>
+      <li><span class="term" data-term="survival-period">Survival</span> is layered: 18-24 months for general R&amp;Ws; 6-7 years (or perpetual) for fundamentals; tax statute of limitations + 30-60 days; specific extended periods for environment, employment, anti-bribery (UK: Bribery Act 2010; US: FCPA, SOX).</li>
+      <li>"Timely notice freezes the clock" — once a claim is notified within the survival period, the seller remains liable until the amount is finally ascertained.</li>
+      <li>Third-party-claim procedure: prompt notice (with statutory limitation periods like Italian <em>decadenza</em>); seller's right to take over defence; settlement consent both ways; conflict-of-interest carve-outs.</li>
+      <li>Deductions reduce the Loss net: third-party recoveries, accounting reserves, tax benefits actually realised.</li>
+      <li>Mitigation: common-law duty (<em>Banco de Portugal v. Waterlow</em>) restated contractually.</li>
+      <li>Exclusive remedy clause channels all claims into the regime — but fraud cannot be excluded ("fraud unravels everything", Lord Denning MR in <em>Lazarus Estates v Beasley</em> [1956] 1 QB 702; modern restatement <em>HIH Casualty</em> [2003] UKHL 6 — clear-and-unmistakable-terms test; US: <em>ABRY Partners</em>); specific performance is typically carved out for failure-to-close.</li>
+      <li>Penalty doctrine reformulated by <em>Cavendish Square Holding BV v Talal El Makdessi</em> [2015] UKSC 67: a sum payable on breach is unenforceable as a penalty only if "out of all proportion to any legitimate interest" of the innocent party. Bites on break fees, reverse-break fees, earn-out forfeitures, restrictive-covenant liquidated damages and deposit forfeitures. Civil-law systems (France art. 1231-5; Germany BGB §§ 339–345) enforce penalty clauses but allow judicial reduction (<em>réduction</em> / <em>Herabsetzung</em>) of manifestly excessive sums.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="12-reps-and-warranties.html" class="prev">Representations &amp; Warranties</a>
+    <a href="14-wi-insurance.html" class="next">Warranty &amp; Indemnity Insurance</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flashcards · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="flashcards.html" class="active">Flashcards</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="practice-page">
+  <h1>Flashcards</h1>
+  <p class="subtitle">Term &rarr; definition recall with self-grade spaced repetition. Press <kbd>Space</kbd> to reveal, then <kbd>1</kbd> Again, <kbd>2</kbd> Hard, <kbd>3</kbd> Good, <kbd>4</kbd> Easy.</p>
+
+  <div class="practice-controls">
+    <label>Module: <select id="moduleSelect"><option value="all">All</option></select></label>
+    <label><input type="checkbox" id="filterToggle"> Due only</label>
+    <span style="margin-left:auto; font-family: var(--sans); color: var(--ink-muted); font-size:0.9rem;" id="counter">0 / 0</span>
+  </div>
+
+  <div class="card" id="card">
+    <div class="face-front" id="cardFront"></div>
+    <div class="face-back" id="cardBack"></div>
+  </div>
+
+  <div style="text-align:center;">
+    <button id="revealBtn" class="primary" style="padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-family: var(--sans); font-size: 0.95rem; cursor: pointer;">Reveal (Space)</button>
+  </div>
+
+  <div class="grade-buttons" id="gradeButtons" style="display:none;">
+    <button data-grade="again" class="again">Again<br><small>(1)</small></button>
+    <button data-grade="hard"  class="hard">Hard<br><small>(2)</small></button>
+    <button data-grade="good"  class="good">Good<br><small>(3)</small></button>
+    <button data-grade="easy"  class="easy">Easy<br><small>(4)</small></button>
+  </div>
+
+  <div id="cardMeta" style="text-align:center; margin-top:24px; font-family: var(--sans); color: var(--ink-muted); font-size:0.85rem;"></div>
+</main>
+
+<footer>Self-graded spaced-repetition uses an SM-2-inspired interval schedule, persisted in your browser.</footer>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../data/flashcards.js"></script>
+<script src="../assets/flashcards.js"></script>
+</body>
+</html>

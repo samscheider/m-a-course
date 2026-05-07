@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glossary · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="glossary.html" class="active">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <h1>Glossary</h1>
+  <p class="subtitle">Every term used in the course, with full names (no abbreviations), short and extended definitions, jurisdictional notes, and cross-references. Search by term or content.</p>
+
+  <div class="glossary-search">
+    <input type="search" id="searchInput" placeholder="Search terms (e.g., 'MAC', 'basket', 'condition precedent')…">
+    <select id="moduleFilter">
+      <option value="all">All modules</option>
+    </select>
+    <select id="jurisFilter">
+      <option value="all">All jurisdictions</option>
+      <option value="uk">UK only</option>
+      <option value="us">US only</option>
+      <option value="eu">EU only</option>
+    </select>
+  </div>
+
+  <div id="entries"></div>
+</main>
+
+<footer>Click into a module's page to see a term in context.</footer>
+
+<script src="../data/glossary.js"></script>
+<script src="../data/modules.js"></script>
+<script>
+(function () {
+  const G = window.GLOSSARY || {};
+  const entriesEl = document.getElementById('entries');
+  const search = document.getElementById('searchInput');
+  const modFilter = document.getElementById('moduleFilter');
+  const jurFilter = document.getElementById('jurisFilter');
+  const moduleMap = {};
+  (window.MODULES || []).forEach(m => { moduleMap[m.id] = m; });
+
+  // Build module filter options
+  const allModules = new Set();
+  Object.values(G).forEach(e => (e.modules || []).forEach(m => allModules.add(m)));
+  Array.from(allModules).sort().forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = 'Module ' + m + (moduleMap[m] ? ' — ' + moduleMap[m].title : '');
+    modFilter.appendChild(opt);
+  });
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  }
+
+  function render() {
+    const q = (search.value || '').trim().toLowerCase();
+    const mod = modFilter.value;
+    const jur = jurFilter.value;
+    const keys = Object.keys(G).sort((a, b) => (G[a].name || a).localeCompare(G[b].name || b));
+    entriesEl.innerHTML = '';
+    let count = 0;
+    keys.forEach(k => {
+      const e = G[k];
+      if (mod !== 'all' && !(e.modules || []).includes(mod)) return;
+      if (jur !== 'all' && !(e.juris || []).includes(jur)) return;
+      if (q) {
+        const hay = ((e.name || '') + ' ' + (e.short || '') + ' ' + (e.extended || '') + ' ' + k).toLowerCase();
+        if (hay.indexOf(q) === -1) return;
+      }
+      count++;
+      const div = document.createElement('div');
+      div.className = 'glossary-entry';
+      div.id = k;
+      const jurTags = (e.juris || []).map(j => '<span class="juris-tag ' + j + '">' + j.toUpperCase() + '</span>').join('');
+      const modLinks = (e.modules || []).map(m => moduleMap[m] ? '<a href="../modules/' + moduleMap[m].file + '">M' + m + '</a>' : 'M' + m).join(', ');
+      const related = (e.related || []).map(r => '<a href="#' + encodeURIComponent(r) + '">' + (G[r] ? (G[r].name || r) : r) + '</a>').join(', ');
+      div.innerHTML =
+        '<h3>' + escapeHtml(e.name || k) + '</h3>' +
+        '<div class="short">' + escapeHtml(e.short || '') + '</div>' +
+        (e.extended ? '<div class="extended">' + e.extended + '</div>' : '') +
+        '<div class="meta">' +
+          (jurTags ? '<span>' + jurTags + '</span>' : '') +
+          (modLinks ? '<span>Used in: ' + modLinks + '</span>' : '') +
+          (related ? '<span>See also: ' + related + '</span>' : '') +
+        '</div>';
+      entriesEl.appendChild(div);
+    });
+    if (count === 0) entriesEl.innerHTML = '<p style="text-align:center; color:#888; padding: 24px;">No matching entries.</p>';
+  }
+
+  search.addEventListener('input', render);
+  modFilter.addEventListener('change', render);
+  jurFilter.addEventListener('change', render);
+  render();
+
+  // If URL has hash, scroll to it
+  if (location.hash) {
+    setTimeout(() => {
+      const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+})();
+</script>
+</body>
+</html>

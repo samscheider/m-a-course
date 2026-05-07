@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 09 — Interim Period &amp; MAC/MAE · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="09">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 09</div>
+    <h1>Interim Period &amp; MAC/MAE</h1>
+    <p class="subtitle">The gap between Signing and Closing — how the Sale and Purchase Agreement (SPA) re-allocates the economic risk that the seller still controls the target while the buyer has already agreed a price.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Explain why the <span class="term" data-term="interim-period">interim period</span> exists, who bears the economic risk during it, and how the SPA contractually re-allocates that risk.</li>
+      <li>Draft, read, and stress-test <span class="term" data-term="conduct-of-business-covenant">Conduct of Business covenants</span>, distinguishing affirmative obligations from negative consent thresholds, and identifying the trip-wires buyers actually litigate.</li>
+      <li>Distinguish a <span class="term" data-term="material-adverse-change">Material Adverse Change / Material Adverse Effect (MAC/MAE)</span> closing condition from an MAC qualifier in a representation and warranty (R&amp;W) bring-down, and articulate the three "flavours" of <span class="term" data-term="bring-down">bring-down</span> a buyer might demand.</li>
+      <li>Analyse, using <em>Akorn v. Fresenius</em> (2018), <em>IBP v. Tyson</em> (2001), <em>Hexion v. Huntsman</em> (2008), and the COVID-era cases, what facts a Delaware court actually demands before letting a buyer walk on a Material Adverse Effect (MAE).</li>
+      <li>Negotiate the carve-out architecture of a MAE definition (systemic risk allocated to the buyer; idiosyncratic risk allocated to the seller) and explain the role of <span class="term" data-term="disproportionate-effect-qualifier">"disproportionate impact" qualifiers</span>.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The interim period is where deals die quietly and where buyers and sellers most often collide. From the moment the parties sign the SPA, the legal title to the target sits unmoved on the seller's balance sheet, but the economic story is supposed to be locked in: the buyer has agreed a price by reference to a state of affairs as at Signing (or, for a Locked Box deal, as at the Locked Box Date — see Module 11). For weeks or months, the seller continues to run the business, decide on capex, hire and fire, sign contracts, all while the buyer watches from outside the perimeter with no governance rights. If the business deteriorates, the buyer has paid (or will pay) for an asset that no longer exists. If the seller takes value out, the buyer has paid for cash that has walked out the door. The interim covenants and the MAC/MAE clause are the SPA's two answers to that asymmetry, and the way they are drafted decides who eats the loss when something unexpected happens — a pandemic, a regulator's letter, a key customer leaving. A senior M&amp;A partner will tell you on day one: <em>the MAC clause is the most heavily negotiated single sentence in the SPA, and the most heavily lawyered when a deal goes sour.</em>
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A partner drops one of these phrases in an interim-period or MAC-strategy meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Tipping or true deductible at 1%?"</strong> &mdash; on a 1% basket, is recovery from dollar one once crossed (<span class="term" data-term="tipping-basket">tipping</span>) or only above the threshold (<span class="term" data-term="true-deductible">true deductible</span>)? Same number, often a several-million-dollar difference; flagged in Module 07, lives in Module 13.</li>
+      <li><strong>"Are we hell-or-high-water on antitrust?"</strong> &mdash; <span class="term" data-term="hell-or-high-water">HOHW</span> on the buyer's regulatory covenant; cross-link to Module 06 (structure choice) and Module 08 (CPs).</li>
+      <li><strong>"Sandbagging-friendly?"</strong> &mdash; can the buyer claim damages on a warranty it knew was breached? Delaware default leans <strong>pro-sandbagging</strong> per <em>Cobalt Operating, LLC v. James Crystal Enterprises, LLC</em> (Del. Ch. 2007), but unsettled at the margins post-<em>Eagle Force Holdings v. Campbell</em>, 187 A.3d 1209 (Del. 2018). UK / English-law default leans <strong>anti-sandbagging</strong> (per <em>Eurocopy v. Teesdale</em>).</li>
+      <li><strong>"What's our ticking fee?"</strong> &mdash; the cents-per-share-per-day premium the seller earns for delay between a target date and Closing; Module 08.</li>
+      <li><strong>"MAC out vs. financing-out?"</strong> &mdash; two doors a PE buyer might use to walk: invoke the MAC condition, or invoke a financing-failure clause. The economic lever is the <span class="term" data-term="reverse-termination-fee">reverse termination fee</span>.</li>
+      <li><strong>"Ordinary course covenant or MAC route?"</strong> &mdash; the <em>AB Stable</em> insight: buyers can sometimes win on the covenant side (seller departed from past practice without seeking consent) what they cannot win on the MAC side.</li>
+      <li><strong>"What's the AB Stable problem here?"</strong> &mdash; shorthand for "did the seller take emergency action without seeking buyer consent?" The answer often decides the deal.</li>
+      <li><strong>"Is the MAC carve-out post-COVID style?"</strong> &mdash; does the carve-out list explicitly include "pandemics, epidemics or public-health emergencies" with a disproportionate-effect qualifier?</li>
+    </ul>
+  </aside>
+
+  <h2>The interim period — what it is and why it exists</h2>
+
+  <p>The <span class="term" data-term="interim-period">interim period</span> (also called the "<span class="term" data-term="gap-period">gap period</span>" or "pre-closing period") is the window between <strong>Signing</strong> (the date the SPA is executed) and <strong>Closing</strong> (the date title and consideration actually change hands; in UK practice often called <strong>Completion</strong>). It exists for a single reason: at least one Condition Precedent (CP) — a thing that must happen before the parties are obliged to close — takes time to satisfy. Typical examples (covered in Module 08):</p>
+
+  <ul>
+    <li>antitrust / merger-control clearance (the European Commission under the EU Merger Regulation (EUMR); the U.S. Federal Trade Commission and Department of Justice under the Hart-Scott-Rodino Antitrust Improvements Act of 1976 (HSR); the UK Competition and Markets Authority (CMA));</li>
+    <li>Foreign Direct Investment (FDI) clearances under regimes like the UK National Security and Investment Act 2021, the U.S. Committee on Foreign Investment in the United States (CFIUS) regime as modernised by FIRRMA, and the EU FDI Screening Regulation;</li>
+    <li>third-party consents (change-of-control consents from key customers, suppliers, lenders, landlords);</li>
+    <li>shareholder approvals or works-council consultations (for German targets, mandatory consultation with the <em>Betriebsrat</em> under the <em>Betriebsverfassungsgesetz</em>);</li>
+    <li>internal restructuring of the target (carve-out steps, distributions of non-target assets).</li>
+  </ul>
+
+  <p>If none of these were needed, the parties would simply <strong>execute and close simultaneously</strong> — a so-called "sign-and-close" deal. Sign-and-close is common in small private deals; in regulated, cross-border, or large deals, an interim period of three to twelve months is the norm, and pharmaceutical/defence transactions can stretch to eighteen months or more.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Subject to the fulfilment of the Conditions Precedent and in accordance with the terms and conditions set forth in this Agreement: (a) the Seller undertakes to sell at Closing to the Buyer the Quota, free of any Encumbrance, and the Buyer undertakes to purchase at Closing the Quota from the Seller, against payment by the Buyer of the Purchase Price; (b) the Parties further undertake to perform at Closing all the actions and transactions indicated under Clause 5 below."</em></p>
+      <p>— Clause 3 (Obligation to Sell and Purchase)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> This single sentence crystallises the interim period. The obligation to transact is <em>binding</em> (the parties cannot freely walk away — that would be a breach) but it is <em>suspended</em> until the CPs are satisfied. The seller still owns the target, but the seller is no longer free to deal with it. Note "free of any Encumbrance" — the seller must deliver clean title at Closing, which generates a stream of pre-Closing actions (lender consents, security releases) that themselves can become CPs.</div>
+  </aside>
+
+  <h3>The risk-allocation problem</h3>
+
+  <p>Three economic facts collide:</p>
+
+  <ol>
+    <li><strong>Title and control sit with the seller.</strong> Until Closing, the directors of the target answer to the seller. The buyer cannot direct an investment, cannot hire or fire, cannot stop a contract being signed.</li>
+    <li><strong>Economic exposure has shifted to the buyer.</strong> The buyer has agreed a price reflecting the business at Signing. Every euro of value lost during the interim period is an economic loss to the buyer, even though the legal loss is the seller's.</li>
+    <li><strong>Information asymmetry persists.</strong> The seller knows what is happening inside the target on a day-to-day basis. The buyer sees only what the seller chooses to share, plus what the seller is contractually required to disclose under the <span class="term" data-term="information-rights">information / consultation rights</span> in the SPA.</li>
+  </ol>
+
+  <p>The SPA uses <strong>two contractual mechanisms</strong> to address this:</p>
+
+  <ul>
+    <li><strong>Affirmative and negative covenants</strong> (the Conduct of Business / Ordinary Course covenants) — to constrain what the seller may do during the interim period;</li>
+    <li><strong>Closing conditions</strong> (the MAC/MAE condition and the R&amp;W bring-down) — to give the buyer a <em>walk-right</em> if the business deteriorates beyond a threshold.</li>
+  </ul>
+
+  <h2>Conduct of Business / Ordinary Course covenants</h2>
+
+  <p>A covenant is a contractual promise to do something (an <em>affirmative</em> covenant) or to refrain from doing something (a <em>negative</em> covenant). In an M&amp;A context, the conduct of business covenants take the form of a sentence (the "umbrella" covenant) followed by a list (the "specific consent items").</p>
+
+  <h3>The umbrella affirmative covenant</h3>
+
+  <p>The umbrella <span class="term" data-term="ordinary-course-covenant">ordinary course covenant</span> typically reads something like:</p>
+
+  <blockquote><em>"Between Signing and Closing, the Seller shall procure that each Target Group Company shall (i) operate the Business in the ordinary course consistent with past practice, (ii) use commercially reasonable efforts to preserve intact the present organisation of the Business, (iii) maintain its insurance, books, and records, (iv) preserve relationships with its employees, customers, suppliers, distributors, and regulators, and (v) comply in all material respects with applicable Law."</em></blockquote>
+
+  <p>Five layers of negotiation are buried in that sentence:</p>
+
+  <ol>
+    <li><strong>"Procure that … shall."</strong> Where the seller is a corporate parent, the seller cannot itself operate the business — the target's directors do. So the seller must "procure" (cause) compliance. This is itself an affirmative obligation; if the directors refuse, the seller is in breach for failing to procure.</li>
+    <li><strong>"Ordinary course consistent with past practice."</strong> Two requirements bolted together. <em>Ordinary course</em> asks whether the action is normal for businesses generally; <em>consistent with past practice</em> asks whether it is normal for this particular business. The two can diverge — e.g., it is "ordinary course" in a downturn for a hotel to lay off 80% of staff, but it is not <em>consistent with past practice</em> if the hotel had never previously made mass redundancies. <em>AB Stable</em> (Delaware Chancery, November 2020) turned on exactly this distinction.</li>
+    <li><strong>"Commercially reasonable efforts."</strong> A standard of effort, not a guarantee of result. The hierarchy lawyers recognise (loosely): <em>best efforts &gt; reasonable best efforts &gt; commercially reasonable efforts &gt; reasonable efforts</em>. Delaware courts have not always policed these distinctions tightly, but English courts (under the line of cases starting <em>Yewbelle Ltd v. London Green Developments Ltd</em> [2007]) treat them as meaningful gradations.</li>
+    <li><strong>"In all material respects."</strong> A materiality qualifier — minor non-compliance does not breach the covenant. Without it, every parking ticket would be a breach.</li>
+    <li><strong>The five separate categories</strong> (organisation, insurance, books and records, relationships, law). Each is independently breachable. Buyers want them broad and conjunctive ("and"); sellers want them narrow and disjunctive ("or").</li>
+  </ol>
+
+  <h3>The negative consent items</h3>
+
+  <p>The umbrella sits over a long list (often Schedule 1 to the SPA, or a long sub-clause) of specific actions the seller may not take without the buyer's prior written consent. A typical UK private-deal list:</p>
+
+  <ul>
+    <li>no incurrence or guarantee of material new debt above £X (typically 1–5% of equity value);</li>
+    <li>no asset sale, lease, licence, or encumbrance above £Y;</li>
+    <li>no equity issuance, share buyback, change to authorised capital, or grant of options;</li>
+    <li>no dividend or other distribution to shareholders (other than scheduled / Permitted Leakage — see Module 11);</li>
+    <li>no entry into, amendment, or termination of "Material Contracts" (typically defined as contracts above a value or duration threshold);</li>
+    <li>no salary or bonus increase above Z% (or above the inflation rate);</li>
+    <li>no acquisition or capex commitment above £A;</li>
+    <li>no settlement of material litigation above £B (or any settlement that would impose ongoing non-monetary obligations);</li>
+    <li>no change to the constitutional documents (articles of association, bylaws);</li>
+    <li>no merger, dissolution, reorganisation, or change of corporate form;</li>
+    <li>no change to accounting policies or accounting reference date;</li>
+    <li>no tax election outside the ordinary course (often called a "tax sandbagging" prohibition);</li>
+    <li>no related-party transaction with the seller or its affiliates;</li>
+    <li>no hire or termination of senior management above a defined level;</li>
+    <li>no entry into any non-compete or exclusivity that survives Closing.</li>
+  </ul>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"The SPA addresses this risk through Conduct of Business covenants, typically requiring that the Target: operates in the ordinary course of business; and refrains from certain restricted actions without the Buyer's consent."</em></p>
+      <p>— Slide 14 (Interim Period — Contractual Response)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> The deck distils the umbrella-plus-list architecture into one sentence. "Operates in the ordinary course" is the affirmative limb (positive obligation to continue running normally); "refrains from certain restricted actions without the Buyer's consent" is the negative limb (a list of consent items). The full SPA replaces this single sentence with three or four pages of detail, but the conceptual frame is identical.</div>
+  </aside>
+
+  <h3>Information / consultation rights</h3>
+
+  <p>The seller almost always agrees to give the buyer reasonable access to the target's books, records, premises, and senior management between Signing and Closing, subject to (i) compliance with antitrust <span class="term" data-term="gun-jumping">gun-jumping</span> rules (until clearance, the parties remain independent competitors and cannot exchange competitively sensitive information — the buyer's antitrust counsel will run a <span class="term" data-term="clean-team">clean team</span> arrangement), (ii) confidentiality, and (iii) reasonable disruption to the business. The seller will resist anything that smells like co-management.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — Conduct of Business covenants</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> umbrella drafted as "operate <em>only</em> in the ordinary course consistent with past practice"; long list of consent items with low monetary thresholds; "consent shall not be unreasonably withheld" deleted; information rights including monthly management accounts, weekly cash flow, and prompt notification of any "Material Event."</li>
+      <li><strong>Seller wants:</strong> umbrella qualified by "commercially reasonable efforts to" or "use reasonable endeavours to"; consent items with high thresholds; "consent shall not be unreasonably withheld, conditioned, or delayed" inserted; deemed consent if the buyer does not respond within 5–10 business days; explicit carve-outs for actions taken to comply with Law, in response to a public-health emergency, or in line with the pre-Signing budget.</li>
+      <li><strong>Typical compromise:</strong> the umbrella stays as a hard obligation but is qualified by "in all material respects" and is expressly subject to the specific consent list and to a defined set of carve-outs (compliance with Law; actions disclosed in a "Permitted Actions Schedule"; actions in the agreed budget; actions taken in good faith in response to a force majeure event); the consent list survives but with negotiated thresholds; consent process: buyer must respond within 10 business days, deemed consent if no response, "shall not be unreasonably withheld" applies. After COVID and <em>AB Stable</em>, sellers now routinely demand an express carve-out for "actions reasonably taken in response to a pandemic, epidemic, or public-health emergency" — and buyers routinely refuse it absent a written-consent-not-unreasonably-withheld backstop.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>No carve-out for Law-compliance.</strong> A literal reading of "no salary increase" can make a statutory minimum-wage rise a breach.</li>
+      <li><strong>No carve-out for disclosed actions.</strong> If the buyer knew about an upcoming acquisition or capex spend during diligence, that should be on a "Permitted Actions Schedule."</li>
+      <li><strong>Consent silent on timing.</strong> Without a deemed-consent fallback, the buyer can paralyse the business simply by refusing to engage.</li>
+      <li><strong>No materiality scrape on the umbrella.</strong> Without "in all material respects," every immaterial deviation is a contractual breach (and may trigger the bring-down condition).</li>
+      <li><strong>No interaction with Locked Box "Permitted Leakage."</strong> If the SPA uses a Locked Box pricing mechanism, the Permitted Leakage list and the Conduct of Business consent list must be aligned, or the seller can be in breach of one even while complying with the other.</li>
+    </ul>
+  </aside>
+
+  <h2>Update of disclosure — "New Matters" / Tip-In</h2>
+
+  <p>A heavily contested issue: between Signing and Closing, the seller learns of a fact that, had it been known at Signing, would have made one of the seller's R&amp;Ws untrue. Can the seller update the Disclosure Letter (UK practice) or the disclosure schedules (US practice) to reflect the <span class="term" data-term="new-matters-disclosure">new matter</span>, and thereby avoid breach?</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK</h5>
+      <p>The <strong>default</strong> position is that the Disclosure Letter is <strong>locked at Signing</strong>. New matters arising in the interim period cannot be disclosed against the warranties as given at Signing. They can only be disclosed against the bring-down (the repetition of the warranties at Closing) — and even then, the buyer typically has a right to refuse to close if the new disclosure is material. <strong>Variants are increasingly common</strong>, especially on PE seller deals: a <em>bring-down disclosure</em> mechanic that updates the Disclosure Letter for matters arising in the interim period, with the consequence varying &mdash; sometimes update cures the bring-down condition only (so the buyer cannot walk but may still claim damages), sometimes update is given full effect, sometimes update has no effect. Some Disclosure Letters include a "Notification of Breach" mechanic obliging the seller to tell the buyer about any new matter promptly, but notification does not equal disclosure. Treat the categorical "UK = locked" framing as a default, not an inflexible rule.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>Practice varies. In some agreements the buyer is willing to accept "Update Disclosures" that <em>cure</em> the breach for purposes of the bring-down condition (so the buyer cannot walk) but <em>do not</em> cure the breach for indemnification purposes (so the seller still pays). Other agreements treat updates as having no effect at all. Negotiation often turns on whether the buyer is sandbagging-friendly. The <strong>Delaware default leans pro-sandbagging</strong> per <em>Cobalt Operating, LLC v. James Crystal Enterprises, LLC</em>, 2007 WL 2142926 (Del. Ch. 2007), but is <strong>unsettled at the margins</strong> &mdash; <em>Eagle Industries v. DeVilbiss Health Care</em>, 702 A.2d 1228 (Del. 1997) is sometimes read as anti-sandbagging where there is no express clause and the buyer learned of the breach pre-Closing, and the Delaware Supreme Court in <em>Eagle Force Holdings, LLC v. Campbell</em>, 187 A.3d 1209 (Del. 2018) noted in a footnote that the question remains "open" in Delaware. The user-facing line is: <em>prevailing default, with disagreement at the margins</em>.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>Position varies by jurisdiction; in France, Germany, and Italy the parties typically follow Anglo-American practice for international deals.</p>
+    </aside>
+  </div>
+
+  <h2>MAC/MAE as a closing condition vs. as an R&amp;W qualifier</h2>
+
+  <p>There is a structural distinction every deal lawyer must master.</p>
+
+  <p><span class="term" data-term="material-adverse-effect">MAC/MAE as a closing condition</span> is an independent, freestanding right for the buyer to refuse to close: <em>"It shall be a condition to the Buyer's obligation to close that, between Signing and Closing, no Material Adverse Effect shall have occurred."</em> The buyer must prove (at trial or at threat-of-trial) that an MAE has actually occurred, applying whatever standard the SPA's MAE definition lays down.</p>
+
+  <p><strong>MAC/MAE as a qualifier in a representation and warranty bring-down</strong> is different. Here, the closing condition is that the seller's R&amp;Ws are true at Closing as if made at Closing. But many of those R&amp;Ws contain an internal MAE qualifier ("the Target is in compliance with applicable Law in all material respects" or "no Material Adverse Effect has occurred since the Last Accounts Date"). The bring-down then asks: are those R&amp;Ws (with their internal qualifiers) still true? This is much harder for the buyer to use as a walk-right because the buyer must show breach of an R&amp;W, not the existence of an MAE in the abstract.</p>
+
+  <p>The two routes converge in practice: a deteriorating target may breach both. But sophisticated buyers use both belts and braces, and sophisticated sellers fight to weaken both.</p>
+
+  <h3>Three flavours of R&amp;W bring-down</h3>
+
+  <p>When negotiating the R&amp;W bring-down condition, three flavours are common, in increasing buyer-friendliness:</p>
+
+  <ol>
+    <li><strong>"Must be true at Signing only."</strong> The R&amp;Ws speak only as at the Signing date; if they were true then, the buyer has no walk-right based on subsequent untruth. Indemnification may still be available post-Closing for breach as at Signing — but no walk-away.</li>
+    <li><strong>"Must be true at Signing and at Closing."</strong> The R&amp;Ws are deemed repeated at Closing as if made at Closing. Any post-Signing change that makes an R&amp;W untrue gives the buyer a walk-right. Hugely buyer-friendly.</li>
+    <li><strong>"Must be true at Closing subject to a <span class="term" data-term="materiality-scrape">materiality scrape</span>."</strong> A compromise: the R&amp;Ws are repeated at Closing, but the bring-down only fails if either (i) those R&amp;Ws not already qualified by materiality fail to be true <em>in all material respects</em>, or (ii) those R&amp;Ws already qualified by materiality fail to be true <em>at all</em>; <strong>and</strong> in either case only if the failure individually or in the aggregate would constitute or reasonably be expected to constitute a Material Adverse Effect. The "double materiality" or MAE materiality scrape effectively converts the bring-down into a MAE condition.</li>
+  </ol>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — bring-down flavour</h5>
+    <p>Buyer wants Flavour 2; seller wants Flavour 1; Flavour 3 is the typical compromise on a mid-market deal. On large public deals, Flavour 3 is the market standard.</p>
+  </aside>
+
+  <h2>MAC/MAE definition — the architecture</h2>
+
+  <p>The MAC/MAE definition is a three-layer cake.</p>
+
+  <p><strong>Layer 1: the basic definition.</strong> Almost always a tautology of the form <em>"any change, event, occurrence, or effect that, individually or in the aggregate, has had or would reasonably be expected to have a material adverse effect on [scope]."</em></p>
+
+  <p><strong>Layer 2: the scope.</strong> What is the MAE measured against? Typically: (i) the business, results of operations, financial condition, assets, or liabilities of the target (and its subsidiaries, taken as a whole); and sometimes (ii) the seller's ability to consummate the transaction. Buyer-friendly definitions add "prospects" — the future earnings power. Seller-friendly definitions strip "prospects" and add "of the Target <em>taken as a whole</em>" so that an MAE in one division is not enough.</p>
+
+  <p><strong>Layer 3: the carve-outs.</strong> The list of things that <em>do not</em> count as an MAE even if they have a material adverse effect. The <span class="term" data-term="mae-carve-out">carve-outs</span> are the heart of the negotiation. Typical seller-favoured carve-outs:</p>
+
+  <ul>
+    <li>changes in general economic, political, or regulatory conditions (the macro carve-out);</li>
+    <li>changes in financial, securities, credit, or commodities markets;</li>
+    <li>war, military action, terrorism, natural disasters, <strong>pandemics, epidemics, or public-health emergencies</strong> (post-2020 this carve-out is fought hard — buyers want to delete "pandemics" entirely);</li>
+    <li>changes generally affecting the industry in which the target operates;</li>
+    <li>changes in Law, Generally Accepted Accounting Principles (GAAP / IFRS), or interpretations thereof;</li>
+    <li>the announcement or pendency of the Transaction (so a customer leaving because the buyer is unpopular in the customer's home country does not count);</li>
+    <li>any action taken at the buyer's written request or required by the SPA;</li>
+    <li>failure of the target to meet projections (but the underlying <em>cause</em> of the failure is not carved out — a seller cannot hide behind "we missed budget" if the reason is, say, an unsalvageable regulatory crisis).</li>
+  </ul>
+
+  <p><strong>The "disproportionate effect" qualifier.</strong> The most heavily negotiated meta-clause: each carve-out applies <em>unless</em> the change has a "materially disproportionate" effect on the target relative to others in the industry. This re-introduces idiosyncratic risk to the seller. The principle: <em>systemic risk (a global recession, a pandemic) is allocated to the buyer; idiosyncratic risk (the target's particular vulnerability to that systemic event) is allocated to the seller.</em></p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Material Adverse Effect means any effect (without giving effect to this Agreement and the transactions contemplated by this Agreement) that is, or could reasonably be expected to be, material and adverse to the results and/or financial condition of the Target or its assets, operations, affairs, prospects, future financial performance, condition (financial or otherwise), except to the extent that such material adverse effect results from or is caused by: (i) any change in worldwide, national or local economic, political or regulatory conditions, (ii) war, military actions, acts of terrorism, natural disasters and pandemics, (iii) changes generally affecting the industry in which the Target [operates], (iv) the announcement of this Agreement and the transactions contemplated by it, and (v) changes in Laws, except in the case of each of clauses (i), (ii), (iii) and (v) above, to the extent it does not have a materially disproportionate effect on the Target relative to other comparable entities operating in the industry in which the same operates."</em></p>
+      <p>— Slide 13 (Material Adverse Effect definition)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Three drafting choices to notice. (a) "Prospects" is included in the scope — buyer-friendly. Sellers fight to remove it. (b) "Pandemics" is in the carve-out list — seller-friendly and reflects pre-2020 drafting; after COVID, buyers routinely delete it. (c) The "disproportionate effect" qualifier applies to (i), (ii), (iii), and (v) but <em>not</em> (iv) — so an idiosyncratic announcement effect counts as an MAE even if it is disproportionate. This is unusual; typically (iv) is excluded from disproportionality because announcement effects are within the buyer's control.</div>
+  </aside>
+
+  <h2>Delaware MAE jurisprudence — the core cases</h2>
+
+  <h3><span class="term" data-term="ibp-tyson"><em>In re IBP, Inc. Shareholders Litigation</em></span>, 789 A.2d 14 (Del. Ch. 2001)</h3>
+
+  <p>The first detailed Delaware analysis of a MAE clause. Tyson Foods agreed to acquire IBP, Inc., a beef and pork processor, in a $3.2 billion deal signed January 2001. Within three months IBP's first-quarter earnings had fallen 64%, primarily because of (i) a severe winter affecting livestock supplies and meat quality, (ii) accounting issues at an IBP subsidiary, and (iii) a downturn affecting the entire commodity-meat industry.</p>
+
+  <p>Tyson tried to walk citing MAE. Vice Chancellor Leo Strine (later Chief Justice of Delaware) refused. The reasoning has become canonical:</p>
+
+  <ul>
+    <li><strong>"The MAE clause is best read as a backstop protecting the acquiror from the occurrence of unknown events that substantially threaten the overall earnings potential of the target in a durationally-significant manner."</strong></li>
+    <li>A short-term earnings dip in a <em>cyclical</em> business known to be cyclical at Signing is not <span class="term" data-term="durationally-significant">durationally significant</span>.</li>
+    <li>A buyer who proceeds with a deal knowing about cyclical risk cannot then claim that materialisation of that risk is unforeseen.</li>
+    <li>The court ordered specific performance — the deal closed at the original price.</li>
+  </ul>
+
+  <h3><span class="term" data-term="hexion-huntsman"><em>Hexion Specialty Chemicals, Inc. v. Huntsman Corp.</em></span>, 965 A.2d 715 (Del. Ch. 2008)</h3>
+
+  <p>The leveraged-buyout-collapse case. Apollo-controlled Hexion had agreed to acquire Huntsman Corp for $10.6 billion in July 2007. Through 2008, Huntsman's earnings deteriorated. Hexion claimed an MAE; Huntsman sued for specific performance.</p>
+
+  <p>Vice Chancellor Stephen Lamb made several points that have shaped every MAE clause drafted since:</p>
+
+  <ul>
+    <li><strong>The burden of proof rests on the party invoking the MAE</strong> (typically the buyer). This is striking because the natural reading is that the buyer's obligation is conditional on no MAE — yet Delaware places the proof burden on the buyer because the buyer is asking to <em>escape</em> its bargain.</li>
+    <li><strong>The "durationally significant" standard from <em>IBP</em> applies.</strong> The court must look to long-term earnings power "measured in years rather than months."</li>
+    <li><strong>A 7% (Huntsman's projection) or 11% (Hexion's lower estimate) decline in projected 2008 EBITDA against 2007 was insufficient.</strong> The court rejected those declines as not durationally significant. A 19% Q3-to-Q4 quarter-on-quarter dip was given little weight as a known seasonal pattern in Huntsman's business; the operative comparison was full-year-on-full-year.</li>
+    <li><strong>Disproportionality matters.</strong> Where the MAE definition contains an industry carve-out subject to disproportionate-effect, the buyer must show idiosyncratic harm to the target <em>beyond</em> the industry trend.</li>
+    <li><strong>Failure to hit projections is not, by itself, an MAE.</strong> The court emphasised that the SPA contained an express carve-out for failure to meet projections.</li>
+  </ul>
+
+  <p>The court ordered Hexion to use reasonable best efforts to consummate the financing. Hexion ultimately settled for ~US$1 billion, comprising approximately <strong>$325m termination payment + $250m of preferred convertibles + $425m affiliate payments</strong> (per Huntsman's settlement press release), which is the dollar-mechanic split a partner will reach for when explaining how a "MAE plus financing-out" attack actually settles. Before <em>Hexion</em> was an MAE case, it was a <strong>financing-out</strong> case &mdash; Apollo's LBO debt had collapsed in 2008 and the financing-out and MAE arguments ran together. That collapse-of-financing dynamic is what PE deal teams litigate today, and the negotiation pressure point is the size of the reverse termination fee, not abstract MAE doctrine.</p>
+
+  <h3>Financing-out vs. MAE-out &mdash; the PE buyer's two doors</h3>
+
+  <p>On a private-equity LBO the buyer typically has two contractual exits, not one:</p>
+
+  <ul>
+    <li><strong>The MAE / no-MAC condition</strong> &mdash; the conventional walk-right if a "Material Adverse Effect" has occurred. Hard to win post-<em>Akorn</em>; "durationally significant" remains the test.</li>
+    <li><strong>The financing condition / reverse termination fee architecture</strong> &mdash; if the LBO debt fails to fund (banks pull commitments, syndication breaks, market melts), a PE buyer will trigger a defined termination right and pay the <span class="term" data-term="reverse-termination-fee">reverse termination fee (RTF)</span> rather than be specifically performed. Delaware courts (<em>Hexion</em> and successors) have shown reluctance to compel sponsors to fund equity contributions; the practical seller leverage is the RTF size, not specific performance. RTF data: financial sponsors average ~6.5% of enterprise value vs. ~3.7% for strategics (Houlihan Lokey 2024).</li>
+  </ul>
+
+  <p><strong>Why this matters in a meeting:</strong> when a partner says "the buyer will run a financing-out before they run a MAE", they are saying the contractual fight will be over RTF triggers (does the buyer's financing failure satisfy the defined termination event?), not over the abstract MAE definition. The forward-looking <em>"would reasonably be expected to have"</em> tail in the MAE definition matters because <em>Akorn</em> accepted the projected $900m FDA remediation cost as relevant to durational significance &mdash; a forward-looking lever a buyer can use even before a financial collapse has fully crystallised.</p>
+
+  <h3><span class="term" data-term="akorn-fresenius"><em>Akorn, Inc. v. Fresenius Kabi AG</em></span>, 2018 WL 4719347 (Del. Ch. Oct. 1, 2018), aff'd, 198 A.3d 724 (Del. 2018)</h3>
+
+  <p><strong>The first time a Delaware court has found an MAE.</strong> Fresenius (German pharmaceutical company) had agreed in April 2017 to acquire Akorn (Illinois generic-drug maker) for $4.75 billion. Through 2017 and into 2018, Akorn's business collapsed. Fresenius purported to terminate; Akorn sued for specific performance. Vice Chancellor J. Travis Laster issued a <strong>246-page opinion</strong> finding:</p>
+
+  <ul>
+    <li><strong>Catastrophic financial decline.</strong> For full-year 2017, Akorn's revenue fell 25%, operating income fell 105%, EBITDA fell 86%, and adjusted EBITDA fell 51%. Q1 2018 results continued the collapse.</li>
+    <li><strong>The decline was durationally significant.</strong> Unlike <em>IBP</em>, this was not a cyclical short-term hiccup — it was a year-on-year collapse with no recovery in sight.</li>
+    <li><strong>The decline was disproportionate.</strong> Akorn's competitors in the generic-drug industry had suffered, but Akorn had suffered far worse.</li>
+    <li><strong>Independent of the financial MAE, Akorn had separately breached its regulatory-compliance R&amp;W in a manner that itself constituted a Material Adverse Effect for bring-down purposes.</strong> Fresenius's investigation (including site visits with FDA-experienced consultants) uncovered "serious and pervasive data integrity problems" — Akorn had cancelled regular audits, failed to investigate whistleblower letters, and submitted regulatory filings to the U.S. Food and Drug Administration (FDA) containing "false or fabricated" data. The cost to remediate was estimated at over $900 million — roughly 20% of the deal value.</li>
+    <li><strong>Akorn's "ordinary course of business" covenant breach was independent and severe.</strong> Akorn had cancelled audits, suspended internal compliance functions, and failed to maintain FDA submissions in the ordinary course.</li>
+    <li><strong>The Delaware Supreme Court affirmed.</strong></li>
+  </ul>
+
+  <p><em>Akorn</em> is now the lodestar for MAE litigation. Its central message: an MAE is possible to prove, but only on facts of <em>catastrophic, durationally-significant, idiosyncratic</em> deterioration — and even then the buyer's case is much stronger if it can also point to a clear breach of an underlying R&amp;W or covenant.</p>
+
+  <h3><span class="term" data-term="ab-stable"><em>AB Stable VIII LLC v. MAPS Hotels and Resorts One LLC</em></span> (Del. Ch. Nov. 30, 2020), aff'd 268 A.3d 198 (Del. 2021)</h3>
+
+  <p>The most important COVID-era case. AB Stable (a subsidiary of China's Anbang Insurance Group) had agreed to sell Strategic Hotels &amp; Resorts (15 luxury U.S. hotels) to Mirae Asset Financial Group (Korea) for $5.8 billion. Signing September 2019; targeted Closing April 2020. COVID happened.</p>
+
+  <p>Vice Chancellor J. Travis Laster (the same judge as <em>Akorn</em>) issued a <strong>242-page opinion</strong> (per Wilson Sonsini, Akin Gump and Jones Day commentary) finding:</p>
+
+  <ul>
+    <li><strong>No MAE.</strong> The MAE definition contained a "natural disasters and calamities" carve-out. The court held that COVID-19 was a "calamity" within the dictionary meaning, even though the word "pandemic" did not appear. (Drafting lesson: do not assume a court will read in a word you did not include — and conversely, do not assume that omitting a word will help you.)</li>
+    <li><strong>Yet still, the buyer could walk</strong> — because the seller had <strong>breached the Ordinary Course covenant</strong>. The seller had laid off thousands of employees, closed two hotels entirely, slashed marketing budgets, and made dozens of operational changes "in response to" COVID. The court accepted those changes were <em>reasonable</em> — but reasonableness does not equal "ordinary course." Operating in the ordinary course consistent with past practice is an <em>objective</em> standard: did the business operate as it historically had? On those facts, no.</li>
+    <li><strong>The buyer's consent could not be implied.</strong> The SPA allowed the seller to seek the buyer's consent for non-ordinary-course actions; consent could not be unreasonably withheld. But the seller had not asked for consent. By failing to ask, the seller forfeited the protection.</li>
+  </ul>
+
+  <p>The Delaware Supreme Court affirmed in December 2021. The lesson: <strong>the Ordinary Course covenant is sometimes a stronger walk-right than the MAE itself</strong>, because it does not require the buyer to prove the financial collapse — only that the seller departed from past practice without asking. Post-<em>AB Stable</em>, every well-drafted SPA now contains either (a) an express carve-out from the Ordinary Course covenant for COVID-style emergency responses, or (b) a deemed-consent mechanism for actions the seller flags promptly to the buyer.</p>
+
+  <h2>COVID-era MAC litigation — quick survey</h2>
+
+  <p>Five high-profile 2020 disputes shape modern thinking:</p>
+
+  <ul>
+    <li><strong>LVMH / Tiffany &amp; Co. ($16.2bn, signed November 2019).</strong> LVMH announced in September 2020 it would not close, citing (i) MAE, (ii) breach of Ordinary Course, and (iii) a letter from the French Foreign Minister allegedly directing LVMH to delay closing in retaliation for U.S. tariffs on French goods. Tiffany sued in Delaware Chancery (Vice Chancellor Slights). Trial was set for January 2021. Before trial, the parties settled at a reduced price — $131.50 per share down from $135 — saving LVMH roughly $430 million on a $16bn deal.</li>
+    <li><strong>Sycamore Partners / Victoria's Secret / L Brands ($525m for 55% stake, signed February 2020).</strong> Sycamore (a private-equity firm specialising in distressed retail) walked in April 2020, citing MAE and Ordinary Course. L Brands sued in the Delaware Chancery; the parties <em>mutually terminated</em> in May 2020 and L Brands sold to a different buyer the following year. Sycamore did not pay a break fee &mdash; a clear seller loss as reported, but note that the legal status of Sycamore's MAE claim was never adjudicated; the outcome is the result of negotiation, not a court ruling on the merits.</li>
+    <li><strong>Simon Property Group / Taubman Centers ($3.6bn, signed February 2020).</strong> Simon (a U.S. mall REIT) terminated in June 2020, citing both MAE and Ordinary Course breach. Simon argued the pandemic had a "uniquely disproportionate" effect on Taubman because Taubman's portfolio was concentrated in luxury indoor malls. Settled November 2020 at a reduced price ($43 per share down from $52.50, an 18% cut).</li>
+    <li><strong>Forescout Technologies / Advent International ($1.9bn, signed February 2020).</strong> Advent (private-equity buyer) refused to close in May 2020 citing MAE. Forescout sued in Delaware. Settled July 2020 at a reduced price (publicly reported as approximately $29 per share down from $33, around 12% reduction; treat as approximate, not a precisely audited figure).</li>
+    <li><strong>Carlyle / American Express Global Business Travel</strong> and <strong>Carlyle / AeroGroup</strong>. Carlyle attempted to walk from several deals in 2020 invoking pandemic-related MAE; most resolved in renegotiated terms.</li>
+  </ul>
+
+  <p>The pattern across COVID cases:</p>
+
+  <ul>
+    <li><strong>MAE alone is rarely a winner</strong> — the carve-outs (epidemic / pandemic / natural-disaster / changes generally affecting the industry) bite hard.</li>
+    <li><strong>Ordinary Course is the new MAE.</strong> The seller's emergency response to the pandemic — without seeking buyer consent — is the lever that actually moves a court.</li>
+    <li><strong>Settlement is the typical outcome.</strong> A reduced price (5–25% off) saves face for the buyer, gets the deal done for the seller, and avoids the litigation tail. Trials happen rarely (<em>AB Stable</em> is the prominent exception).</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — MAE definition</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> scope as broad as possible (results, financial condition, business, assets, <em>prospects</em>, <em>future financial performance</em>); short carve-out list; <em>no</em> pandemic carve-out; aggressive disproportionate-effect qualifier on every carve-out; a quantified backstop ("any decline in EBITDA of more than X% over Y consecutive months shall be deemed an MAE").</li>
+      <li><strong>Seller wants:</strong> scope narrowed (results and financial condition only; "Target taken as a whole"); long carve-out list including pandemics, epidemics, and acts of God; disproportionate-effect qualifier limited to systemic carve-outs only; a "look-forward" qualifier that requires the effect to be durable.</li>
+      <li><strong>Typical compromise:</strong> scope includes business, results, financial condition (no "prospects"); carve-outs include macro, industry, war/terror/natural disaster, <em>but pandemic carve-out is heavily negotiated post-COVID</em> with disproportionate-effect qualifier; no quantitative backstop (the market dislikes it).</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls in the MAE definition</h5>
+    <ul>
+      <li><strong>Failing to define "Material."</strong> Some clauses leave "material" undefined; some define it by reference to a percentage of EBITDA; some define it by reference to "would influence a reasonable buyer's decision to close."</li>
+      <li><strong>Disproportionate-effect qualifier missing on the pandemic carve-out.</strong> A pandemic carve-out without disproportionate-effect means the seller is fully insulated even if its industry was uniquely hit; <em>Simon/Taubman</em> turned on exactly this.</li>
+      <li><strong>Forgetting the bring-down interaction.</strong> If the bring-down has a Flavour-3 MAE materiality scrape, a poorly-drafted MAE definition becomes the de facto materiality threshold for <em>every</em> R&amp;W. Buyers must check that what they are willing to walk on for an MAE is also what they are willing to walk on for a single R&amp;W breach.</li>
+      <li><strong>No carve-out for buyer-caused harm.</strong> If the buyer's announcement itself causes customer attrition, the seller should not bear that risk.</li>
+    </ul>
+  </aside>
+
+  <h2>Buyer's burden of proof</h2>
+
+  <p>Under Delaware law (per <em>Hexion</em>), the burden of proof rests on the party invoking the MAE — almost always the buyer. The buyer must prove, by a preponderance of the evidence:</p>
+
+  <ul>
+    <li>that an MAE has <em>occurred</em> (not merely that one is feared);</li>
+    <li>that the change is durationally significant;</li>
+    <li>that the change falls outside any applicable carve-out;</li>
+    <li>that the change is not within the buyer's risk allocation.</li>
+  </ul>
+
+  <p>This is a heavy burden, and it explains why most invocations of MAE end in renegotiation rather than litigation — the buyer's threat to litigate is a bargaining chip, but a chip the buyer would prefer not to spend.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 07 (SPA) &mdash; the MAC definition, the Ordinary Course covenant, Knowledge Parties, and Permitted Leakage all live in the Definitions schedule. Module 08 (CPs) &mdash; the no-MAC closing condition and the bring-down CP are themselves the architecture this module sits inside; the <em>AB Stable</em> insight applies in both modules: buyers can sometimes win on covenant where they cannot win on MAC.</li>
+      <li><strong>Forwards:</strong> Module 10 (Closing) &mdash; the <strong>Bring-Down Certificate</strong> is the closing-day deliverable in which the seller's officer certifies the warranties remain true (subject to scheduled exceptions); a Flavour-3 bring-down is operationalised here. Module 12 (R&amp;Ws) &mdash; <strong>fundamental warranties</strong> (capitalisation, authority, ownership) are always brought down at Closing regardless of bring-down flavour, because no buyer will close where the seller does not actually own the shares. Module 13 (Indemnification) &mdash; the basket / cap / escrow mechanics determine what happens if a breach existed at signing and the buyer closed anyway. Module 14 (W&amp;I) &mdash; W&amp;I insurance fundamentally changes the bring-down economics: with W&amp;I, the buyer's threat is "we will claim on the policy"; without it, the threat is "we will claim against the seller, who may be insolvent post-Closing." Sellers care less about a buyer's MAC threat when W&amp;I is in place. Module 16 (Disputes) &mdash; the forum matters: Delaware Chancery is fast-track equity (<em>Akorn</em> was tried in five days, three months after Fresenius's termination notice); UK Commercial Court has no equivalent fast-track; an English buyer would seek interim injunctive relief on different mechanics.</li>
+      <li><strong>Domino effect:</strong> if the bring-down is tightened to Flavour 2 (no MAE materiality scrape), the indemnification cap may have to widen because every immaterial breach is a walk-trigger; the W&amp;I retention is repriced; and the seller will demand express disclosure-update mechanics to hedge against new matters arising in the interim period.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>The interim period exists because at least one Condition Precedent (antitrust, FDI, third-party consent) takes time to satisfy. During it the seller has title and control; the buyer has economic exposure.</li>
+      <li>The SPA addresses the asymmetry through Conduct of Business covenants (umbrella + consent items + information rights) and through closing conditions (MAC/MAE + bring-down).</li>
+      <li>"Ordinary course" and "consistent with past practice" are two requirements bolted together — <em>AB Stable</em> turned on the divergence between them.</li>
+      <li>MAE-as-closing-condition is a freestanding walk-right; MAE-as-R&amp;W-qualifier is an internal materiality threshold inside warranties. Three flavours of bring-down: at-Signing-only; at-Signing-and-Closing; at-Closing-with-MAE-materiality-scrape.</li>
+      <li>Delaware's MAE jurisprudence — <em>IBP</em>, <em>Hexion</em>, <em>Akorn</em>, <em>AB Stable</em> — sets a high bar for buyers: catastrophic, durationally-significant, idiosyncratic decline, with the burden of proof on the buyer.</li>
+      <li>Systemic risk allocated to the buyer (macro, industry, war, terrorism, pandemic); idiosyncratic risk allocated to the seller via the disproportionate-effect qualifier.</li>
+      <li>Post-COVID, the Ordinary Course covenant is often a stronger walk-right than MAE itself — the seller forfeits protection by failing to seek the buyer's consent.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="08-conditions-precedent.html" class="prev">Conditions Precedent &amp; Regulatory Clearances</a>
+    <a href="10-closing.html" class="next">Closing Mechanics</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

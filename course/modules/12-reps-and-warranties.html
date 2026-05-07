@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 12 — Representations &amp; Warranties · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="12">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 12</div>
+    <h1>Representations &amp; Warranties</h1>
+    <p class="subtitle">The buyer's primary contractual safety net — how seller statements about the Target allocate information risk between the parties, and how disclosure, knowledge and materiality qualifiers shape what the buyer can actually claim for.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Explain the legal distinction between a <span class="term" data-term="representation">representation</span> and a <span class="term" data-term="warranty">warranty</span> under English law, and why modern UK Share Purchase Agreements (SPAs) are usually drafted to characterise seller statements as warranties only.</li>
+      <li>Distinguish <span class="term" data-term="general-rw">general</span> from <span class="term" data-term="specific-rw">specific</span> R&amp;Ws, <span class="term" data-term="legal-rw">legal</span> from <span class="term" data-term="business-rw">business</span> R&amp;Ws, and <span class="term" data-term="fundamental-rw">fundamental</span> ("title" / "core") R&amp;Ws — and explain why fundamental R&amp;Ws receive different survival and cap treatment.</li>
+      <li>Negotiate the principal qualifiers attached to R&amp;Ws: <span class="term" data-term="knowledge-qualifier">knowledge qualifiers</span>, <span class="term" data-term="materiality-qualifier">materiality qualifiers</span>, and the <span class="term" data-term="materiality-scrape">materiality scrape</span> (a buyer-friendly device that strips materiality qualifiers when calculating breach and/or damages).</li>
+      <li>Explain how disclosure operates as the seller's defence: the UK <span class="term" data-term="disclosure-letter">Disclosure Letter</span> mechanism, the US <span class="term" data-term="disclosure-schedules">disclosure schedules</span> mechanism, and the <span class="term" data-term="fairly-disclosed">"fairly disclosed"</span> standard.</li>
+      <li>Apply the <span class="term" data-term="sandbagging">sandbagging</span> / anti-sandbagging concepts: which jurisdiction's default rule favours which party, and what an explicit pro- or anti-sandbagging clause does.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> R&amp;Ws are the single longest section of any SPA — often 40 to 80 pages of dense statements about the Target. Every word matters because every word allocates pre-Closing risk between buyer and seller. Done well, the R&amp;W package is the buyer's primary contractual safety net (and, when paired with Warranty &amp; Indemnity (W&amp;I) insurance, sometimes the only one). Done badly, the buyer ends up owning a company with hidden tax liabilities, environmental contamination, regulatory non-compliance, or undisclosed litigation — and no contractual remedy. From the seller's side, sloppy R&amp;Ws or an unfavourable knowledge / materiality drafting can convert a successful exit into years of post-Closing claims litigation. Most M&amp;A litigation is R&amp;W and indemnification litigation.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>The seven questions a senior M&amp;A partner asks first in any R&amp;W discussion:</p>
+    <ul>
+      <li><strong>"Knowledge scrape"</strong> — the W&amp;I-driven device that strips knowledge qualifiers under the policy, so the policy responds even where the SPA warranty was qualified by seller knowledge. The parallel to the materiality scrape; now standard in W&amp;I-backed deals at ~10–15% premium uplift.</li>
+      <li><strong>"Tipping / deductible / first-dollar basket"</strong> — basket type. Tipping (first-dollar) means once aggregate exceeds the basket the buyer recovers the whole amount (buyer-friendly); deductible means only excess is recovered (seller-friendly). The partner's first basket question.</li>
+      <li><strong>"Save-for-fraud"</strong> — the irreducible carve-out from any limitation of liability or exclusive-remedy clause. UK: <em>Lazarus Estates</em> / <em>HIH Casualty</em>. US: <em>ABRY Partners</em>. Public policy bars excluding fraud.</li>
+      <li><strong>"Fundamental rep cap"</strong> — the higher cap (typically 100% of price or uncapped) and longer survival (6+ years) given to title, capacity, authority warranties.</li>
+      <li><strong>"Synthetic warranties"</strong> — warranties the seller will not give but that the W&amp;I insurer agrees to underwrite as if given. Used for passive financial sellers, take-privates, complex tax structures.</li>
+      <li><strong>"Cobalt-friendly"</strong> — Delaware shorthand for pro-sandbagging drafting (after <em>Cobalt Operating, LLC v James Crystal Enterprises</em>, 2007). A "Cobalt-friendly" SPA preserves the buyer's claim irrespective of pre-signing knowledge.</li>
+      <li><strong>"Survival splits"</strong> — the standard durations by category: general 12–24 months; tax to statute of limitations + 30–60 days; fundamentals 6 years / perpetual; environmental ~5 years; anti-bribery 5–10 years.</li>
+      <li><strong>"Sandbagging-friendly?"</strong> — does the SPA expressly preserve the buyer's claim despite pre-signing knowledge? Delaware default is yes (pro-sandbagging); UK default leans no.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> M04 (DD — every issue surfaced in DD becomes a specific warranty, a disclosure, a specific indemnity, or a price reduction; R&amp;Ws are "DD output, formalised"); M07 (SPA structure — R&amp;Ws are one of four parallel risk-allocation tools alongside indemnification, price mechanism, CPs).</li>
+      <li><strong>Forwards:</strong> M13 (Indemnification — survival, cap, basket, de minimis are all indemnification-regime mechanics; R&amp;Ws and indemnification are a single warranty-and-indemnity package); M14 (W&amp;I — the underwriter becomes the third party at the table whose comfort dictates language; W&amp;I now in 63% of US deals per ABA 2025); M16 (Disputes — choice of law materially changes how sandbagging default, fair-disclosure, and fraud carve-out operate).</li>
+      <li><strong>Domino effect:</strong> Moving to a synthetic / no-recourse W&amp;I package changes the entire shape: cap → €1; basket → policy retention; survival aligns with policy (typically 24–36 months general, 6–7 years fundamental/tax); knowledge scrape and materiality scrape inserted; indemnification clause becomes a procedural shell. Tightening the basket from tipping to deductible at 1% lowers expected payouts; cap and escrow may move; W&amp;I retention pricing affected.</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Buyer Protections — Allocating Transaction Risk:</strong> "How does the Buyer protect itself against the risk that the Target is not as expected? From a deal perspective, this risk is addressed through: Representations &amp; Warranties (allocation of information risk); Indemnities (allocation of liability risk); Purchase Price mechanisms (allocation of valuation risk); Conditions Precedent (allocation of execution and regulatory risk). In an SPA, Buyer protection is achieved primarily through contractual risk allocation, not through statutory remedies."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> framing R&amp;Ws as one of four parallel risk-allocation tools in the SPA. The key insight is the last line: common-law statutory remedies for misdescription of a target (Sale of Goods Act 1979 in the UK, <em>caveat emptor</em> generally) are inadequate for an M&amp;A transaction; the SPA constructs a bespoke contractual liability regime to cover the gap.</div>
+  </aside>
+
+  <h2>Representation versus warranty: the English-law distinction</h2>
+
+  <p>A non-lawyer often hears these as a single phrase ("reps and warranties") and assumes they are synonyms. Under English law they are not.</p>
+
+  <p>A <strong>representation</strong> is a pre-contractual statement of fact that a party makes in order to induce the other party to enter into the contract. If untrue, the law of misrepresentation applies. The remedies are (a) <span class="term" data-term="rescission">rescission</span> (an equitable remedy that unwinds the contract — both parties are restored to the position they were in before the contract, money is repaid, shares are transferred back) and (b) damages, depending on which kind of misrepresentation:</p>
+
+  <ul>
+    <li><strong>Fraudulent misrepresentation</strong> (the tort of deceit, <em>Derry v. Peek</em> (1889) 14 App Cas 337): damages are the loss directly flowing from the deceit, including unforeseeable loss; the cap on recovery is generous.</li>
+    <li><strong>Negligent misrepresentation</strong> under section 2(1) of the <span class="term" data-term="misrepresentation-act">Misrepresentation Act 1967</span>: damages are awarded as if the misrepresentation had been fraudulent (the so-called "fiction of fraud") — and crucially, the burden of proof reverses: once the buyer shows a false statement was made and induced the contract, the seller must prove it had reasonable grounds to believe it was true.</li>
+    <li><strong>Innocent misrepresentation</strong>: rescission only (or damages in lieu under section 2(2) Misrepresentation Act 1967, at the court's discretion).</li>
+  </ul>
+
+  <p>A <strong>warranty</strong> is a contractual promise that a fact is true. If the fact is untrue, the warranty is breached and the only remedy is <strong>contract damages</strong> — calculated under the ordinary common-law measure (<em>Hadley v. Baxendale</em> (1854) 9 Exch 341): direct loss plus reasonably foreseeable consequential loss, subject to mitigation, foreseeability, and any contractual exclusions.</p>
+
+  <p>The practical consequences are dramatic. A misrepresentation claim can rescind the deal years later, can recover unforeseeable losses, can shift the burden of proof, and (in the case of fraud) cannot be capped or excluded by contract as a matter of public policy. A warranty claim is the buyer's home turf only — capped, basket-protected, time-barred, and subject to mitigation.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK</h5>
+      <p>The distinction is sharp and consequential. Modern UK SPAs almost universally (a) characterise seller statements as <strong>warranties only</strong>, never as representations, and (b) include a clause excluding all rescission and statutory misrepresentation remedies (subject to the unenforceable-by-public-policy carve-out for fraud). The aim is to keep all buyer recourse inside the carefully-negotiated indemnification regime.</p>
+      <p>The leading case is <span class="term" data-term="sycamore-bidco"><em>Sycamore Bidco Ltd v. Breslin</em></span> [2012] EWHC 3443 (Ch) — a private-equity-backed buyer paid approximately &pound;16.75 million for an insurance broking firm based on accounts that overstated turnover by approximately &pound;300,000. The buyer argued that the warranties were also representations, opening misrepresentation remedies. Mann J held that on the proper construction of the SPA the express warranties were warranties only, not representations.</p>
+      <p><span class="term" data-term="idemitsu-kosan"><em>Idemitsu Kosan Co Ltd v. Sumitomo Corporation</em></span> [2016] EWHC 1909 (Comm) went further: the buyer (a Japanese oil company that had paid US$575 million for North Sea oil and gas interests and missed the 18-month warranty notification deadline) could not pivot to a misrepresentation claim. The courts have made clear: if you want representations as well as warranties, say so.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>US drafters traditionally use "represents and warrants" as a single boilerplate phrase, often without analysing the distinction. Delaware courts are not generally inclined to give the wording fine analytical treatment; the indemnification regime in the SPA is the primary mechanism, and an "exclusive remedy" clause typically channels claims into that regime regardless of how the underlying statements are labelled.</p>
+      <p>However, a "Big Boy" or <span class="term" data-term="non-reliance-clause">non-reliance clause</span> confirming the buyer relied only on the SPA's representations and not on any other extra-contractual statement is standard, to defeat extra-contractual fraud claims (see <span class="term" data-term="abry-partners"><em>ABRY Partners V, L.P. v. F&amp;W Acquisition LLC</em></span>, 891 A.2d 1032 (Del. Ch. 2006)).</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>Civil-law jurisdictions (France, Germany, Italy, Spain, Netherlands) approach this differently. There is generally no Misrepresentation Act equivalent giving statutory damages, but pre-contractual liability (<em>culpa in contrahendo</em> — first developed in 19th-century German law and now embedded in &sect;311(2) of the German Civil Code, <em>B&uuml;rgerliches Gesetzbuch</em>; equivalent doctrines exist in French, Italian and Spanish law) can give rise to damages for false pre-contractual statements. The buyer's protection is more contract-driven, so the SPA itself does most of the work, with limited statutory backup.</p>
+    </aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — characterisation</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> "represents and warrants" wording; no exclusion of statutory misrepresentation remedies; fraud carve-out spelled out; retention of rescission rights for fundamental breaches.</li>
+      <li><strong>Seller wants:</strong> "warrants" only; express exclusion of section 2(1) of the Misrepresentation Act 1967 and rescission; sole-and-exclusive-remedy clause channelling all claims into the indemnification regime; fraud carve-out narrowed to actual fraud (not constructive or "deemed" fraud).</li>
+      <li><strong>Typical compromise:</strong> warranties only; exclusive remedy clause; fraud / wilful misconduct carve-out unaffected by the cap and basket. Rescission excluded except for breach of fundamental representations.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li>Using "represents" in one place and "warrants" elsewhere — an interpretive court will draw a distinction (per <em>Sycamore Bidco</em>) and the seller may inadvertently re-introduce misrepresentation exposure.</li>
+      <li>Forgetting to explicitly exclude section 2(1) of the Misrepresentation Act 1967 — the section operates by default and the buyer can recover damages on a tortious measure even if the warranty itself is capped.</li>
+      <li>Trying to exclude liability for fraud — courts will refuse to enforce such an exclusion as a matter of public policy (UK: <span class="term" data-term="lazarus-estates"><em>Lazarus Estates Ltd v Beasley</em></span> [1956] 1 QB 702 (Lord Denning MR) — "fraud unravels everything"; restated in <span class="term" data-term="hih-casualty"><em>HIH Casualty and General Insurance v. Chase Manhattan Bank</em></span> [2003] UKHL 6 (a contractual exclusion of liability for fraud requires "clear and unmistakable terms"); US: <em>ABRY Partners</em>).</li>
+    </ul>
+  </aside>
+
+  <h2>Categories of R&amp;Ws: general vs. specific, legal vs. business, fundamental</h2>
+
+  <p>The source deck distinguishes three orthogonal classifications.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Categories of R&amp;Ws:</strong></p>
+      <p><strong>General (high level) R&amp;Ws</strong> — Address a topic in broad terms (e.g. ownership of shares, authority, compliance). Wide in scope, high exposure for the seller. Example: "The Target and its directors, representatives and officials have always complied and comply with all applicable laws, as well as with all orders, authorizations, licenses and decrees issued by any competent authority with respect to the Target."</p>
+      <p><strong>Specific (granular) R&amp;Ws</strong> — Address identified facts, exceptions or sub-issues within the same topic. Narrow in scope, lower exposure but higher drafting complexity. Example: "The Target has valid and subsisting written licenses in respect of all third-party software indicated in Schedule 20(a) to use, incorporate, distribute, and sublicense such third-party software in the manner and to the extent undertaken by the Target in the conduct of its business."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> illustrating the layered structure. A general R&amp;W gives the buyer broad coverage but invites disputes about scope; a specific R&amp;W is narrow and clear but only covers what was thought to ask about. A well-drafted SPA uses both layered together — general R&amp;Ws cover the entire field, then specific R&amp;Ws drill into known issues identified in due diligence.</div>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Legal vs. Business Warranties:</strong></p>
+      <p><strong>Legal Warranties</strong> refer to fundamental legal aspects, such as title to the shares and the absence of litigation. Example: "The Seller has full capacity and is entitled to enter into this Agreement (and any other agreement or document to be entered into pursuant to this Agreement) as well as to carry out the Closing without having to obtain the prior consent, authorization, or approval of any third party or public authority."</p>
+      <p><strong>Business Warranties</strong> refer to the economic, financial and operational aspects of the Target and its business. Example: "The agreements the Target is a party to (including all agreements and commercial relationships with the Target's clients and suppliers): (i) are valid and binding; (ii) have not been breached, in any respect, by the Target nor by its counterparties; (iii) provide for obligations that shall be duly enforceable at the relevant due date; and (iv) do not conflict with the execution and performance of the Agreement."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> the legal-warranty example is the seller's <strong>capacity / authority</strong> warranty — a fundamental statement that the seller has corporate or personal power to do the deal at all. The business-warranty example illustrates the typical four-pronged contracts warranty: (i) the Target's contracts are valid and binding; (ii) nobody is in breach; (iii) future obligations are enforceable; (iv) the deal itself does not break any of them (a change-of-control trip-wire check).</div>
+  </aside>
+
+  <p>A standard list of business R&amp;Ws covers: financial statements (drawn up under the agreed accounting principles, true and fair view, no off-balance-sheet liabilities, no undisclosed indebtedness); material contracts (valid, binding, no breach, no notice of termination); employees and employee benefits (employment terms, pension funding, no industrial action); pensions; real estate and property (title, planning permissions); intellectual property and IT (ownership, validity, no infringement, software licensing); litigation (no pending or threatened proceedings); tax (all returns filed, all taxes paid, no audit pending); environmental (no contamination, all permits held, no notices); regulatory and compliance (with applicable laws, anti-bribery, sanctions); insurance (policies in force, no claims pending); and a "no MAC" closer (no material adverse change since the last accounts date).</p>
+
+  <h3>Fundamental R&amp;Ws (also "Title R&amp;Ws" or "Core R&amp;Ws")</h3>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Fundamental Representations and Warranties:</strong> "Fundamental representations are essential to the execution of the SPA and to the transfer of the shareholdings. They relate to: The authority and powers to enter into and perform the SPA; Full ownership of the shareholdings being sold and the absence of encumbrances; The absence of commitments that conflict with the SPA; [The absence of any required authorisations for the completion of the transaction]."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> defining the special category. These are the deal-essential R&amp;Ws: if any of them is wrong, the buyer is not getting what it bargained for at the most basic level (it does not have good title, or the seller had no authority to sell). Because the consequence is existential — the buyer has paid for a counterfeit — fundamental R&amp;Ws receive special treatment in the indemnification regime.</div>
+  </aside>
+
+  <p>The special treatment for fundamental R&amp;Ws:</p>
+
+  <ul>
+    <li><strong>Survival period:</strong> much longer than business R&amp;Ws — typically 6 to 7 years, sometimes perpetual or aligned to the relevant statute of limitations.</li>
+    <li><strong>Cap:</strong> higher than business R&amp;Ws — typically 100% of the purchase price, or uncapped.</li>
+    <li><strong>No basket / no de minimis:</strong> any breach is recoverable from the first dollar.</li>
+    <li><strong>No knowledge or materiality qualifiers.</strong></li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — categories</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> broad list of fundamental R&amp;Ws (pull authority, title, capacity, solvency, no required consents, capitalisation of subsidiaries, brokers' fees), uncapped, perpetual.</li>
+      <li><strong>Seller wants:</strong> narrow list (only authority, title, no encumbrances), capped at purchase price, time-barred at the relevant statute of limitations.</li>
+      <li><strong>Typical compromise:</strong> core fundamental list (authority, capacity, title to shares, no encumbrances, organisation/good standing, no required consents); cap at 100% of purchase price; survival 6 years (UK Limitation Act 1980 s.5 default for simple contracts) or 12 years if executed as a deed (s.8).</li>
+    </ul>
+  </aside>
+
+  <h2>The disclosure mechanism — the seller's defence</h2>
+
+  <p>A warranty is breached only if the warranted fact is untrue. But what if the seller knew of the exception when the warranty was given, and disclosed it to the buyer? Then the buyer cannot complain. The disclosure mechanism formalises this.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK — Disclosure Letter</h5>
+      <p>Disclosure is made through a <strong>Disclosure Letter</strong>, a separate document signed by the seller and delivered at signing. It typically contains:</p>
+      <ul>
+        <li><strong>General disclosures:</strong> a list of public registries, public records, the data room index, due diligence reports, and other broadly-available information that the buyer is deemed to have read. Example: "matters disclosed in the Companies House register against the Target as at the date of this Letter."</li>
+        <li><strong>Specific disclosures:</strong> itemised exceptions to particular warranties, cross-referenced clause-by-clause to the warranty schedule. Example: "Warranty 12.3 (Material Contracts) is qualified by the matters set out in the data room at folder 7.2 (the supply agreement with Acme Ltd dated 4 March 2022, which contains a change-of-control clause requiring the counterparty's consent)."</li>
+      </ul>
+      <p>The disclosed matters are bundled into a defined term (e.g. "Disclosed Information") and the warranty section is then expressed to be qualified by the Disclosed Information. The legal effect: properly disclosed matters are not breaches.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US — Disclosure Schedules</h5>
+      <p>Disclosure is made through <strong>Disclosure Schedules</strong> physically attached to the SPA (sometimes called the "Disclosure Schedule" with a section for each warranty). The schedules cross-reference the SPA section number; modern practice includes an "<strong>anti-bundling</strong>" provision allowing matters disclosed in one schedule to qualify any other warranty as long as the relevance is "<strong>reasonably apparent on its face</strong>" (the standard formula). This avoids the trap where the seller listed an environmental notice in Schedule 4.21 (Environmental) but not in Schedule 4.16 (Compliance with Laws) and the buyer claims breach of the latter.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>Practice tracks UK or US depending on the deal lawyer's training; civil-law systems often use a single annex to the SPA functionally similar to a disclosure schedule, sometimes called an <em>annexe de divulgation</em> (France) or <em>Offenlegungsanlage</em> (Germany).</p>
+    </aside>
+  </div>
+
+  <h3>The "fairly disclosed" standard</h3>
+
+  <p>Disclosure that buries the exception in a 200,000-page data room without flagging it does not work. The standard required is "fair disclosure" — the disclosure must be sufficiently clear and specific to inform a reasonable purchaser of the nature and scope of the matter being disclosed. Key authorities:</p>
+
+  <ul>
+    <li><strong><em>Infiniteland Ltd v Artisan Contracting Ltd</em></strong> [2005] EWCA Civ 758 — the Court of Appeal (Chadwick LJ) held that disclosure must be "<strong>sufficient to enable the purchaser to identify the nature and scope of the matter disclosed</strong>" and achieve "a sufficient degree of detail to enable the purchaser to make an informed assessment". A vague reference is not enough.</li>
+    <li><strong><em>New Hearts Ltd v. Cosmopolitan Investments Ltd</em></strong> 1997 SLT 341 / [1997] 2 BCLC 249 (Scotland, Court of Session, Lord Penrose) — disclosure must be "fair, clear and accurate" and the seller cannot rely on "trickery" or the buyer's failure to spot a needle in a data-room haystack.</li>
+  </ul>
+
+  <p>The negotiated standard appears in the SPA's definition of "Disclosed" or "Fairly Disclosed". The buyer wants a high bar — "fully, fairly and specifically disclosed in such a manner and with sufficient particularity to enable a reasonable Buyer to assess the nature, scope and impact of the matter disclosed". The seller wants a lower bar — "disclosed in the Disclosure Letter or the Data Room".</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — disclosure</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> "fairly disclosed" with high specificity standard; disclosure of any matter qualifies only the warranty to which the matter is specifically cross-referenced; data room contents are not deemed disclosed unless individually flagged.</li>
+      <li><strong>Seller wants:</strong> "disclosed" in the Disclosure Letter or the Data Room; matters disclosed against any warranty qualify all warranties to which their relevance is reasonably apparent (anti-bundling reversed); data room is treated as deemed disclosure.</li>
+      <li><strong>Typical compromise:</strong> "fairly disclosed in such manner as is sufficient to enable a reasonable purchaser to identify the nature and scope of the matter"; specific cross-referencing required, but with anti-bundling for matters reasonably apparent on the face of the disclosure.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — disclosure</h5>
+    <ul>
+      <li>The "<strong>data dump</strong>" disclosure — a seller crowding the data room with thousands of documents in the hope that the buyer will not find the bad ones. UK courts will not give effect to this (per <em>Infiniteland Ltd v Artisan Contracting Ltd</em> [2005] EWCA Civ 758 and <em>New Hearts Ltd v Cosmopolitan Investments Ltd</em> 1997 SLT 341).</li>
+      <li>"Disclosure of the Disclosure Letter" — when the seller delivers the Disclosure Letter only at the eve of signing and the buyer has no time to digest. Negotiate a delivery deadline (typically 5 business days before signing).</li>
+      <li>Forgetting to update the Disclosure Letter at Closing for matters arising in the interim period. UK practice: a "<strong>Bring-Down Disclosure Letter</strong>" delivered at Closing.</li>
+    </ul>
+  </aside>
+
+  <h2>Knowledge qualifiers</h2>
+
+  <p>Many warranties cannot be given as flat statements of fact because the seller cannot guarantee against the unknown. The compromise is to qualify the warranty by the seller's knowledge: "to the Seller's knowledge, the Target is not subject to any pending or threatened litigation."</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><strong>Limitations on R&amp;Ws — Seller's Knowledge:</strong> "There are circumstances of which the Seller must necessarily be aware, while others may legitimately remain unknown. Example: 'The Target is not subject to any investigation, inquiry or enforcement proceedings of any kind by any authority notified to the Target or to the Seller. To the best knowledge of the Seller, there are no events or circumstances which may give rise to any investigation, inquiry, enforcement proceedings or claim vis-&agrave;-vis the Target.' What is meant by 'Knowledge'? — 'Actual knowledge' and 'constructive knowledge'. What is meant by 'Seller'? — It is important to specify which individuals' or entities' knowledge is relevant."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> showing the two-tier structure of a knowledge-qualified warranty. The first sentence is unqualified and binds the seller for actual notified investigations; the second sentence picks up the much wider universe of "events or circumstances" that <em>could</em> trigger an investigation, but only to the extent of seller knowledge. The deck flags the two key drafting points: the standard of knowledge (actual vs. constructive) and the identity of the persons whose knowledge counts.</div>
+  </aside>
+
+  <p>Three flavours of knowledge qualifier:</p>
+
+  <ol>
+    <li><strong>Actual knowledge</strong> — what the named individuals actually knew, subjectively. Narrowest scope; most seller-friendly. Example: "to the actual knowledge of the Knowledge Group as of the date of this Agreement, without any obligation of inquiry."</li>
+    <li><strong>Constructive knowledge</strong> ("deemed knowledge") — what the named individuals would have known after reasonable inquiry. Example: "to the knowledge of the Knowledge Group, after due and reasonable inquiry of the Target's senior management." Imposes a positive duty to investigate before warranting.</li>
+    <li><strong>Knowledge of the <span class="term" data-term="knowledge-group">Knowledge Group</span></strong> — a list of identified individuals (typically the Chief Executive Officer (CEO), Chief Financial Officer (CFO), General Counsel (GC), head of human resources (HR), key operating officers, sometimes the company secretary). Their knowledge is imputed to the seller. The buyer wants a long list; the seller wants a short list of departing executives.</li>
+  </ol>
+
+  <p>The buyer's drafting goal is therefore: <strong>(a) no knowledge qualifier at all</strong> (best — convert the warranty into a flat representation), or <strong>(b) constructive knowledge of a wide knowledge group</strong>. The seller's drafting goal is: <strong>actual knowledge of a narrow named-individual list</strong>.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — knowledge</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> no knowledge qualifier; if forced, "to the knowledge of the Seller, with knowledge meaning the actual or constructive knowledge of [list of 8 senior executives] after reasonable inquiry."</li>
+      <li><strong>Seller wants:</strong> "to the actual knowledge of [list of 2 named individuals], with no duty of inquiry, and the knowledge of any other person not to be attributed."</li>
+      <li><strong>Typical compromise:</strong> named Knowledge Group of 4-6 senior executives (CEO, CFO, GC, COO, head of HR), actual knowledge plus knowledge each would reasonably be expected to have based on their role and the records they would normally consult.</li>
+    </ul>
+  </aside>
+
+  <h2>Materiality qualifiers and the "Materiality Scrape"</h2>
+
+  <p>Many warranties are softened by phrases like "in all material respects" or "no material adverse effect on the business". From the seller's side this is essential — the seller cannot warrant absolute perfection. From the buyer's side this means, when the time comes to claim, the buyer first has to prove "materiality" before establishing breach — a burdensome and expensive task involving experts and disputes about what "material" means.</p>
+
+  <p>The negotiated answer is the <strong>Materiality Scrape</strong> (also "Material Scrape"). This is a buyer-friendly device that strips materiality qualifiers for one or both of two purposes:</p>
+
+  <ol>
+    <li><strong>Breach scrape</strong> — for purposes of determining whether a breach has occurred, all materiality and material-adverse-effect qualifiers in the warranties are disregarded. So a breach is a breach even if it is below the materiality threshold.</li>
+    <li><strong>Damages scrape</strong> — for purposes of calculating the amount of the loss, all materiality qualifiers are disregarded. So the buyer can recover the full loss attributable to the breach, not just the "material" portion.</li>
+  </ol>
+
+  <p>Per the <strong>ABA 2025 Private Target M&amp;A Deal Points Study</strong> (139-deal sample, transactions signed in 2024 and Q1 2025; published December 2025), the <strong>double materiality scrape</strong> (applying to both breach and damages) now appears in <strong>82% of US private deals</strong> — up from 69% in the prior 2023 study. This is now standard practice especially with R&amp;W insurance, and is one of the central drafting changes that W&amp;I has driven into the SPA.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — materiality</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> delete "in all material respects" wherever possible; insert a double materiality scrape (breach + damages); apply scrape to all warranties.</li>
+      <li><strong>Seller wants:</strong> retain materiality qualifiers; if a scrape is conceded, limit to damages calculation only (not breach determination); exclude certain warranties from the scrape (e.g., financial statements warranty, MAC closer warranty).</li>
+      <li><strong>Typical compromise:</strong> double materiality scrape applies to all warranties except those explicitly listed — usually the no-undisclosed-liabilities warranty and any "no MAC since the accounts date" warranty (which would be self-defeating without a materiality threshold).</li>
+    </ul>
+  </aside>
+
+  <h2>The Knowledge Scrape</h2>
+
+  <p>The <strong>knowledge scrape</strong> is the W&amp;I-driven device that parallels the materiality scrape. Many SPA warranties are qualified by the seller's knowledge ("to the Seller's knowledge, the Target is in compliance with all applicable laws"). Under a standard W&amp;I policy, the policy responds for breach of the warranty <em>as worded</em> — so the policy never pays where the seller's knowledge defence applies, regardless of what is actually true about the Target. The buyer has effectively bought a policy that responds only when the seller knew of the problem, which is precisely the scenario where the buyer would normally claim against the seller anyway.</p>
+
+  <p>The <strong>knowledge scrape</strong> resolves this: the policy treats the warranty as if the knowledge qualifier had been deleted (a "warranty knowledge scrape"). The insurer underwrites the warranty without the knowledge qualifier and accepts the risk of unknown breaches. Per Goulston &amp; Storrs ("What's Market: Use of Knowledge Qualifiers"), the warranty knowledge scrape is now standard in W&amp;I-backed deals at a typical premium uplift of <strong>10–15%</strong>.</p>
+
+  <p>A <strong>buyer knowledge scrape</strong> (the insurer agreeing to ignore the buyer's actual knowledge) is rare and resisted by insurers — it goes against the basic principle of insurance ("no cover for known losses"). Partial buyer scrapes are negotiated (limited to specific deal-team individuals, or only for matters where the insurer received DD reports).</p>
+
+  <h2>Synthetic / no-recourse W&amp;I packages</h2>
+
+  <p>The dominant European PE exit pattern (and, per the 2025 ABA Deal Points Study, ~63% of US private target deals) is a <strong>synthetic / no-recourse SPA</strong>. The SPA gives the buyer effectively zero recourse against the seller — cap = €1; basket = €1; the indemnification clause is a procedural shell. The buyer's <em>only</em> real recourse for warranty breach is the W&amp;I policy. The R&amp;W package is then drafted not as real contractual liability but to satisfy the W&amp;I underwriter — a different audience entirely.</p>
+
+  <p>Practical consequences for the M&amp;A lawyer reading a synthetic-warranty SPA:</p>
+  <ul>
+    <li>The R&amp;Ws still need to be tight, accurate and well-disclosed — but the audience is the underwriter, not a future claims judge.</li>
+    <li>Survival periods at the SPA level become symbolic (often 18 months); the policy carries the real survival (typically 24–36 months general; 6–7 years fundamental and tax).</li>
+    <li>Materiality and knowledge scrapes are drafted into both the SPA and the policy in coordinated form.</li>
+    <li>Fundamental warranties (title, capacity, authority) typically remain at full uncapped seller liability — the insurer will not write adequate cover for these (the seller is in the best position to know them).</li>
+    <li>Fraud carve-outs remain at the SPA level — the policy excludes fraud, so the buyer keeps a claim against the seller for fraud regardless of the otherwise-symbolic cap.</li>
+  </ul>
+
+  <h2>Sandbagging vs. anti-sandbagging</h2>
+
+  <p>"Sandbagging" (a term derived from the Old West gambler's tactic of weighting his sleeve with sand to deliver an unexpected blow) is the practice of a buyer suing for breach of a warranty when the buyer already knew, before signing, that the warranty was untrue. The buyer "sandbags" the seller by accepting the warranty without flagging the issue, then claiming for the breach later.</p>
+
+  <p>The question is: <strong>should pre-signing knowledge by the buyer defeat the warranty claim?</strong></p>
+
+  <div class="juris-grid">
+    <aside class="juris us">
+      <h5>US (Delaware) — Pro-sandbagging default</h5>
+      <p>Delaware courts treat the warranty as a contractual allocation of risk: the seller has agreed that the warranted fact is true, and the buyer has paid (in part) for that allocation; whether the buyer subjectively believed the fact to be true is irrelevant. Leading authorities:</p>
+      <ul>
+        <li><em>Cobalt Operating, LLC v. James Crystal Enterprises, LLC</em>, 2007 WL 2142926 (Del. Ch. July 20, 2007) — Strine V.C. held that the buyer could recover even though it was on notice of the relevant facts pre-Closing; the warranty was a "contractual promise" that the seller assumed the risk of being wrong about. Hence the partner shorthand "<strong>Cobalt-friendly</strong>" for pro-sandbagging drafting.</li>
+        <li><em>Eagle Industries, Inc. v. DeVilbiss Health Care, Inc.</em>, 702 A.2d 1228 (Del. 1997) — older case; the Delaware Supreme Court suggested that pre-Closing knowledge could defeat a claim, but the holding was narrow and later cases have moved firmly pro-sandbagging.</li>
+        <li><em>Arwood v. AW Site Services, LLC</em>, C.A. No. 2019-0904 (Del. Ch. 9 March 2022, Slights V.C.) — <strong>clarified Delaware as pro-sandbagging by default.</strong> Slights V.C. held that <em>"the sandbagging defense is inconsistent with our profoundly contractarian predisposition."</em> A March 2025 Court of Chancery decision (per Mayer Brown's Delaware Law Alert) reinforced the position. <em>Arwood</em> resolves the question rather than reigniting it.</li>
+      </ul>
+    </aside>
+    <aside class="juris uk">
+      <h5>UK — Anti-sandbagging-leaning default</h5>
+      <p>The position is more nuanced and arguably leans <strong>anti-sandbagging by default</strong>. <em>Eurocopy plc v. Teesdale</em> [1992] BCLC 1067 (Court of Appeal) suggested that a buyer's actual knowledge derived from sources outside the Disclosure Letter could undermine a warranty claim, even where the SPA expressly limited disclosure to the Disclosure Letter. The decision is not unambiguous and has been criticised, but it has shaped UK practice such that explicit pro-sandbagging clauses are now common in buyer-friendly UK drafts to overcome the <em>Eurocopy</em> concern. The leading later case <em>Infiniteland v. Artisan Contracting</em> suggested the question turns on the construction of the SPA; if the parties have spelled out their position clearly, that controls.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>Civil-law jurisdictions vary. German, French, and Italian law generally approach warranty as a contractual allocation; the buyer's knowledge is relevant to whether the seller was deceived (and therefore to fraud) but not necessarily to whether a contractual warranty is breached. Practice varies — sophisticated continental SPAs typically include explicit pro-sandbagging clauses to remove ambiguity.</p>
+    </aside>
+  </div>
+
+  <p>Per the <strong>ABA 2025 Private Target M&amp;A Deal Points Study</strong> (139-deal sample, transactions signed in 2024 and Q1 2025; released December 2025): <strong>68%</strong> of the surveyed agreements were silent on sandbagging (down from 76% in the prior 2023 study); when addressed, 10% included a <span class="term" data-term="pro-sandbagging-clause">pro-sandbagging clause</span> and 8% an <span class="term" data-term="anti-sandbagging-clause">anti-sandbagging clause</span>. Silence in a Delaware deal means the pro-sandbagging default applies (per <em>Cobalt Operating</em> and <em>Arwood</em>).</p>
+
+  <p><strong>Pro-sandbagging clause example (buyer-friendly):</strong> "The right of any Buyer Indemnitee to indemnification, reimbursement, or other remedy based upon any representation, warranty, covenant, or obligation of the Sellers contained in or made pursuant to this Agreement shall not be affected by any investigation conducted or knowledge acquired (or capable of being acquired) at any time, whether before or after the date of this Agreement or the Closing Date, with respect to the accuracy or inaccuracy of, or compliance with, any such representation, warranty, covenant, or obligation."</p>
+
+  <p><strong>Anti-sandbagging clause example (seller-friendly):</strong> "The Sellers shall have no liability under this Agreement for any breach of representation or warranty if the Buyer had actual knowledge of the matter giving rise to such breach prior to the execution of this Agreement, and such knowledge shall be a complete defence to any claim hereunder."</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — sandbagging</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> explicit pro-sandbagging clause; alternatively rely on Delaware default.</li>
+      <li><strong>Seller wants:</strong> explicit anti-sandbagging clause; carve-out from indemnification for any matter the buyer or its advisers had actual knowledge of pre-signing.</li>
+      <li><strong>Typical compromise:</strong> silent (relying on jurisdictional default); or pro-sandbagging but with a carve-out for matters specifically and fairly disclosed in the Disclosure Letter (which is functionally how disclosure operates anyway — the buyer cannot claim for disclosed matters because they are not breaches).</li>
+    </ul>
+  </aside>
+
+  <h2>Repetition / "Bring-Down" at Closing</h2>
+
+  <p>Most warranties are stated to be true both at signing and at Closing. In a simultaneous signing-and-closing deal this is unremarkable. In a split signing/Closing deal (where regulatory clearances or other conditions precedent take months), warranty repetition has powerful consequences.</p>
+
+  <p>If a warranty becomes untrue between signing and Closing, the seller is in breach at Closing. This is usually combined with a <strong><span class="term" data-term="bring-down">bring-down condition</span></strong> — a condition precedent to the buyer's obligation to close that the warranties remain true at Closing in all material respects (or to the standard agreed). If the bring-down condition fails, the buyer can refuse to close (and potentially claim for the breach).</p>
+
+  <p>The seller's protection is:</p>
+  <ul>
+    <li>A <strong>double-materiality construct</strong> ("the warranties are true in all material respects, except as would not be reasonably likely to result in a Material Adverse Effect").</li>
+    <li>A right to <strong>disclose new matters</strong> in a Bring-Down Disclosure Letter that qualify the bring-down (sometimes called a "right to update disclosures") — but typically without curing the underlying breach for indemnification purposes.</li>
+  </ul>
+
+  <p>The negotiation: does a bring-down disclosure cure the breach (seller-friendly) or merely give the buyer a walkaway right (buyer-friendly)?</p>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — bring-down</h5>
+    <ul>
+      <li>Forgetting that some warranties cannot sensibly be repeated at Closing (e.g., a warranty about the accuracy of accounts dated 31 December prior year — this should be brought down "as of the date of this Agreement" only).</li>
+      <li>Giving the seller the right to update disclosures without distinguishing between (a) new matters arising in the ordinary course (which should not give a walkaway right) and (b) significant new matters (which should).</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Under English law, a representation is pre-contractual and gives misrepresentation remedies (rescission + tort damages); a warranty is a contractual promise giving contract damages only. Modern UK SPAs say "warranties only" and exclude misrepresentation remedies (per <em>Sycamore Bidco</em>, <em>Idemitsu Kosan</em>).</li>
+      <li>Three orthogonal classifications: general vs. specific (scope); legal vs. business (subject matter); fundamental ("title" / "core") R&amp;Ws receive longer survival, higher caps, no basket, no qualifiers.</li>
+      <li>Disclosure is the seller's defence: UK Disclosure Letter, US Disclosure Schedules. The "fairly disclosed" standard (per <em>Infiniteland v Artisan Contracting</em>, <em>New Hearts v Cosmopolitan Investments</em>) requires sufficient detail to enable a reasonable purchaser to identify the nature and scope of the disclosed matter.</li>
+      <li>Knowledge qualifiers come in three flavours: actual, constructive, and Knowledge Group. The buyer wants no qualifier or a wide group with constructive standard; the seller wants narrow, named individuals with actual standard.</li>
+      <li>The Materiality Scrape strips materiality qualifiers for breach and/or damages purposes — buyer-friendly, common with R&amp;W insurance.</li>
+      <li>Sandbagging: Delaware default is pro-sandbagging (<em>Cobalt Operating</em>); UK default leans anti-sandbagging (<em>Eurocopy</em>); 68% of US deals are silent (ABA 2025).</li>
+      <li>Bring-down: warranties are typically stated to be true at both signing and Closing; failure of the bring-down condition gives the buyer a walkaway right.</li>
+      <li>Fraud cannot be excluded by contract — public policy (<em>HIH Casualty</em>, <em>ABRY Partners</em>).</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="11-purchase-price.html" class="prev">Purchase Price Mechanisms</a>
+    <a href="13-indemnification.html" class="next">The Indemnification Regime</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

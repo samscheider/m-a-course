@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 01 — Corporate Law Essentials · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="01">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 01</div>
+    <h1>Corporate Law Essentials</h1>
+    <p class="subtitle">The corporate-law plumbing behind every M&amp;A deal: incorporation, share capital, governance, directors' duties, control thresholds, and the insolvency routes that produce distressed M&amp;A.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>State the three foundational consequences of incorporation (<span class="term" data-term="separate-legal-personality">separate legal personality</span>, <span class="term" data-term="limited-liability">limited liability</span>, <span class="term" data-term="perpetual-succession">perpetual succession</span>) and the leading cases that establish them under English law.</li>
+      <li>Distinguish the principal vehicle types used in M&amp;A in the UK, US (Delaware), Germany and France, and explain why a buyer or seller prefers one over another.</li>
+      <li>Describe the structure of a typical share register / cap table, including <span class="term" data-term="ordinary-shares">ordinary</span> and <span class="term" data-term="preference-shares">preference shares</span>, voting and dividend rights, and the most common minority protections (<span class="term" data-term="drag-along">drag-along</span>, <span class="term" data-term="tag-along">tag-along</span>, <span class="term" data-term="anti-dilution">anti-dilution</span>, <span class="term" data-term="rofr">Right of First Refusal (ROFR)</span>, <span class="term" data-term="rofo">Right of First Offer (ROFO)</span>).</li>
+      <li>State the key directors' duties under Delaware General Corporation Law (DGCL) and the codified UK Companies Act 2006 sections 171–177.</li>
+      <li>Identify the shareholder approval thresholds for <span class="term" data-term="ordinary-resolution">ordinary</span> versus <span class="term" data-term="special-resolution">special resolutions</span> in the UK, the merger-vote standard under DGCL § 251, and the European Union Merger Regulation (EUMR) test for "control".</li>
+      <li>Define <span class="term" data-term="encumbrance">encumbrance</span>, lien and <span class="term" data-term="security-interest">security interest</span>, and outline the three principal insolvency routes relevant to M&amp;A (Chapter 11, Chapter 7, UK administration).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Every M&amp;A transaction is, mechanically, a transfer of corporate assets — usually shares, sometimes a business. Knowing the corporate-law plumbing of the target tells you what you are buying, who has to consent, what protections the seller's minority shareholders may invoke, and what skeletons can come out of the company's cupboard if its directors breached their duties. A buyer who fails to check whether the shares are encumbered (i.e. pledged, charged, or subject to a third-party right) may close on shares that are not free and clear. A seller who ignores tag-along rights in the shareholders' agreement may sign an SPA it cannot perform.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Going-concern qualifier"</strong> — an auditor's flag that there is "<span class="term" data-term="going-concern-qualifier">substantial doubt</span>" about the company's ability to continue trading for the next 12 months. Goes straight to the seller's solvency rep, the W&amp;I exclusions list, and the buyer's MAC trigger.</li>
+      <li><strong>"Fully diluted basis"</strong> — count not just the issued shares but every option, warrant, convertible note and SAFE that could become an ordinary share. The cap-table number that actually matters for valuation. <span class="term" data-term="fully-diluted">Fully diluted</span> drives the per-share price.</li>
+      <li><strong>"Drag at 75%"</strong> — the threshold at which the majority can force the minority to sell. 75% of voting rights of a defined class is typical; "consenting majority" definitions and class-vote carve-outs are where the fight happens.</li>
+      <li><strong>"ROFR-trumping"</strong> — a Right of First Refusal that lets the existing shareholder match any bona fide third-party offer; deters third-party bidders because their bid can be matched. A <em>ROFO</em> (Right of First Offer) preserves the third-party market by giving existing shareholders only a first-look right, not a match-right.</li>
+      <li><strong>"Preferred stack"</strong> — the seniority ranking between Series A / B / C preferred on a sale. Senior preferred get paid out first; junior preferred next; ordinary last. The <span class="term" data-term="liquidation-waterfall">liquidation waterfall</span> determines who gets what at exit.</li>
+      <li><strong>"Anti-dilution adjustment"</strong> — preferred-share conversion-ratio re-pricing on a down-round. <em>Full ratchet</em> = re-price to the new low; <em>broad-based weighted average</em> = blend old and new prices weighted by share count. The single most negotiated economic term in venture and growth deals.</li>
+      <li><strong>"Revlon mode"</strong> — Delaware code for "the board is in <span class="term" data-term="revlon-duties">change-of-control sale mode</span>" (per <em>Paramount v. QVC</em>, 1994). Triggers enhanced scrutiny: the board must seek the highest reasonably available price and cannot favour one bidder for non-price reasons.</li>
+      <li><strong>"§102(b)(7) opinion"</strong> — opinion that the target's charter contains the standard exculpation provision eliminating monetary liability for duty-of-care breaches. Since August 2022, also covers senior <em>officers</em> (with limits — no derivative-claim cover).</li>
+      <li><strong>"§251(h) or top-up?"</strong> — for two-step Delaware deals, are we relying on § 251(h) (medium-form merger, post-2013, almost universal today) or the legacy top-up-option mechanic (almost obsolete). A senior partner saying "we'll § 251(h) the back end" means tender offer at majority-of-outstanding, then squeeze the rest with no separate vote.</li>
+      <li><strong>"Are we under enhanced scrutiny?"</strong> — code for "is the board on the <em>Revlon</em> / <em>Unocal</em> standard, or still under business judgment?" Drives every disclosure and process choice for the next 90 days.</li>
+      <li><strong>"What's the QPI?"</strong> — Qualified Public Offering threshold for auto-conversion of preferred to ordinary at IPO. Without QPI, the bank will not underwrite. Typical: minimum gross proceeds, minimum valuation, tier-1 exchange.</li>
+    </ul>
+  </aside>
+
+  <h2>Separate legal personality, limited liability, perpetual succession</h2>
+
+  <p>When a company is incorporated under the relevant statute — the Companies Act 2006 in the UK, the DGCL in Delaware, the Aktiengesetz (AktG) and GmbH-Gesetz (GmbHG) in Germany, or the Code de commerce in France — three legal consequences attach immediately and automatically.</p>
+
+  <ol>
+    <li><strong>Separate legal personality.</strong> The company is a person in law, distinct from its shareholders. It can sue and be sued, hold property, and contract in its own name. The locus classicus is <em><span class="term" data-term="salomon-v-salomon">Salomon v A Salomon &amp; Co Ltd</span></em> [1897] AC 22 (UK House of Lords, now Supreme Court), which held that a one-man company was a separate legal entity even where one shareholder owned 20,001 of the 20,007 shares; the company's creditors had no recourse against him personally.</li>
+    <li><strong>Limited liability.</strong> Shareholders are liable only up to the amount unpaid on their shares. If they have paid for the shares in full, they have no further liability for the company's debts. This is a creature of statute, not an automatic consequence of separate personality, but in modern practice the two travel together.</li>
+    <li><strong>Perpetual succession.</strong> The company continues to exist regardless of changes in its membership; it ends only on dissolution following a winding-up.</li>
+  </ol>
+
+  <p>The exception is <strong><span class="term" data-term="piercing-the-corporate-veil">piercing the corporate veil</span></strong> — disregarding separate personality to reach the shareholders. English law treats this as exceptional. In <em>Adams v Cape Industries plc</em> [1990] Ch 433, the Court of Appeal refused to pierce in a "single economic unit" group case involving asbestos liabilities. <em><span class="term" data-term="prest-v-petrodel">Prest v Petrodel Resources Ltd</span></em> [2013] UKSC 34 (UK Supreme Court) restated the doctrine narrowly: the veil may be pierced only where a person under an existing legal obligation deliberately evades it by interposing a company they control (the "evasion principle"). Lord Sumption distinguished veil-piercing from "concealment" cases (where the court simply looks behind the company without disregarding its personality). US (Delaware) law uses an "alter ego" / "instrumentality" test, applied where the company is a "mere instrumentality" of the shareholder used to perpetrate fraud or injustice (<em>Wallace ex rel. Cencom Cable Income Partners II, L.P. v Wood</em>, 752 A.2d 1175 (Del. Ch. 1999)).</p>
+
+  <p>A modern English route that does not require veil-piercing at all is <em><span class="term" data-term="chandler-v-cape">Chandler v Cape plc</span></em> [2012] EWCA Civ 525 — the Court of Appeal imposed a direct duty of care on a parent company toward its subsidiary's employees on the facts (knowledge of working conditions, superior expertise, established intervention). Practical M&amp;A consequence: a buyer's diligence on a target with health-and-safety, environmental or human-rights exposures should test parent-level controls and parent-level guarantees independently of veil-piercing, because <em>Chandler</em>-style direct tort can attach without the corporate form being disregarded.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Pierced rarely; <em>Prest v Petrodel</em> limits piercing to evasion of an existing legal obligation. Concealment cases are not veil-piercing.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Pierced where the corporate form is abused as a sham or alter ego, often coupled with fraud, undercapitalisation, comingling of funds, failure to observe formalities.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law systems use <em>Durchgriffshaftung</em> in Germany or <em>abus de droit</em> / <em>confusion des patrimoines</em> in France — narrower analogues; piercing remains exceptional.</p></aside>
+  </div>
+
+  <h2>Company types — UK, US, Germany, France</h2>
+
+  <p>The choice of corporate vehicle constrains everything that follows in a deal — what minimum capital is needed, what governance is mandatory, how shares transfer, whether the company can list. The principal forms by jurisdiction:</p>
+
+  <ul>
+    <li><strong>UK.</strong> Private form: <span class="term" data-term="ltd">Limited Company (Ltd)</span> — minimum capital £1. Public form: <span class="term" data-term="plc">Public Limited Company (PLC)</span> — minimum capital £50,000 with 25% paid up. Only a PLC may offer shares to the public and list.</li>
+    <li><strong>US (Delaware).</strong> Private form: <span class="term" data-term="llc">Limited Liability Company (LLC)</span> — pass-through tax, member-managed or manager-managed. Public form: <span class="term" data-term="c-corp">C-Corporation</span> — double-tax, board-of-directors mandatory. No statutory minimum capital.</li>
+    <li><strong>Germany.</strong> Private form: <span class="term" data-term="gmbh">Gesellschaft mit beschränkter Haftung (GmbH)</span> — minimum capital €25,000 (€12,500 paid in). Public form: <span class="term" data-term="ag">Aktiengesellschaft (AG)</span> — minimum capital €50,000. The AG has a mandatory two-tier board (Vorstand / Aufsichtsrat); the GmbH has managing directors instructable by shareholders.</li>
+    <li><strong>France.</strong> Private form: <span class="term" data-term="sarl">Société à responsabilité limitée (SARL)</span> — minimum capital €1, up to 100 partners, transfer restrictions. Public form: <span class="term" data-term="sa">Société anonyme (SA)</span> — minimum capital €37,000; must have ≥2 shareholders (or 7 if listed).</li>
+  </ul>
+
+  <p>Two practitioner notes:</p>
+  <ul>
+    <li>The French <span class="term" data-term="sas">Société par actions simplifiée (SAS)</span> is the most common form for joint ventures and PE-backed companies — flexible governance, no minimum capital, but cannot be listed. By volume, it has overtaken the SARL.</li>
+    <li>The Delaware C-Corp is overwhelmingly the choice for venture-backed and PE-backed companies because Limited Partners (LPs) and Venture Capital (VC) funds resist LLC structures (LLC pass-through income would expose tax-exempt LPs such as US pension funds and foreign LPs to US tax filings — Unrelated Business Taxable Income (UBTI) and Effectively Connected Income (ECI) issues).</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Vehicle choice constrains the deal route — what this means in practice</h5>
+    <ul>
+      <li><strong>French SAS.</strong> Ultra-flexible governance: the bylaws (<em>statuts</em>) determine the entire decision-making architecture. Statutory protections that exist by default for SA shareholders (collective decisions, board structure, voting thresholds) <em>do not</em> exist by default for SAS shareholders — the bylaws have to provide them. Buyer-side consequence: the SPA must layer in protective provisions the SHA / bylaws may not contain. A senior partner asks: "have we read the SAS bylaws end-to-end and confirmed the buyer's protective rights survive the change of control, or do we need amended bylaws as a closing deliverable?"</li>
+      <li><strong>German GmbH.</strong> Share transfers must be <strong>notarised</strong> (notarielle Beurkundung) under GmbHG § 15(3); cannot be effected by mere contract or signature exchange. M&amp;A consequence: closing requires a German notary appointment — the SPA either reads as the notarial deed itself (bilingual German/English in front of a notary) or schedules a separate share-transfer deed to be executed at closing. Cross-border deals routinely use Swiss notarisation as a cost-efficient alternative (recognised under German conflicts law).</li>
+      <li><strong>German AG.</strong> Mandatory <strong>two-tier board</strong> (<em>Vorstand</em> + <em>Aufsichtsrat</em>); in larger AGs, employee co-determination on the supervisory board (Mitbestimmungsgesetz 1976: parity for &gt;2,000 employees; one-third for 500–2,000). Post-closing integration consequence: replacing the management team is a Vorstand/Aufsichtsrat exercise, not a sole-director removal; the buyer cannot strip out controls overnight, and the works council (<em>Betriebsrat</em>) retains co-determination on operational matters.</li>
+      <li><strong>UK PLC.</strong> Cannot trade until the Registrar of Companies has issued the <strong>trading certificate</strong> (CA 2006 s.761) — issued only when the £50,000 minimum nominal capital is allotted with at least 25% (£12,500) paid up plus the whole of any premium. In M&amp;A diligence, a target PLC with unpaid capital on its allotted shares is a closing-condition red flag: the company may not technically be entitled to trade, and contracts entered into pre-trading-certificate may be voidable at the counterparty's option (s.767 personal liability of directors).</li>
+      <li><strong>Delaware C-Corp.</strong> No minimum capital, no notarisation; share transfers by stock-power instruction to the transfer agent. Founder voting classes (e.g. Class B at 10:1) are common and survive into M&amp;A: they affect the §251 vote arithmetic and can re-route a takeover from a §251(h) medium-form merger to a long-form merger plus stockholder vote.</li>
+    </ul>
+  </aside>
+
+  <h2>Share capital structure</h2>
+
+  <p>A company's equity is divided into shares of one or more <strong>classes</strong>. The principal distinction is between:</p>
+
+  <ul>
+    <li><strong>Ordinary shares</strong> (US: "common stock"). Carry one vote per share, the right to receive dividends if the board declares them, and the right to a pro-rata share of surplus on a winding-up after creditors and preference shareholders are paid. The default class.</li>
+    <li><strong>Preference shares</strong> (US: "preferred stock"). Carry a fixed dividend (e.g. 8% of issue price annually), priority over ordinary on dividends and on a winding-up, but typically no voting rights unless dividends fall into arrears for a specified period. May be <strong>cumulative</strong> (unpaid dividends accrue and must be paid before any ordinary dividend) or <strong>non-cumulative</strong>, <strong>redeemable</strong> or <strong>convertible</strong> into ordinary shares.</li>
+  </ul>
+
+  <p>In PE-backed companies, "preferred stock" is typically convertible preferred — investors get a liquidation preference (e.g. 1x non-participating, meaning they get back their money before anyone else but then convert to ordinary if that yields more), an anti-dilution adjustment (full ratchet or weighted-average), and significant veto rights.</p>
+
+  <h3>Preferred stock and the SHA — what is actually negotiated</h3>
+
+  <p>Preferred-share economics are the highest-frequency M&amp;A meeting topic in venture, growth, and PE deals. A senior partner expects a working knowledge of the moving parts:</p>
+
+  <ul>
+    <li><strong>Participating vs. non-participating preferred.</strong> <em>Non-participating</em>: on a sale, the preferred holder takes the higher of (a) the liquidation preference (e.g. 1x money back) or (b) what they would get if they converted to ordinary — they cannot have both. <em>Participating</em> (also called "double-dip"): preferred takes the liquidation preference <em>and then</em> participates in the residual as if converted, on a pro-rata basis with ordinary. <em>Capped participating</em>: same as participating, but capped at a multiple (e.g. 3x of the original investment, after which the holder switches to as-converted treatment).</li>
+    <li><strong>Liquidation waterfall and seniority stack.</strong> In a multi-round company, Series C is typically senior to Series B which is senior to Series A which is senior to ordinary — so on a sale, Series C is paid out first, then Series B, then Series A, then ordinary. Some deals are <em>pari passu</em> across series (no seniority stack); some are explicitly stacked. The waterfall determines who gets what at exit and is fought over in every Series-B-or-later term sheet.</li>
+    <li><strong>Anti-dilution mechanics — broad-based weighted-average example.</strong> Suppose Series A bought at $10/share with 10m shares outstanding, raising $100m. Company issues 5m new shares at $5 (a "down round"). Broad-based weighted-average new conversion price = (10m × $10 + 5m × $5) ÷ (10m + 5m) = $125m ÷ 15m = $8.33. The Series A's conversion ratio adjusts so that each preferred share (originally convertible 1-for-1 into ordinary) now converts into $10 ÷ $8.33 = 1.20 ordinary shares. <em>Full ratchet</em>: the conversion price drops to $5, so each preferred share converts into 2 ordinary shares — far more dilutive to founders. Broad-based weighted-average is overwhelmingly market.</li>
+    <li><strong>Pay-to-play.</strong> Preferred-shareholder protections (anti-dilution, veto rights) are forfeited if the holder fails to participate pro-rata in a defined "pay-to-play" follow-on round. Punishes free-riders and concentrates dilution-protection in committed investors.</li>
+    <li><strong>Drag threshold and class-vote architecture.</strong> Drag triggers: 50%? 75%? Supermajority of preferred? Some drags require both an ordinary majority <em>and</em> a preferred-class majority, giving each class a veto. Buyer pushes for a single-vote drag at 75% of total fully-diluted; minority preferred pushes for class-vote architecture and a price floor (e.g. drag cannot operate below the original investment plus accrued preference).</li>
+    <li><strong>Tag scope.</strong> Tag-along rights cover all minority shareholders pro-rata. Negotiable: triggered at majority sale (50%), supermajority sale (66%), or any third-party transfer; carved out for permitted transferees (intra-fund transfers, family-office transfers).</li>
+    <li><strong>Information-rights cliff.</strong> Investors typically lose contractual information rights (board observer, monthly management accounts, audited annuals) below a defined ownership threshold — commonly a <strong>5% diluted floor</strong>. A senior partner asks: "what's the cliff? does it survive a follow-on dilution?"</li>
+    <li><strong>QPI auto-conversion.</strong> A "Qualified Public Offering" or "Qualified IPO" provision auto-converts preferred to ordinary on listing — usually requiring (a) minimum gross proceeds (e.g. $50m), (b) minimum valuation, and (c) a tier-1 exchange. Without QPI auto-conversion, the bank will not underwrite the IPO.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Worked $100M-exit example — participating vs. non-participating</h5>
+    <p>Series A invested $20m at a $80m post-money for 25% of the company (1x non-participating preferred or 1x participating preferred — same investment, different terms). Founders own the remaining 75%. Company sells for $100m.</p>
+    <ul>
+      <li><strong>1x non-participating:</strong> Series A takes the higher of (a) $20m preference, or (b) 25% × $100m = $25m. Takes $25m (converts). Founders get $75m.</li>
+      <li><strong>1x participating (uncapped):</strong> Series A takes $20m preference <em>and then</em> 25% of the remaining $80m = $20m. Total: $40m. Founders get $60m.</li>
+      <li><strong>1x participating capped at 3x:</strong> Same as above unless the participating result exceeds $60m (3x of original $20m). At $100m exit, $40m is below the cap, so behaves like uncapped here. The cap matters at higher exits.</li>
+    </ul>
+    <p>The single trade-off: at low exits, participating buys the investor a meaningful uplift over non-participating; at high exits, the difference shrinks because the investor would convert in either case. Founders fight hardest for non-participating; investors fight hardest for participating; capped-participating is the canonical compromise.</p>
+  </aside>
+
+  <p><strong><span class="term" data-term="pre-emption-rights">Pre-emption rights</span>.</strong> In most jurisdictions, existing shareholders have a statutory right of first refusal on new share issuances pro rata to their existing holding — so they can avoid dilution. UK Companies Act 2006 sections 561–577 (with disapplication mechanisms in sections 569–573); German AktG § 186; French Code de commerce article L. 225-132. In the US (Delaware) there is no statutory pre-emption right; it is purely contractual.</p>
+
+  <h2>Share register and cap table</h2>
+
+  <p>The <strong><span class="term" data-term="share-register">share register</span></strong> (UK statutory book) or <strong>stock ledger</strong> (Delaware, kept under DGCL § 224) is the legal record of who owns what shares. The <strong><span class="term" data-term="cap-table">capitalisation table</span></strong> ("cap table") is the working spreadsheet that aggregates share register data plus options, warrants, convertibles and preferred preferences to show the fully-diluted ownership picture. The buyer's lawyers will spend a significant part of legal Due Diligence (DD) reconciling the cap table to the source documents (subscription agreements, share certificates, board minutes authorising issuances, stamp duty filings).</p>
+
+  <aside class="lever both">
+    <h5>What a senior partner asks first when they see a cap table</h5>
+    <p>Ten questions a senior M&amp;A partner runs through on day one of a deal. If you can volunteer two or three of these in the kick-off call, you are immediately on the credibility ladder.</p>
+    <ol>
+      <li><strong>"Is this fully diluted, including unvested options, warrants, SAFEs, convertible notes, and preferred as-converted?"</strong> The number that matters for valuation is fully diluted, not issued-and-outstanding.</li>
+      <li><strong>"What's the option-pool burn since the last priced round, and is there a top-up to refresh the pool pre-closing in the seller's column or the buyer's?"</strong> Pre-money option-pool top-ups are dilution to founders; post-money are dilution to everyone. Often a hidden 2–4 percent of fully diluted.</li>
+      <li><strong>"Do we have a stack? What's the seniority — pari passu or stacked? What's the preference multiple per series — 1x, 1.5x, 2x?"</strong> Drives the entire waterfall.</li>
+      <li><strong>"Participating, capped participating, or non-participating preferred? Where are the conversion break-evens?"</strong> The price points at which holders flip from preference to as-converted.</li>
+      <li><strong>"Is there a class vote on a sale, or only on protective provisions?"</strong> A separate class consent on sale is effectively a preferred-shareholder veto on the deal — it must be solved with consent, drag, or scheme.</li>
+      <li><strong>"What's the drag threshold and who counts in the consenting majority? Are non-management investors in or out?"</strong> Drag thresholds vary 50/66/75; the definition of "consenting majority" is where the fight happens.</li>
+      <li><strong>"Does the drag have a price floor — original investment plus accrued preference? Is there a consideration-mix carve-out (cash-only)?"</strong> Investors fight to require cash; rollover-friendly drags accept stock, sometimes with bridge cash.</li>
+      <li><strong>"Is the drag a bare drag, or does it have a reverse-vesting carve-out, a no-non-compete carve-out, or a rep-and-warranty cap for the dragged minority?"</strong> A bare drag forces minority sellers to give buyer-grade reps; a sophisticated drag caps their indemnity exposure to consideration received.</li>
+      <li><strong>"What's the information-rights cliff — does the 5 percent diluted floor survive a follow-on dilution or is it tested at signing of the next round?"</strong> Determines whether the existing investor stays informed post-deal.</li>
+      <li><strong>"Are there founder voting classes (Class B at 10:1)? Do they sunset on death, on listing, on transfer, or never?"</strong> Affects squeeze-out arithmetic in the UK (s.979 dual test in value <em>and</em> voting rights) and §251(h) tender-offer arithmetic in the US.</li>
+    </ol>
+  </aside>
+
+  <h3>From cap table to closing — the system chain</h3>
+  <p>The cap table is not just a snapshot; it is the upstream input to almost every clause in the SPA. Walk it forward:</p>
+  <ol>
+    <li><strong>Cap-table reconciliation in DD (<a href="04-due-diligence.html">Module 04</a>).</strong> Every issuance, option grant, transfer, and conversion is tied to a board minute, share certificate, subscription agreement and stamp-duty/tax filing. Errors found in DD become specific indemnities or CP fixes.</li>
+    <li><strong>SPA title-and-capacity warranty (<a href="12-reps-and-warranties.html">Module 12</a>).</strong> The reconciled cap table becomes the disclosed schedule against which the seller warrants legal and beneficial title to the shares "free and clear of any Encumbrance". An unrecorded option grant disclosed in DD is either a specific indemnity (<a href="13-indemnification.html">Module 13</a>), a capitalised buy-out at closing, or a CP requiring the holder's release.</li>
+    <li><strong>Pre-emption-right waivers (<a href="08-conditions-precedent.html">Module 08</a>).</strong> Statutory and contractual pre-emption on new issuances must be waived for any closing-date issuance to clear; absent waivers, the buyer's deal needs a CP and the seller bears the procurement risk.</li>
+    <li><strong>Drag-and-tag mechanics (this module).</strong> Drag delivers the minority into the buyer's hands; tag forces the buyer to acquire all-in. Both are tools for delivering 100 percent — without which the buyer ends up with a residual minority and a Module 06 problem.</li>
+    <li><strong>Squeeze-out / scheme / §251(h) follow-on (<a href="06-deal-structures.html">Module 06</a>).</strong> Where the drag is imperfectly drafted or the public-target threshold is not met, the deal escalates to a UK scheme of arrangement or DGCL medium-form / long-form merger.</li>
+    <li><strong>Closing arithmetic (<a href="10-closing.html">Module 10</a>).</strong> The fully-diluted share count drives the per-share price; the waterfall determines the per-shareholder allocation; the consent matrix determines who signs what at closing.</li>
+  </ol>
+  <p>If a single cap-table fact changes — a 10:1 founder voting class, a Series-C class veto, a missing pre-emption waiver — the entire deal route can shift. That is the system view a senior partner brings to the kick-off call.</p>
+
+  <h2>Minority shareholder protections</h2>
+
+  <ul>
+    <li><strong>Drag-along</strong> — the majority can compel the minority to sell on the same terms when the majority decides to exit. Protects the buyer (gets 100%) and the majority (clean exit). Trigger threshold and price floor are negotiated.</li>
+    <li><strong>Tag-along</strong> (US: "co-sale right") — the minority can require the buyer to also buy their shares, on the same terms, when the majority sells. Protects the minority from being "stranded" with a new majority owner.</li>
+    <li><strong>Anti-dilution</strong> — adjusts the conversion ratio of preferred shares if a "down-round" issuance occurs at a price below the original. <em>Full ratchet</em> re-prices to the new low; <em>broad-based weighted average</em> (most common) blends old and new prices weighted by share count.</li>
+    <li><strong>Right of First Refusal (ROFR)</strong> — if a shareholder wants to sell to a third party, it must first offer the same terms (price + conditions) to the existing shareholders or the company; only if they decline can it sell.</li>
+    <li><strong>Right of First Offer (ROFO)</strong> — a softer variant: the shareholder must first offer the shares to existing shareholders before approaching outsiders, but if they decline, the seller is free to negotiate with third parties at any price (including a lower one). ROFRs deter third-party bidders (because their bid can be matched and "trumped"); ROFOs preserve the third-party market.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — drag-along, tag-along and anti-dilution</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Strong drag-along to deliver 100% of equity; clear waiver of pre-emption rights for the deal; tag-along disapplied on a sale to a permitted transferee.</li>
+      <li><strong>Seller (minority) wants:</strong> Tag-along for full liquidity; minimum price floor in any drag; consent rights on key matters; anti-dilution protection on subsequent fundraises.</li>
+      <li><strong>Typical compromise:</strong> Drag triggered at 75% threshold with same-terms requirement and minimum price; tag at 50% trigger; broad-based weighted-average anti-dilution.</li>
+    </ul>
+  </aside>
+
+  <h3>Drag and tag — what is actually negotiated</h3>
+  <p>"Drag and tag" reads as one defined term but in practice splits into eight separate negotiations. A senior partner walks each one:</p>
+  <ul>
+    <li><strong>Drag threshold.</strong> 50 percent (founder-friendly), 66 percent, 75 percent, supermajority of preferred (investor-friendly). Higher threshold = harder for the majority to force a sale; lower threshold = cleaner exit. The drag may also require a separate <em>class consent</em> from preferred shareholders, giving each preferred series an effective veto.</li>
+    <li><strong>Definition of the consenting majority.</strong> "Investor majority" (preferred only), "Founder majority" (founders only), or "Combined majority" (both classes counted together). Non-management investors may be in or out of the count — fought because their interests can diverge from management's.</li>
+    <li><strong>Price floor.</strong> A minimum price below which the drag cannot operate, often defined as "original investment plus accrued preference dividend" or "valuation no less than last priced round". Protects investors against the majority forcing a fire-sale at a below-water price.</li>
+    <li><strong>Consideration mix.</strong> Cash-only (investor-friendly), or stock/cash mix permitted (rollover-friendly). Investors typically demand cash for their preference component and accept stock only for any participation tail.</li>
+    <li><strong>Reverse-vesting and rep carve-outs.</strong> A "bare" drag forces minority sellers to sign full SPA representations (operating warranties, no-conflicts, employment etc.) — ruinous for a passive minority investor. A sophisticated drag carves the minority out of operating reps (giving title-only reps) and caps their indemnity exposure to consideration received.</li>
+    <li><strong>No-non-compete / no-restrictive covenants.</strong> Founders typically must give multi-year non-competes on a sale; passive minority sellers should not. The drag should expressly carve out non-compete and non-solicit obligations for non-management dragged minority.</li>
+    <li><strong>Tag scope.</strong> Trigger at 50 percent (most common), 66 percent or any third-party transfer. Tag rights for permitted transferees (intra-fund, family-office) typically disapplied. Pro-rata tag (minority sells the same proportion as the majority sells) versus full tag (minority sells everything they hold).</li>
+    <li><strong>Tag mechanics.</strong> Notice period, election window, cure periods if the buyer refuses to take the tagged shares. Sophisticated tag clauses contain a "buyer must purchase or majority cannot sell" lock — without it, a buyer can sometimes accept tag and then unwind, leaving the minority stranded.</li>
+  </ul>
+  <p>The eight-axis negotiation usually settles where it always settles: 75-percent drag, 50-percent tag, broad-based weighted-average anti-dilution, price floor at the higher of last-round valuation and accrued preference, cash-or-stock at investor election, full operating-rep carve-out for non-management dragged minority. Memorise that compromise and you can walk into any growth-stage SHA negotiation.</p>
+
+  <h2>Corporate governance — board structure and roles</h2>
+
+  <p>The <strong>board of directors</strong> has overall responsibility for the company. Its composition reflects the jurisdiction and the company's stage.</p>
+
+  <ul>
+    <li><strong>Executive directors</strong> are also employees of the company — Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Operating Officer (COO). They run day-to-day.</li>
+    <li><strong><span class="term" data-term="ned">Non-executive directors (NEDs)</span></strong> — also called "outside" or "independent" directors — are not employees. They bring independent oversight, sit on board committees (audit, remuneration, nominations), and are expected to challenge management.</li>
+    <li><strong><span class="term" data-term="chair">Chair</span></strong> chairs board meetings, sets the agenda, leads board effectiveness. Under the UK Corporate Governance Code (2024 edition; Financial Reporting Council (FRC)) the chair should be independent on appointment, and the CEO and chair roles should not be combined. US practice diverges: combined CEO/chair remains common, mitigated by a "lead independent director".</li>
+    <li><strong><span class="term" data-term="company-secretary">Company secretary</span></strong> — under UK law, mandatory for PLCs only (Companies Act 2006 section 271); a corporate-governance and compliance officer who keeps the statutory books, files Companies House returns, and convenes board meetings. The US equivalent is the <strong>corporate secretary</strong>, an officer rather than a board member.</li>
+  </ul>
+
+  <p>Germany uses a <strong>two-tier</strong> board: the Vorstand (management board) runs the company and the Aufsichtsrat (supervisory board) supervises it; employees have co-determination rights on the Aufsichtsrat in larger companies (Mitbestimmungsgesetz 1976). France allows either a single tier (conseil d'administration with a président-directeur général) or a two-tier (conseil de surveillance and directoire) structure.</p>
+
+  <h2>Fiduciary duties of directors</h2>
+
+  <p>In Delaware, directors owe two primary fiduciary duties:</p>
+  <ul>
+    <li><strong><span class="term" data-term="duty-of-care">Duty of care</span>.</strong> Make decisions on an informed basis, after reasonable deliberation. Breach standard for liability is <strong>gross negligence</strong> (<em>Smith v Van Gorkom</em>, 488 A.2d 858 (Del. 1985)). Most charters include a § 102(b)(7) exculpation provision eliminating monetary liability for duty-of-care breaches. Since the <strong>August 2022 DGCL amendment</strong>, § 102(b)(7) now also permits charter-level exculpation of <em>senior officers</em> (CEO, CFO, COO, GC, principal accounting officer, named executive officers, certain controllers) — but with material limits: no exculpation for breach of duty of loyalty, no exculpation for acts not in good faith, and crucially <strong>no exculpation against derivative claims</strong> brought by stockholders. Officer exculpation requires charter amendment by stockholder vote.</li>
+    <li><strong><span class="term" data-term="duty-of-loyalty">Duty of loyalty</span>.</strong> Act in the best interests of the corporation and its stockholders; do not self-deal or take corporate opportunities. Loyalty cannot be exculpated. Includes a duty of good faith (a breach exists for "intentional dereliction of duty"). Subsidiary doctrines: the <strong><span class="term" data-term="business-judgment-rule">business judgment rule</span></strong> (a presumption that informed, disinterested decisions are valid), heightened review under <em><span class="term" data-term="revlon-duties">Revlon, Inc. v MacAndrews &amp; Forbes Holdings</span></em>, 506 A.2d 173 (Del. 1986) on a <strong>change-of-control transaction</strong> (per <em>Paramount Communications v QVC Network</em>, 637 A.2d 34 (Del. 1994), the operative trigger is change of control, not merely "sale is inevitable" — <em>QVC</em> made clear that any transaction shifting voting control from a fluid public to a single buyer or controller engages enhanced scrutiny; the board's duty becomes seeking the highest reasonably available price and treating bidders even-handedly), and <em>Unocal Corp. v Mesa Petroleum Co.</em>, 493 A.2d 946 (Del. 1985) (defensive measures must be reasonable and proportionate to the threat). The deal-protection trilogy a board negotiates in a sale agreement (no-shop with fiduciary out, matching rights, break fee) exists to satisfy <em>Revlon</em>; defensive measures (poison pill, classified board, dead-hand provisions) are tested under <em>Unocal</em>; controlling-stockholder freeze-outs are reviewed under entire fairness unless the <em>MFW</em> framework (independent committee + majority-of-the-minority) is properly invoked. The full architecture is wired together in <a href="18-public-and-specialized.html">Module 18</a>.</li>
+  </ul>
+
+  <p>In the UK, Companies Act 2006 sections 171–177 codified seven general duties:</p>
+  <ul>
+    <li><strong>s.171</strong> — to act within powers (the company's constitution).</li>
+    <li><strong>s.172</strong> — to promote the success of the company for the benefit of its members as a whole, having regard to long-term consequences, employees, supplier and customer relationships, community and environment, the company's reputation, and fair treatment of members.</li>
+    <li><strong>s.173</strong> — to exercise independent judgment.</li>
+    <li><strong>s.174</strong> — to exercise reasonable care, skill and diligence (a dual subjective/objective test: the standard of someone with general knowledge expected of the role plus the director's actual specific knowledge).</li>
+    <li><strong>s.175</strong> — to avoid conflicts of interest.</li>
+    <li><strong>s.176</strong> — not to accept benefits from third parties.</li>
+    <li><strong>s.177</strong> — to declare interests in proposed transactions or arrangements.</li>
+  </ul>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Codified in CA 2006 ss.171–177; owed to the company, not directly to shareholders. Derivative claims by shareholders for breach require court permission (CA 2006 s.261).</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Common-law duties of care and loyalty; business judgment rule presumption; <em>Revlon</em> and <em>Unocal</em> enhanced scrutiny in change-of-control / defensive measures.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Each member state has its own regime. Germany: management board owes a duty of care under AktG § 93; supervisory board under § 116. France: <em>faute de gestion</em> liability. EU Shareholder Rights Directive II ((EU) 2017/828) added requirements for related-party transactions and remuneration policies.</p></aside>
+  </div>
+
+  <h2>Shareholder approval thresholds</h2>
+
+  <p>UK (Companies Act 2006):</p>
+  <ul>
+    <li><strong>Ordinary resolution</strong> — simple majority (&gt;50%) of votes cast (s.282). Standard for routine matters: directors' appointments, dividends, ordinary disapplications.</li>
+    <li><strong>Special resolution</strong> — at least 75% of votes cast (s.283). Required for: amending the articles of association, change of company name, reduction of capital, disapplying pre-emption rights for &gt;5 years, voluntary winding-up.</li>
+  </ul>
+
+  <p>UK takeovers — two paths:</p>
+  <ul>
+    <li><strong>Contractual offer</strong> — bidder needs &gt;50% acceptance to declare offer wholly unconditional, and to invoke the <span class="term" data-term="squeeze-out">squeeze-out</span> under Companies Act 2006 section 979 must reach the <strong>dual test</strong>: 90% <em>in value</em> of the shares to which the offer relates AND 90% of the <em>voting rights</em> carried by those shares (sections 974–991 set out the procedure). The dual test bites where the target has classes with disproportionate voting (e.g. a 10:1 founder voting class) — value-only or voting-only thresholds may be met independently but the squeeze-out fails until both pass; the takeover then has to switch from contractual offer to scheme of arrangement.</li>
+    <li><strong><span class="term" data-term="scheme-of-arrangement">Scheme of arrangement</span></strong> under CA 2006 sections 895–901 — needs (i) majority in number representing 75% in value of each voting class present and voting, and (ii) court sanction. Lower threshold than squeeze-out, single-step delivery of 100%, more deal-certainty.</li>
+  </ul>
+
+  <p>Delaware (DGCL):</p>
+  <ul>
+    <li><strong>§ 251</strong> merger of domestic corporations: board must approve and recommend; merger requires majority of outstanding voting stock (a tougher hurdle than "majority of votes cast"). For a long-form merger between non-listed corporations a stockholder vote of each constituent is generally required.</li>
+    <li><strong>§ 251(h)</strong> "medium-form" merger (effective 1 August 2013): skips the back-end stockholder vote where the buyer has acquired in the tender offer at least the percentage of shares that would otherwise be required to approve the merger (under §251 that is a majority of outstanding stock). § 251(h) has effectively replaced the older <strong>top-up option</strong> mechanic in two-step deals — pre-2013, buyers used a top-up option at signing to ensure that if the tender offer captured at least 50 percent, the buyer could issue itself enough new shares to reach the 90 percent short-form merger threshold under § 253. Today the top-up is largely vestigial; § 251(h) is the route. <em>In re Volcano Corp Stockholder Litig.</em>, 143 A.3d 727 (Del. Ch. 2016) treats acceptance of a § 251(h)-compliant tender offer by a fully-informed, uncoerced majority as a <em>Corwin</em>-style cleansing event for fiduciary review of the merger.</li>
+  </ul>
+
+  <p>EU — under EUMR (Council Regulation (EC) No 139/2004), what triggers merger filing is acquisition of <strong><span class="term" data-term="control-eumr">control</span></strong>:</p>
+  <ul>
+    <li><strong>Sole control</strong> — typically majority of voting rights, or <em>de facto</em> sole control (e.g. largest minority shareholder consistently winning shareholder votes).</li>
+    <li><strong>Joint control</strong> — two or more parties jointly control; veto rights over commercially significant decisions (budget, business plan, senior management, strategic investments) generally suffice.</li>
+    <li><strong>Decisive influence</strong> — the test under article 3(2). Includes both <em>de jure</em> control (legal rights) and <em>de facto</em> control (factual ability to determine outcomes).</li>
+  </ul>
+
+  <h2>What is "control" — de jure vs de facto under EUMR</h2>
+
+  <p>Article 3 of the EUMR defines a "concentration" as a change of control on a lasting basis. Control means the possibility of exercising "decisive influence". <em>De jure</em> control comes from majority of voting rights or veto rights over fundamental decisions. <em>De facto</em> control can exist with much less than a majority — the European Commission's Consolidated Jurisdictional Notice (2008/C 95/01) recognises de facto sole control where a minority shareholder is the largest with a high probability of achieving majority at the AGM (low attendance + dispersed remaining shares). For M&amp;A practice: even a minority stake purchase can be a notifiable concentration if it crosses the control threshold.</p>
+
+  <h2>Encumbrance, lien, security interest</h2>
+
+  <ul>
+    <li><strong>Encumbrance</strong> — any third-party right or interest that affects the asset, restricts the owner's use, or could prevent transfer. Includes liens, mortgages, charges, easements, pre-emption rights, restrictive covenants.</li>
+    <li><strong>Lien</strong> — a right to retain possession of property until a debt is paid. In US Uniform Commercial Code (UCC) parlance, a "lien" often means any consensual security interest.</li>
+    <li><strong>Security interest</strong> — a contractual right in an asset securing performance of an obligation (typically a debt). UK: mortgage, charge (fixed or floating), pledge. US: governed by UCC Article 9 — security interest perfected by filing a UCC-1 financing statement. Germany: <em>Sicherungsübereignung</em> (security transfer of title), <em>Pfandrecht</em> (pledge). France: <em>nantissement de compte-titres</em> (pledge of securities account).</li>
+  </ul>
+
+  <p>In M&amp;A, the SPA's title-and-capacity warranty almost always says: "the Shares are owned legally and beneficially by the Seller free and clear of any Encumbrance". A specific representation will list registered or known encumbrances on the company's principal assets (the "Permitted Encumbrances" definition).</p>
+
+  <h2>Insolvency basics relevant to M&amp;A</h2>
+
+  <ul>
+    <li><strong><span class="term" data-term="chapter-11">US Chapter 11</span></strong> — reorganisation. The debtor stays in possession of assets and operations as <strong>debtor-in-possession (DIP)</strong>. Allows a court-supervised restructuring with creditor classes voting on a plan. Famous M&amp;A use: <strong><span class="term" data-term="section-363-sale">§ 363 sales</span></strong> — a sale of substantially all assets in Chapter 11, conducted under court supervision, delivers the assets "free and clear" of liens and claims (a powerful buyer protection — used in e.g. the Chrysler bankruptcy 2009).</li>
+    <li><strong><span class="term" data-term="chapter-7">US Chapter 7</span></strong> — liquidation. A trustee is appointed; assets are sold and proceeds distributed to creditors. The business ceases.</li>
+    <li><strong><span class="term" data-term="administration">UK administration</span></strong> (Insolvency Act 1986 Schedule B1, as amended) — an insolvency practitioner takes control of the company; primary objective is to rescue the company as a going concern. <strong><span class="term" data-term="pre-pack">Pre-pack administration</span></strong> is a common variant: the asset sale is negotiated before the administrator's appointment and executed immediately on appointment. Speed preserves value but draws criticism for lack of marketing — addressed by the Pre-Pack Pool / SIP 16 regime.</li>
+    <li><strong>UK liquidation</strong> — winding-up, either compulsory (court order) or voluntary (members' or creditors'). Liquidator realises assets and distributes per the statutory order.</li>
+  </ul>
+
+  <p>For an M&amp;A buyer, the key point is <strong>§ 363 in the US and pre-pack in the UK</strong> — these allow you to buy distressed assets on a clean-title basis at speed, but the procedural rules (court approval, marketing requirements, look-back periods for fraudulent conveyance / transactions at undervalue) are very different.</p>
+
+  <h3>§ 363 walkthrough — what shifts in the SPA architecture</h3>
+  <p>A § 363 sale is not just a faster route — it fundamentally re-allocates risk and reshapes the SPA. Walk it from buyer's perspective:</p>
+  <ol>
+    <li><strong>Stalking-horse APA.</strong> The buyer signs an asset purchase agreement (APA) with the debtor before the auction; the APA defines the floor price, the assets and liabilities transferred, and the bid procedures. The buyer is the <em>stalking horse</em> — exposed to being outbid, but compensated by a court-approved <em>break fee</em> (typically 1–3 percent of purchase price) and capped expense reimbursement.</li>
+    <li><strong>Bid procedures order.</strong> The bankruptcy court approves the auction rules: minimum overbid increment, qualification criteria for competing bidders, deadlines, marketing obligations. This is the first substantive court order — typically 30–45 days into the case.</li>
+    <li><strong>Auction.</strong> Conducted by the debtor under court-approved rules. Secured creditors can <em>credit-bid</em> their debt under § 363(k) — a powerful right that can chill third-party bidders.</li>
+    <li><strong>Sale order.</strong> The court order approving the highest-and-best bid. Crucially, the order delivers the assets <strong>"free and clear" of liens, claims and interests under § 363(f)</strong> — most pre-petition liabilities are cut off and attach to the sale proceeds rather than the assets.</li>
+    <li><strong>What survives the order.</strong> Generally only (i) successor liability that arises post-closing under continuing obligations the buyer assumes (e.g. environmental, certain tort claims with successor exposure), (ii) fraud claims (a court order does not cleanse fraud), and (iii) liabilities the APA expressly assumes. Pre-petition contract counterparties cannot pursue the buyer for legacy breaches.</li>
+  </ol>
+  <p><strong>Effect on SPA architecture.</strong> Because the sale order delivers free-and-clear title, the SPA's title-and-capacity warranty does most of its work via the court order rather than seller covenant. Title reps still appear, but indemnification is lighter — there is typically no escrow, and the seller (an insolvent debtor) is rarely a meaningful indemnity counterparty. The risk-allocation work shifts to:</p>
+  <ul>
+    <li><strong>Synthetic <span class="term" data-term="warranty-and-indemnity-insurance">W&amp;I (RWI)</span>.</strong> Distressed deals routinely use synthetic W&amp;I — the insurer writes a policy where there is no underlying seller warranty layer at all; the policy <em>is</em> the warranty package. Broker-led, more expensive, and the underwriting focus is the bid procedures order and DD work-product (see <a href="14-wi-insurance.html">Module 14</a>).</li>
+    <li><strong>"Highest-and-best" affidavit.</strong> The buyer becomes a court witness. The auction record and the buyer's affidavit feed the sale-order findings; any procedural shortcut becomes future appellate ammunition for an unsecured creditor.</li>
+    <li><strong>Closing conditions.</strong> The principal CP is the sale order being entered and not stayed pending appeal — typically a 14-day appeal window after entry; under § 363(m) appellate reversal does not unwind a sale to a good-faith purchaser, but the buyer still negotiates a hard CP.</li>
+  </ul>
+  <p>The UK pre-pack analogue is similar in spirit: the administrator's appointment is the gating event, the SIP 16 statement is the public-facing record of the marketing that took place, the Pre-Pack Pool reviews connected-party sales. Title transfers under the administrator's authority — but unlike § 363(f) "free and clear", the UK pre-pack does not statutorily cleanse third-party security; specific releases and waivers are still negotiated.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> builds on the contract-law scaffolding in <a href="00-foundations.html">Module 00</a> — separate legal personality plus the SPA's title-and-capacity warranty is what actually moves the shares.</li>
+      <li><strong>Forwards:</strong> cap-table reconciliation feeds <a href="04-due-diligence.html">Module 04 (DD)</a> and the SPA title warranty in <a href="12-reps-and-warranties.html">Module 12</a>; pre-emption-rights waivers feed the CP clause in <a href="08-conditions-precedent.html">Module 08</a>; drag-and-tag mechanics deliver 100% to the buyer or trigger a <a href="06-deal-structures.html">scheme / squeeze-out (Module 06)</a> follow-on; <em>Revlon</em>, <em>Unocal</em> and the deal-protection trilogy feed the public-M&amp;A architecture in <a href="18-public-and-specialized.html">Module 18</a>; § 363 / pre-pack distressed routes feed the synthetic W&amp;I treatment in <a href="14-wi-insurance.html">Module 14</a>.</li>
+      <li><strong>Domino effect:</strong> if the target has a 10:1 founder voting class, the s.979 squeeze-out's dual 90%-in-value-AND-90%-of-voting-rights test may be unmeetable — the takeover route has to switch from contractual offer to scheme of arrangement. If a Series-C preferred has a class veto on sale, the drag-along may be overridden — the SPA needs a separate class-consent CP. If the buyer relies on a § 251(h) medium-form merger, the tender offer must capture the percentage that would be needed under § 251 (typically majority of outstanding) — failing which the back-end vote returns. One change in cap-table or charter can re-route the entire deal.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Incorporation produces three automatic consequences: separate legal personality, limited liability, perpetual succession. Veil-piercing is exceptional everywhere — UK confined to evasion (<em>Prest</em>); US uses alter-ego abuse-of-form tests. Modern English law also imposes <em>direct</em> parent-tort liability without piercing on a <em>Chandler v Cape</em> (2012) basis.</li>
+      <li>Vehicle types per jurisdiction: UK Ltd / PLC (PLC must obtain a trading certificate before commencing business — CA 2006 s.761); Delaware LLC / C-Corp (PE and VC overwhelmingly use C-Corps because of LP tax exposure); Germany GmbH (notarised share transfers) / AG (mandatory two-tier board, employee co-determination); France SARL / SA / SAS (SAS = ultra-flexible governance, the SHA must layer in protections statute does not give by default).</li>
+      <li>Equity is split into ordinary (one vote, residual) and preference (priority dividend and on winding-up). Pre-emption rights are statutory in UK/EU but contractual only in Delaware.</li>
+      <li>Minority protections in shareholders' agreements: drag-along (majority compels minority sale), tag-along (minority joins majority sale), anti-dilution (full ratchet vs broad-based weighted average), ROFR (match a third-party offer) vs ROFO (right to first offer only). Preferred-stack economics — participating vs non-participating, seniority waterfall, QPI auto-conversion — are the most-negotiated terms in venture and growth deals. Drag-along splits into eight independent negotiations: threshold, consenting majority, price floor, consideration mix, reverse-vesting, rep carve-out, no-non-compete, tag scope/mechanics.</li>
+      <li>Directors' duties: Delaware = care (gross negligence) and loyalty (cannot be exculpated). § 102(b)(7) charter-level exculpation eliminates monetary liability for duty-of-care breaches and (since the August 2022 DGCL amendment) extends to senior officers — but never against derivative claims. UK = CA 2006 ss.171–177 (act within powers; promote success; independent judgment; reasonable care; avoid conflicts; refuse third-party benefits; declare interests).</li>
+      <li>Voting thresholds: UK ordinary resolution &gt;50%; special resolution 75%; <strong>squeeze-out under CA 2006 s.979 needs 90% in value AND 90% of voting rights</strong>; scheme of arrangement 75% by value plus court. Delaware merger needs majority of outstanding stock under § 251; § 251(h) medium-form merger (effective Aug 2013) replaced the legacy top-up-option mechanic and provides a <em>Corwin</em>-style cleansing event (<em>In re Volcano Corp</em>, 2016). EUMR triggers on acquisition of "decisive influence" — de jure or de facto.</li>
+      <li>Encumbrance is the umbrella; lien and security interest are subsets. M&amp;A SPAs warrant shares "free and clear of any Encumbrance".</li>
+      <li>Distressed M&amp;A routes: Chapter 11 § 363 sale (US, free and clear of liens; stalking-horse APA + bid procedures + sale order; SPA architecture shifts to synthetic W&amp;I); UK pre-pack administration (speed at expense of marketing; SIP 16 / Pre-Pack Pool oversight); Chapter 7 / UK liquidation produce wind-down, not a going-concern sale.</li>
+      <li><em>Revlon</em> enhanced scrutiny is triggered on a <strong>change-of-control transaction</strong> (per <em>Paramount v QVC</em>, 1994) — the Delaware operative formulation, replacing the older "sale is inevitable" wording. The deal-protection trilogy (no-shop + fiduciary out + matching rights + break fee), <em>Unocal</em> defensive-measure scrutiny, and the <em>MFW</em> controlling-stockholder framework are wired together in <a href="18-public-and-specialized.html">Module 18</a>.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="00-foundations.html" class="prev">Foundations for Non-Lawyers</a>
+    <a href="02-ma-landscape.html" class="next">The M&amp;A Landscape &amp; Process</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
