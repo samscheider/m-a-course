@@ -2257,6 +2257,311 @@ window.__FLASH_M18 = [
   }
 ];
 
+/* Module P1 (Drafting Decoder) flashcards fragment.
+   Per-module test items P1-01..P1-10. Each card is a partner-meeting test:
+   the front asks a senior partner's drafting-room question; the back gives
+   the answer at the level of clause text + risk allocation.
+*/
+window.__FLASH_P1 = [
+  {
+    id: 'P1-01', module: 'P1', juris: ['UK', 'US', 'EU'],
+    front: 'A senior partner says "this Loss definition is too narrow — the consequential-damages exclusion eats the multiplier point". Translate that complaint into specific drafting moves the buyer-side associate should propose.',
+    back: 'The standard Loss definition excludes "any special, indirect, incidental or consequential damages, loss of profits or revenue, loss of goodwill, loss of business or of business opportunity". The "multiplier point" is that if a misstated EBITDA caused the buyer to overpay against a multiplier of EBITDA (e.g. paid 10x €10m EBITDA = €100m, when EBITDA was actually €9m so price should have been €90m), the €10m overpayment is loss-of-bargain — a consequential / lost-profits loss the standard exclusion kills. Three buyer counter-moves: (i) carve out the multiplier loss expressly: "a Loss shall include any reduction in the value of the Target as a direct consequence of a breach, calculated by reference to the multiple applied"; (ii) build a separate "diminution in value" indemnity outside the consequential-damages exclusion; (iii) accept the exclusion but raise the cap to compensate. Modules P1, 13.'
+  },
+  {
+    id: 'P1-02', module: 'P1', juris: ['US', 'UK'],
+    front: 'Decode word-by-word: in a MAC/MAE definition, what does the word "prospects" do, and why do sellers fight to delete it?',
+    back: 'Without "prospects", a Material Adverse Effect must be measured against actual realised results — making it nearly impossible to invoke before P&L impact materialises. With "prospects", a downward forecast revision (a major customer signalling non-renewal, a regulator signalling enforcement, a binary clinical readout missing) can constitute a MAC even before P&L impact — buyer-friendly. Akorn v. Fresenius (Del. Ch. 2018) is the rare modern case where MAC was successfully invoked, and the prospects/forward-looking dimension featured. Sellers fight to delete "prospects" because it converts MAC from a retrospective measure into a prospective one, expanding the buyer\'s walk-away grounds. Module P1, 09.'
+  },
+  {
+    id: 'P1-03', module: 'P1', juris: ['UK', 'EU'],
+    front: 'In a locked-box deal, why does the no-leakage indemnity sit OUTSIDE the cap, basket and de minimis — and what is the practical consequence if it didn\'t?',
+    back: 'The no-leakage indemnity is the buyer\'s entire protection between Reference Date (when price was fixed against a balance sheet) and Closing. Standard form: "the Seller\'s liability under this Clause 5 shall not be subject to any threshold, de minimis, basket or cap". If it WERE subject to those limits, the seller could leak below the basket threshold (say €100k) and pocket the difference — making the locked-box mechanism unworkable. Every euro of leakage must be recoverable from euro one with no cap. The leakage indemnity has its own short claims period (12–18 months) and is typically characterised as a Purchase Price reduction for tax purposes. Module P1, 11.'
+  },
+  {
+    id: 'P1-04', module: 'P1', juris: ['UK', 'US'],
+    front: 'A Compliance-with-Laws warranty as drafted reads: "The Target and its directors, representatives and officials have always complied and comply with all applicable laws". List the four qualifiers a seller-side associate would propose adding, and what each qualifier does.',
+    back: 'Four standard qualifiers, each a specific risk transfer: (1) Temporal — replace "always complied" with "during the [3] years prior to the date hereof complied" (limits historic look-back, excluding pre-acquisition by current seller). (2) Knowledge — insert "to the Seller\'s Knowledge" (limits to actual or constructive awareness of named knowledge group). (3) Materiality — add "in all material respects" (excludes minor non-compliance). (4) Disclosure carve-out — add "other than as fairly disclosed in the Disclosure Letter" (carves out matters disclosed). The buyer\'s counter: a knowledge scrape and materiality scrape strip qualifiers (1)-(3) for indemnification purposes only, leaving them in only for the breach test (i.e. double scrape). Module P1, 12.'
+  },
+  {
+    id: 'P1-05', module: 'P1', juris: ['UK', 'US', 'EU'],
+    front: 'What is a "double scrape" and what is the most important carve-back to it?',
+    back: 'A double scrape strips BOTH materiality qualifiers ("material", "in all material respects", "Material Adverse Effect") AND knowledge qualifiers ("to the Seller\'s Knowledge", "to the best knowledge") from reps for indemnification purposes — so the rep schedule looks negotiated and balanced (qualifiers intact) but the indemnification math is unqualified. Aggressively buyer-friendly. The MOST IMPORTANT CARVE-BACK is to preserve "MAE" where it functions as a defined trigger of a closing condition: standard form "provided, however, that the foregoing shall not apply to (a) any Representation or Warranty that uses the term \'Material Adverse Effect\' as a defined trigger of a closing condition". Without this carve-back, the materiality scrape would inadvertently strip MAE from the bring-down condition, converting "warranties true subject to MAE" into "warranties true unqualified" — a massive over-extension of the buyer\'s walk-away right. Module P1, 12.'
+  },
+  {
+    id: 'P1-06', module: 'P1', juris: ['UK', 'US'],
+    front: 'A senior partner says "let\'s tighten the basket — make it a true deductible at one percent". On a €500m equity-value deal, what does that mean numerically and what is the change to the standard tipping-basket drafting?',
+    back: 'At 1% of €500m, the deductible is €5m. The standard tipping-basket clause reads: "Until the aggregate of all amounts that would otherwise be due in respect of all other claims against the Sellers exceeds [threshold], it being understood that, if such limit is exceeded, the Sellers shall be liable for the whole amount of the claim and not merely the excess." The change is to delete "and not merely the excess" and insert "the Sellers shall be liable only for the amount in excess of such basket". Effect: the buyer absorbs the first €5m of aggregate losses regardless. Compare to a tipping basket where, once €5m is crossed, the buyer recovers from euro one. Tipping is buyer-friendly; deductible is seller-friendly. Module P1, 13.'
+  },
+  {
+    id: 'P1-07', module: 'P1', juris: ['UK'],
+    front: 'In a UK-law SPA, why is the "save-for-fraud" carve-out from the exclusive-remedy clause considered constitutionally required, and what case is the leading authority?',
+    back: 'A clause excluding liability for fraud is unenforceable as a matter of public policy in England — HIH Casualty & General Insurance Ltd v Chase Manhattan Bank [2003] UKHL 6 (House of Lords, Lord Bingham giving the leading speech on this point). The court will read down any clause that purports to exclude fraud liability. So a careful drafter includes the carve-out expressly: "Notwithstanding any other provision of this Agreement, nothing in this Agreement shall limit or exclude any liability for, or remedy in respect of, fraud (including fraudulent misrepresentation)". This (i) ensures the rest of the limitation regime survives challenge (the clause cannot be said to be attempting to exclude fraud, so its other parts are valid); (ii) signals good faith. The negotiation is the carve-out\'s scope — "fraud" only? "fraud or fraudulent misrepresentation"? "fraud, gross negligence or wilful misconduct"? The wider, the more it eats the closed system. Module P1, 12, 16.'
+  },
+  {
+    id: 'P1-08', module: 'P1', juris: ['US', 'UK'],
+    front: 'Distinguish "to the Seller\'s Knowledge" actual-knowledge form vs constructive-knowledge form. Why is the distinction the single most-leveraged definition in the SPA?',
+    back: 'Actual knowledge form (seller-friendly): "the actual knowledge of [Mr X], [Ms Y] and [Mr Z] as at the date hereof, without any duty of inquiry or investigation". Whatever is in their heads is the universe. Constructive knowledge form (buyer-friendlier): "the actual knowledge of [Mr X], [Ms Y] and [Mr Z], together with such knowledge as each of them would reasonably be expected to have after due and careful inquiry of the Target\'s senior management and review of the books and records of the Target Companies in the ordinary course." Imposes a duty of investigation; knowledge gaps caused by failure to inquire are imputed. Why most-leveraged: every "to the Seller\'s Knowledge" rep across the schedule (often 30–80 reps) is calibrated against this single definition. Move from actual to constructive and you have, in one stroke, doubled the seller\'s effective liability surface across every knowledge-qualified rep. Avoid the ambiguous "best knowledge" formulation — different courts read it differently. Module P1, 12.'
+  },
+  {
+    id: 'P1-09', module: 'P1', juris: ['US', 'UK'],
+    front: 'In a PE deal, what is the typical Reverse Termination Fee size, what does it characterise as, and what is the role of the Limited Guarantee?',
+    back: 'Typical RTF: 3–8% of equity value for a regulatory-failure-triggered termination (10%+ for antitrust-risky deals). It characterises as "liquidated damages and not as a penalty" — critical for enforceability under common-law penalty doctrine (Cavendish Square Holding v Makdessi [2015] UKSC 67 in the UK; Restatement (Second) of Contracts § 356 in US). The RTF must be a genuine pre-estimate of loss to survive. The RTF is the seller\'s SOLE AND EXCLUSIVE remedy against the Buyer and a defined Buyer-Side Person list (sponsor, financing source, equity investor, affiliates) — the seller waives specific performance, further damages, etc. The Limited Guarantee is the sponsor\'s backstop: a guarantee from the PE fund of the Buyer\'s RTF payment obligation, capped at the Limited Guarantee Cap (RTF + reimbursable expenses up to a sub-cap), with no recourse to the sponsor or its affiliates beyond that cap. Module P1, 08.'
+  },
+  {
+    id: 'P1-10', module: 'P1', juris: ['UK', 'US', 'EU'],
+    front: 'Walk through "best endeavours" / "all reasonable endeavours" / "reasonable endeavours" / "commercially reasonable efforts" / "hell-or-high-water" as a graduated efforts ladder. When in an SPA would each be appropriate?',
+    back: 'The five-rung efforts ladder, from highest to lowest commitment: (1) "HELL-OR-HIGH-WATER" — buyer covenants to take any-and-all-actions for regulatory clearance (divestitures, behavioural remedies, abandoning markets). Used where seller insists on regulatory certainty; pairs with a smaller RTF. (2) "BEST ENDEAVOURS" (UK) / "REASONABLE BEST EFFORTS" (US) — promisor must do everything a prudent and determined commercial actor would do, may require material commercial harm. UK authority: IBM UK v Rockware Glass [1980]; modern formulations softened. (3) "ALL REASONABLE ENDEAVOURS" (UK middle rung) — explore all reasonable courses of action; not full commercial sacrifice. Rhodia International Holdings v Huntsman International [2007] EWHC 292 (Comm) treats it as approximately equivalent to best endeavours in some contexts. (4) "REASONABLE ENDEAVOURS" (UK) / "COMMERCIALLY REASONABLE EFFORTS" (US Delaware) — lowest rung; what a reasonable similarly-situated commercial person would do, weighing own interest. (5) (Implicit floor) good-faith performance under civil law / implied covenant of good faith and fair dealing under Delaware law. Picking the rung is a deliberate risk allocation. Use hell-or-high-water for definitive antitrust commitment in regulatory-risky deals; reasonable best efforts/best endeavours for ordinary CP-satisfaction covenants where the buyer must drive but not destroy itself; commercially reasonable efforts for ordinary commercial undertakings. Module P1, 08, 09.'
+  }
+];
+
+/* Per-module flashcards fragment for Module P2 — Industry Deep-Dives (Financial Services & Tech).
+ * Practitioner-complement module. IDs P2-01..P2-10. Calibrated for partner-meeting fluency:
+ * UK PRA / FCA controller approval + ECB SSM qualifying holding + US BHC Act / Bank Merger Act;
+ * Basel III CRR III output floor + Solvency II SCR; Part VII; Form A; founder IP capture;
+ * AGPL SaaS loophole; Schrems II / DPF; EU AI Act Annex III; NYT v OpenAI; recent precedents.
+ */
+window.__FLASH_P2 = [
+  { id: 'P2-01', module: 'P2',
+    front: 'A senior partner asks: "What does the Section 178 timetable look like on this UK bank deal?" What is the partner asking, and what is the answer?',
+    back: 'The partner is asking about the <strong>Part 12 FSMA controller change-of-control regime</strong>. Any acquirer crossing the 10/20/30/50% bands of voting power in a UK-authorised firm files a <strong>Section 178 notice</strong>. Decision-maker: <strong>PRA</strong> for dual-regulated firms (banks, insurers, designated investment firms), assessed jointly with the FCA; <strong>FCA solo</strong> for FCA-only firms. <strong>Statutory clock:</strong> 60 working days from regulator&rsquo;s acknowledgement of completeness, with one optional 30-working-day pause for additional information &mdash; effectively 90 working days realistic. <strong>Five tests:</strong> reputation; financial soundness; firm&rsquo;s ability to comply with threshold conditions post-acquisition; AML / CFT; impact on UK financial system. Effort standard in the SPA is "reasonable best efforts" rather than hell-or-high-water because the regulator&rsquo;s lever is rarely divestiture &mdash; it is capital and governance commitments.',
+    juris: ['uk'] },
+  { id: 'P2-02', module: 'P2',
+    front: 'A partner asks: "Are we SI or LSI?" In an EU bank deal, what is being asked, and how does the answer change the deal?',
+    back: 'The partner is asking whether the target is a <strong>Significant Institution</strong> (directly ECB-supervised) or a <strong>Less Significant Institution</strong>. Thresholds: &euro;30bn+ total assets; top three credit institutions in member state; significant cross-border activity. <strong>Why it matters:</strong> for an SI, the <strong>ECB takes the qualifying-holding decision</strong> under SSM Reg (EU) No 1024/2013 Article 15; for an LSI, the <strong>national competent authority (NCA)</strong> decides with ECB intervention right. Same 60-working-day clock from acknowledgement of completeness, with up to 20 (or 30 for non-EEA acquirers) extra working days for information. The classification can flip mid-deal: a target at &euro;25bn standalone may cross &euro;30bn post-acquisition (Oldenburgische Landesbank crossed in October 2024). Practical impact: who you lobby, what pre-application dialogue you run, who signs off the integration plan.',
+    juris: ['eu'] },
+  { id: 'P2-03', module: 'P2',
+    front: 'On a US bank deal a partner asks: "Did we hit Riegle-Neal?" What is the test, and which deal cleared it most recently?',
+    back: 'The Riegle-Neal Interstate Banking and Branching Efficiency Act 1994 imposes <strong>two concentration caps</strong>: (i) <strong>10% nationwide deposits</strong> &mdash; the resulting institution cannot control 10% of US deposits; and (ii) <strong>30% statewide deposits</strong> &mdash; with state-by-state variation. Dodd-Frank &sect;622 (2010) added a separate <strong>10% nationwide cap on total consolidated liabilities</strong>. The Capital One / Discover merger ($35.3bn; announced February 2024; Federal Reserve and OCC approved 18 April 2025; closed May 2025) was scrutinised against these caps but did not breach them. The deal was cleared with significant conditions including a $100m fine and consent order against Discover for 2007&ndash;2023 interchange-fee overcharges. <strong>14 months from announcement to approval is the modern benchmark</strong> for a big US bank deal.',
+    juris: ['us'] },
+  { id: 'P2-04', module: 'P2',
+    front: 'A partner says: "We need a Form A in every state plus an OCC application." What is being described, and what is the typical timetable for a multi-state US insurance deal?',
+    back: 'Form A is the <strong>pre-acquisition statement filed under each state&rsquo;s adoption of the NAIC Insurance Holding Company System Regulatory Act</strong>, required from any person acquiring 10%+ of voting securities of a domestic insurance holding company. <strong>Filed in each state of domicile</strong>; approval needed in each before the acquisition can close. <strong>Contents:</strong> identity and biographical affidavits of acquirer and senior officers; pre-acquisition financial statements; post-acquisition organisational chart; 5-year business plan; sources and amount of consideration. <strong>Clock per state:</strong> 60 days from completeness, but deficiency letters routinely reset; contested filings or those involving public hearings drift to 3&ndash;6 months. <strong>Multi-state insurer total elapsed time: 6&ndash;12 months</strong> for a large group. Cigna / Express Scripts (December 2018) cleared all 50 state insurance commissioners (parallel Form A filings) plus DOJ antitrust review in 9 months &mdash; the reference benchmark for parallel-state-filing logistics.',
+    juris: ['us'] },
+  { id: 'P2-05', module: 'P2',
+    front: 'A partner asks about a UK insurance acquisition: "Can we Part VII the back-book?" What is being proposed, and how long does it take?',
+    back: 'A Part VII transfer is a <strong>statutory transfer of long-term or general insurance business</strong> between regulated entities under sections 104&ndash;117 of the Financial Services and Markets Act 2000, requiring <strong>High Court sanction</strong> and PRA / FCA reports. The partner is proposing to use Part VII either (a) post-closing to consolidate the target&rsquo;s policy book into a different group entity, or (b) as the deal structure itself if a share deal is impractical. <strong>Process:</strong> appointment of an <strong>Independent Expert</strong> (PRA approves the IE) to report on likely effect on policyholders; directions hearing; policyholder notification (every affected policyholder receives the scheme circular and IE summary); regulator reports to court; sanction hearing. <strong>Typical duration: 12&ndash;18 months. Cost: low millions.</strong> The court will not sanction if the regulators object &mdash; so PRA / FCA engagement is the gating workstream. EU equivalents: France <em>portefeuille transfer</em> under Article L.324-1 Code des assurances; Germany <em>Bestandsübertragung</em> under &sect;13 VAG; Italy Article 198 Codice delle Assicurazioni Private.',
+    juris: ['uk'] },
+  { id: 'P2-06', module: 'P2',
+    front: 'A partner asks: "Did the founder PIIA actually assign?" What chain-of-title issue is the partner flagging, and what is the leading case?',
+    back: 'The partner is testing whether the Proprietary Information and Inventions Assignment uses <strong>"hereby assigns"</strong> (a present transfer that effects an immediate IP transfer) rather than <strong>"agrees to assign"</strong> (a future obligation requiring a separate act). The leading US case is <strong><em>Board of Trustees of Leland Stanford Junior University v Roche Molecular Systems</em>, 563 U.S. 776 (2011)</strong>: "agrees to assign" was held to be a future promise that did not transfer the patent automatically; "hereby assigns" by contrast effects an immediate transfer. <strong>Modern PIIA drafting universally uses "hereby assigns"</strong>. Other gaps to test: (a) founders who created core IP pre-incorporation without express assignment; (b) missing or vague pre-existing-inventions schedules; (c) state-law carve-outs (Cal. Lab. Code &sect;2870; Del. 19 Del. C. &sect;805; Ill. 765 ILCS 1060/2; Minn. &sect;181.78; Wash. RCW 49.44.140; NC G.S. &sect;66-57.1); (d) UK Patents Act 1977 ss.39&ndash;43 employee-invention compensation rights (<em>Shanks v Unilever</em> [2019] UKSC 45). Standard remediation: confirmatory assignments executed at signing or closing.',
+    juris: ['us', 'uk'] },
+  { id: 'P2-07', module: 'P2',
+    front: 'A partner asks about a SaaS target: "Any AGPL in the stack?" Why is this a different (worse) problem than GPL contamination?',
+    back: 'Classic <strong>GPL is triggered by <em>distribution</em></strong> of a binary; a SaaS provider that runs GPL code on its own servers and exposes only a network interface does not distribute the binary and so escapes GPL&rsquo;s source-disclosure obligation. <strong>AGPL section 13 closes this "SaaS loophole"</strong>: any user interacting with AGPL code over a network must be offered the corresponding source. <strong>Consequence:</strong> AGPL-licensed code in the core SaaS stack of a tech target is a <strong>material DD finding</strong> &mdash; the only clean answer is replacement, which is an engineering project of unknown duration. By contrast, GPL contamination of a distributed product can be cured either by replacement <em>or</em> by complying with the source-disclosure obligation (releasing the combined work under GPL). Remediation menu for AGPL: (i) replace the AGPL components; (ii) negotiate a commercial alternative licence with the AGPL author (sometimes possible); (iii) accept the source-disclosure obligation as a going-forward business reality (rare for proprietary SaaS). The W&amp;I underwriter typically excludes the matter; the price needs to reflect remediation risk.',
+    juris: ['us', 'uk', 'eu'] },
+  { id: 'P2-08', module: 'P2',
+    front: 'A partner asks: "Are they DPF-certified?" What is being asked, and what is the alternative if the answer is no?',
+    back: 'The partner is asking whether the US importer of personal data has self-certified under the <strong>EU-US Data Privacy Framework (DPF)</strong>, in force <strong>10 July 2023</strong>. The DPF replaces the Privacy Shield invalidated in <em><strong>Schrems II</strong></em> (CJEU Case C-311/18, 16 July 2020). DPF-certified US importers are eligible recipients for transfers from the EU under the European Commission&rsquo;s adequacy decision &mdash; <strong>no separate transfer mechanism needed</strong>. UK extension certified separately ("UK Extension to the EU-US DPF"). <strong>If not DPF-certified:</strong> exporter must rely on <strong>Standard Contractual Clauses (SCCs) plus a documented Transfer Impact Assessment (TIA)</strong> covering the importer&rsquo;s jurisdiction&rsquo;s intelligence-agency access regimes (FISA s.702; EO 12333) and identifying supplementary technical, contractual and organisational measures. UK ICO requires a Transfer Risk Assessment (TRA), broadly equivalent. <strong>Schrems III</strong> challenge by Max Schrems is anticipated; tech buyers should plan for the possibility that DPF is invalidated.',
+    juris: ['eu', 'uk', 'us'] },
+  { id: 'P2-09', module: 'P2',
+    front: 'A partner asks about an AI target: "Is the model Annex III?" What are the eight Annex III categories and what is the binding compliance deadline?',
+    back: 'EU AI Act (Regulation (EU) 2024/1689) Article 6 + <strong>Annex III</strong> defines the <strong>eight high-risk categories</strong>: (1) <strong>biometrics</strong> &mdash; remote biometric ID, biometric categorisation by sensitive attributes, emotion recognition outside prohibited contexts; (2) <strong>critical infrastructure</strong>; (3) <strong>education and vocational training</strong>; (4) <strong>employment and worker management</strong> (recruitment, screening, performance evaluation, task allocation, termination); (5) <strong>essential public and private services</strong> (public-benefit eligibility, <strong>credit scoring</strong>, life and health insurance pricing, emergency dispatch); (6) <strong>law enforcement</strong>; (7) <strong>migration, asylum and border control</strong>; (8) <strong>administration of justice and democratic processes</strong>. <strong>Compliance deadline: 2 August 2026.</strong> Obligations: conformity assessment; registration in the EU AI database; risk-management system; data governance; technical documentation; record-keeping; transparency; human oversight; accuracy, robustness and cybersecurity; quality management; post-market monitoring. <strong>Penalties from 2 August 2025:</strong> up to &euro;15m or 3% of worldwide annual turnover for high-risk obligations; up to &euro;35m or 7% for prohibited AI.',
+    juris: ['eu'] },
+  { id: 'P2-10', module: 'P2',
+    front: 'Name the five reference deals that define the post-2022 tech antitrust landscape and the takeaway each provides.',
+    back: '(1) <strong>Microsoft / Activision Blizzard</strong> ($69bn; cleared October 2023 after restructuring) &mdash; CMA blocked April 2023 on cloud-gaming theory; FTC PI denied; Microsoft sold cloud-streaming rights to Ubisoft for 15 years and committed to 10-year Call of Duty licensing. <em>Takeaway:</em> a determined buyer can litigate antitrust opposition and win, but the cost is restructuring and 21 months of delay. (2) <strong>Adobe / Figma</strong> ($20bn; terminated December 2023, $1bn break fee). <em>Takeaway:</em> ecosystem and reverse-killer-acquisition theories of harm now succeed at the regulator level even where the target is small relative to the buyer; ~5% of deal value is the calibration benchmark for break fees. (3) <strong>Meta / Giphy</strong> ($315m; unwound October 2022; sold to Shutterstock May 2023 at 83% writedown). <em>Takeaway:</em> closing without UK CMA clearance does not protect the buyer; UK voluntary-notification regime is a trap for the unwary. (4) <strong>Amazon / iRobot</strong> ($1.7bn; terminated January 2024, $94m break fee). <em>Takeaway:</em> small absolute deal size does not save the buyer from EU ecosystem review; failed deal can be terminal for the target. (5) <strong>Booking / eTraveli</strong> (&euro;1.63bn; blocked September 2023). <em>Takeaway:</em> first EU prohibition based solely on ecosystem theory of harm; pre-filing dialogue must address ecosystem theories. <strong>Plus the jurisdictional features:</strong> CMA share-of-supply test (s.23 Enterprise Act 2002); EU DMA Article 14 notification for designated gatekeepers; post-<em>Illumina/Grail</em> (CJEU Case C-611/22 P, 3 September 2024) limits on Article 22 EUMR referrals.',
+    juris: ['us', 'uk', 'eu'] }
+];
+
+/* Flashcard fragment for Module P3 — Negotiation Playbook.
+   Per-module override merged into window.FLASHCARDS by build step.
+   IDs P3-01 .. P3-10. */
+window.__FLASH_P3 = [
+  {
+    id: 'P3-01', module: 'P3',
+    front: 'In an M&amp;A negotiation, what is the difference between BATNA and reservation price &mdash; and why is the M&amp;A reservation price said to be "conditional"?',
+    back: '<strong>BATNA</strong> = Best Alternative to a Negotiated Agreement (Fisher/Ury, 1981) &mdash; what you do if no deal is reached (next target on pipeline; relaunched auction; IPO). <strong>Reservation price</strong> = the worst deal you will accept rather than invoke your BATNA. In M&amp;A the reservation price is <em>conditional</em>: a buyer\'s walk-away at &pound;110m presupposes a particular package (10% cap, true deductible at 1%, double scrape, 24-month survival). Move any of those, and the reservation price moves too. Hence the practitioner formulation: <em>"I can get to 10% on cap if you give me a true deductible at 1% and 24-month survival."</em>',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-02', module: 'P3',
+    front: 'Why is the M&amp;A ZOPA called a "polytope" rather than a one-dimensional interval?',
+    back: 'The classical ZOPA (Zone of Possible Agreement) is the price overlap between buyer and seller reservation prices &mdash; one dimension. M&amp;A deals have many dimensions: cap, basket, escrow, earnout, indemnity carve-outs, governance, employment, non-compete, locked-box vs closing accounts, ticker, MAC carve-outs, hell-or-high-water, RTF, long-stop. The ZOPA is therefore a multi-dimensional region (polytope). Skilled negotiators trade <em>across</em> dimensions to grow the surplus &mdash; a deal at &pound;110m with weak indemnity may be worth more to the buyer than &pound;105m with a strong indemnity. Subramanian (<em>Dealmaking</em>, 2010) is the M&amp;A-specific extension of Fisher/Ury.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-03', module: 'P3',
+    front: 'List the eight standard cross-clause trades in M&amp;A negotiation.',
+    back: '(1) <em>Cap</em> &harr; <em>Basket type</em> (true deductible vs tipping). (2) <em>Knowledge scrape</em> &harr; <em>Survival period</em>. (3) <em>Hell-or-high-water</em> &harr; <em>Reverse termination fee size</em>. (4) <em>Materiality scrape (single vs double)</em> &harr; <em>De minimis size</em>. (5) <em>Locked box</em> &harr; <em>Ticker rate</em> &amp; <em>permitted-leakage scope</em>. (6) <em>Specific indemnity (uncapped)</em> &harr; <em>General cap reduction</em>. (7) <em>W&amp;I retention</em> &harr; <em>Premium split</em>. (8) <em>Earnout cap</em> &harr; <em>Metric objectivity (revenue vs EBITDA)</em>. <strong>Items that don\'t trade</strong>: governing law, fundamental warranty cap, tax indemnity structure, fraud carve-out, dispute-resolution boilerplate &mdash; moving them breaks deal architecture.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-04', module: 'P3',
+    front: 'A counterparty says: "Standard basket is 1% of enterprise value &mdash; that\'s where we are." How do you defuse?',
+    back: 'Defuse before counter-offering (Subramanian rule). <em>"Per ABA 2025, 45% of US private deals had baskets at &le;0.5%; 95% at &le;1%. We\'re at 0.5% as a starting point. What\'s the de minimis you have in mind &mdash; that\'s where the volume is."</em> Reframes from a single-issue anchor (1%) to a two-issue trade (basket + de minimis). Cites verifiable objective criteria (ABA 2025 Private Target Deal Points Study, 139-deal sample, transactions 2024&ndash;Q1 2025). Acknowledges the seller\'s actual interest (no nuisance claims) without conceding the position. The partner-meeting question that follows: <em>"does the de minimis sweep the basket?"</em>',
+    juris: ['us', 'uk', 'eu']
+  },
+  {
+    id: 'P3-05', module: 'P3',
+    front: 'A counterparty asks for full hell-or-high-water on antitrust. What is the structured counter-move?',
+    back: 'Capped HOHW with burdensome-conditions carve-out. <em>"We\'ll commit to all remedies including divestitures up to a cap of [10&ndash;15]% of target revenue. Beyond that, we have a burdensome-conditions carve-out: anything that materially impairs the strategic rationale (losing access to defined geographic markets, divesting core IP, mandatory licensing of trade secrets) we don\'t have to accept. Plus a tiered RTF up to [4&ndash;5]%."</em> This is Trade 3 (HOHW &harr; RTF). Microsoft / Activision (2022) is the canonical example: tiered RTF $2.0bn / $2.5bn / $3.0bn (4.4% of $68.7bn). Mayer Brown 2023 confirms capped HOHW is the 2023&ndash;2025 standard. Per Houlihan Lokey 2023, mean RTF is 4.3% / median 4.2%.',
+    juris: ['us', 'uk', 'eu']
+  },
+  {
+    id: 'P3-06', module: 'P3',
+    front: 'What is the partner-meeting test phrase on UK W&amp;I deals about tax exposure &mdash; and why does the answer matter?',
+    back: '<em>"Is the tax deed inside the tower?"</em> Standard UK practice splits it: tax warranties inside the W&amp;I tower (covered by policy); the standalone Tax Deed (pound-for-pound indemnity for pre-Closing tax) typically <em>outside</em> the tower as direct seller exposure. Why it matters: if outside, sellers retain residual tax exposure and likely escrow/bank guarantee for it; if inside the tower, W&amp;I retention absorbs the tax claim and the underwriter prices the policy higher. UK timing: TMA 1970 ss.34/36/36A &mdash; 4 years (ordinary), 6 years (careless), 20 years (deliberate). The tax tail dominates UK W&amp;I-backed deal architecture.',
+    juris: ['uk']
+  },
+  {
+    id: 'P3-07', module: 'P3',
+    front: 'What does "subject to package" mean in M&amp;A negotiation, and what problem does it solve?',
+    back: '<em>"Subject to package"</em> (or <em>"subject to overall agreement"</em>) is the formula reserving any verbal agreement on a single point pending agreement on the full package of open issues. Without the reservation, a counterparty pockets the concession and re-opens the rest. With it, the concession is a placeholder. Solves: (i) cross-clause linkage (cap depends on basket; survival depends on scrape; etc.); (ii) face-saving (each side needs wins on something); (iii) the "we agreed verbally on the call" problem &mdash; until the contract is signed, every point is subject to package. Operational implementation: a single-page <em>issues list</em> built before each substantive call.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-08', module: 'P3',
+    front: 'List the six standard negotiation letter templates a junior associate must be able to produce inside an hour.',
+    back: '(1) <strong>Long-stop date extension request</strong> &mdash; to counterparty counsel; cites regulatory status, proposes structured extension. (2) <strong>Deadlock-break note</strong> &mdash; internal memo to client; summarises open points with recommended landing per ABA / Marsh / Houlihan benchmarks. (3) <strong>Fee letter side-letter</strong> &mdash; with W&amp;I broker / banker / advisor; documents premium / fee / tail / payment trigger. (4) <strong>MAC reservation-of-rights / non-invocation notice</strong> &mdash; preserves Material Adverse Change rights without electing to invoke or waive. (5) <strong>No-shop violation cure notice</strong> &mdash; specifies breach, demands cure, reserves termination rights. (6) <strong>Termination notice</strong> &mdash; cites long-stop and unsatisfied CPs, triggers RTF, lists surviving provisions.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-09', module: 'P3',
+    front: 'Translate the partner phrase: <em>"Give me something to take to the client."</em> What is the operational read &mdash; and what is the right response?',
+    back: 'Operational read: the lawyer needs a face-saving concession of <em>any size</em> to deliver internally. It is an honest signal of the agent-principal asymmetry &mdash; the lawyer\'s position is at or near client-authorised limits. <strong>Right response</strong>: offer the smallest concession that does the job. <em>"I can give you 22 months on survival instead of 24,"</em> or <em>"I can tighten the knowledge group definition to add the COO,"</em> or <em>"I\'ll move the de minimis up to &euro;75k."</em> The size matters less than the existence of a concession; the lawyer needs to walk back to the client with a movement, not a defeat. <em>Caveat</em>: don\'t volunteer a concession you can\'t recover; bundle it as part of "subject to package".',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P3-10', module: 'P3',
+    front: 'Why does academic negotiation literature (Fisher/Ury, Lax-Sebenius, Bazerman) under-describe M&amp;A &mdash; and what three structural features distinguish M&amp;A negotiation?',
+    back: 'Most academic literature implicitly assumes <strong>principals at the table</strong>. M&amp;A almost never has principals at the table; it has <strong>lawyers (agents) negotiating with other lawyers (agents)</strong>. Three structural features follow: (1) <strong>Reputation is the multi-shot game</strong> &mdash; same lawyers across the table next month; pure single-shot extraction tactics burn capital. (2) <strong>The lawyer needs a position to take to the client</strong> &mdash; even when the position is internally unsupportable, face-saving compromise is needed. (3) <strong>The deal <em>is</em> the contract</strong> &mdash; verbal agreements evaporate; everything must be written into the next markup. The asymmetry is why senior practitioners use the polite phrasebook (<em>"we\'d be in the same shoes"</em>) and have it carry weight: bullies don\'t last; reciprocity does.',
+    juris: ['uk', 'us', 'eu']
+  }
+];
+
+/* Flashcard fragment — Module P4 (Origination & Business Development).
+   Cards target the partner-business vocabulary the user needs to be credible
+   in a co-founder pitch conversation with an M&A partner. */
+window.__FLASH_P4 = [
+  {
+    id: 'P4-01', module: 'P4',
+    front: 'Translate this partner sentence: "Lateral comes with $4m book, garden leave six months, make-whole $2m on forfeited deferred comp, three-year guarantee at 1.2x current, MMP at $3m by Y2."',
+    back: 'A partner is moving firms with $4m of annual originations. She must serve a six-month garden leave (paid, no work, no client contact, no solicitation). The new firm pays a $2m sign-on to compensate for deferred compensation she forfeits at the old firm. She gets a three-year compensation guarantee at 1.2x her current pay. By Year 2 her minimum marketing period (MMP) target is $3m of originations at the new firm; missing it can trigger compensation clawback or downgrade. Total cost-to-extract: roughly $6-8m on a $4m book.',
+    juris: ['us', 'uk']
+  },
+  {
+    id: 'P4-02', module: 'P4',
+    front: 'Map the four partner-economics models to flagship firms and explain what would actually move a partner at each.',
+    back: 'Pure lockstep — Wachtell (PEP ~$9m), Slaughter and May, Cravath until 2021. Moves on vision and equity (less sensitive to comp guarantees because the partner already values non-financial). Modified lockstep — Magic Circle (Linklaters, Freshfields, A&O Shearman, Clifford Chance), Cravath / Davis Polk / Cleary post-2021. Moves for clear path to 1.5x-3x plateau plus equity. Modified EWYK — Kirkland (PEP ~$8.6m), Latham, Paul Weiss, most US BigLaw. Moves for cleaner economics on her own book and equity upside above PEP-based comp. Pure EWYK — rare at scale; the most negotiable but highest churn risk.',
+    juris: ['us', 'uk']
+  },
+  {
+    id: 'P4-03', module: 'P4',
+    front: 'How does a $1m M&A engagement split under modified EWYK?',
+    back: 'Originator credit (15-30% = $150-300k) to the partner credited with bringing in the client. Working credit (25-40% = $250-400k) to the partner who actually ran the matter. Associate compensation, firm overhead, and partnership profit absorb the remaining 35-60%. Cross-border M&A creates the sharpest credit fights: typical pattern is 50% origination to the London partner who sourced + 70% working credit to the New York partner who ran. A single origination credit on a $30m PE relationship over five years is $25-45m of book-of-business credit — which is why partners care so much.',
+    juris: ['us', 'uk']
+  },
+  {
+    id: 'P4-04', module: 'P4',
+    front: 'A senior partner asks "Will my book of business actually move?" What is the honest answer?',
+    back: 'Realistic year-one capture: 50-70% of stated book, declining further if the new firm\'s brand is weaker than the old. Institutional clients (PE megafunds, FTSE 100 corporates) tend to follow the firm; mid-market PE, family offices and founder-led companies tend to follow the partner. The honest answer is: tell me your institutional vs. partner-led mix, and I\'ll tell you year-one capture. Garden leave erodes another 20-40% during the period. Most partners overestimate portability.',
+    juris: ['us', 'uk', 'eu']
+  },
+  {
+    id: 'P4-05', module: 'P4',
+    front: 'What is the difference between an ethical wall (Rule 1.10(a)(2)) curing a lateral conflict and a wall failing to cure a live current-client conflict (Rule 1.7)?',
+    back: 'Lateral conflict — a partner moves to a new firm carrying a former-client conflict (Rule 1.9 imputed under 1.10). Curable under 1.10(a)(2) (added 2009) by an effective screen + apportionment of no fee + timely written notice to the affected former client. This is what makes lateral mobility function. Live current-client conflict — two current clients have directly adverse interests under Rule 1.7. NO screen will cure this; both must consent in writing, and even consent does not cure non-consentable conflicts (e.g. asserting one client\'s claim against another in tribunal proceedings).',
+    juris: ['us']
+  },
+  {
+    id: 'P4-06', module: 'P4',
+    front: 'What is a sector-segment conflict policy and why does it matter for the boutique pitch?',
+    back: 'An informal but consequential firm policy on top of formal Rule 1.7/1.9/1.10 conflicts: "we won\'t represent target and acquirer in the same industry on similar deals in the same year"; "we won\'t represent two competing strategic bidders for the same target"; "we won\'t represent direct competitors of our anchor PE sponsor in the same sub-sector." These narrow practice far more than the formal rules do. Why this matters for boutique recruitment: a partner conflicted out of three sub-sectors at her current firm because of anchor relationships can plausibly take all of those mandates at a clean-conflict-map boutique. Conflicts narrowing is one of the boutique\'s structural advantages.',
+    juris: ['us', 'uk', 'eu']
+  },
+  {
+    id: 'P4-07', module: 'P4',
+    front: 'Compare the three regulatory routes for forming an AI-augmented M&A law firm.',
+    back: 'UK ABS (Legal Services Act 2007): easiest route in the world; over 1,500 ABSs licensed; Garfield.Law authorised May 2025; non-lawyers can own up to 100%; accommodates VC capital. Arizona ABS (since August 2020): Arizona repealed Rule 5.4; KPMG Law approved February 2025 — first Big Four legal-services US firm; Arizona-anchored practice is a constraint for NY-anchored sponsor M&A. Utah sandbox (since 2020): narrowed in 2024 to focus on access-to-justice — less attractive for commercial M&A boutique. Other 48 US states still on Model Rule 5.4 prohibiting non-lawyer ownership.',
+    juris: ['us', 'uk']
+  },
+  {
+    id: 'P4-08', module: 'P4',
+    front: 'How can an AI-augmented firm price differently from a traditional BigLaw firm? Name three structural advantages.',
+    back: '(1) Underwriteable fixed fees on negotiated complex M&A — traditional firms cannot commit because associate-hour variance is uncontrollable; AI-augmented firm with compressed associate hours can. (2) Lower blended rates with similar partner density — $700-1,100/hour against top BigLaw $1,400-1,800/hour, with the same number of partner hours on the deal. (3) Phased commit pricing on PE portfolio work — AI tooling absorbs variance the traditional firm prices into the rack. What AI thesis does NOT change: regulatory limits on contingency, broken-deal economics, headline rack rate as anchor.',
+    juris: ['us', 'uk', 'eu']
+  },
+  {
+    id: 'P4-09', module: 'P4',
+    front: 'Translate the metrics: AmLaw 100 average PEP $3.15m; Wachtell PEP $9.0m at RPL $5.7m; Kirkland PEP $8.6m. What do these mean and why is RPL the more interesting number for a boutique?',
+    back: 'PEP = Net firm profits / number of equity partners. Wachtell\'s PEP $9.0m is the AmLaw structural ceiling on a small partnership (~86 equity partners); pure-lockstep, single-tier, very high realisation (~98%). Kirkland\'s PEP $8.6m is achieved with 600+ equity partners on modified EWYK — different distribution. RPL = firm revenue / total lawyer headcount. Wachtell\'s $5.7m RPL is what tells you about pricing power and utilisation. AmLaw average ~$1.4m. For a boutique, RPL captures what an AI-augmented model can plausibly achieve — RPL $1.5m+ is realistic with senior-heavy leverage and AI substitution; that, combined with low associate cost, drives PEP to AmLaw 50 lower-tier ($2-4m).',
+    juris: ['us']
+  },
+  {
+    id: 'P4-10', module: 'P4',
+    front: 'A pure-lockstep partner at Wachtell has refused four lateral conversations in five years. What are the three things that might still move her, and what is the structural reason her decision will look different from a Kirkland modified-EWYK partner\'s?',
+    back: '(1) Vision — the AI thesis articulated as a structural shift she wants to be inside, not outside. (2) Equity — a 5-15% founder share in a boutique that could plausibly scale to $50-150m revenue within 5-7 years, generating equity worth more than a continued PEP run. (3) Practice autonomy — no committee politics, no sector-segment conflicts, focus on the work she wants to do. Structural reason her decision differs from a Kirkland partner\'s: at Wachtell pure-lockstep, the partner is already accepting plateau pay; comp guarantees mean less to her because she already values non-financial factors. At Kirkland modified-EWYK, comp is fully tied to her book; she runs the maths on book × portability factor minus garden-leave decay vs. boutique year-one revenue. Different value functions; different pitches.',
+    juris: ['us', 'uk']
+  }
+];
+
+/* Flashcard fragment — Module P5 (AI Companion).
+ * 10 cards testing tool-to-use-case mapping and AI capability boundaries.
+ */
+window.__FLASH_P5 = [
+  {
+    id: 'P5-01', module: 'P5',
+    front: 'A partner asks: "Can AI replace my associates on due diligence?" — give the answer that places the question on the four-level grid.',
+    back: 'Place it on the AI maturity framework: Substitute / Augment / Aspire / Won\'t. For DD specifically — Substitute on first-pass contract abstraction (Kira at vendor-claimed 95–97%; Luminance LITE on 1,000+ concepts; PwC × Harvey DD agent at 10,000+ executions by mid-2025); Augment on second-pass risk flagging and DD-report drafting; Aspire on agentic full-DD-end-to-end; Won\'t on the call about whether a flagged risk goes into a warranty or a specific indemnity (partner judgment). The answer is never yes-or-no; it is the placement on the grid with the named tool.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-02', module: 'P5',
+    front: 'Map the tools to the workflow: which AI does each of (a) contract abstraction, (b) drafting in Word, (c) legal research with citations, (d) data-room Q&A?',
+    back: '(a) Contract abstraction: Kira (Litera), Luminance, eBrevia (DFIN), Diligen — supervised-ML extraction with vendor-claimed 95–97% accuracy on M&A documents. (b) Drafting in Word: Spellbook (Microsoft Word-native; 2,300+ contract types benchmarked); Harvey (used inside firms via API); Lexis+ Protégé term-sheet-to-customised-agreement workflow. (c) Legal research with citations: CoCounsel (Thomson Reuters; Westlaw + Practical Law; Deep Research agentic mode); Lexis+ with Protégé (LexisNexis; 17% hallucination per Stanford 2024 testing). (d) Data-room Q&A: Datasite Copilot, Intralinks AI, Della.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-03', module: 'P5',
+    front: 'A partner asks "what does your AI do that Harvey doesn\'t?" — what is the right framing for the answer?',
+    back: 'Wrong framing: trying to claim technical superiority over Harvey. Right framing: Harvey is the LLM + workflow layer; the boutique uses Harvey (or its API) too. The differentiation is not the AI — it is (i) the playbook (sector-specialised; partner-curated); (ii) the deal-data infrastructure (anonymised cap / basket / survival benchmarks); (iii) the partner brand; (iv) the pricing (fixed-fee, not hourly); (v) the workflow specialisation (M&A only, FinTech / FS sector). The structural line: "We don\'t bet against Harvey on the model layer — we bet above and below it. Harvey commoditises; our data and brand do not."',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-04', module: 'P5',
+    front: 'Stanford RegLab 2024–2025 hallucination data — what do you say to a partner who asks about hallucinations?',
+    back: 'Quote the published numbers: Lexis+ AI 17%; Westlaw AI-Assisted Research 33%; GPT-4 (general-purpose) 43% on legal-research queries. (Magesh, Surani, Dahl, Suzgun, Manning, Ho, Journal of Empirical Legal Studies 22, 2025; May 2024 testing.) Then the operational answer: "We don\'t use AI for unsupervised legal research — that\'s where hallucination is highest. We use AI for structured-output extraction and first-pass drafting, where errors are visible and HITL-correctable. Every output is partner-reviewed; the malpractice profile is the same as a BigLaw mid-level associate\'s."',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-05', module: 'P5',
+    front: 'Build vs. buy: should the boutique fine-tune its own foundation model? Why or why not?',
+    back: 'No. The structural reason: the LLM commoditisation curve runs faster than any fine-tune cycle. By the time a custom-trained M&A model ships, GPT-6 or Claude 5 has caught up on general capability and the fine-tuned advantage is gone. Production reality 2026: most legal AI uses prompt + RAG (retrieval-augmented generation), not fine-tune. Boutique strategy: bet on data and prompts, not on training the model layer. The partner-meeting line: "We don\'t fine-tune — we prompt + RAG. The base-model improvement curve is faster than our fine-tune cycle."',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-06', module: 'P5',
+    front: 'The five highest-leverage modules for the boutique pitch — name them and the boutique angle for each.',
+    back: '(1) M04 Due Diligence — DD-as-fixed-fee at $150–$400k per deal, the wedge product. (2) M07 SPA Structure — SPA-skeleton-as-deliverable at $50–$150k flat. (3) M11 Purchase Price — earn-out probability tool at $10–$50k + recurring tracking subscription; the data-flywheel product. (4) M12 R&Ws — warranty-package-as-deliverable at $25–$75k flat, bundled with W&I broker referral. (5) M13 Indemnification — post-closing claim-cascade tracker at $5–$10k/yr per deal subscription; the recurring-revenue layer.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-07', module: 'P5',
+    front: 'On a $200M PE deal where AI tooling cuts DD time 60%, what is the right pricing strategy?',
+    back: 'Fixed fee, not hourly. BigLaw\'s hourly equivalent for legal DD on a $200M deal: $400k–$800k. Boutique fixed fee: $250k–$350k (deal-size-banded). The 60% time saving doesn\'t flow to the client at hourly billing — it flows to the boutique\'s margin. Crucially: don\'t price BigLaw–10%; price BigLaw –40-60% on the headline fee but lock in fixed terms. The structural arbitrage: AI substitutes for associate hours; fixed-fee captures the productivity inside the boutique\'s margin. Hourly billing competes BigLaw on cost-per-hour and loses; fixed-fee competes on price-per-deliverable and wins.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-08', module: 'P5',
+    front: 'Where AI structurally CANNOT replace M&A lawyer judgment — list five examples.',
+    back: '(1) Calling the MAC — durational significance and reasonable-expectation tests (Akorn v. Fresenius, Delaware 2018) are partner judgment, not pattern-matching. (2) Reading a four-party negotiation room (buyer / seller / W&I underwriter / lender) — chemistry, body language, who is bluffing. (3) Hell-or-high-water antitrust commitment — willingness to accept divestitures and market exits. (4) Originating a deal mandate from a 20-year PE relationship — chemistry, trust, partner-network capital. (5) Strategic decision on whether to put a known risk into a warranty vs. a specific indemnity — the central allocation move in any SPA. The boutique never sells against this column.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-09', module: 'P5',
+    front: 'A partner objects: "My BigLaw firm just deployed Harvey. What\'s left for the boutique?" — answer.',
+    back: 'Three points. (1) BigLaw on Harvey is partner-leveraged AI on a billable-hour cost structure — the firm captures the productivity in associate time savings, not in client price reduction. The boutique is fixed-fee from day one; the client captures the savings. (2) Harvey at A&O Shearman / Macfarlanes is a marketing win and a 30% review-time reduction (firm-reported) — but Thomson Reuters\' 2025 survey shows only 20% of legal organisations measure ROI; MIT 2025 found 95% of enterprise AI pilots have no P&L impact. The boutique is a deliverable business with unit economics by construction. (3) Sector specialisation: BigLaw is multi-sector by structural necessity; the boutique is FinTech / FS only and the sector-anomaly database is a moat that compounds.',
+    juris: ['uk', 'us', 'eu']
+  },
+  {
+    id: 'P5-10', module: 'P5',
+    front: 'What does it mean when a partner asks "what\'s your ground truth?" and what is the right answer?',
+    back: 'They are asking whether the boutique\'s accuracy claims are validated against an objective benchmark or are self-reported. Wrong answer: "we tested it on a few examples internally". Right answer: "We benchmarked our DD output against a 200-deal panel of partner-curated extractions across 5 sectors; F1 of 0.93 on contract-clause flagging; for novel sector / novel deal types we run dual extraction with HITL escalation." The right answer is hard to fake and signals operational rigour. Ground-truth datasets are themselves a moat — every deal generates a small ground-truth contribution; over time the boutique has the best benchmarking data for its sector vertical.',
+    juris: ['uk', 'us', 'eu']
+  }
+];
+
 // Merge __FLASH_* fragments. Module fragments (__FLASH_M00..__FLASH_M18) override letter fragments
 // for their module: items with module === NN from letter fragments are dropped if a module fragment exists.
 (function() {

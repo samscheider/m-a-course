@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Module P2 — Industry Deep-Dives — Financial Services & Tech · M&amp;A Course</title>
+<title>Module P2 — Industry Deep-Dives: Financial Services &amp; Tech M&amp;A · M&amp;A Course</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="module-id" content="P2">
 <link rel="stylesheet" href="../assets/styles.css">
@@ -22,16 +22,409 @@
 <main class="page">
   <div class="mod-header">
     <div class="mod-num">Module P2 · Practitioner complement</div>
-    <h1>Industry Deep-Dives — Financial Services & Tech</h1>
+    <h1>Industry Deep-Dives: Financial Services &amp; Tech M&amp;A</h1>
+    <p class="subtitle">Sector-specific M&amp;A practice for the two industries most likely to be the boutique's target clients — banks, insurers, asset managers and payment firms on one side; software, SaaS, AI and data-driven businesses on the other.</p>
   </div>
 
-  <aside class="note">
-    <h5>Module under construction</h5>
-    <p>This module is being researched and built. Check back shortly.</p>
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Map the change-of-control approval architecture for financial-services targets across the three principal regimes — UK <span class="term" data-term="uk-controller-approval">Section 178 FSMA controller approval</span> (PRA / FCA), EU <span class="term" data-term="ecb-qualifying-holding">ECB qualifying-holding procedure</span> under the Single Supervisory Mechanism, and US <span class="term" data-term="bhc-act">Bank Holding Company Act</span> / <span class="term" data-term="bank-merger-act">Bank Merger Act</span> approvals — and translate the practical implications for SPA conditionality and longstop calibration.</li>
+      <li>Explain the prudential-capital implications of acquiring a regulated financial firm: <span class="term" data-term="cet1-ratio">Common Equity Tier 1 (CET1)</span> commitments under <span class="term" data-term="crr-iii">CRR III / CRD VI</span> and the <span class="term" data-term="output-floor">Basel III output floor</span> for banks; <span class="term" data-term="solvency-capital-requirement">Solvency Capital Requirement (SCR)</span> coverage and the <span class="term" data-term="matching-adjustment">Matching Adjustment</span> for insurers; and the M&amp;A-specific machinery (<span class="term" data-term="part-vii-transfer">Part VII transfers</span>; US state-level <span class="term" data-term="form-a">Form A</span> filings).</li>
+      <li>Diagnose the principal IP-due-diligence (DD) failure modes in a tech acquisition — <span class="term" data-term="founder-ip-capture">founder IP capture</span> gaps, defective <span class="term" data-term="piia">Proprietary Information and Inventions Assignment (PIIA)</span> language, broken assignment chains, and state-law carve-outs (California Lab. Code § 2870) — and prescribe the standard remediation menu.</li>
+      <li>Run the open-source-software (OSS) compliance checklist on a software target: read a <span class="term" data-term="sbom">Software Bill of Materials (SBOM)</span>, identify <span class="term" data-term="copyleft">copyleft</span> exposure (GPL, LGPL, AGPL), and explain why <span class="term" data-term="agpl-saas-loophole">AGPL-licensed code in a SaaS stack</span> is a different problem from a permissive-licensed component.</li>
+      <li>Frame the live regulatory and litigation risks in tech M&amp;A — cross-border data-transfer obligations after <span class="term" data-term="schrems-ii">Schrems II</span> and the <span class="term" data-term="data-privacy-framework">EU-US Data Privacy Framework</span>; AI-training-data exposure under <span class="term" data-term="fair-use-defended">fair-use jurisprudence</span> (NYT v OpenAI) and the <span class="term" data-term="eu-ai-act">EU AI Act</span>; and the post-2022 antitrust pattern (Microsoft/Activision cleared with undertakings; Adobe/Figma terminated; Meta/Giphy unwound; Amazon/iRobot terminated; Booking/eTraveli blocked).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Industry-generic M&amp;A skills get a lawyer to "competent on most deals". Industry-specific fluency gets a lawyer the brief in the first place. The two sectors covered here — regulated financial services and tech (broadly: software, SaaS, AI, data businesses) — are the most likely target clients of an AI-native boutique, for two distinct reasons. Financial-services M&amp;A is dominated by regulatory architecture: every transaction sits inside a <em>change-of-control</em> approval regime that determines whether the deal can sign and close, and inside a <em>capital-adequacy</em> regime that determines whether the post-closing entity will operate. Tech M&amp;A is dominated by intellectual-property (IP), open-source, data-protection and AI-specific risk: the principal assets are intangible, the principal liabilities are litigation-shaped, and the antitrust landscape since 2022 has actively unwound completed deals. A senior partner asking <em>"what did the PRA say on the controller change?"</em> or <em>"what's the SBOM look like — any AGPL?"</em> is asking the diagnostic question that separates a sector specialist from a generalist.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — sector-specific phrases you'll hear</h5>
+    <p>If a senior M&amp;A partner uses one of these phrases in a meeting, you should not need to ask. The forward-link in <em>italics</em> shows where each is developed below.</p>
+    <p><strong>Financial services:</strong></p>
+    <ol>
+      <li><strong>"What does the Section 178 timetable look like?"</strong> — UK shorthand for the <span class="term" data-term="section-178-notice">Part 12 FSMA controller-change notification</span>. The 60-working-day clock plus optional 30-working-day pause is the tail of the longstop. <em>See Section A below.</em></li>
+      <li><strong>"Are we SI or LSI?"</strong> — is the target a <span class="term" data-term="ecb-significant-institution">Significant Institution</span> (directly ECB-supervised, qualifying-holding decided by the ECB) or a Less Significant Institution (national competent authority decides)? Determines who you're lobbying and the timetable. <em>Section A.</em></li>
+      <li><strong>"Did we hit Riegle-Neal?"</strong> — does the deal trigger the US <span class="term" data-term="riegle-neal-cap">10% nationwide / 30% statewide deposit cap</span>? Capital One/Discover was cleared against this in April 2025. <em>Section A.</em></li>
+      <li><strong>"Do we need a Form A in every state?"</strong> — for US insurance acquisitions, parallel <span class="term" data-term="form-a">Form A change-of-control filings</span> in each state of domicile. <em>Section A.</em></li>
+      <li><strong>"Is the buyer fit-and-proper for SMF7?"</strong> — UK shorthand for whether a controller's representative will require <span class="term" data-term="smcr">Senior Managers Regime</span> approval to sit on the board with significant influence. <em>Section A.</em></li>
+      <li><strong>"Can we Part VII the back-book?"</strong> — UK insurance-business transfer mechanism for moving a portfolio of policies from one insurer to another via <span class="term" data-term="part-vii-transfer">High Court sanction</span>. Often part of an integration plan. <em>Section A.</em></li>
+    </ol>
+    <p><strong>Tech:</strong></p>
+    <ol>
+      <li><strong>"What does the SBOM say?"</strong> — give me the <span class="term" data-term="sbom">Software Bill of Materials</span> with the licence type for every open-source component. Standard partner ask in any tech-DD review. <em>Section B.</em></li>
+      <li><strong>"Any GPL contamination?"</strong> — does any <span class="term" data-term="copyleft">copyleft</span>-licensed component touch the proprietary code in a way that triggers source-disclosure? AGPL in a SaaS stack is the worst case. <em>Section B.</em></li>
+      <li><strong>"Did the founder PIIA actually assign?"</strong> — partner-level question: do the <span class="term" data-term="piia">Proprietary Information and Inventions Assignment</span> agreements use "hereby assigns" (a present transfer) rather than "agrees to assign" (a future obligation)? A common chain-of-title break. <em>Section B.</em></li>
+      <li><strong>"DPF-certified?"</strong> — has the US importer self-certified under the <span class="term" data-term="data-privacy-framework">EU-US Data Privacy Framework</span> (in force 10 July 2023), avoiding the post-Schrems II SCC + <span class="term" data-term="transfer-impact-assessment">Transfer Impact Assessment</span> machinery? <em>Section B.</em></li>
+      <li><strong>"Is the model Annex III?"</strong> — does the AI-system being acquired fall in one of the eight high-risk categories of <span class="term" data-term="eu-ai-act-annex-iii">EU AI Act Annex III</span>, triggering conformity assessment, registration and ongoing-compliance obligations? <em>Section B.</em></li>
+      <li><strong>"What's our NYT-v-OpenAI exposure?"</strong> — for an AI target, what is the legal posture on training-data provenance under the US <span class="term" data-term="fair-use-defended">fair-use defence</span>, and is there ongoing or prospective copyright litigation? <em>Section B.</em></li>
+    </ol>
   </aside>
 
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> <a href="04-due-diligence.html">Module 04 (Due Diligence)</a> for the universal DD framework that this module specialises by sector; <a href="08-conditions-precedent.html">Module 08 (Conditions Precedent &amp; Regulatory Clearances)</a> for the antitrust / FDI machinery and hell-or-high-water that underwrites the sector-specific clearance work below; <a href="12-reps-and-warranties.html">Module 12 (Reps &amp; Warranties)</a> and <a href="13-indemnification.html">Module 13 (Indemnification)</a> for the warranty / indemnity package that picks up sector-specific risks; <a href="14-wi-insurance.html">Module 14 (W&amp;I)</a> for the underwriter exclusions specific to financial services (pension underfunding, regulatory fines) and tech (cyber, data, AI) targets.</li>
+      <li><strong>Forwards:</strong> <a href="P3-negotiation-playbook.html">Module P3 (Negotiation Playbook)</a> develops the negotiation moves that sit on top of the sector-specific issues in this module; <a href="P4-origination.html">Module P4 (Origination)</a> uses the sector taxonomies to structure target-list construction.</li>
+      <li><strong>Cross-module dominoes:</strong> A regulated-FS deal triggers (i) longer longstop dates (90+ days for UK / EU bank deals; 6–12 months for US insurance multi-state filings); (ii) a separate "regulatory CP" with bespoke efforts standard (often "reasonable best efforts" rather than hell-or-high-water because divestiture is rarely the regulator's lever — capital injection is); (iii) bring-down warranties on capital ratios; (iv) interim-period restrictions on dividend distribution; (v) W&amp;I exclusions for regulatory fines as a public-policy non-insurability matter. A tech deal triggers (i) IP-warranty package with confirmatory assignments at signing; (ii) data-protection warranty with a TIA / DPF-certification call-out; (iii) AI-specific warranty on training-data provenance; (iv) sector-specific underwriter exclusions (cyber sublimit; AI / model liability; GDPR fines); (v) <span class="term" data-term="cma-jurisdictional-test">CMA share-of-supply</span> jurisdictional review even where EU jurisdiction is not engaged.</li>
+    </ul>
+  </aside>
+
+  <h2>Section A. Financial Services M&amp;A</h2>
+
+  <p>Financial services is the sector where the regulator is the third party in the room from kick-off through closing. A non-FS partner's instinctive frame — sign on diligence, close on antitrust — does not work; in regulated FS, neither signing nor closing happens without an affirmative supervisor decision, and the supervisor's decision is often conditional on prudential commitments that re-shape the deal economics.</p>
+
+  <h3>Change-of-control approvals — three regimes, one architecture</h3>
+
+  <p>The architecture is universal: any person taking <em>control</em> of a regulated financial firm — broadly, a 10% (or higher band) holding of capital or voting rights, or a holding capable of significant influence — must obtain advance regulator approval. Sub-regimes vary by the size and nature of the target and by jurisdiction.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK — Part 12 FSMA controller change</h5>
+      <p>Any acquirer crossing 10/20/30/50% of voting power in a UK-authorised firm files a <span class="term" data-term="section-178-notice">Section 178 notice</span> under Part 12 of the Financial Services and Markets Act 2000. <strong>Decision-maker:</strong> the Prudential Regulation Authority (PRA) for dual-regulated firms (banks, insurers, designated investment firms), assessed jointly with the FCA; FCA solo for FCA-only firms (asset managers, brokers, advisers, payment institutions, e-money institutions). <strong>Statutory clock:</strong> 60 working days from the regulator's acknowledgement of completeness, with one optional 30-working-day pause for additional information. <strong>Five tests:</strong> reputation; financial soundness of the proposed controller; ability of the firm to comply with threshold conditions post-acquisition; suspicion of money laundering / terrorist financing; impact on the UK financial system. <strong>Senior-Managers overlay:</strong> a representative of a new controller exerting significant day-to-day influence may need <span class="term" data-term="smcr">SMF7</span> approval (the "controller-controller" function); Phase 1 SMCR reforms confirmed April 2026 narrow this for minority NEDs.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU — ECB qualifying-holding procedure under SSM</h5>
+      <p>Same 10/20/30/50% bands, anchored in Article 22 CRD IV (now Article 23 CRD V/VI). The <span class="term" data-term="ecb-qualifying-holding">qualifying-holding procedure</span> under the Single Supervisory Mechanism (SSM Regulation (EU) No 1024/2013 Article 15) routes the notification to the national competent authority (NCA), which prepares a draft decision and submits to the ECB. <strong>Who decides:</strong> the ECB for <span class="term" data-term="ecb-significant-institution">Significant Institutions</span> (€30bn+ assets; top three in member state; significant cross-border activity); the NCA for Less Significant Institutions, with ECB intervention right. <strong>Clock:</strong> 60 working days from completeness, with up to 20 (or 30 for non-EEA acquirers) extra days for additional information. The ECB's <em>Guide on Qualifying Holding Procedures</em> (May 2023) sets out the assessment expectations and emphasises pre-application dialogue.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US — BHC Act, Bank Merger Act, CIBC Act, state insurance Form A</h5>
+      <p>Multi-statute regime. <strong><span class="term" data-term="bhc-act">Bank Holding Company Act 1956</span> § 3</strong> (12 U.S.C. § 1841 et seq.): Federal Reserve approval to acquire a bank or BHC. <strong><span class="term" data-term="bank-merger-act">Bank Merger Act 1960</span></strong> (Federal Deposit Insurance Act § 18(c); 12 U.S.C. § 1828(c)): primary federal banking agency approval (OCC for national banks; FDIC for state non-member banks; Fed for state member banks) to merge or consolidate insured depository institutions. <strong><span class="term" data-term="change-in-bank-control-act">Change in Bank Control Act 1978</span></strong> (12 U.S.C. § 1817(j)): 60-day prior notice for individual or non-corporate acquirers of 10%+. <strong><span class="term" data-term="form-a">Form A</span></strong> under each state's adoption of the <span class="term" data-term="naic-model-holding-company-act">NAIC Insurance Holding Company System Regulatory Act</span>: pre-acquisition statement filed with the domestic state insurance commissioner. <strong>Clocks:</strong> BHC § 3 — 91 days from completeness, with 30-day post-approval Department of Justice (DOJ) antitrust waiting period (15 days if authorised); Bank Merger Act mirrors; CIBC Act 60 days; Form A 60 days from completeness state-by-state, but deficiency letters and contested filings drift to 3–6 months. <strong>Concentration limits:</strong> <span class="term" data-term="riegle-neal-cap">Riegle-Neal</span> 10% nationwide / 30% statewide deposit caps (1994); Dodd-Frank § 622 (2010) added a 10% nationwide cap on total consolidated liabilities.</p>
+    </aside>
+  </div>
+
+  <p><strong>Practitioner translation.</strong> The architecture matters because the longstop, the timetable, the conditionality, and the reverse-termination-fee calibration all flow from it. A US bank-merger SPA typically has a 12-month longstop; a UK / EU bank deal can run 9–12 months from announcement to closing; a multi-state US insurance deal can run 6–18 months because the state filings are not parallelisable in practice. Capital One/Discover (announced February 2024, approved 18 April 2025, closed May 2025) took 14 months from announcement to clearance — a useful benchmark. UBS / Credit Suisse (announced 19 March 2023, closed 12 June 2023) was 12 weeks because the Swiss government invoked emergency powers and disapplied corporate-law shareholder approval — <em>not</em> a benchmark for a regular deal but instructive on how the regulatory state can override corporate-law protections in a banking crisis.</p>
+
+  <aside class="lever both">
+    <h5>What CP schedule looks like for a bank acquisition (worked example)</h5>
+    <p>A buyer acquiring a UK retail bank from a parent group will see a CP schedule structured something like the following — the architecture is the same on EU or US deals with substitutions for the relevant regulator and statute:</p>
+    <ol>
+      <li><strong>Antitrust / merger control.</strong> CMA review (UK voluntary regime; share-of-supply test); EUMR if EU thresholds met; potentially DOJ Bank Merger Act review parallel-tracked. <strong>Effort standard:</strong> "reasonable best efforts" or — where there is divestiture risk — a hell-or-high-water clause specifying remedies the buyer will accept up to a defined maximum (often a percentage of target net revenue or a list of specified branches).</li>
+      <li><strong>PRA / FCA controller approval.</strong> Section 178 notice filed; 60-working-day clock plus 30-working-day pause budgeted into the longstop. <strong>Effort standard:</strong> "reasonable best efforts" — note that hell-or-high-water on regulator approval is typically <em>not</em> drafted because the regulator's lever is rarely a divestiture; it is more often a capital-injection condition or a governance commitment. <strong>Specific obligations:</strong> buyer will provide the PRA with a 5-year business plan, post-closing capital coverage commitments, governance arrangements (senior managers, board composition, group risk-management framework), and AML / financial-crime systems. Failure of the regulator to approve is <em>not</em> a buyer-MAC unless drafted as such.</li>
+      <li><strong>Foreign Direct Investment (FDI) / national-security clearances.</strong> UK National Security and Investment Act 2021 (where the target's activities fall in a notifiable sector — financial services is largely <em>not</em> a notifiable sector but data infrastructure, critical infrastructure and dual-use components can be); equivalents in the EU member states (Germany AWG; France IEF; Italy Golden Power; Spain RD-Ley 8/2020); CFIUS in the US (typically not mandatory for FS but voluntary where critical-infrastructure or sensitive-data exposure exists).</li>
+      <li><strong>Bring-down of warranties at closing.</strong> Standard SPA mechanic. For a bank, the bring-down standard is calibrated on (i) capital ratios — typically a "no breach of any minimum regulatory capital requirement" representation, brought down on a true-and-accurate or in-all-material-respects basis at closing; (ii) absence of any new regulatory enforcement action; (iii) absence of a Material Adverse Change in financial condition.</li>
+      <li><strong>Longstop date.</strong> Calibrated to the slowest CP, typically 12 months from signing for a UK / EU bank deal, with a buyer/seller right to terminate after the longstop subject to good-faith extension obligations if a CP is "reasonably likely to be satisfied within X further days".</li>
+      <li><strong>Reverse termination fee.</strong> A buyer break-fee payable if the regulator refuses approval not attributable to the seller. Typical range 1.5–3% of equity value for FS deals; structured as the buyer's exclusive remedy except for fraud or wilful breach.</li>
+    </ol>
+    <p><strong>The single highest-leverage line.</strong> The buyer's regulatory CP is rarely subject to hell-or-high-water in FS deals. Instead the buyer commits to <em>"reasonable best efforts"</em> to obtain approval, with specific carve-outs identifying capital-injection commitments and governance commitments the buyer will accept up to a cap. This is because the regulator's primary lever is not the divestiture (as in antitrust); it is the prudential commitment package that re-shapes the post-closing entity's balance sheet and governance.</p>
+  </aside>
+
+  <h3>Capital adequacy implications</h3>
+
+  <p>For a regulated FS target, the buyer's regulatory submission and CP package live or die on <em>capital adequacy</em>. The regulator's gatekeeping question is: will the post-closing entity hold sufficient capital to absorb the risks it is taking? The regimes:</p>
+
+  <ul>
+    <li><strong>Banks — Basel III / CRR III / CRD VI.</strong> Pillar 1 minimum capital: 4.5% <span class="term" data-term="cet1-ratio">Common Equity Tier 1 (CET1)</span>, 6% Tier 1, 8% Total Capital, all expressed as a percentage of risk-weighted assets (RWA). On top sit the capital conservation buffer (2.5%), countercyclical buffer (0–2.5%), G-SII / O-SII surcharges (0–3.5%), and the Pillar 2 add-on. Most large EU and UK banks operate at 12–14% CET1. <strong><span class="term" data-term="crr-iii">CRR III (Reg (EU) 2024/1623)</span></strong>, in force 1 January 2025, implements final Basel III in the EU. <strong>CRD VI (Dir (EU) 2024/1619)</strong>, transposition 11 January 2026, accompanies. The principal M&amp;A-relevant change is the <strong><span class="term" data-term="output-floor">output floor</span></strong>: capital floor for internal-model banks set at 50% of standardised RWA in 2025, rising 5pp annually to 70% by 2029. A target heavy in low-risk-weighted assets under internal models (e.g., residential mortgages) will see effective RWA inflation under the floor — the buyer's deal model and capital coverage commitment must reflect this. <strong>UK:</strong> the PRA capital regime mirrors with national modifications; the UK has not adopted CRR III directly but has equivalent rules including the output floor. <strong>US:</strong> the "Basel III endgame" proposal (originally scheduled for 2025–2028 implementation) was significantly revised by the Federal Reserve in September 2024 (the "Barr revisions") with anticipated phase-in 2027–2031.</li>
+    <li><strong>Insurers — Solvency II / Solvency UK.</strong> The principal capital ratio is the <span class="term" data-term="solvency-capital-requirement">Solvency Capital Requirement (SCR)</span>, calibrated to a 99.5% one-year value-at-risk; below 100% triggers a recovery plan, below the Minimum Capital Requirement (MCR; 25–45% of SCR) triggers regulatory intervention. SCR is calculated either by the standard formula or an internal model approved by the supervisor. <strong>Solvency UK reform</strong> (effective 30 June 2024, PS10/24) broadened the eligible-asset list for the <span class="term" data-term="matching-adjustment">Matching Adjustment</span> to include "highly predictable" cash-flow assets up to 10% of MA benefit; introduced a new MALIR (Matching Adjustment Limit Reporting) annual return; required SFCR-timed annual MA attestations. EU Solvency II equivalent retained but with narrower MA eligibility. <strong>M&amp;A consequence:</strong> for an insurance target, the buyer must satisfy the supervisor that post-acquisition SCR coverage will not fall below the firm's targeted operating level (typically 150–180% of SCR for life insurers). Reserves on long-tail liabilities are an actuarial DD focus area; the M&amp;A-specific machinery for moving back-books to a different entity is a Part VII transfer (UK) or a portfolio transfer under the relevant EU member state law.</li>
+    <li><strong>Asset managers and investment firms.</strong> Capital regime is lighter (Investment Firms Regulation / Directive (IFR / IFD) in the EU; equivalent UK Investment Firms Prudential Regime (IFPR)) but still relevant: capital is calibrated to "K-factors" reflecting the firm's activities (assets under management, client orders handled, daily trading flow). A buyer's controller change must demonstrate post-closing K-factor coverage.</li>
+    <li><strong>Payment and e-money institutions.</strong> The Payment Services Directive 2 (PSD2; Directive (EU) 2015/2366) and the proposed PSD3 / Payment Services Regulation set safeguarding and capital requirements. Often light on capital but heavy on safeguarding-account, AML and operational-resilience compliance.</li>
+  </ul>
+
+  <h3>Insurance specifics — Part VII, Form A, Solvency II</h3>
+
+  <p>Insurance M&amp;A has two unusual features. First, the policy book is the principal asset, but it is also a contractual relationship with policyholders that cannot lawfully be transferred without their consent unless a statutory mechanism intervenes. Second, the regulator's interest extends to long-tail liabilities (annuities; long-term life policies) where the post-closing entity must be able to meet obligations decades into the future.</p>
+
+  <ul>
+    <li><strong>UK <span class="term" data-term="part-vii-transfer">Part VII insurance business transfer</span>.</strong> Sections 104–117 FSMA. A statutory transfer of long-term or general insurance business between regulated entities, requiring High Court sanction and PRA / FCA reports. <strong>Process:</strong> appointment of an <span class="term" data-term="independent-expert">Independent Expert</span> (PRA approves the IE) to report on the likely effect on policyholders; directions hearing; policyholder notification (every affected policyholder receives the scheme circular and IE summary); regulator reports to court; sanction hearing. <strong>Typical duration:</strong> 12–18 months. <strong>Cost:</strong> low millions. <strong>M&amp;A use case:</strong> a buyer that has acquired a target via a share deal may run a Part VII post-closing to consolidate policy books across the new group entity; alternatively, an asset-deal structure may require a Part VII because the target's policies cannot lawfully novate without it.</li>
+    <li><strong>US <span class="term" data-term="form-a">Form A change-of-control filing</span>.</strong> Required under each state's adoption of the <span class="term" data-term="naic-model-holding-company-act">NAIC Insurance Holding Company System Regulatory Act</span>. Filed with the domestic state insurance commissioner; approval required before the acquisition can be consummated. <strong>Contents:</strong> identity and biographical affidavits of acquirer and senior officers; pre-acquisition financial statements; post-acquisition organisational chart; 5-year business plan; sources and amount of consideration. <strong>Multi-state insurer:</strong> file Form A in each domicile state; total elapsed time often 6–12 months for a large group. The model law also creates Form B annual registration statements, Form D prior-notice transactions between affiliates, and Form E pre-acquisition market-share notification.</li>
+    <li><strong>EU portfolio transfers.</strong> Each member state has its own statutory mechanism — France: <em>portefeuille transfer</em> under Article L.324-1 of the Code des assurances; Germany: <em>Bestandsübertragung</em> under § 13 VAG; Italy: portfolio transfer under Article 198 of the Codice delle Assicurazioni Private. All require regulatory approval and most require policyholder notification. Cross-border EU portfolio transfers add a layer of home-state / host-state coordination.</li>
+  </ul>
+
+  <h3>MiFID II / MiFIR considerations</h3>
+
+  <p>Where the target is an investment firm, asset manager, or trading venue subject to MiFID II (Directive 2014/65/EU) and MiFIR (Regulation (EU) 600/2014; UK retained-equivalent), the M&amp;A-relevant interactions are:</p>
+
+  <ul>
+    <li><strong>Authorisation continuity.</strong> The MiFID licence is held by the entity, not the parent; a share-deal preserves the licence subject to controller approval. An asset deal involves moving the regulated activity across legal entities and re-authorisation.</li>
+    <li><strong>Best-execution / governance arrangements.</strong> Post-closing governance, compliance, and best-execution arrangements are typically a focus of the regulator's controller-change assessment. The buyer's submission will detail the post-closing compliance organisation, the chief compliance officer's reporting line, and the integration plan for any group policies.</li>
+    <li><strong>Cross-border passporting.</strong> Post-Brexit, UK-licensed firms have lost MiFID passporting; reverse-passporting from the EU into the UK requires separate authorisation. M&amp;A across the channel must rebuild the cross-border permission architecture deal-by-deal. Tools include third-country branch authorisation, "cornerstone" EU subsidiaries (most large UK firms set up post-Brexit), and reverse-solicitation reliance (limited).</li>
+    <li><strong>Outsourcing and operational resilience.</strong> The Digital Operational Resilience Act (DORA; Regulation (EU) 2022/2554), in force 17 January 2025, imposes ICT risk-management, incident-reporting and third-party-monitoring obligations on financial entities. UK equivalent: PRA / FCA Operational Resilience policy (effective March 2022 with full implementation by March 2025). M&amp;A diligence must verify DORA / OR compliance and identify integration-related ICT risk.</li>
+  </ul>
+
+  <h3>Recent precedents — what they teach</h3>
+
+  <ul>
+    <li><strong><span class="term" data-term="ubs-credit-suisse">UBS / Credit Suisse (March 2023)</span>.</strong> Announced 19 March 2023; closed 12 June 2023. The Swiss Federal Council exercised emergency powers under the Federal Act on Banks and Savings Banks to disapply corporate-law shareholder approval for both UBS and Credit Suisse boards. FINMA wrote down CHF 16bn (~US$17.2bn) of Credit Suisse Additional Tier 1 (AT1) bonds to zero — the largest AT1 write-down on record — while shareholders received CHF 3bn in UBS shares. The Swiss Federal Administrative Court ruled in October 2025 that the AT1 write-down was unlawful and the underlying emergency decree (Article 5a) unconstitutional; the merger itself was not unwound but liability claims remain live. <strong>Partner takeaways:</strong> AT1 contractual write-down language is now intensely scrutinised in any bank deal; the rescue model can override corporate-law protections in a banking crisis; and bank M&amp;A in stress conditions can move on a 72-hour timeline rather than a 12-month timeline.</li>
+    <li><strong><span class="term" data-term="capital-one-discover">Capital One / Discover (April 2025)</span>.</strong> $35.3bn, the largest US bank merger by market value approved since 2008. Announced February 2024; Federal Reserve and OCC approved 18 April 2025; closed May 2025. Approved with significant conditions: a $100m fine and consent order against Discover for interchange-fee overcharges 2007–2023; OCC approval conditioned on corrective actions to address root causes of outstanding enforcement actions. The DOJ was consulted but did not object on antitrust grounds despite credit-card concentration concerns. <strong>Partner takeaways:</strong> the gates re-opened for big bank M&amp;A in 2024–2025 but conditions and remediation commitments are now standard; 14 months from announcement to approval is a useful longstop benchmark; the deal cleared Riegle-Neal because the combined institution did not breach the 10% nationwide deposit cap.</li>
+    <li><strong>BB&amp;T / SunTrust (December 2019, becoming Truist).</strong> $66bn merger of equals — the largest US bank deal of the prior cycle. Took 11 months from announcement to closing. Notable for the parties' careful pre-announcement engagement with the Fed on the post-closing capital plan and the $20bn community-development pledge that addressed Riegle-Neal community-impact concerns. Useful template for the "regulatory commitments package" structure on a US bank deal.</li>
+    <li><strong>Cigna / Express Scripts (December 2018).</strong> $54bn US healthcare-PBM combination. Insurance / pharmacy-benefit-manager regulatory architecture; cleared by all 50 state insurance commissioners (parallel Form A filings) plus DOJ antitrust review; took 9 months. Reference point for parallel-state-filing logistics.</li>
+  </ul>
+
+  <aside class="pitfall">
+    <h5>Financial services DD red flags</h5>
+    <ul>
+      <li><strong>Capital headroom collapse on integration.</strong> The target's standalone CET1 ratio looks healthy but the combined entity post-acquisition runs close to the regulatory minimum after goodwill deductions, deferred tax asset deductions, and new RWA from the acquisition itself. The buyer's submission must demonstrate post-closing CET1 stays above the firm's targeted operating level — and the regulator will treat the targeted level as a binding commitment.</li>
+      <li><strong>Pension underfunding (UK / EU).</strong> A target with a legacy defined-benefit pension scheme can carry an actuarial deficit that swings with discount rates. The PRA / FCA controller-change assessment can be conditioned on a pension-covenant strengthening commitment from the new parent (typically a Type B or Type C contingent-asset arrangement under the UK Pensions Regulator's clearance regime). Pension underfunding is also a near-universal W&amp;I exclusion.</li>
+      <li><strong>Outstanding regulatory enforcement actions.</strong> A target with an open enforcement matter (consent order; ongoing investigation; live MRA / MRIA in US Fed terminology) faces an automatic tightening of the controller assessment. The OCC Capital One/Discover April 2025 conditions are the live precedent — approval contingent on corrective actions to address root causes.</li>
+      <li><strong>Anti-money-laundering / financial-crime systems gaps.</strong> The fifth FSMA controller test (suspicion of money laundering / terrorist financing) is the regulator's discretionary anti-PE lever. A PE acquirer with LP-stack opacity, or a strategic acquirer with inadequate group-level financial-crime systems, will face deeper review.</li>
+      <li><strong>Cross-border resolvability.</strong> For G-SIB and D-SIB targets, the buyer must demonstrate that the post-closing group is resolvable — consistent with the Bank of England's preferred resolution strategy (single point of entry vs multiple point of entry); EU SRB resolution planning; FDIC IDI resolution planning. The 2024 Bank of England Resolvability Assessment Framework rounds and SRB priority-letter processes feed directly into M&amp;A clearance.</li>
+      <li><strong>Senior-managers fitness.</strong> A new controller's representatives sitting on the board of the target may need <span class="term" data-term="smcr">SMF</span> approval; a representative who fails a <span class="term" data-term="fit-and-proper">fit-and-proper</span> assessment can stall the deal even if the controller approval itself is granted.</li>
+      <li><strong>Outsourcing and operational resilience.</strong> Post-DORA (EU; 17 January 2025) and the UK Operational Resilience regime (full effective March 2025), gaps in third-party ICT risk-management or in important business service mappings can be enforcement-prone and integration-disruptive.</li>
+      <li><strong>Sanctions exposure.</strong> A target with sanctions-screening gaps (OFAC; UK OFSI; EU sanctions regimes) can present both a pre-closing diligence problem and a post-closing enforcement problem. UBS's pre-existing Russia-sanctions exposure was a significant integration burden post-Credit Suisse.</li>
+    </ul>
+  </aside>
+
+  <h2>Section B. Tech M&amp;A</h2>
+
+  <p>Tech M&amp;A is the sector where the principal assets are intangible, the principal liabilities are litigation-shaped, and the regulatory landscape since 2022 has changed shape under the parties' feet. The deal mechanics are familiar (SPA, R&amp;Ws, indemnification, W&amp;I, antitrust); the diligence work is what separates a generalist from a specialist.</p>
+
+  <h3>IP DD — founder IP capture, PIIA chains, confirmatory assignments</h3>
+
+  <p>The starting point of every tech-deal IP DD is the question: <em>does the target actually own its IP?</em> The standard chain-of-title sequence is (i) <span class="term" data-term="founder-ip-capture">founder IP capture</span> at incorporation; (ii) employee and contractor <span class="term" data-term="piia">PIIA</span> agreements containing present assignments of all work product; (iii) third-party-licensed IP with audit-trail of licence-compliance; (iv) registered IP (patents, trademarks, registered designs) with current registrations and assignments recorded at the relevant registry. Each link is a place where the chain can break.</p>
+
+  <h4>Founder IP capture</h4>
+
+  <p>The buyer wants confirmation that all material IP created by each founder — pre-incorporation, during employment, and on personal time using company resources — has been transferred to the company by valid present assignment. Common gaps:</p>
+
+  <ul>
+    <li><strong>Founder created the core algorithm before incorporation</strong> and never expressly assigned it to the company. Absent a present assignment, the founder retains the IP and the company has only an implied licence at best (which is not enough to support an acquisition).</li>
+    <li><strong>PIIA uses "agrees to assign" language</strong> (a future obligation requiring a separate act) rather than "hereby assigns" (a present transfer). The leading US case is <em>Stanford v Roche</em>, 563 U.S. 776 (2011), where "agrees to assign" was held to be a future promise that did not transfer the patent automatically; "hereby assigns" by contrast effects an immediate transfer. Modern PIIA drafting universally uses "hereby assigns".</li>
+    <li><strong>Pre-existing inventions schedule is missing or incomplete.</strong> A founder's PIIA should list all prior inventions excluded from the assignment; if the schedule is missing or vague, ambiguity exists about whether specific pre-existing IP belongs to the founder or the company.</li>
+    <li><strong>State-law carve-outs.</strong> California Lab. Code § 2870, Delaware 19 Del. C. § 805, Illinois 765 ILCS 1060/2, Minnesota § 181.78, Washington RCW 49.44.140, North Carolina G.S. § 66-57.1 carve out from employee-IP-assignment agreements inventions developed entirely on the employee's own time without employer resources and not relating to the employer's business or actual / demonstrably anticipated R&amp;D. A clean PIIA respects these carve-outs and includes the statutory acknowledgement.</li>
+    <li><strong>UK statutory employee inventions.</strong> Patents Act 1977 ss.39–43 give employees rights to compensation for outstanding-benefit patents; the Section 40 regime was the basis of <em>Shanks v Unilever</em> [2019] UKSC 45 (£2m compensation award upheld). The PIIA cannot contract this out, but the company should have a clear policy and records.</li>
+    <li><strong>Contractor and consultant work.</strong> A separate failure mode: independent contractors who were not party to a written assignment or whose contracts contained "work-for-hire" language that does not work under the relevant copyright regime. UK CDPA 1988 s.11 provides that copyright in commissioned works belongs to the contractor, not the commissioner, absent express assignment — different from the US "work made for hire" doctrine in 17 U.S.C. § 101.</li>
+  </ul>
+
+  <p><strong>The standard remediation menu.</strong> Confirmatory assignments executed at signing or at closing — short-form documents in which each founder, employee or contractor expressly assigns to the company all rights in any IP created before the date of the confirmatory assignment that was used in the company's business. Effective for cooperative parties. <strong>Limit:</strong> a <span class="term" data-term="confirmatory-assignment">confirmatory assignment</span> cannot retroactively cure a chain-of-title problem against a third-party challenger who acquired rights from a non-assigning original creator before the confirmatory assignment was executed. Where founders have left and are uncooperative, a confirmatory assignment may not be obtainable; the structural risk must be priced (price reduction) or indemnified (specific indemnity outside the cap, with seller-backed escrow).</p>
+
+  <h3>Open-source compliance — what's audited, what's the SBOM for</h3>
+
+  <p>Almost every modern software product depends on open-source-software (OSS) components. The acquisition risk is that some of those components are licensed under terms that, when the component is incorporated into the proprietary product, trigger obligations the buyer has not understood — most consequentially, source-disclosure obligations under copyleft licences.</p>
+
+  <h4>Licence taxonomy</h4>
+
+  <ul>
+    <li><strong>Permissive licences</strong> — MIT, BSD (2-clause, 3-clause), Apache 2.0, ISC. Require attribution and notice retention; do <em>not</em> require derivative works to be distributed under the same licence. Generally low-risk for a proprietary distributor.</li>
+    <li><strong>Weak copyleft</strong> — Mozilla Public License (MPL) 2.0, Eclipse Public License (EPL). Source-disclosure obligation extends only to modifications of the licensed component itself, not to derivatives that link to or include the component. File-level copyleft.</li>
+    <li><strong>Strong copyleft (distribution-triggered)</strong> — GNU General Public License (GPL) v2, GPL v3. Source-disclosure obligation extends to the entire combined work distributed. Anyone <em>distributing</em> a binary built on GPL code must offer the corresponding source under GPL terms. This is what "GPL contamination" refers to.</li>
+    <li><strong>Lesser GPL (LGPL)</strong> — limits the obligation to the LGPL component itself: an application that links dynamically against an LGPL library can remain proprietary, but modifications to the LGPL component must be released under LGPL.</li>
+    <li><strong>Affero GPL (AGPL)</strong> — closes the SaaS loophole. Classic GPL is triggered by <em>distribution</em>; a SaaS provider running GPL code on its own servers and exposing only a network interface does not distribute the binary and so historically escaped GPL's source-disclosure obligation. AGPL section 13 extends the obligation: any user interacting with AGPL code over a network must be offered the corresponding source. <strong><span class="term" data-term="agpl-saas-loophole">AGPL in a SaaS stack</span> is a material DD finding.</strong></li>
+    <li><strong>Source-available / commercial-use restricted licences</strong> — Server Side Public License (SSPL; MongoDB), Business Source License (BUSL; HashiCorp, Sentry), Elastic License v2 (ELv2; Elastic). Not OSI-approved; impose restrictions on commercial use or competitive use that traditional open-source licences do not. A target depending on these for its own product may have used them inconsistently with licence terms.</li>
+  </ul>
+
+  <h4>What's audited</h4>
+
+  <p>A buyer's tech DD typically requires:</p>
+  <ol>
+    <li><strong>An <span class="term" data-term="sbom">SBOM (Software Bill of Materials)</span></strong> with licence type, version and source URL for every open-source component. Generated by tools such as Black Duck, Snyk Open Source, FOSSA, Mend (formerly WhiteSource) or Tidelift. Common formats: SPDX (Linux Foundation), CycloneDX (OWASP), SWID. <strong>Regulatory drivers:</strong> US Executive Order 14028 (May 2021) requires federal agencies to demand SBOMs from software suppliers; the EU Cyber Resilience Act, in force from December 2024, imposes SBOM-equivalent obligations on products with digital elements.</li>
+    <li><strong>A copyleft / proprietary-code interaction map.</strong> For each GPL / AGPL / strong-copyleft component, identify how it is used (linked? bundled? called over the network?) and whether the use triggers source-disclosure obligations.</li>
+    <li><strong>A vulnerability scan</strong> (e.g., for Log4j 2.x with CVE-2021-44228) — though strictly a security review rather than a licence review, the SBOM enables both.</li>
+    <li><strong>A contributor licence agreement (CLA) review</strong> — for any OSS the target itself maintains, are external contributors covered by a CLA assigning rights to the target?</li>
+    <li><strong><span class="term" data-term="openchain">OpenChain ISO/IEC 5230:2020</span> certification</strong> if the target operates a formal OSS compliance programme. Certification is increasingly a buyer expectation.</li>
+  </ol>
+
+  <p><strong>Partner-meeting framing.</strong> "GPL contamination" rarely kills a deal but routinely appears as a specific indemnity outside the cap, with a remediation milestone (replace the GPL component within X months post-closing) and a clear allocation of remediation cost. AGPL in a SaaS stack is a different problem — replacement is the only clean answer, and replacement is an engineering project of unknown duration. The W&amp;I underwriter will exclude the matter and the price needs to reflect the remediation risk.</p>
+
+  <h3>Data DD — GDPR, CCPA / state privacy, Schrems II / DPF</h3>
+
+  <p>Tech targets routinely hold personal data of customers, employees and prospects. The DD focus areas:</p>
+
+  <h4>Data inventory and processing-purpose mapping</h4>
+
+  <p>The Article 30 GDPR record of processing activities (RoPA) is the starting document. The buyer wants to see, for each category of personal data: source, purpose, lawful basis, retention period, recipients (including sub-processors), cross-border transfers, security controls. UK GDPR mirrors. California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) require functionally similar inventories; other US state privacy laws (Virginia VCDPA; Colorado CPA; Connecticut CTDPA; Utah UCPA; Texas TDPSA — effective July 2024; Florida FDBR; Oregon OCPA; Montana MCDPA; Tennessee TIPA — effective July 2025; Iowa ICDPA; Indiana ICDPA; Delaware DPDPA — effective January 2025; New Hampshire SB 255 — effective January 2025; New Jersey NJDPA — effective January 2025; Maryland MODPA — effective October 2025) impose equivalent obligations with state-by-state variation in thresholds and exemptions.</p>
+
+  <h4>Cross-border transfers</h4>
+
+  <p>For a target transferring personal data from the EU / UK to the US (or any third country):</p>
+
+  <ul>
+    <li><strong>EU-US Data Privacy Framework (DPF).</strong> In force 10 July 2023. Replaces the Privacy Shield invalidated in <em><span class="term" data-term="schrems-ii">Schrems II</span></em> (CJEU Case C-311/18, 16 July 2020). US importers can self-certify under the DPF and become eligible recipients for transfers from the EU under the European Commission's adequacy decision. UK extension certified separately ("UK Extension to the EU-US DPF"). <strong>Schrems III</strong> challenge by Max Schrems is anticipated; the European Parliament passed a non-binding resolution against the adequacy decision before its adoption.</li>
+    <li><strong>Standard Contractual Clauses (SCCs) plus Transfer Impact Assessment.</strong> For non-DPF-certified US importers and for transfers to other third countries, the European Commission's 2021 SCCs (Module 2 controller-to-processor; other modules) plus a documented <span class="term" data-term="transfer-impact-assessment">Transfer Impact Assessment (TIA)</span> covering the importer's jurisdiction's intelligence-agency access regimes and identifying supplementary technical, contractual and organisational measures where SCCs alone do not provide an essentially equivalent level of protection. UK ICO requires a Transfer Risk Assessment (TRA), broadly equivalent.</li>
+    <li><strong>Binding Corporate Rules (BCRs).</strong> For intra-group transfers, an enterprise-level approved transfer mechanism. Approval typically takes 18–24 months; not a fast deal mechanism but valuable for large groups.</li>
+  </ul>
+
+  <h4>Data-room day-one protocol</h4>
+
+  <p>In tech M&amp;A, the seller's data-room itself contains personal data of the seller's customers. Sharing unredacted personal data in DD is a GDPR / UK GDPR / CCPA violation in its own right. Standard fixes:</p>
+  <ul>
+    <li><strong>Clean-team protocols</strong> routing customer-level personal data through external advisers who deliver only aggregated outputs.</li>
+    <li><strong>Personal-data redaction (or hashing)</strong> before upload; pseudonymisation where downstream re-identification might be needed.</li>
+    <li><strong>Separate folders with restricted access</strong> for the most-sensitive items (health data; criminal-conviction data; biometric data).</li>
+    <li><strong>Audit trails</strong> of who accessed what and when, retained as a forensic record.</li>
+  </ul>
+  <p>The phrase <span class="term" data-term="data-room-day-one">"data room from day one"</span> captures the partner expectation that this is set up before DD launches, not retrofitted later.</p>
+
+  <h3>AI DD — training-data provenance, EU AI Act, NYT v OpenAI</h3>
+
+  <p>AI-targets — companies building or deploying AI models or AI-enabled products — present three diligence layers on top of the standard tech-DD framework: training-data provenance, regulatory tier classification, and copyright-litigation exposure.</p>
+
+  <h4>Training-data provenance</h4>
+
+  <p>Did the target obtain its training data lawfully? The risk areas:</p>
+
+  <ul>
+    <li><strong>Web-scraped data without licence.</strong> The leading US case is <em><span class="term" data-term="fair-use-defended">The New York Times Company v Microsoft Corporation and OpenAI Inc.</span></em>, S.D.N.Y., consolidated September 2024 with related publisher actions. The April 2025 motion-to-dismiss ruling left the core copyright-infringement and Digital Millennium Copyright Act (DMCA) claims in place; a May 2025 production order required OpenAI to produce 20 million ChatGPT logs and a parallel preservation order on user data. The case is the most-watched AI copyright matter; outcome will materially shape acquirer pricing of training-data risk. Other live cases: <em>Authors Guild v OpenAI</em>; <em>Bartz et al. v Anthropic</em>; <em>Tremblay v OpenAI</em>; <em>Concord Music v Anthropic</em>; <em>Getty Images v Stability AI</em> (UK High Court, judgment expected 2025); <em>Andersen v Stability AI</em> (N.D. Cal.).</li>
+    <li><strong>Fair-use defence.</strong> 17 U.S.C. § 107. Four-factor test: (i) purpose and character of the use (transformative?); (ii) nature of the copyrighted work; (iii) amount and substantiality used; (iv) effect on the potential market. AI model training has been argued to be transformative under factor (i), with diluted impact under (iv). The doctrine remains unsettled; senior partners will not call it cleared until at least one circuit-level appellate decision.</li>
+    <li><strong>EU TDM exception.</strong> Article 4 EU Copyright Directive 2019/790 — a copyright exception permitting reproduction and extraction for text-and-data-mining purposes, subject to lawful access and to a rights-holder opt-out (typically expressed via robots.txt or licence terms). Article 3 provides a non-overrideable TDM exception for research organisations and cultural-heritage institutions for scientific research. <strong>The buyer's diligence question:</strong> were rights-holder opt-outs respected at training time?</li>
+    <li><strong>Dataset licensing chains.</strong> Many training datasets are themselves derived works. Common Crawl, LAION-5B, C4, The Pile and similar all have specific licence terms and known content issues (duplicate copyrighted material; CSAM concerns in some image datasets). The buyer should see provenance documentation for any dataset used in training.</li>
+    <li><strong>Synthetic data.</strong> A growing fraction of training data is synthetic — AI-generated. The licensing of synthetic data tracks the underlying model's licence and the synthesis-process inputs. Documentation typically thinner than for real-world data.</li>
+  </ul>
+
+  <h4>EU AI Act tier classification</h4>
+
+  <p>Regulation (EU) 2024/1689 — the <span class="term" data-term="eu-ai-act">EU AI Act</span> — entered force 1 August 2024. Four risk tiers, phased applicability through 2027:</p>
+
+  <ul>
+    <li><strong>Unacceptable risk (Article 5).</strong> Prohibited from 2 February 2025: government social scoring; manipulation of vulnerabilities; real-time remote biometric identification in public spaces (subject to law-enforcement carve-outs); emotion recognition in workplace / education; untargeted facial-image scraping; some predictive policing applications.</li>
+    <li><strong>High risk (Article 6 + <span class="term" data-term="eu-ai-act-annex-iii">Annex III</span>).</strong> Applies from 2 August 2026. Eight categories: biometrics; critical infrastructure; education and vocational training; employment and worker management; essential public and private services (including credit scoring and life / health insurance pricing); law enforcement; migration, asylum and border control; administration of justice and democratic processes. <strong>Obligations:</strong> conformity assessment (sometimes self; sometimes third-party); registration in the EU AI database; risk-management system; data governance; technical documentation; record-keeping; transparency to deployers; human oversight; accuracy, robustness and cybersecurity; quality-management system; post-market monitoring.</li>
+    <li><strong>Limited risk.</strong> Transparency obligations: chatbots must disclose AI; deepfakes must be labelled; AI-generated content must be machine-readable as such.</li>
+    <li><strong>Minimal risk.</strong> No specific obligations.</li>
+  </ul>
+
+  <p><strong>General-purpose AI (GPAI) providers.</strong> From 2 August 2025, GPAI providers must provide model documentation, comply with EU copyright law (including respecting the Article 4 TDM opt-outs), and publish a summary of training content. Systemic-risk GPAI (currently defined as models above 10^25 FLOPS training compute) face additional obligations including model evaluations, systemic-risk mitigation, incident reporting and cybersecurity. <strong>Penalties</strong> from 2 August 2025: up to €35m or 7% of worldwide annual turnover for prohibited AI; €15m or 3% for other obligations; €7.5m or 1% for misleading information. GPAI penalty enforcement deferred to 2 August 2026.</p>
+
+  <p><strong>UK position.</strong> No equivalent comprehensive AI regulation as of May 2026; the UK has opted for a "pro-innovation" approach with sector-specific regulator guidance (FCA, ICO, MHRA, CMA). The AI (Regulation) Bill introduced 2024 has not progressed; current expectation is regulator-led rather than statute-led for the foreseeable future.</p>
+
+  <p><strong>US position.</strong> No equivalent federal statute as of May 2026; Executive Order 14110 (October 2023, Biden) was largely revoked by Executive Order 14179 (January 2025, Trump); state-level activity (Colorado AI Act 2024; California SB 1047 vetoed; New York / Texas / Utah measures progressing) creates a patchwork.</p>
+
+  <h3>Antitrust scrutiny — the post-2022 pattern</h3>
+
+  <p>The antitrust environment for tech M&amp;A changed shape in 2022–2024. Five reference deals define the landscape:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="microsoft-activision">Microsoft / Activision Blizzard</span> ($69bn; cleared October 2023 after restructuring).</strong> The hardest-fought tech merger of the cycle. Announced January 2022. CMA blocked April 2023 on cloud-gaming theory of harm. FTC sought preliminary injunction in N.D. Cal., denied 11 July 2023 (Judge Corley); Ninth Circuit denied emergency appeal 14 July 2023. CMA cleared restructured deal October 2023 after Microsoft sold cloud-streaming rights for existing and future Activision titles to Ubisoft for 15 years and committed to license Call of Duty to competitors for 10 years. Ninth Circuit dismissed FTC appeal May 2025; FTC dropped administrative action shortly after. <strong>Partner takeaway:</strong> a determined buyer can litigate antitrust opposition and win, but the cost is restructuring and 21 months of delay. Calibrate hell-or-high-water and break fee accordingly.</li>
+    <li><strong><span class="term" data-term="adobe-figma-termination">Adobe / Figma</span> ($20bn; terminated December 2023).</strong> Announced September 2022; CMA referred to Phase 2 in July 2023 with provisional findings of harm to product-design software competition; EU Commission opened Phase II in August 2023. The parties terminated 18 December 2023 rather than litigate or restructure, citing "no clear path" to clearance. Adobe paid Figma a $1bn break fee. <strong>Partner takeaway:</strong> "ecosystem" and "reverse killer acquisition" theories of harm now succeed at the regulator level even where the target is small relative to the buyer. The break fee at ~5% of deal value is the calibration benchmark.</li>
+    <li><strong><span class="term" data-term="meta-giphy-divestiture">Meta / Giphy</span> ($315m; unwound October 2022).</strong> Meta acquired Giphy for $315m in May 2020. The CMA opened a Phase 1 investigation post-completion (the deal had not been notified ex-ante under the UK voluntary regime), referred to Phase 2 in April 2021, and ordered divestiture in November 2021. Meta appealed; the Competition Appeal Tribunal upheld most of the CMA's decision in June 2022 and remitted certain points; the CMA reissued the divestiture order in October 2022. Meta sold Giphy to Shutterstock for $53m in May 2023 — an 83% writedown. <strong>Partner takeaway:</strong> closing without UK CMA clearance does not protect the buyer; remedies can include forced divestiture at a write-off price; the UK voluntary-notification regime is a trap for the unwary in tech deals.</li>
+    <li><strong><span class="term" data-term="amazon-irobot-termination">Amazon / iRobot</span> ($1.7bn; terminated January 2024).</strong> Announced August 2022. EU Commission issued a Statement of Objections in November 2023 alleging Amazon could restrict iRobot rivals' marketplace access (an ecosystem theory of harm). FTC ran a parallel probe. Parties terminated 29 January 2024; Amazon paid iRobot a $94m break fee. iRobot subsequently filed Chapter 11 in 2025; Picea Robotics buyout pending. <strong>Partner takeaway:</strong> small absolute deal size does not save the buyer from EU ecosystem review, and a failed deal can be terminal for the target. The break fee here was below market for a deal of this complexity.</li>
+    <li><strong><span class="term" data-term="booking-etraveli-block">Booking / eTraveli</span> (€1.63bn; blocked September 2023).</strong> The first EU prohibition based solely on ecosystem theory of harm. The Commission found that the acquisition of flight-OTA eTraveli would have strengthened Booking's position as the leading hotel-OTA ecosystem in the EEA. Booking is appealing. <strong>Partner takeaway:</strong> the Commission has explicitly broken new theoretical ground in tech antitrust; traditional product-market analysis no longer fully captures EU concerns. Pre-filing dialogue and commitments-package design must address ecosystem theories.</li>
+  </ul>
+
+  <h4>Jurisdictional features that matter</h4>
+
+  <ul>
+    <li><strong>UK <span class="term" data-term="cma-jurisdictional-test">share-of-supply test</span>.</strong> Section 23 Enterprise Act 2002, as amended by the Digital Markets, Competition and Consumers Act 2024. The CMA can assert jurisdiction where a merger creates or enhances a "share of supply" of 25% or more in the UK; the test is interpreted more flexibly than strict economic market-share metrics, allowing the CMA to review novel theory-of-harm cases (Meta/Giphy, Microsoft/Activision). Post-Brexit, UK and EU merger reviews diverge; tech buyers must run parallel reviews.</li>
+    <li><strong>EU Digital Markets Act (DMA)</strong>, Regulation (EU) 2022/1925. In force 2 May 2023; obligations applied from 6 March 2024 for designated gatekeepers (Alphabet, Amazon, Apple, Booking, ByteDance, Meta, Microsoft as of September 2023). Article 14 imposes a separate notification obligation: a gatekeeper acquiring any other undertaking providing core platform services or other digital services or services enabling collection of data must inform the European Commission, even where the EUMR turnover thresholds are not met. The <span class="term" data-term="dma">DMA notification</span> overlaps with EUMR but is itself not a merger-prohibition regime; the information lets the Commission consider Article 22 referral or refer to national authorities.</li>
+    <li><strong>Article 22 EUMR referrals.</strong> Following the CJEU's <em>Illumina / Grail</em> judgment (Case C-611/22 P, 3 September 2024), the European Commission cannot accept Article 22 referrals from member states for transactions that do not meet the referring member state's national thresholds. This narrowed the post-2021 expansion of EUMR jurisdiction over below-threshold "killer acquisitions" but does not eliminate national-level action.</li>
+    <li><strong>HSR thresholds (US).</strong> Hart-Scott-Rodino Antitrust Improvements Act of 1976 thresholds adjusted annually; 2025 base size-of-transaction threshold $126.4m; 2025 size-of-person thresholds $25.3m / $252.9m. New HSR rules (effective February 2025) require substantially expanded narrative information including labour-market impacts and a list of all current and prospective competitors.</li>
+    <li><strong><span class="term" data-term="cfius">CFIUS</span>.</strong> US Committee on Foreign Investment in the United States; mandatory or strongly recommended for any non-US acquirer of a US tech business with critical-technology footprint or 1m+ US person sensitive data. Operates under Section 721 of the Defense Production Act 1950 (50 U.S.C. § 4565), modernised by FIRRMA (Foreign Investment Risk Review Modernization Act 2018).</li>
+  </ul>
+
+  <h3>Carve-out mechanics — employees, data, IP cross-licences</h3>
+
+  <p>Tech carve-outs (selling a business unit out of a larger group) raise a distinctive set of mechanics absent from corporate-level share deals. The principal layers:</p>
+
+  <ul>
+    <li><strong>Employee transfers.</strong> EU and UK practice: TUPE / Acquired Rights Directive automatic transfer of employees attached to the carved-out business. US practice: voluntary acceptance of employment by the buyer; "reverse-and-rehire" mechanics. Both sides need a clear employee-list with allocation to the carved-out business, retention-bonus structuring for key engineers, and transition-services-agreement mechanics for shared headcount.</li>
+    <li><strong>Data licensing.</strong> The seller's customer database, training data, log data and operational data may include data attributable to multiple business units. The carve-out must define which data transfers to the buyer (sometimes in copy form rather than transfer; sometimes a licence-back to the seller for retained business). GDPR Article 6 lawful-basis must support the transfer; data-subject notification may be required.</li>
+    <li><strong>IP cross-licensing.</strong> Where the seller's retained business and the carved-out business both depend on shared IP, the deal will typically include a cross-licence: each retains rights to use the shared IP in its own field-of-use. The drafting choice between a perpetual royalty-free cross-licence (clean break, but no future income to the seller from the carved-out IP) and a royalty-bearing cross-licence (ongoing relationship, but ongoing audit and dispute potential) is one of the most-negotiated points.</li>
+    <li><strong>Transition services agreements (TSAs).</strong> Typically 6–24 months post-closing; buyer pays seller for shared platforms, IT, HR, finance, real estate and headquarters services. Pricing usually cost-plus with a 5–10% margin; service-level credits for under-performance.</li>
+    <li><strong>Reverse TSAs.</strong> Where the carved-out business hosts platforms or provides services that the seller's retained business depends on. Symmetric mechanics.</li>
+    <li><strong>Brand and trademark.</strong> Allocation of the trade names; transitional licence to use the seller's branding for a defined period (typically 12–24 months) while the carved-out business rebrands.</li>
+    <li><strong>Customer contracts.</strong> Novation or assignment of customer contracts, with consent requirements identified up-front (standard in enterprise SaaS contracts; less common in high-volume consumer SaaS but check the standard terms).</li>
+    <li><strong>Source-code separation.</strong> If the carved-out business shares a monorepo with the seller's retained business, a code-separation project pre-closing is required; otherwise the buyer takes a perpetual licence to the relevant portion of the monorepo with restricted-access mechanics.</li>
+  </ul>
+
+  <aside class="pitfall">
+    <h5>Tech M&amp;A DD red flags</h5>
+    <ul>
+      <li><strong>Founder PIIA chain breaks.</strong> "Agrees to assign" rather than "hereby assigns" language; missing pre-existing-inventions schedules; departed founders without confirmatory assignments. <em>Stanford v Roche</em> (2011) is the leading case.</li>
+      <li><strong>AGPL components in a SaaS stack.</strong> The classic source-disclosure-trigger problem. Replacement is typically the only clean answer. The W&amp;I underwriter will exclude the matter.</li>
+      <li><strong>GPL-contaminated proprietary code.</strong> Less severe than AGPL because the trigger is distribution rather than network use, but still requires either replacement or compliance with the source-disclosure obligation.</li>
+      <li><strong>Schrems II non-compliance.</strong> Cross-border transfers to the US relying on outdated Privacy Shield references rather than current SCCs + TIA or DPF certification.</li>
+      <li><strong>Annex III AI use without conformity-assessment plan.</strong> A target deploying AI in employment screening, credit scoring, or other Annex III categories without a path to August 2026 conformity assessment.</li>
+      <li><strong>Training-data without provenance.</strong> Web-scraped data without a documented chain showing rights-holder opt-outs respected (EU TDM); no licence trail for purchased datasets; no record of synthetic-data generation parameters.</li>
+      <li><strong>Open copyright litigation</strong> against AI providers — not necessarily a deal-killer but a material risk to be quantified and either insured (specific contingent-risk insurance) or indemnified (specific seller indemnity, with seller-backed escrow).</li>
+      <li><strong>Cyber-incident overhang.</strong> Past breaches not fully remediated; ICO / FTC / state-AG enforcement matters open; class actions pending. Cyber sublimit on the W&amp;I policy at 10–25% of policy limit; underwriter exclusions for known events.</li>
+      <li><strong>HSR competitor-list completeness.</strong> The new HSR rules (effective February 2025) require a list of all current and prospective competitors; gaps invite second requests.</li>
+      <li><strong>UK voluntary-notification trap.</strong> Closing without UK CMA clearance does not protect the buyer (Meta / Giphy precedent). For any deal with UK touchpoints, run the share-of-supply analysis pre-signing.</li>
+      <li><strong>DMA Article 14 notification obligation.</strong> A gatekeeper acquirer must notify the Commission of any acquisition of a digital-services target, regardless of EUMR turnover thresholds.</li>
+      <li><strong>Source-available licence violations.</strong> SSPL, BUSL, Elastic License v2 — the target may have used these inconsistently with licence terms (e.g., offering a managed service that the licence prohibits).</li>
+      <li><strong>Pre-existing contributor licence agreement gaps.</strong> Open-source projects the target maintains where external contributors are not covered by a CLA assigning rights to the target — gives external contributors potential injunction-style leverage.</li>
+      <li><strong>Deemed-export issues.</strong> Non-US buyer's deal team accessing controlled technology in DD; non-US engineers post-closing with access to controlled technology. <span class="term" data-term="deemed-export">Deemed-export</span> licences from BIS may be required.</li>
+    </ul>
+  </aside>
+
+  <aside class="lever both">
+    <h5>What an SPA for a tech acquisition adds vs. generic SPA</h5>
+    <p>A senior partner reviewing a tech-deal SPA against a generic-deal SPA will look for the following sector-specific additions in the warranty package, the indemnification regime, and the operative provisions:</p>
+    <ul>
+      <li><strong>IP warranty package.</strong> Beyond the generic "no infringement" warranty, expect:
+        <ul>
+          <li>Title to all material registered IP, with chain-of-title evidence;</li>
+          <li>Validity and enforceability of registered IP (no opposition, revocation or invalidity action);</li>
+          <li>All material IP created by founders, employees and contractors has been validly assigned to the company by valid present assignment in writing;</li>
+          <li>No breach of any open-source licence; no "GPL contamination" of proprietary code;</li>
+          <li>No use of any third-party IP outside the scope of a written licence;</li>
+          <li>No source code disclosed except to designated escrow agents under bona fide source-code escrow agreements.</li>
+        </ul>
+      </li>
+      <li><strong>Data warranty package.</strong> Beyond GDPR / CCPA general compliance:
+        <ul>
+          <li>Article 30 RoPA is complete and accurate;</li>
+          <li>All cross-border transfers conducted under SCCs + TIA, DPF, BCRs, or another lawful mechanism — no reliance on Privacy Shield;</li>
+          <li>No personal-data breach within the prior X years that has not been remediated and reported as required;</li>
+          <li>No outstanding ICO / state-AG / DPC enforcement action;</li>
+          <li>The data-room itself complies with personal-data protection requirements (clean-team, redaction, access controls).</li>
+        </ul>
+      </li>
+      <li><strong>AI warranty package (where applicable).</strong>
+        <ul>
+          <li>Training data was obtained lawfully — no scraping in breach of website terms; rights-holder opt-outs respected at training time;</li>
+          <li>No AI Act prohibited-use systems deployed;</li>
+          <li>For Annex III high-risk AI, conformity-assessment path established and documented;</li>
+          <li>For GPAI, model documentation maintained and training-content summary published / publishable;</li>
+          <li>No outstanding copyright-infringement claim or notice in respect of any training dataset;</li>
+          <li>No use of any AI system in a way that would generate prohibited outputs (CSAM, defamatory content, etc.).</li>
+        </ul>
+      </li>
+      <li><strong>Cyber warranty package.</strong>
+        <ul>
+          <li>No material cyber incident in the prior X years not remediated;</li>
+          <li>SOC 2 Type II report current; ISO 27001 certification current (if applicable);</li>
+          <li>Penetration testing conducted within prior 12 months; remediation completed;</li>
+          <li>Compliance with applicable cyber regulations (NIS2 in the EU; UK NIS Regulations; US sector-specific).</li>
+        </ul>
+      </li>
+      <li><strong>Specific indemnities.</strong> Outside the cap, with longer survival:
+        <ul>
+          <li>Identified IP infringement claims (named cases or notices);</li>
+          <li>Identified data-protection enforcement matters;</li>
+          <li>Identified open-source compliance gaps requiring remediation;</li>
+          <li>Identified cyber-incident remediation obligations;</li>
+          <li>For AI targets, identified copyright-litigation matters or training-data-provenance gaps.</li>
+        </ul>
+      </li>
+      <li><strong>Operative provisions specific to tech.</strong>
+        <ul>
+          <li>Confirmatory IP assignments executed at signing or closing;</li>
+          <li>Source-code escrow release at closing if applicable;</li>
+          <li>Data-transition mechanics (export of customer data; closure of seller-side accounts);</li>
+          <li>Open-source-compliance remediation milestone (replace GPL component within X months post-closing);</li>
+          <li>For carve-outs, transition services agreement, reverse TSA, IP cross-licence, data licensing back, brand transition.</li>
+        </ul>
+      </li>
+      <li><strong>W&amp;I-specific drafting.</strong> Cyber sublimit at 10–25% of policy limit; AI / model-liability sublimit; GDPR-fines exclusion (public-policy non-insurability of regulatory fines); pension-underfunding exclusion (universal); known-matters exclusion for any matter identified in DD.</li>
+      <li><strong>Effort standards on regulatory CPs.</strong> Hell-or-high-water for the DOJ / CMA / EU Commission antitrust review where the buyer is a strategic at deal-determining concentration risk; reasonable best efforts otherwise. Reverse termination fee calibrated against cleared-deal precedent (Microsoft / Activision $3bn break-fee history).</li>
+      <li><strong>Longstop calibration.</strong> 9–12 months from signing if the deal is reviewable in any of UK, EU or US jurisdictions; longer if all three plus CFIUS; longer still if the deal involves a Phase II review.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Financial-services M&amp;A is dominated by change-of-control approval architecture (UK Section 178 FSMA; EU ECB qualifying-holding under SSM; US BHC Act / Bank Merger Act / CIBC Act / Form A) and by capital-adequacy commitments under Basel III / CRR III for banks and Solvency II / Solvency UK for insurers — both sets of which feed directly into SPA conditionality and longstop calibration.</li>
+      <li>For a UK / EU bank deal, the regulatory CP is rarely subject to hell-or-high-water; instead the buyer commits to "reasonable best efforts" with specific carve-outs identifying capital-injection and governance commitments the buyer will accept up to a cap. The regulator's primary lever is the prudential commitment package, not divestiture.</li>
+      <li>UK Part VII transfers and US state-level Form A filings are the M&amp;A-specific machinery for moving regulated insurance business across entities; multi-state Form A timing (6–12 months) is often the binding constraint on US insurance-deal longstop.</li>
+      <li>UBS / Credit Suisse (March 2023) shows how the regulatory state can override corporate-law protections in a banking crisis; Capital One / Discover (April 2025, 14 months) is the modern benchmark for big bank M&amp;A approval timing under standard conditions.</li>
+      <li>Tech-deal IP DD turns on (i) founder IP capture (present assignments, "hereby assigns" language, pre-existing-inventions schedules, state-law carve-outs), (ii) PIIA chain integrity for all employees and contractors, (iii) confirmatory assignments at signing where gaps exist. <em>Stanford v Roche</em> (2011) is the case that anchors the present-vs-future-assignment distinction.</li>
+      <li>Open-source compliance turns on the SBOM and the copyleft / proprietary-code interaction map. AGPL in a SaaS stack is the highest-severity finding. GPL contamination usually generates a remediation milestone and a specific indemnity outside the cap.</li>
+      <li>Data DD turns on the Article 30 RoPA, cross-border transfer mechanism (DPF; SCCs + TIA; BCRs), and data-room day-one protocol. Schrems II (2020) and the EU-US DPF (10 July 2023) define the live framework.</li>
+      <li>AI DD turns on training-data provenance (NYT v OpenAI and the broader US fair-use litigation), EU AI Act tier classification (unacceptable / high / limited / minimal; Annex III high-risk categories; GPAI obligations from 2 August 2025), and copyright-litigation exposure. The August 2026 high-risk-AI compliance deadline is the binding constraint for many AI-target integration plans.</li>
+      <li>Tech antitrust since 2022 has changed shape: Microsoft / Activision (cleared after restructuring); Adobe / Figma (terminated, $1bn break fee); Meta / Giphy (unwound); Amazon / iRobot (terminated, $94m break fee); Booking / eTraveli (blocked on ecosystem theory). The CMA share-of-supply test, EU DMA Article 14 notification, and post-<em>Illumina/Grail</em> Article 22 EUMR limits all matter on a tech deal.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
   <nav class="mod-nav">
-    <a href="P1-drafting-decoder.html" class="prev">Previous module</a>
+    <a href="P1-drafting-decoder.html" class="prev">Drafting Decoder</a>
     <a href="P3-negotiation-playbook.html" class="next">Negotiation Playbook</a>
   </nav>
 </main>

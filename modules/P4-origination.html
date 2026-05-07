@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Module P4 — Origination & Business Development · M&amp;A Course</title>
+<title>Module P4 — Origination &amp; Business Development · M&amp;A Course</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="module-id" content="P4">
 <link rel="stylesheet" href="../assets/styles.css">
@@ -22,16 +22,453 @@
 <main class="page">
   <div class="mod-header">
     <div class="mod-num">Module P4 · Practitioner complement</div>
-    <h1>Origination & Business Development</h1>
+    <h1>Origination &amp; Business Development</h1>
+    <p class="subtitle">How M&amp;A lawyers run their practice as a business — and what would make them join a boutique.</p>
   </div>
 
-  <aside class="note">
-    <h5>Module under construction</h5>
-    <p>This module is being researched and built. Check back shortly.</p>
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Map the four dominant partner-economics models — pure <span class="term" data-term="lockstep-compensation">lockstep</span>, <span class="term" data-term="modified-lockstep">modified lockstep</span>, pure <span class="term" data-term="eat-what-you-kill">eat-what-you-kill (EWYK)</span>, <span class="term" data-term="modified-eat-what-you-kill">modified EWYK</span> — to actual firms (Wachtell, Slaughter and May, Linklaters, Kirkland) and translate <span class="term" data-term="profits-per-equity-partner">profits-per-equity-partner (PEP)</span> figures into what an individual partner takes home.</li>
+      <li>Explain the <span class="term" data-term="originator-credit">originator</span>-versus-<span class="term" data-term="working-credit">working credit</span> split — why a partner can earn $300k on a deal she never opened a file on, why cross-border M&amp;A creates the sharpest credit fights, and why partners care so much about who is named on the engagement letter.</li>
+      <li>Identify the structural retention forces — <span class="term" data-term="capital-contribution">capital contribution</span>, <span class="term" data-term="deferred-compensation">deferred compensation forfeiture</span>, <span class="term" data-term="garden-leave">garden leave</span>, <span class="term" data-term="minimum-marketing-period">minimum marketing period (MMP)</span> — that make a $5m partner cost $4–8m to extract from her current firm and translate into the make-whole an AI boutique would need to fund.</li>
+      <li>Diagnose the regulatory route an AI-augmented M&amp;A boutique can actually take — UK <span class="term" data-term="alternative-business-structure">Alternative Business Structure (ABS)</span> under the Legal Services Act 2007, Arizona ABS post-2020, ABA <span class="term" data-term="model-rule-5-4">Model Rule 5.4</span> blockage in 48 US states, <span class="term" data-term="utah-sandbox">Utah's narrowed sandbox</span> — and the formation precedents (<span class="term" data-term="garfield-law-uk">Garfield.Law</span>, <span class="term" data-term="kpmg-arizona-abs">KPMG Arizona ABS</span>, <span class="term" data-term="crosby-ai-law-firm">Crosby</span>).</li>
+      <li>Run a partner objection checklist on the boutique pitch ("what would make me leave Kirkland to do this?") and show why book-of-business protection, conflicts narrowing, comp risk, AI tooling differentiation, sector focus, capital, and insurance are each negotiable rather than blocking.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this module is the keystone for the user's pitch goal.</strong> Every other module in this course gets the user to <em>credible peer in an M&amp;A meeting</em>. This one is the module that makes the boutique pitch work. An M&amp;A partner the user wants to recruit will not be persuaded by AI demos or vision decks — she will run a private spreadsheet in her head: book of business × portability factor minus garden-leave decay minus deferred-comp forfeiture, divided by realistic year-one revenue at the new firm, against a discount rate that prices the platform-loss risk. If the user cannot have that conversation in her vocabulary — <em>originator credit, MMP, capital, panel-rate side letter, ABS, sector-segment conflict</em> — the meeting ends politely and nothing happens. This module installs the vocabulary and the frame.
+  </div>
+
+  <h2>Partner economics — the four models and where each firm sits</h2>
+
+  <p>Every BigLaw partner-compensation regime is a variant of one of two pure models. Pure <strong>lockstep</strong> pays partners on a published seniority scale with no individual performance component; pure <strong>eat-what-you-kill (EWYK)</strong> pays partners entirely on individual financial contribution. Almost no firm runs either pure form at scale. The dominant models are <strong>modified lockstep</strong> (lockstep base + performance band + super-points + non-equity tier) and <strong>modified EWYK</strong> (origination + working credit, adjusted by a compensation committee for non-financial contribution). Knowing which model a firm runs tells you what would actually move a partner.</p>
+
+  <aside class="lever both">
+    <h5>The four models — what each firm runs and why it matters for recruitment</h5>
+    <table style="width:100%; border-collapse:collapse; margin:0.5em 0;">
+      <thead><tr><th style="text-align:left; padding:0.4em; border-bottom:1px solid #ccc;">Model</th><th style="text-align:left; padding:0.4em; border-bottom:1px solid #ccc;">Examples</th><th style="text-align:left; padding:0.4em; border-bottom:1px solid #ccc;">What moves the partner</th></tr></thead>
+      <tbody>
+      <tr><td style="padding:0.4em; vertical-align:top;"><strong>Pure lockstep</strong></td><td style="padding:0.4em; vertical-align:top;">Wachtell, Lipton, Rosen &amp; Katz (NY); Slaughter and May (UK); historically Cravath until 2021.</td><td style="padding:0.4em; vertical-align:top;">PEP at the boutique relative to plateau; the <em>cultural</em> appeal of platform-and-brand without seniority queue; equity upside on AI thesis. Less sensitive to comp guarantees because the partner already values non-financial.</td></tr>
+      <tr><td style="padding:0.4em; vertical-align:top;"><strong>Modified lockstep</strong></td><td style="padding:0.4em; vertical-align:top;">Linklaters, Freshfields, Allen &amp; Overy (now A&amp;O Shearman), Clifford Chance — the Magic Circle; Cravath, Davis Polk, Cleary Gottlieb post-2021/2024.</td><td style="padding:0.4em; vertical-align:top;">Partner has visible plateau pay but limited upside. Will move for clear path to 1.5×–3× plateau plus equity, especially if currently below super-points.</td></tr>
+      <tr><td style="padding:0.4em; vertical-align:top;"><strong>Modified EWYK</strong></td><td style="padding:0.4em; vertical-align:top;">Kirkland &amp; Ellis (archetype, ~600+ equity partners, $20m+ guarantees); Latham &amp; Watkins; Paul Weiss; most US BigLaw.</td><td style="padding:0.4em; vertical-align:top;">Partner is already on origination + working credit. Moves for higher origination-credit retention, specific sector focus, and equity upside that exceeds PEP-based comp.</td></tr>
+      <tr><td style="padding:0.4em; vertical-align:top;"><strong>Pure EWYK</strong></td><td style="padding:0.4em; vertical-align:top;">Rare at scale. Quinn Emanuel and Susman Godfrey are sometimes characterised as EWYK-flavoured for litigation but have evolved.</td><td style="padding:0.4em; vertical-align:top;">Partner is mercenary by structure. Moves for cleanest origination claim and lowest overhead share. Risk: same forces will pull her out of the boutique within 3 years.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>The recruitment heuristic.</strong> A pure-lockstep partner is moved by <em>vision and equity</em>; a modified-lockstep partner by <em>upside above plateau</em>; a modified-EWYK partner by <em>cleaner economics on her own book</em>; a pure-EWYK partner is the most negotiable but the highest churn risk after she lands.</p>
   </aside>
 
+  <h3>The Cravath system and its 2021 break</h3>
+
+  <p>The <span class="term" data-term="cravath-system">Cravath system</span> is the historic name for pure lockstep paired with a single-tier (equity-only) partnership and high leverage (associate-to-partner ratio). Adopted by Cravath, Swaine &amp; Moore in 1976 and treated for decades as the benchmark for elite NY and Magic Circle firms. In December 2021, Cravath broke lockstep — introducing a non-equity partner tier and a discretionary performance band — under lateral pressure from Kirkland and Latham, which had been poaching senior corporate / M&amp;A partners on $20m+ guaranteed packages that lockstep could not match. Davis Polk and Cleary Gottlieb followed in 2023–24. The Magic Circle (Linklaters, Allen &amp; Overy, Freshfields, Clifford Chance) all introduced flexibility to their lockstep variants between 2018 and 2025 for the same reason. By 2024, Cravath revenue had risen ~9% to ~$1.2bn and PEP had risen 13% to $6.85m — the structural change worked. Slaughter and May (UK) and Wachtell (NY) remain on tighter lockstep variants and continue to perform exceptionally on PEP.</p>
+
+  <h3>PEP and the AmLaw 100 — what the headline numbers mean</h3>
+
+  <p><strong><span class="term" data-term="profits-per-equity-partner">Profits per equity partner (PEP)</span></strong> — also published as PPP or PEEP depending on the publisher — is calculated as net firm profits ÷ number of equity partners. It is the headline profitability metric for any law firm. <strong>2024 AmLaw 100 figures (American Lawyer, April 2025):</strong> average PEP $3.15m (up 12.3% from 2023); aggregate top-100 revenue $158.3bn (up 13.3%). Leaderboard:</p>
+
+  <ul>
+    <li><strong>Wachtell ~$9.0m</strong> — pure lockstep with three founder-tier partners on 125%; ~86 equity partners; revenue per lawyer ~$5.7m. Structural ceiling of the AmLaw distribution.</li>
+    <li><strong>Kirkland &amp; Ellis ~$8.6m</strong> — modified EWYK; 600+ equity partners on a wide compensation distribution; top-of-AmLaw league-table position on M&amp;A in 2024.</li>
+    <li><strong>Sullivan &amp; Cromwell, Davis Polk, Paul Weiss, Latham &amp; Watkins, Cravath ($6.85m), Skadden, Cleary Gottlieb, Gibson Dunn</strong> — all in the $5–8m range.</li>
+  </ul>
+
+  <p><strong>Magic Circle 2024 figures (each firm's annual report):</strong> Linklaters / Freshfields / A&amp;O Shearman / Clifford Chance roughly £1.6–2.5m. Lower than US elite due to currency translation, less leverage, and a different mix between London / New York / Continental practice. Slaughter and May does not publicly publish PEP but is estimated above £3m equivalent due to small partnership size and high realisation.</p>
+
+  <aside class="pitfall">
+    <h5>Common partner-economics misconceptions</h5>
+    <ul>
+      <li><strong>"PEP is what partners get paid."</strong> Wrong direction. PEP is the average; in modified EWYK it ranges from 0.5× plateau to 4–5× plateau within the same firm. A partner might be at $4m PEP firm with $1.5m own comp, or at $6m PEP firm with $20m own comp.</li>
+      <li><strong>"Magic Circle and US elite firms compete for the same partners."</strong> Less than people assume. The pools overlap on senior corporate / M&amp;A but Magic Circle firms cannot match Kirkland / Latham guarantees for top-tier originators; Magic Circle wins on platform, brand-in-Europe, and lockstep stability; US elite wins on dollars.</li>
+      <li><strong>"Equity partner = partner."</strong> Most BigLaw firms run a two-tier (equity / non-equity) or three-tier (equity / income partner / counsel) structure. Non-equity partners are paid salary plus bonus, not a profits share. The "partner promotion" announced in the press release may be an income partnership, not an equity one. The distinction matters because non-equity partners are typically not subject to the same capital contribution, deferred comp forfeiture, or MMP regime — so they are easier to recruit but command less comp.</li>
+    </ul>
+  </aside>
+
+  <h3>Equity vs. non-equity partner — the structural distinction</h3>
+
+  <p>Most modern BigLaw firms run a two-tier partnership. <strong>Equity partners</strong> own a share of the partnership and receive a share of profits (the headline PEP); they typically contribute capital (25–35% of one year's compensation), bear forfeiture risk on deferred comp, and have voting rights on partnership matters. <strong>Non-equity partners</strong> (also called "income partners," "salaried partners," "fixed-share partners," "junior partners," "partners without points") are paid a salary plus discretionary bonus, do not share in firm profits, do not contribute capital, and typically do not vote on partnership matters. The non-equity tier serves three purposes: (i) a holding pen for senior associates being evaluated for equity (1–4 year stop), (ii) a permanent grade for high-performing service partners who don't generate origination, and (iii) a comp-flexibility mechanism for high-comp lateral hires the firm wants to bring in without diluting equity. The split between tiers varies enormously — Wachtell (single-tier equity-only); Kirkland (large non-equity tier); UK Magic Circle (relatively small non-equity tier).</p>
+
+  <h2>Originator credit, working credit, and the cross-border fight</h2>
+
+  <p>Most modified-EWYK firms attribute every dollar of fees billed to a client to one or more named partners through two parallel credit streams: <strong>originator credit</strong> (the partner credited with bringing in the client) and <strong>working credit</strong> (the partner who actually managed the matter). The 2024 Major, Lindsey &amp; Africa Partner Compensation Survey put average partner originations at <strong>$3.476m</strong> (up 26% from 2022; up 78% from 2014); equity-partner average at almost <strong>$5m</strong>. The <span class="term" data-term="major-lindsey-survey">MLA survey</span> is the canonical industry benchmark for what these numbers actually look like.</p>
+
+  <h3>How a $1m M&amp;A deal splits</h3>
+
+  <p>Take a $1m M&amp;A engagement billed in 2024. A typical credit allocation:</p>
+
+  <ul>
+    <li><strong>Originator credit (15–30% of gross): $150k–$300k.</strong> Allocated to the partner who first brought the client to the firm — signed the engagement letter, hosted the first lunch, made the first call. Once a client is opened with an originator, every dollar billed by anyone at the firm to that client counts toward that originator's <strong>book of business</strong> until a sunset date (or re-allocation).</li>
+    <li><strong>Working credit (25–40% of gross): $250k–$400k.</strong> Allocated to the partner(s) who actually ran the matter — drafted the SPA, ran the negotiation, supervised the associates, took the client calls.</li>
+    <li><strong>Associate compensation, firm overhead, partnership profit (35–60%).</strong> The remainder — what funds the leverage, the brand, the technology, and the equity-partner profit share.</li>
+  </ul>
+
+  <p>When origination and working credit attach to the <em>same</em> partner (a partner runs her own client's deal), the maths is clean. The interesting case is when they attach to different partners — and that's where the cross-border M&amp;A fights happen.</p>
+
+  <h3>The cross-border originator-vs-working split</h3>
+
+  <p>A senior London partner has a longstanding relationship with a global PE sponsor. The sponsor instructs the firm on a US take-private. The deal is run out of New York by a local M&amp;A partner. The London partner sourced; the New York partner ran. The credit split is negotiated explicitly — typical patterns:</p>
+
+  <ul>
+    <li><strong>50% origination to London / 70% working credit to New York</strong> — the London partner keeps origination credit on the matter (and continues to accrue origination on subsequent work for the same sponsor); the New York partner takes working credit for actually running the deal.</li>
+    <li><strong>Split origination 50/50</strong> — both partners credited as co-originators, often where the New York partner has a longstanding sub-relationship with the sponsor's US office.</li>
+    <li><strong>Origination transfer</strong> — the London partner explicitly hands origination to New York under a "client team" arrangement, in exchange for the sponsor formally adding the London partner to a UK panel slot.</li>
+  </ul>
+
+  <p>Why this fight matters disproportionately: a single origination credit on a $30m PE relationship over five years is $25m–$45m of book-of-business credit. The split allocation dictates which partner shows up in the lateral market with the bigger book. Cross-border partners frequently leave firms over origination-credit disputes — not over base comp.</p>
+
+  <aside class="lever both">
+    <h5>Originator credit — the negotiation moves the user must understand</h5>
+    <ul>
+      <li><strong>Sunset rules.</strong> An <span class="term" data-term="origination-sunset">origination sunset</span> reduces credit over time (typical: Year 1 100% / Year 2 75% / Year 3 50%, then transfer to active relationship-holder). Sunsetted books are <em>more</em> portable to a boutique because the partner has less to lose by the move; un-sunsetted books are <em>less</em> portable than they look.</li>
+      <li><strong>Client team allocations.</strong> Many firms use permanent split origination (e.g. 50% / 30% / 20% across three partners) on institutional clients to avoid one partner's departure draining the relationship. Inheritor mechanics matter for boutique recruitment — "what does my book of business actually look like at the boutique once we strip out the team-allocated portions?"</li>
+      <li><strong>Origination transfer at retirement.</strong> Most firms have a graceful-handoff convention where retiring partners transfer origination to chosen successors over 2–4 years. A partner mid-handoff has a smaller portable book than her stated origination because part is already legally promised to a successor.</li>
+      <li><strong>The "what would I tell my old firm to do with my book?" test.</strong> A senior partner thinking about leaving runs this internally. If the answer is "I'd give it to colleague X anyway because I'm retiring soon," her portable book is small. If the answer is "the firm has been incompetent at servicing these clients and I'm the relationship," her portable book is larger.</li>
+    </ul>
+  </aside>
+
+  <h3>Why M&amp;A partners obsess about origination</h3>
+
+  <p>Origination is the single most consequential metric in a partner's career. It compounds in three ways: (i) annual comp is built on it directly under modified EWYK; (ii) book-of-business is the lateral-recruitment currency, and a partner with a $5m book has 4–5× the lateral options of one with a $1m book; (iii) origination is the proxy for partnership tenure and committee influence — high-origination partners get the management committee seats, the executive committee votes, and the next round of equity-partner promotions for their juniors. A partner who has run brilliant deals for 20 years but originated nothing is a <em>service partner</em> — well-respected but structurally vulnerable. A partner who originates $5m on routine deals is a <em>rainmaker</em> — structurally untouchable.</p>
+
+  <h2>Beauty parade and RFP dynamics</h2>
+
+  <p>An M&amp;A practice runs on two procurement modes: <strong>panels</strong> (institutional clients pre-vetting a list of approved firms; reviewed every 2–3 years) and <strong>beauty parades</strong> (one-off pitching for transformative deals where the client wants to choose fresh counsel). Both interact with conflicts and pricing in ways that an outsider rarely sees.</p>
+
+  <h3>Panel constitution — how M&amp;A panels actually get built</h3>
+
+  <p>A <span class="term" data-term="pe-panel">private equity sponsor panel</span> for a megafund (Blackstone, KKR, EQT, CVC, Carlyle, Apollo, Permira) typically has 6–10 firms globally, divided by region (US, UK, EU, Asia) and deal type (large-cap, mid-market, sponsor-to-sponsor, take-privates, distressed). A large strategic corporate (FTSE 100 / S&amp;P 500) panel is broader: 15–25 firms across litigation, regulatory, M&amp;A, employment, IP. <strong>Panel review process:</strong> (i) the in-house GC plus procurement issues an <span class="term" data-term="rfp-law-firm">RFP</span> 12–18 weeks before review; (ii) incumbent and challenger firms submit ~50–80 page proposals covering scope, conflicts disclosures, fee proposal (<span class="term" data-term="rack-rate">rack rates</span>, <span class="term" data-term="panel-rate">panel discounts</span>, AFA suite), staffing model, references, technology / AI strategy, diversity statistics; (iii) shortlist of 6–10 firms invited to oral pitches; (iv) panel decisions announced; (v) formal <span class="term" data-term="fee-letter-side-letter">fee letter side-letter</span> finalised covering global rate caps, volume discounts, prompt-payment incentives, AFA suite. Once the panel is set, individual engagement letters incorporate the side letter by reference.</p>
+
+  <h3>Rate negotiation — the actual numbers</h3>
+
+  <ul>
+    <li><strong>Panel discount:</strong> 10–25% off rack rate for repeat institutional clients. PE megafund discounts run 15–25%; large strategic corporate discounts 10–20%; non-deal advisory work (regulatory, employment, IP) 25–40% off rack.</li>
+    <li><strong>Volume tier discounts:</strong> additional 3–7% off after $X annual spend (typical thresholds: $5m, $10m, $20m).</li>
+    <li><strong>Prompt-payment discount:</strong> 1–3% off if invoices are paid within 30–60 days. A pure cashflow / collections incentive that a sophisticated CFO will always demand.</li>
+    <li><strong><span class="term" data-term="blended-rate">Blended rate</span>:</strong> a single weighted-average hourly rate across all timekeepers (partner / counsel / associate / paralegal). 2024 blended rates for top-tier US firms on large-cap M&amp;A: $1,400–$1,800/hour. Boutiques can plausibly come in at $700–$1,100/hour with similar partner-time density. The blended-rate gap is the structural pricing advantage of an AI-augmented boutique.</li>
+    <li><strong>2024 partner rack rates (top-tier US BigLaw):</strong> $1,500–$2,500+/hour. UK Magic Circle: £1,200–£2,000+/hour. The rack rate is the headline anchor; almost no large client actually pays it.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>What kills a pitch (the partner phrasebook of pitch failure)</h5>
+    <ul>
+      <li><strong>"Conflicts not pre-cleared."</strong> The single largest pitch-killer. Showing up to a 60-minute pitch and having to say "we'll need to clear conflicts before formally engaging" signals operational sloppiness. Sophisticated firms run preliminary conflicts checks the day the RFP is received.</li>
+      <li><strong>"The wrong partner in the room."</strong> A partner the client has never heard of, or one with poor chemistry with the principal, kills the pitch even if the deck is excellent. The CEO / GC / CIO wants to see the partner who will actually show up at 11pm on a Friday during signing.</li>
+      <li><strong>"Generic deck."</strong> Reusing other clients' deal logos with no specific demonstration of fit for <em>this</em> deal, <em>this</em> sector, <em>this</em> counterparty. Senior in-house counsel can spot a recycled pitch in 90 seconds.</li>
+      <li><strong>"Loss-leader pricing reads as desperate."</strong> A fee proposal that is artificially cheap signals the firm doesn't understand the deal complexity or is desperate for the work. Sophisticated buyers prefer accurate pricing with capped overage to a fee that everyone knows will overrun.</li>
+      <li><strong>"No credible AI / technology answer."</strong> Since 2024, firms without a structured response to "what's your AI strategy and how do you protect our data?" are losing pitches at a measurable rate. The credible answer is not "we use ChatGPT"; it is a specific tooling roadmap with data-confidentiality and human-supervision architecture.</li>
+      <li><strong>"No phone contact before the pitch."</strong> BTI Consulting's longitudinal data shows firms that contact the client by phone before the pitch win at substantially higher rates than firms that arrive cold. The "lock" — the firm that helped the client write the RFP — wins disproportionately.</li>
+    </ul>
+  </aside>
+
+  <h2>Fee structures — the full taxonomy and what an AI-augmented firm can do differently</h2>
+
+  <p>The dominant M&amp;A fee structure remains hourly billing, but pure hourly is a shrinking share of revenue at most major firms. Per the 2024 State of the Corporate Law Department Report, ~50% of corporate GCs prefer <span class="term" data-term="alternative-fee-arrangement">Alternative Fee Arrangements (AFAs)</span> and AFAs are projected to grow significantly as a share of legal revenue. The full taxonomy:</p>
+
+  <ul>
+    <li><strong>Hourly</strong> — bills track timekeeper × hours × rate. Default for negotiated complex M&amp;A where scope is unbounded. Maximum flexibility for the firm; minimum predictability for the client.</li>
+    <li><strong><span class="term" data-term="fixed-fee">Fixed fee</span></strong> — a single quoted figure for a defined scope. Common for routine M&amp;A (small bolt-ons, intra-group reorganisations, standard diligence packages) and for individual phases of complex deals (signing-phase fixed; regulatory-phase fixed; closing-phase fixed). Rare on full negotiated M&amp;A engagements.</li>
+    <li><strong><span class="term" data-term="capped-fee">Capped fee</span></strong> — hourly with a contractual maximum (typical: 110–125% of estimate). Above the cap, the firm absorbs the overrun. Standard on M&amp;A diligence packages and on negotiated transactions where scope is reasonably bounded.</li>
+    <li><strong><span class="term" data-term="blended-rate">Blended rate</span></strong> — single weighted-average hourly rate across all timekeepers. PE sponsors push this hardest because it eliminates the "we'll just put a $2,000/hour partner on it" arbitrage.</li>
+    <li><strong><span class="term" data-term="success-fee-law-firm">Success fee</span></strong> — a premium tied to deal closing. Typical M&amp;A structure: hourly bills run at the standard or discounted rate; on closing, a success uplift of 25–100% of the base fee is added; if the deal does not close, hourly bills are discounted via a <span class="term" data-term="broken-deal-discount">broken-deal discount</span> (50–80% of the closed-deal fee). Subject to profession-specific regulatory limits in every major jurisdiction.</li>
+    <li><strong>Retainer-plus-overage</strong> — monthly retainer covers a defined volume; excess hours billed extra. Common on long-running portfolio company general counsel work for PE sponsors.</li>
+    <li><strong>Phased fee</strong> — each phase priced separately with assumptions about scope, complexity, and counterparty cooperation. Adjusted on entry into next phase.</li>
+    <li><strong>Portfolio AFA</strong> — one global rate card across the client's entire spend, often combined with a guaranteed minimum-spend commitment from the client.</li>
+  </ul>
+
+  <h3>Contingent / risk fees — the regulatory edges</h3>
+
+  <p>Pure contingent fees ("paid only if the deal closes," "X% of the deal value") are restricted in every major jurisdiction. The user must be able to talk through these limits because they are the boundary conditions on what an AI law firm can price differently:</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>The <strong>SRA Code of Conduct</strong> and the regulatory framework for <strong>Conditional Fee Agreements (CFAs)</strong> and <strong>Damages-Based Agreements (DBAs)</strong> govern. CFAs allow a success uplift of up to 100% of the base fee. DBAs (transactional contingency on a % of damages or value) have strict caps (typically 25–50% of recovery depending on matter type). Pure %-of-deal contingency in non-contentious M&amp;A remains regulatory grey territory under the common-law doctrines of <strong>champerty and maintenance</strong>. SRA Outcome 1.6 (the version in force pre-2019; post-2019 the equivalent is in the Code of Conduct for Solicitors at paragraphs 1.4–1.5) governs the duty to provide the best possible service in the client's interests.</p></aside>
+    <aside class="juris us"><h5>US</h5><p><strong>ABA Model Rule 1.5</strong> permits contingent fees subject to a "reasonableness" test (factors include time, novelty, fee customarily charged, results obtained, time limitations, etc.). States vary on whether transactional contingency is allowed at all in non-contentious matters. Practical M&amp;A practice: discounted hourly + closing premium, not pure %-of-deal contingency.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Most jurisdictions prohibit pure contingent fees ("<em>pacta de quota litis</em>" — Latin: "agreements for a share of the litigation") under national bar rules. <strong>Germany:</strong> Bundesrechtsanwaltsordnung (BRAO) historically banned them; reforms since 2008 allow contingency in narrow circumstances (mostly for clients who cannot afford counsel). <strong>France:</strong> permits a "<em>honoraire de résultat</em>" (success premium) only on top of a base fee, not as a pure contingency. <strong>Italy:</strong> permits result-based fees subject to caps and ethical oversight under the Forensic Code of Conduct.</p></aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>How an AI-augmented firm can price differently — the structural arbitrage</h5>
+    <ul>
+      <li><strong>Underwriteable fixed fees on negotiated deals.</strong> Traditional firms cannot commit to fixed fees on full negotiated M&amp;A because associate-hour variance is uncontrollable from the supplier side. An AI-augmented firm with materially compressed associate hours can underwrite fixed fees on transactions a traditional firm would not commit to. This is structural, not incremental.</li>
+      <li><strong>Lower blended rates with similar partner density.</strong> If associate substitution drops to 60%, the boutique can run $700–$1,100/hour blended against $1,400–$1,800/hour at top BigLaw, with the same number of partner hours on the deal. The pricing gap is real, defensible, and visible to the buyer.</li>
+      <li><strong>Risk-share on diligence-driven price reductions.</strong> A boutique can offer a contingent rebate tied to DD-driven price reductions ("our DD finds an issue worth a $5m price chip; we earn back 10% of the chip"). Within the regulatory grey zone but creative pricing structures are increasingly seen at boutique firms. Subject to the contingent-fee limits set out above.</li>
+      <li><strong>Phased commit pricing on PE portfolio work.</strong> A boutique can commit to a 3-year retainer-plus-overage on a sponsor's portfolio work, with the AI tooling absorbing variance the traditional firm would price into the rack. Sponsors love this structure.</li>
+      <li><strong>What the AI thesis does <em>not</em> change.</strong> Headline rack rate (still useful as anchor); broken-deal economics on transformative M&amp;A (deal-failure risk is human-driven, not associate-hour-driven); regulatory limits on contingency.</li>
+    </ul>
+  </aside>
+
+  <h3>Fee letter side-letter mechanics</h3>
+
+  <p>Once a panel is set, the commercial framework is captured in a <strong>fee letter side-letter</strong> between the client and the firm. Standard contents: global rack-rate cap by timekeeper grade; panel discount; volume tier discounts; prompt-payment discount; AFA suite (which alternative structures the firm will accept on what types of work); reporting and budget-tracking commitments; technology / AI usage and data-confidentiality regime; diversity and reporting commitments; rate-freeze for the panel term except for inflation indexation. Side letters are renegotiated at each panel review. They are the dominant commercial framework governing the firm-client relationship — individual engagement letters typically incorporate the side letter by reference. A boutique pitching a major PE sponsor without a credible answer to <em>"can you commit to a global side-letter across our portfolio companies?"</em> is not credible.</p>
+
+  <h2>Conflicts and ethics — what walls do, what they don't, and where the boutique pitch is actually advantaged</h2>
+
+  <p>Conflicts are governed by ABA Model Rules 1.7 (current-client), 1.9 (former-client) and 1.10 (imputed) in the US; by the SRA Principles and Code of Conduct in the UK; by national bar rules elsewhere in Europe. Every M&amp;A firm runs firm-wide conflicts databases that test new matters against existing client roster on intake. But the formal rules sit on top of <em>informal sector-segment conflict policies</em> that constrain practice far more than the formal rules do.</p>
+
+  <h3>The three formal types</h3>
+
+  <ul>
+    <li><strong><span class="term" data-term="aba-model-rule-1-7">Rule 1.7 — current clients.</span></strong> Direct adverseness or material limitation between concurrent clients is prohibited absent informed written consent. <em>Direct adverseness</em>: representing client A against client B in the same matter (prohibited and not waivable in tribunal proceedings). <em>Material limitation</em>: the firm's duty to A would be materially limited by its duty to B (typically waivable with effective screens / information barriers).</li>
+    <li><strong><span class="term" data-term="aba-model-rule-1-9">Rule 1.9 — former clients.</span></strong> Cannot represent another person in the same or substantially related matter where interests are materially adverse to the former client, absent former-client consent. The "substantially related" test captures matters where confidential information from the prior engagement would be useful in the new representation.</li>
+    <li><strong><span class="term" data-term="aba-model-rule-1-10">Rule 1.10 — imputation.</span></strong> Any individual lawyer's conflict is imputed to the entire firm. Lateral conflicts can be cured under <strong>Rule 1.10(a)(2)</strong> (added in the 2009 amendments) by an effective screen + timely written notice + certifications.</li>
+  </ul>
+
+  <h3>What ethical walls do and don't fix</h3>
+
+  <p>An <span class="term" data-term="ethical-wall">ethical wall</span> (US Rule 1.10(a)(2): "screen"; UK SRA Code: "information barrier") is a procedural and physical separation isolating a lawyer or team from a conflicting matter inside the same firm. Standard components: separate file rooms; IT-system access blocks; separate billing reviewers; written certifications by the screened lawyer not to participate; no informal communications; no shared support staff; no attendance at the same internal meetings.</p>
+
+  <ul>
+    <li><strong>Most effective for lateral conflicts.</strong> A partner moves to a new firm carrying a former-client representation; the new firm screens her from any work for parties adverse to that former client. Under Rule 1.10(a)(2), the lateral conflict can be cured if (i) the lawyer is timely screened, (ii) the lawyer is apportioned no part of the fee on the matter, (iii) written notice is promptly given to the affected former client. Without this rule, lateral mobility would not function — every lateral hire would torpedo the new firm's existing client base.</li>
+    <li><strong>Least effective for live current-client conflicts under Rule 1.7.</strong> Two current clients with directly adverse interests cannot be cured by a screen. Both must consent in writing, and even consent does not cure non-consentable conflicts (e.g. asserting one client's claim against another in the same litigation). UK practice has historically been more permissive — Magic Circle firms have routinely been on opposite sides of the same deal across different offices with information barriers — but the SRA has tightened enforcement since 2019.</li>
+  </ul>
+
+  <h3>Thrust-upon conflicts and the hot-potato rule</h3>
+
+  <p>A <span class="term" data-term="thrust-upon-conflict">thrust-upon conflict</span> arises through circumstances beyond the firm's control — typically because two existing clients merge during a representation, or because a new client (e.g. acquirer) buys an existing client (target) mid-matter. Some jurisdictions (and the ABA's 2002 amendments to the Model Rules comments) provide narrow relief: the firm may continue representing one client with informed consent. Other jurisdictions refuse to recognise thrust-upon as a basis for continued representation absent the affected client's consent (Pennsylvania has historically taken a stricter line).</p>
+
+  <p>The <span class="term" data-term="hot-potato-rule">hot-potato rule</span> prohibits a firm from terminating client A in order to take more attractive client B where B's interests are adverse to A's. The rule converts what would be a Rule 1.7 (current-client) problem into a Rule 1.9 (former-client) problem — but courts have consistently held that voluntary termination cannot be used to escape Rule 1.7 obligations. A firm cannot "drop A like a hot potato" to take B even if A only has $50k of routine work and B brings $5m of M&amp;A.</p>
+
+  <h3>Sector-segment conflicts — where the boutique pitch is structurally advantaged</h3>
+
+  <p><span class="term" data-term="sector-segment-conflict">Sector-segment conflict policies</span> are informal but consequential. Common examples in M&amp;A:</p>
+
+  <ul>
+    <li><strong>"We won't represent target and acquirer in the same industry on similar deals in the same year"</strong> — even where there is no formal Rule 1.7 conflict, accepting a buy-side mandate for sponsor A on a target while having advised competing sponsor B on a similar competing-asset acquisition six months earlier will damage the B relationship.</li>
+    <li><strong>"We won't represent two competing strategic bidders for the same target"</strong> — even where bidders consent to information barriers, the residual reputational risk and associate-pool overlap make this functionally impossible at one firm. The 2024 NYCBA Formal Opinion 2024-1 specifically addressed dual-bidder representation.</li>
+    <li><strong>"We won't represent direct competitors of our anchor PE sponsor in the same sub-sector"</strong> — anchor relationships demand exclusivity at the sub-sector level even where the formal conflict rules would not require it.</li>
+  </ul>
+
+  <p>This is the structural reason many M&amp;A partners are interested in boutiques. A senior partner at Latham who is conflicted out of three sub-sectors because of the firm's anchor PE relationships can plausibly take all of those mandates at a boutique with no anchor exposure. The narrative shifts from "I have a deeper bench at Latham" to "I can actually take your deal at the boutique." For the user's pitch, this is a real selling point — and the partner being recruited can do the maths herself.</p>
+
+  <aside class="pitfall">
+    <h5>Conflicts and the boutique pitch — what to flag honestly</h5>
+    <ul>
+      <li><strong>The boutique inherits its founders' conflicts.</strong> A founding partner brings her former-client conflict universe under Rule 1.9 — every former client of hers from the last 5–10 years (depending on substantial-relation analysis) is potentially blocked. The ABS structure does not change this.</li>
+      <li><strong>Conflicts narrowing is real but bounded.</strong> A boutique starting with 4 founding partners has the conflicts shadow of those 4 — small relative to a 600-partner firm but not zero, and growth re-creates the constraint over time.</li>
+      <li><strong>Anchor capital changes the analysis.</strong> If the boutique takes anchor capital from a strategic investor (a Big Four firm, a PE-backed legal-services platform), the anchor's conflict map propagates to the boutique. A clean conflict map is one of the boutique's structural advantages; anchor capital trades that advantage for runway.</li>
+    </ul>
+  </aside>
+
+  <h2>Why partners leave (and stay) — the lateral market and the boutique-appeal pattern</h2>
+
+  <p>BigLaw lateral hiring has accelerated over the past decade. Senior partner departures from Magic Circle and AmLaw 50 firms run at an estimated 5–9% per year on a rolling basis — a substantial churn rate that creates a continuous lateral market. The structural mechanics of leaving:</p>
+
+  <ul>
+    <li><strong>Recruiter and approach.</strong> Most partner laterals are introduced by a specialist recruiter (Major Lindsey, Macrae, Garrison, others). The recruiter shops the partner anonymously and brings firm-side interest only after a "chemistry meeting" with practice leadership.</li>
+    <li><strong><span class="term" data-term="book-of-business">Book-of-business test</span>.</strong> The single most-used screen at lateral interviews. The partner provides revenue, client list, originator history; the firm assesses portability. A book of $1.5m+ generates serious mid-firm interest; $5m+ for AmLaw 100 firms; $10m+ for elite firms; $20m+ commands $20m+ guarantees.</li>
+    <li><strong>Conflicts review.</strong> The firm runs the partner's clients against its existing client roster — often a multi-week process for a partner with 50+ clients. This is where many lateral negotiations die quietly: the firm decides the conflict overhead is greater than the book is worth.</li>
+    <li><strong>Compensation negotiation.</strong> Typically a 1–3 year guarantee at 1.0×–1.5× current pay; sign-on / make-whole on forfeited deferred comp at the old firm; <span class="term" data-term="capital-contribution">capital contribution</span> financed by firm-arranged bank loan over 1–3 years.</li>
+    <li><strong><span class="term" data-term="garden-leave">Garden leave</span>.</strong> 6–12 months for UK Magic Circle equity partners; 3–6 months for US BigLaw; senior partners often longer than juniors. During garden leave the partner is paid but cannot work, contact clients, solicit colleagues, or start at the new firm. Effect: 20–40% of stated book typically erodes during the period because clients are reassigned to colleagues at the old firm.</li>
+    <li><strong><span class="term" data-term="minimum-marketing-period">Minimum marketing period (MMP)</span>.</strong> Contractual provision requiring the lateral to deliver a minimum book at the new firm within 12–24 months. Failure can trigger comp clawback or downgrade. The MMP is a structural retention tool that constrains the partner's <em>second</em> move: a partner who lateraled in year minus-one and is mid-MMP cannot easily move again without forfeiting both old-firm deferred comp and new-firm guarantee.</li>
+  </ul>
+
+  <p><strong>Total timeline:</strong> 3–6 months from first conversation to firm offer; another 3–9 months of garden leave before start; another 6–12 months marketing period to land the book at the new firm. Roughly 18 months from decision to settled at new firm.</p>
+
+  <h3>The senior associate burned-out pipeline</h3>
+
+  <p>Beyond partner laterals, the boutique pitch has a separate pipeline: senior associates and counsel-grade lawyers in years 6–10 who are no longer on a credible equity-partner track. These lawyers are 70–80% as capable as a junior partner, command 30–50% of a junior partner's comp, and are flight risks at major firms anyway. An AI-augmented boutique can plausibly hire from this pipeline at a discount, give them counsel or junior-partner titles, and run the practice with a much higher senior-to-associate density than a traditional firm. This is one of the structural staffing advantages of the model.</p>
+
+  <h3>The boutique-appeal pattern (what makes the pitch work)</h3>
+
+  <ul>
+    <li><strong>Autonomy.</strong> No more 600-partner committee politics. No more sector-segment conflicts narrowing what mandates you can take. Practice the way you want to.</li>
+    <li><strong>Equity upside on the AI thesis.</strong> A founding partner takes 5–15% of the boutique. If the boutique scales to $50–150m revenue at a 30–40% margin, the equity is worth $5–15m+ — beyond what the partner's current PEP can deliver.</li>
+    <li><strong>Cleaner economics on her own book.</strong> 60–80% of book becomes own comp at the boutique vs. 25–40% under modified EWYK at a major firm. The arithmetic is straightforward and visible to the partner immediately.</li>
+    <li><strong>Sector focus / first-mover positioning.</strong> The first M&amp;A AI boutique in a credible jurisdiction has scarce-asset value. Senior partners who see the structural shift coming want to be inside the story, not outside it.</li>
+    <li><strong>Conflicts narrowing.</strong> Already discussed above. Real and structural.</li>
+  </ul>
+
+  <h3>The boutique-anti-appeal pattern (what kills the pitch)</h3>
+
+  <ul>
+    <li><strong>Book risk.</strong> Will the book actually move? Realistic year-one capture: 50–70% of stated book, declining if the new firm's brand is weaker than the old. Institutional clients (PE megafunds, FTSE 100 corporates) tend to follow the firm; mid-market PE, family offices and founder-led companies tend to follow the partner.</li>
+    <li><strong>Comp risk.</strong> The partner is on $5m at the current firm; the boutique offers $3m year one + equity worth maybe $5m+ in 5 years. Discount that. Many partners run the maths and stay.</li>
+    <li><strong>Conflicts narrowing in the wrong direction.</strong> Some partners service institutional clients precisely because their current firm has the capability mass — handing those off to colleagues is fine. They cannot service them at a boutique. So the boutique narrows their <em>current</em> book even as it widens their addressable market.</li>
+    <li><strong>"No platform" anxiety.</strong> Tax / IP / regulatory specialists down the hall who pick up the phone. Associate bench depth on a Friday at midnight. Brand and league-table that lets you walk into any boardroom. All harder at a boutique.</li>
+    <li><strong>"What if the AI thesis is wrong?"</strong> The partner's downside is reputation and 18 months of personal opportunity cost. The user's downside is the entire venture. The risk asymmetry is real and partners price it in.</li>
+  </ul>
+
+  <h2>Boutique economics — what the model actually looks like</h2>
+
+  <p>The unit economics of a viable M&amp;A boutique:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="revenue-per-lawyer">Revenue per lawyer (RPL)</span>:</strong> $1.0–1.7m for a senior-heavy boutique. Wachtell sets the structural ceiling at ~$5.7m on a small partnership. Boutiques typically run RPL $700k–$1.5m; an AI-augmented boutique with 60% associate substitution can plausibly run RPL $1.5m+.</li>
+    <li><strong><span class="term" data-term="leverage-law-firm">Leverage</span>:</strong> traditional boutique 1–3 associates per partner; AI-augmented boutique potentially 1–1.5 (lower headcount, higher per-lawyer output). NALP data shows BigLaw leverage has dropped from approximately 2:1 in 2000 to 1.3:1 in 2025. AI accelerates the trend.</li>
+    <li><strong><span class="term" data-term="profits-per-equity-partner">PEP</span>:</strong> a specialist boutique can plausibly match the lower-tier of AmLaw 50 PEP ($2–4m) on much smaller revenue if the unit economics are right. The structural advantage is that the boutique partner's PEP share is a much larger share of her book than at a major firm.</li>
+    <li><strong>Margin:</strong> traditional BigLaw operates at ~35–45% pre-distribution operating margin; an AI-augmented boutique with lower associate cost can plausibly run 40–50%.</li>
+  </ul>
+
+  <h3>Recent boutique formation patterns and the canonical proof-points</h3>
+
+  <ul>
+    <li><strong><span class="term" data-term="garfield-law-uk">Garfield.Law Ltd</span>.</strong> First purely AI-based law firm authorised by the UK SRA (May 2025). Co-founded by ex-Baker McKenzie associate Philip Young and quantum physicist Daniel Long. Specialises in small-claims debt recovery (£10k cap). Significance: the SRA has signalled it will authorise AI-driven legal services where there is credible supervision, hallucination management, and lawyer accountability. The same regulatory pathway is open for an M&amp;A AI law firm — though the data-confidentiality and risk-management bar will be substantially higher.</li>
+    <li><strong><span class="term" data-term="crosby-ai-law-firm">Crosby</span>.</strong> Hybrid AI law firm focused on contract review for tech companies (NDAs, MSAs, DPAs). Funding: $5.8m seed led by Sequoia (June 2025); $20m Series A led by Index Ventures with Bain Capital Ventures, Cooley (the BigLaw firm taking equity in a competitor), and others (October 2025). Public substitution-rate metric: from 173 days for the first 1,000 contracts to 1,000 contracts every 3 weeks.</li>
+    <li><strong><span class="term" data-term="kpmg-arizona-abs">KPMG Law Arizona ABS</span>.</strong> Approved by the Arizona Supreme Court on 27 February 2025 — first Big Four legal-services entity authorised to operate as a US law firm. Significance: institutional non-lawyer ownership of a US law firm has now been validated by a state regulator. If KPMG can pass Arizona ABS approval, a venture-funded AI law firm can plausibly do the same.</li>
+    <li><strong>Robin AI partnerships.</strong> Robin AI (UK-based legal-tech) has formed partnerships with multiple BigLaw firms for contract-review tooling. Demonstrates that the BigLaw firms themselves are engaging with AI substitution rather than ignoring it — which both validates the thesis and tightens the time window for the boutique pitch.</li>
+  </ul>
+
+  <h2>Regulatory edges — what an AI law firm can actually do, where</h2>
+
+  <p>Three regulatory regimes matter for AI law firm formation:</p>
+
+  <h3>UK Alternative Business Structures (ABS) — Legal Services Act 2007</h3>
+
+  <p>The <span class="term" data-term="alternative-business-structure">UK ABS regime</span> was introduced under the Legal Services Act 2007. The first ABS licence was granted by the SRA in spring 2012; over 1,500 ABSs are licensed today. Non-lawyers can own up to 100% of an ABS if (i) the firm has at least one lawyer manager and one non-lawyer manager / interest-holder, (ii) the firm provides at least one reserved legal activity, and (iii) non-authorised persons control at least 10% of voting rights for the firm to be a "licensable body" under the LSA. <strong>UK ABS is the easiest route in the world for a venture-backed AI law firm.</strong> It accommodates VC capital, founder-led structures, and AI-driven service delivery. The Garfield.Law authorisation is direct precedent.</p>
+
+  <h3>US Model Rule 5.4 — and the narrow exceptions</h3>
+
+  <p><span class="term" data-term="model-rule-5-4">ABA Model Rule 5.4</span> (Professional Independence of a Lawyer) prohibits non-lawyer fee-sharing and non-lawyer ownership of law firms. In force in 48 of 50 US states. Two exceptions:</p>
+
+  <ul>
+    <li><strong>Arizona (since August 2020).</strong> Arizona repealed Rule 5.4 and created the ABS programme. KPMG Law's February 2025 approval confirmed the regime's commercial viability. Non-lawyers can own US law firms via Arizona ABS structures. Arizona is now the practical US route for a venture-funded AI law firm, but the firm must be incorporated and primarily operate in Arizona — multi-state practice triggers the unauthorised-practice-of-law analysis under the rules of each other state.</li>
+    <li><strong><span class="term" data-term="utah-sandbox">Utah regulatory sandbox</span> (since August 2020).</strong> The Utah Office of Legal Services Innovation, launched by the Utah Supreme Court as a 7-year pilot, permits limited non-lawyer ownership and unauthorised-practice waivers within sandbox parameters. <strong>Narrowed in 2024</strong> to focus on access-to-justice (underserved consumers) — making it a less attractive route for commercial M&amp;A boutique formation.</li>
+    <li><strong>D.C. (partial).</strong> The District of Columbia historically has a narrow exception under D.C. Rule 5.4 permitting limited non-lawyer participation in law firm ownership, but with significant restrictions on the scope of permitted activities.</li>
+  </ul>
+
+  <h3>EU and elsewhere — fragmented and mostly closed</h3>
+
+  <p>EU jurisdictions vary widely. Germany permits narrow non-lawyer ownership under the Bundesrechtsanwaltsordnung (BRAO) — primarily for Big Four entities and limited multidisciplinary partnerships. France severely restricts non-lawyer ownership under the rules of the Conseil National des Barreaux. Spain and Italy are more permissive on multidisciplinary structures. Australia (since 2001) was the first major jurisdiction to permit non-lawyer ownership — Slater &amp; Gordon and Slater + Gordon were the canonical examples. Singapore permits limited non-lawyer ownership through "Qualifying Foreign Law Practices."</p>
+
+  <h3>LPO / LPM — the historical analogue</h3>
+
+  <p>The Legal Process Outsourcing (LPO) and Legal Project Management (LPM) markets have grown substantially over the past 15 years. LPO providers (Pangea3, originally; Integreon; UnitedLex) demonstrated that complex legal work could be unbundled and delivered by non-lawyer-supervised teams using technology. The market grew to $14bn+ globally by the early 2020s. The LPO precedent matters because it shows: (i) the ethics rules accommodate unbundled non-lawyer-augmented service delivery; (ii) institutional buyers will purchase legal services from non-traditional providers; (iii) the substitution rate of routine work is high. AI law firms are a successor model — full legal authorisation rather than supervised outsourcing.</p>
+
+  <aside class="lever both">
+    <h5>The regulatory route the user should actually pitch — three structural options</h5>
+    <ol>
+      <li><strong>UK ABS, primary base in London.</strong> Easiest regulatory route; mature precedent (Garfield); accommodates VC capital and founder-led structure; serves UK / EU M&amp;A natively. Cross-border US M&amp;A delivered through US co-counsel arrangements until US scaling makes sense. <em>This is the recommended primary route.</em></li>
+      <li><strong>Arizona ABS, primary base in Phoenix.</strong> US presence; serves US M&amp;A natively; KPMG precedent; but Arizona-anchored practice is a meaningful constraint for sponsor-driven M&amp;A which is typically NY-anchored. Potentially Phase 2 once UK base is established.</li>
+      <li><strong>Hybrid: UK ABS + US co-counsel network.</strong> The realistic structure for the early years. UK ABS as the primary regulated entity; US M&amp;A delivered through co-counsel arrangements with a small US-licensed partnership (potentially Arizona-incorporated) on the platform. Most boutique formations have used variants of this structure.</li>
+    </ol>
+  </aside>
+
+  <h2>Client psychology by buyer type</h2>
+
+  <p>An M&amp;A practice is not a single market. PE sponsors, strategic corporates, and founder-sellers buy legal services for different reasons and prioritise different things. Understanding the segmentation is critical for the boutique pitch — because the boutique can credibly serve some segments and structurally cannot serve others.</p>
+
+  <h3>PE sponsors — relationship-driven, fee-sensitive, predictability-focused</h3>
+
+  <ul>
+    <li><strong>What they buy:</strong> M&amp;A capability + portfolio company general counsel work + financing + restructuring + secondaries.</li>
+    <li><strong>How they buy:</strong> panel-based; 6–10 firm panels; reviewed every 2–3 years; fee letter side-letter; relationship runs through the GC + the deal partners on the buy-out team.</li>
+    <li><strong>What they care about:</strong> certainty of close (broken-deal risk is everyone's enemy in PE); predictable fees (carry calculation depends on it); responsiveness ("can you mobilise a deal team in 48 hours?"); cross-portfolio leverage (one firm doing multiple portfolio companies); senior-partner attention (no junior partner running their deal).</li>
+    <li><strong>Relationship sensitivity:</strong> very high. PE sponsors know each other; one major bad experience travels. Once a sponsor trusts a partner, the relationship typically holds for 10–20 years.</li>
+    <li><strong>Boutique-fit:</strong> mid-market PE is the sweet spot. Megafunds need the platform depth a boutique cannot match; mid-market PE values senior-partner attention and lower fees over platform breadth. The boutique pitch lands hardest on PE sponsors with $1–10bn AuM running 5–15 deals per year.</li>
+  </ul>
+
+  <h3>Strategic corporates — in-house GC-driven, longer relationships, conservative</h3>
+
+  <ul>
+    <li><strong>What they buy:</strong> M&amp;A advisory + ongoing regulatory + employment + IP + litigation + commercial.</li>
+    <li><strong>How they buy:</strong> through the General Counsel and sometimes a Chief Legal Officer; M&amp;A is typically a separate panel from regulatory / litigation; very large strategics may run separate panels per business unit.</li>
+    <li><strong>What they care about:</strong> deep institutional knowledge of the company; partners who have served them across multiple deals; risk-management orthodoxy (reputational risk is paramount); board-level credibility.</li>
+    <li><strong>Relationship sensitivity:</strong> very high. Long-tenured relationships with senior partners often outlast individual GCs. The firm-vs-partner tension is real: when a senior partner moves, sometimes the relationship moves and sometimes it stays.</li>
+    <li><strong>Boutique-fit:</strong> harder. Large strategic corporates typically want the platform credibility the boutique cannot offer. Mid-cap and family-office-controlled corporates are more accessible. The boutique can win specific deal mandates rather than panel slots.</li>
+  </ul>
+
+  <h3>Founder-sellers — single-shot, fee-anxious, often inexperienced</h3>
+
+  <ul>
+    <li><strong>What they buy:</strong> a single transformative event — typically the sale of their business.</li>
+    <li><strong>How they buy:</strong> through their lead investment banker (advisor referral); through their pre-existing corporate counsel (defaulting to the firm that did their incorporation); through a friend's recommendation (founder networks).</li>
+    <li><strong>What they care about:</strong> a partner who explains things in plain English; clarity on fees; deal certainty (founder anxiety about deal failure is high); chemistry (the partner will sit with them at midnight when the term sheet blows up).</li>
+    <li><strong>Relationship sensitivity:</strong> low at the firm level (one-shot transaction), high at the partner level (the partner becomes a quasi-friend through the process).</li>
+    <li><strong>Boutique-fit:</strong> excellent. Founder-sellers don't care about platform; they care about the partner. The boutique partner offering senior attention at lower fees with AI-driven faster turnaround is structurally well-positioned.</li>
+  </ul>
+
+  <h2>The M&amp;A market-intelligence stack</h2>
+
+  <p>Senior M&amp;A partners use a small set of subscription platforms for origination intelligence, league-table research, and pitch credentials. The user must know these by name because they will come up in any conversation about how the practice generates leads:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="mergermarket-intelligence">Mergermarket</span> (now part of ION Group).</strong> Predictive M&amp;A market intelligence platform built around journalist sourcing of pre-announcement deal information. Used for (i) identifying targets and bidders before deals become public (pre-RFP pitch positioning), (ii) league-table and sector-trend research. Subscription pricing: typical institutional access $20–60k/year.</li>
+    <li><strong>PitchBook.</strong> Private market focus — PE / VC / M&amp;A. Strong on private company financials, ownership structures, deal multiples. Heavy use by mid-market M&amp;A advisors. Subscription pricing: typical institutional access $30–80k/year.</li>
+    <li><strong>S&amp;P Capital IQ.</strong> Public market and corporate finance focus. Strong on listed-company comparables, public deal terms, debt and equity issuance, league tables.</li>
+    <li><strong>Refinitiv (now part of LSEG).</strong> Public M&amp;A, global league tables (including the official "Refinitiv league tables" used for press citations), regulatory filings, debt capital markets data.</li>
+    <li><strong>BoardEx (Altrata).</strong> Relationship-mapping platform — who knows whom across boards, executives, advisors. Used for warm-introduction strategy on cold pitches.</li>
+  </ul>
+
+  <p>Most senior M&amp;A partners use 2–3 of these in combination, plus Bloomberg, plus their own internal client-relationship-management (CRM) database. A boutique with a credible technology-enabled lead-flow story (AI summarisation of Mergermarket alerts, BoardEx-driven warm-intro mapping, structured CRM follow-up) is meaningfully differentiated from a traditional firm using the same data streams less efficiently.</p>
+
+  <aside class="lever both">
+    <h5>Pitching the boutique to an M&amp;A partner — the partner objection checklist</h5>
+    <p>This is the actual scorecard the partner runs in her head. The user's pitch must have a sharp answer to every line. Going into a meeting without these answers prepared is malpractice on the user's side.</p>
+    <ol>
+      <li><strong>"Will my book of business actually move?"</strong> Realistic year-one capture: 50–70%. Honest answer is preferable to inflated. Show the partner the maths: institutional clients (PE megafunds, FTSE 100) tend to follow the firm; mid-market PE, family offices and founder-led companies tend to follow the partner. What's the institutional / partner mix?</li>
+      <li><strong>"What's the comp guarantee, and what's clawback?"</strong> Standard structure: 1–3 year guarantee at 1.0×–1.2× current pay; equity grant (5–15% of the boutique). Make-whole on forfeited deferred comp at the old firm. No MMP-style clawback in year one (the partner has just lost garden leave; piling on MMP is unfair). Years 2–3, MMP-style targets are reasonable.</li>
+      <li><strong>"What do my conflicts look like at the boutique?"</strong> Walk through the formal Rule 1.7 / 1.9 / 1.10 universe and the informal sector-segment policy. Show the partner the conflict map: at the boutique she can take three sub-sectors she's currently blocked on. Quantify those mandates.</li>
+      <li><strong>"Where's the AI tooling and what's the data architecture?"</strong> Specific roadmap: contract review (where Crosby is the precedent), DD memo automation, drafting assistant, redline reconciliation, regulatory filing assembly, M&amp;A market intelligence. Data confidentiality regime (no third-party model training; on-premises or VPC deployment; client data segregation; SOC 2 / ISO 27001).</li>
+      <li><strong>"Where's the sector focus?"</strong> An M&amp;A boutique with no sector focus is a generalist with worse platform than the major firms. Specific sub-sector positioning (sponsor-driven mid-market PE, technology M&amp;A, regulated-sector strategic M&amp;A) is required.</li>
+      <li><strong>"Where's the capital — runway and growth?"</strong> Specific funding target: $5–20m seed (Crosby raised $5.8m seed, $20m Series A); investor names; dilution at each round; capital deployment plan (lateral hires, technology, infrastructure). Source of capital: VC; anchor strategic; founder-led.</li>
+      <li><strong>"What insurance does the firm carry?"</strong> Professional indemnity insurance is a regulatory requirement. AmLaw 50 typically carries $50–200m primary + excess layers; a startup boutique might launch with $25–50m primary. The partner needs to know that her personal liability is shielded equivalently to her current platform.</li>
+      <li><strong>"What would make me leave Kirkland to do this?"</strong> The honest answer is the autonomy + equity upside + AI thesis combination, plus the conflicts narrowing argument, plus the cleaner economics on her own book. The user should be able to articulate why this combination is structurally better than any one piece.</li>
+      <li><strong>"What's the platform substitution story?"</strong> Tax / IP / regulatory specialists are the standard "I can pick up the phone" advantages of a major firm. The boutique answer: senior-of-counsel arrangements with specialist boutiques (a tax boutique, an IP boutique); strategic alliances with Big Four tax practices; AI-augmented research lowering the dependency on internal specialist hours.</li>
+      <li><strong>"What's the brand story for a board pitch?"</strong> The boutique's first 12 months will involve persuading boards to award major mandates. The pitch deck story: founding partners' track records; AI thesis; specific deal credentials being targeted; named anchor clients. The partner needs to see the board-pitch deck, not just the recruitment deck.</li>
+    </ol>
+  </aside>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — partner-business idioms you will hear</h5>
+    <ol>
+      <li><strong>"What's the book?"</strong> What's your annual originations? Asked early in any lateral conversation. Acceptable answer ranges: $1m / $3m / $5m / $10m / $20m. Anything below $1m is "service partner" territory; anything above $10m is "rainmaker."</li>
+      <li><strong>"What's the working share?"</strong> What percentage of your book is on matters you also run, versus matters colleagues run? High working share = senior associates working under you. Low working share = passive originator (typical of late-career rainmakers).</li>
+      <li><strong>"Are we PEP-positive on this lateral?"</strong> Will the lateral hire add to PEP after compensation, capital, and conflicts costs? The compensation committee's standard framing.</li>
+      <li><strong>"Garden leave is six months."</strong> The structural fact that drives ~20% of book erosion. A partner saying this is signalling the practical timeline.</li>
+      <li><strong>"What's the make-whole?"</strong> The sign-on payment to compensate for forfeited deferred comp at the old firm. Typical range: $1–8m on a $5m book.</li>
+      <li><strong>"Are they on a guarantee or on points?"</strong> Distinguishes lateral hires (typically on a 1–3 year fixed comp guarantee) from existing equity partners (on profit-points sharing in the partnership).</li>
+      <li><strong>"Run the conflicts."</strong> The directive to firm-wide conflicts office to test a new client (or new lateral) against existing client roster.</li>
+      <li><strong>"Have we cleared with X?"</strong> Asking whether a key institutional client has been informed of (and consented to) a specific representation that creates a sector-segment issue.</li>
+      <li><strong>"This is a 1.5x deal."</strong> A success-fee multiplier — closing fee is 1.5× base hourly. PE sponsors negotiate down from 1.5–2.0×; M&amp;A partners negotiate up.</li>
+      <li><strong>"We're on the panel."</strong> Status confirmation — the firm is a pre-vetted approved counsel for that client. Loss of panel position is a major event.</li>
+      <li><strong>"They're a beauty-parade pick."</strong> Won via competitive pitch rather than via panel default. Implies a partner has built a relationship outside the panel framework.</li>
+      <li><strong>"What's the realisation?"</strong> Realised hours billed × rate ÷ hours worked × rack rate. Captures discounting, write-offs, write-downs. AmLaw realisation typically 85–93%; Wachtell ~98% (the highest in the market). Critical metric for matter-level profitability.</li>
+      <li><strong>"It's a portfolio AFA."</strong> Single global rate card across the client's entire spend, often with a guaranteed minimum-spend commitment.</li>
+      <li><strong>"They're a hot-potato call."</strong> The firm is being asked to drop client A to take client B. Almost always declined.</li>
+      <li><strong>"They've thrust-uponed us."</strong> Two existing clients have merged mid-matter; the firm now faces a Rule 1.7 thrust-upon conflict.</li>
+    </ol>
+    <p><strong>The diagnostic sentence.</strong> A senior partner saying <em>"Lateral comes with $4m book, 60% PE / 40% strategic, garden leave six months, make-whole $2m on forfeited deferred comp, three-year guarantee at 1.2× current, MMP at $3m by Y2; conflicts run shows two sub-sector clears at the new firm; we're PEP-positive in Y2, neutral in Y1; partner's pitching the AI thesis to her own book in the marketing period"</em> uses ten phrases above. Re-read until you can parse it.</p>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> <a href="00-foundations.html">Module 00 (Foundations)</a> installs the partner-meeting vocabulary; this module extends it to the partner-business vocabulary. <a href="02-ma-landscape.html">Module 02 (M&amp;A Landscape)</a> sets up the deal-counterparty taxonomy (PE, strategic, founder-seller) that this module's client-psychology section maps onto. <a href="03-presigning-documents.html">Module 03 (Pre-Signing Documents)</a> covers engagement letters and the start of the panel-rate / fee-letter relationship.</li>
+      <li><strong>Forwards:</strong> <a href="P5-ai-companion.html">Module P5 (AI Companion)</a> develops the specific AI tooling roadmap that backs the boutique pitch this module sets up. <a href="P3-negotiation-playbook.html">Module P3 (Negotiation Playbook)</a> covers the deal-by-deal negotiation moves that the partner objection checklist refers to.</li>
+      <li><strong>Why this module is the keystone:</strong> Modules 01–18 install the M&amp;A doctrine. P1–P3 install the practitioner texture. P4 (this module) installs the <em>business of the practice</em> — and that is the missing layer that turns the user's M&amp;A literacy into a credible co-founder pitch. Without this layer, the user can pass a partner-fluency test but cannot have the conversation that actually persuades a senior partner to leave Kirkland.</li>
+      <li><strong>Domino effect for the user's pitch (the "if I change X, what else has to move?" rule for boutique formation):</strong>
+        <ul>
+          <li>Move from <em>UK ABS</em> to <em>Arizona ABS</em> → US-anchored client base; harder to serve UK / EU PE; KPMG-style precedent; venture capital structure differs.</li>
+          <li>Move from <em>founder-led equity</em> to <em>VC-anchor capital</em> → conflicts map propagates to anchor's existing portfolio; runway extends; founder dilution; partner equity grants smaller.</li>
+          <li>Move from <em>founder-partner only</em> to <em>founder + 2 lateral partners on day one</em> → conflicts triple but so does book; runway burn accelerates; first-deal credibility multiplies.</li>
+          <li>Move from <em>full-service M&amp;A</em> to <em>sub-sector specialist (e.g. tech M&amp;A only)</em> → conflicts halve; addressable market halves; brand clarity dramatically improves.</li>
+          <li>Add <em>strategic anchor client</em> (e.g. a single PE megafund as launch client) → revenue certainty year one but conflicts narrowing across that fund's portfolio map; harder to recruit further partners with overlapping books.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Four partner-economics models — pure lockstep, modified lockstep, modified EWYK, pure EWYK — map to specific firms and tell you what would actually move a partner. Wachtell pure-lockstep PEP $9m; Kirkland modified-EWYK PEP $8.6m; Magic Circle modified-lockstep £1.6–2.5m. Cravath broke lockstep in 2021 under lateral pressure from $20m+ Kirkland guarantees.</li>
+      <li>Originator credit (15–30% of fees) and working credit (25–40%) split a deal's revenue. Cross-border M&amp;A creates the sharpest credit fights. The book of business is the lateral-recruitment currency — $1.5m+ for mid-firm interest, $5m+ for elite, $20m+ for $20m+ guarantees. 2024 MLA average: $3.476m originations, $1.411m comp.</li>
+      <li>Structural retention forces — capital contribution (~$550k), deferred comp forfeiture (up to 55%), garden leave (3–12 months), MMP (12–24 months) — make a $5m partner cost $4–8m to extract. The make-whole is the boutique's funding requirement.</li>
+      <li>Beauty-parade and panel mechanics: panels reviewed every 2–3 years; panel discount 10–25%; blended rates $1,400–1,800/hour at top BigLaw; boutique can credibly run $700–1,100/hour. Pitch-killers: conflicts not pre-cleared, wrong partner, generic deck, loss-leader pricing, no AI answer.</li>
+      <li>Fee structures span hourly, fixed, capped, blended, success, broken-deal, AFA. Contingent fees are restricted everywhere — UK SRA + CFA / DBA caps; US Model Rule 1.5 reasonableness; EU mostly prohibits pacta de quota litis. AI-augmented firms can underwrite fixed fees and lower blended rates that traditional firms cannot.</li>
+      <li>Conflicts: Rule 1.7 (current), 1.9 (former), 1.10 (imputed). Walls work for lateral conflicts under 1.10(a)(2), not for live current-client conflicts under 1.7. Sector-segment conflicts narrow practice far more than formal rules — and conflicts narrowing is one of the boutique's structural advantages.</li>
+      <li>Boutique formation routes: UK ABS (easiest, Garfield precedent); Arizona ABS (KPMG precedent, US presence); Utah sandbox (narrowed 2024). 48 US states still on Model Rule 5.4. Recommended structure: UK ABS primary + US co-counsel network.</li>
+      <li>The partner objection checklist: book portability; comp guarantee + clawback; conflicts at boutique; AI tooling roadmap; sector focus; capital; insurance; "what would make me leave Kirkland?" The user must have sharp answers to all of these going into any senior recruitment conversation.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
   <nav class="mod-nav">
-    <a href="P3-negotiation-playbook.html" class="prev">Previous module</a>
+    <a href="P3-negotiation-playbook.html" class="prev">Negotiation Playbook</a>
     <a href="P5-ai-companion.html" class="next">AI Companion</a>
   </nav>
 </main>
