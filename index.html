@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>M&amp;A Course — Sale and Purchase Agreement and the Full Deal Lifecycle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand">M&amp;A Course</span>
+  <nav>
+    <a href="index.html" class="active">Modules</a>
+    <a href="practice/flashcards.html">Flashcards</a>
+    <a href="practice/quiz.html">Quiz</a>
+    <a href="practice/scenarios.html">Scenarios</a>
+    <a href="reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <h1>Mergers &amp; Acquisitions</h1>
+  <p class="subtitle">An interactive course on the Sale and Purchase Agreement and the full M&amp;A deal lifecycle. Jurisdictional focus: United Kingdom, United States (Delaware), European Union.</p>
+
+  <p>This course is built for a non-lawyer working at a law firm — to give you the depth needed to sit in a room with M&amp;A lawyers and follow what they're saying, ask the right questions, and understand the commercial stakes behind every clause.</p>
+
+  <p>Each module pairs concept explanations with jurisdictional callouts (where UK / US / EU practice diverges), examples lifted from a real Italian-law SPA training deck, and negotiation context (what each side typically pushes for). Use the practice modes to lock in retention.</p>
+
+  <section id="section-core">
+    <h2 id="core-h2">Core M&amp;A practitioner course</h2>
+    <p class="subtitle" id="core-blurb"></p>
+    <div class="module-grid" id="coreGrid"></div>
+  </section>
+
+  <section id="section-practitioner">
+    <h2 id="practitioner-h2">Boutique AI law firm — operator complement</h2>
+    <p class="subtitle" id="practitioner-blurb"></p>
+    <div class="module-grid" id="practitionerGrid"></div>
+  </section>
+
+  <h2>Practice modes</h2>
+  <p>Active recall locks in what you've read. Three modes, each spaced for different purposes:</p>
+  <ul>
+    <li><strong><a href="practice/flashcards.html">Flashcards</a></strong> — term &rarr; definition recall with self-grade spaced repetition. Best for terminology.</li>
+    <li><strong><a href="practice/quiz.html">Multiple-choice quizzes</a></strong> — concept questions with carefully-built distractors (e.g., tipping basket vs. deductible basket). Best for sharpening discrimination between similar concepts.</li>
+    <li><strong><a href="practice/scenarios.html">Clause-spotting / scenarios</a></strong> — short clause excerpts and fact patterns asking <em>"What's wrong with this from buyer's perspective?"</em> Closest to actual M&amp;A practice.</li>
+  </ul>
+
+  <h2>Reference</h2>
+  <p><strong><a href="reference/glossary.html">Glossary</a></strong> — every defined term with full name (no abbreviations), short definition, extended explanation, jurisdictional notes, and cross-references. Searchable.</p>
+
+  <h2>How to use this course</h2>
+  <ul>
+    <li><strong>Order:</strong> The modules are designed to be read in numerical order. Modules 00–06 set up the foundations; 07–14 are the SPA-specific deep dive (Session 7 of the source deck); 15–18 cover ancillary documents, dispute resolution, post-closing, and public M&amp;A.</li>
+    <li><strong>Pace:</strong> Each module is dense. Don't try to do more than two or three modules in a single sitting.</li>
+    <li><strong>Recall:</strong> After every two modules, do 10 minutes of flashcards filtered to those modules. Do scenarios after every four modules.</li>
+    <li><strong>Progress:</strong> The course remembers what you've read in your browser's local storage.</li>
+  </ul>
+</main>
+
+<footer>
+  Source material: <em>Session 7 — Introduction to SPA and legal documents in M&amp;A transactions</em>, Accuracy / Ughi e Nunziante / ESCP Business School, Academic Year 2025–2026. This course extends well beyond the source deck.
+</footer>
+
+<script src="assets/progress.js"></script>
+<script src="data/modules.js"></script>
+<script>
+  (function () {
+    if (!window.MODULES) return;
+    const read = (window.MAProgress && window.MAProgress.getRead()) || {};
+    const sections = window.MODULE_SECTIONS || {};
+    const cores = document.getElementById('coreGrid');
+    const pracs = document.getElementById('practitionerGrid');
+    const coreBlurb = document.getElementById('core-blurb');
+    const pracBlurb = document.getElementById('practitioner-blurb');
+    if (sections.core && coreBlurb) coreBlurb.textContent = sections.core.blurb;
+    if (sections.practitioner && pracBlurb) pracBlurb.textContent = sections.practitioner.blurb;
+    window.MODULES.forEach((m) => {
+      const card = document.createElement('div');
+      card.className = 'module-card';
+      const isRead = Boolean(read[m.id]);
+      card.innerHTML =
+        '<div class="mod-num">Module ' + m.id + '</div>' +
+        '<a href="modules/' + m.file + '"><h3>' + m.title + '</h3></a>' +
+        '<p>' + m.blurb + '</p>' +
+        '<span class="status ' + (isRead ? 'read' : 'unread') + '">' + (isRead ? 'Read' : 'Unread') + '</span>';
+      const targetGrid = (m.section === 'practitioner') ? pracs : cores;
+      if (targetGrid) targetGrid.appendChild(card);
+    });
+  })();
+</script>
+</body>
+</html>

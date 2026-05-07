@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 10 — Closing Mechanics · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="10">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 10</div>
+    <h1>Closing Mechanics</h1>
+    <p class="subtitle">The choreography of the day legal title, money, and corporate control change hands — and what happens before, during, and after.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Describe the <span class="term" data-term="closing">Closing</span> event (<span class="term" data-term="completion">Completion</span> in UK practice) — what happens, where, when, and in what order.</li>
+      <li>Identify the six categories of Closing deliverables (transfer instruments, payment, resignations / appointments, ancillary documents, corporate housekeeping, funds-flow memo) and explain the legal effect of each.</li>
+      <li>Compare share-transfer mechanics across UK, Delaware, German, French, and Italian law — and explain why the choice of governing law affects Closing logistics.</li>
+      <li>Apply the <span class="term" data-term="single-transaction-doctrine">single-transaction doctrine</span> and explain its consequences if any single deliverable fails.</li>
+      <li>Explain the post-Closing administrative cascade (stamp-duty filings, Companies House filings, share-register updates, <span class="term" data-term="psc-register">Persons of Significant Control register</span>, FBAR/CFC reporting) and what happens if these are missed.</li>
+      <li>Articulate the consequences of failure to close by the <span class="term" data-term="long-stop-date">Long Stop Date</span> — termination, damages, specific performance.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Closing is a choreography. On a typical mid-market deal there are between thirty and a hundred discrete actions to perform — execution of share-transfer instruments, payment of the purchase price (often net of multiple deductions and held-back amounts), payment into escrow, board resignations and appointments, execution of ancillary agreements (Shareholders Agreement, Transition Services Agreement, employment contracts, intellectual-property assignments), confirmation of change-of-control consents, board resolutions, written shareholder consents, and so on. The legal architecture treats them all as a single, indivisible transaction: if any one piece does not happen, none of them are deemed to have happened. A trainee who forgets to obtain a single signature can blow the entire closing window. The senior partner's job at Closing is to be the orchestra conductor, not to play any one instrument — and the junior's job is to know the score so well that they spot a missing note before the partner does. After Closing, the work is not finished: stamp duty must be paid, registrations updated, and statutory filings made within strict deadlines, or the buyer's title and corporate authority can be impaired.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases on the Closing call, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Mercury-compliant signing"</strong> — execution conforms to the rule in <em>R (Mercury Tax Group) v HMRC</em> [2008]: the signed signature page must travel together with the final document (Option 1: pre-signed page returned with full final document in the same transmission; Option 2: virtual signing protocol with explicit authority to attach; Option 3: physical "wet-ink" signing). Detached signature pages stapled to a different final document do not validly execute a deed.</li>
+      <li><strong>"Back-to-back transfer / release"</strong> — the buyer's payoff wire to the seller's lender is conditional on the lender's simultaneous release of all security; nobody pays before they're paid. Avoids the buyer paying twice.</li>
+      <li><strong>"Wet-ink"</strong> — pen-on-paper signature, still required for some UK Land Registry deeds, German notarial deeds, certain Italian instruments, and statutory declarations. Most simple contracts and English-law deeds now accept e-signature post-2019 (Law Commission Report; Industry Working Group 2020).</li>
+      <li><strong>"Conditional / limited specific performance"</strong> — Delaware PE drafting innovation post-<em>Hexion</em>: seller can compel buyer to close <em>if and only if</em> debt financing is available. If financing fails, seller is limited to the reverse termination fee.</li>
+      <li><strong>"Single transaction doctrine"</strong> — atomic-closing fiction: all closing actions deemed to occur simultaneously; a missing deliverable means none of them happened.</li>
+      <li><strong>"Deeds and corporate authorities"</strong> — checklist line referring to (i) deeds (more formal contracts requiring extra execution formalities, longer 12-year limitation under Limitation Act 1980 s.8), (ii) board resolutions and (iii) shareholder consents needed to authorise the transaction.</li>
+      <li><strong>"Funds-flow lock"</strong> — the moment the Funds Flow Memo is signed and bank instructions are confirmed; after this point the wires cannot be redirected without further signed authority.</li>
+      <li><strong>"Bring-down standard"</strong> — the qualifier on the seller's bring-down certificate: "true in all material respects" (typical), "true in all respects" (very buyer-friendly), or MAE-qualified (very seller-friendly). Drives whether the buyer can refuse to close on a minor breach.</li>
+      <li><strong>"Wire pre-positioned T-1"</strong> — funds wired into the buyer's solicitors' client account the day before Closing, ready for release on the call without same-day-banking risk.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> M07 (SPA structure — Closing is the climax the SPA is choreographing); M08 (Conditions Precedent — clearance evidence becomes a closing deliverable); M09 (MAC/MAE bring-down — the buyer's exit ramp at Closing).</li>
+      <li><strong>Forwards:</strong> M11 (Purchase Price — Funds Flow shape depends on Closing Accounts vs Locked Box); M12 (R&amp;Ws — bring-down certificate confirms warranties at Closing); M13 (Indemnification — survival clock starts running at Closing); M14 (W&amp;I — policy attaches at Closing with no-claims declaration); M15 (Ancillary docs — SHA, TSA, escrow agreement signed alongside).</li>
+      <li><strong>Domino effect:</strong> If the price mechanism changes from Locked Box to Closing Accounts (M11), the Funds Flow splits into Estimated and True-Up, an Estimated Closing Statement becomes a closing deliverable, and a working-capital escrow is added. If the indemnity cap (M13) increases, escrow size grows. If the deal moves to a W&amp;I structure (M14), escrow may collapse to zero, but a no-claims declaration becomes a Closing-day execution item.</li>
+    </ul>
+  </aside>
+
+  <h2>What "Closing" means</h2>
+
+  <p>Closing is the event at which:</p>
+
+  <ul>
+    <li>legal title to the shares (or assets) passes from seller to buyer;</li>
+    <li>the purchase price (or initial purchase price) is paid;</li>
+    <li>the parties exchange the bundle of documents that gives effect to the transfer.</li>
+  </ul>
+
+  <p>UK practice typically calls it <strong>Completion</strong>. Some U.S. and EU markets use <strong>Settlement</strong> (especially in capital-markets-like deals), but "Closing" dominates internationally. The UK distinction matters because the <em>Companies Act 2006</em> and the practice manuals talk about "Completion" — when reading a UK SPA, "Completion" and "Closing" mean the same thing.</p>
+
+  <h3>Where it happens</h3>
+
+  <ul>
+    <li><strong>Pre-COVID:</strong> Closing typically took place at the offices of the seller's law firm, with all parties (or their representatives) physically present. The signature pages were exchanged on paper; share certificates were physically handed over.</li>
+    <li><strong>Post-COVID:</strong> the <strong>virtual Closing</strong> is now standard. The parties run a Zoom or Teams call; signature pages are pre-signed and held in escrow by their lawyers under a "release authority" letter; funds are pre-positioned and released on a single conference call. UK virtual-signing practice is governed by <em>R (Mercury Tax Group) v HMRC</em> [2008] EWHC 2721 (Admin) and the Law Society's "Note on the execution of documents at virtual signings" (2009; updated 2010, 2016). The operational rule: under section 1(3) of the Law of Property (Miscellaneous Provisions) Act 1989, the executed signature page must travel together with the final document. The Law Society identifies three compliant options: (i) <strong>Option 1</strong> — pre-signed signature page returned alongside the full final document in the same transmission; (ii) <strong>Option 2</strong> — virtual signing protocol with explicit authority granted by signatories for counsel to attach signature pages to the final document; (iii) <strong>Option 3</strong> — physical wet-ink signing. Detaching a signature from a draft and stapling it to a different final document does not validly execute a deed (the <em>Mercury</em> failure mode).</li>
+    <li><strong>Wet ink vs e-signature.</strong> Post-2019 UK practice (Law Commission Report 2019; Industry Working Group statement 2020) accepts electronic signatures on most simple contracts and most deeds; HMRC has accepted electronically-signed Stock Transfer Forms since 2022. Still requiring wet ink: UK Land Registry deeds, statutory declarations, German notarial deeds for GmbH share transfers, certain Italian notarial instruments, and US notarised affidavits in some states.</li>
+    <li><strong>Some jurisdictions still require physical attendance at a notary.</strong> German GmbH share transfers, Italian Srl quota transfers, and Swiss share transfers under certain corporate forms require a notarised deed (UK readers: a "deed" is a more formal kind of contract, requiring extra formalities and producing a longer limitation period). Practitioners run a "split closing" — virtual for most deliverables, in-person at the notary's office for the share-transfer step.</li>
+  </ul>
+
+  <h3>The choreography</h3>
+
+  <p>A typical closing day:</p>
+
+  <ol>
+    <li><strong>Pre-Closing call</strong> the day before: confirm all conditions satisfied, confirm funds in transit, confirm signature pages collected.</li>
+    <li><strong>Funds wired</strong> in advance (sometimes T-1 or T-2) into the buyer's solicitors' client account, ready for release.</li>
+    <li><strong>Closing call</strong> at the agreed hour: roll-call of parties; deal counsel reads through the closing checklist; each party confirms each deliverable is "in order."</li>
+    <li><strong>Release authorities given:</strong> the parties' lawyers release signed signature pages.</li>
+    <li><strong>Funds released:</strong> the buyer's lawyer instructs the bank to wire the purchase price.</li>
+    <li><strong>Receipt confirmed:</strong> the seller's lawyer confirms funds received in cleared funds.</li>
+    <li><strong>Closing Memorandum / Completion Memorandum signed:</strong> a document executed by both parties confirming all closing deliverables exchanged. Best practice: the Completion Memo lists each deliverable, ticked off by counsel.</li>
+    <li><strong>Post-Closing actions begin:</strong> filings, share-register updates, stamp-duty submissions.</li>
+  </ol>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Transfer of Shares — Through the relevant transfer instrument, depending on the type of shareholdings. Payment of the Purchase Price — In full or in part (and, where applicable, payment of a portion of the price to the Escrow Agent). Reorganisation of corporate governance — Replacement of directors and, if applicable, reorganisation of other corporate bodies; issuance of letters of release. Other activities — Conclusion or termination of certain contracts relating to the assets or operations of the Target. Conclusion of contracts with Key People."</em></p>
+      <p>— Slide 15 (Closing Mechanics)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> The deck enumerates the four functional buckets of Closing-day activity. (a) Transfer of legal title via the corporate-law-specific instrument (Stock Transfer Form for UK plc; notarised deed for German GmbH; ordre de mouvement for French SAS). (b) Cash movement — wire to seller, wire to escrow agent, wire to lender for pay-off. (c) Refresh of corporate governance — old directors out, new directors in, releases issued. (d) Ancillary contractual housekeeping — terminate intercompany contracts, sign Key People service agreements. Each bucket is independently necessary and the SPA treats them as a single transaction.</div>
+  </aside>
+
+  <h2>The six categories of Closing deliverables</h2>
+
+  <h3>(i) Transfer instruments — share-transfer formalities</h3>
+
+  <p>The <em>physical</em> moment at which title passes depends entirely on the corporate form of the target and the law of incorporation. This is one of the rare points where M&amp;A work crosses into pure corporate / company-law mechanics.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK private company limited by shares (Companies Act 2006)</h5>
+      <p>The seller executes a <span class="term" data-term="stock-transfer-form">Stock Transfer Form</span> (the form prescribed by the Stock Transfer Act 1963 / Stock Transfer (Addition and Substitution of Forms) Order 1996). The form is presented to the company; the company's directors approve the registration; the company's secretary updates the <span class="term" data-term="register-of-members">Register of Members</span> (the statutory register required by Companies Act 2006 s.113). Title passes at the moment of registration in the Register of Members (s.112), <em>not</em> at execution of the Stock Transfer Form. Stamp duty at 0.5% on the consideration is payable to HM Revenue &amp; Customs (HMRC) within 30 days; until the form has been HMRC-stamped (or HMRC has confirmed no stamp duty is due), the company's directors / company secretary will not register the transfer in the Register of Members. There is a <strong>£1,000 de minimis</strong> (Latin: <em>de minimis</em> — "of the smallest things"; below this consideration value no stamp duty is due and no form needs to be lodged with HMRC).</p>
+      <p><strong>Common framing trap:</strong> for UK private companies, <strong>Companies House is not the gatekeeper of share transfers</strong>. The legal-title register is the company's own internal Register of Members. Companies House learns of changed shareholdings only via the next annual Confirmation Statement (CS01) and Persons with Significant Control (PSC) filings.</p>
+      <p><strong>Forthcoming change:</strong> HM Treasury announced on 28 April 2025 (reconfirmed in the Autumn Budget 2025) a single <strong>Securities Transfer Charge</strong> to replace stamp duty and SDRT, with a 2027 implementation target. Mid-deal practitioners should track the regime change.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>Delaware corporation (DGCL)</h5>
+      <p>The seller executes a <span class="term" data-term="stock-power">Stock Power</span> (an assignment in blank, separate from the share certificate, allowing the buyer to complete it after Closing). The stock certificate is delivered with the Stock Power. The corporation's secretary cancels the old certificate, issues a new one in the buyer's name, and updates the <strong>Stock Ledger</strong> (DGCL §219). Title is treated as passing on registration in the Stock Ledger.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU jurisdictions</h5>
+      <p><strong>German GmbH (GmbHG):</strong> Share transfer requires a <span class="term" data-term="notarised-deed">notarised deed</span> under GmbHG §15(3). Seller and buyer (or their authorised representatives under notarised power of attorney) appear before a German civil-law notary; the notary reads the entire share-transfer agreement aloud; both parties sign in the notary's presence; the notary attests. Without notarisation, the transfer is <em>void</em> — not voidable. The notary then notifies the <em>Handelsregister</em> (commercial register).</p>
+      <p><strong>French SAS / SA:</strong> Transfer effected by an <em>ordre de mouvement</em> (transfer order) signed by the seller, plus updating the <em>registre des mouvements de titres</em> (share movement register) and the <em>comptes d'actionnaires</em> (shareholders' accounts). For an SAS, the <em>cession d'actions</em> agreement does not need to be notarised, but the registers must be physically updated and the buyer formally registered.</p>
+      <p><strong>Italian Srl:</strong> Transfer of a <em>quota</em> requires either (a) a notarised deed under Italian Civil Code Article 2470, or (b) for "digital" transfers, a digital signature affixed by a <em>commercialista</em> under Law 133/2008. Either way the transfer must be filed with the <em>Registro delle Imprese</em> within 30 days. Title passes only on filing.</p>
+    </aside>
+  </div>
+
+  <p>The point: the contract <em>agrees</em> the transfer; the corporate machinery <em>effects</em> the transfer. Before Closing, deal counsel must check that the seller has all original share certificates (or, for un-certificated shares, evidence of holding), executed proxies for any nominee holdings, and the appropriate corporate consents under the target's articles (pre-emption rights waivers, board approvals).</p>
+
+  <h3>(ii) Payment of the purchase price</h3>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"The Buyer will pay to the Seller the Purchase Price by means of wire transfer of immediately available funds to the bank account indicated by the Seller."</em></p>
+      <p>— Closing Clause 5.2(b)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> The phrase "<em>immediately available funds</em>" means central-bank cleared funds — not a cheque, not a banker's draft. In Sterling that is CHAPS (Clearing House Automated Payment System); in U.S. dollars it is FedWire; in Euro it is TARGET2 or SEPA Credit Transfer (Instant). The clause looks short but does heavy work — it locks in finality (cleared funds cannot be reversed in the way a cheque can) and dictates the timing window (CHAPS settles intra-day; international wires can take longer).</div>
+  </aside>
+
+  <p>The purchase price almost always splits into multiple wires:</p>
+
+  <ul>
+    <li>the <strong>Initial Purchase Price</strong> (or <strong>Estimated Purchase Price</strong> if a Closing Accounts mechanism is used) wired to the seller;</li>
+    <li>the <strong>Escrow Amount</strong> wired to the <strong>Escrow Agent</strong> (typically a commercial bank) under the Escrow Agreement;</li>
+    <li>the <strong>Repayment of Indebtedness</strong> — often the buyer pays the seller's debt directly to its lenders (a "Pay-Off") to ensure clean title, with the lenders releasing all security simultaneously;</li>
+    <li>the <strong>Transaction Bonuses</strong> to key management, paid through the target's payroll or directly from the funds-flow;</li>
+    <li>the <strong>Adviser Fees</strong> — sellers' advisers (M&amp;A boutique, lawyers, accountants) paid from proceeds, sometimes directly out of the closing funds.</li>
+  </ul>
+
+  <p>The <span class="term" data-term="funds-flow-memorandum">Funds Flow Memorandum</span> is the single document specifying all payments — who pays what to whom, with bank details, on the closing date. It is signed by both parties as evidence; it is the closing-day Bible for the bookkeeping.</p>
+
+  <h3>(iii) Resignations and appointments</h3>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"The Seller shall deliver to the Buyer the letters by means of which the current directors of the Target resign from their office as directors; such letters shall be in line with the drafts attached hereto as Annex 5.2(d). The Seller shall cause a shareholders' meetings of the Target to be validly held on the date hereof, with the purpose of resolving, respectively, as follows: (i) acknowledge the resignation of the current directors from their office as directors of the Target; (ii) adopt a management body made up of a [&bull;]-member board of directors; (iii) appoint as directors of the Target Messrs. [&bull;], [&bull;] and [&bull;]; (iv) not to grant the directors any compensation for their office."</em></p>
+      <p>— Closing Clause 5.2(d) and 5.2(e)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Two parallel actions. (a) The outgoing directors deliver written resignations on a pre-agreed template ("in line with the drafts attached"). (b) The shareholders' meeting (in this Italian deal, convened on the same day) accepts the resignations, sizes the new board, names the buyer's nominees, and resolves not to compensate them for the directorship (because they are buyer-side employees being paid by the buyer). The drafting trap: the template letters at Annex 5.2(d) almost certainly include a release of all claims against the company — without that release, a resigning director can later sue for wrongful termination, and the buyer ends up paying.</div>
+  </aside>
+
+  <p>The <span class="term" data-term="release-letter">resignation letters</span> are key. Best practice: each resigning director signs a letter that (a) confirms resignation effective on Closing, (b) confirms that the resigning director has no claim against the company (a "<strong>mutual release</strong>"), and (c) waives any unpaid compensation, expenses, or benefits except as specifically agreed. Without (b) and (c), the resigning director can later sue the company for wrongful termination — and the buyer ends up paying.</p>
+
+  <p>The <strong>shareholders' resolutions</strong> (or written shareholder consents in jurisdictions that allow them, such as Delaware via DGCL §228) accept the resignations and appoint the buyer's nominees. Sometimes the company's auditor is changed simultaneously.</p>
+
+  <p>In some deals, the <strong>company secretary</strong> (a UK-specific role under Companies Act 2006 s.270 — though no longer mandatory for private companies after 2008) and the <strong>registered office</strong> are also changed at Closing.</p>
+
+  <h3>(iv) Ancillary documents</h3>
+
+  <p>A long list, depending on deal complexity:</p>
+
+  <ul>
+    <li><strong>Shareholders Agreement (SHA)</strong> — if the seller (or management) is rolling some equity into the buyer (a partial sale, or a private-equity rollover);</li>
+    <li><strong>Transition Services Agreement (TSA)</strong> — where the seller continues providing back-office services (IT, HR, accounting) to the carved-out target for a transition period;</li>
+    <li><strong>Service Agreements / Employment Contracts</strong> for key management — sometimes including new lock-up provisions, non-competes, and bonus arrangements;</li>
+    <li><strong>IP Assignment</strong> — formal transfer of any seller-owned intellectual property to the target (for carve-outs);</li>
+    <li><strong>Real-Estate Assignments / Leases</strong> — formal transfer of property leases, sometimes requiring landlord consent obtained as a CP;</li>
+    <li><strong>Change-of-Control Consents</strong> — letters from key counterparties (lenders, key customers, key suppliers, joint-venture partners) confirming they will not exercise change-of-control termination rights;</li>
+    <li><strong>Tax Deed / Tax Indemnity</strong> (UK practice) — a separate deed indemnifying the buyer against pre-Closing tax liabilities; in U.S. practice, equivalent provisions sit inside the SPA;</li>
+    <li><strong>Restrictive Covenants Deed</strong> — non-compete and non-solicit by the seller (covered in detail in Module 12);</li>
+    <li><strong>Disclosure Letter</strong> updates / bring-down certificates (where applicable).</li>
+  </ul>
+
+  <h3>(v) Corporate housekeeping</h3>
+
+  <ul>
+    <li><strong>Board resolutions</strong> of the buyer authorising entry into the SPA, payment of the purchase price, and any related actions;</li>
+    <li><strong>Board resolutions</strong> of the target accepting the resignations, appointing the buyer's nominees, approving share-transfer registration, and changing bank signatories and authorised users on company accounts;</li>
+    <li><strong>Officer's certificates</strong> — signed certificates from the seller (and sometimes the target) confirming that all CPs are satisfied, R&amp;Ws true, covenants performed (the <span class="term" data-term="bring-down-certificate">bring-down certificate</span>);</li>
+    <li><strong>Legal opinions</strong> — on big cross-border deals, both parties' law firms issue opinions on enforceability, capacity, due execution, and (for foreign shareholders) corporate authority. These are negotiated heavily — what assumptions, what qualifications, what jurisdictional opinions.</li>
+  </ul>
+
+  <h3>(vi) Funds Flow Memorandum</h3>
+
+  <p>A spreadsheet, signed at Closing (or sometimes in advance), specifying:</p>
+
+  <table class="dt">
+    <thead><tr><th>From</th><th>To</th><th>Amount</th><th>Currency</th><th>Purpose</th><th>Bank details</th></tr></thead>
+    <tbody>
+      <tr><td>Buyer</td><td>Seller</td><td>&euro;X</td><td>EUR</td><td>Initial Purchase Price</td><td>[Seller bank]</td></tr>
+      <tr><td>Buyer</td><td>Escrow Agent</td><td>&euro;Y</td><td>EUR</td><td>Escrow Amount per Escrow Agreement</td><td>[Escrow account]</td></tr>
+      <tr><td>Buyer</td><td>Lender</td><td>&euro;Z</td><td>EUR</td><td>Repayment of Existing Indebtedness</td><td>[Lender]</td></tr>
+      <tr><td>Buyer</td><td>Sellers' M&amp;A Adviser</td><td>&euro;A</td><td>EUR</td><td>Sellers' transaction fees from proceeds</td><td>[Adviser]</td></tr>
+    </tbody>
+  </table>
+
+  <p>A well-drafted funds flow ties the SPA, the Escrow Agreement, and the Pay-Off Letters to the actual cash movements on Closing day. The accounting and tax teams check it weeks in advance.</p>
+
+  <h2>The single-transaction doctrine</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"The Parties hereby acknowledge and agree that all the actions and transactions to be performed at Closing pursuant to this Article 5 shall be regarded as a single transaction so that no action or transaction shall be deemed to have occurred or taken place if and until all the other actions and transactions shall have taken place as provided herein."</em></p>
+      <p>— Closing Clause 5.3</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Without this clause, if the parties have transferred shares and paid the bulk of the price but a single ancillary deliverable is missing, the parties are in a half-Closed state — the buyer owns the shares but the seller could later argue some condition was not met. The single-transaction doctrine treats the entire bundle as atomic: either all of it has happened, or none of it has. If a deliverable is missing, the parties are deemed not to have closed and must (i) cure the missing deliverable, (ii) re-run the closing, or (iii) terminate. The clause is a contractual fiction — physically, things have happened sequentially over hours — but it produces a clean legal outcome.</div>
+  </aside>
+
+  <p>In Delaware practice, the same effect is achieved by language in the closing-conditions clause: "The obligations of each Party at Closing are subject to the satisfaction or waiver of …" combined with "All actions to be taken at Closing shall be deemed to occur simultaneously."</p>
+
+  <p>The drafting is important because of "<strong>failed Closing</strong>" risk: if the share certificates have been physically handed over and the wire has gone, but a critical signature is missing on the Shareholders Agreement, the single-transaction clause means the seller can demand the certificates back (and the buyer can demand the wire back) until cure. Without it, the buyer is left holding shares but with claims hanging over them.</p>
+
+  <h2>Post-Closing administrative tasks</h2>
+
+  <p>A non-exhaustive list of post-Closing filings (UK private-deal example):</p>
+
+  <ul>
+    <li><strong>Stamp duty:</strong> payment to HMRC at 0.5% on the consideration for shares within 30 days of Closing (subject to the £1,000 de minimis below which no duty is due and no form is lodged); the Stock Transfer Form is sent to HMRC for stamping; until stamped (or HMRC confirms no duty), the company's directors / company secretary will not register the transfer in the Register of Members and the buyer holds beneficial title only — meaning the buyer cannot vote at general meetings or lawfully exercise control. <strong>From 2027</strong>, stamp duty and SDRT are expected to be replaced by a single Securities Transfer Charge announced by HM Treasury on 28 April 2025.</li>
+    <li><strong>Companies House filings:</strong> updated <strong>Annual Confirmation Statement</strong> if PSC information has changed; <strong>Form CS01</strong> if the confirmation statement is due; <strong>AP01</strong> for appointment of new directors; <strong>TM01</strong> for resignation of directors; new registered office change requires AD01.</li>
+    <li><strong>Share-register update:</strong> the company secretary updates the Register of Members (s.113), Register of Directors (s.162), Register of Charges (where relevant), and the PSC Register (under the Small Business, Enterprise and Employment Act 2015, requiring identification of "Persons with Significant Control" — typically anyone holding more than 25% of shares or voting rights, or otherwise exercising significant influence). PSC information is filed at Companies House; failure to file is a criminal offence by the directors.</li>
+    <li><strong>Bank mandates:</strong> changing authorised signatories, removing seller's nominees, adding buyer's nominees.</li>
+    <li><strong>Tax registrations:</strong> notifying HMRC of any change in tax residence, change in group structure for VAT-grouping or corporation-tax-grouping purposes; filing Form 64-8 to authorise new tax agents.</li>
+    <li><strong>Employment matters:</strong> if there is a <span class="term" data-term="tupe">TUPE transfer</span> (Transfer of Undertakings (Protection of Employment) Regulations 2006 — UK implementation of EU Acquired Rights Directive), employee consultations completed and TUPE notifications issued.</li>
+    <li><strong>Pension matters:</strong> where the target has a defined-benefit pension scheme, statutory clearance from the Pensions Regulator may be required (and is usually a CP, not a post-Closing item, given the financial-support-direction risk).</li>
+    <li><strong>U.S.-related filings:</strong> for U.S.-resident persons holding interests in foreign corporations, FBAR (Foreign Bank and Financial Accounts Report) and CFC reporting (Controlled Foreign Corporation rules under the Internal Revenue Code) may apply; for U.S. taxpayers becoming shareholders in a foreign corporation, Form 5471 filings may be required.</li>
+    <li><strong>Other Companies House forms:</strong> SH01 for return of allotment of shares (if any new shares allotted as part of consideration); SH03 for return of purchase of own shares (if the deal involves a share buyback element); MR01 for new charges; MR04 for satisfaction of existing charges (when the seller's lender's security is released).</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — closing logistics</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> comprehensive closing checklist agreed pre-Signing; bring-down certificate from seller covering R&amp;Ws, covenants, and CPs; release of existing security signed and conditional on receipt of pay-off funds (a "back-to-back release"); all post-Closing filings as the buyer's counsel's responsibility (so the buyer controls timing).</li>
+      <li><strong>Seller wants:</strong> simplest possible deliverables; no separate bring-down certificate (rely on the SPA); no obligation to undertake post-Closing administrative tasks beyond the bare minimum; clean break.</li>
+      <li><strong>Typical compromise:</strong> comprehensive checklist; bring-down certificate covering R&amp;Ws and CPs but not every covenant; back-to-back release with a 24-hour cure period; post-Closing filings split (buyer's counsel handles Companies House; seller's counsel handles HMRC stamping; both share TUPE).</li>
+    </ul>
+  </aside>
+
+  <h2>Long Stop Date and the consequences of failure to close</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Within 7 days as from the fulfilment of the last Conditions Precedent; it being however understood that in no case the Closing Date shall be set later than October 31, 2022 (the 'Long Stop Date'), unless such Long Stop Date has been waived or postponed upon agreement of the Parties. … The Parties agree that should Closing not take place by the Long Stop Date (as originally set forth by the Parties or as subsequently waived or postponed upon agreement of the Parties), this Agreement shall be terminated, subject to each Party's right to claim damages from the Party who has impeded the Closing in breach of this Agreement."</em></p>
+      <p>— Closing Clauses 5.1(c) and 5.4</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Two-part construction. Clause 5.1(c) sets the calendar deadline (Closing must happen by 31 October 2022) and the trigger ("within 7 days as from the fulfilment of the last Condition Precedent"). Clause 5.4 says: if you miss the Long Stop Date, the SPA terminates automatically, but the party at fault remains liable for damages. This is the source-deck position — termination plus preserved damages rights. Three other architectures are possible: (a) automatic termination with no liability (very seller-friendly); (b) automatic termination plus a fixed reverse termination fee (common in U.S. PE deals); (c) extension by one party of right (rare but seen in FDI-sensitive sectors where clearance timing is unpredictable).</div>
+  </aside>
+
+  <p>The Long Stop Date (sometimes the "Drop Dead Date" or "Outside Date" in U.S. practice) is the date by which Closing must occur or the SPA terminates. Three things must be in the clause:</p>
+
+  <ol>
+    <li><strong>The date itself</strong> (negotiated to give comfortable runway for clearances — typically Signing + 6 to 12 months for HSR-type deals; longer for FDI-sensitive sectors).</li>
+    <li><strong>A waiver/extension mechanic</strong> (mutual agreement; sometimes unilateral right for one party to extend by a fixed period if a specific clearance is pending).</li>
+    <li><strong>The consequences of expiry.</strong> Three options: (i) automatic termination with no liability; (ii) automatic termination but each party retains damages claims for the breach that prevented Closing (the source-deck position); (iii) a <span class="term" data-term="reverse-termination-fee">reverse termination fee</span> — buyer pays a fixed fee on failure to close (common in U.S. private-equity deals). The canonical example is <em>Hexion Specialty Chemicals v. Huntsman Corp.</em>, C.A. No. 3841-VCL (Del. Ch. 29 Sep 2008): the merger agreement specified a $325M reverse termination fee; the public ~$1bn settlement figure also included $425M for Huntsman's commercial-disparagement claim and Apollo's $250M purchase of Huntsman convertible notes. The case is the foundation for the modern <strong>conditional specific performance</strong> architecture in US PE LBO drafting.</li>
+  </ol>
+
+  <p>If the failure is the seller's (e.g., R&amp;W bring-down failure due to seller's breach), the buyer's remedies are typically (i) walk away with damages, or (ii) seek <span class="term" data-term="specific-performance">specific performance</span> — the equitable remedy of compelling the seller to close.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK</h5>
+      <p>Specific performance is discretionary; the court will refuse if damages are adequate. For a private-company share purchase the court is generally willing to grant it (because shares of a private company are unique), but the discretion is real. UK lawyers will not promise specific performance the way Delaware lawyers can.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>Specific performance is granted readily in M&amp;A in Delaware (because shares of a private company are unique and damages are inadequate); against buyers, it is more contested but the Delaware Chancery has shown willingness to compel buyer specific performance where the buyer wrongfully refused to close — see <em>Channel Medsystems v. Boston Scientific</em> (Del. Ch. 18 Dec 2019, Boston Scientific ordered to close the $275m deal despite alleged FDA-filing fraud) and <em>Snow Phipps v. KCake Acquisition</em> (Del. Ch. 30 Apr 2021, Kohlberg ordered to close the DecoPac deal under the prevention doctrine). (<em>Akorn v. Fresenius</em> (2018) and <em>AB Stable v. MAPS</em> (2020) are the canonical <strong>buyer-walk-away</strong> precedents — not buyer-compelled-to-close — discussed in M09.) Post-<em>Hexion v. Huntsman</em> (2008), US PE practice pairs the reverse termination fee with <strong>conditional / limited specific performance</strong>: the seller can compel the buyer to close if and only if the buyer's debt financing is actually available; if financing fails, the seller is limited to the contractual reverse fee.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU civil-law markets</h5>
+      <p>Civil-law systems (France, Germany, Italy) have a stronger tradition of specific performance than common law because money damages are conceptually a substitute for the primary obligation, not the primary remedy itself. In practice, however, complex M&amp;A specific-performance claims are rare; the parties settle.</p>
+    </aside>
+  </div>
+
+  <p>If the failure is the buyer's (e.g., financing fall-out, MAC invocation that the court rejects), the seller's remedies are (i) damages, often very large but hard to quantify; (ii) reverse termination fee (where agreed); (iii) specific performance against the buyer (rarer — historically courts have been more reluctant to compel a buyer to take property than to compel a seller to deliver it).</p>
+
+  <h2>Key People — service contracts and lock-ups</h2>
+
+  <p>The <span class="term" data-term="key-people">Key People</span> of the target — typically the founders, the CEO, the CFO, and a handful of critical engineers or salespeople — are economically central to the transaction. Three concerns:</p>
+
+  <ul>
+    <li><strong>Continuing service.</strong> The buyer wants the Key People to stay post-Closing. New service agreements (employment contracts) are typically signed at Closing with extended notice periods (often 12–24 months), generous severance, and bonuses tied to continued service.</li>
+    <li><strong>Lock-up of equity rollover.</strong> Where Key People are rolling some equity (i.e., taking a portion of consideration in buyer shares rather than cash — common in PE-backed transactions), the new equity is typically locked up for 3–5 years with vesting tied to continued employment ("good leaver" / "bad leaver" provisions in the new Shareholders Agreement: a <strong>good leaver</strong> who is dismissed without cause keeps all vested equity at fair value; a <strong>bad leaver</strong> — dismissed for cause or resigning early — forfeits unvested equity and may have vested equity bought back at cost or at a discount).</li>
+    <li><strong>Restrictive covenants.</strong> Non-compete (typically 12–24 months, often shorter than Key People expect because under English law and most EU laws, restrictive covenants are unenforceable beyond what is reasonably necessary to protect the buyer's legitimate business interests — see <em>Mason v. Provident Clothing &amp; Supply Co Ltd</em> [1913] AC 724); non-solicit of customers and employees; confidentiality; assignment-of-inventions provisions.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — Key People</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> maximum lock-up; aggressive bad-leaver definition; forfeiture of equity for any dismissal; 24-month non-compete; 18-month non-solicit.</li>
+      <li><strong>Key People want:</strong> minimum lock-up; narrow bad-leaver definition (gross misconduct only); fair-value buyback for vested equity even on bad-leaver; 12-month non-compete; 12-month non-solicit.</li>
+      <li><strong>Typical compromise:</strong> 3-year lock-up with annual vesting; bad-leaver = gross misconduct or breach of restrictive covenants; vested equity bought back at fair value on good-leaver, at cost on bad-leaver; 12-month non-compete; 12-month non-solicit; sliding-scale severance.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls at Closing</h5>
+    <ul>
+      <li><strong>Bring-down certificate not delivered.</strong> Without the bring-down certificate, the buyer has no contemporaneous record that R&amp;Ws were true at Closing, complicating future indemnification claims.</li>
+      <li><strong>Pay-off and security release not back-to-back.</strong> If the buyer wires the pay-off but the lender does not release the security, the buyer ends up paying twice (once to the seller and again to the lender).</li>
+      <li><strong>Post-Closing filings forgotten.</strong> Missing the 30-day stamp-duty deadline incurs penalties; missing the PSC Register update is a criminal offence.</li>
+      <li><strong>Resignation letters silent on releases.</strong> A simple "I resign" letter does not release claims; the resigning director can sue later.</li>
+      <li><strong>Single-transaction clause omitted.</strong> Without it, a partial Closing creates a contractual mess.</li>
+      <li><strong>Funds Flow Memo not aligned with SPA.</strong> The amount in the funds flow must equal the amount in the SPA after all adjustments. A small typo in the funds flow can mean millions misdirected.</li>
+    </ul>
+  </aside>
+
+  <h2>Worked example — a typical UK closing day</h2>
+
+  <p>You act for the buyer of a UK technology company. The SPA was signed two months ago. CMA clearance came through last Friday. Closing is on Tuesday. Your closing checklist runs to 47 items.</p>
+
+  <p><strong>Monday afternoon: pre-closing call.</strong> Confirm seller has all original share certificates (yes). Confirm <span class="term" data-term="pay-off-letter">pay-off letter</span> from the senior lender executed and delivered to the lender's solicitors (yes). Confirm change-of-control consent from the largest customer (yes — received that morning). Confirm director resignation letters all executed in escrow with seller's counsel (yes). Confirm signature pages for the SHA, TSA, and Tax Deed all executed (yes). Confirm funds positioned in your client account (yes — wired Friday).</p>
+
+  <p><strong>Tuesday 10:00am: closing call begins.</strong> Roll call. You read through each item on the checklist. Each side confirms each item is in order. At 10:25am, your client (the buyer's CFO) joins by video. You confirm to the seller's counsel that you authorise release of all signed signature pages. The seller's counsel does the same. You instruct your bank to release the wire — purchase price (£420m) to the seller; £25m to the escrow agent; £155m to the senior lender for pay-off. At 10:48am the seller's counsel confirms receipt of all funds in cleared funds (CHAPS settles intra-day). Closing is deemed to have occurred. Both parties sign the <span class="term" data-term="closing-memorandum">Completion Memorandum</span>. You schedule a celebratory call at 11:00am.</p>
+
+  <p><strong>Tuesday afternoon and Wednesday: post-Closing filings.</strong> Stock Transfer Form sent to HMRC for stamping. Forms TM01 (resignations) and AP01 (appointments) filed at Companies House. PSC Register updated at the company. Bank mandates changed. Insurance certificates re-issued with new beneficiaries. Notification to TUPE-affected employees (already consulted pre-Closing, but the formal notice goes out today). The next 30 days will be busy with filings, diligence-list close-out, and the accountant beginning work on the Closing Accounts (see Module 11).</p>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Closing (UK: Completion) is the event at which legal title passes, money flows, and corporate control changes. Six categories of deliverable: transfer instruments, payment, resignations/appointments, ancillary documents, corporate housekeeping, Funds Flow Memorandum.</li>
+      <li>Share-transfer mechanics differ across jurisdictions: UK Stock Transfer Form (registration in Register of Members under CA 2006 s.112); Delaware Stock Power and Stock Ledger; German GmbH notarised deed (GmbHG §15(3)) — split closings are needed for civil-law targets.</li>
+      <li>"Immediately available funds" means central-bank cleared (CHAPS / FedWire / TARGET2 / SEPA Instant), not cheques or drafts.</li>
+      <li>The single-transaction doctrine treats all closing actions as atomic — none deemed to have occurred until all have. Without it, a missed deliverable creates a half-Closed mess.</li>
+      <li>Post-Closing cascade: stamp duty (30 days), Companies House (CS01, AP01, TM01, AD01), PSC Register update (criminal offence if missed), TUPE notifications, FBAR/CFC for U.S. interests.</li>
+      <li>Long Stop Date triggers termination; the source-deck clause preserves damages rights against the breaching party. Specific performance is granted readily in Delaware, more sparingly in the UK.</li>
+      <li>Resignation letters must include releases — without them, departing directors can later sue. Pay-off and security release must be back-to-back to avoid double payment.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="09-interim-period.html" class="prev">Interim Period &amp; MAC/MAE</a>
+    <a href="11-purchase-price.html" class="next">Purchase Price Mechanisms</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+/* M&A Course — shared styles */
+
+:root {
+  --bg: #fafaf7;
+  --bg-card: #ffffff;
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-muted: #888;
+  --accent: #1a3a5c;
+  --accent-soft: #e6eef5;
+  --accent-strong: #0e2540;
+  --rule: #e0ddd5;
+  --rule-soft: #ededea;
+  --uk: #1f4e8c;
+  --uk-bg: #eaf1fa;
+  --us: #8a1f2f;
+  --us-bg: #fbeaec;
+  --eu: #0a6b3b;
+  --eu-bg: #e6f4ec;
+  --compare: #6a4a1f;
+  --compare-bg: #fbf3e3;
+  --buyer: #0a6b3b;
+  --buyer-bg: #e6f4ec;
+  --seller: #8a1f2f;
+  --seller-bg: #fbeaec;
+  --pitfall: #b85c00;
+  --pitfall-bg: #fdf1e2;
+  --source: #4a4a4a;
+  --source-bg: #f3f1ec;
+  --maxw: 880px;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+a:hover { color: var(--accent-strong); border-bottom-color: var(--accent); }
+
+code, pre { font-family: var(--mono); font-size: 0.92em; }
+pre { background: var(--source-bg); padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+
+/* Top bar */
+.topbar {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  font-family: var(--sans);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 3px solid var(--accent-strong);
+}
+.topbar a { color: #fff; border-bottom: none; }
+.topbar a:hover { opacity: 0.85; }
+.topbar .brand { font-weight: 600; font-size: 1.05rem; letter-spacing: 0.02em; }
+.topbar nav { display: flex; gap: 18px; font-size: 0.95rem; }
+.topbar nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+/* Layout */
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+.page-wide {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: var(--accent-strong);
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.55rem;
+  margin: 36px 0 12px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 6px;
+}
+h3 { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; margin: 28px 0 8px; color: var(--ink); }
+h4 { font-family: var(--sans); font-weight: 600; font-size: 1.0rem; margin: 20px 0 6px; color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; }
+p { margin: 0 0 14px; }
+ul, ol { padding-left: 24px; margin: 0 0 16px; }
+li { margin-bottom: 6px; }
+
+.subtitle { color: var(--ink-muted); font-style: italic; margin: 0 0 24px; font-family: var(--sans); font-size: 0.95rem; }
+
+/* Module breadcrumb header */
+.mod-header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+.mod-num {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+}
+
+/* Learning objectives box */
+.lo {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  margin: 0 0 24px;
+  border-radius: 0 6px 6px 0;
+}
+.lo h4 { margin: 0 0 8px; color: var(--accent-strong); }
+.lo ul { margin-bottom: 0; }
+
+/* Why-this-matters */
+.why {
+  background: #fff8e8;
+  border-left: 4px solid #c89614;
+  padding: 14px 20px;
+  margin: 0 0 24px;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+/* Jurisdictional callouts */
+aside.juris, aside.lever, aside.pitfall, aside.source-deck, aside.note {
+  margin: 16px 0;
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+aside.juris h5, aside.lever h5, aside.pitfall h5, aside.source-deck h5, aside.note h5 {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 6px;
+}
+aside.juris p:last-child, aside.lever p:last-child, aside.pitfall p:last-child, aside.source-deck p:last-child { margin-bottom: 0; }
+
+aside.juris.uk { background: var(--uk-bg); border-left: 4px solid var(--uk); }
+aside.juris.uk h5 { color: var(--uk); }
+aside.juris.us { background: var(--us-bg); border-left: 4px solid var(--us); }
+aside.juris.us h5 { color: var(--us); }
+aside.juris.eu { background: var(--eu-bg); border-left: 4px solid var(--eu); }
+aside.juris.eu h5 { color: var(--eu); }
+aside.juris.compare { background: var(--compare-bg); border-left: 4px solid var(--compare); }
+aside.juris.compare h5 { color: var(--compare); }
+
+/* Compare grid: side-by-side UK/US/EU */
+.juris-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 16px 0;
+}
+.juris-grid > aside.juris { margin: 0; }
+@media (max-width: 720px) { .juris-grid { grid-template-columns: 1fr; } }
+
+/* Negotiation lever */
+aside.lever { background: #f4f0f8; border-left: 4px solid #5a3d7c; }
+aside.lever h5 { color: #5a3d7c; }
+aside.lever .row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+aside.lever .row > div { flex: 1 1 200px; }
+aside.lever .row strong { color: var(--ink); }
+
+/* Pitfall */
+aside.pitfall { background: var(--pitfall-bg); border-left: 4px solid var(--pitfall); }
+aside.pitfall h5 { color: var(--pitfall); }
+
+/* Source deck excerpt */
+aside.source-deck {
+  background: var(--source-bg);
+  border-left: 4px solid var(--source);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+aside.source-deck h5 { color: var(--source); font-family: var(--sans); }
+aside.source-deck blockquote { margin: 0; padding: 0; }
+aside.source-deck .deck-explain { font-family: var(--serif); font-size: 1rem; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #c8c4ba; }
+
+/* Generic note */
+aside.note { background: var(--rule-soft); border-left: 4px solid var(--ink-soft); }
+aside.note h5 { color: var(--ink-soft); }
+
+/* Glossary terms (inline) */
+.term {
+  border-bottom: 1px dotted var(--accent);
+  cursor: help;
+  position: relative;
+  color: var(--accent-strong);
+}
+.term:hover { background: var(--accent-soft); }
+.term-popup {
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 12px 14px;
+  width: 320px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink);
+  font-style: normal;
+}
+.term-popup strong { display: block; color: var(--accent-strong); margin-bottom: 4px; font-size: 0.92rem; }
+.term-popup .more { display: inline-block; margin-top: 8px; font-size: 0.82rem; }
+
+/* Module recap */
+.recap {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin-top: 32px;
+}
+.recap h3 { margin-top: 0; color: var(--accent); }
+
+/* Practice links */
+.practice-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.practice-links a {
+  display: block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border-bottom: none;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+.practice-links a:hover { background: var(--accent-strong); color: #fff; }
+
+/* Module nav (prev/next) */
+.mod-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.mod-nav .prev::before { content: "← "; }
+.mod-nav .next::after { content: " →"; }
+
+/* Index page */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.module-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 18px 20px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.module-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.module-card a { border-bottom: none; }
+.module-card .mod-num { margin-bottom: 4px; }
+.module-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--accent-strong);
+}
+.module-card p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  font-family: var(--sans);
+  line-height: 1.45;
+}
+.module-card .status {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.status.unread { background: var(--rule-soft); color: var(--ink-muted); }
+.status.read { background: #d6ecd6; color: #2a6a2a; }
+
+/* Practice mode pages */
+.practice-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+.practice-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+.practice-controls select, .practice-controls button {
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.practice-controls button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.practice-controls button.primary:hover { background: var(--accent-strong); }
+
+/* Flashcard */
+.card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 36px 32px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+.card .face-front { text-align: center; }
+.card .face-back { display: none; }
+.card.revealed .face-front { display: none; }
+.card.revealed .face-back { display: block; }
+.card .question { font-weight: 600; color: var(--accent-strong); }
+.card .answer { color: var(--ink); }
+.card .meta {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.grade-buttons { display: flex; gap: 8px; margin-top: 16px; }
+.grade-buttons button {
+  flex: 1;
+  padding: 12px 8px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.grade-buttons button.again { color: #b22; border-color: #b22; }
+.grade-buttons button.hard  { color: #b85c00; border-color: #b85c00; }
+.grade-buttons button.good  { color: var(--accent); border-color: var(--accent); }
+.grade-buttons button.easy  { color: var(--eu); border-color: var(--eu); }
+.grade-buttons button:hover { background: var(--rule-soft); }
+
+/* Quiz */
+.quiz-q { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 24px 28px; margin: 0 0 16px; }
+.quiz-q .q-text { font-weight: 600; margin-bottom: 14px; font-size: 1.05rem; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-options label {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.quiz-options label:hover { background: var(--rule-soft); }
+.quiz-options input { margin-right: 10px; }
+.quiz-options label.correct { background: #e6f4ec; border-color: var(--eu); }
+.quiz-options label.incorrect { background: #fbeaec; border-color: var(--us); }
+.quiz-explanation {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.92rem;
+  display: none;
+}
+.quiz-q.answered .quiz-explanation { display: block; }
+
+/* Scenario */
+.scenario { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 24px 28px; margin: 0 0 16px; }
+.scenario .setup { font-style: italic; color: var(--ink-soft); margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-soft); }
+.scenario .prompt { font-weight: 600; margin-bottom: 12px; }
+.scenario .reveal { display: none; padding: 14px 16px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; margin-top: 14px; }
+.scenario.revealed .reveal { display: block; }
+.scenario.revealed .reveal-button { display: none; }
+
+/* Glossary */
+.glossary-search {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0 24px;
+  font-family: var(--sans);
+}
+.glossary-search input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: var(--sans);
+}
+.glossary-search select { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 4px; font-family: var(--sans); }
+.glossary-entry {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+}
+.glossary-entry h3 { margin: 0 0 4px; color: var(--accent-strong); font-size: 1.15rem; }
+.glossary-entry .short { color: var(--ink); font-weight: 500; margin-bottom: 8px; }
+.glossary-entry .extended { font-size: 0.95rem; color: var(--ink-soft); }
+.glossary-entry .meta {
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.glossary-entry .meta span { margin-right: 14px; }
+.glossary-entry .juris-tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 3px;
+  margin-right: 4px;
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+.juris-tag.uk { background: var(--uk-bg); color: var(--uk); }
+.juris-tag.us { background: var(--us-bg); color: var(--us); }
+.juris-tag.eu { background: var(--eu-bg); color: var(--eu); }
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px 24px;
+  background: var(--rule-soft);
+  color: var(--ink-muted);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Progress bar */
+.progress-bar {
+  background: var(--rule-soft);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+  margin: 8px 0 0;
+}
+.progress-bar > div {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.3s;
+}

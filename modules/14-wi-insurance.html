@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 14 — Warranty &amp; Indemnity Insurance · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="14">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 14</div>
+    <h1>Warranty &amp; Indemnity Insurance</h1>
+    <p class="subtitle">The third-party insurer that absorbs warranty risk in modern M&amp;A — converting the seller's contingent contractual liability into a creditworthy insurance balance sheet, allowing clean exits, smaller seller caps, and bridging buyer/seller gaps on R&amp;W terms.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Define <span class="term" data-term="warranty-indemnity-insurance">Warranty &amp; Indemnity insurance (W&amp;I)</span> in UK/EU terminology and <span class="term" data-term="representations-warranties-insurance">Representations &amp; Warranties Insurance (RWI)</span> in US terminology, and explain the difference between <span class="term" data-term="buy-side-policy">buy-side</span> and <span class="term" data-term="sell-side-policy">sell-side</span> policies.</li>
+      <li>Identify the five principal commercial drivers for using W&amp;I (clean exit, creditworthy counterparty, bid enhancement in auctions, gap-bridging on R&amp;W terms, departed-seller solution).</li>
+      <li>Map standard exclusions from coverage (known matters, forward-looking statements, transfer pricing, consequential losses, pension underfunding, criminal sanctions and bribery, ESG / cyber risks).</li>
+      <li>Apply the typical commercial parameters: <span class="term" data-term="self-insured-retention">retention (Self-Insured Retention or SIR)</span>, premium (<span class="term" data-term="rate-on-line">rate-on-line</span>), policy limit, and coverage period.</li>
+      <li>Walk through the W&amp;I process from <span class="term" data-term="non-binding-indication">non-binding indication letter</span> through <span class="term" data-term="underwriting-call">underwriting call</span> to bind at signing.</li>
+      <li>Explain the impact of W&amp;I on the SPA: lower or symbolic seller cap, reduced survival, primary recourse to insurer, <span class="term" data-term="knowledge-scrape-wi">knowledge scrape</span> negotiation.</li>
+      <li>Describe <span class="term" data-term="synthetic-warranty">synthetic warranties</span> and the role of W&amp;I in modern auction-PE deal structures.</li>
+      <li>Cite current market data (premium ranges, retention sizing, claim frequency by warranty type) from Marsh, Aon, AIG and WTW reports.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> W&amp;I insurance has moved from a niche product two decades ago to standard equipment on most mid-to-large M&amp;A transactions in Europe and the US today. For a private equity sponsor exiting a platform company, W&amp;I is now the default mechanism that allows the sponsor to distribute proceeds to its limited partners (LPs) at Closing without holding back money in escrow for years against potential warranty claims. For a buyer, W&amp;I converts the seller's potentially shaky covenant into the covenant of a global insurer with billions in claims-paying capacity. For both sides, it allows the SPA negotiation to move faster: rather than haggling for weeks over the cap, the parties simply offload the disputed band of risk to the insurer. By the time you reach the W&amp;I broker, the deal is half-done. But the W&amp;I market has industry-standard product offerings, well-known underwriters with predictable risk appetites, and a process that runs in parallel with SPA negotiation — and a transaction with W&amp;I has a distinctive shape (very small seller cap, primary recourse to insurer, specific exclusions baked in) that the M&amp;A lawyer must understand to negotiate a coherent SPA. Get the W&amp;I policy and the SPA misaligned and the buyer can find itself paying for an insurance policy that excludes precisely the claim that materialises.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a W&amp;I-focused meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"RWI tower"</strong> — the layer cake a partner draws on a whiteboard: SPA cap (~0.5–1% with W&amp;I) → policy retention → policy primary layer (~10% of EV) → excess layers stacked above to total limits often $500m–$1bn for mega-deals. Each layer is a separate insurer's commitment.</li>
+      <li><strong>"Synthetic warranty"</strong> — a warranty the seller will not give but that the insurer agrees to underwrite as if given (passive financial sellers, take-privates, complex tax structures).</li>
+      <li><strong>"Knowledge scrape (W&amp;I version)"</strong> — the policy responds for breaches even where the SPA warranty was qualified by seller knowledge. Standard in W&amp;I-backed deals at ~10–15% premium uplift. The "buyer knowledge scrape" — insurer ignores buyer's actual knowledge — is rare.</li>
+      <li><strong>"No-claims declaration"</strong> — sworn statement by the insured at SPA signing (and again at Closing) confirming no actual knowledge of any breach. The single most important document in the policy file at bind.</li>
+      <li><strong>"Stepped retention"</strong> — retention starts at e.g. 0.5% of EV at signing and drops to 0.25% after 12–18 months (the "drop-down at year one"). Reflects the underwriter becoming more confident once the first audit cycle has cleared.</li>
+      <li><strong>"Drop-down at year one"</strong> — the moment the stepped retention reduces; partners say "we're stepped 0.5 to 0.25 with drop-down at twelve months."</li>
+      <li><strong>"Underwriting call"</strong> — typically 2–3 hours with insured, broker, insured's lawyers, and DD providers. The insurer interrogates the SPA's R&amp;Ws, the disclosure letter, and the DD reports.</li>
+      <li><strong>"Fronted policy"</strong> — a local-authorised insurer issues the paper to satisfy domestic regulatory or tax requirements, while the actual risk is reinsured to a different (often London-based) underwriter. Often discussed as "fronted vs all-domestic."</li>
+      <li><strong>"Stapled W&amp;I"</strong> — a pre-arranged policy "stapled" to the deal, with two flavours: <em>seller-stapled</em> (more common in PE auctions — the seller's broker runs the process and presents the same NBI to all bidders) and <em>buy-side-stapled</em> (the bidder pre-arranges its own policy as part of the bid).</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> M11 (Locked-Box leakage covenant sits <em>outside</em> W&amp;I and generates a separate uncapped seller indemnity equal to the leakage amount); M12 (R&amp;Ws — the underwriter is the third party at the table whose comfort dictates language; the knowledge scrape is the W&amp;I-driven device); M13 (Indemnification — with W&amp;I, SPA cap collapses to escrow / €1; SPA survival shortens; the indemnity clause becomes a procedural shell); M08 (Conditions Precedent / interim period — long signing-to-closing gaps from FDI / antitrust review drive the need for new-breach cover).</li>
+      <li><strong>Forwards:</strong> M16 (Disputes — when the buyer claims and the insurer denies, the dispute goes to the policy's dispute forum, often London arbitration or New York court — not the SPA's seat); M18 (Public M&amp;A — synthetic warranties allow take-privates / scheme-of-arrangement deals where there is no seller able to give warranties).</li>
+      <li><strong>Domino effect:</strong> Removing W&amp;I from a deal: SPA cap balloons from €1 to 10–25% of price; survivals balloon from 18 months to 24 months general / 6–7 years fundamental and tax; escrow returns at 5–15%; the PE sponsor cannot wind up the SPV at Closing; LP distributions are deferred. Reverse direction: introducing W&amp;I collapses the SPA cap, shortens survival, frees the sponsor to distribute, but inserts the underwriter as a third party in every R&amp;W drafting choice.</li>
+    </ul>
+  </aside>
+
+  <h2>What W&amp;I is — and naming</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck (Insurance Schedule reference)</h5>
+    <blockquote>
+      <p><strong>Warranty &amp; Indemnity Insurance:</strong> "What is it? An insurance policy covering losses arising from a breach of the Seller's Representations &amp; Warranties, shifting part (or most) of the transaction risk from the Seller to an insurer. Why is it used? To facilitate transactions where the Seller seeks a clean exit; to enhance bid competitiveness in auction processes; to bridge gaps between Buyer and Seller on caps, survival periods, enforcement risk. Impact on the SPA: Lower or symbolic caps for the Seller; Reduced survival periods for R&amp;Ws; Primary recourse against the insurer, not the Seller; Clear allocation of exclusions, retention / deductible, claims process, coordination with the indemnity regime."</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> framing W&amp;I as a transaction-risk-transfer product, not a generic insurance product. The slide makes four points the M&amp;A lawyer must internalise. First, the policy responds to <strong>warranty breach losses</strong> only (not all transaction risks). Second, the rationale is <strong>commercial</strong> — clean exit, bid enhancement, gap-bridging — not technical. Third, the SPA structure changes when W&amp;I is in play: small / symbolic cap, short SPA-level survival, primary recourse against the insurer. Fourth, drafting must coordinate the SPA exclusions/limits with the policy exclusions/limits — gaps and overlaps both create problems.</div>
+  </aside>
+
+  <p>A W&amp;I policy is a contract between an insured party (almost always the buyer in modern practice) and an insurance underwriter. The insurer agrees to pay the insured for losses suffered as a result of breaches of the warranties in the SPA, subject to the policy's exclusions, limits and conditions. The premium is paid up-front (or in stages); the policy responds for the agreed period (often 7 years for fundamental and tax warranties; 2-3 years for general business warranties).</p>
+
+  <p><strong>Naming convention.</strong> In the UK and the rest of Europe (and Asia-Pacific), the product is called <strong>Warranty &amp; Indemnity Insurance (W&amp;I)</strong>. In the United States the same product is called <strong>Representations &amp; Warranties Insurance (RWI)</strong>. The naming reflects the underlying SPA terminology: UK practice gives "warranties only" (per <em>Sycamore Bidco</em>); US practice typically uses "represents and warrants" together. The product is functionally identical.</p>
+
+  <p>The underwriting capacity (the total amount of risk an insurer is willing to write per deal) for a single insurer is typically $50-100 million per layer; large policies stack multiple insurers in <strong>layers</strong> — primary layer ($25m) + first excess layer ($25m) + second excess layer ($50m) etc., up to total limits often $500m-$1bn for very large deals.</p>
+
+  <h2>Buy-side vs. sell-side</h2>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>Buy-side (over 95% of policies)</h5>
+      <p>The <strong>buyer is the insured</strong> — the buyer claims directly against the insurer, who then has subrogation rights against the seller (limited or excluded by negotiation, especially for fraud).</p>
+      <p>Reasons: (a) the buyer gets a creditworthy counterparty (an insurer with billions, instead of a private-equity exit vehicle that may dissolve); (b) the seller can offer a low or symbolic cap in the SPA (often &euro;1 in PE deals — the seller's effective recourse is essentially nothing); (c) the insurer's negotiation with the buyer is direct, simpler than triangulating buyer/seller/insurer; (d) subrogation can be excluded or limited so the seller is not exposed to insurer-led recovery actions (other than for fraud).</p>
+    </aside>
+    <aside class="juris us">
+      <h5>Sell-side (rare)</h5>
+      <p>The <strong>seller is the insured</strong> — the seller is liable to the buyer under the SPA, then claims against its own insurer for reimbursement.</p>
+      <p>Used mostly when: (a) the buyer doesn't want insurance (e.g., unsophisticated strategic buyer in an emerging market); (b) the seller is the deal initiator and wants to lock in a fixed liability profile; (c) a previous claim has been notified that the insurer will not write into a buy-side policy.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>Practice across markets</h5>
+      <p>Buy-side dominates in all developed M&amp;A markets: UK, EU, US, Asia-Pacific. The "$1 cap" or "nil-recourse" structure with primary recourse against an insurer is now market-standard for any large continental European deal involving a private-equity (PE) seller.</p>
+    </aside>
+  </div>
+
+  <h2>Why W&amp;I is used: the five commercial drivers</h2>
+
+  <ol>
+    <li><strong>Clean exit for the seller</strong> — particularly crucial for <strong>private equity (PE) sponsors</strong> who must distribute proceeds to limited partners (LPs) and cannot leave large escrows or contingent liabilities trailing for years. W&amp;I allows the sponsor to wind up the special-purpose vehicle (SPV), distribute the proceeds, and still give the buyer meaningful recourse via the insurer.</li>
+
+    <li><strong>Creditworthy counterparty for the buyer</strong> — the buyer's recourse is to an insurer (typically rated A or higher) rather than to a possibly-defunct selling SPV, an insolvent seller, or scattered individual sellers (founders, family members) without deep pockets. Particularly important for cross-border deals where enforcement against the seller is difficult.</li>
+
+    <li><strong>Bid enhancement in auctions</strong> — in a competitive auction, a "<span class="term" data-term="stapled-wi">stapled W&amp;I</span>" structure has two flavours. <strong>Seller-stapled</strong> (more common in PE auctions): the seller's broker runs the underwriting process, obtains NBIs from multiple insurers, and "staples" the term sheet to the bid pack so all bidders see the same indications and can flip the same policy on signing. The seller controls the choreography and ensures every bidder has matched access to W&amp;I. <strong>Buy-side-stapled</strong> (the bidder pre-arranges its own W&amp;I with an insurer and presents it as part of the bid). Either way, it differentiates the bidder, demonstrates seriousness, and gives the seller certainty of a clean exit.</li>
+
+    <li><strong>Gap-bridging on R&amp;W terms</strong> — when buyer and seller cannot agree on caps, baskets, or survival periods, W&amp;I closes the gap. Buyer wants 30% cap; seller offers 5%. Solution: buyer's cap is 5% via the SPA, plus 25% via W&amp;I — total recourse is 30%, but the seller's cash exposure is only 5%.</li>
+
+    <li><strong>Departed-seller solution</strong> — when a founder is selling to a PE buyer and is being employed post-Closing as a manager, neither side wants the founder personally on the hook for warranty claims (which would damage the working relationship). W&amp;I removes this; the founder gives the warranties (necessary for underwriting) but the claims go to the insurer.</li>
+  </ol>
+
+  <h2>Coverage and exclusions</h2>
+
+  <p>A W&amp;I policy mirrors the SPA's R&amp;Ws but is subject to its own exclusions, retentions, and conditions. Standard exclusions include:</p>
+
+  <ul>
+    <li><strong>Known matters</strong> — anything in the data room, due diligence reports, the Disclosure Letter, or the insured's own pre-bind knowledge. The "knowledge scrape" debate (see below) determines what counts as "known".</li>
+    <li><strong>Forward-looking statements</strong> — projections, forecasts, business plans (these are inherently uncertain; insurers won't underwrite future performance).</li>
+    <li><strong>Transfer pricing</strong> — historically a major exclusion as insurers were averse (transfer pricing is complex and exposed to subjective regulatory interpretation); improving over time, more insurers now offer cover with specific underwriting.</li>
+    <li><strong>Consequential losses</strong> — typically mirrors the SPA's exclusion of consequential / indirect / lost-profit losses.</li>
+    <li><strong>Pension underfunding</strong> — particularly common UK exclusion (UK defined-benefit pension liabilities are notoriously volatile; insurers exclude or sublimit).</li>
+    <li><strong>Criminal sanctions and bribery</strong> — public-policy exclusion (the FCPA, UK Bribery Act, EU sanctions regimes); the insurer cannot insure against losses arising from criminal activity.</li>
+    <li><strong>Specific identified risks</strong> — known issues the insurer won't write (e.g., a pending major litigation); the buyer must obtain "<span class="term" data-term="specific-contingent-risk">specific contingent risk</span>" insurance separately, or take the risk uninsured, or get a specific seller indemnity.</li>
+    <li><strong>ESG / climate / cyber / AI</strong> — depending on the industry, these increasingly appear as exclusions or sublimits; rapidly-evolving area as insurers adapt to new risk categories.</li>
+    <li><strong>Underwriter-specific exclusions</strong> — raised during the underwriting call based on the underwriter's review of due diligence (e.g., "exclude losses arising from the supply contract identified in DD report section 4.7").</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — exclusions</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> narrow exclusions; specific indemnities outside the W&amp;I policy for any excluded matters; a knowledge scrape (see below) to limit the "known matters" exclusion.</li>
+      <li><strong>Seller wants:</strong> broad exclusions in the policy (since the buyer's claim will go against the insurer, broad exclusions make it more likely the buyer falls back on the seller for excluded matters — but only up to the seller's symbolic cap, so the seller's exposure is very limited; the buyer should care about exclusions, not the seller).</li>
+      <li><strong>Typical compromise:</strong> standard exclusions accepted; specific underwriter exclusions negotiated case-by-case during the underwriting process; the buyer obtains specific seller indemnities (outside the cap) for material excluded matters, or accepts the residual risk.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>What the underwriter always pushes on</h5>
+    <p>The predictable underwriter pressure points across the industry — what insurers always exclude, sublimit, or scrutinise. A partner who has done five W&amp;I underwriting calls knows these will come up; the user should anticipate them:</p>
+    <ul>
+      <li><strong>Cyber / data security</strong> — almost universal sublimit (often capped at 10–25% of policy limit) reflecting the post-2020 surge in ransomware and data-breach exposure.</li>
+      <li><strong>Pension underfunding (UK / EU defined-benefit schemes)</strong> — frequently excluded outright for UK DB schemes given the volatility of liability discount rates and historic regulatory clearances.</li>
+      <li><strong>Transfer pricing</strong> — historically a major exclusion (the bench-marking is subjective; HMRC, IRS, Bundesfinanzministerium can take wildly different positions). Coverage improving but typically requires specific tax-DD coverage.</li>
+      <li><strong>Wage-and-hour (US)</strong> — California and New York class-action exposure; insurers exclude or sublimit by state.</li>
+      <li><strong>GDPR (EU)</strong> — fines under the General Data Protection Regulation can reach 4% of global revenue; insurers exclude regulatory fines for public-policy reasons (some jurisdictions hold that fines cannot be insured against) and may sublimit for indemnification of investigation costs.</li>
+      <li><strong>ESG / climate / human-rights litigation</strong> — fast-evolving exclusion category as CS3D, CSRD, climate-litigation case law develop.</li>
+      <li><strong>AI / model liability</strong> — rapidly emerging exclusion for technology targets.</li>
+      <li><strong>Forward-looking statements / projections</strong> — universal exclusion across all underwriters.</li>
+      <li><strong>Specific identified DD findings</strong> — the underwriter reviews the DD reports during the underwriting call and adds case-specific exclusions: "exclude losses arising from the supply contract identified in DD report section 4.7." This is where the underwriting call's substance lives.</li>
+    </ul>
+  </aside>
+
+  <h2>UK tax-deed vs tax-warranty distinction</h2>
+
+  <p>A partner-meeting test question for any UK W&amp;I-backed deal: <strong>"Is the tax deed inside the W&amp;I, or are we seller-on-the-hook for it?"</strong> The user must understand the distinction.</p>
+
+  <ul>
+    <li><strong>Tax warranty</strong> — a contractual statement in the SPA that the Target's tax position is as described (returns filed; no audit pending; no undisclosed liabilities). Breach gives a warranty-damages claim under the indemnification regime, subject to all the usual mechanics (cap, basket, survival, knowledge / materiality qualifiers). Covered by W&amp;I in the same way as any other warranty: the policy responds for breach of the tax warranty, subject to its exclusions and retentions.</li>
+    <li><strong>Tax deed / tax covenant</strong> — a separate UK-practice deed (or a covenant within the SPA) under which the seller indemnifies the buyer pound-for-pound for any pre-Closing tax liability that emerges post-Closing — without the friction of warranty mechanics (no basket, no de minimis, no knowledge qualifier, no requirement to prove "breach"). Functionally equivalent to a price reduction for hidden tax. Survives for the tax statute of limitations + a buffer (typically TMA 1970 ss.34/36/36A periods + 30–60 days).</li>
+  </ul>
+
+  <p><strong>How W&amp;I treats them differently.</strong> A standard W&amp;I policy covers the <em>tax warranty</em>. The <em>tax deed / tax covenant</em> is more controversial: some policies extend to it (covering the indemnity claim like a warranty); others exclude it (leaving the seller on the hook pound-for-pound for pre-Closing tax). The buyer's question on every UK deal: is the tax deed within the W&amp;I scope, or is it a stand-alone seller obligation outside the symbolic cap?</p>
+
+  <p>Specific tax-position uncertainty (e.g., a particular treaty-shopping question, or a historic restructuring) is typically dealt with via separate <strong>tax insurance</strong> — a single-issue policy underwritten by reference to the specific tax position, often available where the W&amp;I underwriter has carved out the matter.</p>
+
+  <h2>Retention / deductible (Self-Insured Retention or "SIR")</h2>
+
+  <p>The insurer's retention is the amount of loss the insured must absorb before the policy responds. Two common structures, mirroring the SPA basket choices:</p>
+
+  <ul>
+    <li><strong>Tipping retention</strong> — once aggregate losses exceed the retention, the policy responds for the full amount above (functionally similar to a tipping basket).</li>
+    <li><strong>Deductible retention</strong> — only amounts above the retention are recoverable.</li>
+  </ul>
+
+  <p>Typical sizing:</p>
+  <ul>
+    <li><strong>Standard deals (&gt;$50m EV):</strong> retention starts at <strong>0.5% of enterprise value at signing</strong>, dropping to <strong>0.25%</strong> after 12-18 months (<span class="term" data-term="stepped-retention">stepped retention</span> — the underwriter is more confident no claims will arise once the initial post-Closing audit cycle has completed). The "drop-down at year one" is the partner shorthand for the moment the retention reduces.</li>
+    <li><strong>Smaller deals:</strong> retention is often higher (1%+) because the insurer's fixed underwriting costs are spread over a smaller base.</li>
+    <li><strong>2024 trough:</strong> on competitive auctions, 0.25% flat retentions and "tip-to-nil" structures (retention drops to nil at year one) were quoted. The market has hardened from this trough into 2025–2026; the 0.5% → 0.25% stepped structure is now the standard form again, not the floor.</li>
+  </ul>
+
+  <p>The retention typically <strong>mirrors the SPA's basket structure</strong> — if the SPA has a tipping basket at 0.5%, the W&amp;I retention is also tipping at 0.5%. This avoids gaps (where the buyer's loss falls in a window between SPA basket and policy retention) or overlaps (where the buyer collects twice).</p>
+
+  <p>Per <strong>Marsh's Global Transactional Risk Insurance Claims Report 2024</strong>: average retention has dropped to 0.5% of enterprise value at signing for transactions over &euro;100M, reflecting the soft market in 2023-2024.</p>
+
+  <h2>Premium and rate-on-line</h2>
+
+  <p>The premium is the cost of the policy. It is typically expressed as <strong>rate-on-line ("RoL")</strong> — the premium as a percentage of the policy limit. So a $25m policy at 1% RoL costs $250,000 in premium. The total premium quoted by the broker includes the underwriter premium plus broker fees plus insurance premium tax.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK / EU</h5>
+      <p><strong>~1.0% to 1.5%</strong> for primary layers post-2025 hardening (compressed below 1% during the 2024 trough on competitive auctions). Per Marsh, premium rates dropped 32% in EMEA in 2023; the cycle turned in 2025.</p>
+      <p>Minimum premiums: typically &pound;25,000-&pound;50,000 (or EUR equivalent).</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US</h5>
+      <p><strong>~2.3% to 3.5%</strong> for primary layers (current at May 2026, post the 16% YoY hardening Marsh recorded for 2025). Trough 2024 levels were ~2.0–3.0% (CBIZ). The US market remains historically harder than Europe with higher claim frequency.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>CEE</h5>
+      <p>Central and Eastern Europe: <strong>~1.0% to 1.5%</strong> with EUR 15,000-25,000 underwriting fee.</p>
+    </aside>
+  </div>
+
+  <p>Premium varies by:</p>
+  <ul>
+    <li><strong>Deal complexity</strong> — cross-border, regulated industry, multiple jurisdictions all increase premium.</li>
+    <li><strong>Industry</strong> — financial services, healthcare, technology often higher RoL than industrials.</li>
+    <li><strong>Quality of due diligence</strong> — comprehensive DD with Big 4 reports lowers premium.</li>
+    <li><strong>Market conditions</strong> — soft market (excess capacity) lowers; hard market (capacity constrained) raises.</li>
+    <li><strong>Coverage breadth</strong> — knowledge scrapes, materiality scrapes, and lower retentions all raise premium.</li>
+  </ul>
+
+  <p><strong>Market cycle (current at May 2026).</strong> The W&amp;I cycle has turned. Per Marsh's <em>Transactional Risk Insurance 2025: Year in Review</em> (released early 2026): <strong>2023–2024 was the soft cycle</strong> — EMEA premiums fell 32% in 2023; North American primary R&amp;W rates fell 14% in 2024; capacity expanded with new entrants. <strong>2025 hardened</strong>: North American primary R&amp;W rates rose <strong>16% year-on-year</strong>; Asia primary rates rose <strong>8%</strong>; UK and European claims doubled, with EMEA claims at historic notification and payout levels and North American total loss payments at record highs. Marsh placed a record <strong>$91.6 billion</strong> of transactional risk limits globally in 2025 (up 34% on 2024), reflecting both volume growth and the harder pricing environment. The honest framing for any May-2026 meeting: <em>"the soft cycle of 2023–2024 is over; rates and claims are both rising, especially in NA and Asia, with EMEA at record claim volumes."</em></p>
+
+  <h2>The W&amp;I process — from broker to bind</h2>
+
+  <p>A typical W&amp;I underwriting process runs in parallel with SPA negotiation, on roughly this timeline:</p>
+
+  <ol>
+    <li><strong>Insured (or broker) approaches market with deal info</strong> — anonymised deal teaser including the Target's industry, jurisdictions, deal value, expected SPA structure, and the planned R&amp;W package. The broker sends this to multiple insurers.</li>
+
+    <li><strong>Multiple insurers issue Non-Binding Indication letters (NBI)</strong> — typical 5-7 business days. Each insurer's NBI states their preliminary view of premium, retention, exclusions, and coverage scope. The insured selects an underwriter based on price and terms. Common practice is to select two insurers in parallel (one as primary, one as backup) and then narrow to one.</li>
+
+    <li><strong>Insured selects underwriter, signs <span class="term" data-term="expense-agreement">Expense Agreement</span></strong> — the insured pays the underwriter's external legal fees during underwriting (typically &pound;25-50k cap; refundable if the policy doesn't bind). This is the underwriter's protection against the insured walking away after the underwriter has spent legal-cost effort.</li>
+
+    <li><strong>Underwriting call</strong> — usually 2-3 hours with insured, broker, insured's lawyers, and the due diligence providers. The underwriter walks through the SPA's R&amp;Ws, the disclosure letter, and the DD reports asking specific questions. This is the moment the underwriter identifies further exclusions, raises questions for clarification, and tests the buyer's understanding of the risk.</li>
+
+    <li><strong>Insurer issues draft policy</strong> — based on the underwriting call, the insurer issues a draft policy with proposed terms, exclusions, retentions, and premium.</li>
+
+    <li><strong>Negotiation of policy terms</strong> — the insured (with broker) negotiates exclusions down, retention down, knowledge scrape, materiality scrape, sub-limits, multi-jurisdictional triggers, etc.</li>
+
+    <li><strong>Bind at signing of SPA (with no-claims declaration)</strong> — the policy is bound at SPA signing. The insured signs a "<span class="term" data-term="no-claims-declaration">no-claims declaration</span>" confirming no actual knowledge of any breach as of signing date.</li>
+
+    <li><strong>Policy generally inception at signing or closing</strong> — coverage starts at signing for "new breach cover" (between signing and closing) or at closing for the post-closing period. A second no-claims declaration may be required at closing for the bring-down period.</li>
+  </ol>
+
+  <h2>Impact on the SPA</h2>
+
+  <p>A deal with W&amp;I has a distinctive SPA shape:</p>
+
+  <ol>
+    <li><strong>Lower or symbolic seller cap</strong> — often &euro;1 in PE deals (so the buyer's recourse against the seller is essentially nothing). The "<span class="term" data-term="nil-recourse">$1 cap</span>" or "nil-recourse" structure is now market-standard for any large continental European deal involving a PE seller.</li>
+
+    <li><strong>Reduced survival periods at SPA level</strong> — typically 18 months for general R&amp;Ws; the policy then extends to 24-36 months for general, 6-7 years for fundamental and tax. The seller's SPA-level liability is short and small; the buyer's actual recourse via the policy is longer and larger.</li>
+
+    <li><strong>Primary recourse against insurer</strong> — the SPA includes "<span class="term" data-term="no-recourse-wording">no recourse</span>" wording where the buyer agrees not to claim against the seller except for fraud, and typically only after exhausting the W&amp;I policy. Sample wording:
+
+      <blockquote>"Notwithstanding any other provision of this Agreement, the Buyer's sole recourse for any breach of the Seller Warranties shall be against the W&amp;I Policy, and the Buyer shall not be entitled to make any claim against the Seller in respect of any such breach, except (a) in respect of fraud or wilful concealment by the Seller, or (b) for breach of the Fundamental Warranties up to the Fundamental Cap."</blockquote>
+    </li>
+
+    <li><strong>Knowledge scrape wording</strong> — see separate discussion below. Coordinates the "knowledge" qualifiers in the SPA with the policy's known-matters exclusion.</li>
+
+    <li><strong>Coordination of claims notification provisions</strong> — the buyer must notify both the seller (under the SPA) and the insurer (under the policy) on the same triggers. Drafting must align.</li>
+  </ol>
+
+  <aside class="note">
+    <h5>What sits outside W&amp;I — three traps</h5>
+    <ul>
+      <li><strong>Locked-Box leakage covenant (M11).</strong> The No Leakage covenant under a Locked Box mechanism sits <em>outside</em> the W&amp;I policy. Leakage repayment is a price reduction (pound-for-pound, no cap, no basket) — not a warranty claim — so the seller's exposure is uncapped to the leakage amount. A buyer claiming for both leakage and warranty breach must use both routes; an anti-double-recovery clause is essential.</li>
+      <li><strong>Tax deed / tax covenant.</strong> Whether the UK tax deed sits inside W&amp;I or remains a stand-alone seller obligation is deal-specific (see the <em>UK tax-deed vs tax-warranty distinction</em> above). A partner asks "is the tax deed inside the W&amp;I?" on every UK W&amp;I deal.</li>
+      <li><strong>Policy disputes go to the policy's dispute forum (M16) — not the SPA's.</strong> When the buyer claims and the insurer denies, the dispute is decided under the policy's governing-law clause and dispute resolution mechanism (often London arbitration or New York state court), which is independent of the SPA's governing law and seat. A buyer that loses against the insurer cannot then re-litigate the same point against the seller in the SPA forum.</li>
+    </ul>
+  </aside>
+
+  <h2>Knowledge scrape — the central debate in W&amp;I-aligned SPAs</h2>
+
+  <p>A central tension: the SPA's warranties are often qualified by the seller's knowledge ("to the Seller's knowledge, the Target is in compliance with all applicable laws"). The W&amp;I policy responds for breaches of these warranties. <strong>Question: is the buyer's actual knowledge of a matter relevant to whether the policy responds?</strong></p>
+
+  <p>Three positions:</p>
+
+  <ul>
+    <li><strong>Standard policy (no knowledge scrape):</strong> the policy excludes any matter known to the insured at the bind date. So if the buyer's DD found a problem and it's in the DD report, the policy won't pay for it.</li>
+    <li><strong>Knowledge scrape (limited):</strong> the policy responds for breaches even where the warranty itself was qualified by the seller's knowledge — i.e., the insurer treats the warranty as if it were given without the knowledge qualifier. The buyer pays an additional premium for this. Crucially, this is a <strong>warranty knowledge scrape</strong> (insurer ignores the seller's knowledge qualifier for purposes of determining breach).</li>
+    <li><strong>Buyer knowledge scrape:</strong> the insurer agrees to ignore the buyer's actual knowledge of the matter (i.e., the buyer can sandbag the insurer). This is highly unusual and resisted strongly by insurers (it goes against the basic principle of insurance — no cover for known losses); it's almost never granted in pure form, but partial scrapes (limited to specific named individuals, or only for matters where the insurer received DD reports) are negotiated.</li>
+  </ul>
+
+  <p>Per <strong>Norton Rose Fulbright (2025)</strong> and other recent commentary, knowledge scrape is increasingly negotiated — particularly the warranty knowledge scrape which is now relatively standard in larger deals at modest additional premium (typically 10-15% premium uplift).</p>
+
+  <h2>Synthetic / "new breach" warranties</h2>
+
+  <p>A <strong>synthetic warranty</strong> (also "stand-alone warranty" or "deemed warranty") is a warranty the seller will not give but that the insurer agrees to underwrite as if the seller had given it. The insurer assumes the risk through underwriting (more comprehensive DD, higher premium, potentially specific exclusions). Common scenarios:</p>
+
+  <ul>
+    <li>The seller is a passive financial holder who refuses to give business warranties (e.g., a pension fund seller).</li>
+    <li>The deal is a public-to-private take-private where there is no seller able to give warranties.</li>
+    <li>A specific warranty the seller is unwilling to give (e.g., a tax warranty for a complex historical structure).</li>
+  </ul>
+
+  <p>The insurer underwrites the synthetic warranty by reviewing the DD reports, the data room, and asking detailed questions; the policy then covers the synthetic warranty as if it had been in the SPA. Per <strong>White &amp; Case</strong> commentary, synthetic warranties are increasingly common in distressed sales, secondary PE-to-PE deals, and complex carve-outs.</p>
+
+  <p><strong><span class="term" data-term="new-breach-cover">New breach cover</span></strong> is a specific synthetic-style cover for the interim period between signing and closing. If the warranties are repeated at closing and a new breach arises in the interim (e.g., a major customer cancels), under standard policy terms the insured cannot claim if the insured had actual knowledge of the new breach by closing. New breach cover allows the insured to claim for new interim-period breaches that come to its actual knowledge between signing and closing — particularly important where the gap between signing and closing is long (regulatory clearances).</p>
+
+  <h2>Market dynamics — current state (May 2026)</h2>
+
+  <ul>
+    <li><strong>Hardening 2021-2022:</strong> record M&amp;A deal flow combined with higher-than-expected claim frequency drove rates up sharply (20-30% RoL increases in some markets). Insurers tightened terms, raised retentions, and excluded more risks.</li>
+    <li><strong>Soft cycle 2023-2024:</strong> as deal flow slowed and capacity expanded (new entrants, more reinsurance capacity), the market softened. Per Marsh, EMEA premiums dropped 32% in 2023; North American primary R&amp;W rates dropped 14% in 2024. Aon recorded a 9% drop in claim notifications in 2023 from the 2022 peak before notifications rose 26% in 2024. Median paid claim per Aon: $5.5m (US/North America).</li>
+    <li><strong>2025 hardening</strong> (per Marsh's <em>Transactional Risk Insurance 2025: Year in Review</em>): North American primary R&amp;W rates rose 16% YoY; Asia primary rates rose 8%; claims frequency and severity rose globally; UK at historic notification and payout levels; Europe's claims doubled; North America's total loss payments reached a record high. Marsh placed a record <strong>$91.6bn</strong> of transactional risk limits globally in 2025 (up 34%).</li>
+    <li><strong>2026 (current at May):</strong> the hardening is continuing into 2026 with rate increases and claims pressure. Practical implication: a deal team quoting 2024 trough rates ("0.25% retentions, sub-2% RoL US") will sound out of date; the honest range is closer to 0.5% retention with stepped drop-down, ~2.3–3.5% RoL US primary, ~1.0–1.5% RoL EMEA primary.</li>
+    <li><strong>Trough-era pricing</strong> (for context): during the 2024 trough, retentions of 0.25% flat and "tip-to-nil" structures were quoted on competitive auctions; primary US RoL compressed toward 2.0–3.0%; EMEA below 1.0% on competitive auctions. These are the prior baseline against which the 2025 hardening is measured.</li>
+  </ul>
+
+  <h3>Top claim categories</h3>
+
+  <ul>
+    <li><strong>Aon 2024-2025 (North America):</strong> compliance with laws (20%); tax (17%); material contracts (13%).</li>
+    <li><strong>Aon 2024-2025 (EMEA):</strong> by frequency — tax (26%); by paid claims — financial statements (27%), compliance with laws (13.2%), material contracts (11%).</li>
+    <li><strong>Marsh 2024:</strong> top breach types notified in 2023 — tax (20%), financial statements (20%), compliance. By payments — financial statements 45% of total payments; tax only 2% (tax breaches frequent but small; financial-statements breaches less frequent but large).</li>
+    <li><strong>AIG:</strong> per its Claims Intelligence series — 18% financial statements; 16% tax; 15% compliance with laws; 14% material contracts.</li>
+  </ul>
+
+  <p><strong>Geographic expansion:</strong> W&amp;I is now standard for any deal &gt;&euro;50m in Western Europe; spreading to mid-market (&euro;10-50m); penetrating Central &amp; Eastern Europe, Asia-Pacific, Latin America. Continental European nil-recourse PE deal is now market-standard for any deal &gt;&euro;50m.</p>
+
+  <h2>Adjacent products</h2>
+
+  <p>W&amp;I is the headline product, but a family of related M&amp;A insurance products fills specific gaps:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="tax-insurance">Tax insurance</span></strong> — for a specific identified tax position or known tax exposure (e.g., uncertainty about the application of a tax treaty, or the tax treatment of a historic restructuring). Different from W&amp;I which covers breach of tax warranties.</li>
+    <li><strong>Contingent liability insurance</strong> — for a specific identified risk such as ongoing litigation or a regulatory enforcement action. The insurer makes its own judgment about likely outcome and prices accordingly.</li>
+    <li><strong><span class="term" data-term="title-insurance">Title insurance</span></strong> — primarily for US real estate (covering defects in title that didn't appear in title search) and US oil &amp; gas (mineral rights). Very common in US M&amp;A deals involving real estate.</li>
+    <li><strong>Environmental insurance</strong> — for known or unknown environmental liabilities (contamination, regulatory exposure). Often combined with W&amp;I to backstop the environmental warranty.</li>
+  </ul>
+
+  <p>These products are often structured into a <strong>package</strong> alongside W&amp;I — broker presents the W&amp;I plus tax insurance plus environmental insurance as a single risk-transfer solution.</p>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — W&amp;I-aligned SPAs</h5>
+    <ul>
+      <li><strong>Misalignment of survival periods</strong> — if the SPA says general R&amp;Ws survive 18 months but the policy says 24 months, the seller is exposed only for the SPA period; if the policy actually gives shorter, the buyer is uninsured for the gap. Reconcile carefully.</li>
+      <li><strong>Misaligned baskets and retentions</strong> — a deductible basket in the SPA combined with a tipping retention in the policy creates a window where the buyer has neither contractual nor insurance recourse.</li>
+      <li><strong>Knowledge scrape not coordinated</strong> with SPA's knowledge qualifiers — the SPA says "to the Seller's knowledge"; the policy includes warranty knowledge scrape; the result is that the insurer responds even where the seller wouldn't, but the buyer can't claim against the seller either way.</li>
+      <li><strong>No-recourse clause too broad</strong> — barring claims for fraud or fundamental R&amp;W breaches by accident.</li>
+      <li><strong>Notification provisions out of sync</strong> — buyer must notify both the seller and the insurer; if procedures differ, the buyer can preserve one claim and lose the other.</li>
+      <li><strong>Interim-period breaches uncovered</strong> — failing to obtain new-breach cover or to extend coverage from signing to closing.</li>
+      <li><strong>Subrogation rights against the seller not properly limited</strong> — without express limitation, the insurer may subrogate to the buyer's rights and pursue the seller for the recovered loss, defeating the purpose of W&amp;I.</li>
+    </ul>
+  </aside>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — W&amp;I-aligned SPA</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> broad insurance coverage; knowledge scrape (warranty + buyer); materiality scrape (mirrored in policy); broad fraud carve-out for residual seller liability; symbolic seller cap of $1; long policy survival periods.</li>
+      <li><strong>Seller wants:</strong> symbolic seller cap; full no-recourse clause; subrogation rights against the seller waived (other than for fraud); reduced post-Closing involvement.</li>
+      <li><strong>Typical compromise:</strong> $1 nil-recourse SPA cap (other than fundamental R&amp;Ws and fraud); SPA survival 18 months for general / 7 years for fundamental and tax; W&amp;I policy covers full warranty package at 10% of EV limit with 0.5% retention; warranty knowledge scrape at 10% premium uplift; seller indemnifies for fraud uncapped (but seller's solvency is the practical limit).</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>W&amp;I (UK/EU) and RWI (US) are the same product — insurance for breach of seller's warranties in an SPA. Buy-side dominates (&gt;95% of policies); the buyer is the insured and claims directly against the insurer.</li>
+      <li>Five commercial drivers: clean exit (PE sponsor distributes proceeds to LPs at Closing); creditworthy counterparty (insurer instead of defunct SPV); bid enhancement in auctions (stapled W&amp;I); gap-bridging on caps and survival; departed-seller solution (founder remaining as CEO post-Closing).</li>
+      <li>Standard exclusions: known matters, forward-looking statements, transfer pricing (improving), consequential losses, pension underfunding, criminal sanctions and bribery (public policy), specific identified risks, ESG / cyber / AI.</li>
+      <li>Commercial parameters: retention typically 0.5% of EV at signing dropping to 0.25% (stepped); RoL of 0.7-1.5% in UK/EU and 2.5-4% in US; minimum premium &pound;25-50k; soft market in 2024-2025.</li>
+      <li>Process: NBI &rarr; Expense Agreement &rarr; Underwriting Call &rarr; draft policy &rarr; negotiation &rarr; bind at SPA signing with no-claims declaration. Coverage often inception at signing for new-breach cover.</li>
+      <li>Impact on SPA: $1 / nil-recourse seller cap; 18-month SPA survival vs. 24-36 month policy survival; primary recourse against insurer with no-recourse wording; knowledge scrape coordinates seller-knowledge-qualified warranties with the policy's known-matters exclusion.</li>
+      <li>Synthetic warranties — insurer underwrites a warranty the seller won't give (passive financial holders, take-privates, complex tax structures). New-breach cover for the interim period between signing and closing.</li>
+      <li>Market data: top claim categories vary by region (EMEA: tax by frequency, financial statements by paid claims; North America: compliance with laws, tax, material contracts). Marsh 2024: financial-statements breaches account for 45% of total claim payments despite being less frequent than tax.</li>
+      <li>Adjacent products: tax insurance, contingent liability insurance, title insurance (US real estate), environmental insurance.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="13-indemnification.html" class="prev">The Indemnification Regime</a>
+    <a href="15-ancillary-documents.html" class="next">Ancillary Transaction Documents</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

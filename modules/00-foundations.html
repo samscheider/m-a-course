@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 00 — Foundations for Non-Lawyers · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="00">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 00</div>
+    <h1>Foundations for Non-Lawyers</h1>
+    <p class="subtitle">Contract law, civil vs. common law, the anatomy of a clause, and the legal vocabulary that runs through every M&amp;A meeting.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Explain how a contract becomes binding under common law (offer + acceptance + consideration + intention) and contrast with civil-law systems (offer + acceptance, with <span class="term" data-term="cause">cause/causa</span> where still required).</li>
+      <li>Identify the main building blocks of any commercial contract — operative provisions, conditions, covenants, representations, warranties, indemnities, boilerplate — and state what each one <em>does</em> if breached.</li>
+      <li>Translate the most common Latin and legal-French terms encountered in a Mergers and Acquisitions (M&amp;A) Sale and Purchase Agreement (SPA) without looking them up.</li>
+      <li>Distinguish a <span class="term" data-term="statute-of-limitation">statute of limitation</span> (a hard public-law deadline imposed by legislation) from a <span class="term" data-term="contractual-time-limit">contractual time limit</span> (a privately agreed claims period inside the SPA).</li>
+      <li>Name the principal external advisors on a typical mid-market or large-cap M&amp;A transaction and what each one delivers.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> M&amp;A is a contract business: every right a buyer has at and after closing is whatever is written in the Sale and Purchase Agreement (SPA), nothing more. If a non-lawyer cannot tell a representation from a warranty, a condition from a covenant, or "indemnify" from "hold harmless", they will misread risk allocation in every meeting. The same words also do different things in different jurisdictions. Day one, an M&amp;A partner will tell a junior: read every clause for <em>who promises what, when does the promise bite, and what is the remedy if it is broken.</em>
+  </div>
+
+  <aside class="lever both">
+    <h5>Vocabulary of an M&amp;A meeting — 20 phrases you will hear</h5>
+    <p>This is the linguistic furniture of an M&amp;A negotiation room. Module 00 plants these phrases; later modules develop the mechanics. If a senior lawyer drops one of these in a meeting, you should not need to ask. The forward-link in <em>italics</em> is the module that develops each.</p>
+    <ol>
+      <li><strong>"Tipping basket vs. true deductible"</strong> — a <span class="term" data-term="tipping-basket">tipping basket</span> means the buyer recovers from dollar one once a threshold is crossed; a true <span class="term" data-term="deductible-basket">deductible</span> means the threshold is gone forever (only the excess is recoverable). <em>Partner ask: "are we on a tipping basket or a true deductible at 1%?" — Module 13.</em></li>
+      <li><strong>"Does the de minimis sweep the basket?"</strong> — the <span class="term" data-term="de-minimis">de minimis</span> is the per-claim floor. "Sweeping the basket" asks whether sub-de-minimis claims also fail to count <em>toward</em> the basket threshold (buyer-unfriendly) or whether they count cumulatively (buyer-friendly). The phrase that catches non-lawyers off guard. <em>Module 13.</em></li>
+      <li><strong>"Knowledge scrape" / "materiality scrape"</strong> — buyer-friendly drafting moves that <span class="term" data-term="knowledge-scrape">strip knowledge or materiality qualifiers</span> ("to the seller's knowledge", "in all material respects") for purposes of indemnification while leaving them in for purposes of the breach test. <em>Module 12.</em></li>
+      <li><strong>"Sandbagging-friendly?"</strong> — whether the buyer can claim on a warranty it knew was false at signing. <span class="term" data-term="sandbagging">Pro-sandbagging</span> (Delaware default) lets the buyer claim; anti-sandbagging (English default) does not. The contractual answer is in the SPA's "sandbag" clause. <em>Module 12.</em></li>
+      <li><strong>"Bring-down"</strong> — at closing, the seller re-confirms its warranties as still true. The <em>standard</em> (true and accurate / in all material respects / MAC-qualified) is among the most-negotiated provisions in any SPA. The <span class="term" data-term="bring-down">bring-down certificate</span> performs it. <em>Modules 09, 10.</em></li>
+      <li><strong>"What's the survival on tax?"</strong> — "survival" is the contractual life of a warranty after closing. Standard tiers in private-deal practice: 12–24 months on general warranties; 5–7 years on tax (often pegged to the tax statute of limitations); 7–10 years (or longer) on fundamentals. <em>Modules 12, 13.</em></li>
+      <li><strong>"MAC carve-out"</strong> — a <span class="term" data-term="material-adverse-change">Material Adverse Change</span> clause's exclusions: economic conditions, pandemics, war, industry-wide changes — risks the buyer agrees not to invoke. Who wears COVID-style risk turns on the carve-out, not the MAC. <em>Module 09.</em></li>
+      <li><strong>"Hell-or-high-water"</strong> — a buyer covenant taking <span class="term" data-term="hell-or-high-water">all regulatory risk</span> (divestitures, behavioural remedies, abandoning markets) to get antitrust / Foreign Direct Investment (FDI) clearance. The strongest possible buyer commitment on a regulatory CP. <em>Module 08.</em></li>
+      <li><strong>"Locked box vs. closing accounts"</strong> — two ways of fixing the price. <span class="term" data-term="locked-box">Locked box</span> fixes price at a pre-signing balance-sheet date with no post-closing adjustment (Europe-favoured); <span class="term" data-term="completion-accounts">closing accounts</span> trues up after closing (US-favoured). <em>Module 11.</em></li>
+      <li><strong>"Ticker"</strong> — under a locked-box deal, the daily interest-equivalent the buyer pays the seller from the locked-box date to closing (compensating the seller for "running the business for the buyer's account"). <em>Module 11.</em></li>
+      <li><strong>"True-up"</strong> — the post-closing adjustment in a closing-accounts deal: completion accounts are agreed, the price moves up or down by the difference between actual and target working capital / net debt / cash. <em>Module 11.</em></li>
+      <li><strong>"Gross-up"</strong> — a clause requiring a paying party to increase the payment so that, after withholding tax (or any other deduction), the recipient receives the full headline amount. Standard in cross-border indemnities and warranty payments. <em>Module 13.</em></li>
+      <li><strong>"Tail"</strong> — context-dependent. (i) On D&amp;O insurance: the run-off period extending coverage for pre-closing acts. (ii) On a banker's engagement letter: the period after termination during which the success fee still applies. (iii) On warranty survival: the long-tail liability (e.g. environmental, tax). <em>Module 14 (W&amp;I tail), Module 02 (banker tail).</em></li>
+      <li><strong>"Sweep"</strong> — to take all of something: a "cash sweep" pulls all surplus cash to the seller before closing under a locked box; "sweep the basket" means including sub-de-minimis claims toward the basket threshold. <em>Modules 11, 13.</em></li>
+      <li><strong>"Escrow"</strong> — a sum held by a neutral third party to secure the seller's post-closing indemnification obligations; released to the seller once the survival period expires (subject to claims). Verb form: "let's <em>escrow</em> ten percent for 18 months." <em>Modules 13, 15.</em></li>
+      <li><strong>"Roll-over equity"</strong> — in a private-equity (PE) sale, the founder or management team reinvests part of the proceeds into the buyer's HoldCo to keep skin in the game. Quantum (10–30%) and structure (preferred vs common) are key levers. <em>Module 15.</em></li>
+      <li><strong>"Back-to-back"</strong> — passing the same risk through to the next contractual link. A reseller may seek a "back-to-back" warranty: it warrants to its customer only what its supplier warrants to it. <em>Module 12.</em></li>
+      <li><strong>"Baked into the price" / "carved out"</strong> — known risk priced into the headline (a price reduction reflects it; no warranty/indemnity needed) versus moved into a specific indemnity outside the cap.</li>
+      <li><strong>"Clean exit"</strong> — the seller's holy grail in a PE exit: walk away at closing with no residual liability. Achieved through W&amp;I insurance, a synthetic warranty deed, locked box pricing, and a no-recourse carve-out. <em>Module 14.</em></li>
+      <li><strong>"Conduct of claims"</strong> — who controls the defence of a third-party claim that triggers the indemnity. Tiered: indemnitor takes control above a threshold, indemnitee retains conduct on customer/regulator/employee claims that could damage the business. <em>This module (below) and Module 13.</em></li>
+    </ol>
+    <p><strong>The diagnostic sentence.</strong> A senior partner saying <em>"we're at 1% true deductible with a knowledge scrape and a 24-month survival on the general warranty wrapper, but tax is on a separate seven-year tail; locked box, ticker at 5%, ten-percent escrow"</em> uses ten phrases above. Re-read until you can parse it without reaching for a glossary.</p>
+  </aside>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — verb forms and shorthand you'll hear</h5>
+    <ul>
+      <li><strong>"Indemnify, defend, and hold harmless"</strong> — the three-verb formula in US drafting. <em>Indemnify</em> pays the loss; <em>defend</em> funds the lawyer's bills upfront; <em>hold harmless</em> in Delaware/New York is generally treated as a synonym for indemnify (a minority view treats it as adding a counter-claim shield — see below).</li>
+      <li><strong>"Covenant lite"</strong> — a debt-finance term meaning a credit agreement with no maintenance financial covenants (only incurrence covenants). A buyer covenant package can also be described as "lite" if the interim-period restrictions are unusually permissive.</li>
+      <li><strong>"Using Marsh on the W&amp;I"</strong> — a partner's shorthand for "we've engaged Marsh as W&amp;I broker." Other shorthand: <em>"want a Big-Four QoE"</em> = financial DD report from Deloitte / EY / KPMG / PwC; <em>"bank is putting in a fairness opinion"</em> = the lead investment bank will deliver a fairness letter; <em>"Allen &amp; Co for the sell-side"</em> = sell-side investment bank.</li>
+      <li><strong>"Out of the money / in the money"</strong> — used loosely about earn-outs, options, and warranty caps. An earn-out is "in the money" if performance is tracking above the trigger; a cap is "out of the money" if claims are well below it.</li>
+      <li><strong>"Wash"</strong> — net-zero. "Tax gross-up and the side letter wash" = the two cancel out economically.</li>
+      <li><strong>"Longstop"</strong> — the calendar deadline in the SPA after which either party can walk away if CPs are unsatisfied. <em>Module 08.</em></li>
+    </ul>
+  </aside>
+
+  <h2>How a contract becomes binding (common law vs. civil law)</h2>
+
+  <p>In <span class="term" data-term="common-law">common-law</span> jurisdictions (England and Wales, the United States, Ireland, Australia, Canada other than Quebec, India, Singapore, Hong Kong), a contract is formed when four elements coincide: (i) <strong><span class="term" data-term="offer">offer</span></strong> (a definite promise capable of acceptance), (ii) <strong><span class="term" data-term="acceptance">acceptance</span></strong> (unqualified assent to the offer's terms — a mirror image; any change is a counter-offer), (iii) <strong><span class="term" data-term="consideration">consideration</span></strong> (something of value moving from each side), and (iv) <strong><span class="term" data-term="intention-to-create-legal-relations">intention to create legal relations</span></strong> (presumed in commercial dealings, not in social ones).</p>
+
+  <p>Consideration is the doctrine non-lawyers most often miss. The classic English definition is from <em>Currie v Misa</em> (1875) LR 10 Ex 153 (Lush J): consideration consists of <em>"some right, interest, profit or benefit accruing to the one party, or some forbearance, detriment, loss or responsibility given, suffered or undertaken by the other"</em> (affirmed sub nom. <em>Misa v Currie</em> (1875–76) LR 1 App Cas 554, HL). A bare promise to give a gift is unenforceable as a contract because the donee gives nothing in return. To make a one-sided promise binding in England, lawyers use a <strong><span class="term" data-term="deed">deed</span></strong> (Latin: <em>factum</em> — a document executed with extra formality, historically under seal, today under section 1 of the Law of Property (Miscellaneous Provisions) Act 1989).</p>
+
+  <p><strong>Practitioner restatement.</strong> In English-law share sales, a <span class="term" data-term="stock-transfer-form">stock-transfer form</span> is executed as a deed because the seller technically passes legal title for nothing in return — the consideration sits in the SPA, not in the transfer. A put-option side letter signed by a target's parent for nothing in return must be a deed, not a contract, to bind under English law. Powers of attorney, releases and unilateral guarantees are similarly executed as deeds. In a UK SPA bundle, expect to see <em>"executed as a deed"</em> on the share-transfer form, the disclosure letter, the tax deed, and any side letters where consideration only flows one way.</p>
+
+  <p><span class="term" data-term="civil-law">Civil-law</span> systems (France, Germany, Italy, Spain, the Netherlands, most of continental Europe, Latin America, Quebec, Louisiana, Scotland in part) historically required not consideration but <strong><span class="term" data-term="cause">cause</span></strong> (French: <em>cause</em>; Italian: <em>causa</em>; Latin origin: <em>causa</em> — meaning the legal-economic reason why a party undertakes the obligation). France abolished <em>cause</em> as a formal requirement in its 2016 reform of contract law (Ordonnance no. 2016-131 of 10 February 2016, modernising the Code civil). Since 1 October 2016, <strong>article 1128 Code civil</strong> requires only the parties' consent and capacity, plus <em>"un contenu licite et certain"</em> — lawful and certain content. The earlier separate validity head of <em>objet</em> (object) was dropped; a single "content" test now subsumes both <em>cause</em> and <em>objet</em>. Germany never had a <em>cause</em> doctrine in the French sense; under the Bürgerliches Gesetzbuch (BGB — German Civil Code), a contract is formed by <em>Angebot</em> (offer) and <em>Annahme</em> (acceptance), full stop, with no consideration requirement. <strong>Practical drafting consequence:</strong> in a French- or German-law SPA, a party can be bound by a unilateral promise without giving anything in return, so the "deed" workaround is not needed.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Offer + acceptance + consideration + intention. Use a deed if no consideration moves.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Same four elements; Delaware also recognises the "nominal consideration" recital ("for ten dollars and other good and valuable consideration, the receipt of which is hereby acknowledged"), still common in SPAs even though seldom legally necessary because the price is itself the consideration.</p></aside>
+    <aside class="juris eu"><h5>EU (civil law generally)</h5><p>No consideration requirement. France: <em>cause</em> abolished 2016; article 1128 Code civil now requires "<em>un contenu licite et certain</em>" — a single "lawful and certain content" test (the old separate "object" head is gone). Germany: only offer and acceptance.</p></aside>
+  </div>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li>A US-style "for one dollar and other good and valuable consideration" recital is harmless in a UK SPA but legally unnecessary — the purchase price itself is the consideration.</li>
+      <li>"Subject to contract" or "subject to formal documentation" is a UK formula meaning the parties do not yet intend to be legally bound. Forget to delete it from a heads of terms and you may have just blocked formation of the binding deal.</li>
+      <li>In civil-law jurisdictions, <em>culpa in contrahendo</em> (Latin: "fault in negotiating" — pre-contractual liability for breaking off negotiations in bad faith, codified in Germany at BGB § 311) can create liability even without a contract. Common law has no general equivalent and treats negotiations as freely abandonable until signing.</li>
+    </ul>
+  </aside>
+
+  <h2>Common law vs. civil law systems — practical drafting consequences</h2>
+
+  <p>Common law is judge-made: rules emerge from case precedent (<em>stare decisis</em> — Latin: "to stand by things decided"), and statutes are read narrowly against that backdrop. Civil law is code-based: a comprehensive written code (Code civil in France 1804, BGB in Germany 1900, Codice civile in Italy 1942) sets out general principles that courts apply, with much less weight given to prior decisions.</p>
+
+  <p>For an M&amp;A practitioner, the difference shows up in three places — and once you internalise it, the look of an SPA on the table tells you which system you are in:</p>
+  <ol>
+    <li><strong>Length and detail of contracts.</strong> Approximate market reality: an <em>English-law SPA</em> on a mid-market deal commonly runs 150–250 pages with elaborate definitions, schedules and a separate disclosure letter; a <em>Delaware-law SPA</em> on a comparable deal runs 80–150 pages; a <em>French-law SPA</em> can be 60–100 pages (the Code civil already supplies default rules, e.g. warranty against hidden defects under article 1641); a <em>German-law SPA</em> on a private deal often runs 100–150 pages because the parties borrow English-law drafting conventions on top of BGB defaults. <em>(These are observed market norms, not hard rules — page count varies with deal complexity and counsel preferences.)</em> This is why <a href="07-spa-structure.html">Module 07's SPA anatomy</a> looks the way it does: an English drafter cannot trust the court to imply, so everything is written.</li>
+    <li><strong>Implied terms.</strong> Common-law contracts imply very little (the test in England is "necessity" — <em>The Moorcock</em> (1889) 14 PD 64). Civil-law contracts inherit a richer set of statutory defaults that the parties must expressly disapply if they want to.</li>
+    <li><strong>Good faith.</strong> Civil-law systems impose a general duty of good-faith performance (e.g. BGB § 242 <em>Treu und Glauben</em>; French Code civil article 1104 since 2016). English law refuses to recognise a general duty of good faith in commercial dealings (<em>Walford v Miles</em> [1992] 2 AC 128) — though it has crept into "relational" long-term contracts (<em>Yam Seng v International Trade Corp</em> [2013] EWHC 111 (QB)). US law: Delaware recognises an implied covenant of good faith and fair dealing in every contract.</li>
+  </ol>
+
+  <h2>Anatomy of a contract clause</h2>
+
+  <p>A typical operative clause in an SPA does one of six things; identifying which is the first analytic step.</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="operative-provision">Operative provision</span>.</strong> Performs the deal: <em>"The Seller hereby sells and the Buyer hereby buys the Shares."</em> Title actually moves on the wording of operative provisions.</li>
+    <li><strong>Condition (precedent or subsequent).</strong> A future uncertain event that controls whether an obligation arises (precedent) or is extinguished (subsequent). See below.</li>
+    <li><strong><span class="term" data-term="covenant">Covenant</span>.</strong> A promise to do or not do something. "Affirmative" covenants oblige action ("Seller shall maintain insurance"); "negative" covenants prohibit action ("Seller shall not make a dividend distribution exceeding €X"). Breach is breach of contract — remedies include damages, specific performance (a court order to perform, available in England and equity-based US courts but not in civil-law systems where money damages are the rule), and termination if the breach is repudiatory (a breach so serious it goes to the root of the contract).</li>
+    <li><strong><span class="term" data-term="representation">Representation</span>.</strong> A statement of present or past fact made to induce the other party to enter the contract. If false, classic remedy is rescission (unwinding the contract, putting the parties back to where they were) plus damages in tort for misrepresentation.</li>
+    <li><strong><span class="term" data-term="warranty">Warranty</span>.</strong> A contractual statement of fact that, if untrue, gives rise to a damages claim <em>in contract</em> — but generally not the right to walk away. The UK distinguishes warranty from representation precisely because the available remedies differ. The US increasingly conflates the two ("represents and warrants"). <strong>Why this matters disproportionately:</strong> warranties are the most-negotiated section of any SPA because (i) the mechanics — cap, basket, de minimis, survival, knowledge qualifier, materiality qualifier — control the buyer's residual recourse, and (ii) in modern PE deals the buyer is contracting with a <em>W&amp;I insurer</em> rather than the seller, so every warranty decision prices into the W&amp;I premium and retention. <em>Modules 12 (mechanics), 13 (indemnification regime that backs warranty claims), 14 (how W&amp;I prices warranty risk).</em></li>
+    <li><strong><span class="term" data-term="indemnity">Indemnity</span>.</strong> A <em>secondary</em> obligation to make good a specified loss on a pound-for-pound basis. Unlike damages for breach (which require proof of causation, foreseeability, and reasonable mitigation), an indemnity is typically debt-style: if the trigger event occurs, the indemnitor pays the defined loss.</li>
+    <li><strong><span class="term" data-term="boilerplate">Boilerplate</span>.</strong> The "standard" clauses at the back: governing law, jurisdiction, notices, entire agreement, severability, etc. Often skim-read, occasionally deal-breaking.</li>
+  </ul>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Sharp distinction maintained between representation and warranty. Modern UK SPAs almost always provide that warranties are <em>not also</em> representations (so as to exclude the <em>Misrepresentation Act 1967</em> tortious damages remedy and the right to rescind). See <em>Sycamore Bidco Ltd v Breslin</em> [2012] EWHC 3443 (Ch).</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>"Represents and warrants" is the standard formulation. Distinction matters less; Delaware courts focus on the bargained-for risk allocation rather than tort/contract labels.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law systems do not have a clean representation/warranty taxonomy; they use <em>garanties</em> (warranties), <em>déclarations</em> (declarations) and <em>engagements</em> (commitments/covenants) loosely. SPAs governed by French or German law often borrow English-language terminology with a definitional clause to give it meaning.</p></aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>The remedy gradient — the central drafting choice in any SPA</h5>
+    <p>The six clause types are not a flat list. They are a <strong>remedy gradient</strong>, and choosing where to put a known risk on this gradient is the central allocation move in any SPA:</p>
+    <ul>
+      <li><strong>Representation</strong> → strongest buyer remedy: rescission (unwinding the deal) plus damages in tort for misrepresentation. Time-bar: tortious limitation period.</li>
+      <li><strong>Warranty</strong> → contract damages only, capped, time-limited (12–24 months for general; 5–7 years for tax; 7–10 years for fundamental), basket-gated, knowledge-qualified.</li>
+      <li><strong>Indemnity</strong> → debt-style payment for a defined trigger; often outside the cap and the basket; longer survival; typically used for <em>known</em> exposures the buyer refuses to absorb.</li>
+      <li><strong>Covenant</strong> → damages or specific performance; breach during the interim period can fail a CP and ground termination.</li>
+    </ul>
+    <p><strong>What a partner asks:</strong></p>
+    <ul>
+      <li><em>Warranty:</em> "How long does it survive? Cap? Basket — tipping or true deductible? Knowledge scrape? Materiality scrape?"</li>
+      <li><em>Indemnity:</em> "Specific or general wrapper? Cap inclusive or exclusive of basket? Tipping or true deductible? Conduct-of-claims regime — who controls the defence?"</li>
+      <li><em>CP / covenant:</em> "What's the bring-down standard? What's our hell-or-high-water? What's the longstop?"</li>
+      <li><em>Boilerplate:</em> "Non-reliance language? Entire-agreement carve-out for fraud? No-oral-modification post-<em>Rock Advertising</em>?"</li>
+    </ul>
+    <p>The single highest-leverage line: <em>choosing whether to put a known risk into a warranty or an indemnity is the central allocation move in any SPA</em> — see Modules 12 (warranties) and 13 (indemnification) for the mechanics.</p>
+  </aside>
+
+  <h2>"Indemnify, defend, and hold harmless" — what each verb does</h2>
+
+  <p>This triple is one of the most over-used (and least understood) formulations in commercial drafting. Each verb, properly read, does something different — though courts and even drafters sometimes treat the trio as a single composite obligation.</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="indemnify">Indemnify</span></strong> = pay or reimburse the indemnitee for a defined loss after that loss has crystallised. It is an <em>offensive</em> right: the indemnitee can sue under the indemnity. Triggered when liability is established or settled.</li>
+    <li><strong><span class="term" data-term="defend">Defend</span></strong> = take over and pay for the legal defence of a third-party claim brought against the indemnitee, regardless of the merits. As a general matter the duty to defend is broader than the duty to indemnify and triggers sooner. <em>Caveat:</em> the proposition that "defend triggers earlier than indemnify" is most clearly developed in <strong>US insurance-law doctrine</strong> (the four-corners / eight-corners rule applied to liability policies). In a <em>commercial M&amp;A indemnity</em>, whether the duty to defend triggers on filing of the claim, on acceptance of the indemnity, or on entry of judgment is jurisdiction-by-jurisdiction and depends on construction of the specific clause. Practical consequence: a buyer that wants the seller to fund defence costs from day one should draft for that result expressly rather than rely on doctrine.</li>
+    <li><strong><span class="term" data-term="hold-harmless">Hold harmless</span></strong> = (majority US view) a synonym for "indemnify" forming part of a single composite term of art. The <strong>majority position in Delaware and New York</strong> is that "indemnify and hold harmless" is one phrase equivalent to "indemnify" alone. A <em>minority</em> view treats "hold harmless" as adding a defensive shield: the indemnitor undertakes not to seek to recover from the indemnitee any loss the indemnitor itself suffers in connection with the indemnified matter. Careful US drafters retain both verbs because the cost of including them is zero and the cost of ending up in a minority-view jurisdiction without them is non-zero.</li>
+  </ul>
+
+  <p><strong>Practical effect:</strong> dropping "defend" eliminates the duty to fund the lawyer's bills upfront. Dropping "hold harmless" likely costs nothing in Delaware or New York but may cost a counter-claim shield in a minority-view forum — drafters keep both for portability.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>"Hold harmless" is generally treated as adding little distinct content; English drafting often says "indemnify and keep indemnified" instead. Conduct of claims clauses (who controls the defence) are typically negotiated separately rather than relying on a "defend" verb.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>All three verbs are usually retained because some courts have held each carries independent meaning and dropping a word loses a remedy.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law jurisdictions translate roughly as <em>indemniser</em>/<em>entschädigen</em> — typically a single concept; the multi-verb formula is an Anglo-American import.</p></aside>
+  </div>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li>Including "defend" but giving the indemnitor no right to control the defence creates conflict: the indemnitor pays but the indemnitee chooses counsel and strategy.</li>
+      <li>"Indemnify against any and all losses" with no carve-out for the indemnitee's own gross negligence or wilful misconduct may be unenforceable in some US states. New York General Obligations Law <strong>§ 5-322.1</strong> voids construction-context indemnities purporting to indemnify the promisee for the promisee's <strong>own negligence (any degree)</strong>; the further "gross negligence / wilful misconduct" carve-out commonly drafted into commercial indemnities is a <em>separate</em> public-policy convention rooted in NY case law (the <em>Kalisch-Jarcho v New York</em> line), not statute.</li>
+    </ul>
+  </aside>
+
+  <aside class="lever both">
+    <h5>Conduct of claims — the negotiation move that matters</h5>
+    <p>Whoever controls the defence controls the indemnity. A senior partner negotiates a <strong>tiered conduct-of-claims regime</strong>:</p>
+    <ul>
+      <li><strong>Buyer wants:</strong> retain conduct of any third-party claim that could damage the business (customer, regulator, employee, key supplier); indemnitor pays but does not drive strategy; settlement requires buyer consent.</li>
+      <li><strong>Seller wants:</strong> assume conduct as soon as it has accepted the indemnity in writing; appoint counsel; settle freely if the settlement is purely monetary and within the cap.</li>
+      <li><strong>Typical compromise:</strong> indemnitor takes control above a defined threshold and where the defence does not threaten ongoing relationships; indemnitee retains conduct on customer / regulator / employee claims; settlements over a defined size (or admitting wrongdoing) require both parties' consent. Module 13 develops the full machinery.</li>
+    </ul>
+  </aside>
+
+  <h2>Conditions precedent vs. conditions subsequent</h2>
+
+  <p>A <strong><span class="term" data-term="condition-precedent">condition precedent</span></strong> (CP) is a future uncertain event that must occur <em>before</em> an obligation arises. Closing of an M&amp;A deal between signing and closing is almost always conditional on CPs — typically antitrust clearance, foreign investment clearance, third-party consents, no Material Adverse Change (MAC), and the bring-down of warranties at closing. If a CP is not satisfied (or waived) by the longstop date (a calendar deadline written into the SPA), the parties have the right to terminate.</p>
+
+  <p>A <strong><span class="term" data-term="condition-subsequent">condition subsequent</span></strong> is a future uncertain event that <em>extinguishes</em> an existing obligation. Less common in M&amp;A, but examples include earn-out clauses where an indemnification obligation falls away if a defined post-closing milestone is hit.</p>
+
+  <aside class="juris compare"><h5>UK / US / EU</h5><p>The CP/CS distinction is universal. Where they differ is in remedies for breach of a covenant to <em>use efforts</em> to satisfy a CP — the UK reads "best endeavours", "all reasonable endeavours", and "reasonable endeavours" as a graduated scale (see <em>Jet2.com Ltd v Blackpool Airport Ltd</em> [2012] EWCA Civ 417); Delaware's approximate equivalent is the "reasonable best efforts" / "commercially reasonable efforts" spectrum.</p></aside>
+
+  <h2>Covenants — affirmative vs. negative</h2>
+
+  <p>An <strong>affirmative</strong> covenant requires the promisor to do something ("Seller shall provide audited accounts within 90 days of closing"). A <strong>negative</strong> covenant prohibits something ("Seller shall not declare or pay any dividend during the interim period"). In M&amp;A, the bulk of interim-period covenants — between signing and closing — are negative, designed to keep the target in its as-signed condition. Post-closing covenants are often affirmative: cooperate with tax filings, transition services, non-compete and non-solicit.</p>
+
+  <h2>Common Latin and legal-French terms in M&amp;A</h2>
+
+  <p>A non-lawyer must be able to translate these on sight. Each is the kind of term a senior lawyer will use without explanation in a meeting.</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="de-minimis">De minimis</span></strong> (Latin: "of the smallest things") — a threshold below which something is too trivial to count. In an SPA, the de minimis is the per-claim floor below which the buyer cannot bring an indemnification claim at all (typical: 0.05–0.1% of enterprise value).</li>
+    <li><strong><span class="term" data-term="mutatis-mutandis">Mutatis mutandis</span></strong> (Latin: "with the necessary changes having been made") — a cross-reference signal: "this clause applies <em>mutatis mutandis</em> to [other party]" means apply it after substituting names/dates as appropriate.</li>
+    <li><strong><span class="term" data-term="pari-passu">Pari passu</span></strong> (Latin: "with equal step") — on equal footing, ranking equally. New shares "rank <em>pari passu</em>" with the existing class for dividend, voting, and on a winding-up.</li>
+    <li><strong><span class="term" data-term="inter-alia">Inter alia</span></strong> (Latin: "among other things") — a non-exhaustive list signal.</li>
+    <li><strong><span class="term" data-term="prima-facie">Prima facie</span></strong> (Latin: "at first appearance") — sufficient on its face, absent rebutting evidence.</li>
+    <li><strong><span class="term" data-term="bona-fide">Bona fide</span></strong> (Latin: "in good faith") — <em>bona fide</em> third-party purchaser is a recurring SPA term in drag-along clauses.</li>
+    <li><strong><span class="term" data-term="force-majeure">Force majeure</span></strong> (legal French: "superior force") — a contractually defined extraordinary event (war, pandemic, natural disaster) that suspends or excuses performance. Civil-law systems (e.g. French Code civil article 1218) imply a statutory concept; common law does not, so the clause must be drafted.</li>
+    <li><strong><span class="term" data-term="ipso-facto">Ipso facto</span></strong> (Latin: "by the fact itself") — automatically, by the mere occurrence. <em>Ipso facto</em> clauses purport to terminate a contract upon a counterparty's insolvency; they are restricted in many jurisdictions including the US Bankruptcy Code §§ 365(e), 541(c) and the UK under the Corporate Insolvency and Governance Act 2020.</li>
+    <li><strong><span class="term" data-term="ex-parte">Ex parte</span></strong> (Latin: "from one side") — a court application made by one party without the other present (urgent injunctions).</li>
+    <li><strong><span class="term" data-term="in-personam">In personam</span></strong> / <strong><span class="term" data-term="in-rem">in rem</span></strong> (Latin: "against the person / against the thing") — a right <em>in personam</em> binds only the named parties; a right <em>in rem</em> binds the world (e.g. ownership of land, security over an asset).</li>
+    <li><strong><span class="term" data-term="ultra-vires">Ultra vires</span></strong> (Latin: "beyond the powers") — an act outside the corporate or statutory authority of the actor; historically void. Modern Companies Act 2006 section 39 (UK) abolishes the <em>ultra vires</em> doctrine as against third parties for registered companies.</li>
+    <li><strong><span class="term" data-term="lex-loci">Lex loci</span></strong> (Latin: "law of the place") — generally lex loci contractus (place of contracting), lex loci solutionis (place of performance), lex loci delicti (place of the tort).</li>
+    <li><strong><span class="term" data-term="lex-fori">Lex fori</span></strong> (Latin: "law of the forum") — the law of the court hearing the case (procedural rules are always lex fori).</li>
+  </ul>
+
+  <h2>Statutes of limitation vs. contractual time limits</h2>
+
+  <p>A <strong><span class="term" data-term="statute-of-limitation">statute of limitation</span></strong> is a public-law deadline set by legislation after which a cause of action becomes time-barred. In England, the <em>Limitation Act 1980</em> gives six years for ordinary contract claims and twelve years for claims under deed. In Delaware, the general statute of limitations for contract claims is three years (10 Del. C. § 8106(a)). Two distinct rules can extend that: (i) a Delaware <strong>contract executed under seal</strong> benefits from a <strong>20-year period at common law</strong> (a doctrine pre-dating the statute, often invoked by writing "executed as a sealed instrument" into the recitals); and (ii) <strong>10 Del. C. § 8106(c)</strong> (added in 2014) permits parties to a written contract for a value of at least <strong>US$100,000</strong> to specify any limitations period <em>up to 20 years</em> by express contractual election. The two are independent: § 8106(c) is a contractual election with a $100k floor; the seal doctrine is a common-law label. In Germany, the regular limitation period (<em>Regelverjährung</em>) is three years from year-end of knowledge under BGB § 195.</p>
+
+  <p>A <strong><span class="term" data-term="contractual-time-limit">contractual time limit</span></strong> is a privately negotiated period inside the SPA after which a warranty claim cannot be brought. Typical UK/EU practice: 12–24 months for general warranties, 5–7 years for tax warranties, and 7–10 years (or longer) for fundamental warranties (title to shares, capacity). Both layers — statutory and contractual — must be satisfied; the contractual one usually expires first by design.</p>
+
+  <h2>Boilerplate clauses</h2>
+
+  <p>Often the last clauses to be negotiated, occasionally the most consequential.</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="entire-agreement">Entire agreement / merger clause</span>.</strong> "This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations." Limits liability for pre-contractual statements not included in the SPA. In England, an entire-agreement clause does not on its own exclude liability for misrepresentation — that requires a separate non-reliance statement. See <em>Springwell Navigation Corp v JP Morgan Chase Bank</em> [2010] EWCA Civ 1221.</li>
+    <li><strong><span class="term" data-term="severability">Severability</span>.</strong> If one clause is held unenforceable, the rest survive.</li>
+    <li><strong>Assignment.</strong> Most SPAs prohibit assignment of rights without the other party's consent, with a permitted carve-out for intra-group transfers and (sometimes) for assignments to a buyer's lenders by way of security.</li>
+    <li><strong>Notices.</strong> Specifies how and where formal notices must be served. Courts strictly enforce — a notice sent to the wrong address may be held ineffective even if it actually reached the recipient.</li>
+    <li><strong><span class="term" data-term="counterparts">Counterparts</span>.</strong> Parties can sign separate copies. Without a counterparts clause, technically all signatures must be on a single document. Now also covers electronic signing (DocuSign, Adobe Sign).</li>
+    <li><strong><span class="term" data-term="no-third-party-beneficiaries">No third-party beneficiaries</span>.</strong> Excludes the operation of statutes that allow non-parties to enforce contract terms. In England, this disapplies the <em>Contracts (Rights of Third Parties) Act 1999</em>. In the US, contract law is generally protective of third-party beneficiaries; a clear waiver is needed.</li>
+    <li><strong>Waiver.</strong> A failure to insist on a right does not waive that right; a waiver must be express and in writing.</li>
+    <li><strong>Amendment.</strong> Any change must be in writing signed by both parties — but be aware of <em>Rock Advertising Ltd v MWB Business Exchange Centres Ltd</em> [2018] UKSC 24 (UK Supreme Court enforced "no oral modification" clauses; the Court of Appeal style was <em>MWB v Rock</em>, but Rock was the appellant at the Supreme Court).</li>
+    <li><strong>Headings.</strong> Headings are for convenience only and do not affect construction.</li>
+    <li><strong>Language.</strong> Where the SPA exists in two languages, which prevails. Common in cross-border deals.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Boilerplate triage — deal-determining vs. commodity</h5>
+    <p>Boilerplate is not a flat list. A senior lawyer reads the boilerplate in two passes: the <strong>deal-determining</strong> clauses get serious attention; the <strong>commodity</strong> clauses are skimmed.</p>
+    <ul>
+      <li><strong>Deal-determining (read every word):</strong>
+        <ul>
+          <li><em>Entire-agreement <strong>plus non-reliance</strong></em> — together exclude pre-contractual representation liability under the UK <em>Misrepresentation Act 1967</em> (see <em>Springwell</em> [2010] EWCA Civ 1221).</li>
+          <li><em>Governing law and jurisdiction</em> — picks the SPA's substantive law and the forum for disputes. Together with arbitration carve-outs, the single biggest dispute-resolution choice in the contract. <em>See Module 16.</em></li>
+          <li><em>Notices</em> — strict-construction territory; a notice to the wrong address may be ineffective even if it reached the recipient.</li>
+          <li><em>No-oral-modification (NOM)</em> — post <em>Rock Advertising Ltd v MWB</em> [2018] UKSC 24, NOM clauses are enforced by the UK Supreme Court; oral variations attempting to override an NOM are ineffective absent estoppel.</li>
+          <li><em>Third-party rights waiver</em> — disapplies the UK <em>Contracts (Rights of Third Parties) Act 1999</em> (default carve-out in almost every English-law SPA) and, in US deals, expressly limits the class of third-party beneficiaries.</li>
+          <li><em>Assignment</em> — controls whether the buyer can flip rights to its lenders or to a successor.</li>
+        </ul>
+      </li>
+      <li><strong>Commodity (skim):</strong> severability, headings, counterparts, language-of-the-contract.</li>
+    </ul>
+    <p>This triage is also why lawyers say boilerplate "occasionally bites" — the deal-determining set above contains clauses that have unwound deals; the commodity set has not.</p>
+  </aside>
+
+  <h2>The M&amp;A deal team — who delivers what</h2>
+
+  <p>A typical mid-market or large-cap M&amp;A transaction is a syndicate of external advisors. The user must know the <strong>seat each one occupies</strong> and — more importantly for partner-fluency — the <strong>shorthand a senior lawyer uses to refer to each role</strong>. The right column below is what each advisor "delivers into the data room" or "feeds into the SPA".</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:1em 0;">
+    <thead><tr><th style="text-align:left; padding:0.5em; border-bottom:1px solid #ccc;">Role</th><th style="text-align:left; padding:0.5em; border-bottom:1px solid #ccc;">What you'll hear a partner say</th><th style="text-align:left; padding:0.5em; border-bottom:1px solid #ccc;">What they deliver</th></tr></thead>
+    <tbody>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Legal lead — buy-side / sell-side</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"Freshfields are running the sell-side"</em>; <em>"we're on the buy"</em>.</td><td style="padding:0.5em; vertical-align:top;">Drafts and negotiates the SPA, runs legal Due Diligence (DD), manages signing/closing logistics.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Legal specialists</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"Tax has signed off"</em>; <em>"IP is clean"</em>; <em>"employment have done the TUPE analysis"</em>.</td><td style="padding:0.5em; vertical-align:top;">Tax, employment, IP, antitrust/competition, FDI, real estate, environmental, pensions (UK), data protection. Each feeds DD findings into specific SPA warranties and specific indemnities.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Investment bank — sell-side</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"Goldman are running the auction"</em>; <em>"the bank is putting in a fairness opinion"</em>.</td><td style="padding:0.5em; vertical-align:top;">Teaser, Confidential Information Memorandum (CIM), management coaching, bid-round logistics, negotiation of economic terms, fairness opinion. Success fee 0.1–6% depending on deal size.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Investment bank — buy-side</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"JPM are advising the buyer"</em>; <em>"PE is bringing in Lazard"</em>.</td><td style="padding:0.5em; vertical-align:top;">Valuation, financing arrangements, fairness opinion (public deals), market check. Hands a price recommendation to the buyer's board / IC.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Financial DD provider</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"want a Big-Four QoE"</em>; <em>"A&amp;M are doing the QoE"</em>.</td><td style="padding:0.5em; vertical-align:top;">Big Four (Deloitte, EY, KPMG, PwC) or boutiques (Alvarez &amp; Marsal, RSM, Grant Thornton, BDO). Produces the <span class="term" data-term="quality-of-earnings">Quality of Earnings (QoE)</span> report — normalised EBITDA bridge, working capital analysis, net debt schedule. Numbers feed the price-adjustment mechanism in the SPA.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Tax advisor</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"PwC are running the step plan"</em>; <em>"are we using a Bidco?"</em></td><td style="padding:0.5em; vertical-align:top;">Tax structuring (the "step plan" — sequence of transactions for the optimal tax outcome), historical tax exposure DD, VAT / transfer-tax efficiency, post-deal integration. Outputs feed the Tax Deed and the tax warranty schedule.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Commercial / vendor DD</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"OC&amp;C have done the VDD"</em>; <em>"Bain are commercial DD-ing for the bidder"</em>.</td><td style="padding:0.5em; vertical-align:top;">Strategy consultants (McKinsey, BCG, Bain, OC&amp;C, LEK). Tests market position, growth assumptions, management plan. <span class="term" data-term="vendor-dd">Vendor DD (VDD)</span> is sell-side commissioned, shared with bidders.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Environmental DD</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"ERM are on the Phase I"</em>; <em>"do we need Phase II?"</em></td><td style="padding:0.5em; vertical-align:top;">ERM, Ramboll, Arcadis lead. Phase I (desktop + site visit); Phase II (intrusive sampling). Outputs feed environmental warranty / indemnity scope and W&amp;I exclusions.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>W&amp;I broker</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"using Marsh on the W&amp;I"</em>; <em>"Howden are placing the policy"</em>.</td><td style="padding:0.5em; vertical-align:top;">Marsh, Aon, WTW, Lockton, Howden lead. Place <span class="term" data-term="warranty-and-indemnity-insurance">Warranty &amp; Indemnity (W&amp;I)</span> insurance — Representations and Warranties Insurance (RWI) in the US. Premium and retention price into the buyer's overall economics.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>W&amp;I underwriter</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"AIG are taking primary"</em>; <em>"Liberty are excess"</em>.</td><td style="padding:0.5em; vertical-align:top;">AIG, Euclid, Liberty, Beazley, etc. Read the SPA, run their own DD review, set premium / exclusions / retention. Decisions price into the warranty package — see Module 14.</td></tr>
+    <tr><td style="padding:0.5em; vertical-align:top;"><strong>Pensions actuary (UK)</strong></td><td style="padding:0.5em; vertical-align:top;"><em>"Mercer are doing the pensions covenant review"</em>.</td><td style="padding:0.5em; vertical-align:top;">Critical in UK deals with defined-benefit pension schemes — output feeds pension-covenant negotiation with trustees and TPR clearance.</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Why this matters for credibility.</strong> Senior partners do not say "the financial due-diligence provider"; they say <em>"the QoE"</em> or <em>"A&amp;M's numbers"</em>. They do not say "the warranty insurance broker"; they say <em>"Marsh"</em> or <em>"the W&amp;I broker"</em>. Reaching for the procurement-catalogue phrasing is one of the fastest ways for a non-lawyer to be flagged as outside the room.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> none — Module 00 is the foundation; everything below builds on the contract-formation, clause-anatomy, deal-room vocabulary and Latin scaffolding installed here.</li>
+      <li><strong>Forwards (concept-by-concept signposts):</strong>
+        <ul>
+          <li><em>Six clause types &amp; remedy gradient →</em> <a href="12-reps-and-warranties.html">Module 12 (Reps &amp; Warranties)</a> develops cap, basket, survival, knowledge / materiality scrape; <a href="13-indemnification.html">Module 13 (Indemnification)</a> develops the indemnity wrappers and conduct-of-claims regime; <a href="14-wi-insurance.html">Module 14 (W&amp;I)</a> develops how the insurer prices warranty risk.</li>
+          <li><em>CPs &amp; bring-down →</em> <a href="08-conditions-precedent.html">Module 08 (CPs &amp; Regulatory Clearances)</a> for hell-or-high-water and longstop mechanics; <a href="09-interim-period.html">Module 09 (Interim Period &amp; MAC)</a> for the bring-down standard and MAC carve-outs; <a href="10-closing.html">Module 10 (Closing)</a> for bring-down certificates.</li>
+          <li><em>De minimis / basket / cap vocabulary →</em> <a href="13-indemnification.html">Module 13</a>.</li>
+          <li><em>Locked box / closing accounts / ticker / true-up / sweep →</em> <a href="11-purchase-price.html">Module 11 (Purchase Price Mechanisms)</a>; the locked-box vs closing-accounts choice is a separate axis from the warranty package, but a Closing Accounts dispute escalates to <a href="16-governing-law.html">Module 16 (Disputes)</a> via expert determination.</li>
+          <li><em>Roll-over equity / clean exit / W&amp;I broker work →</em> <a href="14-wi-insurance.html">Module 14 (W&amp;I)</a> and <a href="15-ancillary-documents.html">Module 15 (Ancillary Documents)</a>.</li>
+          <li><em>English-law SPA length / implied terms →</em> <a href="07-spa-structure.html">Module 07 (SPA Structure)</a>.</li>
+          <li><em>Non-reliance / entire-agreement architecture →</em> <a href="03-presigning-documents.html">Module 03 (Pre-Signing Documents)</a>.</li>
+          <li><em>Boilerplate triage (governing law, jurisdiction, NOM) →</em> <a href="16-governing-law.html">Module 16 (Governing Law &amp; Disputes)</a>.</li>
+        </ul>
+      </li>
+      <li><strong>Why W&amp;I is the secret keystone:</strong> in modern PE M&amp;A, the buyer is contracting with an <em>insurer</em>, not the seller — so the W&amp;I market is the single biggest reason the warranty mechanics installed here matter so intensely. Every warranty decision (cap, basket, survival, knowledge / materiality scrape) prices into the W&amp;I premium and retention. Module 14 develops.</li>
+      <li><strong>Domino effect (the "if you change X, what else has to move?" rule):</strong>
+        <ul>
+          <li>Move a known risk from <em>warranty</em> to <em>specific indemnity</em> → cap, basket, survival, knowledge qualifier and W&amp;I cover all shift; the indemnity often sits outside the cap and the basket and runs a longer tail.</li>
+          <li>Move the SPA from <em>English law</em> to <em>Delaware law</em> → sandbagging default flips (anti → pro), implied-term landscape changes, contract typically lengthens to compensate, the misrepresentation/Misrepresentation-Act carve-out is no longer relevant.</li>
+          <li>Move from <em>closing accounts</em> to <em>locked box</em> → no post-closing price adjustment, ticker is added, "leakage" warranties / indemnities replace working-capital adjustments, the seller's clean-exit story strengthens.</li>
+          <li>Add <em>W&amp;I insurance</em> → seller liability typically capped at $1 (a token), buyer recovers from the insurer; warranty knowledge / materiality scrapes, the breach-knowledge cut-off, and the disclosure standard all become subjects of underwriter negotiation.</li>
+          <li>Add <em>"hell-or-high-water"</em> on antitrust → the buyer accepts divestiture risk; the longstop date, break fee and reverse termination fee all need recalibration.</li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Common-law contracts need offer + acceptance + consideration + intention; civil-law contracts need only offer + acceptance.</li>
+      <li>A deed substitutes for missing consideration in English law.</li>
+      <li>Six clause types: operative, condition, covenant, representation, warranty, indemnity, plus boilerplate. Each has a different remedy on breach — the four remedies form a gradient (representation → warranty → indemnity → covenant) that is the central drafting choice in every SPA.</li>
+      <li>"Indemnify" is offensive; "defend" forces the indemnitor to fund the legal defence; in Delaware and New York "indemnify and hold harmless" is generally a single term of art (a minority view treats "hold harmless" as a separate counter-claim shield). Conduct-of-claims controls who actually drives the defence.</li>
+      <li>A condition <em>precedent</em> must occur before an obligation arises; a condition <em>subsequent</em> extinguishes one.</li>
+      <li>Statutes of limitation are public-law deadlines; contractual time limits are privately agreed inside the SPA — both apply, the shorter governs. In Delaware, 10 Del. C. § 8106(c) (2014) lets parties to a US$100k+ written contract elect any limitations period up to 20 years; the older common-law contract-under-seal 20-year rule is separate.</li>
+      <li>The advisor syndicate: legal (lead + specialists), investment bank, financial DD, tax, commercial/vendor DD, environmental, insurance brokers (W&amp;I).</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <span></span>
+    <a href="01-corporate-law.html" class="next">Corporate Law Essentials</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

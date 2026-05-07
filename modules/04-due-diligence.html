@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 04 — Due Diligence · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="04">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 04</div>
+    <h1>Due Diligence</h1>
+    <p class="subtitle">The investigative phase that turns an investment thesis into priced risk &mdash; legal, financial, tax, commercial, operational and ESG workstreams &mdash; and the SPA mechanisms that absorb each finding.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Describe the strategic purposes of <span class="term" data-term="due-diligence">due diligence (DD)</span>: validating the investment thesis, identifying risk for SPA risk allocation, confirming price.</li>
+      <li>Identify the principal DD workstreams (legal, financial, tax, commercial, operational, IT, environmental, ESG, insurance, HR, real estate, intellectual property) and articulate what each is looking for.</li>
+      <li>Explain the role and mechanics of the <span class="term" data-term="vdr">virtual data room (VDR)</span>, <span class="term" data-term="qa-process">Q&amp;A process</span> and <span class="term" data-term="clean-team">clean team</span> protocols, and identify when each is needed.</li>
+      <li>Compare buy-side DD with <span class="term" data-term="vdd">vendor due diligence (VDD)</span> and the <span class="term" data-term="vfb">vendor financial fact book (VFB)</span> in auction processes.</li>
+      <li>Map a DD finding to one of the five SPA risk-allocation responses: (1) <span class="term" data-term="price-chip">price chip</span>, (2) <span class="term" data-term="specific-indemnity">specific indemnity</span>, (3) <span class="term" data-term="condition-precedent">condition precedent</span>, (4) post-closing covenant, (5) walk-away.</li>
+      <li>Compare the legal effect of disclosed information on a buyer's claim under English law (anti-<span class="term" data-term="sandbagging">sandbagging</span> baseline; <span class="term" data-term="disclosure-letter">disclosure letter</span> as defence) and Delaware law (rebuttable pro-sandbagging presumption unless contractually disclaimed).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The DD phase is where deals are made or unmade. The buyer's investment thesis (e.g., "this target gives us EU distribution capability") meets the seller's actual contracts, financials and skeletons. Findings flow into the SPA: price chips, specific indemnities, conditions precedent, escrow holdbacks, and &mdash; occasionally &mdash; termination. Because DD findings determine where risk lands, "DD as a legal document" is real: in disputes after closing, the DD report and the buyer's data-room access are exhibits in determining whether the buyer "knew" of the risk and whether it has a remedy. The lawyer's job is not to do the DD itself but to ensure findings are converted into the right contractual mechanism &mdash; and to know which findings are too dangerous to leave on a covenant or indemnity rather than be priced or walked.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Knowledge scrape"</strong> &mdash; a buyer-friendly drafting move that <span class="term" data-term="knowledge-scrape">removes "to the seller's knowledge"</span> qualifiers for purposes of indemnification (so the buyer can recover) while leaving them in for purposes of the breach test (so the seller can still rebut). <em>Single scrape</em>: applied once. <em>Double scrape</em>: applied to both the breach test and the loss calculation. Buyer pushes for double; seller pushes for none.</li>
+      <li><strong>"Materiality scrape"</strong> &mdash; companion move that <span class="term" data-term="materiality-scrape">strips "in all material respects" / "material" qualifiers</span> from warranties for indemnification purposes. Same logic as knowledge scrape: keeps the materiality threshold for breach but removes it for damage calculation.</li>
+      <li><strong>"Data room days"</strong> &mdash; the bidder's allotted time in the live data room. Each day is a billable line on the seller's banker invoice and a forensic record exhibit in any post-closing knowledge dispute.</li>
+      <li><strong>"Clean team"</strong> &mdash; ring-fenced advisers and selected internal staff who receive competitively sensitive information and produce aggregated / redacted "<span class="term" data-term="clean-team-output">clean team output</span>" for the broader deal team. Required for competitor combinations to avoid "<span class="term" data-term="gun-jumping">gun-jumping</span>" antitrust risk under HSR / EUMR Article 7.</li>
+      <li><strong>"QofE bridge"</strong> &mdash; the bridge between reported EBITDA and Adjusted (or "Quality of Earnings") EBITDA. Each line on the bridge is a contested assumption: founder salary, one-off legal fees, restructuring costs, COVID-impact normalisations. At 10x multiple, each &euro;100k line swings price by &euro;1m.</li>
+      <li><strong>"DD report carve-in"</strong> &mdash; explicit recital in the SPA that bidders are entitled to rely on specific DD reports (typically VDD reports). Distinct from "carve-out", which removes liability. Carve-in adds a contractual-reliance footing.</li>
+      <li><strong>"Specific indemnity escrow"</strong> &mdash; a stand-alone escrow account funded by the seller at closing to back a specific identified risk (e.g. environmental, tax, sanctions). Sized to expected exposure (often 1.5&ndash;2x estimated cost), released by milestone (regulator clearance, statute-of-limitation expiry).</li>
+      <li><strong>"Tipping basket vs. true deductible"</strong> &mdash; <span class="term" data-term="tipping-basket">tipping</span>: once the threshold is crossed, the buyer recovers from dollar one. <span class="term" data-term="deductible-basket">True deductible</span>: the threshold itself is gone forever (only the excess is recoverable). Typical mid-market: 0.5&ndash;1% of EV; de minimis &euro;/&pound;50k&ndash;250k per claim. A partner saying "let's tighten the basket &mdash; make it a true deductible at 1%" is a strong seller-friendly move.</li>
+    </ul>
+  </aside>
+
+  <h2>Purposes of due diligence</h2>
+
+  <p>DD has three overlapping purposes:</p>
+
+  <ol>
+    <li><strong>Validate the investment thesis</strong> &mdash; test the assumed business model (customers, recurring revenue, technology, regulatory position).</li>
+    <li><strong>Identify risks for SPA risk allocation</strong> &mdash; map specific items (contingent tax liability, pending litigation, change-of-control termination clauses) to mitigants (specific indemnity, condition precedent, escrow).</li>
+    <li><strong>Confirm price</strong> &mdash; generate "price chips" (downward adjustments) reflecting findings.</li>
+  </ol>
+
+  <h2>Workstreams</h2>
+
+  <p>A full DD scope typically covers the following workstreams. The buyer assigns a lead from each (own staff or external advisers) and they all run in parallel, typically over 4&ndash;12 weeks.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Workstream</th><th>Lead</th><th>Typical findings</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Legal</td><td>External law firm</td><td>Corporate housekeeping, material contracts (esp. change-of-control), litigation, IP, regulatory licences, employment claims</td></tr>
+      <tr><td><span class="term" data-term="fdd">Financial (FDD)</span></td><td>Big Four / transaction services firm</td><td>Quality of Earnings, working capital normalisation, cash conversion, customer concentration, EBITDA add-back challenges</td></tr>
+      <tr><td>Tax</td><td>Tax advisers (often within FDD firm)</td><td>Historical exposures, transfer pricing, indirect tax, tax attributes (NOLs &mdash; Net Operating Losses), structuring</td></tr>
+      <tr><td><span class="term" data-term="cdd">Commercial (CDD)</span></td><td>Specialist consultants (Bain, BCG, OC&amp;C, L.E.K., Roland Berger)</td><td>Market sizing, growth rates, competitive position, customer interviews, churn, pricing power</td></tr>
+      <tr><td>Operational</td><td>Operating partners</td><td>Manufacturing capacity, supply chain, capex, procurement</td></tr>
+      <tr><td>IT</td><td>IT specialists</td><td>Tech stack, cybersecurity, integration cost, software licences</td></tr>
+      <tr><td>Environmental</td><td>Environmental consultants</td><td>Phase I (desk) and Phase II (intrusive); contamination, decommissioning</td></tr>
+      <tr><td>ESG</td><td>KPMG, ERM, Anthesis, etc.</td><td>Carbon, supply-chain human rights, governance &mdash; driven by EU Corporate Sustainability Reporting Directive (CSRD) and German Lieferkettensorgfaltspflichtengesetz (LkSG &mdash; Supply Chain Due Diligence Act)</td></tr>
+      <tr><td>Insurance</td><td>Brokers (Marsh, Aon, WTW, Lockton)</td><td>Programme adequacy, claims history, run-off, post-closing design</td></tr>
+      <tr><td>HR</td><td>HR specialists</td><td>Headcount, comp, pension liabilities, change-of-control bonuses, key-person dependencies, collective bargaining</td></tr>
+      <tr><td>Real estate</td><td>Property lawyers + surveyors</td><td>Title, leases, planning, dilapidations</td></tr>
+      <tr><td>Intellectual property (IP)</td><td>IP lawyers</td><td>Patent ownership/validity, trademarks, employee IP assignments, open-source exposure</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong><span class="term" data-term="qoe">Quality of Earnings (QoE)</span>.</strong> The single most important FDD output. The QoE evaluates whether reported EBITDA (Earnings Before Interest, Tax, Depreciation and Amortisation) is <em>sustainable</em>, <em>recurring</em> and <em>reflective of underlying operations</em>. The analyst strips out non-recurring items, adjusts for accounting policy choices and challenges seller "add-backs" (e.g., "founder's salary normalisation"). Output: an "Adjusted EBITDA" the buyer is willing to apply a multiple to. At a 10x deal multiple, each &euro;100k EBITDA add-back challenge swings the price by &euro;1m.</p>
+
+  <h2>Sanctions, export-control and anti-corruption due diligence</h2>
+
+  <p>For any target with non-domestic revenue, supply chain or counterparty footprint, sanctions and export-control DD has, since 2022, become a stand-alone workstream rather than a sub-bullet of the legal report. The risk is asymmetric: a single un-remediated breach can trigger criminal liability, asset blocking, debarment from a major market and a transactional headline that vapourises the deal premium. Buyers funded by US lenders or with US shareholders must assume that <em>secondary</em> US sanctions reach the target's non-US activities; UK and EU buyers face their own primary regimes with comparable extraterritorial bite.</p>
+
+  <h3>Sanctions screening</h3>
+
+  <p>The standard scope is to screen, at minimum: (i) the target group's <strong>direct counterparties</strong> (customers and suppliers above a materiality threshold), (ii) <strong>beneficial owners</strong> of any counterparty (the post-2022 EU sanctions amendments and OFAC's "50% rule" both reach entities indirectly owned by a sanctioned person), (iii) <strong>end-users</strong> of dual-use goods or services, (iv) the target's directors, officers and significant shareholders, and (v) bank counterparties and payment-flow nodes.</p>
+
+  <p>The principal sanctions lists are: the US <span class="term" data-term="ofac">Office of Foreign Assets Control (OFAC) Specially Designated Nationals and Blocked Persons (SDN) List</span> administered by the US Department of the Treasury under the International Emergency Economic Powers Act (IEEPA) and various country-specific programs; the EU <em>Consolidated List</em> maintained under Council Regulation (EC) 881/2002 and successor regulations; the UK <em>Consolidated List of Financial Sanctions Targets</em> administered by the Office of Financial Sanctions Implementation (OFSI) under the Sanctions and Anti-Money Laundering Act 2018; and the UN Security Council Consolidated List under Chapter VII resolutions. Dedicated screening tools (Refinitiv World-Check, Dow Jones Risk &amp; Compliance, LexisNexis Bridger, Sayari) automate the cross-list match against millions of counterparty records.</p>
+
+  <h3>Export-control review</h3>
+
+  <p>For any target whose products, software or technology might be controlled, the DD includes an <span class="term" data-term="export-control">export-control</span> review: (i) an Export Classification Numbers (ECN) audit of the product portfolio against the US <strong>Export Administration Regulations (EAR)</strong> (15 CFR Parts 730&ndash;774, administered by the Bureau of Industry and Security &mdash; BIS) and the Commerce Control List; (ii) an audit against the US <strong>International Traffic in Arms Regulations (ITAR)</strong> (22 CFR Parts 120&ndash;130, administered by the State Department's Directorate of Defense Trade Controls) for any "defence article" or related technical data; (iii) an audit against the <strong>EU Dual-Use Regulation (Regulation (EU) 2021/821)</strong> on the control of exports, brokering, technical assistance, transit and transfer of dual-use items; and (iv) an audit against any military-end-use catch-all controls. For Russia/Belarus exposure post-2022, the EU's 18-and-counting sanctions packages and the UK's Russia (Sanctions) (EU Exit) Regulations 2019 add layered prohibitions on items, services and technical assistance.</p>
+
+  <h3>Anti-corruption / books-and-records DD</h3>
+
+  <p>The standard <span class="term" data-term="fcpa">US Foreign Corrupt Practices Act of 1977 (FCPA)</span> and UK Bribery Act 2010 DD covers: (i) <em>anti-bribery</em> &mdash; payments or other things of value to foreign public officials. Note the precise FCPA citation framework (a question a senior partner will probe): the anti-bribery provisions are codified in the Securities Exchange Act of 1934, where <strong>&sect;30A (15 U.S.C. &sect;78dd-1)</strong> is the <em>issuer</em>-only provision; <strong>15 U.S.C. &sect;78dd-2</strong> reaches "<em>domestic concerns</em>" (US persons and US-organised entities not registered with the SEC); and <strong>15 U.S.C. &sect;78dd-3</strong> is the territorial-jurisdiction provision over foreign persons acting in the US. The UK Bribery Act 2010 covers sections 1 (active bribery), 2 (passive bribery), 6 (bribery of foreign public officials), and 7 (corporate offence of failure to prevent bribery, with the "adequate procedures" defence under section 7(2)). (ii) <em>books-and-records</em> &mdash; the FCPA accounting provisions at <strong>Exchange Act &sect;13(b)(2) (15 U.S.C. &sect;78m(b)(2))</strong> require US issuers to keep accurate books and maintain a system of internal accounting controls; (iii) the target's <em>compliance program</em> &mdash; written policies, training records, third-party-intermediary diligence files, gift and hospitality logs, M&amp;A pre-acquisition diligence the target itself has conducted on its acquired subsidiaries. The US Department of Justice (DOJ) and Securities and Exchange Commission (SEC) <em>Resource Guide to the FCPA</em> (2nd ed., 2020) sets out the "successor liability" principles: an acquirer inherits FCPA liability for the target's pre-acquisition conduct unless it remediates promptly post-closing &mdash; making integration of the target's compliance program one of the buyer's first 100-day priorities.</p>
+
+  <h3>SPA response</h3>
+
+  <p>Findings flow into a stand-alone <span class="term" data-term="sanctions-rep">Sanctions and Anti-Corruption Representation</span> in the SPA. Standard form: (a) the seller represents that the target group is in compliance with all applicable sanctions, export-control and anti-corruption laws; (b) no member of the target group, and no director, officer, employee or agent acting for it, is a Sanctioned Person, is owned or controlled by one, or has been the subject of an enforcement action; (c) the target has not made or offered any improper payment to a foreign public official; (d) the target has appropriate policies and procedures in place. This rep is typically (i) <strong>not subject to the materiality scrape</strong> (i.e. each component is read without "in all material respects" qualification), (ii) often <strong>outside the cap</strong> on warranty liability, and (iii) survives for the longer of the cap period and the relevant statute of limitations.</p>
+
+  <p>W&amp;I (Warranty &amp; Indemnity) insurance carriers will <strong>exclude</strong> historical sanctions breaches and historical bribery exposure as <em>known</em> findings &mdash; meaning the contractual recourse is the only recourse. Anything material identified in DD therefore needs a <strong>specific indemnity</strong> backed by escrow or by a parental guarantee of seller covenant strength. For deals with significant exposure to sanctioned jurisdictions (Russia, Iran, Venezuela, North Korea), buyers commonly add (i) a <em>walk-away</em> condition precedent on no new designations between signing and closing, (ii) a covenant requiring the target to remediate identified compliance gaps before closing, and (iii) a post-closing covenant requiring integration of the buyer's compliance program within a fixed window.</p>
+
+  <aside class="pitfall">
+    <h5>Common pitfalls &mdash; sanctions / export-control DD</h5>
+    <ul>
+      <li>Screening only the direct counterparty list and missing the beneficial-owner test. <strong>OFAC's 50% Rule</strong>: any entity owned 50% or more (in aggregate) by one or more SDN persons is itself blocked, even if not separately listed. <strong>EU alignment:</strong> the EU Council's 2024 Best-Practices Guidance shifted the formulation from "more than 50%" to "<strong>50% or more</strong>", aligning with OFAC and diverging from UK practice; a separate "control" test catches sub-50% interests where a sanctioned person nonetheless exercises decisive influence.</li>
+      <li>Treating EAR / ITAR as a US-only concern &mdash; <em>deemed exports</em> (release of controlled technology to a foreign national in the US) and <em>re-exports</em> (a controlled item leaving the US for one country and shipped onward to another) reach non-US buyers as a matter of US law, with extraterritorial enforcement.</li>
+      <li>Ignoring the target's third-party intermediary file: agents, distributors, customs brokers, joint-venture partners and lobbyists are the highest-risk FCPA / Bribery Act vectors and their due-diligence files (or absence thereof) are the leading indicator of compliance-program quality.</li>
+      <li>Failing to capture pre-acquisition remediation in the SPA: the FCPA's successor-liability principles reward documented remediation; an undocumented post-closing clean-up may still leave the buyer exposed.</li>
+    </ul>
+  </aside>
+
+  <h2>The data room, Q&amp;A and clean teams</h2>
+
+  <p>The <span class="term" data-term="vdr">virtual data room (VDR)</span> is a secure online repository for seller documents. Major providers: Intralinks (SS&amp;C &mdash; the original VDR), Datasite, FirmRoom, Dealroom, iDeals, Drooms, Ansarada. Standard features: granular permissions (different folders for different bidders), watermarking, audit trail, integrated Q&amp;A.</p>
+
+  <p>The <span class="term" data-term="qa-process">Q&amp;A process</span> routes bidder questions through the VDR to seller subject-matter experts; in auctions, questions and answers are typically circulated to all bidders to avoid the seller giving inconsistent answers (subject to redaction of competitively sensitive items).</p>
+
+  <p><strong>Clean team protocols.</strong> Where the bidder is a competitor of the target, sharing competitively sensitive information (current pricing, customer-level margins, R&amp;D roadmap, capacity utilisation) creates antitrust risk under "gun-jumping" doctrines (US: Clayton Act &sect;7A / Hart-Scott-Rodino; EU: EUMR Article 7 standstill obligation) and information-exchange rules. The solution is a <span class="term" data-term="clean-team-agreement">clean team agreement</span>: a ring-fenced group (typically external accountants, lawyers, consultants plus a small internal group not involved in commercial decisions) who receive the sensitive information and prepare aggregated/redacted summary outputs for the broader deal team. Clean team members are typically barred from commercial roles for 12&ndash;24 months if the deal does not close.</p>
+
+  <h2>Vendor due diligence (VDD) and vendor financial fact book (VFB)</h2>
+
+  <p>In auctions, sellers (especially PE sellers exiting portfolio companies) commission their own DD reports &mdash; <span class="term" data-term="vdd">VDD</span> reports &mdash; for circulation to bidders. The VDD is prepared by independent advisers (Big Four or specialist VDD firms) and is <em>contractually addressed</em> to bidders so that bidders can rely on it (subject to caps and engagement-letter limitations).</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Pros for seller</th><th>Cons for seller</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Levels the playing field &mdash; all bidders get same information</td><td>Upfront cost (&euro;500k&ndash;&euro;2m for a mid-market deal)</td></tr>
+      <tr><td>Reduces post-exclusivity price chips (issues surfaced and explained early)</td><td>Items disclosed in VDD may negatively affect bids</td></tr>
+      <tr><td>Speeds the process; auction can run shorter</td><td>Risk of waiver of attorney-client / accountant privilege</td></tr>
+      <tr><td>Lets seller control the narrative</td><td>No guarantee of higher price from the investment</td></tr>
+      <tr><td>Keeps multiple bidders engaged longer</td><td>If deal aborts, the VDD may help the next bidder or be forced into the public domain</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Vendor Financial Fact Book (VFB).</strong> A <span class="term" data-term="vfb">VFB</span> is a "lighter" alternative to a full VDD. The VFB presents financials, KPIs and management's narrative in a descriptive, factual format (no opinions, no analytical conclusions, less reliance language). It is cheaper and faster to produce. Used where the bidder pool is mostly trade buyers who will conduct their own confirmatory FDD.</p>
+
+  <h2>ESG / Sustainability due diligence</h2>
+
+  <p>What used to be a single "ESG questionnaire" appended to the legal report is now a dedicated workstream with its own consultancy team, its own data taxonomy and its own SPA outputs. The trigger is twofold: (i) the EU's mandatory non-financial reporting and supply-chain regimes (CSRD, CS3D, LkSG) impose <em>filing</em> obligations on the buyer's group from day one of integration, so an unflagged target liability becomes the buyer's regulatory disclosure problem; and (ii) for financial sponsors, fund-level commitments (SFDR Article 8/9 designations, principal adverse impact reporting) translate directly into portfolio-level ESG diligence requirements.</p>
+
+  <h3>Climate / Scope 1&ndash;3 emissions and CSRD double materiality</h3>
+
+  <p>The <span class="term" data-term="csrd">Corporate Sustainability Reporting Directive (CSRD)</span> (Directive (EU) 2022/2464, amending the 2014 Non-Financial Reporting Directive) requires in-scope companies to publish a sustainability statement using the <strong>European Sustainability Reporting Standards (ESRS)</strong> developed by EFRAG (the European Financial Reporting Advisory Group) and adopted by Commission Delegated Regulation (EU) 2023/2772. ESRS imposes a <strong>double-materiality</strong> assessment: an issue is reported if it is material either to the enterprise's financial position (financial materiality, the historical IFRS perspective) <em>or</em> to its impact on people and environment (impact materiality).</p>
+
+  <p><strong>Updated scope (Omnibus I Directive, Council adoption Feb 2026):</strong> the original CSRD thresholds (&gt;250 employees, &euro;50m turnover or &euro;25m balance sheet) were widely criticised as over-inclusive. The Omnibus I Directive raises the CSRD threshold to <strong>1,000+ employees AND &euro;450m+ net turnover</strong> for financial years from 1 January 2027, excluding approximately 80% of previously in-scope companies. Listed SMEs and large non-EU companies (&gt;&euro;450m EU turnover) remain in scope. Practitioners should treat the original thresholds as superseded for any deal closing in 2026 or later.</p>
+
+  <p>For DD, the workstream covers: (i) Scope 1 (direct), Scope 2 (purchased energy) and Scope 3 (full value-chain) <strong>greenhouse-gas (GHG) emissions inventories</strong>, calculated under the GHG Protocol Corporate Standard or ISO 14064; (ii) the target's transition plan, capex required to deliver it, and stranded-asset exposure; (iii) regulatory permits under the EU Emissions Trading System (ETS) and any expected exposure to the Carbon Border Adjustment Mechanism (CBAM, Regulation (EU) 2023/956, in transitional phase 2023&ndash;2025, full operation from 2026); (iv) physical climate risk to facilities (flood, wildfire, heat, sea-level rise) and transition risk (carbon-price exposure, policy change, demand shift).</p>
+
+  <h3>Supply-chain human-rights and environmental diligence</h3>
+
+  <p>Three legislative regimes now require ongoing supply-chain diligence as a corporate compliance obligation, with overlapping but distinct scope. The German <span class="term" data-term="lksg">Lieferkettensorgfaltspflichtengesetz (LkSG, Supply Chain Due Diligence Act)</span> entered into force on 1 January 2023 and applies to companies with 1,000+ employees in Germany; it requires risk analysis, preventive and remedial measures, a complaints procedure, documentation and annual public reporting on human-rights and environmental risks across the supply chain. Failure to comply attracts fines of up to <strong>&euro;8 million</strong> generally; the <strong>2%-of-worldwide-turnover variant applies only to enterprises with annual turnover above &euro;400m</strong> (per BAFA, the enforcement authority). For mid-market targets the practical cap is &euro;8m.</p>
+
+  <p>The EU <span class="term" data-term="cs3d">Corporate Sustainability Due Diligence Directive (CS3D)</span> (Directive (EU) 2024/1760, in force from 25 July 2024) extends comparable obligations across the EU to large companies (initial threshold: 5,000+ employees and &euro;1.5bn turnover, lowering progressively to 1,000+ employees and &euro;450m turnover) and to non-EU companies with &gt;&euro;450m EU turnover. <strong>Updated timeline:</strong> the "stop-the-clock" Directive (in force 17 April 2025) and the Omnibus I package together push first-wave CS3D application to <strong>26 July 2028</strong> (originally 2027). The directive requires identification, prevention, mitigation and remediation of adverse human-rights and environmental impacts in the company's own operations, those of subsidiaries, and "established business relationships" in the value chain &mdash; with civil liability (subject to national-law transposition variations) and supervisory penalties of up to 5% of net worldwide turnover.</p>
+
+  <p>The UK <strong>Modern Slavery Act 2015 section 54</strong> requires commercial organisations with &pound;36m+ turnover that supply goods or services in the UK to publish an annual <em>slavery and human trafficking statement</em> setting out steps taken to prevent modern slavery in operations and supply chains. The statement must be approved by the board and signed by a director. There is no monetary penalty in the Act itself, but UK reputational and government-procurement exposure is significant.</p>
+
+  <h3>Sponsor-level SFDR commitments</h3>
+
+  <p>For private equity buyers, fund-level obligations under the <span class="term" data-term="sfdr">Sustainable Finance Disclosure Regulation (SFDR, Regulation (EU) 2019/2088)</span> reach down to portfolio acquisition decisions. Funds classified under <strong>Article 8</strong> ("light green" &mdash; promoting environmental or social characteristics) or <strong>Article 9</strong> ("dark green" &mdash; sustainable investment as the objective) commit to specific sustainability disclosures including <strong>Principal Adverse Impact (PAI) indicators</strong> covering 14 mandatory plus opt-in metrics (carbon emissions, biodiversity-impact areas, gender pay gap, exposure to controversial weapons, etc.). A target whose data does not allow the sponsor to meet its PAI reporting cannot be acquired, or must be acquired only with a remediation plan inside the SPA.</p>
+
+  <h3>SPA response</h3>
+
+  <p>Findings flow into: (i) <em>ESG-specific representations</em> &mdash; compliance with CSRD/LkSG/CS3D as applicable, no material environmental notices, no section 54 modern-slavery inadequacy, no material human-rights complaints under the LkSG complaints mechanism, accuracy of the GHG inventory; (ii) a <em>specific indemnity</em> for any known contamination or supply-chain breach, often paired with an escrow because W&amp;I carriers will exclude known ESG findings; (iii) <em>pre-closing covenants</em> requiring remediation steps; (iv) <em>post-closing covenants</em> requiring data integration so the buyer can extend its CSRD or PAI reporting to cover the target from year one. For PE deals where the fund is Article 9-classified, deal documents typically include a <em>sustainability bridge</em> covenant: a contractual commitment by management (often tied to the management equity package) to deliver against ESG KPIs over the hold period.</p>
+
+  <aside class="pitfall">
+    <h5>Common pitfalls &mdash; ESG DD</h5>
+    <ul>
+      <li>Treating ESG as a brand-management issue rather than a regulatory-disclosure one. Once the buyer's group is in scope of CSRD or CS3D, an undisclosed material target liability becomes a misstatement in the buyer's audited sustainability report.</li>
+      <li>Accepting the target's existing GHG inventory at face value. Scope 3 (value-chain) emissions are notoriously inconsistent in measurement; restated figures can dwarf the originally reported number.</li>
+      <li>Failing to specify in the SPA which party owns the cost of bringing the target's data systems up to the buyer's CSRD/PAI reporting standard &mdash; a project that can run six to twelve months and consume significant management bandwidth.</li>
+      <li>Assuming W&amp;I covers ESG: carriers exclude known ESG findings and increasingly impose specific exclusions for unmanaged climate transition and supply-chain risk in carbon-intensive sectors.</li>
+    </ul>
+  </aside>
+
+  <h2>Mapping DD findings to SPA mechanisms</h2>
+
+  <p>A DD finding triggers one of five contractual responses:</p>
+
+  <ol>
+    <li><strong><span class="term" data-term="price-chip">Price chip</span> / valuation adjustment</strong> &mdash; for findings that reduce sustainable EBITDA, affect the equity bridge, or expose the buyer to recurring un-fenced risk.</li>
+    <li><strong><span class="term" data-term="specific-indemnity">Specific indemnity</span></strong> &mdash; standalone seller obligation for a defined risk; typically uncapped (or capped at price), no <em>de minimis</em> (Latin: "of the smallest things" &mdash; meaning a threshold below which something is too trivial to count) or basket, often paired with an indemnity escrow.</li>
+    <li><strong><span class="term" data-term="condition-precedent">Condition precedent (CP)</span></strong> &mdash; an event that must occur (or be waived) before closing (e.g., "obtain landlord consent for the Material Lease"). Best for binary, cleanly-resolved issues.</li>
+    <li><strong>Post-closing covenant</strong> &mdash; ongoing obligation post-closing (e.g., seller cooperation on a tax matter for 12 months).</li>
+    <li><strong>Walk-away</strong> &mdash; when the finding cannot be priced, indemnified or insured.</li>
+  </ol>
+
+  <p><strong><span class="term" data-term="indemnity-escrow">Indemnity escrow</span> / holdback.</strong> 5&ndash;15% of the purchase price held by a neutral escrow agent (often a bank or specialist escrow firm). Standard duration: 12&ndash;24 months for general warranties; 6&ndash;7 years for tax warranties (to align with statutes of limitation).</p>
+
+  <aside class="lever both">
+    <h5>Materiality scrape and knowledge scrape &mdash; the buyer's two leverage moves</h5>
+    <ul>
+      <li><strong>Materiality scrape:</strong> strips "material" / "in all material respects" qualifiers from warranties when calculating <em>damages</em>, while retaining them for the <em>breach test</em>. Effect: a buyer must still show that there is a breach (e.g. a "material" inaccuracy), but once a breach is established, recovery is for the full loss without applying the materiality threshold a second time. <em>Single scrape</em> applies once (commonly to the loss calculation only); <em>double scrape</em> applies to both the breach test and the loss calculation.</li>
+      <li><strong>Knowledge scrape:</strong> same logic applied to "to the seller's knowledge" qualifiers. Strips knowledge for indemnification purposes (so the buyer can recover even on a representation the seller did not actually know was false), while retaining knowledge for the breach test (so the seller can argue lack of knowledge defeats breach in the first place).</li>
+      <li><strong>Buyer wants:</strong> double scrape on both materiality and knowledge.</li>
+      <li><strong>Seller wants:</strong> no scrape; if forced, single scrape only.</li>
+      <li><strong>Typical compromise (per ABA Deal Points 2023&ndash;2025):</strong> a single materiality scrape applied to the loss calculation (commonly seen in 50%+ of deals); knowledge scrape less common, more contested, often replaced by W&amp;I underwriting which has its own scrape conventions.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>DD outputs flow into &hellip;</h5>
+    <ul>
+      <li><strong>Equity bridge / price (<a href="11-purchase-price.html">Module 11</a>):</strong> price chips, working-capital target adjustments, debt-like-item additions to net debt, locked-box leakage permitted-list items.</li>
+      <li><strong>MAC carve-outs / interim-period covenants (<a href="09-interim-period.html">Module 09</a>):</strong> known issues become carve-outs from MAC; interim covenants are calibrated to keep the issue from worsening before closing.</li>
+      <li><strong>Conditions Precedent &amp; clearances (<a href="08-conditions-precedent.html">Module 08</a>):</strong> identified consents, antitrust filings, FDI screening triggers, sanctions de-risking become CPs.</li>
+      <li><strong>Disclosure Letter / disclosure schedules and bring-down (<a href="07-spa-structure.html">Module 07</a>, <a href="10-closing.html">Module 10</a>, <a href="12-reps-and-warranties.html">Module 12</a>):</strong> the data-room contents and DD report findings populate disclosures; the closing-day <strong>bring-down certificate</strong> updates them. Negotiation: do bring-down disclosures qualify warranties or trigger MAC?</li>
+      <li><strong>Indemnity regime &amp; escrow (<a href="13-indemnification.html">Module 13</a>):</strong> specific indemnities, dedicated escrows, sized to expected loss.</li>
+      <li><strong>W&amp;I insurance (<a href="14-wi-insurance.html">Module 14</a>):</strong> W&amp;I excludes known matters &mdash; DD findings drive the policy exclusions list, the retention, and the synthetic-warranty options.</li>
+      <li><strong>Closing certificate (<a href="10-closing.html">Module 10</a>):</strong> the closing-day documents reflect the resolved DD items; outstanding items become specific indemnities or post-closing covenants.</li>
+      <li><strong>Integration / 100-day plan (<a href="17-post-closing.html">Module 17</a>):</strong> outstanding remediation work (compliance program rollout, ESG data integration, tax filings) becomes the buyer's first 100 days.</li>
+    </ul>
+    <p><strong>Structure-DD interlock:</strong> in an asset deal the buyer can choose what to take; in a share deal the buyer takes the entity warts-and-all; in a carve-out the buyer takes a perimeter that has to be defined and stood up via the TSA (<a href="15-ancillary-documents.html">Module 15</a>). Choice of structure feeds back into DD scope.</p>
+  </aside>
+
+  <h2>Red flags vs. yellow flags</h2>
+
+  <ul>
+    <li><strong>Green:</strong> Low risk; informational only.</li>
+    <li><strong><span class="term" data-term="yellow-flag">Yellow:</span></strong> Material risk needing mitigation (covenant, modest price chip, focused further DD).</li>
+    <li><strong><span class="term" data-term="red-flag">Red:</span></strong> Critical risk; deal-breaker without structural intervention (specific indemnity + escrow, CP, target restructuring, or walk-away).</li>
+  </ul>
+
+  <p>Lawyers refine the colour by asking: (a) probability, (b) magnitude, (c) controllability, (d) recoverability under SPA mechanisms.</p>
+
+  <h2>The DD report as a legal document</h2>
+
+  <p>DD reports are not internal memos. They become exhibits in (i) post-closing warranty disputes (the seller will argue the buyer "knew" everything); (ii) the buyer's lender and W&amp;I-insurer relationships; (iii) regulatory or shareholder litigation. Drafted accordingly: precise on findings, careful on speculation, explicit on scope limitations.</p>
+
+  <h2>Disclosure as a defence to warranty claims (sandbagging)</h2>
+
+  <p>The doctrinal question: can a buyer sue on a warranty after closing if it <em>knew</em> before closing that the warranty was inaccurate?</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK</h5>
+      <p>Default rule is <em>anti-<span class="term" data-term="sandbagging">sandbagging</span></em>. English authority (<em>Eurocopy v. Teesdale</em> [1992] BCLC 1067; <em>Infiniteland v. Artisan Contracting</em> [2005] EWCA Civ 758) suggests that a buyer with actual knowledge of a breach cannot recover. Disclosure mechanism: a separate <span class="term" data-term="disclosure-letter">Disclosure Letter</span> at signing, with general disclosures (matters of public record; data-room contents) and specific disclosures against specific warranties. "Full, fair and clearly identified" disclosure qualifies the warranty. Buyers push for a <em>high</em> disclosure standard and resist generic data-room disclosures. For known issues the buyer wants to recover on, the answer is a <em>specific indemnity</em> &mdash; not a warranty.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>Default rule is <em>pro-sandbagging</em>. Cases: <em>Cobalt Operating, LLC v. James Crystal Enterprises, LLC</em>, 2007 WL 2142926 (Del. Ch. July 20, 2007); <em>Universal American Corp. v. Partners Healthcare Solutions Holdings, LP</em>, 61 F. Supp. 3d 391 (D. Del. 2014); <em>Arwood v. AW Site Services, LLC</em>, 2022 WL 705841 (Del. Ch. Mar. 9, 2022). <em>Frontier Oil v. Holly</em>, 2005 WL 1039027 (Del. Ch. April 29, 2005) is sometimes read as nudging anti-sandbagging in narrow circumstances, but the dominant rule remains pro-sandbagging. Disclosure mechanism: <span class="term" data-term="disclosure-schedules">disclosure schedules</span> attached to the SPA, cross-referenced to specific warranty sections.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>German BGB &sect;442 &mdash; a buyer who knows of a defect at conclusion loses statutory warranty rights unless preserved. France: knowledge can defeat the <em>garantie des vices cach&eacute;s</em> (Code civil Art. 1641 et seq.). Italy: Codice civile Art. 1490. M&amp;A practice in all three relies on contractual warranty/indemnity regimes that override or supplement the statutory positions.</p>
+    </aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; sandbagging in a US deal</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Pro-sandbagging clause OR silence (which defaults pro-sandbagging in Delaware), plus a narrowly defined knowledge standard if any anti-sandbagging language is included.</li>
+      <li><strong>Seller wants:</strong> Anti-sandbagging clause excluding recovery to the extent of buyer's actual knowledge, with knowledge attributed broadly (deal team, advisers, external consultants).</li>
+      <li><strong>Market data (ABA Private Target M&amp;A Deal Points Studies):</strong> the <strong>2023 Study</strong> reported 76% silent / <strong>19% pro-sandbagging</strong> / 5% anti-sandbagging. The <strong>2025 Study</strong> (covering deals 2023&ndash;H1 2024) shows silence retreating to <strong>68%</strong> with pro-sandbagging language reappearing as silence falls. Trend reversal: silence had been increasing through 2017&ndash;2023 (largely tracking RWI uptake, which has its own knowledge-based exclusions) but has since reversed, and pro-sandbagging language is now drafted explicitly more often. Anti-sandbagging remains a small minority (~5%).</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>Disclosure Letter that just says "see data room".</strong> UK courts have repeatedly held that this is not "fair and reasonable disclosure". Disclosures must identify the specific warranty and the specific document.</li>
+      <li><strong>No indemnity escrow.</strong> A specific indemnity is only as good as the seller's covenant strength &mdash; and once cash is paid out, recovery is hard. Always pair a specific indemnity with an escrow or insurance.</li>
+      <li><strong>Mixing warranties and specific indemnities.</strong> Warranties and indemnities have different remedies, different limitations, and different treatment under W&amp;I insurance. Keep them in separate sections.</li>
+      <li><strong>Failing to consider the W&amp;I policy.</strong> The W&amp;I insurer will exclude known matters disclosed in the DD report or the disclosure letter &mdash; so the contractual indemnity for those items is <em>the only</em> recourse, and the seller's covenant strength matters.</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>Worked example &mdash; environmental contamination finding</h5>
+    <p>Environmental DD finds historical solvent contamination, remediation &euro;2&ndash;8m, no regulator notice yet. SPA treatment:</p>
+    <ul>
+      <li><em>Not</em> a warranty &mdash; buyer knows; warranty would be qualified by disclosure and unrecoverable in UK.</li>
+      <li><em>Specific indemnity</em> &mdash; &euro;-for-&euro; up to &euro;10m cap, no <em>de minimis</em>, no basket, 7&ndash;10 year survival.</li>
+      <li><em>Escrow</em> &mdash; &euro;5m for 5 years; released earlier on regulator "no further action" letter.</li>
+      <li><em>Optional CP</em> &mdash; pre-closing Phase II intrusive testing; if results materially worse than estimate, buyer may renegotiate or walk.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> <a href="00-foundations.html">Module 00</a> remedy gradient (warranty vs indemnity) explains why DD findings flow to one mechanism not another; <a href="02-ma-landscape.html">Module 02</a> auction-vs-bilateral and VDD scope set the DD posture; <a href="03-presigning-documents.html">Module 03</a> NDA non-reliance language is the upstream of the buyer's later misrepresentation claims; <a href="01-corporate-law.html">Module 01</a> cap-table reconciliation is the corporate-law backbone of the title warranty.</li>
+      <li><strong>Forwards:</strong> see "DD outputs flow into &hellip;" callout above &mdash; every workstream has a downstream SPA mechanism. Materiality scrape / knowledge scrape connect to <a href="12-reps-and-warranties.html">Module 12</a>; closing-day bring-down to <a href="10-closing.html">Module 10</a>; sandbagging-friendly drafting to <a href="13-indemnification.html">Module 13</a>; W&amp;I retention sized off DD output to <a href="14-wi-insurance.html">Module 14</a>; integration plan to <a href="17-post-closing.html">Module 17</a>.</li>
+      <li><strong>Domino effect:</strong> moving an environmental issue from <em>warranty</em> to <em>specific indemnity</em> requires carving the rep, sizing the escrow, shifting the W&amp;I exclusion, and shortening MAC carve-back; one finding-treatment choice cascades into five clauses. Adding a knowledge scrape changes the W&amp;I underwriting conversation (the carrier may either follow or impose its own knowledge limits). Reducing exclusivity from 8 weeks to 4 forces the buyer to rely more on VDD reports, which in turn means broader Disclosure-Letter qualifications, smaller indemnification baskets, and higher specific-indemnity escrow.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>DD has three purposes: validate the investment thesis, identify risks for SPA risk allocation, and confirm price.</li>
+      <li>Workstreams run in parallel over 4&ndash;12 weeks: legal, FDD (with QoE the keystone output), tax, CDD, operational, IT, environmental, ESG, insurance, HR, real estate, IP.</li>
+      <li>QoE strips out non-recurring items and challenges add-backs to produce an "Adjusted EBITDA"; at a 10x multiple, each &euro;100k swings the price by &euro;1m.</li>
+      <li>VDRs (Intralinks, Datasite, etc.) host documents; clean teams ring-fence competitively sensitive information to manage gun-jumping and antitrust risk.</li>
+      <li>VDD is a seller-commissioned DD report contractually addressed to bidders; VFB is the lighter, factual alternative without analytical conclusions or reliance.</li>
+      <li>Five SPA responses to a finding: price chip; specific indemnity; condition precedent; post-closing covenant; walk-away.</li>
+      <li>Specific indemnities are typically uncapped (or capped at price), no <em>de minimis</em>, paired with escrow (5&ndash;15% of price for 12&ndash;24 months general; 6&ndash;7 years tax).</li>
+      <li>UK default is anti-sandbagging (<em>Eurocopy</em>; <em>Infiniteland</em>); Delaware default is pro-sandbagging. ABA Deal Points: 2023 Study showed 76% silent / 19% pro / 5% anti; 2025 Study shows silence retreating to 68% with pro-sandbagging language reappearing as silence falls.</li>
+      <li>The DD report is itself a legal document &mdash; an exhibit in post-closing disputes, lender and insurer relationships, and regulatory or shareholder litigation.</li>
+      <li>Sanctions / export-control / anti-corruption DD: screen counterparties and beneficial owners against OFAC SDN, EU Consolidated, UK OFSI and UN lists; review against EAR, ITAR and EU Dual-Use Regulation 2021/821; FCPA / UK Bribery Act 2010 books-and-records and compliance-program review. Standard SPA response: stand-alone Sanctions &amp; Anti-Corruption Rep, no materiality scrape, often outside cap; W&amp;I excludes known sanctions / bribery breaches so specific indemnity is required.</li>
+      <li>ESG DD: Scope 1&ndash;3 GHG emissions and CSRD double-materiality (Directive (EU) 2022/2464, ESRS); supply-chain human-rights diligence under German LkSG, EU CS3D (Directive (EU) 2024/1760) and UK Modern Slavery Act 2015 s.54; for PE sponsors, fund-level SFDR Article 8/9 and PAI reporting. SPA response: ESG-specific reps, specific indemnities for known issues, escrow because W&amp;I carriers exclude known ESG findings.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="03-presigning-documents.html" class="prev">Pre-Signing Documents</a>
+    <a href="05-valuation.html" class="next">Valuation &amp; Deal Economics</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

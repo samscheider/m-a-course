@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 16 — Governing Law &amp; Dispute Resolution · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="16">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 16</div>
+    <h1>Governing Law &amp; Dispute Resolution</h1>
+    <p class="subtitle">Choosing the substantive law, choosing the forum, the seat-versus-venue distinction, the New York Convention, and the multi-tier clause that has to be drafted to be enforceable.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Distinguish between the <strong>governing law</strong> of a contract (which substantive law applies to the contract) and <strong>jurisdiction</strong> / <strong>dispute resolution</strong> (where and by whom disputes will be heard).</li>
+      <li>Identify the most common choices of governing law for cross-border M&amp;A (English, New York, Delaware) and explain why.</li>
+      <li>Compare court litigation and arbitration on the dimensions that matter to M&amp;A: confidentiality, expertise, speed, cost, enforceability, appeal.</li>
+      <li>Identify the major international arbitration institutions (International Chamber of Commerce / ICC, London Court of International Arbitration / LCIA, Singapore International Arbitration Centre / SIAC, Hong Kong International Arbitration Centre / HKIAC, Stockholm Chamber of Commerce / SCC) and the typical seat associated with each.</li>
+      <li>Distinguish the <span class="term" data-term="arbitration-seat">seat of arbitration</span> (legal home, governing the procedural law and supervisory courts) from the <span class="term" data-term="arbitration-venue">venue</span> (physical hearing location).</li>
+      <li>Summarise the <span class="term" data-term="new-york-convention">New York Convention 1958</span> framework for enforcing foreign arbitral awards and the limited grounds for refusal under Article V.</li>
+      <li>Explain the enforceability of <span class="term" data-term="multi-tier-clause">multi-tier dispute resolution clauses</span> (mediate-then-arbitrate) under English law (<em><span class="term" data-term="walford-v-miles">Walford v Miles</span></em> vs. <em><span class="term" data-term="cable-wireless-v-ibm">Cable &amp; Wireless v IBM</span></em>).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The governing-law and dispute-resolution clauses are typically among the very last provisions a junior associate sees being negotiated — and that lateness is often a mistake. These clauses determine which substantive law decides every other clause in the SPA, where a fight will be conducted, and how an eventual judgment or award will be collected. A poorly drafted dispute clause can convert a ten-million-dollar warranty claim into a multi-jurisdictional litigation nightmare, with the parties spending more on procedural fights about <em>where</em> to argue than on the <em>substance</em> of the underlying claim. For cross-border M&amp;A specifically, the choice between (i) English courts, (ii) New York courts, (iii) International Chamber of Commerce (ICC) arbitration in Paris, and (iv) London Court of International Arbitration (LCIA) arbitration in London is one of a small number of choices a senior partner will personally negotiate. Knowing the trade-offs allows a non-lawyer to follow that conversation.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior arbitration / litigation partner drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Expedited threshold"</strong> — the monetary cut-off below which an institution's expedited procedure (single arbitrator, accelerated timetable, capped fees) automatically applies absent opt-out: ICC USD 3 million (default; raised from USD 2 million in 2017), SIAC SGD 6 million, HKIAC HKD 25 million; LCIA has no monetary threshold but provides expedited tribunal formation under Article 9.</li>
+      <li><strong>"Joinder / consolidation"</strong> — joinder adds a third party to an existing arbitration; consolidation merges two arbitrations into one. ICC Articles 7–10 and LCIA Articles 22.1(viii)–(x) are the two regimes most often compared.</li>
+      <li><strong>"Emergency arbitrator timeline"</strong> — institutional rules permit appointment of an emergency arbitrator before the main tribunal is constituted: ICC (since 2012), LCIA (14-day formation under Article 9B), SIAC (15-day formation), HKIAC (similar urgency timetable).</li>
+      <li><strong>"Bifurcation"</strong> — splitting the arbitration into separate phases for jurisdiction, liability and quantum; significant strategic and cost-allocation consequences.</li>
+      <li><strong>"Pathological clause"</strong> — term of art for botched dispute clauses (e.g., "ICDR rules with seat in Paris", or "London arbitration" with no further specification) that lead to jurisdictional fights before the merits.</li>
+      <li><strong>"Asymmetric jurisdiction clause"</strong> — one party can sue in any court / arbitrate at choice; the counterparty is restricted to a single forum. English courts uphold them; the French Cour de cassation (<em>Rothschild</em>, 26 September 2012) has struck them down.</li>
+      <li><strong>"Anti-suit injunction"</strong> — a court order restraining a party from commencing or continuing proceedings in another forum in breach of an arbitration agreement; English courts grant them readily under section 37 Senior Courts Act 1981 (post-Brexit they are now also available against EU member-state proceedings).</li>
+      <li><strong>"Article V challenge"</strong> — an attempt to resist enforcement of a New York Convention award on one of the seven narrow grounds in Article V.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 09 (a buyer walking on a MAC needs immediate interim relief — the dispute clause's interim-relief carve-out determines whether they can run to court the night before closing); Module 11 (price-adjustment and earn-out disputes typically run on a parallel <em>expert-determination</em> track, not arbitration); Modules 12–13 (governing law drives sandbagging defaults, the warranty-vs-misrepresentation distinction, and the meaning of "Loss"); Module 14 (W&amp;I policies typically embed their own arbitration — usually LCIA London — and grant the insurer step-in rights over the SPA dispute); Module 15 (SHA, TSA, and escrow agreements often have <em>different</em> dispute clauses from the SPA — inconsistency creates parallel proceedings).</li>
+      <li><strong>Forwards:</strong> Module 17 (post-closing claims are where the dispute clause is actually invoked); Module 18 (public-deal litigation runs through Delaware Chancery / English Commercial Court rather than private arbitration, because shareholder rights cannot be arbitrated against absent consent).</li>
+      <li><strong>Domino effect:</strong> Change governing law (English → Delaware) and you must revisit sandbagging, anti-reliance, "best efforts" gradations, limitation periods, the misrep / warranty distinction. Change forum (English court → LCIA) and you lose binding warranty precedent but gain confidentiality. Switch ICC → LCIA and the cost-allocation default and confidentiality default flip. Add a mediation precondition and you must explicitly preserve interim relief or the buyer cannot run to court for an MAC injunction.</li>
+    </ul>
+  </aside>
+
+  <h2>Governing law clause</h2>
+
+  <p>The <span class="term" data-term="governing-law-clause">governing law clause</span> selects the substantive law — the body of law determining the parties' rights and duties (breach standards, damages, limitation periods, contract interpretation, rescission).</p>
+
+  <p>A typical clause: <em>"This Agreement and any non-contractual obligations arising out of or in connection with it shall be governed by the laws of England and Wales."</em> The "non-contractual obligations" wording captures misrepresentation and other tort-flavoured claims that might otherwise fall under a different law (for example, the place where the misrepresentation occurred).</p>
+
+  <h3>Choice-of-law rules</h3>
+
+  <div class="juris-grid">
+    <aside class="juris eu"><h5>EU</h5><p><span class="term" data-term="rome-i">Rome I Regulation</span> (Regulation (EC) No 593/2008) — party autonomy is the starting point (Article 3); limits are mandatory provisions of a country with which all elements are connected (Article 3(3)), overriding mandatory provisions of the forum (Article 9), and forum public policy (Article 21). <span class="term" data-term="rome-ii">Rome II</span> (Regulation (EC) No 864/2007) governs non-contractual obligations.</p></aside>
+    <aside class="juris uk"><h5>UK</h5><p>Post-Brexit, the UK retained Rome I and Rome II as domestic law. Following the Retained EU Law (Revocation and Reform) Act 2023, with effect from 1 January 2024 these are now formally referred to as <strong>Assimilated Rome I</strong> and <strong>Assimilated Rome II</strong> ("retained EU law" was re-labelled "assimilated law"). Substantive choice-of-law analysis is essentially unchanged, but UK senior courts can now depart from pre-Brexit CJEU decisions on assimilated law more readily, and post-Brexit CJEU decisions are not binding.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>Restatement (Second) of Conflict of Laws §187 — choice generally enforced if the chosen state has a substantial relationship or a reasonable basis. Two key statutory exceptions: <span class="term" data-term="nygol-5-1401">NYGOL §5-1401</span> (New York choice upheld for transactions of $250,000+ even without substantial relationship); <span class="term" data-term="delaware-choice-of-law">6 Del. C. § 2708</span> (Delaware Code Title 6, Commerce and Trade — not in the DGCL — conclusively presumes that Delaware choice has a "significant material and reasonable relationship" with Delaware whether or not other relationships exist).</p></aside>
+  </div>
+
+  <p><strong>Mandatory rules</strong> override choice. Real estate is governed by <em>lex situs</em> (Latin: "law of the place where the thing is"); local employment protections apply at the place of work; tax follows the relevant authority's jurisdiction; insolvency follows the place of proceeding.</p>
+
+  <h3>Most common choices for cross-border M&amp;A</h3>
+
+  <p><strong>English law</strong> dominates cross-border M&amp;A involving any European, Middle Eastern, African, or Commonwealth element. Reasons: substantive predictability (centuries of commercial case law); pro-business interpretation (freedom of contract; reluctance to imply terms); English language; no civil jury; compensatory-only damages (no punitive damages outside narrow tort categories).</p>
+
+  <p>Brexit did not change English substantive contract law. What changed is judgment enforcement — the UK is no longer party to the Brussels Recast Regulation (Regulation (EU) 1215/2012), and the UK's Lugano Convention application has been <em>de facto</em> rejected (the EU Commission's formal opinion of 4 May 2021 advised it could not consent; Switzerland confirmed on 1 July 2021; the UK application remains technically pending but is not progressing).</p>
+
+  <p><strong>Hague 2019 — the post-Brexit fix.</strong> The UK ratified the <strong>Hague Convention on the Recognition and Enforcement of Foreign Judgments in Civil or Commercial Matters of 2 July 2019</strong> on 27 June 2024, and the Convention <strong>entered into force for the UK on 1 July 2025</strong>. UK judgments in proceedings issued on or after that date are now enforceable in the EU (excluding Denmark) and in other contracting states under Hague 2019 — substantially closing the post-Brexit enforcement gap. Pre-1 July 2025 proceedings remain under each member state's domestic regime. The earlier <strong>Hague 2005 Convention on Choice of Court Agreements</strong> (in force in EU and UK since 1 January 2021 for exclusive choice-of-court clauses) covers a narrower category and remains relevant where the parties have an exclusive UK or EU jurisdiction clause.</p>
+
+  <p>Arbitration enforcement under the New York Convention is unaffected by Brexit. The shift toward arbitration in cross-border English-law deals during 2020–2024 was partly driven by the enforcement uncertainty that Hague 2019 has now begun to resolve.</p>
+
+  <p><strong>New York law</strong> is the leading US choice for international transactions: NYGOL §5-1401 upholds the choice; the New York Commercial Division is highly experienced; default forum for international finance (loan agreements, International Swaps and Derivatives Association (ISDA) Master Agreement, bond indentures); major arbitration centre (American Arbitration Association — International Centre for Dispute Resolution (AAA-ICDR)).</p>
+
+  <p><strong>Delaware law</strong> governs transactions involving Delaware-incorporated targets: the "internal affairs doctrine" gives the Delaware General Corporation Law (DGCL) preeminence over the corporation's internal governance; the Court of Chancery is specialised, fast, and expert; <span class="term" data-term="delaware-choice-of-law">6 Del. C. § 2708</span> (Delaware Code Title 6, Commerce and Trade — not in the DGCL) enforces a contractual choice of Delaware law in any contract, agreement or other undertaking, conclusively presuming a significant material and reasonable relationship with Delaware.</p>
+
+  <p><strong>Other common choices.</strong> Singapore (Asia-related); Hong Kong; French law (francophone); German law (DACH-region — Germany / Austria / Switzerland); Swiss law (some financial transactions).</p>
+
+  <aside class="lever">
+    <h5>Negotiation lever — choice of law</h5>
+    <div class="row">
+      <div><strong>Each side wants:</strong> the law its counsel can advise on confidently.</div>
+      <div><strong>Compromise:</strong> "neutral" law for genuinely cross-border deals — English law is the most common European-MENA-Asian compromise; New York for US-Asian or US-Latin American deals.</div>
+    </div>
+  </aside>
+
+  <h2>Jurisdiction vs. arbitration — the first-order binary choice</h2>
+
+  <p><strong>Court litigation pros:</strong> predictable procedural rules; full appeal rights; lower out-of-pocket cost (no arbitrator/institutional fees); robust interim relief; broad discovery (especially US). <strong>Cons:</strong> slow (major commercial disputes can take 2–5 years to first instance, plus appeals); public (confidential information becomes record); judges may not be commercial specialists outside specialised courts; cross-border enforcement is variable; US jury trial risk.</p>
+
+  <p><strong>Arbitration pros:</strong> confidential; expert arbitrators chosen by parties; final and binding (limited appeal); enforceable in 172 New York Convention states; procedural flexibility; neutral seat. <strong>Cons:</strong> expensive (institutional + arbitrator + counsel fees easily $5–20m for substantial cases); no precedent; limited discovery; limited appeal even for legal error; cannot bind non-parties; enforcement still requires court application where assets are located.</p>
+
+  <p><strong>Cross-border M&amp;A</strong> overwhelmingly uses arbitration: confidentiality; neutrality; reliable New York Convention enforcement; cultural acceptability across legal systems.</p>
+
+  <p><strong>Domestic M&amp;A</strong> often uses court jurisdiction: Delaware Chancery for Delaware-corporation deals; New York Commercial Division; English Commercial Court (Business and Property Courts); German regional courts (with English-language chambers in Hamburg, Frankfurt, Stuttgart); Netherlands Commercial Court.</p>
+
+  <h2>Major arbitration institutions</h2>
+
+  <ul>
+    <li><strong><span class="term" data-term="icc-arbitration">International Chamber of Commerce (ICC)</span></strong> — most commonly Paris in practice, but the ICC Rules 2021 (Article 18(1)) leave the seat to the parties' agreement; failing such agreement, the ICC Court fixes the seat. There is no truly automatic default. Cross-border cases involving European parties; truly international in scope. ICC registered <strong>841 new cases in 2024</strong> (USD 102bn new-case value; USD 354bn total caseload value).</li>
+    <li><strong><span class="term" data-term="lcia-arbitration">London Court of International Arbitration (LCIA)</span></strong> — London. English-law contracts; UK / Commonwealth / Middle East deals. LCIA registered <strong>362 referrals in 2024</strong> (318 under the LCIA Rules) — roughly a 2.6:1 ICC:LCIA ratio. Confidentiality is the LCIA Rules' default (Article 30 of the 2020 Rules); ICC Rules do not impose general confidentiality.</li>
+    <li><strong><span class="term" data-term="siac-arbitration">Singapore International Arbitration Centre (SIAC)</span></strong> — Singapore. Asia-Pacific deals; common for Indian, Chinese, Southeast Asian parties.</li>
+    <li><strong><span class="term" data-term="hkiac-arbitration">Hong Kong International Arbitration Centre (HKIAC)</span></strong> — Hong Kong. Greater China deals; popular alternative to SIAC.</li>
+    <li><strong>American Arbitration Association — International Centre for Dispute Resolution (AAA-ICDR)</strong> — New York or Miami. US-international deals; less common outside US-related transactions.</li>
+    <li><strong>Stockholm Chamber of Commerce (SCC)</strong> — Stockholm. Historically common for Eastern European and Russia-related deals; Eurasian arbitration.</li>
+    <li><strong>Swiss Arbitration Centre</strong> (formerly Swiss Chambers' Arbitration Institution) — Geneva, Zurich, Basel, Lugano. Swiss-law contracts; commodities; pharma.</li>
+    <li><strong>Permanent Court of Arbitration (PCA)</strong> — The Hague. Inter-state and investor-state; some commercial work.</li>
+    <li><strong>Dubai International Arbitration Centre (DIAC)</strong> — Dubai. Middle East and Gulf-region deals.</li>
+    <li><strong>Vienna International Arbitral Centre (VIAC)</strong> — Vienna. Central and Eastern European deals.</li>
+  </ul>
+
+  <h3>Institutional comparison (the table a partner mentally consults)</h3>
+
+  <table class="comparison-table" style="width:100%;border-collapse:collapse;margin:14px 0;font-size:0.95rem;">
+    <thead>
+      <tr style="background:#f0ece4;">
+        <th style="text-align:left;padding:8px;border:1px solid #d4cfc4;">Feature</th>
+        <th style="text-align:left;padding:8px;border:1px solid #d4cfc4;">ICC</th>
+        <th style="text-align:left;padding:8px;border:1px solid #d4cfc4;">LCIA</th>
+        <th style="text-align:left;padding:8px;border:1px solid #d4cfc4;">SIAC</th>
+        <th style="text-align:left;padding:8px;border:1px solid #d4cfc4;">HKIAC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>2024 caseload</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">841 new cases</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">362 referrals (318 under LCIA Rules)</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">~625 cases (recent years)</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">~503 arbitrations (recent years)</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>Confidentiality default</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Not imposed; parties must opt in</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Imposed by Article 30 (2020 Rules)</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Imposed by Rule 39</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Imposed by Article 45 (2024 Rules)</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>Emergency arbitrator timeline</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Appointment within 2 days; order within 15 days (since 2012)</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">14-day formation under Article 9B (since 2014)</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">15-day formation; strongest record on speed</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Similar urgency timetable; 2019 PRC arrangement gives statutory pre-award interim relief in Mainland China</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>Expedited threshold</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">USD 3 million default (raised from USD 2m in 2017); opt-out possible</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">No monetary threshold; expedited tribunal formation under Article 9</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">SGD 6 million</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">HKD 25 million</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>Consolidation / joinder</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Articles 7–10; broad consolidation regime</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Article 22.1(viii)–(x); narrower, requires party consent or compatible agreements</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Rules 7–8</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Articles 27–29</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;border:1px solid #d4cfc4;"><strong>Cost allocation default</strong></td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Tribunal discretion; loser pays norm in cross-border cases</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Article 28 — tribunal discretion; security for costs available under Article 25.2</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Tribunal discretion; loser pays norm</td>
+        <td style="padding:6px;border:1px solid #d4cfc4;">Tribunal discretion</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Note on AAA-ICDR.</em> The "American rule" (each party bears its own costs) is the default in <strong>domestic AAA</strong> arbitrations; ICDR International Dispute Resolution Procedures Article 34 actually grants the tribunal discretion on cost allocation, and cost-shifting is common in international ICDR cases.</p>
+
+  <h2>Seat vs. venue</h2>
+
+  <p>The <strong>Seat</strong> is the legal home of the arbitration: it determines the procedural law (<em><span class="term" data-term="lex-arbitri">lex arbitri</span></em> — Latin: "law of the arbitration") and which national courts have supervisory jurisdiction (compelling evidence, jurisdictional challenges, set-aside / annulment). The Seat is a legal concept, not a physical place.</p>
+
+  <p>The <strong>Venue (or Hearing Location)</strong> is the physical place where hearings happen. It can differ from the Seat. Example: arbitration seated in London (English Arbitration Act 1996 governs procedure; English courts supervise) with hearings in Singapore for witness convenience.</p>
+
+  <p><strong>Drafting:</strong> always explicit — <em>"The seat of the arbitration shall be London, England. Hearings may be conducted in any place agreed by the parties."</em></p>
+
+  <h2>Number of arbitrators</h2>
+
+  <ul>
+    <li><strong>Three</strong> for substantial M&amp;A disputes (claim values above approximately $10–25m): each party appoints one; the two party-appointees jointly choose the chair (or the institution appoints).</li>
+    <li><strong>Sole</strong> for smaller disputes.</li>
+    <li><strong>Five</strong> is rare in commercial M&amp;A.</li>
+  </ul>
+
+  <h2>Language</h2>
+
+  <p>Default English for cross-border M&amp;A involving English-speaking parties. A useful drafting feature (highlighted in the source deck): explicitly permitting Italian, German, French, or other original-language documents without translation — saves significant cost and delay:</p>
+
+  <blockquote><em>"The language of the arbitration shall be English. Documents originally created in Italian, German, or French may be submitted in their original language without translation, provided that an English summary is provided upon tribunal request."</em></blockquote>
+
+  <h2>Enforcement under the New York Convention</h2>
+
+  <p>The Convention on the Recognition and Enforcement of Foreign Arbitral Awards (the "New York Convention" of 1958) is the cornerstone treaty for international arbitration. As of 2024–2025, it has 172 contracting states.</p>
+
+  <p>Under Article III, each contracting state shall "recognise arbitral awards as binding and enforce them in accordance with the rules of procedure of the territory where the award is relied upon."</p>
+
+  <p>Under Article V, recognition or enforcement may be refused only on narrow grounds, at the request of the party against whom enforcement is sought:</p>
+
+  <ol>
+    <li><strong>Incapacity</strong> of the parties or invalidity of the arbitration agreement.</li>
+    <li><strong>Lack of proper notice</strong> to the party against whom the award is invoked, or that party was otherwise unable to present its case (due process failure).</li>
+    <li><strong>Award outside the scope</strong> of the submission to arbitration (excess of authority).</li>
+    <li><strong>Composition or procedure</strong> of the arbitral authority not in accordance with the parties' agreement or, failing such agreement, the law of the country where arbitration took place.</li>
+    <li><strong>Award not yet binding</strong> or has been set aside by a competent authority of the country in which it was made.</li>
+    <li><strong>Subject matter not capable of arbitration</strong> under the law of the enforcing state.</li>
+    <li><strong>Public policy</strong> of the enforcing state.</li>
+  </ol>
+
+  <p>These grounds are narrowly construed in most contracting states. Practical refusal of enforcement of an arbitral award is rare in major M&amp;A jurisdictions (UK, US, Germany, France, Singapore, Hong Kong).</p>
+
+  <p>By contrast, enforcement of a foreign court judgment depends on bilateral treaties (the Brussels Recast Regulation in the EU; the Hague Choice of Court Convention 2005 — in force in EU and UK), or on each country's domestic rules of recognition. The post-Brexit UK problem (UK judgments being enforced in EU member states) is a perfect illustration of why parties prefer arbitration for cross-border deals.</p>
+
+  <h2>Multi-tier dispute resolution clauses (mediation as a precondition)</h2>
+
+  <p>Many M&amp;A contracts contain "escalation" clauses requiring the parties to attempt informal resolution before formal proceedings: "the parties shall first attempt to resolve any dispute through negotiation between senior executives; if not resolved within 30 days, through mediation under [Centre for Effective Dispute Resolution (CEDR) / ICC Mediation Rules]; only then through arbitration."</p>
+
+  <p>The enforceability of these clauses is a developed area:</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK — bare good-faith clauses are unenforceable</h5><p>The starting point is hostile to bare agreements to negotiate. <em>Walford v Miles</em> [1992] 2 AC 128 (HL) — Lord Ackner held that "the concept of a duty to carry on negotiations in good faith is inherently repugnant to the adversarial position of the parties when involved in negotiations." His Lordship continued: "a duty to negotiate in good faith is as unworkable in practice as it is inherently inconsistent with the position of a negotiating party." Bare lock-in or "good faith negotiation" clauses are typically unenforceable for uncertainty.</p></aside>
+    <aside class="juris uk"><h5>UK — sufficiently certain procedure is enforceable</h5><p>However, the position has softened where the procedure is sufficiently certain. <em>Cable &amp; Wireless plc v IBM United Kingdom Ltd</em> [2002] EWHC 2059 (Comm) — Colman J held that an Alternative Dispute Resolution (ADR) clause requiring the parties to engage in mediation under specified institutional rules (CEDR) was enforceable. The court stayed the litigation pending mediation. The key was that the clause specified a particular procedure with a defined process, not a vague duty to negotiate. Subsequent cases (<em>Sulamérica Cia Nacional de Seguros SA v Enesa Engenharia SA</em> [2012] EWCA Civ 638; <em>Emirates Trading Agency LLC v Prime Mineral Exports Private Limited</em> [2014] EWHC 2104 (Comm)) refined the doctrine: an obligation to engage in "friendly discussions" for a defined period before formal proceedings can be enforceable if the procedure is sufficiently certain.</p></aside>
+    <aside class="juris us"><h5>US</h5><p>US courts generally enforce multi-tier dispute resolution clauses, including obligations to mediate before arbitrating or litigating. Failure to comply can result in dismissal or stay of premature proceedings. Some courts treat compliance with the multi-tier clause as a condition precedent to filing.</p></aside>
+  </div>
+
+  <p><strong>Drafting note.</strong> To be enforceable in England, draft the multi-tier clause with:</p>
+  <ul>
+    <li>A specific mediation procedure (institutional rules — CEDR, ICC Mediation Rules, JAMS International Mediation Rules).</li>
+    <li>A defined time period (typically 30–60 days) after which arbitration may commence.</li>
+    <li>A provision permitting either party to skip mediation and seek interim relief in case of urgency.</li>
+    <li>Express triggering of arbitration (or litigation) at the end of the mediation window without further consent of either party.</li>
+  </ul>
+
+  <h2>Expert determination — the parallel track for accounting disputes</h2>
+
+  <p>SPAs typically run two parallel dispute mechanisms: (i) <strong>expert determination</strong> for closing-accounts and earn-out accounting disputes, where a Big Four firm or specialist accountant decides as <em>expert, not arbitrator</em>; and (ii) arbitration or court litigation for everything else (warranty breaches, indemnity claims, covenant breaches). The boundary between the two is heavily negotiated.</p>
+
+  <p><strong>Why the distinction matters.</strong> An expert determination is final and binding subject only to "manifest error" or fraud — there is no appeal on the merits, no procedural review, and the expert is not bound by procedural fairness rules in the way an arbitrator would be. An arbitrator decides as a quasi-judicial decision-maker following procedural rules; an arbitral award can be challenged on the narrow Article V / set-aside grounds. The two regimes attract very different remedies, timelines, and cost profiles.</p>
+
+  <p><strong><em><span class="term" data-term="barclays-v-nylon-capital">Barclays Bank plc v Nylon Capital LLP</span></em> [2011] EWCA Civ 826</strong> is the leading English authority on the boundary. The Court of Appeal (per Lord Neuberger MR) held that whether a decision-maker is acting as expert or as arbitrator depends on whether the parties have submitted an actual <em>dispute</em> for resolution (arbitration) or are asking for a determination on a defined issue (expert determination). The court will look at the substance of the appointment, the nature of the question, and the procedural framework. Mis-classification has serious consequences: an expert decision badly drafted as a quasi-arbitral award may be set aside; an arbitral award badly drafted as an expert determination may be unenforceable under the New York Convention.</p>
+
+  <p><strong>Practical drafting:</strong> always specify whether the appointee acts as expert or arbitrator; define <em>terms of reference</em> tightly (so the expert cannot stray into matters reserved for arbitration); provide for the expert's role on cost allocation; and consider <span class="term" data-term="baseball-arbitration">baseball arbitration</span> (each side submits a final number; the expert picks one or the other, no compromise) as a forcing alternative.</p>
+
+  <p>This is the parallel track for the disputes covered in Module 11 (closing accounts, locked-box leakage, earn-out metric calculation). Module 17 covers the post-closing operationalisation.</p>
+
+  <h2>Carve-outs to arbitration</h2>
+
+  <p>Even in deals with broad arbitration clauses, certain matters typically carve out to court:</p>
+
+  <ol>
+    <li><strong>Interim and emergency relief.</strong> A party can seek urgent injunctive relief (a freezing order; a preservation order; a confidentiality injunction) from a court without losing the right to arbitrate. Most institutional rules (ICC, LCIA, SIAC) also provide for <span class="term" data-term="emergency-arbitrator">emergency arbitrators</span> to issue interim relief before the main panel is constituted, but court relief is often faster and more powerful.</li>
+    <li><strong>Intellectual property enforcement.</strong> Where <em><span class="term" data-term="in-rem">in rem</span></em> (Latin: "against the thing") rights need to be enforced — for example, an injunction against a patent infringer in a particular jurisdiction — the court of issuance is the only forum that can grant the relief. Patent invalidity actions usually must go to the patent office or specialised IP court.</li>
+    <li><strong>Regulatory enforcement.</strong> Statutory regulators (competition authorities, financial regulators, tax authorities) do not recognise private arbitration. Disputes about the application of a regulatory rule must go to the regulator and (if appealed) to court.</li>
+    <li><strong>Insolvency proceedings.</strong> Insolvency procedures are public and statutory; private arbitration cannot oust the jurisdiction of the insolvency court.</li>
+    <li><strong>Specific performance / injunctive relief in some civil-law jurisdictions.</strong> Some jurisdictions reserve specific equitable remedies to courts.</li>
+  </ol>
+
+  <p>A typical carve-out clause:</p>
+  <blockquote><em>"Notwithstanding the foregoing, either party may apply to any court of competent jurisdiction for interim or conservatory relief, including injunctive relief, without thereby waiving its rights to arbitrate any dispute."</em></blockquote>
+
+  <h2>Choice of court alternatives</h2>
+
+  <p>For parties who prefer court litigation over arbitration:</p>
+
+  <ul>
+    <li><strong>English Commercial Court</strong> (part of the Business and Property Courts of England and Wales): popular for any English-law commercial contract; specialised judges; strong precedent base.</li>
+    <li><strong>Delaware Chancery Court</strong>: equity court (no jury); for Delaware-corporation matters and any DGCL-specific issues. Fast, technical, expert. <em>Akorn v. Fresenius</em> and the entire Material Adverse Change (MAC) jurisprudence comes from this court.</li>
+    <li><strong>New York Supreme Court Commercial Division</strong>: for New York-law commercial matters.</li>
+    <li><strong>Hamburg Commercial Chamber</strong> and other German commercial chambers: Germany has recently introduced English-language commercial litigation in some chambers.</li>
+    <li><strong>Netherlands Commercial Court (NCC)</strong>: English-language commercial litigation in the Netherlands; opened 2019.</li>
+    <li><strong>Singapore International Commercial Court (SICC)</strong>: English-language; international panel of judges.</li>
+    <li><strong>Paris Commercial Chamber International</strong>: French commercial court with international panel.</li>
+  </ul>
+
+  <p>These specialised commercial courts offer some of arbitration's advantages (commercial expertise, specialist judges, faster docket) while retaining court characteristics (precedent, full appeals, public proceedings).</p>
+
+  <h2>From the source deck — example arbitration clause</h2>
+
+  <aside class="source-deck">
+    <h5>Source deck — Clause 10 (Arbitration), in spirit</h5>
+    <blockquote>
+      <p><strong>10.1</strong> All disputes arising out of or in connection with this Agreement shall be finally settled under the Rules of Arbitration of the International Chamber of Commerce by one or more arbitrators appointed in accordance with the said Rules.</p>
+      <p><strong>10.2</strong> The seat of the arbitration shall be Paris, France.</p>
+      <p><strong>10.3</strong> The language of the arbitration shall be English. Documents originally created in Italian, French, or German may be submitted in their original language.</p>
+    </blockquote>
+    <div class="deck-explain">
+      <p><strong>What an M&amp;A lawyer would negotiate around this baseline:</strong></p>
+      <ul>
+        <li>Whether to use ICC, LCIA, or SIAC depending on the parties and asset locations.</li>
+        <li>Number of arbitrators (one or three).</li>
+        <li>Method of selection (party-appointment vs. institutional appointment).</li>
+        <li>Seat and venue separately.</li>
+        <li>Language and document admissibility.</li>
+        <li>Whether to add a multi-tier (mediation first) clause.</li>
+        <li>Carve-outs for interim relief.</li>
+        <li>Confidentiality express provision (LCIA Rules have it; ICC Rules do not, by default).</li>
+        <li>Cost allocation (loser-pays norm in international ICC / LCIA / SIAC / HKIAC practice; ICDR Article 34 grants tribunal discretion — cost-shifting is common in international ICDR cases, in contrast to the strict "American rule" of domestic AAA arbitrations).</li>
+      </ul>
+    </div>
+  </aside>
+
+  <aside class="lever">
+    <h5>Negotiation lever — institutional choice for arbitration</h5>
+    <div class="row">
+      <div><strong>European seller / European buyer:</strong> ICC arbitration in Paris is the default; LCIA in London is the alternative for English-law contracts.</div>
+      <div><strong>US buyer / European seller:</strong> ICC in Paris or LCIA in London is the typical compromise; AAA-ICDR for US-anchored deals.</div>
+      <div><strong>Asian seller / non-Asian buyer:</strong> SIAC in Singapore is the rising default; HKIAC in Hong Kong for Greater China deals.</div>
+      <div><strong>Russia / former Soviet Union:</strong> SCC in Stockholm historically; current geopolitics complicating.</div>
+      <div><strong>Middle East:</strong> DIAC, ICC, or LCIA depending on counterparty.</div>
+    </div>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls in dispute resolution clauses</h5>
+    <ol>
+      <li><strong>"London arbitration" with no further specification.</strong> Is the seat London? The venue London? Which institutional rules? Which language? Result: jurisdictional fights before substantive arbitration begins.</li>
+      <li><strong>Inconsistent venue and seat language.</strong> The clause says "Geneva, Switzerland" without specifying which is seat and which is venue. Or: "arbitration shall be held in Singapore" — held = venue or seat?</li>
+      <li><strong>Choosing institutional rules but a seat outside that institution's typical operations.</strong> ICC is highly flexible (any seat anywhere), but some smaller institutions assume their home seat.</li>
+      <li><strong>Failing to address consolidation and joinder.</strong> In multi-contract or multi-party situations, lack of consolidation provisions creates parallel arbitrations.</li>
+      <li><strong>Asymmetric jurisdiction clauses</strong> (one party can sue in any court; the other party can only arbitrate). These have been challenged in some EU jurisdictions (notably the French Cour de cassation in <em>Rothschild</em> and <em>ICH</em>) as one-sided and unenforceable; English courts uphold them generally.</li>
+      <li><strong>Forgetting interim-relief carve-out</strong> — leading to debates about whether court interim relief is even available.</li>
+      <li><strong>Hostile carve-outs to arbitration.</strong> Carving out specific issues (price-adjustment expert determination, IP issues, regulatory) without clearly delineating which forum gets which dispute creates jurisdictional turf wars.</li>
+      <li><strong>Forgetting confidentiality clause.</strong> ICC Rules do not impose general confidentiality; LCIA Rules do; arbitration is not automatically confidential. If confidentiality matters, draft it.</li>
+    </ol>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Governing law selects the substantive rules; jurisdiction / dispute resolution selects the forum. The two questions are independent and answered separately.</li>
+      <li>English law dominates cross-border M&amp;A; New York for US-international finance; Delaware for Delaware-incorporation deals. Post-Brexit, "Retained Rome I" is now formally "Assimilated Rome I" (REUL Act 2023, effective 1 January 2024).</li>
+      <li>Brexit broke Brussels-Recast judgment enforcement; the <strong>Hague 2019 Judgments Convention entered into force for the UK on 1 July 2025</strong> (UK ratified 27 June 2024), substantially closing the post-Brexit enforcement gap for proceedings issued on or after that date. UK Lugano application <em>de facto</em> rejected (EU Commission opinion, 4 May 2021).</li>
+      <li>Cross-border M&amp;A overwhelmingly chooses arbitration (confidentiality, neutrality, New York Convention enforcement); domestic deals often choose specialist courts (Delaware Chancery, English Commercial Court, NY Commercial Division).</li>
+      <li>Seat = legal home (procedural law, supervisory courts). Venue = physical hearing location. Always specify both.</li>
+      <li>The New York Convention 1958 (172+ contracting states as of 2024–25) makes arbitral awards reliably enforceable; Article V grounds for refusal are narrow.</li>
+      <li>2024 caseloads: ICC 841 (USD 102bn new-case value); LCIA 362 referrals (~2.6:1 ratio). Confidentiality default: LCIA / SIAC / HKIAC yes, ICC no.</li>
+      <li><em>Walford v Miles</em>: a bare "negotiate in good faith" clause is unenforceable. <em>Cable &amp; Wireless v IBM</em>: a multi-tier clause specifying institutional rules and a defined window is enforceable.</li>
+      <li>Expert determination (e.g., Closing Accounts) is a parallel dispute track — <em>Barclays Bank v Nylon Capital</em> [2011] EWCA Civ 826 — distinguished from arbitration; mis-classification has enforceability consequences.</li>
+      <li>Always carve out interim/emergency relief, and always specify whether a decision-maker acts as expert or as arbitrator.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="15-ancillary-documents.html" class="prev">Ancillary Transaction Documents</a>
+    <a href="17-post-closing.html" class="next">Post-Closing Matters &amp; Integration</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
