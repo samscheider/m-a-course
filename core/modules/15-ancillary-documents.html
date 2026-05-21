@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 15 — Ancillary Transaction Documents · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="15">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 15</div>
+    <h1>Ancillary Transaction Documents</h1>
+    <p class="subtitle">The Shareholders Agreement, Transition Services Agreement, escrow, tax deed, management contracts, and the rest of the closing-bible binder that travels with the SPA.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Identify the standard ancillary documents that travel with a Sale and Purchase Agreement (SPA) and explain why the SPA alone almost never closes a deal.</li>
+      <li>Explain the structural differences between a <span class="term" data-term="shareholders-agreement">Shareholders Agreement (SHA)</span> and <span class="term" data-term="articles-of-association">Articles of Association</span>, and identify when an SHA is needed (rollover equity, club deals, joint ventures).</li>
+      <li>Describe the purpose, pricing model, and expiry mechanics of a <span class="term" data-term="transition-services-agreement">Transition Services Agreement (TSA)</span> in a carve-out deal.</li>
+      <li>Explain why English practice separates tax indemnification into a <span class="term" data-term="tax-deed">Tax Deed</span> (or Tax Covenant) and how that differs from US-style tax disclosure schedules attached to the SPA.</li>
+      <li>Distinguish a Disclosure Letter (UK) from Disclosure Schedules (US) in document architecture and legal effect.</li>
+      <li>Summarise the role of the funds-flow memorandum, officer's certificates, board minutes, and other "closing day" housekeeping documents.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The SPA is the headline contract — but on a typical mid-market private deal, the closing bible (the binder of executed documents released at completion) contains 30 to 80 separate signed documents. Missing one of them can trigger a closing failure, leave the buyer without title to a key asset, or leave the seller exposed to liabilities it thought it had transferred. An associate's first job on a private M&amp;A transaction is usually managing the "checklist" — the list of every ancillary document that must be drafted, negotiated, signed, and delivered. A non-lawyer working at a law firm needs to know what is on that checklist and why each item exists; otherwise it is impossible to track deal status meaningfully. Ancillary documents are also where the "real economics" of certain deals live: in private equity (PE) buyouts where management rolls over equity, the SHA — not the SPA — defines the ongoing relationship and the eventual exit waterfall.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Sweet equity"</strong> — the disproportionate slice of equity allocated to management (often via cheap shares or a separate class) so that on a successful exit, management capture a multiple of their cash investment that exceeds the sponsor's IRR.</li>
+      <li><strong>"Envy ratio"</strong> — the multiple of the management team's effective cost-per-share to the sponsor's effective cost-per-share; "envy of 4" means the sponsor pays four times more for the same economic share than management does.</li>
+      <li><strong>"Institutional strip"</strong> — the sponsor's combined holding of preferred / loan-note instruments and ordinary shares, structured so that the strip earns a hurdle return before sweet equity participates.</li>
+      <li><strong>"Ratchet"</strong> — a sliding mechanism that increases (or decreases) management's equity share at exit depending on whether the sponsor hits a defined IRR or money multiple; structurally close to a vesting clawback.</li>
+      <li><strong>"Leaver in / leaver out"</strong> — shorthand for whether departing management retain (in) or forfeit (out) some or all of their equity, with the price paid stepped by leaver category and tenure.</li>
+      <li><strong>"Garden leave"</strong> — paid suspension during the notice period; UK senior-executive substitute for a strict post-employment non-compete.</li>
+      <li><strong>"Step-up TSA pricing"</strong> — fees that escalate over time (e.g., 100% of cost months 1–6, 110% / 125% / 150% thereafter) to economically force the buyer to migrate off the seller's services.</li>
+      <li><strong>"MFN clause"</strong> — Most-Favoured-Nation: the buyer of the carved-out business gets the best terms the seller offers any other affiliate for equivalent services.</li>
+      <li><strong>"Exit assist"</strong> — covenant requiring the seller to cooperate (with data extracts, knowledge transfer, vendor introductions) to enable the buyer to leave the TSA on schedule.</li>
+      <li><strong>"Reverse TSA"</strong> — the divested target provides services <em>back</em> to the seller's retained business (common where the carve-out kept a key shared system).</li>
+      <li><strong>"Bring-down disclosure"</strong> — a supplemental disclosure delivered at completion for matters that arose during the gap period; whether it cures a warranty breach or merely flags it (sandbagging) is a live drafting fight.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 04 (DD finds the shared services that drive the TSA), Module 06 (deal structure dictates whether a Tax Deed or US-style tax indemnity is needed), Modules 12–13 (R&amp;Ws and the indemnity regime — the SHA/Tax Deed/escrow are the operational expressions of those allocations), Module 14 (W&amp;I sits over and around the escrow / cap / basket).</li>
+      <li><strong>Forwards:</strong> Module 16 (SHA arbitration forum often differs from the SPA's), Module 17 (TSA exit, leaver disputes, and bring-down claims all crystallise post-closing), Module 18 (the SHA's drag-along is the pre-built leverage for the next public takeout or trade sale).</li>
+      <li><strong>Domino effect:</strong> If you shrink the escrow, the buyer wants either a higher W&amp;I retention bridge from the seller, a tighter bring-down certificate, or a reduced cap — they are <em>one negotiated package</em>. If the TSA term lengthens, the case for closing-accounts (vs. locked-box) pricing strengthens because the cost base is unstable through completion. If management's leaver definition tightens, the sweet equity allocation usually has to widen to keep the package competitive.</li>
+    </ul>
+  </aside>
+
+  <h2>The ancillary-document checklist</h2>
+
+  <p>Most M&amp;A practitioners maintain a master closing checklist (the "completion agenda") itemising every document to be signed at, before, or shortly after closing. A representative private-deal checklist for a UK-style share-purchase transaction includes:</p>
+
+  <ol>
+    <li><strong>Sale and Purchase Agreement (SPA).</strong> The headline contract.</li>
+    <li><strong><span class="term" data-term="disclosure-letter">Disclosure Letter</span></strong> (UK) / <strong><span class="term" data-term="disclosure-schedules">Disclosure Schedules</span></strong> (US) — qualifies the warranties.</li>
+    <li><strong>Tax Deed / Tax Covenant</strong> (UK) — separate indemnification for pre-closing tax exposures.</li>
+    <li><strong>Shareholders Agreement (SHA)</strong> — if seller is rolling equity, in club/JV deals.</li>
+    <li><strong>Articles of Association</strong> (UK) / Charter and Bylaws (Delaware) — updated at completion.</li>
+    <li><strong>Transition Services Agreement (TSA)</strong> — for carve-outs.</li>
+    <li><strong><span class="term" data-term="escrow-agreement">Escrow Agreement</span></strong> — buyer, seller, and escrow agent.</li>
+    <li><strong>Service / Employment Agreements</strong> for key management — with lock-up, non-compete, non-solicit.</li>
+    <li><strong><span class="term" data-term="mip">Management Incentive Plan (MIP)</span> documents</strong> — option/Restricted Stock Unit (RSU) plans for PE deals.</li>
+    <li><strong>Intellectual Property (IP) Assignment Agreements</strong> — for IP not held by the target.</li>
+    <li><strong>Real Estate transfer documents</strong> — leases, freehold transfers, Land Registry / county recorder filings.</li>
+    <li><strong><span class="term" data-term="inter-company-loan">Inter-Company Loan</span> Settlement / Capitalisation Agreements</strong> — clearing intra-group balances.</li>
+    <li><strong>Trade Mark / Brand licences</strong> — when the seller's brand is licensed back during transition.</li>
+    <li><strong><span class="term" data-term="funds-flow-memorandum">Funds Flow Memorandum</span></strong> — closing-day payment instructions.</li>
+    <li><strong>Board minutes and shareholder resolutions</strong> of buyer, seller, and target.</li>
+    <li><strong><span class="term" data-term="officers-certificate">Officer's Certificates</span> / <span class="term" data-term="bring-down-certificate">Bring-Down Certificates</span></strong> (US) — confirming Representations and Warranties (R&amp;Ws) true and Conditions Precedent (CPs) satisfied.</li>
+    <li><strong>Director resignation letters</strong> with claim waivers.</li>
+    <li><strong>Powers of attorney (POAs)</strong> — for share-transfer mechanics in civil-law jurisdictions.</li>
+    <li><strong>Stock Transfer Forms</strong> (UK) / <strong>Share Certificates</strong> (US).</li>
+    <li><strong>Warranty and Indemnity (W&amp;I) insurance certificate of in-force coverage.</strong></li>
+    <li><strong>Lender consents and payoff letters</strong> — for debt being repaid at closing.</li>
+    <li><strong>Regulatory clearance evidence</strong> — merger control / Foreign Direct Investment (FDI) / sector clearances.</li>
+  </ol>
+
+  <p>The "closing bible" is assembled (now usually electronically) within roughly 30 days of closing as the canonical record of what was signed.</p>
+
+  <h2>Shareholders Agreement (SHA)</h2>
+
+  <p>A <strong>Shareholders Agreement</strong> is a contract between shareholders (and usually the company), governing the ongoing relationship after closing. It sits alongside the company's constitutional documents (Articles in the UK; Certificate of Incorporation and Bylaws in Delaware).</p>
+
+  <h3>When is an SHA needed in M&amp;A?</h3>
+
+  <ul>
+    <li><strong>PE deal with management rollover.</strong> Sponsor takes 70–80%; founder / Chief Executive Officer (CEO) retains 20–30% as "rolled equity."</li>
+    <li><strong>Consortium / club deal.</strong> Two or more buyers (e.g., two PE funds plus a sovereign wealth fund).</li>
+    <li><strong>Joint Venture (JV).</strong> Two trade companies contribute assets to a newly incorporated company ("newco").</li>
+    <li><strong>Family deals.</strong> Multiple family branches retain shares post-deal.</li>
+    <li><strong>Strategic minority investment.</strong> Minority equity investor takes 15–30% with information rights.</li>
+  </ul>
+
+  <h3>Core SHA topics</h3>
+
+  <ol>
+    <li><strong>Governance (board composition).</strong> Who appoints how many directors. PE sponsor typically appoints a majority; rolled-equity shareholder appoints one director.</li>
+    <li><strong>Reserved matters / consent rights.</strong> Decisions requiring super-majority or specific investor consent: changing auditors, debt above threshold, capital expenditure (CapEx) above threshold, M&amp;A, hiring/firing CEO, dividend policy, related-party transactions, share issuances, listing (Initial Public Offering — IPO).</li>
+    <li><strong>Share transfer restrictions.</strong>
+      <ul>
+        <li><strong><span class="term" data-term="pre-emption">Pre-emption rights</span>:</strong> existing shareholders have right of first refusal on shares being transferred.</li>
+        <li><strong><span class="term" data-term="drag-along">Drag-along rights</span>:</strong> majority (typically holding 50% or 75%) can compel minority to sell on the same terms — critical for PE exits because buyers want 100%.</li>
+        <li><strong><span class="term" data-term="tag-along">Tag-along rights</span>:</strong> minority can "tag" along when majority sells — protects minorities from being stranded with a new majority owner.</li>
+      </ul>
+    </li>
+    <li><strong>Pre-emption on share issuance.</strong> Right to participate pro rata in new issuances.</li>
+    <li><strong>Anti-dilution protection.</strong> Mechanisms include "broad-based weighted-average," "narrow-based weighted-average," and "full ratchet" (the most aggressive).</li>
+    <li><strong>Information rights.</strong> Monthly management accounts, annual audited accounts, quarterly board packs, budget, business plan.</li>
+    <li><strong>Exit provisions.</strong> Trigger events for forced sale (typically after 5–7 years for PE); IPO triggers — in the US, demand and piggyback registration rights are <em>contractual</em> mechanics for compelling or joining a registration statement filed under the §5 regime of the Securities Act of 1933, not rights "under" §5 itself; sponsor's drag-along. The SHA's drag-along is the buy-side leverage that enables the next round-trip exit (cross-references Module 18 on take-private and trade-sale dynamics).</li>
+    <li><strong>Leaver provisions</strong> (when management is a shareholder).
+      <ul>
+        <li><strong><span class="term" data-term="good-leaver">Good leaver</span>:</strong> death, disability, retirement, dismissal without cause. Typically receives Fair Market Value (FMV) for shares.</li>
+        <li><strong><span class="term" data-term="bad-leaver">Bad leaver</span>:</strong> resignation without good reason, dismissal for cause, breach of restrictive covenants. Typically receives lower of cost or FMV.</li>
+        <li><strong>Intermediate leaver:</strong> contested situations or longer-tenured leavers. Tiered treatment.</li>
+      </ul>
+    </li>
+    <li><strong>Restrictive covenants:</strong> non-compete, non-solicit, confidentiality.</li>
+    <li><strong>Deadlock resolution</strong> (50/50 JVs): escalation, mediation, <span class="term" data-term="russian-roulette">Russian roulette</span> / "shotgun" clauses (one party names a price, the other chooses to buy or sell), <span class="term" data-term="texas-shoot-out">Texas shoot-out</span> (sealed bids), Dutch auction, neutral expert, sale of company, or wind-up.</li>
+    <li><strong>Dividend policy.</strong> Often pegged to a formula (e.g., percentage of free cash flow).</li>
+  </ol>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>The Articles of Association are a constitutional document filed at Companies House and binding on the company under section 33 of the Companies Act 2006. The SHA is a private contract between shareholders. UK practitioners draft both in tandem because some provisions (share-transfer restrictions, pre-emption) need to be in both — in the SHA for contractual remedies, in the Articles to bind the company and any future shareholder.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>The Certificate of Incorporation (Charter) is filed with the Delaware Secretary of State and contains the broad framework (authorised shares, classes, basic governance). The Bylaws are internal rules. The Stockholders Agreement (US equivalent of an SHA) is a private contract. Special features of preferred stock (liquidation preferences, conversion rights, redemption) are typically embedded in the Charter (in a "Certificate of Designation"), not the Stockholders Agreement, because they affect classes of stock and need to be on file.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law systems use a mix of statutory company-law defaults and contractual shareholders' agreements. Continental practice often relies more heavily on the Articles (statuts in France, Satzung in Germany) for share-transfer restrictions, with a shorter side SHA for governance and information rights.</p></aside>
+  </div>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfall</h5>
+    <p>Putting a share-transfer restriction in only the SHA and not the Articles. The SHA binds only its signatories; new shareholders (and the company) are not bound unless they sign or the restriction is also in the Articles. Result: a transferee acquires shares free of the restriction the existing shareholders thought they had imposed.</p>
+  </aside>
+
+  <aside class="lever">
+    <h5>Negotiation lever — leaver provisions</h5>
+    <div class="row">
+      <div><strong>PE buyer wants:</strong> broad "bad leaver" definition (anything other than dismissal without cause is a bad leaver event); long vesting / cliff (4–5 years); cost-only repurchase price for bad leavers.</div>
+      <div><strong>Management seller wants:</strong> narrow bad leaver (only dismissal for gross misconduct or material breach); short vesting (3 years); FMV repurchase except in narrow bad-leaver case.</div>
+      <div><strong>Typical compromise:</strong> good leaver = death, disability, dismissal without cause, material breach of contract by employer; bad leaver = resignation without good reason, dismissal for cause; intermediate category for resignation-after-X-years; vesting over 4 years with 1-year cliff; FMV for good leaver, weighted price for intermediate leaver, cost for bad leaver.</div>
+    </div>
+  </aside>
+
+  <h3>PE rollover architecture — the institutional strip and sweet equity</h3>
+
+  <p>Modern PE deals do not just hand management ordinary shares; the equity is engineered into a layered <strong>institutional strip</strong> that determines who gets paid in what order on exit and how much the management team's economic share is amplified.</p>
+
+  <p><strong>The <span class="term" data-term="institutional-strip">institutional strip</span>.</strong> The sponsor's investment is typically split into two (or more) instruments that move together — a senior, fixed-return preferred instrument (often called <em>preference shares</em>, <em>loan notes</em>, or a <em>preferred equity certificate (PEC)</em>) plus a thin layer of ordinary shares ("the strip ratio"). The strip earns a fixed coupon (frequently 8–10% PIK) on the preferred and capital-appreciation only on the ordinary stub. Management invest <em>only</em> in the ordinary stub.</p>
+
+  <p><strong><span class="term" data-term="sweet-equity">Sweet equity</span>.</strong> Management's ordinary shares are the same class as the sponsor's ordinary stub but, because management did not subscribe for the preferred element, their cash investment-per-ordinary-share is much smaller. On exit, only after the strip's preferred has been repaid in full (with accrued return) does the residual value flow to ordinary shares — and at that point management's pro-rata ordinary holding captures a return that is dramatically higher than the cash it represents. That asymmetric uplift is "sweet equity."</p>
+
+  <p><strong><span class="term" data-term="envy-ratio">Envy ratio</span>.</strong> Defined as <em>sponsor cost per ordinary share ÷ management cost per ordinary share</em>. An envy ratio of 4× means the sponsor effectively paid four times what management paid to acquire the same upside-leveraged ordinary share. Envy ratios of 3–7× are typical in mid-market UK PE deals, with management bargaining for higher envy and sponsors resisting (because higher envy means more dilution of the sponsor's own ordinary stub).</p>
+
+  <p><strong>Hurdles and <span class="term" data-term="ratchet-vesting">ratchets</span>.</strong> Sponsors frequently insert a <em>hurdle</em> — sweet equity does not begin to participate until the sponsor's strip has hit a defined IRR (e.g., 12% IRR or 2.0× money multiple). Above the hurdle, a <em>ratchet</em> may further re-allocate equity from sponsor to management on a sliding scale (e.g., management's percentage steps up from 10% to 15% if the sponsor exceeds 25% IRR). Ratchets can be one-way (favouring management on outperformance) or two-way (clawing back on underperformance).</p>
+
+  <p><strong>Why leaver mechanics interact with sweet equity.</strong> If a manager leaves before exit, the <span class="term" data-term="leaver-in-leaver-out">leaver in / leaver out</span> provisions in the SHA determine: (i) whether their unvested sweet equity is forfeited; (ii) the price paid for vested shares (cost for bad leavers, FMV for good leavers); and (iii) whether they keep their share of the preferred / loan-note element of the strip. Bad-leaver mechanics that strip both the sweet-equity uplift <em>and</em> the loan-note return are heavily negotiated — sponsor wants the maximum forfeiture, management wants to keep at least the cost basis.</p>
+
+  <aside class="lever">
+    <h5>Negotiation lever — sweet equity / envy</h5>
+    <div class="row">
+      <div><strong>Sponsor wants:</strong> low envy (2–3×); high hurdle (15% IRR); aggressive bad-leaver clawback on both sweet equity and loan-note return; long vesting (5 years).</div>
+      <div><strong>Management wants:</strong> high envy (5–7×); low hurdle (8% IRR); narrow bad-leaver definition; preserve loan-note return on bad leaver.</div>
+      <div><strong>Typical compromise:</strong> envy 3–5×; hurdle around 8–12% IRR; sliding ratchet rewarding management for IRR above 20%; loan-note return preserved for any leaver category except bad-leaver-for-cause; 4-year vesting with 1-year cliff.</div>
+    </div>
+  </aside>
+
+  <h3>The Disclosure Letter at completion — bring-down mechanics</h3>
+
+  <p>UK practice frequently provides for a <strong>bring-down Disclosure Letter</strong> delivered at completion to disclose matters that arose between signing and completion. The interaction with the warranty regime is heavily negotiated:</p>
+
+  <ul>
+    <li><strong>Cure mode (seller-friendly):</strong> a matter properly disclosed in the bring-down Disclosure Letter is treated as fairly disclosed, so the buyer cannot later claim breach of the bring-down warranty for that matter.</li>
+    <li><strong>Notification-only mode (buyer-friendly):</strong> the bring-down Disclosure Letter merely informs the buyer of new matters; it does not cure the warranty breach. The buyer retains the right to sue for breach (sandbagging-friendly) or to refuse to close (if the matter is material).</li>
+    <li><strong>Knowledge scrape interplay:</strong> if the SPA has anti-sandbagging language, a bring-down disclosure that puts the buyer on actual notice can defeat the buyer's later claim regardless of the SPA's "cure" position.</li>
+  </ul>
+
+  <aside class="note">
+    <h5>Indemnification System Map (Modules 12 → 13 → 14 → 15)</h5>
+    <p>Escrow size is not a standalone number — it is one knob in a single negotiated system. A senior partner thinks of it as a cascade:</p>
+    <ul>
+      <li><strong>Cap</strong> (Module 13) — the absolute liability limit (typically 10–25% of equity value for general warranties, 100% for fundamentals).</li>
+      <li><strong>Basket / threshold</strong> (Module 13) — the minimum aggregate loss below which no claim can be brought; tipping basket vs. true deductible vs. de minimis per claim.</li>
+      <li><strong>W&amp;I retention</strong> (Module 14) — typical 0.5% of enterprise value at signing on PE deals (Marsh European M&amp;A Insurance Trends 2024); often dropping to nil after 12 months.</li>
+      <li><strong>Escrow</strong> (Module 15) — historically 5–15% of purchase price; with W&amp;I, now ~0.3% median on insured deals vs. ~9% on non-insured (SRS Acquiom 2025 M&amp;A Deal Terms Study).</li>
+      <li><strong>Bring-down certificate</strong> (Module 15) — operationalises the closing reps; the cure-vs-flag question determines whether late-discovered matters bite.</li>
+      <li><strong>Fundamentals carve-out</strong> (Modules 12, 13) — title, capitalisation, authority, tax: typically uncapped and outside the basket; survival to the statute of limitations.</li>
+    </ul>
+    <p>Move one knob, others have to move. Tighten the basket to a deductible at 1%? The buyer expects the cap to widen or the bring-down to be sandbagging-friendly. Replace escrow with a higher W&amp;I limit? The seller wants the bring-down certificate to be a true cure mechanism.</p>
+  </aside>
+
+  <aside class="note">
+    <h5>TSA upstream cascade (Modules 04 → 11 → 15 → 17)</h5>
+    <p>The TSA is not a standalone closing-day issue — its existence and shape ripple back into DD, pricing, and the eventual integration plan:</p>
+    <ul>
+      <li><strong>Module 04 (DD):</strong> shared-services DD identifies which functions ride on the seller's infrastructure; that determines the TSA scope.</li>
+      <li><strong>Module 11 (Locked Box vs. Closing Accounts):</strong> if the cost base will materially change as services migrate during the gap period, a locked-box mechanism mis-prices the deal — closing accounts are usually preferable in a TSA-heavy carve-out.</li>
+      <li><strong>Module 15 (TSA):</strong> the TSA contract — pricing model, term, exit covenants, MFN, reverse TSA — is the operational expression of the carve-out.</li>
+      <li><strong>Module 17 (Integration / post-closing):</strong> the buyer's integration roadmap and IT separation timeline are constrained by what the TSA actually delivers and by the step-up pricing schedule that incentivises departure.</li>
+    </ul>
+  </aside>
+
+  <h2>Transition Services Agreement (TSA)</h2>
+
+  <p>A <strong>Transition Services Agreement</strong> is the contract under which the seller (typically the parent group from which a target has been "carved out") continues to provide back-office and operational services to the divested target for a defined post-closing period.</p>
+
+  <p><strong>When needed.</strong> Almost always in carve-outs and spin-offs, where the divested business has relied on shared corporate services.</p>
+
+  <p><strong>Typical services.</strong> Information Technology (IT) infrastructure; Enterprise Resource Planning (ERP) systems (SAP, Oracle, Workday — often the longest-running item); Human Resources (HR) (payroll, benefits); finance and accounting; tax compliance; real estate; procurement; insurance (riding under parent's policies temporarily).</p>
+
+  <p><strong>Pricing models.</strong></p>
+  <ol>
+    <li><strong>Cost-plus</strong> (typically 5–10% markup, sometimes 0% for clean breaks).</li>
+    <li><strong>Fixed monthly fee</strong> escalating over time to incentivise migration (e.g., 100% of cost in months 1–6, 110% months 7–12, 125% months 13–18, 150% thereafter).</li>
+    <li><strong>Migration cost recovery</strong> — buyer pays seller's actual migration support costs.</li>
+  </ol>
+
+  <p><strong>Term.</strong> Typically 6–24 months. Longer terms suggest poor planning or genuine separation complexity (often ERP or pension carve-outs).</p>
+
+  <p><strong>Service-level commitments.</strong> Usually borrowed from the seller's pre-existing internal Service Level Agreements (SLAs). Buyers should beware that internal "SLAs" are often aspirational; baselining actual historical service levels is critical.</p>
+
+  <p><strong>Liability.</strong> Low caps (typically 12 months of fees for the affected service), excluding consequential damages. The TSA is not a warranty-risk vehicle — that is the SPA's job.</p>
+
+  <h3>The forcing mechanics — what a senior carve-out partner will negotiate</h3>
+
+  <ul>
+    <li><strong><span class="term" data-term="step-up-tsa-pricing">Step-up pricing</span> as a forcing function.</strong> A flat cost-plus 5% TSA gives no incentive to migrate; a stepped schedule (e.g., 100% cost months 1–6, 110% / 125% / 150% thereafter, with a hard stop after 24 months) gives the buyer commercial pressure to leave on time and the seller compensation for the operational drag of running services for someone else.</li>
+    <li><strong><span class="term" data-term="reverse-tsa">Reverse TSA</span>.</strong> Often forgotten on first draft: the divested target keeps a system or capability the seller still depends on (e.g., a shared customer-service platform, a regulated entity hosting a payments licence). The seller becomes the TSA <em>customer</em> for that service; mirror pricing and SLAs apply, but the buyer gains commercial leverage by virtue of owning the capability.</li>
+    <li><strong><span class="term" data-term="mfn-tsa">MFN clause</span>.</strong> The buyer demands "Most-Favoured-Nation" treatment: if the seller provides equivalent services to any of its retained affiliates on better commercial terms, the buyer gets the benefit of those terms. This protects against the seller cross-subsidising its retained business at the expense of the carved-out target.</li>
+    <li><strong><span class="term" data-term="exit-assist">Exit-services / migration-cooperation covenant</span>.</strong> Without this the buyer cannot leave: covenant requires the seller to cooperate with data extracts, schema documentation, vendor introductions, knowledge-transfer sessions, and (for IT services) parallel-run periods. A senior partner will ask "do we have an exit covenant?" — without one, the TSA's hard-stop date is unrealistic.</li>
+    <li><strong>Hard stop vs. evergreen.</strong> A hard-stop deadline (with step-up pricing) forces departure; an evergreen TSA (auto-renewing absent notice) creates an indefinite drag and is buyer-poison if the seller has the leverage of being the only one who can perform.</li>
+  </ul>
+
+  <aside class="lever">
+    <h5>Negotiation lever — TSA forcing mechanics</h5>
+    <div class="row">
+      <div><strong>Buyer wants:</strong> cost-plus zero; long term (24+ months); soft step-ups; strong exit covenant; reverse TSA pricing equally aggressive; explicit MFN clause.</div>
+      <div><strong>Seller wants:</strong> cost-plus 10–15%; short term (12 months); aggressive step-ups; minimal exit covenant; MFN excluded.</div>
+      <div><strong>Typical compromise:</strong> cost-plus 5–7%; 12–18 month term; step-ups starting at month 7 (110%, then 125%, then 150% from month 13); a defined exit-services list (data extracts, vendor introductions); MFN limited to "equivalent" services.</div>
+    </div>
+  </aside>
+
+  <h2>Warranty &amp; Indemnity (W&amp;I) policy as an ancillary document</h2>
+
+  <p>Easy to overlook on the checklist: the W&amp;I / RWI policy itself is signed at closing and forms part of the closing bible. Standard items: (i) the policy with its agreed schedule of warranties, retention, sub-limits and exclusions; (ii) a <strong>seller-warranty bridge</strong> if the seller's contractual warranty cap is set below the W&amp;I retention (so the buyer is not exposed to a "gap" between the SPA cap and the policy attachment point); (iii) <strong>synthetic warranties</strong> negotiated with the insurer where the seller refuses to give a particular warranty (the policy "fills in" the missing protection — fee uplift typical); (iv) the <strong>new-breach exclusion</strong> (matters known to the buyer or to a Specified Insured Person at signing or at completion — the policy will not cover them); (v) certificate of in-force coverage for the closing bible.</p>
+
+  <h2>Escrow Agreement</h2>
+
+  <p>A three-party contract among buyer, seller, and an independent escrow agent (typically a bank or specialised provider). Purpose: hold part of the purchase price (the "escrow" or "holdback") in a segregated account, releasing funds on defined trigger events.</p>
+
+  <p><strong>Typical structure:</strong></p>
+  <ul>
+    <li><strong>Escrow amount:</strong> historically 5–15% of purchase price; with W&amp;I insurance prevalence, dramatically smaller. Per the <em>SRS Acquiom 2025 M&amp;A Deal Terms Study</em>, median indemnity escrow on RWI-insured deals is approximately 0.3% of purchase price, vs. roughly 9% on non-insured deals; the J.P. Morgan 2025 M&amp;A Holdback Escrow Study shows similar trends. On many insured PE deals, the escrow is replaced entirely by a small specific-indemnity escrow only.</li>
+    <li><strong>Term:</strong> matches warranty survival (12–24 months for general; longer for fundamentals).</li>
+    <li><strong>Release waterfall:</strong> automatic at end of survival period, less pending claims.</li>
+    <li><strong>Joint instructions:</strong> agent acts only on joint instructions or defined trigger events.</li>
+    <li><strong>Agent's role:</strong> ministerial only — not an arbiter; does not adjudicate disputes.</li>
+    <li><strong>Investment:</strong> low-risk money market; interest typically follows principal.</li>
+  </ul>
+
+  <aside class="pitfall">
+    <h5>Common escrow drafting pitfalls</h5>
+    <ul>
+      <li>Loosely drafted triggers creating chronic deadlock (every release fight requires court).</li>
+      <li>Failure to address buyer insolvency (whose claim does the escrow secure if the buyer disappears?).</li>
+      <li>Inadequate claim-notice mechanics (no fixed format or timing for the buyer's withhold-instruction).</li>
+      <li>Missing legal-hold mechanism for late-notified claims near survival expiry — claims lodged on day 364 of a 365-day survival period must trigger a clean withhold.</li>
+    </ul>
+  </aside>
+
+  <h2>Service Contracts / Management Employment Agreements</h2>
+
+  <p>Where the buyer is acquiring a business depending on key managers, the SPA typically conditions closing on the managers signing new employment contracts at completion.</p>
+
+  <p><strong>Typical features:</strong></p>
+  <ul>
+    <li><strong>Term and notice.</strong> 12–36 months notice; lock-up period of 12–36 months during which manager cannot resign without forfeiting equity.</li>
+    <li><strong>Compensation.</strong> Base salary; annual bonus; Long-Term Incentive Plan (LTIP); retention/stay bonuses; MIP equity in PE deals.</li>
+    <li><strong>Equity rollover.</strong> Vesting (typically 4–5 years with 1-year cliff); leaver provisions matching the SHA.</li>
+    <li><strong>Restrictive covenants.</strong> <span class="term" data-term="non-compete">Non-compete</span> (12–24 months post-termination for senior UK/EU executives). Jurisdictional position: <em>UK</em> — the leading authority on post-employment restraints in executive contexts is <em><span class="term" data-term="tillman-v-egon-zehnder">Tillman v Egon Zehnder Ltd</span></em> [2019] UKSC 32, which clarified the modern severance / blue-pencil approach; older authorities are <em>Mason v Provident Clothing &amp; Supply Co Ltd</em> [1913] AC 724 and <em>Herbert Morris v Saxelby</em> [1916] AC 688. (<em>Esso Petroleum v Harper's Garage</em> [1968] AC 269 is the foundational restraint-of-trade case but addresses commercial solus-tie agreements, not executive non-competes.) <em>California</em> — Cal. Bus. &amp; Prof. Code §16600 voids employee non-competes; the 2024 strengthening (§§16600.1 and 16600.5, effective 1 January 2024) extended the prohibition to make any contract that restrains lawful trade unenforceable, with employer notice obligations and Civil Code §1670.5 limits on forced arbitration. <em>Federal (US)</em> — the 2024 FTC Non-Compete Rule was vacated nationwide in <em>Ryan LLC v. FTC</em>, 6:24-cv-486 (E.D. Tex. 20 Aug 2024); on 5 September 2025 the FTC voted 3-1 to dismiss its appeal and accede to the vacatur, so the Rule is permanently abandoned (see Module 17). Sale-of-business non-competes remain almost universally enforceable. Non-solicit of customers and employees; confidentiality; IP assignment.</li>
+    <li><strong>Garden leave.</strong> Executive paid in full but barred from work/contacts during notice period.</li>
+    <li><strong>Severance.</strong> 6–24 months for dismissal without cause.</li>
+  </ul>
+
+  <aside class="lever">
+    <h5>Negotiation lever — non-compete duration</h5>
+    <div class="row">
+      <div><strong>Buyer wants:</strong> 36 months, broad scope.</div>
+      <div><strong>Manager wants:</strong> 12 months, narrow scope.</div>
+      <div><strong>Typical UK/EU senior compromise:</strong> 12–18 months, restricted to actual geographic markets, defined by competitor list or product categories.</div>
+    </div>
+  </aside>
+
+  <h2>Disclosure Letter / Disclosure Schedules</h2>
+
+  <p>(Already covered in detail in the Representations &amp; Warranties / Indemnification module — Modules 12 and 13. Brief recap here for completeness.)</p>
+
+  <p>The Disclosure Letter (UK) or Disclosure Schedules (US) is the document by which the seller qualifies its warranties. The buyer cannot bring a warranty claim for matters fairly disclosed.</p>
+
+  <ul>
+    <li><strong>UK:</strong> a single Disclosure Letter, signed by the seller, addressed to the buyer, with general disclosures (deemed-known information — public records, due diligence (DD) data room, public filings) and specific disclosures (numbered to match each warranty).</li>
+    <li><strong>US:</strong> Disclosure Schedules attached to the SPA, typically organised by section number matching the warranties. Specific exceptions only, with cross-references between schedules permitted (or not, depending on negotiation).</li>
+  </ul>
+
+  <p>The Disclosure Letter / Schedules is often the most negotiated ancillary document in private M&amp;A — sellers want broad disclosure ("all matters in the data room"); buyers want narrow, specific disclosure with an "actually disclosed" standard.</p>
+
+  <h2>Tax Deed / Tax Covenant (UK practice)</h2>
+
+  <p>In English-style M&amp;A, tax indemnification is separated from the main SPA into a Tax Deed (or Tax Covenant) — partly historical, partly because tax has bespoke mechanics.</p>
+
+  <p><strong>Why a "Deed"?</strong> A Deed is a more formal document under English law: signed, witnessed, and executed "as a deed." Two key advantages: (i) no requirement for "consideration" (the usual contract requirement that each party gives something of value); (ii) 12-year limitation period under the Limitation Act 1980 (vs. 6 years for ordinary contracts).</p>
+
+  <p><strong>Typical Tax Deed contents:</strong></p>
+  <ol>
+    <li><strong>Covenant to pay</strong> — seller covenants to pay buyer the amount of any tax liability of the target arising from a pre-closing event, plus related costs.</li>
+    <li><strong>Specific tax warranties</strong> — separate from general warranties (filings up to date, no ongoing audits, no aggressive transfer pricing).</li>
+    <li><strong>Conduct of tax claims</strong> — typically seller controls pre-closing audits with buyer cooperation; settlement requires consent.</li>
+    <li><strong>Tax refunds</strong> — relating to pre-closing periods generally go to the seller.</li>
+    <li><strong>Grossing-up</strong> — payments made on an after-tax basis so buyer is whole.</li>
+    <li><strong>Limitations</strong> — caps, time limits, baskets (<em>de minimis</em> — Latin: "of the smallest things").</li>
+  </ol>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Tax indemnification lives in a separate Tax Deed, executed as a deed. 12-year limitation; no consideration requirement. Allows tax-specific machinery (conduct of audits, refunds, grossing-up) without overloading the SPA.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Tax indemnification is included within the SPA's "Tax Matters" article. Survival periods are typically the relevant statute of limitations plus 60 days.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Varies. German and Italian SPAs generally embed tax indemnification within the main SPA. French practice sometimes uses a "<em>garantie de passif</em>" (literally: "guarantee of liabilities") covering tax and other historical liabilities together.</p></aside>
+  </div>
+
+  <h2>Inter-company loan settlement</h2>
+
+  <p>In a carve-out, the target has inter-company balances with the seller's group (loans up/down, trading balances, cash pooling). Settled at closing through: cash repayment; capitalisation (parent capitalises the receivable into target equity pre-closing); assignment to a continuing group entity; or set-off (netting). Mechanics are addressed in pre-closing reorganisation, the SPA price adjustment, and the funds-flow.</p>
+
+  <h2>Funds Flow Memorandum</h2>
+
+  <p>A short document specifying every closing-day payment: payer, payee, amount, account, currency, value date, purpose. Banks execute Society for Worldwide Interbank Financial Telecommunication (SWIFT) transfers from it. Typical line items:</p>
+  <ul>
+    <li>Buyer's purchase price</li>
+    <li>Escrow withholding to agent</li>
+    <li>Debt repayment to lenders</li>
+    <li>Broker / advisor fees</li>
+    <li>W&amp;I premium</li>
+    <li>Completion bonuses to management</li>
+    <li>Inter-company debt repayment</li>
+    <li>Net cash to seller</li>
+  </ul>
+  <p>Errors (wrong International Bank Account Number (IBAN), missing tax ID) can prevent closing.</p>
+
+  <h2>Officer's / Bring-Down Certificates</h2>
+
+  <p>US practice: at closing, the seller's officers certify that the warranties remain true and correct (or true in all material respects), that all pre-closing covenants have been performed, and that all CPs are satisfied. The buyer often gives a reciprocal certificate. These operationalise the "true at signing and at closing" regime; failure to deliver is a CP failure allowing the other side to walk.</p>
+
+  <h2>Board minutes and resolutions</h2>
+
+  <p>Both parties deliver authorising board minutes and (where required) shareholder resolutions of buyer, seller, and target — including the target appointing new directors, accepting resignations, approving share transfers, and amending the constitution. Routine but high-stakes paperwork: missing or invalid corporate authorisations can invalidate the transaction.</p>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>The closing bible binds 30–80 documents on a typical mid-market private deal — the SPA is only the headline.</li>
+      <li>An SHA is needed in PE rollovers, club deals, JVs, family deals, and minority investments. It governs board, transfers, exit, leaver provisions, and reserved matters.</li>
+      <li>PE rollover architecture: institutional strip (preferred + ordinary stub), sweet equity, envy ratio (3–5× typical), hurdles, ratchets — leaver mechanics interact with all of these.</li>
+      <li>UK practitioners must put share-transfer restrictions in <em>both</em> the SHA and the Articles — the SHA binds only signatories, the Articles bind everyone.</li>
+      <li>A TSA bridges back-office services from seller to buyer in carve-outs; cost-plus 5–10% with stepped escalation is the market norm; 6–24 months term. Negotiate exit-services covenants, MFN, reverse TSA, and step-up forcing.</li>
+      <li>The W&amp;I policy is itself an ancillary document; seller-warranty bridges and synthetic warranties patch the cap/retention gap.</li>
+      <li>Escrow agents are ministerial; per SRS Acquiom 2025 median escrow is ~0.3% on insured deals vs. ~9% on non-insured.</li>
+      <li>UK Tax Deed = separate, 12-year limitation, no consideration. US tax indemnification = inside the SPA, survival = statute of limitations + 60 days.</li>
+      <li>Non-compete: UK leading authority on executive post-employment restraints is now <em>Tillman v Egon Zehnder</em> [2019] UKSC 32; California strengthened §16600 in 2024; the FTC abandoned its 2024 federal Rule on 5 September 2025 after <em>Ryan v FTC</em>.</li>
+      <li>Bring-down Disclosure Letter mechanics: cure (seller-friendly) vs. flag (buyer-friendly) — interacts with the SPA's sandbagging stance.</li>
+      <li>Funds Flow Memorandum is purely about who pays whom on closing day; warranty risk allocation lives in the SPA, not here.</li>
+      <li>Officer's / Bring-Down Certificates operationalise the "true at signing and at closing" regime in US deals.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="14-wi-insurance.html" class="prev">Warranty &amp; Indemnity Insurance</a>
+    <a href="16-governing-law.html" class="next">Governing Law &amp; Dispute Resolution</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

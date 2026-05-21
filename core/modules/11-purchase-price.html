@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 11 — Purchase Price Mechanisms · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="11">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 11</div>
+    <h1>Purchase Price Mechanisms</h1>
+    <p class="subtitle">Closing Accounts vs. Locked Box, earn-outs, escrow, deferred consideration — how the buyer and seller decide what was actually paid for the business.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Compare the <span class="term" data-term="closing-accounts">Closing Accounts</span> (Completion Accounts) mechanism and the <span class="term" data-term="locked-box">Locked Box</span> mechanism — when each is used, the economic effect of each, and the negotiation dynamics.</li>
+      <li>Construct an <span class="term" data-term="equity-bridge">Equity Bridge</span> from Enterprise Value to Equity Value, identifying every standard adjustment (Net Debt, Excess Cash, Working Capital surplus/deficit vs. Target).</li>
+      <li>Read a Closing Accounts price-adjustment clause and trace the dispute-resolution path from <span class="term" data-term="adjustment-notice">Adjustment Notice</span> through <span class="term" data-term="objection-notice">Objection Notice</span> through <span class="term" data-term="audit-expert">Audit Expert</span> determination.</li>
+      <li>Distinguish <span class="term" data-term="expert-determination">expert determination</span> from arbitration under English law (<em>Jones v. Sherwood Computer Services</em> [1992]) and explain why classification matters for limited judicial review.</li>
+      <li>Read and stress-test a Locked Box <span class="term" data-term="leakage">Leakage</span> clause — including the critical distinction between Leakage and <span class="term" data-term="permitted-leakage">Permitted Leakage</span> — and explain why the <span class="term" data-term="no-leakage-covenant">No Leakage Covenant</span> is given as an independent obligation not subject to caps or de minimis.</li>
+      <li>Draft an <span class="term" data-term="earn-out">earn-out</span>, identifying the four litigation traps (basis of accounts, anti-frustration covenants, measurement period, change-of-control acceleration), and apply the case law (<em>Lazard Technology Partners v. QinetiQ</em>, <em>Airborne Health v. Squid Soap</em>, <em>Porton Capital v. 3M</em>).</li>
+      <li>Explain the structure of an <span class="term" data-term="escrow">escrow / holdback</span>, the typical sizes, and how multiple <span class="term" data-term="sub-escrow">sub-escrows</span> are sequenced.</li>
+      <li>Negotiate deferred consideration mechanisms (<span class="term" data-term="vendor-loan-note">vendor loan notes</span>, <span class="term" data-term="equity-rollover">equity rollover</span>, seller financing) and <span class="term" data-term="anti-embarrassment">anti-embarrassment / anti-flip</span> clauses.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The pricing clauses are where the M&amp;A lawyer becomes the deal lawyer rather than just the contract lawyer. A well-structured Closing Accounts mechanism can shift millions between buyer and seller depending on a single accounting treatment; a poorly-drafted Locked Box can leave the buyer with no remedy when value walks out the door; an under-specified earn-out can produce three years of litigation that wipes out any economic benefit of the deal. The senior M&amp;A partner at a closing dinner will tell you: <em>"the warranties pay you back if the deal goes wrong. The price mechanism decides what you actually paid in the first place. Get the price mechanism wrong and no warranty in the world will save you."</em> In European mid-market private equity the Locked Box has become the default; in U.S. strategic deals the Closing Accounts mechanism remains dominant. Knowing which mechanism is appropriate (and which one the other side will resist) is the difference between a closed deal and a re-trade.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a pricing meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Peg"</strong> — the Target Working Capital level agreed in the SPA (typically the trailing 12-month average). Below the peg = seller refunds; above the peg = buyer tops up. Partners say "where's the peg landing?" meaning where the QofE is suggesting it should be set.</li>
+      <li><strong>"Collar"</strong> — the band around the peg below which no working-capital adjustment triggers (e.g. "ten basis points either side"). A tight collar means small movements still cause adjustments; a loose collar absorbs them.</li>
+      <li><strong>"QofE"</strong> — Quality of Earnings report from the financial diligence accountants (Big Four or boutique). The QofE drives the peg, the debt-like-items list, and EBITDA normalisations.</li>
+      <li><strong>"Baseball arbitration" / "final-offer arbitration"</strong> — dispute mechanism where each side submits a number; the expert picks one, no compromise. Increasingly common in US price disputes; deters aggressive Adjustment Notices.</li>
+      <li><strong>"Linear vs cliff earn-out"</strong> — linear scales pro rata with performance above target; cliff is binary (hit the threshold or not). Partners will ask "linear or cliff?" before getting into milestones.</li>
+      <li><strong>"Leakage indemnity / permitted leakage"</strong> — under a Locked Box, the seller's pound-for-pound repayment of value extracted post-Locked-Box-Date, save for items on the negotiated permitted-leakage carve-out list.</li>
+      <li><strong>"True-up window"</strong> — the post-Closing period (typically 60–90 days) during which the buyer prepares Closing Accounts and the parties true up the Estimated Purchase Price.</li>
+      <li><strong>"Run-rate EBITDA"</strong> — annualised normalised EBITDA used for valuation and earn-out targets, adjusting for one-off items.</li>
+      <li><strong>"Catch-up"</strong> — earn-out mechanic that lets a missed Y1 target be made good by a Y2 outperformance (or vice versa).</li>
+      <li><strong>"No-recourse / synthetic warranty deal"</strong> — PE exit structure where the SPA gives buyer effectively zero recourse against the seller; W&amp;I covers the warranty package; escrow may be eliminated.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> M04 (Due Diligence — the QofE drives the peg, debt-like items, and earn-out target); M05 (Valuation — "cash-free, debt-free" is the standard EV convention that the bridge translates into Equity Value); M07 (SPA structure — pricing clauses sit alongside R&amp;Ws and indemnification as the four risk-allocation tools).</li>
+      <li><strong>Forwards:</strong> M09 (MAC/MAE — Locked Box's No Leakage covers <em>value extraction</em>, not <em>value destruction</em>; MAE is the buyer's only protection on operational performance pre-Closing); M10 (Closing — Funds Flow shape depends on whether Locked Box single-wires or Closing Accounts splits estimate / true-up); M13 (Indemnification — Leakage is pound-for-pound with no friction; warranty claims have basket / cap / de minimis friction; sellers fight to recharacterise items as warranty claims, buyers as Leakage); M14 (W&amp;I — retention sits in the same "first-dollar" structure as the working-capital deductible); M16 (Disputes — expert determination of price items must be carved out from the broader SPA arbitration clause).</li>
+      <li><strong>Domino effect:</strong> Switching from Locked Box to Closing Accounts means: add an Estimated Closing Statement deliverable, add a Closing Accounts dispute clause, add Audit Expert appointment mechanic, add a working-capital escrow; remove or narrow the No Leakage covenant; tighten the Ordinary Course covenant (because the buyer no longer has the post-Closing true-up to catch deterioration). The Funds Flow Memo (M10) splits in two; the W&amp;I retention (M14) may need realignment to mirror the new basket structure.</li>
+    </ul>
+  </aside>
+
+  <h2>Two pricing models — the conceptual divide</h2>
+
+  <p>The fundamental question: <strong>at what date is the buyer's economic ownership of the target deemed to begin?</strong></p>
+
+  <ul>
+    <li>Under the <strong>Closing Accounts mechanism</strong> (also Completion Accounts), economic ownership transfers on the Closing Date. The price is calculated by reference to the financial position of the target <em>as at</em> the Closing Date. Because the Closing Accounts cannot be prepared until after Closing, the parties pay an <em>Estimated Purchase Price</em> at Closing and <em>true up</em> afterwards. The seller bears the risk and reward of the business until Closing.</li>
+    <li>Under the <strong>Locked Box mechanism</strong>, economic ownership transfers on the <span class="term" data-term="locked-box-date">Locked Box Date</span> (a date <em>before</em> Signing — typically the last audited balance-sheet date or the last month-end balance-sheet date before Signing). The price is fixed at Signing by reference to the Locked Box accounts. There is no post-Closing true-up. The buyer bears the risk and reward of the business from the Locked Box Date onwards. The seller's only obligation post-Locked-Box is <em>not to extract value</em> — and if value is extracted (Leakage), the seller pays it back.</li>
+  </ul>
+
+  <p>Both models address the same problem (the gap between Signing/Closing/Last-Accounts and reality) but solve it in opposite directions. The choice is a strategic decision driven by:</p>
+
+  <ul>
+    <li><strong>Auction dynamics.</strong> In a competitive auction, sellers prefer Locked Box because it gives price certainty and avoids post-closing disputes that depress bids; sellers can also "show off" the Locked Box mechanism to bidders as a sign of confidence in the audited accounts.</li>
+    <li><strong>Quality of financial information.</strong> Locked Box requires reliable accounts at the Locked Box Date; if the target's accounts are messy or the audit is several months stale, Closing Accounts is safer.</li>
+    <li><strong>Time between Signing and Closing.</strong> A long interim period (e.g., 9–12 months for FDI clearance) means more time for cash and working capital to drift; Locked Box becomes risky for the buyer because the buyer has bought a snapshot that is increasingly stale.</li>
+    <li><strong>Industry.</strong> Working-capital-intensive businesses (manufacturing, retail) often use Closing Accounts because working-capital movements are large and unpredictable. Predictable services businesses suit Locked Box.</li>
+  </ul>
+
+  <p><strong>Market practice (CMS European M&amp;A Study, 2024 and 2025 editions):</strong> Locked Box is "effectively the default" in European PE auctions. Across the Netherlands, Germany, Ireland, and Spain, Locked Box is the standard mid-market mechanism. The 2024 study reported a small dip in Locked Box use, attributed to market uncertainty; the 2025 study reported a partial recovery. In the U.S., Locked Box is gaining ground but Closing Accounts remains dominant for strategic deals.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Given the particular nature of the SPA, various contractual mechanisms relating to the purchase price are widely used to mitigate the risks associated with fluctuations in the value of the Target. The main ones are: Purchase Price adjustment mechanisms based on Closing Accounts; and Locked-box mechanisms."</em></p>
+      <p>— Slide 17 (Purchase Price Mechanisms)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> The deck frames both mechanisms as responses to the same underlying problem — the value of a business changes between Signing and Closing — and signals that the choice is binary. In practice, hybrid mechanisms (e.g., Locked Box with a working-capital adjustment for one specific volatile item) exist but are unusual; almost every deal lands in one camp or the other.</div>
+  </aside>
+
+  <h2>Closing Accounts mechanism — the mechanics</h2>
+
+  <p>Five steps:</p>
+
+  <ol>
+    <li><strong>Estimated Purchase Price paid at Closing.</strong> The seller delivers an <strong>Estimated Closing Statement</strong> a few days before Closing setting out estimated Net Debt, estimated Working Capital, and estimated Cash. The buyer pays an Estimated Purchase Price calculated using these estimates.</li>
+    <li><strong>Buyer prepares Draft Closing Accounts.</strong> Within a defined period after Closing (typically 60–90 days; the source-deck example uses 15 days), the buyer prepares the actual Closing Accounts as at the Closing Date.</li>
+    <li><strong>Buyer delivers Adjustment Notice.</strong> The buyer sends the seller a notice setting out the actual Closing Accounts and the calculated price adjustment (positive or negative).</li>
+    <li><strong>Seller's review window.</strong> The seller has a defined period (typically 30–45 days) to either accept the Adjustment Notice or send an Objection Notice setting out the items in dispute.</li>
+    <li><strong>Dispute resolution if objections persist.</strong> Negotiation period (typically 14–30 days) followed by escalation to an <strong>Independent Accountant / Reporting Accountant / Audit Expert</strong> (typically a Big Four firm — KPMG, Deloitte, PwC, EY) acting as expert (not arbitrator). The Audit Expert is bound by the SPA's accounting rules and decides only the items in dispute. The decision is final and binding.</li>
+  </ol>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"The Initial Purchase Price shall be adjusted upwards or downwards according to the following steps: (i) Within 15 (fifteen) calendar days as of the Closing Date, the Buyer shall procure that: (a) the Company shall approve pro-forma financial statements (bilancio di esercizio pro-forma) as at the Closing Date (the 'Closing Accounts'); (b) Closing Ebitda will be calculated and compared to Ebitda 2024; (ii) Should the variation, either positive or negative, between Closing Ebitda and Ebitda 2024 be lesser than Euro 100,000.00, the Initial Purchase Price will not be adjusted; (iii) Should the variation, either positive or negative, between Closing Ebitda and Ebitda 2024 be greater than Euro 100,000.00, the Initial Purchase Price shall be adjusted as follows: the amount in excess of Euro 100,000.00 shall be multiplied by 1.5 and: (1) In case of positive variation (i.e., Closing Ebitda is higher than the Ebitda 2024), the resulting amount shall be added to the Initial Price and paid by the Buyer to the Seller; (2) In case of negative variation (i.e., the Closing Ebitda is lower than the Ebitda 2024), the resulting amount shall be deducted from the Initial Price and paid back by the Seller to the Buyer (the 'Initial Price Adjustment')."</em></p>
+      <p>— Clause 4.2 (Post-Closing Adjustment)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Two oddities to flag. (a) It uses <span class="term" data-term="ebitda">EBITDA</span> as the metric, not Net Debt + Working Capital. EBITDA-based adjustments are unusual for a "true-up" of value at Closing; they look more like a mini-earn-out (a contingent payment based on a profit measure) than a classic Closing Accounts mechanism. This may be appropriate for an SME deal where the buyer is essentially buying earning power — but it muddies the waters. (b) The multiplier (1.5x) is an explicit valuation-multiple. This is typical of price-adjustment-by-multiple structures where every euro of EBITDA above target is worth €1.50 of price. In a true Closing Accounts mechanism, the adjustment is normally pound-for-pound (€1 of working capital deficit = €1 of price reduction), not multiple-based. Note also the &euro;100,000 deductible — small variations are absorbed without adjustment.</div>
+  </aside>
+
+  <p>The classic Closing Accounts mechanism — what most lawyers mean when they say "Closing Accounts" — adjusts price for <strong>Net Debt</strong> and <strong>Working Capital</strong> (and sometimes <strong>Cash</strong>).</p>
+
+  <h2>The Equity Bridge</h2>
+
+  <p>The standard pricing formula:</p>
+
+  <blockquote><strong>Equity Value = Enterprise Value &minus; Net Debt + Excess Cash + (Actual Working Capital &minus; Target Working Capital)</strong></blockquote>
+
+  <p>(Some practitioners use "Equity Value = Enterprise Value &minus; Net Debt + Working Capital adjustment." The two forms are equivalent if you define Net Debt as Debt &minus; Cash; conventions vary.)</p>
+
+  <p>Each term:</p>
+
+  <ul>
+    <li><span class="term" data-term="enterprise-value">Enterprise Value (EV)</span> is the agreed value of the target as a "cash-free, debt-free" business — what the buyer would pay if the company had no cash and no debt.</li>
+    <li><span class="term" data-term="net-debt">Net Debt</span> = financial indebtedness (bank loans, bonds, leases, drawn facilities, often pension deficits, often deferred consideration on prior acquisitions, sometimes receivables-financing) minus cash and cash equivalents. The exact definition is a battle clause-by-clause.</li>
+    <li><strong>Excess Cash</strong> is the cash held by the target above what is needed for ordinary operations. In a "cash-free, debt-free" deal the seller "takes out" all cash; if cash stays in, it adds to the price pound-for-pound.</li>
+    <li><strong>Working Capital</strong> = current assets (excluding cash) minus current liabilities (excluding debt). A normalised level — the <span class="term" data-term="working-capital-peg">Target Working Capital or "peg"</span> — is agreed in the SPA, usually the trailing 12-month average. The adjustment is the difference between actual at Closing and the peg: deficit means the seller refunds the shortfall (the buyer is paying for working capital it did not get); surplus means the buyer pays for the extra (additional working capital is value the buyer received).</li>
+  </ul>
+
+  <h3>Components frequently fought over</h3>
+
+  <ul>
+    <li><strong>Cash.</strong> Is restricted cash (escrowed, pledged) "cash"? Is cash in jurisdictions with currency controls "cash"? Is cash in foreign subsidiaries available without tax leakage on repatriation? Common compromise: "cash" excludes restricted cash, includes only cash repatriable without material tax cost.</li>
+    <li><strong>Debt.</strong> Are operating leases (post-IFRS 16, on balance sheet) "debt"? Are pension deficits "debt"? Are dilapidations provisions "debt"? Are intercompany balances (between target and seller affiliates being settled at Closing) "debt"? Are accrued interest, prepayment penalties, and break costs "debt"? Common compromise: define "Indebtedness" with an enumerated list and then add a sweep clause ("any other obligation in the nature of borrowed money").</li>
+    <li><strong>Working Capital.</strong> Is deferred revenue (cash received pre-Closing for services to be delivered post-Closing) "working capital" or "debt"? Is income tax payable a working-capital item or a debt-like item? The standard answer: deferred revenue is debt-like (because it is value the buyer must "deliver" post-Closing without getting paid); income tax accrued for pre-Closing periods is debt-like; trade payables are working capital.</li>
+    <li><strong>Capex shortfall / overspend.</strong> If the seller cut capex in the run-up to Closing to depress working-capital usage and inflate cash, the buyer will demand an additional capex-shortfall adjustment.</li>
+    <li><strong>Intercompany balances.</strong> Loans between target and seller affiliates are typically settled at Closing, but the mechanic must be specified.</li>
+  </ul>
+
+  <h3>The accounting policies hierarchy</h3>
+
+  <p>A perpetual battleground. The Closing Accounts must be prepared on what basis? Common drafting (in order of seller-friendliness to buyer-friendliness):</p>
+
+  <ol>
+    <li>"On the same basis as the Last Accounts" (most seller-friendly — locks in any seller-favourable accounting treatments).</li>
+    <li>"On a basis consistent with past practice and, to the extent not addressed by past practice, in accordance with [GAAP/IFRS]."</li>
+    <li>"In accordance with [GAAP/IFRS] and, to the extent consistent therewith, on a basis consistent with past practice." (Most buyer-friendly — applicable accounting standards trump past practice.)</li>
+  </ol>
+
+  <p>This is one of the most frequently litigated areas in Closing-Accounts disputes. A favourable accounting policy that has been used for years (e.g., aggressive revenue recognition, capitalisation of expenses) can boost EBITDA by millions; the buyer wants it removed; the seller wants it preserved.</p>
+
+  <h2>Dispute resolution — the Audit Expert</h2>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"If either Party disagrees on any of the items of the Adjustment Notice, it shall send a notice in writing to the other Party within 7 (seven) calendar days as of receipt of the Adjustment Notice, specifying in reasonable details the reason of such disagreement (the 'Objection Notice'). The Parties shall then undertake good faith negotiations to settle such disagreement. Should the Seller and the Buyer fail to reach an agreement within 14 (fourteen) calendar days as of receipt of the Objection Notice, each of the Parties may submit the items indicated in the Objection Notice to the Audit Expert, who shall act on the following basis: (i) The Audit Expert shall act as an arbitrator (arbitratore) pursuant to Article 1349, paragraph 1, of the Civil Code…"</em></p>
+      <p>— Clause 4.2(d)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> Three-stage escalation. (a) Objection Notice within 7 days. (b) 14-day negotiation window. (c) Reference to the Audit Expert. The Italian-law detail "<em>arbitratore</em> pursuant to Article 1349" is a crucial classification: under Italian law an <em>arbitratore</em> determines a contract term (typically a price), as distinct from an <em>arbitro</em> who resolves a dispute. The English equivalent is "expert determination," not arbitration. This affects judicial review — the Italian court's role under Article 1349 is limited (it can intervene only for manifest unfairness or error), much narrower than appeal from arbitration.</div>
+  </aside>
+
+  <p>The source-deck clause refers to <strong>Article 1349 of the Italian Civil Code</strong>, which deals with the determination of contract terms by a third party. The translation in the source deck reads: <em>"If the determination of the performance stipulated in the contract is referred to a third party and it is not apparent that the parties intended to leave it to the sole discretion of that third party, the third party must proceed with fair assessment. If the third party fails to make a determination or if that determination is manifestly unfair or erroneous, the determination shall be made by the court."</em></p>
+
+  <p>This concept maps onto two distinct concepts in English and U.S. law:</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK (English law)</h5>
+      <p>The role described in the source deck (a third-party expert deciding a defined question on the basis of the contract) is <strong>expert determination</strong>, not arbitration. The leading case is <em>Jones v. Sherwood Computer Services plc</em> [1992] 1 WLR 277 (CA): an expert determination clause is binding on the parties and the courts will only interfere in narrow circumstances — fraud, partiality, departure from instructions, manifest error not within the expert's mandate. The ordinary appeal route does not apply. <em>Jones v. Sherwood</em> drew the distinction sharply: expert determination is contractual (the expert's decision binds because the parties have so contracted), whereas arbitration is quasi-judicial (an arbitrator determines a dispute by reference to law and procedural rules, with limited judicial review under the Arbitration Act 1996). The Italian "<em>arbitratore</em>" of Article 1349 is closer to an English expert than to an English arbitrator.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware / New York)</h5>
+      <p>Expert-determination clauses are common in U.S. M&amp;A purchase-price mechanisms. They are enforceable but their enforceability requires the expert's role to be <em>precisely defined</em> — what items are in scope, what materials the expert may consider, what standard the expert must apply. Where the role is poorly defined, courts will second-guess. New York has a particularly developed body of case law on this (see <em>Penn Central Corp. v. Consolidated Rail Corp.</em>).</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU civil-law jurisdictions</h5>
+      <p>Most have a counterpart to the Italian "<em>arbitratore</em>" (in French law, the <em>tiers évaluateur</em> or <em>expert-évaluateur</em>; in German law, the <em>Schiedsgutachter</em>). The principle is broadly the same — limited judicial review, manifest error standard.</p>
+    </aside>
+  </div>
+
+  <p>The Audit Expert (in the source-deck wording, the "Audit Expert" — typically a Big Four accountant) acts as expert, not arbitrator. The decision is "final and binding" (subject to manifest error). The expert must consider only items in dispute. The expert's decision is binding under contract law, and the parties pay in proportion to the success of their position.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"Audit Expert means a primary international auditing company (società di revisione) jointly appointed by the Buyer and the Seller or, failing an agreement, appointed by the President of the Court of Milan (Tribunale di Milano) at request of the most diligent Party between the Buyer and the Seller."</em></p>
+      <p>— Audit Expert definition</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> The clause defines who the Audit Expert is (a "primary international auditing company" — the Big Four) and provides a fallback appointment mechanism if the parties cannot agree. The fallback to the President of the Court of Milan is a civil-law convention; in English deals, the equivalent fallback for joint appointment failure is typically appointment by the President of the Institute of Chartered Accountants in England and Wales (ICAEW) on application by either party.</div>
+  </aside>
+
+  <h3>Common Closing Accounts disputes</h3>
+
+  <ul>
+    <li><strong>Classification disputes.</strong> Is item X "debt" or "working capital"? "Cash" or "restricted cash"? "Working capital" or "deferred revenue (debt-like)"?</li>
+    <li><strong>Accounting policy disputes.</strong> Should accruals be made / released? Should provisions be made / released? Should capitalised costs be reversed?</li>
+    <li><strong>One-off items.</strong> Is the cost of the M&amp;A transaction itself a working-capital item? Is a one-off restructuring cost a working-capital item or a normalised expense?</li>
+    <li><strong>Estimates.</strong> Where the accounts contain estimates (e.g., warranty provisions, bad-debt provisions), the Audit Expert must decide whether the estimate is reasonable.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — Closing Accounts</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> longer preparation period (90 days); right to access the target's books and records and the seller's working papers; broad definition of "debt" and "working capital"; Target Working Capital pegged at the conservative end of historical range; accounting standards trump past practice.</li>
+      <li><strong>Seller wants:</strong> shorter preparation period (60 days); narrow definition of "debt"; Target Working Capital pegged at the favourable end; past practice trumps standards; tight scope on what the Audit Expert can decide.</li>
+      <li><strong>Typical compromise:</strong> 60–90-day preparation; defined access rights; itemised "debt" definition with a sweep; Target = trailing 12-month average; "consistent with past practice and, to the extent not addressed, GAAP/IFRS"; Audit Expert mandate scoped to items in dispute only.</li>
+    </ul>
+  </aside>
+
+  <h2>Locked Box mechanism — the mechanics</h2>
+
+  <p>The Locked Box mechanism is <em>radically simpler</em> than Closing Accounts but trickier to draft. Three components:</p>
+
+  <ol>
+    <li><strong>Locked Box Date</strong> — typically the last audited balance-sheet date (year-end) or a recent month-end balance-sheet date. The purchase price is fixed at Signing by reference to a fixed (audited or reviewed) balance sheet at this date.</li>
+    <li><strong>No Leakage Covenant</strong> — the seller covenants that no value has been or will be extracted from the target (in cash, kind, services, or other benefit) between the Locked Box Date and Closing, save for Permitted Leakage.</li>
+    <li><strong>Permitted Leakage</strong> — a defined list of carved-out items where extraction is allowed: (i) ordinary-course salary and benefits to seller-employee individuals; (ii) ordinary-course intercompany trading on arm's-length terms; (iii) scheduled dividends approved before Signing; (iv) specific transaction fees agreed in the SPA; (v) sometimes a fixed cash amount allowed to be "swept" out shortly before Signing.</li>
+  </ol>
+
+  <p>The buyer must also typically receive an <strong>interest payment</strong> (a <span class="term" data-term="ticking-fee">ticking fee</span>) on the purchase price between the Locked Box Date and Closing, reflecting that the seller has had use of money that is economically the buyer's. This ticking fee is sometimes embedded in the price (e.g., "Purchase Price = €X plus interest at 5% per annum from Locked Box Date to Closing") or paid separately.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck</h5>
+    <blockquote>
+      <p><em>"5.1 No Leakage Covenant. The Seller covenants and undertakes to the Buyer that no Leakage has occurred during the period commencing on (and including) the Reference Date and ending on (and including) the Effective Date. This covenant is given as a separate and independent obligation and shall not be limited by any knowledge of the Buyer."</em></p>
+      <p><em>"5.2 Leakage Indemnity. Subject only to Clause 5.4, the Seller shall indemnify and hold harmless the Buyer against, and shall pay to the Buyer, on a full indemnity basis, the full amount of any Leakage, whether directly or indirectly suffered by the Buyer or received by any Seller's Related Party or any third party. For the avoidance of doubt: (a) the Seller's liability under this Clause 5 shall not be subject to any threshold, de minimis, basket or cap; and (b) no amount of Leakage shall be recovered more than once."</em></p>
+      <p><em>"5.3 Payment of Leakage. Any amount payable by the Seller pursuant to this Clause 5 shall be paid in immediately available funds, free and clear of any withholding or deduction, promptly upon demand by the Buyer and, in any event, no later than twenty-five (25) Business Days after the Seller's liability has been finally determined by written agreement between the Parties or by a final and binding decision in accordance with Clause 10. Without prejudice to the foregoing, the Buyer shall be entitled to set off any amount payable under this Clause 5 against any Deferred Purchase Price outstanding."</em></p>
+      <p><em>"5.4 Claims Period. The Seller shall have no liability under this Clause 5 unless the Buyer has given written notice of a claim to the Seller on or before the date falling thirteen (13) months after the Effective Date. For the avoidance of doubt, it shall be sufficient for the Buyer to notify the Seller of the nature of the claim and, to the extent reasonably practicable, an estimate of the amount claimed."</em></p>
+      <p><em>"5.5 Purchase Price Reduction. The Parties acknowledge and agree that any payment made by the Seller to the Buyer pursuant to this Clause 5 shall constitute a reduction of the Purchase Price and shall be treated as such by the Parties for all accounting, financial and tax purposes."</em></p>
+      <p>— Clause 5 (Leakage)</p>
+    </blockquote>
+    <div class="deck-explain"><strong>What this is doing:</strong> A textbook Locked Box leakage clause. Each sub-clause carries weight. <strong>5.1</strong> — "separate and independent obligation, not limited by buyer's knowledge." This is critical: in ordinary R&amp;W indemnification the buyer's knowledge of a breach typically reduces or eliminates the buyer's claim (the anti-sandbagging rule, Module 12). The Leakage covenant breaks this rule expressly because Leakage is a price adjustment, not a warranty claim. <strong>5.2</strong> — full indemnity, no threshold, de minimis, basket, or cap. Leakage is a pound-for-pound recovery. The Latin "<em>de minimis</em>" (of the smallest things) is expressly disapplied. <strong>5.3</strong> — set-off against Deferred Purchase Price. A practical enforcement tool — if the seller has not yet been paid the deferred portion, the buyer can simply withhold. <strong>5.4</strong> — 13-month claims period. Typical Leakage claims periods are 12–18 months; this one is at the lower end. <strong>5.5</strong> — Purchase Price Reduction. Important for tax: treating Leakage repayment as a price reduction (rather than as damages) means the tax authority should treat it consistently — the seller's tax cost on the original sale is reduced; the buyer does not have a taxable receipt. Without this clause, there is risk of double tax.</div>
+  </aside>
+
+  <h3>Why Locked Box dominates European mid-market PE</h3>
+
+  <ol>
+    <li><strong>Certainty for the seller.</strong> The price is fixed at Signing. No surprise clawback months later. PE sellers, with finite-life funds and a limited window to return capital to LPs, value certainty intensely.</li>
+    <li><strong>Simpler closing.</strong> No estimated statement, no closing balance sheet, no post-closing accounting work. The closing checklist is shorter.</li>
+    <li><strong>Cash management diligence shifts pre-Signing.</strong> The buyer must do its cash-debt-working-capital diligence on the Locked Box accounts <em>before</em> Signing — which is the right time to do it anyway. There is no "second bite" post-Closing.</li>
+    <li><strong>Auction efficiency.</strong> In a sell-side auction, presenting bidders with a Locked Box mechanism and audited Locked Box accounts levels the playing field — every bidder works from the same financial baseline.</li>
+    <li><strong>No accounting-firm involvement post-Closing.</strong> Closing Accounts disputes are slow and expensive (Audit Expert fees alone can run to £1m on a contested deal). Locked Box has nothing to dispute except whether Leakage has occurred — usually a much narrower question.</li>
+  </ol>
+
+  <h3>Why a buyer might still resist Locked Box</h3>
+
+  <ul>
+    <li><strong>Long interim period.</strong> If Closing is many months after Locked Box Date, a lot can happen. The buyer is buying a snapshot that grows stale; while the No Leakage covenant catches <em>value extraction</em>, it does <em>not</em> catch <em>value destruction</em> (deteriorating performance, lost customers, declining margins). MAE / Ordinary Course covenant remains the buyer's only protection on operational performance.</li>
+    <li><strong>Volatile working capital.</strong> If the business has unpredictable working-capital swings (seasonal, project-based), the buyer fears overpaying or underpaying.</li>
+    <li><strong>Quality of Locked Box accounts.</strong> If the accounts are not audited (or have issues identified in diligence), the buyer has no confidence in the baseline.</li>
+    <li><strong>Concerns about Permitted Leakage scope.</strong> If the Permitted Leakage list is too long or vague, the buyer has paid for value the seller can extract.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — Locked Box</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Locked Box Date as close to Signing as possible (so the snapshot is fresh); Permitted Leakage list as narrow as possible (challenge anything not strictly necessary); No Leakage covenant unbounded by knowledge or caps; long claims period (24 months); ticking fee at a low or zero rate.</li>
+      <li><strong>Seller wants:</strong> Locked Box Date as far back as possible (often the last audited year-end); broad Permitted Leakage list including all ordinary-course items, scheduled dividends, intercompany trading, transaction fees; claims period 12 months; ticking fee at a market interest rate (5–8% typical).</li>
+      <li><strong>Typical compromise:</strong> Locked Box Date = last audited year-end or recent month-end (depending on auction context); Permitted Leakage list expressly enumerated with monetary caps on each category; No Leakage covenant unlimited by knowledge but with 12–18 month claims period; ticking fee at a rate negotiated to compensate seller for use of cash but not punish buyer for clearance delay.</li>
+    </ul>
+  </aside>
+
+  <h2>Earn-out — contingent consideration</h2>
+
+  <p>An earn-out is a portion of the consideration that is contingent on post-Closing performance of the target. Typical structures:</p>
+
+  <ul>
+    <li><strong>Revenue-based earn-out</strong> — pay X% of revenue above a target.</li>
+    <li><strong>EBITDA-based earn-out</strong> — pay a multiple of EBITDA above a target.</li>
+    <li><strong>Milestone-based earn-out</strong> — pay on achievement of specific events (regulatory approval, contract win, technology validation).</li>
+    <li><strong>Hybrid</strong> — combinations of the above.</li>
+  </ul>
+
+  <p>Earn-outs are common in (i) earlier-stage / growth-company acquisitions where the parties cannot agree on a valuation, (ii) services businesses where revenue depends on continued seller-side relationships, (iii) life-sciences and technology deals with regulatory or technical milestones. Earn-outs are <em>also</em> the most litigated provision in M&amp;A — by a wide margin.</p>
+
+  <p><strong>What the data says (SRS Acquiom 2024 M&amp;A Deal Terms Study).</strong> Across SRS Acquiom's earn-out portfolio: earn-outs achieve approximately <strong>21 cents on the dollar</strong> of the maximum potential payment; <strong>28% are formally contested</strong>; the median measurement period is <strong>24 months</strong>; <strong>68%</strong> of earn-out deals use multiple metrics. The headline number for any senior partner discussion: a seller assuming the headline maximum is the expected value will be wildly disappointed.</p>
+
+  <h3>Linear vs cliff structures</h3>
+
+  <p>The first question a senior partner will ask before getting into milestones: <strong>linear or cliff?</strong></p>
+
+  <ul>
+    <li><strong>Linear earn-out</strong> — the payment scales pro rata with performance above the target. Example: Y1 EBITDA target £10m; if actual = £11m and the multiplier is £2 per £1, earn-out = £2m. If actual = £12m, earn-out = £4m. Smooth payoff curve; reduces the incentive for buyer or seller to game a single-year cliff.</li>
+    <li><strong>Cliff earn-out</strong> — binary: hit the threshold or pay nothing (or trigger a discrete bonus). Example: "if Y1 EBITDA reaches £10m, seller receives £5m; otherwise nothing." Sharp incentive but high gaming risk in years close to the threshold.</li>
+    <li><strong>Catch-up</strong> — a year-on-year reconciliation. If Y1 misses target by £2m and Y2 beats by £4m, a "catch-up" lets the cumulative shortfall be erased and the seller earn on the cumulative excess. Without catch-up, the missed Y1 is permanent. Sellers want catch-up; buyers resist.</li>
+    <li><strong>High-water mark vs annual reset</strong> — a high-water-mark earn-out only pays on excess above the previously-highest year; an annual-reset earn-out reverts to the same target each year regardless of prior outperformance.</li>
+  </ul>
+
+  <h3>Drafting traps</h3>
+
+  <p><strong>(i) Basis of accounts.</strong> Whose accounting policies apply post-Closing — the seller's pre-Closing policies, or the buyer's group policies? If the buyer consolidates the target into its group and applies its accounting standards, EBITDA can swing by millions. The seller wants pre-Closing policies preserved for the earn-out period; the buyer wants its own policies. Common compromise: define a frozen set of accounting policies in an annex to the SPA and apply them to the earn-out calculation only, even if the consolidated group accounts use different policies.</p>
+
+  <p><strong>(ii) <span class="term" data-term="anti-frustration-covenant">Anti-frustration covenants</span>.</strong> The buyer must not take action <em>designed to depress</em> the earn-out metrics. Typical drafting: "During the Earn-Out Period, the Buyer shall: (i) not take any action with the principal purpose of reducing the Earn-Out Payment; (ii) not transfer assets out of the target other than at fair value; (iii) not transfer customers, revenue, or contracts out of the target other than for proper commercial reasons; (iv) operate the target as a separate business unit and provide reasonable resources for its growth."</p>
+
+  <p>The case law:</p>
+
+  <ul>
+    <li><em>Lazard Technology Partners, LLC v. QinetiQ North America Operations LLC</em>, 114 A.3d 193 (Del. 2015) (Strine, C.J.) — Delaware Supreme Court case on the implied covenant of good faith and fair dealing as applied to earn-outs. The Court of Chancery has consistently refused to <em>expand</em> express earn-out drafting via the implied covenant — the buyer's obligations are only what the contract says they are. Sellers should not rely on the implied covenant to fill drafting gaps.</li>
+    <li><em>Airborne Health, Inc. v. Squid Soap, LP</em>, 984 A.2d 126 (Del. Ch. 2009) — Delaware case finding that the implied covenant of good faith <em>might</em> require a buyer not to engage in "post hoc opportunism" that frustrates the purpose of the earn-out, but it cannot rewrite specific commercial terms the parties expressly agreed.</li>
+    <li><em>Winshall v. Viacom International Inc.</em>, 76 A.3d 808 (Del. 2013) — Delaware Supreme Court holding that the implied covenant did not require the buyer to forego business decisions that incidentally reduced the earn-out (here, declining to renew a particular distribution agreement). Strict reading of express terms.</li>
+    <li><em>Porton Capital Technology Funds v. 3M UK Holdings Ltd</em> [2011] EWHC 2895 (Comm) — Eder J held that 3M (the buyer) was in <strong>breach</strong> of its express contractual obligation to "diligently seek" regulatory approval for the acquired BacLite product. The seller substantially won. The case is therefore not "buyer wins under strict construction" but the inverse: <strong>express obligations bite</strong>. The lesson is that both sides must draft tightly — the seller cannot rely on the implied covenant of good faith to fill gaps, but where the contract <em>does</em> impose an express obligation on the buyer (e.g., "diligently seek", "use reasonable endeavours", "operate as a separate business unit"), that obligation will be enforced.</li>
+  </ul>
+
+  <p><strong>Lesson from the case law: earn-outs are interpreted strictly on what is expressly written.</strong> Sellers cannot rely on the implied covenant to rescue them from drafting gaps, but well-drafted express obligations on the buyer (anti-frustration covenants, business-conduct obligations, "diligently seek" obligations on regulatory milestones) <em>will</em> be enforced (per <em>Porton Capital</em>). Negotiate explicit anti-frustration covenants, explicit business-conduct obligations, and explicit accounting rules.</p>
+
+  <p><strong>(iii) Measurement period.</strong> Typical 1–3 years. Longer measurement periods give a fairer view but compound the integration / accounting risk; shorter periods are easier to administer but can produce volatile outcomes.</p>
+
+  <p><strong>(iv) Acceleration on change of control of buyer.</strong> If the buyer is itself acquired during the earn-out period, the earn-out should accelerate (typically paying out the maximum possible) — otherwise the new buyer may have no incentive to maintain the earned-out business. Drafting: "Upon any Change of Control of the Buyer during the Earn-Out Period, the Earn-Out Payment shall be deemed earned at the maximum amount and immediately payable." Sellers fight for this; buyers resist (because it is a poison pill against future acquisitions of the buyer).</p>
+
+  <p><strong>(v) Dispute resolution.</strong> Earn-out disputes follow the Closing Accounts model — Adjustment Notice, Objection Notice, Audit Expert. But the disputes are deeper and more contentious because they reach into commercial conduct (was a particular customer lost because of buyer's actions?) rather than just accounting. A partner-grade question: <strong>"are we on a baseball arbitration or a free-form determination?"</strong> Baseball / final-offer arbitration (each side submits a number; expert picks one, no compromise) is increasingly common in US price disputes and is meaningfully different from free-form expert determination — it deters aggressive Adjustment Notices because the most extreme position loses outright.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — earn-out</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> short measurement period (1 year); EBITDA target set high; full integration discretion (no anti-frustration covenant); buyer's accounting policies; cap on earn-out at a fixed amount; no acceleration on change of control.</li>
+      <li><strong>Seller wants:</strong> longer measurement period (3 years, allowing for volatility); EBITDA target set at last-twelve-months pre-Closing; tight anti-frustration covenants requiring target operated as a separate business unit; pre-Closing accounting policies preserved; uncapped earn-out; full acceleration on change of control of buyer.</li>
+      <li><strong>Typical compromise:</strong> 2-year measurement period; target = last-twelve-months EBITDA at Signing; anti-frustration covenant with enumerated obligations (separate business unit, fair-value asset transfers, no customer reallocation); accounting policies frozen as at Signing for earn-out purposes; cap at 2x the target purchase price; partial acceleration on change of control of buyer (typically 50% to 100% of remaining earn-out).</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — earn-outs</h5>
+    <ul>
+      <li><strong>No definition of EBITDA.</strong> "EBITDA" is not a GAAP term. The SPA must define it clause-by-clause (which line items, what adjustments, what exclusions for one-off items, restructuring, M&amp;A costs).</li>
+      <li><strong>Operational discretion not constrained.</strong> The buyer's freedom to integrate becomes the seller's earn-out destruction.</li>
+      <li><strong>No annex of frozen accounting policies.</strong> Without a frozen set, the buyer can simply change accounting policies and reduce earn-out.</li>
+      <li><strong>Acceleration silent on change of control of target.</strong> What if the buyer sells the earned-out business to a third party? Earn-out should typically pay out (or transfer to the new owner with the seller's protection intact).</li>
+    </ul>
+  </aside>
+
+  <h2>Escrow / Holdback</h2>
+
+  <p>An escrow (in U.S. practice often "escrow"; in some markets simply "holdback") is a portion of the purchase price held back at Closing to secure the seller's post-Closing obligations.</p>
+
+  <p>Structure:</p>
+
+  <ul>
+    <li><span class="term" data-term="escrow-agent">Escrow Agent</span> — typically a commercial bank (HSBC, Citi, Morgan Stanley, Citco) acting as agent under an Escrow Agreement signed by buyer, seller, and agent at Closing.</li>
+    <li><strong>Escrow Account</strong> — a segregated bank account, interest-bearing, held in the parties' joint name.</li>
+    <li><strong>Release mechanics</strong> — funds released only on (i) joint instruction of buyer and seller, (ii) determination by an Audit Expert, or (iii) court order.</li>
+  </ul>
+
+  <h3>Sub-escrows — the typical split</h3>
+
+  <p>On a sophisticated deal, the escrow is split into multiple sub-accounts:</p>
+
+  <ul>
+    <li><strong>General Indemnity Escrow</strong> — covers warranty and tax indemnification claims. Released at the end of the survival period (typically 18–24 months for general warranties; 7 years for tax under UK practice, equivalent to the statutory tax-claim survival period).</li>
+    <li><strong>Special Indemnity Escrow</strong> — covers specific identified risks (e.g., a pending litigation, a known regulatory investigation, a tax position under audit). Released on resolution of the specific risk.</li>
+    <li><strong>Working Capital Escrow</strong> (under Closing Accounts mechanisms) — covers the post-Closing working-capital true-up. Released after Closing Accounts are finalised (typically 90–180 days).</li>
+    <li><strong>Earn-out Escrow</strong> — where the buyer's covenant to pay the earn-out is itself secured.</li>
+  </ul>
+
+  <h3>Typical sizes</h3>
+
+  <ul>
+    <li>General Indemnity Escrow: <strong>5–15% of equity value</strong> remained typical pre-2020 for non-RWI deals. Per the <strong>2025 ABA Private Target M&amp;A Deal Points Study</strong> (139-deal sample, transactions in 2024–Q1 2025), <strong>63% of US private deals now reference RWI</strong> and escrow sizes have compressed materially as RWI has displaced classic indemnity escrow. The headline shift: from "5–15% escrow as norm" to "escrow as the W&amp;I retention proxy plus a small bring-down / true-up reserve."</li>
+    <li>Special Indemnity Escrow: sized to the specific risk (often the maximum credible exposure plus a buffer).</li>
+    <li>Working Capital Escrow: 1–3% of price, sized to the maximum credible swing.</li>
+  </ul>
+
+  <h3>The W&amp;I substitution dynamic — synthetic / no-recourse exits</h3>
+
+  <p>The dominant European PE exit pattern (and increasingly mid-market US) is a <strong>synthetic / no-recourse SPA</strong>: cap = €1, basket = €1, escrow = nil; the buyer's <em>only</em> recourse for warranty breach is the W&amp;I policy. The R&amp;W package is drafted to satisfy the W&amp;I underwriter, not as real contractual liability. This collapses the entire indemnification regime into a relationship between the buyer and the insurer — the seller is functionally walking away clean.</p>
+
+  <p>Per <strong>Marsh European M&amp;A Insurance Trends 2024</strong>, average W&amp;I retention has dropped to ~<strong>0.5% of enterprise value at signing</strong> for transactions over €100M. The retention is functionally identical to a working-capital deductible (the source-deck's €100,000 deductible is the same conceptual structure): the buyer wears the first dollar of loss; the policy pays above retention. The interplay is critical — <strong>retention + basket / escrow = "first dollar" risk allocation</strong>. In a no-recourse deal there is no SPA basket, just policy retention; in a hybrid, both must be aligned to avoid gaps or overlaps.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — escrow</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> large escrow (10–15%); long survival; broad release conditions favouring buyer.</li>
+      <li><strong>Seller wants:</strong> small escrow (3–5%); short survival; tight release conditions; alternative mechanisms (W&amp;I insurance) instead of escrow.</li>
+      <li><strong>Typical compromise (no W&amp;I):</strong> 5–10% general escrow with 18-month survival; specific indemnity escrows for identified risks; working-capital escrow at 1–2%.</li>
+      <li><strong>Typical compromise (with W&amp;I, the dominant pattern in European PE exits):</strong> escrow eliminated or reduced to a small bring-down reserve; W&amp;I policy at ~10% of EV with 0.5% retention; SPA cap at €1 / nil-recourse with fundamental R&amp;Ws and fraud carved out at full uncapped seller liability.</li>
+    </ul>
+  </aside>
+
+  <h2>Anti-embarrassment / anti-flip clauses</h2>
+
+  <p>A seller-favourable clause: if the buyer "flips" (resells) the target within a defined period (typically 12–24 months) at a profit, the seller receives a percentage (typically 25–50%) of the profit.</p>
+
+  <p>Two purposes:</p>
+
+  <ul>
+    <li><strong>Reputational (anti-embarrassment).</strong> The seller does not want to read in the <em>Financial Times</em> eight months later that the buyer resold at twice the price — implying the seller was "had."</li>
+    <li><strong>Economic (profit-sharing).</strong> A simple sharing of upside.</li>
+  </ul>
+
+  <p>Typical drafting: <em>"If during the period of [18] months following the Closing Date the Buyer (or any of its Affiliates) sells, transfers, or otherwise disposes of the Shares (or all or substantially all of the assets of the Target) to a third party (other than to an Affiliate) at a price (the 'Resale Price') exceeding the Purchase Price, the Buyer shall pay to the Seller [50]% of the difference between the Resale Price and the Purchase Price (less the Buyer's reasonable transaction costs)."</em></p>
+
+  <p>Drafting traps:</p>
+
+  <ul>
+    <li><strong>Carve-out for genuine value-add.</strong> What if the buyer integrates the target with another acquisition and the resulting value is enhanced? Some clauses exclude resale of an integrated business; the seller wants this narrow.</li>
+    <li><strong>Internal restructuring.</strong> Transfers to affiliates should be excluded (or the seller's right rolls forward).</li>
+    <li><strong>Definition of "Resale Price."</strong> Currency adjustments, contingent consideration, equity rollovers — all complicate the calculation.</li>
+  </ul>
+
+  <h2>Deferred consideration</h2>
+
+  <p>Three flavours:</p>
+
+  <p><strong>Vendor loan notes / deferred cash.</strong> A portion of the price is paid as a loan note (typically interest-bearing, sometimes redeemable on a fixed schedule, sometimes redeemable only on certain events). Common where the buyer has limited financing capacity, where the seller is willing to act as financier, or where deferred consideration provides a natural set-off mechanism for indemnification claims.</p>
+
+  <p><strong>Equity rollover / share-for-share.</strong> The seller takes part of consideration in shares of the buyer (or, in a PE deal, in shares of the buyer's NewCo / TopCo). The rollover shares are typically locked up (3–5 years vesting) and subject to good-leaver / bad-leaver provisions. Rollover is critical in private-equity transactions where the PE buyer wants management aligned with the next exit.</p>
+
+  <p><strong>Seller financing.</strong> The seller provides explicit financing — a loan to the buyer secured against the target's shares or assets. Common in distressed sales or family-business transactions.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever — deferred consideration</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Long deferral; low interest rate; explicit set-off rights for indemnification claims; subordination of vendor loan notes to senior debt.</li>
+      <li><strong>Seller wants:</strong> Short deferral; market interest rate; no set-off rights; <span class="term" data-term="pari-passu">pari passu</span> (Latin: "with equal step" — meaning ranking equally) ranking with other unsecured creditors; security if available.</li>
+      <li><strong>Typical compromise:</strong> 2–5 year deferral; market interest rate (typically benchmarked to a base rate plus margin); set-off rights for finally-determined indemnification claims; subordination to senior debt but ahead of equity.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls — deferred consideration</h5>
+    <ul>
+      <li><strong>Vendor loan notes silent on insolvency.</strong> If the buyer becomes insolvent, the seller must know its ranking.</li>
+      <li><strong>Equity rollover without anti-dilution protection.</strong> If the buyer subsequently raises equity at a lower price, the seller's rolled-over equity is diluted; some protection (anti-dilution, weighted average) is standard for sophisticated PE rollovers.</li>
+      <li><strong>No tax election.</strong> Equity rollover may be a tax-free event (in UK, share-for-share treatment under TCGA 1992 s.135 with HMRC clearance) or a taxable disposal — the SPA should specify the tax treatment and require the buyer to support any clearance applications.</li>
+    </ul>
+  </aside>
+
+  <h2>Worked example — a layered consideration package on a £200m UK PE deal</h2>
+
+  <table class="dt">
+    <thead><tr><th>Element</th><th>Amount</th><th>Mechanism</th></tr></thead>
+    <tbody>
+      <tr><td>Cash paid at Closing</td><td>£150m</td><td>Wire on Closing</td></tr>
+      <tr><td>Escrow (general indemnity)</td><td>£15m</td><td>18-month survival; Big Four escrow agent</td></tr>
+      <tr><td>Vendor loan notes</td><td>£20m</td><td>4-year, interest at base + 4%, subordinated to senior debt</td></tr>
+      <tr><td>Management equity rollover</td><td>£10m</td><td>Rollover into TopCo equity; 4-year vesting; good/bad leaver</td></tr>
+      <tr><td>Earn-out</td><td>up to £25m</td><td>2-year, EBITDA-based, target = LTM EBITDA at Signing</td></tr>
+    </tbody>
+  </table>
+
+  <p>The funds-flow on Closing: £150m to the seller's bank account, £15m to the escrow account, £20m vendor loan note instrument issued to seller, £10m TopCo shares issued to seller-management, no earn-out cash paid at Closing (deferred). Total £195m at Closing, with £25m contingent.</p>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>The pricing question is "when does economic ownership transfer?" Closing Accounts: at Closing, with a post-Closing true-up. Locked Box: at the Locked Box Date (pre-Signing), with a No Leakage covenant protecting the buyer.</li>
+      <li>Equity Bridge: Equity Value = Enterprise Value − Net Debt + Excess Cash + (Actual Working Capital − Target Working Capital). Cash, debt, and working-capital definitions are fought clause-by-clause.</li>
+      <li>Closing Accounts dispute path: Adjustment Notice → Objection Notice → negotiation → Audit Expert (acting as expert, not arbitrator). Under <em>Jones v. Sherwood</em>, expert determination is binding with narrow review (fraud, partiality, departure from instructions, manifest error).</li>
+      <li>Locked Box: No Leakage Covenant given as a separate independent obligation; not subject to threshold, de minimis, basket, or cap; not limited by buyer's knowledge. Permitted Leakage is the carve-out list. Ticking fee compensates seller for the cash deferral.</li>
+      <li>Earn-outs are interpreted strictly (<em>Winshall</em>, <em>Porton</em>) — sellers cannot rely on the implied covenant of good faith to fill drafting gaps. Negotiate explicit anti-frustration covenants, frozen accounting policies, and acceleration on change of control of buyer.</li>
+      <li>Escrow: typically 5–15% of equity value, 18–24 month survival, multiple sub-escrows for distinct risks. W&amp;I insurance increasingly replaces escrow in PE exits.</li>
+      <li>Deferred consideration: vendor loan notes, equity rollover (locked up with good/bad leaver provisions), seller financing. Tax treatment must be specified.</li>
+      <li>Treating Leakage repayment as a Purchase Price Reduction (not damages) avoids double tax.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="10-closing.html" class="prev">Closing Mechanics</a>
+    <a href="12-reps-and-warranties.html" class="next">Representations &amp; Warranties</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

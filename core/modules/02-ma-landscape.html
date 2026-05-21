@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 02 — The M&amp;A Landscape &amp; Process · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="02">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 02</div>
+    <h1>The M&amp;A Landscape &amp; Process</h1>
+    <p class="subtitle">Deal types, buyer categories, the canonical sell-side auction, the bilateral alternative, and the economics of the advisor syndicate that runs the process.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Identify the principal deal types (<span class="term" data-term="acquisition">acquisition</span>, <span class="term" data-term="merger">merger</span>, <span class="term" data-term="consolidation">consolidation</span>; <span class="term" data-term="horizontal-merger">horizontal</span>, <span class="term" data-term="vertical-merger">vertical</span>, <span class="term" data-term="conglomerate-merger">conglomerate</span>) and the principal categories of buyer (<span class="term" data-term="strategic-acquirer">strategic</span>, <span class="term" data-term="financial-sponsor">financial sponsor / private equity</span>, <span class="term" data-term="family-office">family office</span>, <span class="term" data-term="sovereign-wealth-fund">sovereign wealth</span>, <span class="term" data-term="founder-seller">founder-seller</span>, public company).</li>
+      <li>Walk through the M&amp;A lifecycle in order: origination, strategy, target identification, approach, preliminary documents, due diligence, SPA negotiation, signing, conditions precedent satisfaction, closing, integration.</li>
+      <li>Distinguish a competitive auction process from a bilateral negotiated process, list the canonical steps of an auction (<span class="term" data-term="teaser">teaser</span> → <span class="term" data-term="cim">CIM</span> → first-round bids → <span class="term" data-term="process-letter">process letter</span> → management presentations → <span class="term" data-term="data-room">data room</span> → second-round bids → <span class="term" data-term="exclusivity">exclusivity</span> → signing) and explain when each is used.</li>
+      <li>Outline the role and economics of investment-bank advisors (<span class="term" data-term="engagement-letter">engagement letter</span>, <span class="term" data-term="retainer">retainer</span>, <span class="term" data-term="success-fee">success fee</span>, fairness opinion) and the role of legal, financial, tax, and other DD providers.</li>
+      <li>Identify the principal UK, US and EU M&amp;A law firms (high-level) and place a deal on the <span class="term" data-term="mid-market">mid-market</span> / <span class="term" data-term="large-cap">large-cap</span> / <span class="term" data-term="mega-deal">mega-deal</span> spectrum.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> A non-lawyer in deal team meetings will hear speakers casually drop "the IM is in Q4 prep", "we're at IOI stage", "the fairness opinion is going to the board next Tuesday" — without a fluent map of the process, none of this is actionable. The same words also describe very different deal mechanics depending on whether the seller is running an auction (price discipline, less buyer leverage) or a bilateral (negotiated price, more seller dependency on the single buyer). Recognising who the buyer is — strategic vs financial sponsor — predicts deal style: a strategic typically bids on synergies and is willing to over-pay if integration logic is compelling; a financial sponsor bids to a model with a leverage assumption and an exit horizon.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Stalking horse"</strong> — in a distressed sale (typically Chapter 11 § 363), the <span class="term" data-term="stalking-horse">first bidder</span> whose offer sets the floor for an auction; locked in by an asset purchase agreement before bidding opens, and protected by a break fee plus expense reimbursement if outbid.</li>
+      <li><strong>"BAFO"</strong> — <span class="term" data-term="bafo">Best And Final Offer</span>; the banker's signal to remaining bidders that this is their last chance to put their best price on the table. The discipline is partly a ritual — a topping bid may still be entertained if it shows up before signing.</li>
+      <li><strong>"Proprietary deal"</strong> — a <span class="term" data-term="proprietary-deal">bilateral negotiation with a single buyer</span> (no auction). PE shorthand: "we're going proprietary with Bain Capital" — meaning they have a direct line to the seller and want to avoid an auction premium.</li>
+      <li><strong>"Go-shop"</strong> — a <span class="term" data-term="go-shop">post-signing solicitation window</span> (typically 25–50 days) during which the target may actively shop the deal to find a topping bid. Common in PE take-privates (Dell, Twitter pre-Musk) where the board wants comfort that it has tested the market.</li>
+      <li><strong>"Fairness opinion lift"</strong> — the price increase, just before signing, that "lifts" the deal from being unfairly low to being able to support a fairness opinion. Bankers go back to the model and refresh the synergy case.</li>
+      <li><strong>"Tail provision"</strong> — engagement-letter clause that pays the bank a success fee if the seller closes a deal with an "introduced" buyer within X months after engagement termination. The fight is over the definition of "introduced" (anyone the bank named? anyone at the bank's invitation? anyone the seller already knew?) and the length of the tail (12–24 months is typical).</li>
+      <li><strong>"Hello letter"</strong> — short letter from a banker to a corporate development team formally announcing the bank's mandate and asking for first-round interest; the literal opening move in a sell-side process.</li>
+      <li><strong>"Hell-or-high-water"</strong> — buyer covenant taking <em>all</em> regulatory risk (including divestitures and behavioural remedies) to get antitrust / FDI clearance. The strongest possible buyer commitment.</li>
+      <li><strong>"Topping bid"</strong> — a competing bid that arrives <em>after</em> a preferred bidder has been selected (or after signing in a public deal) and exceeds the existing offer. Whether it is entertained depends on the seller's exclusivity stage (pre-signing) or the merger agreement's no-shop / fiduciary-out architecture (post-signing).</li>
+      <li><strong>"Club deal"</strong> — two or more PE sponsors team up to bid jointly, splitting equity (and therefore the leverage and exit). Common in upper-mid and large-cap deals where one fund cannot write the cheque solo. The 2007 SunGard consortium (seven sponsors at ~$11.3bn) was the canonical post-2000 example. Antitrust risk: club deals can attract collusion scrutiny if the same sponsors repeat-bid together.</li>
+      <li><strong>"Sponsor-to-sponsor"</strong> (or "secondary buyout") — sale from one PE fund to another. Now the largest single category of PE exits. Attractions: speed, sophistication on both sides, no integration drag. Risks: same-PE-language SPA tends to be tighter than a strategic-buyer SPA.</li>
+      <li><strong>"Locked-up bidder"</strong> — a bidder who has signed an irrevocable undertaking to vote / tender / accept the deal, locking up a percentage of the shares before announcement. Common in UK take-privates; the UK Code (Rule 19.2) regulates timing of irrevocable disclosures.</li>
+      <li><strong>"RWI Day 1"</strong> — the buyer indicates in its IOI that it will procure Representations and Warranties Insurance from signing, removing the need for a seller indemnity and aligning the auction bid with sell-side preferences. A signal of bid sophistication and seriousness.</li>
+      <li><strong>"Clean SPA mark-up"</strong> — buyer submits a second-round mark-up of the seller's draft SPA with minimal redlines (no new conditions, no new MAC carve-backs, no new specific indemnities). The phrase signals deal-certainty and is often part of how a buyer differentiates inside an auction.</li>
+    </ul>
+  </aside>
+
+  <h2>Deal types — taxonomy</h2>
+
+  <p><strong>By legal mechanic:</strong></p>
+  <ul>
+    <li><strong>Acquisition</strong> (the umbrella term) — one party acquires control of another. Sub-types include share deal (buy the shares), asset deal (buy the assets), tender offer, scheme of arrangement.</li>
+    <li><strong>Merger and consolidation under DGCL § 251.</strong> The Delaware statute <em>covers both</em>: in a <em>merger</em>, two corporations combine and one (the "surviving corporation") survives while the other ceases; in a <em>consolidation</em>, both cease and a <em>new</em> entity is formed. Both are statutory routes under the same § 251 (and parallel sections for cross-form / cross-state combinations). Outside the US, "merger" is often used loosely as a synonym for "M&amp;A". Consolidations in the strict sense are rare today because the tax and regulatory cost of forming a new entity rarely outweighs the benefit of one of the constituents continuing.</li>
+  </ul>
+
+  <p><strong>By strategic logic:</strong></p>
+  <ul>
+    <li><strong>Horizontal</strong> — buyer and target are in the same product market and competitor stage of the value chain. Drives most market consolidation; raises the most antitrust concerns.</li>
+    <li><strong>Vertical</strong> — buyer and target are at different stages of the same value chain (e.g. a manufacturer buying a distributor). Antitrust concern is "input foreclosure" or "customer foreclosure".</li>
+    <li><strong>Conglomerate</strong> — buyer and target operate in unrelated markets. Pure conglomerate combinations are rare today (1960s-style conglomerates fell out of fashion); sub-types include "product-extension" (related product) and "market-extension" (related geography).</li>
+  </ul>
+
+  <h2>Parties to an M&amp;A deal</h2>
+
+  <ul>
+    <li><strong>Strategic acquirer</strong> — an operating company in (or adjacent to) the target's industry. Bids on the strategic logic: synergies (cost: combine back-office, manufacturing, supply chain; revenue: cross-sell, geographic expansion). Long holding period; typically pays the highest price because synergies are real to it. Examples: Microsoft acquiring Activision Blizzard 2023; Mars acquiring Kellanova 2024.</li>
+    <li><strong>Financial sponsor / private equity (PE)</strong> — funds (with a typical 10-year term, 5-year investment period plus 5-year holding/exit) that buy companies, lever them with debt, improve them, and sell within ~3–7 years. Bids to a leveraged buyout (LBO) model with an Internal Rate of Return (IRR) target (high teens to 20%+). Major sponsors: Blackstone, KKR, Apollo, CVC, EQT, Bain Capital, TPG, Advent, Permira.</li>
+    <li><strong>Family office</strong> — privately-held vehicle for one or more wealthy families. No fixed holding period (this is an explicit competitive advantage — they can hold "forever"), often more flexible terms, but slower decision-making and smaller cheque sizes. Have grown materially as direct deal participants.</li>
+    <li><strong>Sovereign wealth fund (SWF)</strong> — state-owned investor: Abu Dhabi Investment Authority (ADIA), Mubadala, GIC (Singapore), Temasek, Norway's Norges Bank Investment Management (NBIM), Saudi Arabia's Public Investment Fund (PIF), Qatar Investment Authority (QIA). Mostly co-investors alongside PE, with growing direct deal capability. Usually long-hold and politically sensitive (frequently triggers Foreign Direct Investment (FDI) screening reviews).</li>
+    <li><strong>Founder-seller</strong> — the original entrepreneur exiting. Bring emotional attachment, often inexperience with sale processes. Common targets in lower-mid-market PE.</li>
+    <li><strong>Public company</strong> — bidding strategically (spending cash or stock) or being bought (subject to public-company rules like the UK Takeover Code or US tender offer rules under the Williams Act 1968 — § 13(d) requires 5%-stake disclosure within 10 days of crossing the threshold; § 14(d) governs tender-offer disclosure (Schedule TO); § 14(e) is the anti-fraud rule).</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Deal-style determines clauses — the cascade</h5>
+    <p>Buyer category is the upstream choice that shapes every downstream clause:</p>
+    <ul>
+      <li><strong>PE buyer</strong> → leveraged structure → financing-out / Sungard-clean conditionality → RWI on Day 1 → tighter reps with knowledge / materiality qualifiers → smaller indemnification regime → bigger W&amp;I retention fight → tax structuring is critical.</li>
+      <li><strong>Strategic buyer</strong> → cash on hand or stock currency → no financing-out → harder synergy DD (will integration deliver?) → tax step-up structuring more important → integration-led interim covenants ("preserve the team", "no key-employee departures") → longer post-closing covenants (non-compete, non-solicit).</li>
+      <li><strong>Founder-seller</strong> → emotional / inexperienced → may resist any indemnification regime → rollover equity often used → seller-favourable basket and cap; buyer typically buys W&amp;I to compensate.</li>
+      <li><strong>Sovereign / state-linked buyer</strong> → mandatory FDI screening → deal timeline extended; hell-or-high-water typically <em>not</em> agreed (state buyer cannot risk losing antitrust); reverse break-fee may carry political risk premium.</li>
+    </ul>
+  </aside>
+
+  <h2>The M&amp;A lifecycle</h2>
+
+  <p>Mainstream sell-side timeline, from instruction to integration, looks like this — typically 6–9 months for a mid-market private deal, longer for a public deal or contested auction:</p>
+
+  <ol>
+    <li><strong>Origination</strong> — investment banker or sponsor identifies a sale opportunity (proactive pitch, mandate from the seller, response to RFP, relationship-driven introduction).</li>
+    <li><strong>Strategy</strong> — internal alignment on objectives, sale rationale, deal value drivers.</li>
+    <li><strong>Target identification</strong> (buy-side) or <strong>buyer universe development</strong> (sell-side) — long-list of strategic and financial candidates, narrowed to a short-list with priority tiers.</li>
+    <li><strong>Approach</strong> — for sell-side: the banker contacts targeted potential buyers, gauges interest, arranges initial conversations under (or before) a <span class="term" data-term="nda">Non-Disclosure Agreement (NDA)</span>.</li>
+    <li><strong>Preliminary documents</strong> — NDA / Confidentiality Agreement; <span class="term" data-term="loi">Letter of Intent (LOI)</span> or Term Sheet (sometimes called <span class="term" data-term="mou">Memorandum of Understanding (MOU)</span> or Heads of Terms (HoTs)); <span class="term" data-term="exclusivity-agreement">exclusivity agreement</span>.</li>
+    <li><strong>Due Diligence (DD)</strong> — financial, legal, tax, commercial, operational, IT, IP, environmental, regulatory, HR, insurance. Conducted via a Virtual Data Room (VDR — Intralinks, Datasite (rebranded from Merrill DatasiteOne in 2018), Ansarada, ShareVault, iDeals). Buyer's advisors deliver Reports.</li>
+    <li><strong>SPA negotiation</strong> — drafting and negotiating the Sale and Purchase Agreement plus disclosure letter (UK) / disclosure schedules (US), shareholders' agreement (if minority retained), transitional services agreement (TSA), escrow agreement, ancillary documents.</li>
+    <li><strong>Signing</strong> — execution of the SPA. From this point, the parties are bound to close subject to satisfaction of CPs.</li>
+    <li><strong>CP satisfaction (interim period)</strong> — antitrust and FDI clearances obtained, third-party consents secured, no Material Adverse Change (MAC), etc. Buyer monitors the seller's compliance with interim covenants ("conduct of business" restrictions).</li>
+    <li><strong>Closing (completion)</strong> — exchange of shares for consideration, board changes, deliveries of corporate records, repayment of intra-group debt, release of guarantees.</li>
+    <li><strong>Integration / post-closing</strong> — buyer's integration team executes the integration plan; tax structuring is implemented; transitional services run (typically 6–18 months); earn-out periods begin (if any); working capital and net debt true-ups complete.</li>
+  </ol>
+
+  <h2>Auction vs. bilateral negotiated processes</h2>
+
+  <p>In a <strong>competitive auction</strong>, the seller's investment bank runs a structured process designed to elicit the best price by maximising bidder competition. In a <strong>bilateral negotiated process</strong> (sometimes called "exclusive negotiations" or "proprietary deal"), a single buyer is approached and the deal is negotiated without competition.</p>
+
+  <p>Sellers prefer auctions when the asset is attractive enough to draw multiple credible bidders (most large-cap deals). Buyers prefer bilateral when they have a unique angle (e.g. a strategic fit no other buyer can match, or a sponsor-to-sponsor "secondary" sale at a relationship level), because they avoid the competitive premium and have more time and information leverage. Auctions cost more, take more management time, and risk leaks; bilaterals are quieter but the seller gets less price tension.</p>
+
+  <h2>Auction process — canonical steps</h2>
+
+  <p>The standard "two-stage" sell-side auction looks like this (some deals use single-round; some use three rounds for very large or complex assets):</p>
+
+  <ol>
+    <li><strong>Preparation</strong> — banker prepares a teaser and Confidential Information Memorandum (CIM, also called Information Memorandum (IM) or Offering Memorandum), populates the data room (often "<span class="term" data-term="vendor-dd">vendor due diligence</span>" reports from financial / legal / tax / commercial advisers), and finalises the buyer list.</li>
+    <li><strong>Teaser distribution</strong> — anonymous one- or two-page summary of the opportunity sent to long-list of potential buyers, identifying the company only as e.g. "a leading European specialty chemicals company with €X revenue".</li>
+    <li><strong>NDA execution</strong> — interested buyers sign an NDA to receive the CIM.</li>
+    <li><strong>CIM distribution</strong> — typically 50–100+ pages: company overview, market, growth drivers, financials (3–5 years historical plus 3–5 years projected), management team, transaction process and timeline.</li>
+    <li><strong>First-round bids</strong> (Indicative Offer / <span class="term" data-term="ioi">Indication of Interest (IOI)</span>) — buyers submit non-binding indicative bids by a deadline. Format: a price range, description of buyer / financing, key conditions, expected DD requirements, expected timeline.</li>
+    <li><strong>Process letter</strong> — banker sends to short-listed buyers detailing access to the data room, dates of management presentations, format and deadlines for second-round bids, contractual mark-ups.</li>
+    <li><strong>Management presentations</strong> — short-listed buyers meet management (typically a half-day or day per buyer); banker manages choreography to avoid information asymmetry.</li>
+    <li><strong>Data room access</strong> — short-listed buyers receive full data-room access. They commission their own DD (or rely on vendor DD) and prepare their bid. The process letter sets ground rules: questions submitted via the data-room platform with banker as gatekeeper.</li>
+    <li><strong>Second-round (final / binding) bids</strong> — buyers submit a marked-up SPA (showing their preferred deal terms), confirmed financing, and final price. These bids are firm.</li>
+    <li><strong>Bidder selection / negotiations</strong> — seller picks a preferred bidder (sometimes two — an "alpha" and a "back-up") and negotiates final terms. May include a final round of "best and final" calls.</li>
+    <li><strong>Exclusivity</strong> — the seller grants the preferred bidder exclusivity for a defined period (typically 4–6 weeks for mid-market private deals; 8–12 weeks on large-cap, complex carve-outs, or cross-border deals where antitrust pre-clearance work begins inside exclusivity). During exclusivity, the seller may not solicit or negotiate with others.</li>
+    <li><strong>Signing</strong> — once SPA is agreed, the parties sign.</li>
+  </ol>
+
+  <aside class="lever buyer">
+    <h5>Buy-side perspective — how a buyer differentiates inside an auction</h5>
+    <p>The CIM and process letter give the same information to all bidders. Differentiation is in the <em>response</em>:</p>
+    <ul>
+      <li><strong>Financing certainty.</strong> An IOI saying "all-cash, no financing contingency" beats "subject to financing"; debt commitment letters delivered with the second-round bid (rather than later) signal seriousness. PE bidders attach equity commitment letters from the fund and Sungard-clean debt commitment letters at signing.</li>
+      <li><strong>Regulatory speed and risk allocation.</strong> Flag CFIUS / EU FDI / antitrust touchpoints in the IOI rather than getting dropped at round two for surprise filings. Offer hell-or-high-water (HOHW) or a divestiture cap to make the buyer's regulatory risk allocation explicit.</li>
+      <li><strong>"Clean SPA mark-up."</strong> Mark up the seller's draft SPA with minimal redlines. No new conditions precedent, no new MAC carve-back, no new specific indemnities. A clean mark-up is itself a credibility signal.</li>
+      <li><strong>RWI on Day 1.</strong> Indicate in the IOI that the buyer will procure W&amp;I / RWI insurance, removing the need for a seller indemnity. This aligns the buyer's bid with the sell-side's preference for a clean break — particularly compelling to PE sellers.</li>
+      <li><strong>Reverse termination fee (RTF).</strong> Offering an RTF (regulatory or financing failure) shifts risk to the buyer and increases the certainty of the seller's outcome. Differentiates inside a tight bid.</li>
+      <li><strong>Process-letter compliance vs differentiation.</strong> The process letter usually bars round-one mark-ups. Buyers must decide: comply (match the discipline of the process) or lead with a mark-up to differentiate (signal seriousness). Sophisticated process letters anticipate this and impose penalties for violation.</li>
+      <li><strong>Management chemistry.</strong> Allocation of bid points to "team continuity" can sway a founder-seller. PE buyers offer rollover equity and ESOP refresh; strategics offer key-employee retention bonuses and named CEO continuity.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>How an auction actually goes wrong</h5>
+    <ul>
+      <li><strong>Leak.</strong> A leaked rumour during the second round can crater customer confidence and accelerate employee departures. The seller's banker and counsel impose tight information protocols and the NDA list shrinks to verified deal teams; recoverable damages from breach are usually modest, so the practical remedy is reputation and exclusion from future processes.</li>
+      <li><strong>Bidder collusion / club deal antitrust risk.</strong> Two PE sponsors who would otherwise bid separately team up — reducing competitive tension and depressing the price. The 2007–2008 SunGard / Freescale era saw US Department of Justice probes into PE club-deal anticompetitive practices (settled 2014–2017 for ~$590m); modern process letters often include anti-collusion undertakings.</li>
+      <li><strong>BAFO with one bidder left.</strong> If only one credible bidder survives to BAFO, the banker still has to run "BAFO" but the discipline becomes a bluff: the buyer's counter-leverage is to delay, retrade, or walk. The seller's counter is to keep a back-up bidder warm even after preferred-bidder selection.</li>
+      <li><strong>Retrade after exclusivity.</strong> Preferred bidder discovers an issue (or pretends to) during confirmatory DD and retrades the price down. With exclusivity granted, the seller's counter-leverage is gone; the only realistic options are accept the retrade or walk and re-launch (with damaged process credibility). Mitigation: shorter exclusivity, milestone-based exclusivity extensions, or a back-up-bidder kept on stand-by.</li>
+      <li><strong>Banker conflict.</strong> Sell-side bank is also providing staple financing to the buyer (<em>In re Del Monte</em>, 25 A.3d 813 (Del. Ch. 2011)) or has pre-existing buyer relationships (<em>In re El Paso Corp. Shareholder Litigation</em>, 41 A.3d 432 (Del. Ch. 2012)) — both Delaware Chancery decisions resulted in proxy supplements, additional fee disclosures, and significant settlements. Independent fairness opinions from a second bank not on the deal are now standard cleansing devices.</li>
+    </ul>
+  </aside>
+
+  <aside class="lever both">
+    <h5>Lifecycle variants — when the canonical timeline compresses or stretches</h5>
+    <ul>
+      <li><strong>Hostile (public-company) bid.</strong> Compressed: announcement first, then DD post-signing if any. No NDA, no exclusivity, no friendly DD. UK Takeover Code "put up or shut up" (Rule 2.6) gives a potential bidder 28 days to announce a firm intention to make an offer or walk away (extendable by the Panel). US: bidder issues a Schedule TO and goes directly to shareholders. Defensive playbook: poison pill / shareholder rights plan, white-knight, scorched-earth.</li>
+      <li><strong>Distressed sale.</strong> No reps, no escrow, "as-is, where-is", court approval. US: § 363 sale under Chapter 11 of the Bankruptcy Code, run by the debtor-in-possession with a stalking horse bidder. UK: pre-pack administration or scheme. Italy: <em>concordato preventivo</em>. Speed is paramount; price is secondary.</li>
+      <li><strong>Take-private.</strong> Public-company target with proxy / tender / scheme mechanics. UK: scheme of arrangement (Companies Act 2006 ss.895–901; majority in number representing 75% in value of each class; court sanction). US: one-step merger (DGCL § 251) plus stockholder vote, or two-step tender offer + back-end merger (DGCL § 251(h) for short-form merger after 50%+ tender). DD is compressed into 4–8 weeks, often "private" diligence under NDA before announcement.</li>
+      <li><strong>Cross-border.</strong> Longer FDI / antitrust review periods (UK NSI Act, EU FDI screening, German AWG, French PACTE, US CFIUS / FIRRMA). Closing-condition catalogue can run 8–15 jurisdictions. Hell-or-high-water is rarely accepted on cross-border deals because of unbounded divestiture risk; divestiture caps and "burdensome condition" carve-outs become the negotiation playground.</li>
+      <li><strong>Carve-out.</strong> Selling a sub-business out of a larger group. TSA scope and duration become deal-critical (the carved-out business needs IT, HR, finance services from the parent for 6–18+ months); separation costs are fought; pension splits, IP licences, customer-contract novations all extend the timeline. Often runs 12+ months from announcement to closing.</li>
+    </ul>
+  </aside>
+
+  <h2>Investment bank advisors — economics</h2>
+
+  <p>Banks are engaged via an <strong>engagement letter</strong>. Key terms:</p>
+
+  <ul>
+    <li><strong>Mandate scope</strong> — sell-side advisor (exclusively appointed); buy-side advisor; sometimes only "fairness opinion provider".</li>
+    <li><strong>Retainer</strong> — modest periodic fee (e.g. $25,000–$100,000/month for mid-market) or one-off engagement fee. Often credited against the success fee.</li>
+    <li><strong>Success fee</strong> — payable on closing. Two main structures: percentage of transaction value (with a minimum), or <strong><span class="term" data-term="lehman-formula">Lehman Formula</span></strong> (originally 5-4-3-2-1 — i.e. 5% of the first $1m, 4% of the next $1m, etc.; modern "modified Lehman" uses scaled percentages on tranches). Working bands (Firmex / Axial / industry surveys 2024–2025): <strong>lower mid-market (sub-$100m) 3–6%</strong>; <strong>core mid-market ($100m–$1bn) 1–2%</strong>; <strong>large-cap ($1–$10bn) 0.5–1%</strong>; <strong>mega-deals ($10bn+) 0.1–0.3%</strong>. Usually a minimum dollar amount is also set (e.g. $5–10m on mid-market).</li>
+    <li><strong><span class="term" data-term="tail-provision">Tail provision</span></strong> — protects the bank: if the seller closes a deal with a buyer the bank introduced within X months after termination of the engagement, the success fee is still owed.</li>
+    <li><strong>Expenses</strong> — out-of-pocket reimbursement.</li>
+    <li><strong>Indemnification and limitation of liability</strong> — bank is indemnified by the client against third-party claims arising from its work; bank's liability capped (often at fees received).</li>
+    <li><strong>Fairness opinion</strong> — separate fee (sometimes $1m+) for a written opinion from the bank's fairness committee confirming that the financial terms of the deal are fair from a financial point of view to the client's stockholders. Required practice (post-<em>Smith v. Van Gorkom</em>, 488 A.2d 858 (Del. 1985)) for boards of US public-company targets to discharge their fiduciary duty before approving a sale. The opinion serves as a <strong>cleansing device</strong> in entire-fairness review: a board that has obtained, considered, and disclosed an independent fairness opinion is materially better positioned to defeat a stockholder appraisal action or breach-of-fiduciary-duty claim. Banker conflicts (e.g. simultaneous staple financing for the buyer or pre-existing relationships) drive litigation under <em>In re Del Monte Foods Co. Shareholders Litigation</em>, 25 A.3d 813 (Del. Ch. 2011) and <em>In re El Paso Corp. Shareholder Litigation</em>, 41 A.3d 432 (Del. Ch. 2012); a senior partner says "we need a second opinion to defuse the appraisal action" — the practical playbook is to commission an <strong>independent fairness opinion from a bank not on the deal</strong> as a cleansing device alongside the principal advisor's opinion.</li>
+  </ul>
+
+  <aside class="lever both">
+    <h5>Engagement-letter negotiation — what a partner asks first</h5>
+    <ul>
+      <li><strong>Success-fee base — EV or equity value?</strong> Enterprise value (typically larger) is bank-friendly; equity value (after net debt) is seller-friendly. Net debt definition itself is fought.</li>
+      <li><strong>Tail length and "introduced" definition.</strong> 12–24 months typical. "Introduced by the bank" must be tightly defined to exclude buyers the seller already knew or sourced through other channels.</li>
+      <li><strong>Retainer credit.</strong> Is the periodic retainer credited dollar-for-dollar against the success fee? Standard yes; bank pushes for retainer to be in addition.</li>
+      <li><strong>Fairness-opinion separateness.</strong> Is the fairness-opinion fee separate from the success fee, and can the bank delivering it be different from the bank advising? Both reduce conflict-of-interest litigation risk.</li>
+      <li><strong>Expense cap.</strong> Out-of-pocket expenses uncapped is bank-friendly; cap at $250–500k mid-market is seller-friendly.</li>
+      <li><strong>Indemnity carve-outs.</strong> Bank seeks broad indemnity from client. Carve out gross negligence, wilful misconduct, fraud, and breach of fiduciary duty (where applicable).</li>
+      <li><strong>Public-deal protections (preview — see <a href="18-public-and-specialized.html">Module 18</a>):</strong> break fee (typically 2–4% of equity value), reverse break fee (5–8% in regulated deals), no-shop with fiduciary out, matching rights (3–5 business days), force-the-vote, go-shop window (25–50 days). A senior partner says: "we want a 3% break fee with three-day match, no go-shop" — that whole sentence is a packaged deal-protection request.</li>
+    </ul>
+  </aside>
+
+  <h2>Legal, financial, tax and other DD providers</h2>
+
+  <ul>
+    <li><strong>Legal DD</strong> — performed by buy-side legal counsel (and increasingly by sell-side counsel for vendor legal DD reports). Reviews corporate records, material contracts, intellectual property, real estate, employment, regulatory licences, litigation, data protection. Outputs: legal DD report flagging "material" and "non-material" issues.</li>
+    <li><strong><span class="term" data-term="financial-dd">Financial DD</span></strong> — typically the Big Four (Deloitte, EY, KPMG, PwC) or specialists (Alvarez &amp; Marsal, RSM, BDO, Grant Thornton). Outputs: <span class="term" data-term="quality-of-earnings">Quality of Earnings (QoE)</span> report — adjusts reported EBITDA for one-off, non-recurring, accounting-policy and revenue-recognition issues to arrive at a "normalised" EBITDA used in valuation; working-capital analysis (sets the <strong>WC peg / target</strong>); net-debt schedule (sets the net-debt deduction in equity bridge). <strong>Connecting downstream:</strong> the QoE-derived WC target gets locked into the SPA price-adjustment mechanism (Module 11). Six months after closing, the closing-accounts dispute — buyer alleging actual closing WC was below target; seller alleging the buyer's accountants applied non-historical methodology — turns on whether the QoE methodology and WC target language were tightly drafted or left ambiguous. A loose QoE today is tomorrow's expert determination.</li>
+    <li><strong>Tax DD</strong> — examines historical tax exposures (corporate income tax, VAT/GST, payroll, transfer pricing, withholding, customs); identifies areas warranting specific tax indemnities; designs the tax-efficient acquisition structure.</li>
+    <li><strong><span class="term" data-term="commercial-dd">Commercial / vendor DD</span></strong> — strategy consultancies (McKinsey, BCG, Bain, OC&amp;C, LEK, Roland Berger, Oliver Wyman, KPMG Advisory, EY-Parthenon). Validates market size, growth, target's competitive position, customer dependency, management plan plausibility.</li>
+    <li><strong>Operational / IT / cyber DD</strong> — operational consultants and specialist IT/cyber boutiques. Has grown materially since 2017–2018 as cyber and software risks have moved up the risk agenda.</li>
+    <li><strong>Environmental DD</strong> — ERM, Ramboll, Arcadis, AECOM, WSP. Phase I (desktop and site-walk) and Phase II (intrusive sampling) for industrials, energy and real estate.</li>
+    <li><strong>Insurance brokers</strong> — Marsh (including Marsh Specialty for transactional risk), Aon, WTW, Lockton, Howden. Place W&amp;I insurance, tax liability insurance, contingent-risk insurance.</li>
+  </ul>
+
+  <h2>Principal M&amp;A law firms</h2>
+
+  <p>For practitioner orientation only — exact league-table positions move year to year, but the established players are:</p>
+
+  <ul>
+    <li><strong>UK "<span class="term" data-term="magic-circle">Magic Circle</span>"</strong> — Allen &amp; Overy / Shearman (now A&amp;O Shearman following 2024 merger), Clifford Chance, Freshfields, Linklaters, Slaughter and May. London-based, global reach; dominate UK and European mid- to large-cap.</li>
+    <li><strong>UK "Silver Circle" and other top-tier</strong> — Herbert Smith Freehills (now HSF Kramer following 2025 merger with Kramer Levin), Travers Smith, Macfarlanes, Ashurst, Hogan Lovells (UK/US hybrid).</li>
+    <li><strong>US "<span class="term" data-term="white-shoe">White-Shoe</span>" New York elite</strong> — Sullivan &amp; Cromwell, Cravath Swaine &amp; Moore, Davis Polk, Cleary Gottlieb, Simpson Thacher, Wachtell Lipton Rosen &amp; Katz, Paul Weiss, Weil Gotshal, Skadden Arps.</li>
+    <li><strong>US "Big Law" with strong M&amp;A</strong> — Kirkland &amp; Ellis (the largest single M&amp;A practice globally by deal count and value in 2024), Latham &amp; Watkins, Gibson Dunn, Sidley Austin, Ropes &amp; Gray (PE-heavy), Debevoise &amp; Plimpton (PE-heavy).</li>
+    <li><strong>Continental Europe specialists</strong> — Hengeler Mueller (Germany, top-tier), Gleiss Lutz (Germany), Bredin Prat (France), Darrois Villey (France), BonelliErede (Italy), Uría Menéndez (Spain / Portugal), De Brauw Blackstone Westbroek (Netherlands).</li>
+    <li><strong>Global firms with strong M&amp;A</strong> — Baker McKenzie, DLA Piper, White &amp; Case, Dentons, Norton Rose Fulbright.</li>
+  </ul>
+
+  <p>The 2024 league tables show Kirkland &amp; Ellis at the top globally by deal value (~$427bn in announced deals per Bloomberg Law data), Latham &amp; Watkins second, Skadden third, Freshfields fourth (top among UK-founded firms), Paul Weiss fifth.</p>
+
+  <h2>Deal sizes and market segments</h2>
+
+  <p>There is no universal definition, but common 2024–2025 working terminology in Europe/US:</p>
+
+  <ul>
+    <li><strong>Lower mid-market</strong> — under $100m enterprise value. Owner-managed businesses, founder-led, smaller PE funds, regional advisors.</li>
+    <li><strong>Mid-market</strong> — $100m–$1bn. The bulk of PE deal volume; well-covered by specialist M&amp;A boutiques and the lower tiers of bulge-bracket banks.</li>
+    <li><strong>Upper mid-market</strong> — $1bn–$5bn. Crossover into mega-fund PE territory and global advisor coverage.</li>
+    <li><strong>Large-cap</strong> — $5bn–$10bn.</li>
+    <li><strong>Mega-deal</strong> — $10bn+.</li>
+  </ul>
+
+  <p>In 2024, deals under $1bn accounted for ~95% of deal <em>count</em> (per LSEG data), but mega-deals propped up total deal <em>value</em>. Examples of 2024 mega-deals: Mars / Kellanova (~$36bn), Synopsys / Ansys (~$35bn enterprise value, announced January 2024, closed July 2025), Capital One / Discover (~$35bn).</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> builds on <a href="00-foundations.html">Module 00</a> (the contract-formation scaffolding behind every signing — offer / acceptance / consideration / intention) and <a href="01-corporate-law.html">Module 01</a> (the corporate-law plumbing — DGCL § 251 statutory mergers and consolidations, EUMR Article 3 "decisive influence" control test, UK scheme-of-arrangement vs. tender / takeover routes, <em>Revlon</em> change-of-control framing).</li>
+      <li><strong>Forwards:</strong> the auction-vs-bilateral choice and the engagement letter pre-commit downstream leverage in <a href="03-presigning-documents.html">Module 03 (NDA / LOI / exclusivity)</a> — exclusivity here is the same lock-out you study there. The "no MAC at closing" condition referenced in lifecycle step 9 is the same MAC clause negotiated in detail in <a href="09-interim-period-mac.html">Module 09</a> (signing-vs-closing risk allocation; carve-outs; Akorn-style buyer walk-away). Vendor DD scope dictates the reps the seller will give in <a href="12-reps-and-warranties.html">Module 12</a>; QoE conclusions drive the working-capital peg and net-debt definition fought over in <a href="11-purchase-price.html">Module 11</a>; legal-DD red flags become specific indemnities in <a href="13-indemnification.html">Module 13</a>; W&amp;I broker engagement feeds <a href="14-wi-insurance.html">Module 14</a>; deal-style choice (asset / share / merger / scheme) is detailed in <a href="06-deal-structures.html">Module 06</a>; public-deal protections (break fee, fiduciary out, matching rights, go-shop, force-the-vote) feed <a href="18-public-and-specialized.html">Module 18</a>; expert-determination clauses on closing-accounts disputes link to <a href="16-governing-law-disputes.html">Module 16</a>.</li>
+      <li><strong>Domino effect:</strong> if the seller switches from <strong>auction to bilateral</strong>, the buyer typically gives up the price-tension premium but in return demands bigger reps, smaller basket, looser MAC carve-back. If the <strong>buyer category</strong> switches from strategic to PE, the financing-out reappears, the indemnity package shrinks, and the W&amp;I retention fight gets bigger; the deal-style cascade (above) plays out clause-by-clause. If the bank's <strong>tail provision</strong> is shortened from 24 to 12 months, the bank has less skin in the game on price re-trades during exclusivity. If the deal style switches from <strong>private mid-market to take-private</strong>, the entire timeline compresses — DD into 4–8 weeks, public announcement triggers <em>Revlon</em> (in change-of-control), break-fee / no-shop / matching-rights become the operative deal-protection package, and exclusivity gives way to fiduciary-out-with-match-right.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Deal taxonomy: by mechanic (acquisition / merger / consolidation — DGCL § 251 covers <em>both</em> mergers and consolidations); by strategic logic (horizontal / vertical / conglomerate). Buyer categories: strategic, financial sponsor (PE), family office, sovereign wealth, founder-seller, public company.</li>
+      <li>Sell-side lifecycle: origination → strategy → target ID / buyer universe → approach → preliminary docs (NDA, LOI/Term Sheet, exclusivity) → DD → SPA negotiation → signing → CP satisfaction → closing → integration. Mid-market deals run 6–9 months.</li>
+      <li>Auction vs bilateral: auction maximises price tension at the cost of time, fees and leak risk; bilateral suits buyers with a unique angle and sellers prioritising speed/confidentiality.</li>
+      <li>Canonical two-stage auction: Preparation → Teaser → NDA → CIM → IOI (1st round) → Process letter → Mgmt presentations → Data room → Final bids (2nd round) → Preferred bidder → Exclusivity (4–6 weeks; 8–12 weeks on complex / cross-border) → Signing. Buy-side differentiates with: financing certainty, regulatory speed, clean SPA mark-up, RWI Day 1, reverse termination fee.</li>
+      <li>Lifecycle variants: hostile (compressed; no DD; UK Code Rule 2.6 PUSU; defensive playbook), distressed (§ 363 in US, pre-pack in UK; no reps; speed over price), take-private (proxy / tender / scheme; DD compressed; <em>Revlon</em> applies), cross-border (longer FDI / antitrust catalogues; divestiture cap negotiated), carve-out (TSA-driven; 12+ months).</li>
+      <li>Bank engagement economics: retainer (often credited), success fee (lower-mid 3–6%; mid-market $100m–$1bn 1–2%; large-cap 0.5–1%; mega 0.1–0.3%), Lehman Formula stepped scale, tail provision (12–24 months with negotiated "introduced" definition), separate fairness-opinion fee for boards of public targets.</li>
+      <li>DD providers: legal counsel (legal DD); Big Four / specialists (financial DD = QoE, working capital, net debt); tax advisors (structuring + indemnities); strategy consultants (commercial / vendor DD); environmental, IT/cyber, insurance brokers (W&amp;I).</li>
+      <li>Law-firm league: UK Magic Circle (A&amp;O Shearman, Clifford Chance, Freshfields, Linklaters, Slaughter and May); US white-shoe (Sullivan &amp; Cromwell, Cravath, Davis Polk, Cleary, Wachtell, etc.); US "big law" PE-heavy (Kirkland, Latham, Ropes, Debevoise); Continental specialists (Hengeler, Bredin Prat, BonelliErede). Kirkland &amp; Ellis topped 2024 global league tables (~$427bn).</li>
+      <li>Size segments: lower-mid &lt;$100m; mid-market $100m–$1bn; upper-mid $1bn–$5bn; large-cap $5–$10bn; mega-deal $10bn+. ~95% of 2024 deal count was &lt;$1bn but mega-deals dominate value.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="01-corporate-law.html" class="prev">Corporate Law Essentials</a>
+    <a href="03-presigning-documents.html" class="next">Pre-Signing Documents</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

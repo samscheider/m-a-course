@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 18 — Public M&amp;A &amp; Specialized Transactions · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="18">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 18</div>
+    <h1>Public M&amp;A &amp; Specialized Transactions</h1>
+    <p class="subtitle">The Williams Act, the UK Takeover Code, the scheme of arrangement, MFW and Revlon, the LBO capital stack, distressed sales, and the SPAC lifecycle.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Distinguish public M&amp;A (regulated by takeover codes, securities laws, and stock exchange rules) from private M&amp;A (governed by negotiated SPAs).</li>
+      <li>Compare the US <span class="term" data-term="tender-offer">tender offer</span> regime (<span class="term" data-term="williams-act">Williams Act</span>) and the UK Takeover Code, identifying the mandatory bid threshold, equal-treatment rules, and target-board duties.</li>
+      <li>Explain the UK <span class="term" data-term="scheme-of-arrangement">scheme of arrangement</span> under Companies Act 2006 Part 26, including the dual approval threshold and court sanction.</li>
+      <li>Summarise the Delaware "going-private" framework: special committee independence, majority-of-the-minority approval, and the <span class="term" data-term="mfw-framework">MFW framework</span>.</li>
+      <li>Describe the structural mechanics of a leveraged buyout (LBO): special purpose vehicle (SPV) waterfall, debt layers, financial assistance considerations, certain funds, and fraudulent conveyance risks.</li>
+      <li>Identify the principal types of distressed M&amp;A: UK <span class="term" data-term="pre-pack">pre-pack administrations</span>, US Chapter 11 §363 sales, and European insolvency-driven sales.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Public M&amp;A and specialised transactions involve fundamentally different legal architectures from straightforward private M&amp;A. A non-lawyer joining a public M&amp;A team will see almost none of the SPA / disclosure-letter / W&amp;I machinery that dominates private deals — instead, the work is dominated by takeover-code timetables, regulatory disclosure, defensive measures, board duties, fairness opinions, and (often) litigation by minority shareholders. Specialised transactions (LBOs, distressed sales, JVs, SPACs) each have distinctive legal anatomy. Understanding the basic shape of these transactions is essential for collaborating with M&amp;A lawyers across the full range of practice.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior public-M&amp;A or LBO partner drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Rule 2.4 announcement"</strong> — a "possible offer" announcement under Rule 2.4 of the UK Takeover Code, typically forced by a leak or by Panel direction; starts the PUSU 28-day clock on most occasions.</li>
+      <li><strong>"PUSU 28-day clock"</strong> — Put Up or Shut Up: by 5pm on the 28th day after a Rule 2.4 / possible-offer announcement, the possible offeror must announce a firm intention (Rule 2.7) or walk away.</li>
+      <li><strong>"Concert party / acting in concert"</strong> — persons cooperating to obtain or consolidate control. Code presumptions catch directors and major shareholders, related funds, and family groups; aggregating concert-party interests crosses the 30% mandatory-bid threshold under Rule 9.</li>
+      <li><strong>"Hard vs. soft irrevocables"</strong> — irrevocable undertakings to accept an offer: a <em>hard</em> irrevocable binds even if a higher offer emerges; a <em>soft</em> irrevocable falls away on a defined uplift (typically 8–10% above the existing offer).</li>
+      <li><strong>"Wall-cross"</strong> — bringing select institutional shareholders inside an information barrier under restriction prior to announcement, to test pricing or seek irrevocable undertakings.</li>
+      <li><strong>"Mix and match"</strong> — offer structure permitting target shareholders to choose between cash, stock, or combinations; subject to overall caps on each form of consideration.</li>
+      <li><strong>"MFW framework"</strong> — Delaware safe-harbour for controlling-stockholder transactions: business-judgment review only if <em>both</em> independent special committee and majority-of-the-minority vote are conditioned <em>ab initio</em>.</li>
+      <li><strong>"Force-the-vote"</strong> — DGCL §146 / §251(c) provision: target must submit the merger to a stockholder vote even if the board has changed its recommendation.</li>
+      <li><strong>"Time-Warner / QVC sale-mode"</strong> — <em>Paramount v. Time</em> (1989) limits when <em>Revlon</em> auctioneer duties trigger; <em>Paramount v. QVC</em> (1994) extends them to controlling-stockholder change-of-control. Together they define when a board is "in <em>Revlon</em> mode."</li>
+      <li><strong>"SunGard conditionality"</strong> — financing-market discipline that the conditions in a debt commitment letter cannot be broader than the SPA's closing conditions, so the buyer cannot be left signed but unfunded.</li>
+      <li><strong>"Cov-lite"</strong> — institutional Term Loan B without maintenance financial covenants (only incurrence covenants). Dominant TLB structure since c. 2014.</li>
+      <li><strong>"Flex"</strong> — the lead arranger's contractual right to adjust pricing, structure, or terms during syndication (market flex up to a cap; usually triggered by adverse market conditions).</li>
+      <li><strong>"Certain-funds confirmation"</strong> — the financial adviser's certificate, required by Rule 2.7 of the UK Takeover Code, that the offeror has resources sufficient to fulfil the offer in full; the adviser carries personal exposure if the certificate is mis-given.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Modules 07–14 (private SPA architecture). The mental translation: the offer announcement (Rule 2.7) plus the offer document plus the Code function as the "SPA" of a public deal; the Code provides "implied warranties"; "certain funds" is the financing-out the buyer does <em>not</em> have. Modules 12–14 (R&amp;Ws, indemnification, W&amp;I) <em>do</em> apply to de-SPAC transactions because the underlying business combination is, in substance, a private-target acquisition. Module 08 (regulatory clearances): the <em>antitrust covenant</em> and <em>reverse termination fee</em> are correlated — strength of "hell-or-high-water" maps to RTF size. Module 09 (MAC): public-deal MACs face a much higher invocation bar than private-deal MACs — UK Code Rule 13 requires Panel consent and the <em>Drax</em> / <em>WPP / Tempus</em> Panel decisions illustrate how rare invocation is.</li>
+      <li><strong>Forwards / outside this course:</strong> securities litigation and SEC enforcement (Williams Act anti-fraud); appraisal arbitrage in Delaware (DGCL §262); shareholder activism strategy.</li>
+      <li><strong>Domino effect:</strong> If you tighten the antitrust covenant ("hell-or-high-water"), the buyer demands a bigger reverse termination fee. If you adopt MFW, you avoid entire-fairness review on the merits but appraisal under §262 still runs as an alternative pressure point. If you weaken the deal-protection package (lower break fee, narrower no-shop), you reduce <em>Omnicare</em> risk but invite more interloper proposals.</li>
+    </ul>
+  </aside>
+
+  <h2>Public-vs-private translation paragraph</h2>
+
+  <p>If you have just spent Modules 7–14 on private SPA architecture, the move into public M&amp;A can feel discontinuous. The rough translation:</p>
+
+  <ul>
+    <li>The <strong>Rule 2.7 firm-intention announcement</strong> functions like the <em>signing</em> of a private deal — it commits the buyer to an offer.</li>
+    <li>The <strong>offer document</strong> functions like the <em>SPA</em> — it is the contract on which target shareholders accept.</li>
+    <li>The <strong>Takeover Code (UK)</strong> or the <strong>Williams Act + Delaware fiduciary duties (US)</strong> function as <em>implied warranties / mandatory rules</em> — they impose obligations the parties cannot contract around.</li>
+    <li><strong>"Certain funds"</strong> is the <em>financing-out</em> that public-deal buyers do not have — financing must be in place at announcement, with personal exposure of the financial adviser certifying it.</li>
+    <li>The <strong>scheme of arrangement</strong> is the contract-by-court-order alternative to the contractual offer; structurally cleaner for 100% acquisition.</li>
+    <li><strong>R&amp;Ws / W&amp;I</strong>: in pure public M&amp;A there is no negotiated R&amp;W package — the buyer relies on public-disclosure record. In a <strong>de-SPAC</strong> business combination, however, the underlying merger is essentially a private-target acquisition, and W&amp;I / R&amp;W frameworks from Modules 12–14 do apply.</li>
+  </ul>
+
+  <h2>The public / private divide</h2>
+
+  <p>In <strong>private M&amp;A</strong>, the buyer and seller negotiate one-on-one (or in a controlled auction). The contract is privately negotiated; warranties, indemnities, and price adjustment are commercial matters between the parties.</p>
+
+  <p>In <strong>public M&amp;A</strong>:</p>
+  <ul>
+    <li>The target is a listed company; its shareholders may be hundreds or thousands of dispersed investors.</li>
+    <li>The seller is not a single party but a collective of shareholders who must individually decide whether to accept an offer.</li>
+    <li>Securities laws, takeover codes, and stock exchange rules impose extensive procedural requirements.</li>
+    <li>Equal treatment of shareholders is a foundational principle.</li>
+    <li>The target's board has fiduciary duties to all shareholders, not just selling shareholders.</li>
+    <li>Confidentiality is fundamentally limited — major events are subject to mandatory market disclosure.</li>
+    <li>Defensive measures (board responses to unwelcome bids) are constrained by regulation and case law.</li>
+  </ul>
+
+  <h2>US tender offer regime — Williams Act</h2>
+
+  <p>In the US, public tender offers are governed by the <strong>Williams Act of 1968</strong> (amendments to the Securities Exchange Act of 1934). The principal provisions:</p>
+
+  <p><strong>Section 14(d) of the Securities Exchange Act of 1934.</strong> Applies to tender offers for any class of equity security registered under Section 12 of the Act, where after the offer the bidder would beneficially own more than 5% of the class. Imposes:</p>
+  <ul>
+    <li><strong><span class="term" data-term="schedule-to">Schedule TO</span> filing.</strong> The bidder must file a Schedule TO with the Securities and Exchange Commission (SEC), disclosing identity, financing, plans, and offer terms.</li>
+    <li><strong>Minimum offering period.</strong> The offer must remain open for at least <strong>20 business days</strong> (Rule 14e-1(a)).</li>
+    <li><strong>Best price rule</strong> (Rule 14d-10(a)(2)). All shareholders must be paid the highest consideration paid to any shareholder during the offer.</li>
+    <li><strong>All holders rule</strong> (Rule 14d-10(a)(1)). The offer must be open to all holders of the class.</li>
+    <li><strong>Withdrawal rights.</strong> Shareholders who tender can withdraw at any time during the offer.</li>
+    <li><strong>Pro-rata acceptance.</strong> If the offer is for less than all shares and is over-subscribed, the bidder must accept on a pro-rata basis.</li>
+    <li><strong>Extensions.</strong> If material terms change, the offer must be extended by at least 10 business days.</li>
+  </ul>
+
+  <p><strong>Section 14(e).</strong> Anti-fraud provision applicable to all tender offers (whether or not subject to 14(d)). Prohibits material misstatements or omissions and manipulative practices in connection with tender offers.</p>
+
+  <p><strong><span class="term" data-term="schedule-14d-9">Schedule 14D-9</span>.</strong> The target's board must respond to a tender offer within 10 business days, filing Schedule 14D-9 with its recommendation (recommend, oppose, or remain neutral) and the basis for the recommendation. The schedule includes the board's "fairness" analysis and any fairness opinion from a financial advisor.</p>
+
+  <p><strong>"Stop-look-and-listen"</strong> standard for the target's initial response (during which the board investigates).</p>
+
+  <h3>Defensive measures — Delaware case law</h3>
+
+  <p>Subject to Delaware case law (Unocal, Revlon, Blasius), the target's board has limited ability to obstruct a tender offer.</p>
+
+  <p><strong><span class="term" data-term="unocal-test">Unocal Corp. v. Mesa Petroleum Co.</span>, 493 A.2d 946 (Del. 1985)</strong> — established the "enhanced scrutiny" test for defensive measures in response to a hostile bid. The board must show: (i) reasonable grounds to believe a danger to corporate policy exists; (ii) the defensive measure is reasonable in relation to the threat. The two-tiered front-end-loaded bid by Mesa was considered a "threat"; Unocal's defensive self-tender at $72 (excluding Mesa) was held a reasonable response. <em>Unitrin, Inc. v. American General Corp.</em>, 651 A.2d 1361 (Del. 1995) refined the test: defensive measures must not be "draconian" — they cannot be coercive or preclusive.</p>
+
+  <p><strong><span class="term" data-term="revlon-duties">Revlon, Inc. v. MacAndrews &amp; Forbes Holdings</span>, 506 A.2d 173 (Del. 1986)</strong> — when "sale of the company becomes inevitable" and the directors are auctioning the company, they must obtain the best price reasonably available for shareholders. The board's duty shifts from preserving the corporate enterprise to acting as auctioneers maximising short-term value. "Revlon duties" trigger when the company is for sale (e.g., in response to a competing all-cash offer), in a change-of-control transaction.</p>
+
+  <p><strong>The <em>Time-Warner</em> / <em>QVC</em> pair — when does <em>Revlon</em> bite?</strong> <em>Revlon</em> by itself is a slogan; the doctrine is operationalised by the question of <em>whether the company is in sale mode</em>. Two cases bracket the answer:</p>
+  <ul>
+    <li><strong><em>Paramount Communications, Inc. v. Time, Inc.</em>, 571 A.2d 1140 (Del. 1989)</strong> — limits when <em>Revlon</em> triggers. Time's strategic response to a hostile Paramount bid (acquiring Warner) was upheld as a defensive measure preserving the corporate strategy, not a sale of control to public shareholders, even though it precluded the Paramount bid. <em>Time</em> stands for the proposition that <em>Revlon</em> does not trigger merely because a strategic response forecloses a hostile offer; it triggers when the board itself puts the company in "sale mode."</li>
+    <li><strong><em>Paramount Communications, Inc. v. QVC Network Inc.</em>, 637 A.2d 34 (Del. 1994)</strong> — extends <em>Revlon</em> to controlling-stockholder change-of-control. Where a sale results in shareholders losing the protection of a fiduciary majority (e.g., a sale to a private controlling stockholder), <em>Revlon</em> duties trigger and the board must seek the best price reasonably available.</li>
+  </ul>
+
+  <p>Together, <em>Time-Warner</em> and <em>QVC</em> define the practitioner's question — "are we in <em>Revlon</em> mode?" — by reference to whether shareholders are losing the protection of a fiduciary public-market majority. A senior partner asking "do we have <em>Time-Warner</em> cover?" is asking whether the structure can be defended as a strategic response rather than a sale.</p>
+
+  <p><strong>Blasius Industries, Inc. v. Atlas Corp., 564 A.2d 651 (Del. Ch. 1988)</strong> — board action that primarily serves to "thwart effective shareholder voting" requires "compelling justification" — a higher standard than business judgment.</p>
+
+  <p><strong>Poison pills</strong> (shareholder rights plans) — most public companies adopt or have on the shelf a "rights plan" that, on a triggering event (typically acquisition of 15–20% by a single party without board approval), allows other shareholders to acquire shares at a deep discount, massively diluting the bidder. Poison pills survive <em>Unocal</em> scrutiny in most cases. <em><span class="term" data-term="moran-v-household">Moran v. Household International</span></em>, 500 A.2d 1346 (Del. 1985) — upheld the legality of the shareholder rights plan in concept.</p>
+
+  <h2>UK Takeover Code</h2>
+
+  <p>The City Code on Takeovers and Mergers (the <span class="term" data-term="takeover-code">Takeover Code</span> or "the Code"), administered by the <span class="term" data-term="takeover-panel">Takeover Panel</span> (formally the Panel on Takeovers and Mergers), is grounded in the Takeover Directive 2004/25/EC (which the UK has retained post-Brexit) and is statutory in nature, given binding force by the Companies Act 2006 Part 28.</p>
+
+  <p><strong>3 February 2025 — narrowed jurisdictional regime.</strong> Before 3 February 2025 the Code applied via a three-limb test (regulated-market / MTF; UK public companies; "central management and control" residual test). On <strong>3 February 2025</strong>, the Panel implemented a substantially <em>narrowed</em> jurisdictional regime under <strong>Response Statement RS 2024/1</strong> (published 6 November 2024). The Code now applies primarily to:</p>
+  <ul>
+    <li><strong>UK-registered companies</strong> that are, or in the previous <strong>two years</strong> have been, "UK-quoted" — i.e., admitted to a UK regulated market, MTF, or to a stock exchange in the Channel Islands or Isle of Man. A two-year run-off applies to companies that cease to be UK-quoted.</li>
+    <li>Specific exclusions: <strong>PISCES</strong> (Private Intermittent Securities and Capital Exchange System) trading is not within scope; <strong>TISE Private Market</strong> is excluded; <strong>sole-beneficial-owner</strong> companies are excluded.</li>
+    <li>The "central management and control" residual test that previously caught some unlisted public companies has been substantially curtailed.</li>
+  </ul>
+
+  <p>The narrowing is one of the most consequential 2025 changes for a UK public-M&amp;A practitioner: many previously-Code companies have dropped out of the Code's reach.</p>
+
+  <h3>Six General Principles</h3>
+  <ol>
+    <li>Equal treatment of shareholders of the same class.</li>
+    <li>Sufficient time and information for shareholders to reach a properly informed decision.</li>
+    <li>Target board's duties to act in the interest of the company as a whole.</li>
+    <li>No false markets in the target's, the offeror's, or any other relevant company's securities.</li>
+    <li>Offerors must announce a bid only when they have considered ability to fulfil it (the "<span class="term" data-term="certain-funds">certain funds</span>" requirement).</li>
+    <li>Target should not be hindered in conducting its affairs longer than is reasonable by an offer.</li>
+  </ol>
+
+  <h3>Key Code Rules</h3>
+
+  <p><strong>Rule 5 — <span class="term" data-term="mandatory-bid">Mandatory bid</span> threshold.</strong> Where any person acquires an interest in shares carrying 30% or more of the voting rights of a Code company, or, if already holding between 30% and 50%, acquires further shares increasing the holding, that person must make a mandatory cash offer to all other shareholders (Rule 9.1). The price must be the highest paid by the offeror or any concert party in the previous 12 months.</p>
+
+  <p><strong>Rule 2.6 — "<span class="term" data-term="put-up-shut-up">Put up or shut up</span>."</strong> Once a possible offeror is identified (typically following a leak or a Rule 2.4 announcement), the possible offeror must by 5:00 pm on the <strong>28th day</strong> after the announcement either announce a firm intention to make an offer (a Rule 2.7 announcement) or announce that it does not intend to make an offer. Failure to do so triggers a 6-month "cooling off" — the offeror cannot make an offer for the target for six months. The deadline can be extended only at the request of the target and with Panel consent. The deadline does not apply if a competing firm offer has been announced.</p>
+
+  <p><strong>Rule 2.7 — Firm intention announcement.</strong> Once made, the offeror is committed to making the offer (subject to a small number of pre-conditions). The Rule 2.7 announcement must include: identity of the offeror; offer terms (price, form of consideration); financing; conditions (normally limited to merger control, regulatory clearances, and Competition and Markets Authority (CMA) / EU clearance); irrevocable undertakings (commitments by major shareholders to accept).</p>
+
+  <p><strong>Rule 8 — Disclosure of dealings.</strong> Persons dealing in 1% or more of any class of relevant securities of an offeror or offeree (or who have an interest in 1% or more) must disclose their dealings publicly during an offer period.</p>
+
+  <p><strong>Rule 9 — The mandatory offer.</strong> The price, terms, and timing of mandatory offers.</p>
+
+  <p><strong>Rule 21 — Restrictions on frustrating action.</strong> During an offer or possible offer period, the target board may not take any action without shareholder approval (or Panel consent) that may frustrate the offer. This includes:</p>
+  <ul>
+    <li>Issuing shares.</li>
+    <li>Issuing options.</li>
+    <li>Acquiring or disposing of material assets.</li>
+    <li>Entering into contracts otherwise than in the ordinary course.</li>
+    <li>Paying dividends outside the ordinary course.</li>
+  </ul>
+
+  <p><strong>3 February 2025 reforms.</strong> Substantive Rule 21 reforms were implemented by <strong>Response Statement RS 2024/1 (Instrument 2024/3)</strong>, published <strong>6 November 2024</strong> and effective <strong>3 February 2025</strong>, following Code Committee Consultation PCP 2024/3. The reforms refined: (i) introduction of the <em>"relevant period"</em> concept defining the temporal reach of Rule 21; (ii) a clarified <em>ordinary-course carve-out</em>; (iii) a narrower definition of "restricted action"; and crucially (iv) a permissible <strong>1% aggregate target-side break fee</strong> in Rule 21.1 transactions — replacing the prior categorical bar that dated to the 2011 amendments. The 2011 framing (no break fees with very limited exceptions) is the historical starting point but is no longer a categorical bar. UK target-side deal-protection economics now permit a 1% aggregate break fee, calibrated against equity value.</p>
+
+  <p><strong>Rule 35 — Restriction on subsequent offers.</strong> A bidder that withdraws cannot return for 6 months (without the Panel's consent).</p>
+
+  <h3>Squeeze-out and sell-out</h3>
+  <p>Companies Act 2006 sections 979–982:</p>
+  <ul>
+    <li><strong><span class="term" data-term="squeeze-out">Squeeze-out</span> (s. 979):</strong> if the bidder has acquired (or contracted to acquire) 90% in value and 90% of the voting rights of the shares to which the offer relates, the bidder can compulsorily acquire the remaining shares.</li>
+    <li><strong>Sell-out (s. 983):</strong> minority shareholders can require the bidder to acquire their shares on the same terms once the bidder has acquired 90%.</li>
+  </ul>
+
+  <h3>Break fees</h3>
+  <p>The UK Code's 2011 framing was a near-categorical prohibition on target-side break fees (and most other "offer-related arrangements") under Rule 21.2. The <strong>3 February 2025</strong> Rule 21 reforms (RS 2024/1) relaxed this: a target-side break fee aggregating up to <strong>1% of equity value</strong> is now permissible in Rule 21.1 transactions. UK target-side deal protection remains substantially thinner than US practice, where deal protection measures (break fees, no-shop, force-the-vote, matching rights) are common and break fees range typically <strong>2.5%–4% of equity value</strong> (based on Latham &amp; Watkins 2024 Public Company Survey and similar market-data sources). The narrow "white knight" exception under Rule 21.2 also remains relevant where a target faces a hostile bid.</p>
+
+  <h2>Scheme of arrangement (Companies Act 2006 Part 26)</h2>
+
+  <p>Most large UK public M&amp;A is now executed by "scheme of arrangement" rather than contractual offer. A scheme is a court-approved arrangement under sections 895–901 of the Companies Act 2006.</p>
+
+  <h3>Mechanics</h3>
+  <ol>
+    <li><strong>Convocation of class meetings.</strong> The target convenes meetings of each class of shareholders (or members) to vote on the scheme.</li>
+    <li><strong>Approval threshold.</strong> Approval requires:
+      <ul>
+        <li>Majority <strong>in number</strong> of those voting (more than 50% of the actual voters).</li>
+        <li><strong>75% in value</strong> of those voting.</li>
+      </ul>
+      At each separate class meeting.</li>
+    <li><strong>Court hearing.</strong> The court convenes a hearing to consider whether to sanction the scheme. The court considers:
+      <ul>
+        <li>Whether the statutory procedure was followed.</li>
+        <li>Whether the meetings were properly conducted and adequate information was given.</li>
+        <li>Whether the scheme is one a reasonable shareholder might approve.</li>
+        <li>Whether the class composition was correct (no class that would have voted differently).</li>
+        <li>Fairness and reasonableness.</li>
+      </ul>
+    </li>
+    <li><strong>Court sanction order.</strong> If the court sanctions, the scheme becomes effective on filing the court order with Companies House.</li>
+  </ol>
+
+  <p><strong>Advantages over contractual offer:</strong></p>
+  <ul>
+    <li><strong>100% of shares acquired with single approval.</strong> A scheme acquires 100% on sanction; no minority squeeze-out fight.</li>
+    <li><strong>Stamp duty saving.</strong> Schemes generally avoid the 0.5% UK stamp duty / Stamp Duty Reserve Tax (SDRT) on share transfers — significant saving on large deals.</li>
+    <li><strong>Single approval threshold</strong> rather than tendering 90%+ of shares.</li>
+    <li><strong>Court-blessed clarity</strong> — court sanction reduces post-deal litigation risk.</li>
+  </ul>
+
+  <p><strong>Disadvantages:</strong></p>
+  <ul>
+    <li><strong>Target-controlled.</strong> A scheme can only be initiated by the target (or with target cooperation) — hostile schemes are essentially unworkable.</li>
+    <li><strong>Court timetable</strong> adds delay and unpredictability.</li>
+    <li><strong>Higher scrutiny</strong> at the court hearing — class composition issues can derail.</li>
+    <li><strong>Both meeting thresholds.</strong> Majority-in-number requirement is sometimes difficult where most shares are held through nominees or large institutional holders.</li>
+  </ul>
+
+  <h2>Fiduciary out, superior proposal and the deal-protection trilogy (US public deals)</h2>
+
+  <p>Once a US public-target board signs a merger agreement, it has set in motion an irreversible sequence: a Schedule 14D-9 or proxy statement, a fairness opinion, an SEC review, a stockholder vote (or tender). The board cannot promise that no better deal will emerge during that period &mdash; and yet the buyer needs reasonable confidence that the deal it just signed will survive to closing. The architecture that mediates this tension is the deal-protection package: a <em>no-shop / no-talk</em> covenant restraining the target from soliciting alternatives, paired with a <span class="term" data-term="fiduciary-out">fiduciary out</span> permitting the board to terminate in response to a <span class="term" data-term="superior-proposal">superior proposal</span>, modulated by matching rights, force-the-vote provisions and a break fee. Each component is the result of two decades of Delaware case law tracking the boundary between protecting a deal and improperly disabling the board.</p>
+
+  <h3>The fiduciary out</h3>
+
+  <p>The <em>fiduciary out</em> is a contractual carve-out that permits the target board to terminate the merger agreement, on payment of a break fee, in order to enter into an alternative transaction that the board determines is superior. It is in practice mandatory in any negotiated US public deal because the board's <em>Revlon</em> duty, once triggered (by an all-cash deal or a change-of-control transaction in which the company is in "sale mode"), is to maximise short-term value for stockholders &mdash; an obligation the board cannot contract away by a categorical no-shop. The fiduciary out is the relief valve that reconciles the contractual no-shop with the fiduciary duty. Boards that sign deals without one face <em>Revlon</em> claims; boards that sign deals with one but write it so narrowly that it never bites face the same.</p>
+
+  <p>Standard structure of the fiduciary out: (i) the target may not <em>solicit</em> alternative proposals, but may <em>respond</em> to an unsolicited bona fide written proposal that the board determines (after consultation with its financial and legal advisers) is reasonably likely to lead to a superior proposal &mdash; this is the so-called <em>"window-shop"</em>, distinguishing the strict <em>no-talk</em> from the workable <em>no-shop with reactive engagement</em>; (ii) the target may furnish information and engage in discussions with the proposing party subject to a confidentiality agreement on terms substantially equivalent to those it has with the existing buyer; (iii) the target may <em>change its recommendation</em> to stockholders if the board determines, again after advice, that doing so is required by its fiduciary duties; and (iv) the target may <em>terminate</em> the merger agreement to enter into a definitive agreement for the alternative transaction, on payment of the break fee.</p>
+
+  <h3>"Superior Proposal" definition</h3>
+
+  <p>The merger agreement defines <em>Superior Proposal</em> tightly: typically a bona fide written proposal made by a third party (i) for the acquisition of a defined percentage (usually &gt;50% or 75% &mdash; the higher the threshold, the more seller-friendly) of the target's outstanding equity or substantially all its assets, (ii) on terms more favourable from a financial point of view to the target stockholders than the existing transaction, taking into account financial, legal, regulatory and timing factors, and (iii) reasonably likely to be consummated. Each element is litigated. The "more favourable" assessment is normally delegated to the board with the advice of its financial adviser. The "reasonably likely to be consummated" element is where buyer's counsel pushes hardest &mdash; the higher the certainty bar, the harder it is for an interloper to count.</p>
+
+  <h3>Deal-protection devices</h3>
+
+  <p>Around the fiduciary out the merger agreement deploys a battery of <em>deal-protection</em> measures designed to preserve the existing deal without precluding the board from doing its job. The standard package:</p>
+
+  <ul>
+    <li><strong>No-shop / no-talk</strong> with the window-shop carve-out described above. The original "no-talk" categorical bar (no engagement of any kind with anyone) is no longer enforceable post-<em>Phelps Dodge Corp. v. Cyprus Amax Minerals Co.</em>, 1999 WL 1054255 (Del. Ch. 1999); the <em>window-shop</em> structure is now standard.</li>
+    <li><strong><span class="term" data-term="matching-rights">Matching rights</span></strong>: before the target may change its recommendation or terminate, it must give the existing buyer notice and a period (typically 3&ndash;5 business days, often resetting on each material change in terms) during which the buyer may amend its offer to match or beat the superior proposal. The matching right is usually <em>perpetual</em> &mdash; the buyer can re-match each successive proposal. This is one of the most heavily negotiated provisions in any public-target merger agreement.</li>
+    <li><strong><span class="term" data-term="force-the-vote">Force-the-vote</span></strong>: under <strong>DGCL &sect;146</strong> (added 2003) and the implementing language of <strong>DGCL &sect;251(c)</strong>, the merger agreement may require the target to submit the merger to a stockholder vote even if the board has changed its recommendation. The provision converts a fiduciary-out termination into a stockholder veto rather than a board veto: the target board may withdraw its support, but the deal is still put to the vote &mdash; and stockholders may approve it anyway. Force-the-vote provisions are now near-universal in public-target merger agreements.</li>
+    <li><strong>Break fee</strong> sized at <strong>2.5&ndash;4% of equity value</strong> (sometimes calculated against enterprise value for the same effective rate). Anything materially higher risks invalidation as preclusive on the <em>Unitrin</em>-derived test and the <em>Omnicare</em> doctrine described below. Reverse break fees (paid by the buyer to the target on regulatory or financing failure) are sized differently and not subject to the same constraint.</li>
+    <li><strong>Voting agreements</strong> with significant stockholders (often the founders or the controller) under which they irrevocably commit to vote their shares in favour of the merger and (sometimes) against any alternative. Subject to <em>Omnicare</em> limits.</li>
+  </ul>
+
+  <h3>Omnicare and preclusive measures</h3>
+
+  <p><em><span class="term" data-term="omnicare-rule">Omnicare, Inc. v. NCS Healthcare, Inc.</span>, 818 A.2d 914 (Del. 2003)</em> remains the high-water mark of judicial intervention against deal-protection measures. NCS, in financial distress, signed a merger with Genesis Health Ventures that combined a force-the-vote provision with voting agreements from stockholders holding 65% of the voting power &mdash; together rendering the merger a fait accompli regardless of board reconsideration or stockholder dissent. When Omnicare made a higher all-cash offer, the NCS board could not realistically accept it because the existing deal was contractually <em>locked up</em>. The Delaware Supreme Court held the combined measures were <strong>preclusive</strong> (foreclosing any other transaction) and <strong>coercive</strong> (depriving stockholders of meaningful choice), and therefore invalid under <em>Unocal</em>'s "draconian / preclusive / coercive" prohibition. The NCS board was held to have breached its fiduciary duties by agreeing to such measures without an effective fiduciary out.</p>
+
+  <p>Practical implication of <em>Omnicare</em>: deal-protection provisions are tested cumulatively. Any single provision (force-the-vote, voting agreement, matching right, break fee) is normally permissible standing alone, but the combination cannot be such that the board has no realistic ability to accept a superior proposal. A 4%+ break fee on top of a force-the-vote on top of voting agreements covering near-majority on top of a no-talk: the package is invalid. Modern practice is to size each component conservatively and to ensure that the fiduciary out has real teeth.</p>
+
+  <h3>Underlying duties &mdash; Revlon and Unocal</h3>
+
+  <p>The deal-protection trilogy operates against the backdrop of two foundational duties already discussed earlier in this module. <em><span class="term" data-term="unocal-test">Unocal Corp. v. Mesa Petroleum Co.</span></em> (1985) imposes <strong>enhanced scrutiny</strong> on any defensive measure adopted in response to a perceived threat: the board must show reasonable grounds for believing a danger exists and that the response is reasonable in relation to the threat (and is neither preclusive nor coercive). <em><span class="term" data-term="revlon-duties">Revlon, Inc. v. MacAndrews &amp; Forbes Holdings</span></em> (1986) imposes the <strong>auctioneer duty</strong> to maximise stockholder value once sale is inevitable. The fiduciary out is the contractual mechanism that ensures the board can discharge both duties without being trapped by the no-shop.</p>
+
+  <h3>Contrast with the UK Takeover Code</h3>
+
+  <p>UK practice does not feature the same architecture. <strong>Rule 21.2</strong> of the City Code on Takeovers and Mergers (introduced in its current restrictive form in 2011) generally <em>prohibits</em> offer-related arrangements between an offeror and the target, including most break fees and most other agreements that may inhibit competing offers. The narrow exceptions include: (i) confidentiality agreements; (ii) agreements relating to the conduct, implementation or terms of the offer (e.g. the offer letter itself); (iii) agreements imposing obligations only on the offeror; (iv) the so-called <em>"white knight"</em> exception &mdash; a target that has received a hostile offer may agree limited deal-protection measures with a competing friendly bidder, with Panel consent. The Code's policy is to keep the auction open and to constrain the target board's ability to favour one bidder over another. As a result, UK-listed targets do not typically grant matching rights or fiduciary-out break fees, and contractual deal protection is much thinner than in US public M&amp;A.</p>
+
+  <div class="juris-grid">
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Fiduciary out + window-shop + matching right (3&ndash;5 days) + force-the-vote (DGCL &sect;146 / &sect;251(c)) + break fee (2.5&ndash;4% of equity value) is the standard package. <em>Omnicare</em> caps cumulative restrictiveness; <em>Revlon</em> and <em>Unocal</em> set the underlying duties.</p></aside>
+    <aside class="juris uk"><h5>UK</h5><p>Code Rule 21.2 generally prohibits offer-related arrangements. Break fees, no-shops, matching rights and equivalent deal protections are not part of standard UK take-private practice. The narrow "white knight" exception permits agreed protection where the target is responding to a competing hostile bid.</p></aside>
+  </div>
+
+  <h3>MAC carve-outs in public M&amp;A — the higher invocation bar</h3>
+
+  <p>Module 09 covered the MAC clause in private deals (where buyers fight to keep walk-away rights and Delaware case law — <em>Akorn</em>, <em>IBP v Tyson</em> — sets a high but reachable bar). In <strong>public M&amp;A under the UK Takeover Code</strong>, the bar is much higher. <strong>Rule 13.5</strong> of the Code provides that an offeror may invoke a condition (including a MAC condition) only with the Panel's consent, and only where the circumstance is "of material significance to the offeror in the context of the offer." Panel decisions including <em>WPP / Tempus</em> (2001), <em>Brait / Iceland Foods</em> (2014), and the <em>Drax</em> line illustrate that successful MAC invocation in UK public M&amp;A is exceptionally rare. Module 09 frames the private-deal MAC; for a public-deal partner, the practitioner's instinct is that MAC invocation is essentially unavailable absent dramatic material change beyond the existing offer.</p>
+
+  <h3>Antitrust covenant ↔ reverse termination fee</h3>
+
+  <p>Module 08 covered antitrust / regulatory clearances. The strength of the buyer's antitrust covenant — sometimes a "reasonable best efforts" obligation, sometimes a "<strong>hell-or-high-water</strong>" obligation requiring divestitures up to a defined threshold — is correlated with the size of the <strong>reverse termination fee (RTF)</strong> the seller demands if the buyer cannot close because of antitrust failure. A senior partner discussing a public deal will treat the antitrust covenant and RTF as a single negotiated package: stronger buyer obligation → smaller RTF; weaker buyer obligation → bigger RTF. Typical RTF sizing on US public deals is 4–8% of equity value (depending on antitrust risk and buyer covenant strength); occasionally as high as 10–15% on transactions with high antitrust exposure. UK public deals are constrained by the Code's offer-related-arrangement rules, but reverse break fees (paid by offeror to offeree) are not within the same prohibition.</p>
+
+  <h2>Going-private transactions (US)</h2>
+
+  <p>When a US public company is taken private by PE (sometimes including management — a management buyout, MBO), special considerations apply.</p>
+
+  <p><strong>Special committee.</strong> The board appoints a committee of independent directors to negotiate on behalf of unaffiliated shareholders. The special committee has independent legal and financial advisors; reviews the offer; negotiates terms; decides whether to accept and recommend to shareholders.</p>
+
+  <p><strong>Fairness opinion.</strong> The special committee obtains a fairness opinion from an investment bank that the consideration is fair from a financial point of view to the unaffiliated shareholders.</p>
+
+  <p><strong><span class="term" data-term="appraisal-rights">Appraisal rights</span>.</strong> Under DGCL §262, dissenting shareholders in certain mergers (including most going-private transactions) can demand "appraisal" of their shares — a court-determined fair value, with statutory interest. Appraisal is sometimes used as a litigation strategy by hedge funds ("appraisal arbitrage") betting that the court will find a higher fair value than the merger price.</p>
+
+  <p><strong>Rule 13e-3 disclosures.</strong> Going-private transactions trigger Rule 13e-3 under the Securities Exchange Act, requiring extensive disclosure of fairness analysis, alternatives considered, and the relationship between affiliates and the transaction.</p>
+
+  <h3>The MFW framework</h3>
+
+  <p><em>Kahn v. M&amp;F Worldwide Corp.</em>, 88 A.3d 635 (Del. 2014).</p>
+
+  <p>In M&amp;F Worldwide (MFW), the controlling shareholder (MacAndrews &amp; Forbes — Ronald Perelman's holding company) proposed to take the company private. The Delaware Supreme Court (per Strine, C.J.) held that a controlling-shareholder freeze-out merger structured with both:</p>
+  <ol>
+    <li><strong>Approval by an independent special committee</strong> that is empowered, independent, and properly advised.</li>
+    <li><strong>A non-waivable majority-of-the-minority (MOM) shareholder vote.</strong></li>
+  </ol>
+  <p>Will be reviewed under the deferential <strong>business judgment rule</strong> rather than entire fairness. Both protections must be in place from the outset (front-end conditioned).</p>
+
+  <p>The MFW framework gives controlling shareholders a clear playbook for completing freeze-out mergers without entire-fairness scrutiny. It has been extended in <em>In re Match Group Inc. Derivative Litigation</em> (Delaware Supreme Court, <strong>4 April 2024</strong>), which holds two things — both important:</p>
+  <ol>
+    <li><strong>Holding 1.</strong> MFW applies to <em>all</em> controlling-stockholder transactions in which the controller receives a non-ratable benefit — not only freeze-out mergers. The MFW framework therefore covers a much broader class of transactions than originally thought.</li>
+    <li><strong>Holding 2 (often more practically important).</strong> <em>Every</em> member of a special committee must be independent of the controlling stockholder, not merely a majority. This overruled lower-court suggestions that a majority-independent committee suffices. Practical effect: deal teams must scrutinise <em>each</em> committee member's relationships, financial ties, and historical dealings with the controller; a single non-independent member contaminates the whole committee for MFW purposes.</li>
+  </ol>
+
+  <p><strong><em><span class="term" data-term="weinberger-v-uop">Weinberger v. UOP</span></em>, 457 A.2d 701 (Del. 1983).</strong> The foundational case on entire fairness review in interested-party mergers. UOP was acquired by its 50.5% parent (Signal Companies) in a cash-out merger. The Delaware Supreme Court held the transaction failed the entire-fairness test (fair dealing and fair price). Weinberger is the "default" standard that MFW provides an off-ramp from.</p>
+
+  <h2>Leveraged buyouts (LBOs)</h2>
+
+  <p>A leveraged buyout uses substantial debt to acquire a target, with the debt typically secured against the target's assets and/or repaid from the target's cash flows.</p>
+
+  <h3>Capital structure</h3>
+  <p>A typical LBO capital structure (current market):</p>
+  <ul>
+    <li><strong>Equity:</strong> 30–40% of total enterprise value, contributed by the PE sponsor (and possibly co-investors and rollover management).</li>
+    <li><strong>Term Loan A (TLA):</strong> senior secured loan, typically held by banks, amortising over 5–7 years.</li>
+    <li><strong>Term Loan B (TLB):</strong> senior secured institutional loan, typically held by collateralised loan obligations (CLOs) and institutional investors, with bullet repayment (single payment at maturity, typically 7–8 years).</li>
+    <li><strong>Revolving credit facility (RCF):</strong> undrawn at closing, available for working capital.</li>
+    <li><strong>Second lien debt</strong> or <strong>mezzanine debt:</strong> subordinated, higher coupon.</li>
+    <li><strong>High-yield bonds</strong> ("junk bonds"): sometimes used in lieu of or alongside Term Loan B.</li>
+    <li><strong>Payment-in-kind (PIK) notes</strong> or <strong>PIK toggles:</strong> interest paid in further notes rather than cash, deeply subordinated.</li>
+  </ul>
+
+  <h3>SPV acquisition structures</h3>
+  <p>PE deals typically use multiple SPVs (special purpose vehicles):</p>
+  <ul>
+    <li><strong>TopCo / Investco</strong> — holds the equity invested by the sponsor, co-investors, and management.</li>
+    <li><strong>HoldCo</strong> — debt issuer for senior unsecured / mezzanine; intermediate holding company for tax structuring.</li>
+    <li><strong>MidCo</strong> — sometimes inserted for additional structural subordination.</li>
+    <li><strong>BidCo</strong> — direct acquisition vehicle and usually senior secured borrower.</li>
+    <li><strong>Target</strong> — operating company being acquired.</li>
+  </ul>
+
+  <p>The structure is engineered to enable: tax-efficient debt push-down (interest deductibility at the borrowing level; tax consolidation); structural subordination of layers of debt; ring-fencing; optionality for refinancing and exit (each layer can be redeemed independently).</p>
+
+  <h3>Financial assistance</h3>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Historically, UK Companies Act 1985 s.151 prohibited a target from giving financial assistance for the acquisition of its own shares. This was a major constraint on LBO structures, requiring the "whitewash" procedure to release assistance. The <strong>Companies Act 2006</strong> abolished the financial assistance prohibition for <strong>private companies</strong> (sections 677–683 retained the prohibition only for public companies). LBO structures now typically: acquire the public target → re-register the target as a private company immediately after closing → push down debt and grant security from the target's assets.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>No equivalent prohibition on financial assistance — DGCL permits a company to grant security for its parent's debt subject to fraudulent conveyance constraints.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Many member states retain financial assistance restrictions (legacy of the Second Company Law Directive). German and Italian law impose constraints on capital maintenance and "downstream" guarantees by subsidiaries; French law has similar restrictions. Practitioners use upstream merger structures or capital reductions to clear the path.</p></aside>
+  </div>
+
+  <h3>Fraudulent conveyance / fraudulent transfer</h3>
+
+  <p>Under US Bankruptcy Code §548 and the Uniform Voidable Transactions Act (UVTA — formerly the Uniform Fraudulent Transfer Act), a transaction can be unwound if the company becomes insolvent and the transaction was not for "reasonably equivalent value" and the company was insolvent (or rendered insolvent) by the transaction. This becomes a real risk in LBOs where the target borrows substantially to fund payments to its selling shareholders, and subsequently fails. Lenders mitigate via solvency opinions; the SPA may include solvency-related representations and covenants.</p>
+
+  <p>The UK equivalents are sections 238 (transactions at undervalue) and 423 (transactions defrauding creditors) of the Insolvency Act 1986; the look-back period is 2 years for an unconnected party and 5 years for a connected party.</p>
+
+  <h3>Certain funds (UK Takeover Code)</h3>
+
+  <p>Rule 2.7 of the UK Takeover Code requires that a bidder making a firm offer announcement must have "certain funds" — meaning the bidder must be able to fulfil the offer in full, and the financing must be substantially unconditional. The financial advisor giving the certain funds confirmation has personal exposure — a major reason why financing for UK public bids is heavily front-loaded with commitment letters, fee letters, and very limited "market-out" conditions.</p>
+
+  <p>In the US, the equivalent is generally a less formal "highly confident" letter or commitment letter.</p>
+
+  <h2>Carve-outs and divestitures</h2>
+
+  <p>A carve-out is the sale of a division, subsidiary, or business unit by a corporate parent. Operationally complex because:</p>
+  <ul>
+    <li><strong>TSAs</strong> (covered in Module 15) are heavy.</li>
+    <li><strong>IT separation</strong> can take 12–36 months.</li>
+    <li><strong>Employee transfers</strong> (TUPE in UK; Acquired Rights Directive in EU; US WARN compliance — see Module 17).</li>
+    <li><strong>Brand licensing back</strong> — divested business sometimes uses parent's brand for a transition period under licence.</li>
+    <li><strong>Pre-closing reorganisation</strong> — the parent typically restructures the target into a separate legal entity (a "newco"), transfers relevant assets, contracts, and employees, and then sells the newco's shares. This is often called a "two-step" carve-out: pre-closing reorganisation, then share sale.</li>
+    <li><strong>Apportionment of pension liabilities</strong> — a major issue in the UK where defined benefit (DB) pension schemes are common; sellers often retain DB liabilities, and active employees transfer to new buyer-side schemes.</li>
+  </ul>
+
+  <h2>Distressed M&amp;A</h2>
+
+  <p>Distressed M&amp;A involves acquiring a target that is insolvent, near-insolvent, or in formal insolvency proceedings. Major frameworks:</p>
+
+  <h3>UK pre-pack administration</h3>
+  <p>A "pre-pack" is a sale of the business and assets of an insolvent company arranged before the company enters administration, with the sale completed shortly after the administrator is appointed.</p>
+  <ul>
+    <li>Pre-pack negotiated in confidence between insolvency practitioners (IPs) and prospective buyers.</li>
+    <li>Once the administrator is appointed (under Schedule B1 Insolvency Act 1986), the sale completes typically within hours or days.</li>
+    <li>Speed preserves business value (customers, employees, contracts not lost to lengthy insolvency uncertainty).</li>
+    <li><strong>Connected-party pre-packs</strong> (where buyer is connected to the existing management or shareholders) require a Pre-Pack Pool review and / or qualifying report under Statement of Insolvency Practice (SIP) 16 (Administrations: Statement of Insolvency Practice 16) and the Administration (Restrictions on Disposal etc. to Connected Persons) Regulations 2021.</li>
+  </ul>
+
+  <h3>US Chapter 11 §363 sale</h3>
+  <p>A <span class="term" data-term="section-363-sale">sale of the assets of a Chapter 11 debtor under section 363</span> of the US Bankruptcy Code:</p>
+  <ul>
+    <li><strong>Stalking horse bidder.</strong> An initial buyer agreed before the auction with negotiated bid protections (break fee, expense reimbursement, minimum overbid).</li>
+    <li><strong>Bid procedures</strong> approved by the bankruptcy court.</li>
+    <li><strong>Auction</strong> held with qualified bidders.</li>
+    <li><strong>Sale order</strong> approving the highest and best bid; sale typically "free and clear" of liens, claims, and interests under §363(f).</li>
+    <li><strong>Credit bidding</strong> under §363(k) — secured creditors can bid using their debt as currency.</li>
+  </ul>
+  <p>A §363 sale can deliver a clean sale of assets free of historical liabilities — extremely valuable for buyers.</p>
+
+  <h3>European insolvency frameworks</h3>
+  <ul>
+    <li><strong>Italy:</strong> <em>concordato preventivo</em> (preventive composition), <em>amministrazione straordinaria</em> (extraordinary administration for large insolvent companies).</li>
+    <li><strong>Germany:</strong> <em>Insolvenzplan</em> (insolvency plan); §613a Bürgerliches Gesetzbuch (BGB — German Civil Code) (similar to TUPE protecting employees on insolvency-driven transfers).</li>
+    <li><strong>France:</strong> <em>redressement judiciaire</em> (judicial recovery); <em>liquidation judiciaire</em> (judicial liquidation); <em>cession</em> (sale of business).</li>
+    <li><strong>Spain:</strong> <em>concurso de acreedores</em> (creditor's insolvency); modified by recent restructuring directives.</li>
+  </ul>
+  <p>The EU Restructuring Directive 2019/1023 established a common framework for preventive restructuring and second-chance for entrepreneurs across member states.</p>
+
+  <h3>Distressed M&amp;A drafting</h3>
+  <ul>
+    <li>Limited or no R&amp;Ws ("as is, where is").</li>
+    <li>Often no escrow — seller cannot afford to leave value on the table.</li>
+    <li>Specific indemnities for known issues (rather than general indemnification).</li>
+    <li>Speed is paramount.</li>
+    <li>Buyer's diligence is constrained by limited seller cooperation and time pressure.</li>
+    <li>Court approvals are critical (administration order; bankruptcy court sale order).</li>
+  </ul>
+
+  <h2>Joint ventures vs. M&amp;A</h2>
+
+  <p>In a joint venture, two or more parties contribute assets, capital, or know-how to a newly formed (or existing) entity that they jointly own. JV documentation is dominated by the JV Agreement (similar to an SHA) and contribution agreements.</p>
+
+  <p>JV is an alternative to outright M&amp;A when:</p>
+  <ul>
+    <li>Parties want to share an opportunity rather than fully absorb it.</li>
+    <li>Antitrust restrictions prevent outright merger.</li>
+    <li>Financial constraints prevent outright acquisition.</li>
+    <li>Strategic / operational complementarities are best preserved by retaining each party's strengths.</li>
+  </ul>
+
+  <p>JV exit is often the most contested provision — drag/tag, IPO triggers, deadlock-driven sale, put/call options, change-of-control consequences.</p>
+
+  <h2>SPACs (Special Purpose Acquisition Companies)</h2>
+
+  <p>A <span class="term" data-term="spac">SPAC</span> is a blank-check company that:</p>
+  <ol>
+    <li>IPOs on a public exchange, raising cash in trust to pursue an acquisition.</li>
+    <li>Has 18–24 months to identify and complete a "<span class="term" data-term="de-spac">de-SPAC</span>" — merger with a private operating company.</li>
+    <li>SPAC shareholders vote on the proposed transaction; dissenters can redeem their shares for the IPO proceeds in trust.</li>
+    <li>On completion, the private company becomes the public company.</li>
+  </ol>
+
+  <p><strong>SPAC boom (2020–2021), bust (2022–2023):</strong> SPAC issuance peaked in 2021 at approximately $160 billion in IPO proceeds (US), then collapsed sharply in 2022 as redemptions surged, post-merger performance disappointed, and SEC scrutiny intensified. The SEC adopted final SPAC rules in January 2024 imposing additional disclosure requirements, alignment of SPACs with traditional IPOs (in particular, eliminating the Private Securities Litigation Reform Act (PSLRA) safe harbor for forward-looking statements in de-SPAC transactions, increasing liability for projections), and underwriter accountability.</p>
+
+  <p><strong>Practical structure:</strong></p>
+  <ul>
+    <li>Sponsor invests "founder shares" at nominal cost (typically 20% of public shares post-IPO).</li>
+    <li>Public shareholders invest in IPO units (usually one share + a fraction of a warrant).</li>
+    <li>Trust holds IPO proceeds invested in money-market instruments.</li>
+    <li>On de-SPAC, founders' shares vest based on transaction completion (often with earn-out triggers tied to post-merger share price performance).</li>
+  </ul>
+
+  <aside class="pitfall">
+    <h5>Common drafting / structuring pitfalls</h5>
+    <ol>
+      <li><strong>Misclassifying a Code company.</strong> Failing to recognise that a target falls within the UK Takeover Code's residual test (place of management, etc.).</li>
+      <li><strong>Missing the 28-day Rule 2.6 deadline.</strong> Once a possible-offer announcement is forced (e.g., by a leak), the 28-day clock starts running and is hard to extend.</li>
+      <li><strong>Frustrating action errors.</strong> Target boards taking action during an offer period that triggers Rule 21 issues without Panel clearance.</li>
+      <li><strong>Insufficient certain funds.</strong> Rule 2.7 requires firm financing — financial advisors face personal exposure.</li>
+      <li><strong>Schedule TO defects.</strong> US disclosure errors during a tender offer can lead to SEC enforcement and shareholder litigation.</li>
+      <li><strong>MFW front-end failure.</strong> Failing to put both special committee and MOM vote conditions at the very beginning — Delaware courts have repeatedly held that retrofitting these protections does not work.</li>
+      <li><strong><span class="term" data-term="fraudulent-conveyance">Fraudulent conveyance</span> over-leverage.</strong> Lender solvency opinions are a baseline, but extreme LBO leverage in a deteriorating business creates serious unwinding risk.</li>
+      <li><strong>Distressed sale moving too slowly.</strong> Distressed sales lose value daily — protracted documentation negotiation defeats the purpose.</li>
+    </ol>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Public M&amp;A is governed by takeover codes, securities laws, and stock exchange rules — not the SPA / disclosure-letter machinery of private deals.</li>
+      <li>US: Williams Act (1968) + Rules 14d/14e — Schedule TO, 20-business-day minimum offer, all-holders + best-price rules, withdrawal, pro-rata acceptance. Schedule 14D-9 due within 10 business days of target.</li>
+      <li>UK Takeover Code (Panel-administered): mandatory bid at 30% (Rule 9); "put up or shut up" by day 28 (Rule 2.6); certain funds (Rule 2.7).</li>
+      <li><strong>3 February 2025 reforms (RS 2024/1):</strong> Code jurisdiction substantially narrowed to UK-registered companies that are or have been "UK-quoted" in the previous two years (with PISCES / TISE / sole-beneficial-owner exclusions); Rule 21 reformed to permit a 1% aggregate target-side break fee in Rule 21.1 transactions.</li>
+      <li>UK schemes of arrangement (Companies Act 2006 Part 26) require majority in number + 75% in value at each class meeting plus court sanction — preferred for large UK public deals (100% in one step; stamp-duty saving).</li>
+      <li>Delaware defensive measures: <em>Unocal</em> enhanced scrutiny; <em>Revlon</em> auctioneer duty; <em>Time-Warner</em> (1989) and <em>QVC</em> (1994) define when <em>Revlon</em> bites — strategic response (no) vs. controlling-stockholder change of control (yes); <em>Blasius</em> compelling-justification for vote-thwarting; <em>Moran</em> upholds poison pill in concept.</li>
+      <li>MFW (2014); <em>In re Match Group</em> (4 April 2024) extended MFW to all controlling-stockholder transactions with non-ratable benefit and held that <em>every</em> committee member must be independent (not merely a majority).</li>
+      <li>Public-deal MAC invocation (UK Code Rule 13.5) requires Panel consent and is exceptionally rare (<em>WPP / Tempus</em>, <em>Brait / Iceland Foods</em>, <em>Drax</em>) — a much higher bar than the private-deal MAC of Module 09.</li>
+      <li>Antitrust covenant ↔ RTF correlation: stronger "hell-or-high-water" → smaller RTF; weaker covenant → bigger RTF (4–8% typical, sometimes 10–15% on antitrust-risky deals).</li>
+      <li>LBO capital stack: equity 30–40%, TLA, TLB (cov-lite typical), RCF, second-lien/mezz, high yield, PIK. SPV chain: TopCo → HoldCo → BidCo → Target. SunGard-clean conditionality keeps the buyer's financing certain.</li>
+      <li>UK financial assistance abolished for private companies (CA 2006 ss. 677–683) — public targets re-registered as private after closing to enable debt push-down.</li>
+      <li>Fraudulent conveyance: US Bankruptcy Code §548 / UVTA; UK Insolvency Act 1986 ss. 238, 423. Solvency opinions and SPA solvency reps mitigate.</li>
+      <li>Distressed M&amp;A frameworks: UK pre-pack (Schedule B1 IA 1986); US §363 sale (free and clear, credit bidding); EU national insolvency regimes.</li>
+      <li>SPACs: blank-check IPO → 18–24 months to de-SPAC; SEC's January 2024 rules eliminated the PSLRA safe harbor for de-SPAC projections. The de-SPAC merger is, in substance, a private-target acquisition — so Modules 12–14 (R&amp;Ws, indemnification, W&amp;I) apply.</li>
+      <li>US deal-protection trilogy: fiduciary out + window-shop + matching right (3–5 days) + force-the-vote (DGCL §146 / §251(c)) + break fee (2.5–4% of equity value). <em>Omnicare</em> (2003) invalidates cumulative measures that are preclusive and coercive.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="17-post-closing.html" class="prev">Post-Closing Matters &amp; Integration</a>
+    <span></span>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

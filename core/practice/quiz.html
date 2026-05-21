@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="quiz.html" class="active">Quiz</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="practice-page">
+  <h1>Multiple-Choice Quiz</h1>
+  <p class="subtitle">Twenty-question rounds. Distractors are built from common confusions (e.g., tipping basket vs. deductible basket; representation vs. warranty).</p>
+
+  <div class="practice-controls">
+    <label>Module: <select id="moduleSelect"><option value="all">All</option></select></label>
+    <button id="newRoundBtn">New round</button>
+    <span style="margin-left:auto; font-family: var(--sans); color: var(--ink-muted); font-size:0.9rem;" id="score">0 / 0 answered</span>
+  </div>
+
+  <div id="quizContainer"></div>
+</main>
+
+<footer>Each question comes with an explanation linking back to the relevant module section.</footer>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../data/quiz.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

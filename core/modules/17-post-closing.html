@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 17 — Post-Closing Matters &amp; Integration · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="17">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 17</div>
+    <h1>Post-Closing Matters &amp; Integration</h1>
+    <p class="subtitle">The 18–36 months after closing: closing-accounts disputes, earn-out litigation, indemnity and W&amp;I claims, employee transfers (TUPE / WARN), data privacy, and the non-compete debates that won't end.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Identify the legal team's post-closing workstreams: closing-accounts dispute, <span class="term" data-term="earn-out-monitoring">earn-out monitoring</span>, indemnity claims management, W&amp;I claims management, escrow release, post-closing tax, and integration support.</li>
+      <li>Explain why earn-out provisions are a fertile source of post-closing litigation and how to draft to minimise disputes (with reference to <em>Lazard Technology Partners v. Qinetiq</em>).</li>
+      <li>Describe the typical W&amp;I claim lifecycle from <span class="term" data-term="notice-of-circumstances">Notification of Circumstances</span> through coverage decision and payment.</li>
+      <li>Summarise the legal-integration workstreams: employee transfers (<span class="term" data-term="tupe">TUPE</span> in the UK; <span class="term" data-term="acquired-rights-directive">Acquired Rights Directive</span> in the EU; <span class="term" data-term="warn-act">WARN Act</span> in the US), customer / supplier consents, IT and data privacy.</li>
+      <li>Explain the enforceability framework for post-closing non-competes (including the <span class="term" data-term="ftc-non-compete-rule">FTC's vacated and abandoned 2024 Final Rule</span> following <em>Ryan v FTC</em> and the FTC's 5 September 2025 dismissal of its appeal, plus the UK position under <em>Tillman v Egon Zehnder</em>).</li>
+      <li>Describe the accounting consequences of earn-outs and contingent consideration (<span class="term" data-term="ifrs-3">IFRS 3</span> / <span class="term" data-term="asc-805">ASC 805</span> fair-value measurement with subsequent re-measurement).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> For a buyer's M&amp;A lawyer, "deal done" at closing is only the start of a long tail of legal work. Mid- and large-cap deals routinely generate 18–36 months of follow-on legal activity: closing-accounts disputes, earn-out monitoring, warranty claims, W&amp;I notifications, escrow release, regulatory follow-up, tax audits, integration legal support, and (often) restructuring of the acquired business. For the seller's lawyer, the post-closing period is when liability gets crystallised — survival periods running, claims being notified, escrow releases pending. A senior M&amp;A partner's "value-add" to a client is often most visible in the <span class="term" data-term="post-closing-period">post-closing period</span>: a poor closing-accounts dispute can swing $20m of value; a botched earn-out can convert a happy seller into a litigation adversary; a missed W&amp;I notification deadline can cost the buyer its insurance recovery. A non-lawyer working at a law firm should understand the rhythm of post-closing matters and the principal risk areas.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook — what you'll actually hear</h5>
+    <p>If a senior post-closing partner drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"NOC"</strong> — Notification of Circumstances: the protective notice to a W&amp;I insurer of facts that <em>may</em> give rise to a claim, before the insured has formed a final view; preserves cover under the policy's notification provisions.</li>
+      <li><strong>"Subrogation waiver"</strong> — the W&amp;I insurer's waiver of its right to pursue the seller after paying the buyer; standard except in cases of fraud, but materially affects the seller's residual exposure.</li>
+      <li><strong>"Ring-fence"</strong> — operating the acquired or target business segregated from the rest of the buyer's group (e.g., during a hold-separate antitrust period, or to protect an earn-out base from cannibalisation).</li>
+      <li><strong>"Anti-stuffing"</strong> — covenant preventing the buyer from inflating an earn-out base by, e.g., bringing in new revenue from outside the earn-out scope to game the metric.</li>
+      <li><strong>"COC acceleration"</strong> — change-of-control acceleration: if the buyer is itself acquired during the earn-out period, the unearned portion accelerates to the seller (typically at NPV or a defined formula).</li>
+      <li><strong>"Garden leave"</strong> — paid suspension during notice; UK senior-executive substitute for a strict post-employment non-compete.</li>
+      <li><strong>"Jurat"</strong> — the formal verification block on a sworn document (e.g., a sworn loss-substantiation statement to a W&amp;I insurer); structurally important for evidence and procedural validity.</li>
+      <li><strong>"Baseball arbitration on closing accounts"</strong> — final-offer expert determination: each side submits a single number, the expert picks one, no compromise; forces parties to be reasonable.</li>
+      <li><strong>"Eroding retention"</strong> — W&amp;I retention is reduced by the amount of any prior payments made under the policy; matters for the basket / cap interaction.</li>
+      <li><strong>"Soft staple"</strong> / <strong>"SPA-friendly insurer"</strong> — W&amp;I terminology for an insurer that aligns its policy exclusions and disclosure standard closely with the SPA's, minimising the gap.</li>
+      <li><strong>"Policy waterfall"</strong> — primary policy → excess layers → sideways cover for defence costs.</li>
+    </ul>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 04 (DD findings drive what gets disclosed and what gets indemnified specifically); Module 08 (antitrust commitments cycle through hold-separate periods and monitoring trustee oversight); Module 11 (closing-accounts disputes return here from the legal-process angle); Modules 12–13 (R&amp;Ws and the indemnification regime are operationalised post-closing); Module 14 (W&amp;I claims are the dominant post-closing recovery channel); Module 15 (Tax Deed claims, TSA exits, leaver disputes all run through post-closing).</li>
+      <li><strong>Forwards:</strong> Module 18 (for listed buyers, post-closing matters trigger market-disclosure obligations under DTR / Form 8-K Item 2.06).</li>
+      <li><strong>Domino effect:</strong> A late W&amp;I notification can void cover entirely. A bring-down-disclosure dispute crystallised post-closing can reopen the indemnification cap. A closing-accounts dispute that overruns the survival period for related warranty claims can foreclose recovery routes the buyer thought were still open.</li>
+    </ul>
+  </aside>
+
+  <h2>Closing accounts process and dispute</h2>
+
+  <p>(Mechanism in Module 11; here from the legal-process angle.) Buyer prepares draft completion accounts within 60–90 days; seller has 30–60 days to object. Disputes escalate to an independent expert (typically a Big Four accounting firm acting as expert determiner, not arbitrator).</p>
+
+  <p><strong>Common disputes:</strong> working capital line items (accruals, provisions, inventory); cash definitions (restricted cash); net debt scope (operating leases? earn-out liabilities? deferred revenue?); consistency of accounting policies with prior periods. Expert determination is typically final and binding, subject only to "manifest error" or fraud — not appealable.</p>
+
+  <h2>Earn-out monitoring</h2>
+
+  <p>Earn-outs are the post-closing area most prone to litigation: the seller has lost control but retains economic exposure; the buyer is integrating and may take actions that depress earn-out metrics.</p>
+
+  <p><strong>Common disputed buyer actions:</strong> acquired competitor's product (cannibalising target revenue); redeployed target salesforce; cut research and development (R&amp;D) investment; allocated buyer overhead to target; changed accounting policies (revenue recognition, capitalisation, inventory); lost customers to integration friction; discontinued earn-out product line.</p>
+
+  <p><strong>Express contractual standards</strong> in increasing stringency: silence (most pro-buyer); good faith; commercially reasonable efforts; reasonable best efforts; best efforts (Delaware case law treats these roughly equivalently); specific operational commitments (business plan, salesforce, CapEx); maximise the earn-out (rare, very pro-seller).</p>
+
+  <p><strong><span class="term" data-term="implied-covenant">Implied covenant of good faith and fair dealing</span>.</strong> Delaware imposes an implied covenant on every contract. Whether this constrains buyer conduct absent express obligations is contested.</p>
+
+  <h3>Lazard Technology Partners, LLC v. QinetiQ North America Operations LLC, 114 A.3d 193 (Del. 2015)</h3>
+
+  <p>QinetiQ acquired Cyveillance for $40m up front plus up to $40m earn-out tied to revenue. Merger agreement Section 5.4 prohibited "tak[ing] any action to divert or defer [revenue] with the intent of reducing or limiting the Earn-Out Payment." The earn-out was not achieved; Lazard sued. The Delaware Supreme Court (Strine, C.J.) affirmed for QinetiQ: Section 5.4 employed an <strong>intent</strong> standard, not a <strong>knowledge</strong> standard. The implied covenant did not extend protection beyond what the seller had negotiated. Lesson: sellers must negotiate express operating covenants; the implied covenant will not retroactively cure drafting gaps.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>UK contract law does not generally recognise an implied duty of good faith between commercial counterparties, subject to limited exceptions for "relational contracts" — <em>Yam Seng Pte Ltd v International Trade Corp Ltd</em> [2013] EWHC 111 (QB) (Leggatt J). The <em>Yam Seng</em> trajectory has oscillated since 2013: <em>Bates v Post Office (No. 3)</em> [2019] EWHC 606 reasserted the relational-contracts category broadly; <em>Candey Ltd v Bosheh</em> [2022] EWCA Civ 1103 has cabined it. The doctrine is alive but cabined; UK earn-out drafting therefore relies even more heavily on express operating covenants.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Implied covenant of good faith and fair dealing applies but narrowly — <em>Lazard v Qinetiq</em>: it will not retroactively expand the seller's express bargained-for protections. Sellers must negotiate explicit operating covenants up front.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Civil-law systems generally impose a positive duty of good-faith performance (<em>bonne foi</em> — French Code civil article 1104; <em>Treu und Glauben</em> — German BGB §242). This may give sellers more traction than in UK or US deals — though commercial parties tend to draft around these defaults.</p></aside>
+  </div>
+
+  <p><strong>Practical drafting:</strong> precise metric definitions; specified accounting principles; operating commitments (salesforce, CapEx, business plan); independent-expert dispute resolution; change-of-control acceleration (if buyer is acquired, earn-out accelerates); seller information/access rights; remedies (damages, acceleration, specific performance).</p>
+
+  <h2>Indemnity claims management</h2>
+
+  <p>When a buyer discovers a potential indemnification claim, the lifecycle is: internal investigation → legal hold (preserve documents) → notification to seller (within SPA notice period and survival period) → notification to W&amp;I insurer if applicable → data assembly → quantification → settlement negotiation → escalation (often arbitration).</p>
+
+  <p><strong>Critical notification pitfalls:</strong> missing the survival period; defective notice (some SPAs make defective notice a complete bar); cap exhausted by earlier claims; settling with a third party (tax authority, etc.) without seller consent — may waive the indemnity.</p>
+
+  <p><strong>Conduct of third-party claims.</strong> SPAs allocate control: buyer-controlled defence with seller consultation/consent for settlement; seller-controlled defence (typical for tax matters where seller has historical knowledge); or joint defence.</p>
+
+  <h3>The claim cascade — integrated 30-day post-discovery workflow</h3>
+
+  <p>When a buyer discovers a post-closing problem (a fraud finding in a tax audit, a mis-stated rep, a covenant breach), multiple workstreams trigger in parallel. Treating each notice in isolation is the most common operational mistake — the integrated cascade is what a senior partner runs:</p>
+
+  <ol>
+    <li><strong>Day 0 — internal investigation and legal hold.</strong> Internal counsel opens a privileged file; document hold notice issued to retained custodians; preliminary fact-gathering under privilege.</li>
+    <li><strong>Day 0–3 — W&amp;I Notification of Circumstances (NOC).</strong> Even before the buyer has formed a view of a claim, file a protective NOC with the W&amp;I insurer to preserve cover under the policy's notification provisions. Many policies require notification "as soon as reasonably practicable" or within a defined window.</li>
+    <li><strong>Day 3–14 — preserve evidence.</strong> Forensic copies of relevant systems; interviews with key personnel; freeze accounting policies for the affected period; preserve email and chat archives.</li>
+    <li><strong>Day 7–21 — SPA notice to seller.</strong> Comply strictly with the SPA's notice provisions (form, address, content, time). Defective notice is often a complete bar even if substance of the claim is valid.</li>
+    <li><strong>Day 14–30 — D&amp;O notice (if individuals are exposed).</strong> If directors or officers may face third-party claims, notify the D&amp;O carrier under the post-closing run-off / tail policy.</li>
+    <li><strong>Day 14–30 — lender covenant check.</strong> Material indemnity exposure may breach financial covenants in the buyer's acquisition financing; lenders are often entitled to immediate notice of "events that could reasonably be expected to result in a Material Adverse Effect."</li>
+    <li><strong>Day 14–30 — public-disclosure assessment.</strong> For listed buyers, evaluate Disclosure and Transparency Rules (DTR) (UK FCA Disclosure Guidance and Transparency Rules sourcebook) / Form 8-K Item 2.06 (impairments) / SEC Regulation FD obligations.</li>
+    <li><strong>Day 14–30 — integration freeze on the affected workstream.</strong> Pause integration steps that could prejudice the claim or cure the breach inadvertently (e.g., reorganisations that mix tainted assets with clean operations).</li>
+    <li><strong>Day 30+ — settle / contest cycle.</strong> Quantify the loss; engage with insurer's loss adjuster; conduct settlement discussions with seller; if no resolution, escalate to expert determination (closing accounts) or arbitration / litigation (W&amp;I, indemnity).</li>
+  </ol>
+
+  <p><strong>Why each branch matters as a system, not as separate notices.</strong> Missing the W&amp;I NOC voids cover. Missing the SPA notice voids the indemnity claim against the seller. Missing the lender notice can trigger a covenant default cascade. Missing the public disclosure can compound the damage with regulatory enforcement. A senior partner runs all five branches as a parallel checklist on day one.</p>
+
+  <h2>W&amp;I claims management</h2>
+
+  <p>W&amp;I claim lifecycle: <strong>Notification of Circumstances (NOC)</strong> — facts that may give rise to a claim, before insured has formed a final view (protects against policy limitation periods); <strong>Notification of Claim</strong> once insured has formed a view of a covered loss; loss substantiation; insurer investigation (often via specialist loss adjusters — Crawford &amp; Company, Sedgwick); coverage decision; negotiation or arbitration (W&amp;I policies typically have arbitration clauses); indemnity payment if covered.</p>
+
+  <p><strong>Common W&amp;I disputes:</strong> whether the matter was "known" by the insured at signing (W&amp;I excludes known matters); whether disclosed in the disclosure letter (disclosure tracks exclusion); quantification (insurer pushes diminution-in-value standard, insured pushes broader); industry-specific exclusions (environmental, pension).</p>
+
+  <p><strong>Tactical features:</strong> "no-claims" declaration at closing; detailed disclosure / data-room records; subrogation waivers in favour of seller (insurer cannot pursue seller after paying buyer, absent fraud).</p>
+
+  <h2>Escrow release process</h2>
+
+  <p>Mechanics: automatic release at end of survival period less pending claims; partial release at intermediate dates if survival is staggered; withholding against pending claims (typically noticed amount plus reasonable defence costs); joint instructions for any release within survival.</p>
+
+  <p><strong>Pending-claim flow:</strong> buyer notifies agent (copy to seller) → agent withholds → withhold continues until "resolved" (agreement, expert determination, arbitration award, or court judgment) → release on joint instruction or court order.</p>
+
+  <p><strong>Common drafting issues:</strong> definition of "resolved"; agent fees post-release; unclaimed amounts on agent retirement.</p>
+
+  <h2>Post-closing tax matters</h2>
+
+  <ol>
+    <li><strong>Pre-closing tax audits</strong> — seller typically has control rights with buyer cooperation, given seller's historical knowledge and indemnification exposure.</li>
+    <li><strong>Closing-year tax filings</strong> spanning pre- and post-closing periods.</li>
+    <li><strong>Tax refunds</strong> for pre-closing periods generally go to the seller.</li>
+    <li><strong>Transfer pricing</strong> in cross-border deals.</li>
+    <li><strong>Tax elections</strong> in US deals (Section 338(h)(10); "check the box" entity classification).</li>
+    <li><strong>W&amp;I interaction</strong> — tax matters frequently flow through W&amp;I policies (subject to specific sub-limits or exclusions).</li>
+  </ol>
+
+  <h2>Integration matters from a legal lens</h2>
+
+  <p>The buyer's commercial team typically leads post-merger integration (PMI). The legal team supports key workstreams.</p>
+
+  <h3>Employee transfers</h3>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK — TUPE</h5><p>The Transfer of Undertakings (Protection of Employment) Regulations 2006 (commonly "TUPE", pronounced "too-pee") implement the EU Acquired Rights Directive in the UK. TUPE applies to "relevant transfers" — a transfer of an undertaking, business, or part of an undertaking. Affected employees automatically transfer to the buyer with their existing terms; continuity of employment is preserved; buyers cannot dismiss employees solely by reason of the transfer (such dismissals are automatically unfair); information and consultation duties (with employee representatives) before the transfer; restrictions on changing terms and conditions in connection with the transfer. TUPE primarily applies to asset deals and business transfers. <strong>In share deals, TUPE typically does not apply</strong> because the employer (the target company) does not change.</p></aside>
+    <aside class="juris us"><h5>US — WARN Act</h5><p>The Worker Adjustment and Retraining Notification Act of 1988 (WARN) requires employers with 100+ employees to provide 60-day notice of "plant closings" or "mass layoffs." Some states (California, New York, Illinois) have stronger state-level statutes (e.g., the New York WARN Act requires 90-day notice). Acquisition transactions that result in workforce reductions trigger WARN; the SPA typically allocates WARN-notice responsibility between buyer and seller and indemnifies for failures.</p></aside>
+    <aside class="juris eu"><h5>EU — Acquired Rights Directive</h5><p>Council Directive 2001/23/EC on the safeguarding of employees' rights in the event of transfers of undertakings. Implemented in each member state with local variations. The German, French, Italian implementations all have country-specific quirks (consultation procedures, notification periods, timing).</p></aside>
+  </div>
+
+  <h3>Customer and supplier consents</h3>
+
+  <p>Many contracts contain change-of-control or anti-assignment clauses. In a share deal, change-of-control clauses are triggered (because the parent's control changes); in an asset deal, anti-assignment clauses are triggered (because the contract is transferred).</p>
+
+  <p>The legal team identifies critical contracts requiring consent and manages the consent process: drafts consent letters; tracks responses; negotiates concessions where the counterparty uses the consent right as leverage; identifies contracts where consent will not be obtained — the "stand-alone" risk.</p>
+
+  <p>If material consents are not obtained, the buyer may have an indemnification claim (where the SPA warranties were breached), a price reduction claim under purchase-price-adjustment provisions, or a closing-condition failure (if the consent was a CP).</p>
+
+  <h3>IT systems integration with data privacy</h3>
+
+  <p>Cross-border data transfer and storage is a major integration issue, especially after:</p>
+
+  <p><strong><span class="term" data-term="gdpr">General Data Protection Regulation (GDPR)</span></strong> (Regulation (EU) 2016/679). Imposes restrictions on transfers of EU personal data outside the European Economic Area (EEA). Permitted mechanisms include:</p>
+  <ul>
+    <li>Adequacy decisions (UK, Switzerland, Canada, Japan, etc.).</li>
+    <li>Standard Contractual Clauses (SCCs) — the most common mechanism for data transfers to "third countries."</li>
+    <li>Binding Corporate Rules (BCRs).</li>
+    <li>Specific derogations (Article 49).</li>
+  </ul>
+
+  <p><strong><em><span class="term" data-term="schrems-ii">Schrems II</span></em></strong> (Court of Justice of the European Union (CJEU), Case C-311/18, 16 July 2020) invalidated the EU-US Privacy Shield (the previous adequacy mechanism for US data transfers) and introduced a "supplementary measures" requirement for SCCs. The <strong>EU-US Data Privacy Framework (DPF)</strong> adopted in 2023 (Commission Implementing Decision (EU) 2023/1795 of 10 July 2023) restored a transfer mechanism for participating US companies.</p>
+
+  <p><strong>September 2025 — DPF survives first challenge.</strong> The EU General Court dismissed the first substantive challenge to the DPF (the <em>Latombe</em>-style action) in September 2025, confirming for now that DPF self-certified US transfers are valid. A "Schrems III" further challenge by NOYB is widely anticipated. The practitioner's hedge — even after the September 2025 ruling — is to layer SCCs plus supplementary measures (technical, organisational, contractual) on top of DPF certification, so that if a future challenge succeeds the transfer regime does not collapse. Compliance management remains a serious integration workstream.</p>
+
+  <p><strong>Other integration data issues:</strong> Database migration with consent / legal-basis re-validation; Data Protection Impact Assessment (DPIA) for any high-risk new processing; Records of Processing Activities (RoPAs) updates.</p>
+
+  <h3>Antitrust integration restrictions during conditional clearance</h3>
+
+  <p>Where merger control clearance was conditional on commitments (divestitures, behavioural commitments), the integration must be conducted compatibly with those commitments. A "monitoring trustee" appointed by the competition authority may oversee compliance. Breach of clearance conditions can result in re-imposed remedies, fines, or even unwinding of the transaction.</p>
+
+  <p><strong>Standalone obligations during a "<span class="term" data-term="hold-separate-order">hold-separate</span>" period.</strong> Where divestiture commitments are time-deferred, the divested business is typically operated as a "hold-separate" business with its own management, segregated information flows, and ring-fenced operations until divestiture. The legal team monitors compliance with hold-separate orders.</p>
+
+  <h3>Post-Merger Integration (PMI) governance</h3>
+
+  <p>Larger deals typically establish:</p>
+  <ul>
+    <li><strong>Integration Management Office (IMO)</strong> — central coordinating function.</li>
+    <li><strong>Workstream leads</strong> — IT, HR, finance, legal, commercial, communications.</li>
+    <li><strong>Integration Steering Committee</strong> — senior leadership.</li>
+    <li><strong>Day-1 readiness checklist</strong> — what must be operational on closing day (employee onboarding, customer communications, payroll continuity, IT access).</li>
+    <li><strong>100-day plan</strong> — early integration milestones.</li>
+    <li><strong>Year-1 integration goals</strong> — synergy capture, system migration, brand consolidation.</li>
+  </ul>
+
+  <p>The legal team's role: contract migration, consent management, regulatory compliance, employee restructuring, intellectual property consolidation.</p>
+
+  <h2>Disposal restrictions / non-compete enforcement</h2>
+
+  <p>Post-closing, the seller is typically subject to non-compete and non-solicit restrictions for a period (typically 2–5 years for sellers; 12–24 months for individuals). Enforceability varies significantly.</p>
+
+  <h3>UK / EU — restraint of trade doctrine</h3>
+
+  <p><strong>UK foundational restraint-of-trade case: <em>Esso Petroleum Co Ltd v Harper's Garage (Stourport) Ltd</em> [1968] AC 269 (HL).</strong> The House of Lords held that restrictive covenants are <em>prima facie</em> (Latin: "at first appearance") void as <span class="term" data-term="restraint-of-trade-doctrine">restraint of trade</span> unless the restraint is reasonable to protect a legitimate interest. Applied to a "solus" tying agreement between Esso and a petrol station — a 5-year tie was upheld; a 21-year tie was struck down. <em>Esso</em> remains the foundational authority on restraint-of-trade doctrine in commercial supply contexts.</p>
+
+  <p><strong>Modern UK authority on executive post-employment restraints: <em><span class="term" data-term="tillman-v-egon-zehnder">Tillman v Egon Zehnder Ltd</span></em> [2019] UKSC 32.</strong> The Supreme Court (Lord Wilson) clarified the modern severance / "blue-pencil" doctrine: where part of a non-compete is unreasonably wide, the court can sever offending words to leave the remainder enforceable, provided that what remains stands as a coherent restraint. <em>Tillman</em> is the authority a senior employment / M&amp;A partner expects when discussing executive restraints — not <em>Esso</em>, which addresses commercial solus-tie agreements.</p>
+
+  <p><strong>Test (UK):</strong> Restraint must be:</p>
+  <ol>
+    <li>Reasonable as between the parties (legitimate interest, scope, duration, geography no broader than necessary).</li>
+    <li>Reasonable in the public interest.</li>
+  </ol>
+
+  <p>A restraint in connection with the <strong>sale of a business</strong> is treated more favourably than a restraint in employment, because the seller is receiving consideration for the business including its goodwill, and a non-compete protects the goodwill the buyer has paid for. UK courts will typically uphold seller non-competes of 2–5 years, where the geographic scope is tied to actual operations.</p>
+
+  <p>In <strong>employment</strong>: more strictly construed. Older authorities: <em>Mason v Provident Clothing &amp; Supply Co Ltd</em> [1913] AC 724 and <em>Herbert Morris v Saxelby</em> [1916] AC 688 — restraints in employment must be necessary; courts will strike out wider-than-necessary restraints. Modern severance practice now follows <em>Tillman v Egon Zehnder</em> [2019] UKSC 32 — courts will "blue-pencil" excessive elements while preserving coherent residue, though the court will not rewrite.</p>
+
+  <h3>US — patchwork of state law</h3>
+
+  <p>Non-compete enforceability varies enormously by state:</p>
+  <ul>
+    <li><strong>California.</strong> Cal. Bus. &amp; Prof. Code §16600 — generally voids non-compete agreements except in connection with the sale of a business (§16601), partnership dissolution (§16602), or LLC dissolution (§16602.5). California is overwhelmingly anti-non-compete in employment.</li>
+    <li><strong>Texas, Florida, Massachusetts, Illinois.</strong> Each has its own statutory framework, generally permitting non-competes but with reasonableness review.</li>
+    <li><strong>New York, Delaware.</strong> Non-competes generally enforceable subject to reasonableness — typically 6 months to 2 years for employees; longer for sale-of-business restraints.</li>
+  </ul>
+
+  <h3>FTC Final Rule on non-competes (2024) — vacated and abandoned</h3>
+
+  <p>Historical context. On 23 April 2024, the Federal Trade Commission (FTC) issued its <strong>Non-Compete Clause Rule</strong> (89 Fed. Reg. 38342), declaring most non-compete clauses to be unfair methods of competition under Section 5 of the FTC Act. The Rule banned new non-competes for all workers from a 4 September 2024 effective date and (subject to a senior-executive carve-out tied historically to the DOL highly-compensated-employee threshold of $151,164 annually) made existing non-competes unenforceable.</p>
+
+  <p><strong>Texas vacatur — <em>Ryan LLC v. FTC</em>.</strong> On <strong>20 August 2024</strong>, Judge Ada Brown of the U.S. District Court for the Northern District of Texas, in <em><span class="term" data-term="ryan-v-ftc">Ryan LLC v. Federal Trade Commission</span></em> (Case No. 3:24-cv-00986; the consolidated case is also referenced as 6:24-cv-486), granted summary judgment for the plaintiffs and <strong>set aside the FTC Non-Compete Rule on a nationwide basis</strong> under 5 U.S.C. §706(2). The court held that the FTC exceeded its statutory authority (Section 6(g) of the FTC Act does not authorise substantive competition rulemaking, only procedural rulemaking) and that the Rule was arbitrary and capricious under the Administrative Procedure Act.</p>
+
+  <p><strong>FTC's abandonment of the Rule (5 September 2025).</strong> Initially the FTC appealed the vacatur to the U.S. Court of Appeals for the Fifth Circuit. On <strong>5 September 2025</strong>, however, the FTC voted 3-1 (Chairman Andrew Ferguson and Commissioner Holyoak in the majority) to <strong>dismiss its own appeal and accede to the District Court's vacatur</strong>. The District Court's nationwide vacatur stands; <strong>there will be no Fifth Circuit ruling on the merits</strong>. The Rule is permanently abandoned.</p>
+
+  <p><strong>FTC's redirection — case-by-case Section 5 enforcement.</strong> Rather than rulemaking, the FTC has redirected to <strong>case-by-case Section 5 enforcement</strong>. The inaugural targeted action was the <em>Gateway Pet Cremation</em> matter (announced <strong>4 September 2025</strong>) — a complaint targeting 12-month post-employment non-competes imposed on line workers. Crucially for the M&amp;A bar, the FTC's targeted enforcement explicitly carves out from focus: (i) <strong>non-competes in the bona fide sale of a business</strong>, and (ii) <strong>senior-executive non-competes connected to equity grants</strong>. Both categories — sale-of-business and senior-executive equity-linked — are treated as outside the policy concern that motivates the FTC's case-by-case actions.</p>
+
+  <p><strong>Practical impact (2026).</strong> Non-compete enforceability is once again governed entirely by state law. The state-by-state patchwork persists. The PE / M&amp;A bar continues to negotiate non-competes for sellers (sale-of-business non-competes remain almost universally enforceable, including in California under §16601). The 2024 Rule is now historical context only; the relevant ongoing federal posture is targeted Section 5 enforcement against worker non-competes (with sale-of-business and senior-executive equity-linked carve-outs).</p>
+
+  <h3>EU — variable</h3>
+
+  <p>EU member states each have their own non-compete framework, generally subject to a reasonableness review and (for employees) often requiring compensation during the restriction period. Jurisdiction-specific compensation requirements:</p>
+  <ul>
+    <li><strong>Germany</strong> — German Commercial Code (HGB) §74 requires <em>minimum 50%</em> of the employee's last salary for the duration of the post-termination non-compete; failure to pay voids the covenant.</li>
+    <li><strong>France</strong> — French jurisprudence (Cour de cassation, 10 July 2002) requires "non-derisory" compensation; in practice typically 25–50% of base salary.</li>
+    <li><strong>Italy</strong> — Italian Civil Code article 2125 requires "congruous" compensation; typically 30–50% of base salary.</li>
+    <li><strong>Netherlands, Belgium, Spain</strong> — each has its own statutory framework; compensation requirements vary, but the 50% reference point is broadly the practitioner's working assumption for senior-executive arrangements.</li>
+  </ul>
+
+  <p>For <strong>sale-of-business non-competes</strong>, EU competition law also bears: the European Commission's Notice on restrictions directly related and necessary to concentrations (<strong>2005/C 56/03</strong>) provides guidance distinguishing two cases — <strong>2 years</strong> where only know-how is transferred (because know-how decays without continued investment), and <strong>3 years</strong> where goodwill and know-how are both transferred (because customer goodwill takes longer to consolidate). Non-competes longer than these benchmarks are not automatically void but require justification on the specific facts; the Commission will examine them under Article 101 TFEU if challenged.</p>
+
+  <h2>Post-closing covenants generally</h2>
+
+  <p>Beyond non-compete, the SPA typically imposes a range of post-closing covenants:</p>
+  <ul>
+    <li><strong>Confidentiality</strong> of negotiations and the deal terms (sometimes indefinite for trade secrets; defined period for general business information).</li>
+    <li><strong>Non-disparagement</strong> clauses (with carve-outs for required disclosures).</li>
+    <li><strong>Cooperation in litigation</strong> — both parties cooperate in any post-closing litigation involving pre-closing matters; access to records and witnesses.</li>
+    <li><strong>Access to records</strong> — buyer typically retains pre-closing records for the survival period and beyond; permits seller access for tax audits, indemnity claims, etc.</li>
+    <li><strong>Insurance run-off</strong> — director and officer (D&amp;O) tail coverage; environmental tail; product liability tail.</li>
+    <li><strong>Public announcements</strong> — coordinated press releases; restrictions on unilateral statements.</li>
+  </ul>
+
+  <h2>Earn-out and contingent consideration accounting</h2>
+
+  <p>(Relevant because client Chief Financial Officers (CFOs) and finance teams will care; the lawyer will be asked.)</p>
+
+  <p><strong>IFRS 3 (Business Combinations)</strong> and <strong>ASC 805 (Business Combinations under US GAAP)</strong> require contingent consideration (including earn-outs) to be recorded at <strong>fair value at the acquisition date</strong> as part of the consideration transferred.</p>
+
+  <p>After acquisition:</p>
+  <ul>
+    <li><strong>Equity-classified contingent consideration</strong> is not re-measured (the original fair value sticks).</li>
+    <li><strong>Liability-classified contingent consideration</strong> is re-measured at each reporting date with changes recorded in profit or loss.</li>
+  </ul>
+
+  <p><strong>Why lawyers care:</strong></p>
+  <ul>
+    <li>The drafting decision (cash vs. equity earn-out; contingent vs. fixed) drives accounting treatment.</li>
+    <li>Liability-classified earn-outs create earnings volatility (P&amp;L hits each quarter as fair value re-measures).</li>
+    <li>Buyers' CFOs may want to structure away from liability classification.</li>
+    <li>Sellers (post-closing) may want to monitor the buyer's quarterly accounts for earn-out fair value disclosure as a window into how the buyer perceives the business performance.</li>
+  </ul>
+
+  <h2>Disclosure of post-closing matters in financial statements</h2>
+
+  <p>For listed buyers, post-closing matters (significant indemnity claims, earn-out re-measurements, contingent liabilities) require disclosure under:</p>
+  <ul>
+    <li>IFRS — IAS 37 (Provisions, Contingent Liabilities and Contingent Assets); IAS 10 (Events after the Reporting Period).</li>
+    <li>US GAAP — ASC 450 (Contingencies); ASC 855 (Subsequent Events).</li>
+  </ul>
+
+  <p>The legal team is typically consulted on the wording of provisions and contingent liability disclosures, given the litigation-privilege and prejudice considerations.</p>
+
+  <aside class="pitfall">
+    <h5>Common post-closing pitfalls</h5>
+    <ul>
+      <li>Missing the survival period or notice deadline — kills the indemnity claim entirely.</li>
+      <li>Defective notice form (some SPAs treat any defect as a complete bar).</li>
+      <li>Settling a third-party tax claim without seller consent — may waive indemnification.</li>
+      <li>Missing W&amp;I notification deadline — insurer can decline cover.</li>
+      <li>Treating "commercially reasonable efforts" as a hands-off standard — Delaware case law treats it as an objective standard requiring affirmative effort.</li>
+      <li>Forgetting that integrating salesforces, changing accounting policies, or reallocating overhead can each trigger an earn-out dispute.</li>
+      <li>Failing to handle TUPE consultation in time — automatic unfair dismissal claims.</li>
+      <li>Overlooking that share deals usually do not trigger TUPE, but post-closing reorganisations within the buyer's group may.</li>
+      <li>Mis-handling cross-border data flows after Schrems II — supplementary-measures analysis is now mandatory for SCC-based US transfers.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Post-closing legal work runs 18–36 months: closing accounts, earn-outs, indemnities, W&amp;I, escrow, tax audits, integration, and (often) restructuring.</li>
+      <li>The claim cascade: on day one of any post-discovery cycle, run NOC → SPA notice → preserve evidence → D&amp;O / lender / public-disclosure assessment → integration freeze in parallel.</li>
+      <li>Earn-outs are the post-closing area most prone to litigation. Sellers must negotiate <em>express</em> operating covenants — <em>Lazard v Qinetiq</em> (Del. 2015) holds the implied covenant will not retroactively expand the bargain.</li>
+      <li>UK contract law has no general implied duty of good faith between commercial parties (subject to "relational contracts" — <em>Yam Seng</em>); the doctrine has oscillated since 2013 (<em>Bates v Post Office</em> expanding; <em>Candey v Bosheh</em> cabining).</li>
+      <li>W&amp;I claim lifecycle: NOC → Notification of Claim → loss substantiation → coverage decision → arbitration if disputed.</li>
+      <li>TUPE applies to UK asset deals, generally not share deals; WARN requires 60-day notice in US (90 in NY); Acquired Rights Directive frames EU implementations.</li>
+      <li>GDPR + Schrems II: SCCs + supplementary measures or DPF certification. The September 2025 EU General Court ruling upheld the DPF against first challenge; "Schrems III" anticipated.</li>
+      <li>Restraint-of-trade doctrine: <em>Esso v Harper's Garage</em> (foundational, commercial solus); <em>Tillman v Egon Zehnder</em> [2019] UKSC 32 (modern executive post-employment). Sale-of-business non-competes treated more favourably; 2–5 years typical.</li>
+      <li>FTC Non-Compete Rule (April 2024) was set aside nationwide on 20 August 2024 in <em>Ryan v FTC</em>. On <strong>5 September 2025</strong>, the FTC voted 3-1 to dismiss its appeal; Rule permanently abandoned. FTC has redirected to case-by-case Section 5 enforcement (<em>Gateway Pet Cremation</em>, 4 September 2025), with explicit carve-outs for sale-of-business and senior-executive equity-linked non-competes.</li>
+      <li>EU Block Exemption Notice 2005/C 56/03: 2 years (know-how only) vs. 3 years (goodwill + know-how) for sale-of-business non-competes.</li>
+      <li>EU employee non-compete compensation: Germany (HGB §74) requires minimum 50% of last salary; France ("non-derisory" — typically 25–50%); Italy (Civil Code art. 2125 — typically 30–50%).</li>
+      <li>IFRS 3 / ASC 805: contingent consideration at fair value on acquisition date; liability-classified earn-outs re-measured each reporting date through P&amp;L.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="16-governing-law.html" class="prev">Governing Law &amp; Dispute Resolution</a>
+    <a href="18-public-and-specialized.html" class="next">Public M&amp;A &amp; Specialized Transactions</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

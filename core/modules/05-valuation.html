@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 05 — Valuation &amp; Deal Economics · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="05">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 05</div>
+    <h1>Valuation &amp; Deal Economics</h1>
+    <p class="subtitle">Enterprise vs. equity value, the cash-free / debt-free bridge, working capital pegs, the four valuation methodologies, control premia, fairness opinions, rollover equity and the equity bridge in public take-privates.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Articulate why an M&amp;A lawyer needs to understand valuation: the negotiation moves around price; covenants and adjustments depend on the equity bridge; the SPA's price-adjustment, leakage and earn-out clauses are unintelligible without the underlying financial logic.</li>
+      <li>Define <span class="term" data-term="equity-value">equity value</span> vs. <span class="term" data-term="enterprise-value">enterprise value (EV)</span> and walk the bridge: EV &minus; net debt + cash &plusmn; working capital adjustment &plusmn; other items = equity value.</li>
+      <li>Identify what counts as a <span class="term" data-term="debt-like-items">debt-like item</span> and what counts as a <span class="term" data-term="cash-like-items">cash-like item</span>, and articulate the negotiation around each.</li>
+      <li>Explain the <span class="term" data-term="working-capital-peg">working capital "peg" or "target"</span> &mdash; typically a 12-month trailing average &mdash; and its role in the post-closing true-up.</li>
+      <li>Describe at a working level the four standard valuation methodologies: <span class="term" data-term="trading-comparables">trading comparables</span>, <span class="term" data-term="precedent-transactions">precedent transactions</span>, <span class="term" data-term="dcf">discounted cash flow (DCF)</span> with <span class="term" data-term="wacc">weighted average cost of capital (WACC)</span>, and <span class="term" data-term="lbo-model">leveraged buyout (LBO)</span> modelling with <span class="term" data-term="irr">internal rate of return (IRR)</span> and <span class="term" data-term="mom">money-on-money (MoM)</span> multiple.</li>
+      <li>Explain the <span class="term" data-term="control-premium">control premium</span> concept (typically 20&ndash;40% for public targets), the role of <span class="term" data-term="fairness-opinion">fairness opinions</span> (<em>Smith v. Van Gorkom</em>; <span class="term" data-term="revlon-doctrine">Revlon doctrine</span>), <span class="term" data-term="rollover-equity">rollover equity</span> in PE deals, and the <span class="term" data-term="equity-bridge">equity bridge</span> in public take-privates.</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The lawyer is not the valuer &mdash; bankers and accountants do that work &mdash; but every clause in an SPA is calibrated to the price logic. A "<span class="term" data-term="locked-box">Locked Box</span>" mechanism (no post-closing price adjustment; cash flows locked from a "locked box date") only works if the parties agree what cash, debt and working capital looked like at the locked box date and the buyer is paid value accruing from that date through closing. A "<span class="term" data-term="completion-accounts">Completion Accounts</span>" mechanism (post-closing true-up against a peg) requires the lawyer to draft definitions of cash, debt, debt-like items and working capital that the accountants can apply at closing without ambiguity. An earn-out depends on a defined EBITDA calculation that survives competing accounting treatments. A leakage clause depends on knowing what flows from the target to the seller would constitute "value extraction". None of these clauses make sense unless the lawyer knows what the equity bridge is doing.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"What's the equity cheque?"</strong> &mdash; how much fund equity actually has to be wired after debt; the single most-used PE term in a deal-room.</li>
+      <li><strong>"What's the QofE bridge from reported to adjusted EBITDA?"</strong> &mdash; the <span class="term" data-term="qofe">Quality of Earnings</span> report walks reported numbers through normalising add-backs to the figure the multiple is applied to; a £2m QofE adjustment at a 9&times; multiple is an £18m EV swing.</li>
+      <li><strong>"Are we sharing synergies?"</strong> &mdash; in auctions, sellers extract a slice of <span class="term" data-term="synergy-share">buyer-specific cost / revenue synergies</span>; strategic buyers can pay above the LBO ceiling because of them.</li>
+      <li><strong>"What's the unaffected price?"</strong> &mdash; the share price the day before deal-leak speculation; the base from which the <span class="term" data-term="unaffected-price">control premium</span> is computed in any public take-private.</li>
+      <li><strong>"Is the DCF terminal-value sensitivity within range?"</strong> &mdash; terminal value is typically &gt;60% of total DCF value; partners stress-test the perpetuity-growth and exit-multiple range before signing off on the football field.</li>
+      <li><strong>"Did we get multiples expansion?"</strong> &mdash; the gap between entry and exit EBITDA multiple in an LBO; a sponsor's primary alpha source after deleveraging and operational improvement.</li>
+      <li><strong>"What's the leverage at signing?"</strong> &mdash; total debt / LTM EBITDA on the day commit papers are signed; the number the rating agencies and the syndication desk will quote.</li>
+      <li><strong>"Are we on a normalised peg?"</strong> &mdash; a working-capital target struck on a 12-month trailing average, with one-offs stripped, vs. a static spot peg.</li>
+    </ul>
+  </aside>
+
+  <h2>Equity value vs. enterprise value (EV) and the bridge</h2>
+
+  <p><strong><span class="term" data-term="enterprise-value">Enterprise value (EV)</span></strong> is the value of the operating business, independent of capital structure &mdash; the figure produced by a DCF or by applying an EBITDA multiple, and the figure quoted in press releases. It is what a buyer pays in a <span class="term" data-term="cfdf">cash-free, debt-free (CFDF)</span> transaction.</p>
+
+  <p><strong><span class="term" data-term="equity-value">Equity value</span></strong> is what the seller's shareholders actually receive &mdash; what gets wired on closing. It is EV less the financial items that should not transfer with the operating business.</p>
+
+  <p><strong>The bridge:</strong></p>
+
+  <blockquote>
+    Equity value = EV &minus; <span class="term" data-term="net-debt">Net Debt</span> &plusmn; Working Capital Adjustment &plusmn; other deal-defined items<br>
+    where Net Debt = (Debt + Debt-like items) &minus; (Cash + Cash-like items).
+  </blockquote>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; CFDF mechanics</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Broad definition of debt-like items (more deductions from EV &rarr; lower equity price); narrow definition of cash-like items (less added back); higher working capital peg (buyer keeps more working capital at closing).</li>
+      <li><strong>Seller wants:</strong> Narrow definition of debt-like items; broad definition of cash-like items; lower working capital peg (less working capital required to be left in the business at closing).</li>
+      <li><strong>Typical compromise:</strong> Detailed, bespoke definitions of each item negotiated by reference to the trial balance accounts, supported by a worked example based on the most recent management accounts. The peg is typically a 12-month trailing average, sometimes 36-month for highly seasonal businesses.</li>
+    </ul>
+  </aside>
+
+  <h2>Debt-like items and cash-like items</h2>
+
+  <p>There is no universal list. The following are common.</p>
+
+  <p><strong>Debt-like items:</strong> pension underfunding (defined-benefit deficit); environmental remediation provisions; deferred consideration on the target's prior acquisitions; capitalised / IFRS 16 lease liabilities (debated &mdash; financing or operating?); tax payable (corporation tax, withholding tax, VAT); litigation provisions (where quantified); unfunded restoration / make-good obligations on leased premises; unpaid declared dividends; change-of-control bonuses triggered by the deal; customer prepayments (buyer's view &mdash; service yet to be performed); bank overdrafts (clear debt).</p>
+
+  <p><strong>Cash-like items:</strong> cash and short-term marketable securities; restricted/trapped cash (debated &mdash; buyer refuses 1-for-1 if non-repatriable without tax cost); customer deposits (debated &mdash; cash-like or debt-like); tax assets (usually no &mdash; not deployable cash).</p>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>"Debt" defined as "interest-bearing financial liabilities".</strong> Misses pension deficits and environmental provisions.</li>
+      <li><strong>No definition of "cash".</strong> What counts as cash? "Cash on hand and on demand at banks" &mdash; does that include money market funds? Trapped cash?</li>
+      <li><strong>"Cash" credited gross.</strong> A buyer in a dispute will argue that trapped or restricted cash should be credited net of repatriation cost.</li>
+      <li><strong>No reconciliation example.</strong> The SPA should include a worked example showing the equity bridge calculation against a recent date, so the accountants know what was intended.</li>
+    </ul>
+  </aside>
+
+  <h2>Working capital peg / target</h2>
+
+  <p>Working capital (WC) for M&amp;A is <em>operating</em> WC: trade receivables + inventory + prepayments &minus; trade payables &minus; accrued liabilities &minus; customer deposits. Excludes debt, cash, intercompany loans and tax.</p>
+
+  <p>Why a peg? Because if the seller starves the business of WC pre-closing (aggressively collects receivables, defers paying suppliers, runs down inventory), the buyer must inject cash post-closing. The peg fixes the WC level the seller must deliver; deviation adjusts the price.</p>
+
+  <p><strong>Peg construction.</strong> Typically the <span class="term" data-term="ttm">trailing 12-month average</span> of monthly WC, on the same accounting basis used in the closing accounts. 12 months smooths seasonality; highly seasonal businesses use 24 or 36 months or month-specific pegs. Each line is mapped to trial-balance accounts to prevent post-closing disputes.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; working capital peg</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Higher peg (more WC delivered); peg calculated on a basis that captures recent uplifts (e.g., growing AR with growing sales); strict definitions excluding "off-balance-sheet" working capital.</li>
+      <li><strong>Seller wants:</strong> Lower peg (less WC delivered, more cash extracted pre-closing); peg calculated on a long-historic average (smoothing recent uplifts).</li>
+      <li><strong>Typical compromise:</strong> 12-month trailing average; mid-month or month-end basis stated explicitly; carve-outs for non-recurring items in the average.</li>
+    </ul>
+  </aside>
+
+  <h2>Valuation methodologies</h2>
+
+  <p>A banker's "football field" chart shows four valuation ranges side by side: trading comparables, precedent transactions, DCF, LBO.</p>
+
+  <h3>Trading comparables ("trading comps")</h3>
+
+  <p>Apply <em>current</em> trading multiples of public peers to the target's financials. Common multiples:</p>
+
+  <ul>
+    <li><strong>EV / Revenue</strong> &mdash; for unstable-margin businesses (early-stage, SaaS valued on Annual Recurring Revenue).</li>
+    <li><strong>EV / EBITDA</strong> &mdash; workhorse for mature businesses. Global mid-market ~9&times; in 2024&ndash;25; software 17&ndash;22&times;; chemicals / materials <strong>6&ndash;9&times; depending on sub-sector</strong> (Statista 2024 global median ~8.6&times;; Western Europe ~6.8&times;).</li>
+    <li><strong>EV / EBIT</strong> &mdash; when peers' capital intensity differs widely (EBIT keeps depreciation and amortisation (D&amp;A) in).</li>
+    <li><strong>Price / Earnings (P/E)</strong> &mdash; uses equity value; less useful in M&amp;A because it embeds capital structure.</li>
+  </ul>
+
+  <p>Pros: market-based, current. Cons: peers rarely truly comparable; reflects short-term sentiment; minority-trading multiples don't embed a control premium.</p>
+
+  <h3>Precedent transactions</h3>
+
+  <p>Apply multiples <em>paid</em> in past M&amp;A in the same sector. Same multiple types, but the price embeds the control premium and possibly synergies &mdash; usually higher than trading multiples. Data sources: Mergermarket, S&amp;P Capital IQ, PitchBook, Refinitiv, Bloomberg. Cons: data sparse for private targets; transactions are dated (the 2021 multiple frenzy vs. 2023 compression); each has unique strategic rationale.</p>
+
+  <h3>Discounted cash flow (DCF)</h3>
+
+  <p>Project the target's free cash flow to the firm (FCFF) for 5&ndash;10 years; compute a terminal value (perpetuity growth method or exit multiple); discount each year's FCFF and terminal value back to present at the WACC.</p>
+
+  <p><strong><span class="term" data-term="wacc">WACC</span></strong> = (E / (D+E)) &times; Cost of Equity + (D / (D+E)) &times; Cost of Debt &times; (1 &minus; tax rate). Cost of equity is typically computed under the <span class="term" data-term="capm">Capital Asset Pricing Model (CAPM)</span>: Risk-free rate + (&beta; &times; Equity Risk Premium). &beta; (beta) measures the target's market sensitivity; equity risk premium is ~5&ndash;6% in developed markets.</p>
+
+  <p>Pros: builds value from underlying cash-flow logic. Cons: garbage in, garbage out &mdash; terminal value typically &gt;60% of total value, so highly sensitive to perpetuity growth assumption.</p>
+
+  <h3>Leveraged buyout (LBO) model</h3>
+
+  <p>Used by PE buyers (and by sellers to figure out the maximum a PE buyer can pay). Models the purchase, capital structure (debt-equity mix), operational improvements over a typical 5-year hold, exit, and equity returns. Two return metrics:</p>
+
+  <ul>
+    <li><strong><span class="term" data-term="irr">Internal Rate of Return (IRR)</span></strong> &mdash; annualised compound equity return; PE funds target gross IRRs of 20&ndash;30%.</li>
+    <li><strong><span class="term" data-term="mom">Money-on-Money (MoM) multiple</span></strong> &mdash; gross multiple of equity returned; PE funds target 2.5&ndash;3.5x gross over 5 years.</li>
+  </ul>
+
+  <p>For the seller, the LBO model is a "reverse" valuation: solve for the maximum entry equity that allows the PE buyer to hit its target IRR. That sets the <em>highest</em> price a leveraged buyer can pay.</p>
+
+  <aside class="juris compare">
+    <h5>US vs. UK / EU &mdash; LBO leverage</h5>
+    <p>The 2013 OCC / Federal Reserve <em>Interagency Guidance on Leveraged Lending</em> historically operated as a soft 6&times; cap on US LBO total leverage. The U.S. Government Accountability Office (GAO) ruled in 2017 that the guidance was a "rule" subject to Congressional Review Act review and therefore not directly enforceable as a binding limit; since then regulators treat it as a supervisory signal rather than a hard ceiling. Current 2024 average US <em>and</em> European LBO total leverage is <strong>~5.5&ndash;6&times; LTM EBITDA</strong> (Capstone Partners 2024; White &amp; Case 2024 European Leveraged Finance review). Rate hikes 2022&ndash;24 compressed leverage in both markets; sub-investment-grade leveraged loan all-in cost was ~9&ndash;11% in 2024 (SOFR + spread + OID), compressing toward ~8&ndash;9% in 2025&ndash;26 with rate cuts.</p>
+  </aside>
+
+  <h2>Control premium</h2>
+
+  <p>In a public take-private, the per-share offer price exceeds the <em>unaffected market price</em> (the share price prior to deal speculation). That excess is the <span class="term" data-term="control-premium">control premium</span>.</p>
+
+  <p>Typical: 20&ndash;40% in US and UK. Varies by sector (tech and biotech higher; financial institutions constrained), buyer type (strategic &gt; PE because of synergies), and competitive dynamic (multi-bidder auctions raise premiums). Premium reflects (i) value of directing cash flows and strategy; (ii) anticipated synergies; (iii) bidding dynamic.</p>
+
+  <h2>Fairness opinions</h2>
+
+  <p>A <span class="term" data-term="fairness-opinion">fairness opinion</span> is a written opinion from an independent financial adviser that the consideration is "fair from a financial point of view" to the relevant shareholders. Not a recommendation; a narrowly framed financial-fairness statement.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK</h5>
+      <p>Takeover Code Rule 3 requires the target board to obtain "competent independent advice" on the offer &mdash; in practice a Rule 3 adviser delivers a Rule 3 letter. More compliance-driven than US.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>Fairness opinions emerged as the response to <em>Smith v. Van Gorkom</em>, 488 A.2d 858 (Del. 1985) ("Trans Union") &mdash; the Delaware Supreme Court held that the Trans Union board breached its duty of care by approving a $55-per-share LBO at a two-hour meeting with no fairness opinion or independent valuation. Directors faced personal liability. Today every public-company merger obtains a fairness opinion. In change-of-control transactions (<em><span class="term" data-term="revlon-doctrine">Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc.</span></em>, 506 A.2d 173 (Del. 1986)) the board must obtain "the best price reasonably available to stockholders".</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU</h5>
+      <p>Germany (WpÜG &sect;27) &mdash; target-board statement on the offer. France (AMF) &mdash; independent expert report ("attestation d'&eacute;quit&eacute;") for conflicted transactions. Italy (Consob) &mdash; similar for related-party offerors.</p>
+    </aside>
+  </div>
+
+  <h2>Rollover equity in PE deals</h2>
+
+  <p>In a PE buyout, the PE fund often requires senior management (and sometimes the founder) to "roll over" 10&ndash;30% of their sale proceeds into equity in the post-closing entity. This (i) aligns management with the PE value-creation plan; (ii) reduces the PE fund's equity cheque; (iii) gives management upside on the next exit.</p>
+
+  <p>The SRS Acquiom <em>2024 M&amp;A Deal Terms Study</em> and Goodwin's PE-deal data show <span class="term" data-term="rollover-equity">rollover</span> frequency in mid-market PE deals rising from ~46% in 2020 to ~57% in 2023. Tax treatment is structurally critical: US rollover must satisfy Internal Revenue Code (IRC) &sect;351 (or similar) for tax-free treatment; UK uses "share-for-share exchange" relief under Taxation of Chargeable Gains Act (TCGA) 1992 &sect;135 (which requires the acquirer to end up with &gt;25% of ordinary share capital, OR a general offer that would result in control, OR the greater part of voting power). Documentation: Shareholders' Agreement (SHA) with drag-along, tag-along, leaver provisions (good / bad / very bad leaver) and vesting schedules.</p>
+
+  <h2>Equity bridge in public take-privates</h2>
+
+  <p>In a public take-private, the buyer must demonstrate funding certainty at announcement. UK Takeover Code Rule 24.8 ("cash confirmation") prohibits announcement without "certain funds". Sources of certainty:</p>
+
+  <ul>
+    <li>Equity commitment letters (PE fund commits its equity);</li>
+    <li>Debt commitment letters (arranging banks commit acquisition debt);</li>
+    <li><span class="term" data-term="equity-bridge-facility">Equity bridge facility</span> &mdash; short-term bank loan funding the equity portion until the PE fund's LPs (limited partners) deploy capital after closing.</li>
+  </ul>
+
+  <p>US equivalent: "Acquisition Financing Letters" &mdash; debt commitment letter, fee letter, bridge facility. The leading post-2018 Delaware Material Adverse Effect (MAE) / financing-out cases are <em>Akorn v. Fresenius</em> (Del. 2018, the only Delaware case ever to find an MAE) and <em>AB Stable VIII LLC v. MAPS Hotels &amp; Resorts</em> (Del. 2020, the post-COVID Mirae / Anbang Strategic Hotels MAE case) &mdash; together they have raised the bar on financing certainty and ordinary-course covenant compliance in US public M&amp;A.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; financing-out and termination fees</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Right to terminate without penalty if financing fails (a "financing-out" or "financing condition"). PE buyers prefer this; banks resist.</li>
+      <li><strong>Seller wants:</strong> No financing-out; bid must be fully financed at announcement; reverse break fee if buyer fails to fund.</li>
+      <li><strong>Typical compromise (US public M&amp;A):</strong> No financing-out (i.e., "specific performance" enforceable to make the buyer close); but a reverse termination fee. UK public M&amp;A (Takeover Code) effectively prohibits financing-out by virtue of the cash-confirmation rule.</li>
+    </ul>
+    <p><strong>Forward vs. reverse termination fees &mdash; Houlihan Lokey 2024 data.</strong> A <span class="term" data-term="forward-termination-fee">forward termination fee</span> (paid by the seller if it accepts a superior proposal) clusters at <strong>2.0&ndash;3.5% of equity value</strong> (~63% of US public deals fall in that band per Houlihan Lokey's <em>2024 Transaction Termination Fee Study</em>). A <span class="term" data-term="reverse-termination-fee">reverse termination fee</span> (paid by the buyer when it cannot or will not close) splits sharply by buyer type: financial sponsors average <strong>~6.5% of enterprise value</strong>, strategic buyers average <strong>~3.7%</strong>. The asymmetry tracks Delaware courts' historic reluctance to specifically perform a sponsor's equity commitment (the <em>Hexion v. Huntsman</em> legacy).</p>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>Worked example &mdash; equity bridge for a UK pet food acquisition</h5>
+    <p>BuyerCo (US industrial group) acquires TargetCo (UK pet food manufacturer) at indicative EV &pound;200m. Latest balance sheet (30 Sept): &pound;15m cash; &pound;50m senior bank debt; &pound;8m capitalised IFRS 16 leases; &pound;4m environmental provision; &pound;6m accrued CoC bonuses; trade receivables &pound;18m, inventory &pound;12m, prepayments &pound;8m, trade payables &pound;14m, accrued opex &pound;7m. 12-month trailing average WC: &pound;20m.</p>
+    <p><strong>Equity bridge:</strong> EV &pound;200m &minus; bank debt &pound;50m &minus; capitalised leases &pound;8m &minus; environmental provision &pound;4m &minus; CoC bonuses &pound;6m + cash &pound;15m &minus; WC shortfall &pound;3m (actual WC = (18+12+8) &minus; (14+7) = &pound;17m vs. peg &pound;20m) = ~&pound;144m equity.</p>
+    <p><strong>Three drafting points:</strong></p>
+    <ol>
+      <li>Capitalised leases &mdash; explicit treatment in the bridge; define which leases (IFRS 16 operating vs. finance) are in/out; worked example in the SPA.</li>
+      <li>Environmental provision &mdash; choose: debt-like deduction (&pound;4m) OR specific indemnity (uncapped + escrow). Combining = double-counting.</li>
+      <li>Working capital peg &mdash; every line mapped to trial-balance accounts; mid-month vs. month-end basis; exclude one-offs from the average; closing accounts timeline (delivery 60 days, dispute 30 days, expert determination).</li>
+    </ol>
+  </aside>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 04 (Due Diligence) is where the <em>numbers</em> in the equity bridge originate &mdash; pension deficit, IFRS 16 lease totals, environmental provisions, change-of-control bonus pool. The QofE report bridges reported to adjusted EBITDA; tax DD bridges current and deferred tax positions. The valuer cannot finalise the bridge before DD findings land.</li>
+      <li><strong>Forwards:</strong> Module 07 (Definitions) &mdash; every line in the equity bridge has to become a contractually defined term (Cash, Debt, Debt-Like Items, Working Capital, Permitted Leakage). Module 09 (MAC / MAE) &mdash; what level of EBITDA decline triggers a walk-right is a <em>valuation</em> question in legal dress (<em>Akorn</em>'s 86% EBITDA fall vs. <em>Hexion</em>'s borderline drop). Module 11 (Purchase Price) &mdash; Locked Box vs. Completion Accounts is the master mechanism choice. Module 13 (Indemnification) &mdash; baskets and caps are quoted as a % of price, but EV, equity value, base or final adjusted? Module 14 (W&amp;I Insurance) &mdash; a £200m EV deal does not get a £200m policy; cap is typically 10&ndash;20% of EV.</li>
+      <li><strong>Domino effect:</strong> if you switch from Completion Accounts to Locked Box, the leakage definition has to be drafted, a permitted-leakage list negotiated, a ticker (notional interest from locked-box date to closing) priced, the working-capital escrow disappears, and DD has to be deeper because there is no post-closing true-up. If the QofE reveals an earnings shortfall just before signing, the equity bridge moves &mdash; and the basket, the cap, the MAC trigger, the W&amp;I retention and any specific indemnities all have to re-set.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>Equity value = EV &minus; net debt &plusmn; WC adjustment &plusmn; other items. Net debt = debt + debt-like items &minus; cash &minus; cash-like items.</li>
+      <li>Debt-like items typically include pension underfunding, capitalised leases, environmental provisions, change-of-control bonuses, deferred consideration, tax payable. Cash-like items include cash and marketable securities; trapped cash and customer deposits are debated.</li>
+      <li>Working capital peg fixes the WC level the seller must deliver; usually 12-month trailing average, mapped to trial-balance accounts.</li>
+      <li>Four valuation methodologies: trading comps (current peers), precedent transactions (past M&amp;A multiples; embed control premium), DCF (FCFF discounted at WACC), LBO model (PE return-driven; targets gross IRR 20&ndash;30%, MoM 2.5&ndash;3.5x).</li>
+      <li>Control premium in public take-privates: typically 20&ndash;40%; varies by sector, buyer type and competitive dynamic.</li>
+      <li><em>Smith v. Van Gorkom</em> (Del. 1985) made fairness opinions standard in US public M&amp;A; <em>Revlon</em> (Del. 1986) imposes a duty to seek the best price in change-of-control deals; UK Code Rule 3 imposes a parallel "competent independent advice" requirement.</li>
+      <li>Rollover equity (10&ndash;30%) aligns management; tax-free under IRC &sect;351 (US) or TCGA 1992 &sect;135 (UK).</li>
+      <li>UK Code Rule 24.8 requires cash confirmation at announcement &mdash; effectively no financing-out. US public M&amp;A: usually no financing-out, but reverse termination fee ~6.5% of EV for financial buyers vs. ~3.7% for strategics; forward termination fee 2.0&ndash;3.5% of equity (Houlihan Lokey 2024).</li>
+      <li>Locked Box vs. Completion Accounts is the master price-mechanism choice; both depend on lawyer-drafted definitions of cash, debt-like items and working capital that the equity bridge logic generates.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="04-due-diligence.html" class="prev">Due Diligence</a>
+    <a href="06-deal-structures.html" class="next">Deal Structures</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

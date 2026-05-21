@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 08 — Conditions Precedent &amp; Regulatory Clearances · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="08">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 08</div>
+    <h1>Conditions Precedent &amp; Regulatory Clearances</h1>
+    <p class="subtitle">Antitrust, foreign-investment screening, sectoral approvals, no-MAC, bring-down — and the efforts standards, long-stop dates and reverse termination fees that allocate the risk of regulatory failure.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Define a <span class="term" data-term="condition-precedent">Condition Precedent (CP)</span> and distinguish it from a covenant, a representation, an undertaking and a closing deliverable.</li>
+      <li>Identify the principal categories of CPs in a typical SPA (regulatory, corporate, third-party consent, bring-down of R&amp;Ws, no-MAC) and explain who controls satisfaction of each.</li>
+      <li>Apply the current <span class="term" data-term="hsr">HSR</span> thresholds (US), the <span class="term" data-term="eumr">EUMR</span> turnover thresholds (EU) and the post-DMCC <span class="term" data-term="cma">CMA</span> thresholds (UK) to a fact pattern and determine notification obligations.</li>
+      <li>Explain Foreign Direct Investment (FDI) screening regimes — <span class="term" data-term="cfius">CFIUS</span> / <span class="term" data-term="firrma">FIRRMA</span> in the US, the <span class="term" data-term="nsi-act">National Security and Investment Act 2021</span> in the UK, the EU FDI Screening Regulation 2019/452 with key member-state regimes (Germany AWV, France, Italy <span class="term" data-term="golden-power">Golden Power</span>, Spain) — and identify when a notification is mandatory.</li>
+      <li>Distinguish the spectrum of efforts standards in the regulatory undertaking (<span class="term" data-term="hell-or-high-water">hell-or-high-water</span> → <span class="term" data-term="reasonable-best-efforts">reasonable best efforts</span> → commercially reasonable efforts → "use efforts to obtain") and explain the cost of each.</li>
+      <li>Explain the <span class="term" data-term="mac">Material Adverse Change</span> / <span class="term" data-term="mae">Material Adverse Effect</span> doctrine through the Delaware case law (<em>Akorn v. Fresenius</em> (2018), <em>IBP v. Tyson</em> (2001), <em>Hexion v. Huntsman</em> (2008), <em>Frontier Oil v. Holly</em> (2005)).</li>
+      <li>Explain the role and pricing of <span class="term" data-term="long-stop-date">Long Stop / Drop Dead Dates</span>, <span class="term" data-term="ticking-fee">ticking fees</span> and <span class="term" data-term="reverse-termination-fee">reverse termination fees</span> (also called <span class="term" data-term="break-fee">break fees</span>).</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> The period between signing and closing — the <em>interim period</em> — is the danger zone. The deal is signed but not done. Regulators may block it. Customers may walk. Markets may collapse. The CPs and the related efforts standards are the contract's risk allocation for that period: they decide who has the right to walk away if a regulator blocks the deal, who pays whom what if the deal cannot close, and what the time limit is on holding the deal open. Mis-drafted CPs are how billion-dollar deals die — in 2018 the Delaware Court of Chancery for the first time ever held a MAC had occurred, allowing Fresenius Kabi to walk away from its US$4.75bn acquisition of Akorn; in 2023 the European Commission imposed an unprecedented €432m gun-jumping fine on Illumina for closing the Grail acquisition before the Commission had cleared it (a decision later annulled in September 2024 after the European Court of Justice held the Commission had over-extended its Article 22 referral powers). These are the stories M&amp;A lawyers tell to junior associates in every induction week.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior antitrust or M&amp;A partner drops one of these phrases in a clearance-strategy meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Are we filing a <span class="term" data-term="timing-agreement">timing agreement</span>?"</strong> &mdash; a voluntary waiver of the HSR clock to give the agency more time and avoid a Second Request; a deal-team move when the case is borderline.</li>
+      <li><strong>"<span class="term" data-term="pull-and-refile">Pull-and-refile</span>?"</strong> &mdash; withdraw the HSR filing and re-file it, resetting the 30-day initial waiting period; gives the agency a second look without triggering Second Request mechanics.</li>
+      <li><strong>"What's our <span class="term" data-term="divestiture-cap">divestiture cap</span>?"</strong> &mdash; the revenue / EBITDA ceiling above which the buyer is not contractually obliged to divest assets to clear antitrust; the modal industry compromise on regulatory undertakings.</li>
+      <li><strong>"<span class="term" data-term="fix-it-first">Fix-it-first</span>?"</strong> &mdash; volunteer divestitures pre-clearance to avoid a consent decree; cleaner remedy package, faster review.</li>
+      <li><strong>"<span class="term" data-term="hold-separate">Hold-separate</span> trustee?"</strong> &mdash; a regulator-approved trustee who runs a divested business in isolation pending sale; protects competition during the divestiture window.</li>
+      <li><strong>"Are we facing an <span class="term" data-term="ieo">Initial Enforcement Order (IEO)</span>?"</strong> &mdash; the CMA's UK call-in measure that can freeze integration on already-closed deals; the single biggest live-deal headache in UK competition practice.</li>
+      <li><strong>"What's our <span class="term" data-term="burdensome-condition">burdensome condition</span> definition?"</strong> &mdash; the most-negotiated single sentence in any antitrust covenant: the threshold above which the buyer can refuse a regulator-imposed remedy and walk.</li>
+      <li><strong>"Clean-team protocol?"</strong> &mdash; outside-counsel-only review of competitively sensitive target data pre-closing; gun-jumping insurance.</li>
+    </ul>
+  </aside>
+
+  <h2>What a CP is — and is not</h2>
+
+  <p>A <strong><span class="term" data-term="condition-precedent">Condition Precedent (CP)</span></strong> is a contractually defined event or state of affairs that must occur (or be waived) before a party becomes obliged to perform — specifically, before either party becomes obliged to close the transaction. Until the CP is satisfied or waived, the obligation to close is suspended. If the CP is incapable of being satisfied (or remains unsatisfied by the Long Stop Date), the SPA typically provides for termination.</p>
+
+  <p><strong>A CP is not the same as:</strong></p>
+  <ul>
+    <li>a <strong>covenant</strong> (an ongoing or one-off promise to do or refrain from doing something — breach of a covenant is actionable as a breach of contract; failure of a CP is not);</li>
+    <li>a <strong>representation</strong> (a statement of fact at a point in time);</li>
+    <li>a <strong>warranty</strong> (a contractual statement of fact, breach of which sounds in contract damages);</li>
+    <li>a <strong>closing deliverable</strong> (a document or item to be physically handed over at the closing meeting — often the artefact that <em>evidences</em> CP satisfaction, but conceptually distinct).</li>
+  </ul>
+
+  <p>Drafting practice: CPs are usually grouped in a single CP article ("Article 4 — Conditions Precedent"), often subdivided into <strong>"Mutual CPs"</strong> (must be satisfied for either side to close), <strong>"Buyer's CPs"</strong> (only the buyer can refuse to close if these are unsatisfied; the buyer can waive), and <strong>"Seller's CPs"</strong> (mirror).</p>
+
+  <h2>Categories of CP</h2>
+
+  <h3>Regulatory CPs</h3>
+  <p>The big three categories in any cross-border deal:</p>
+  <ol>
+    <li><strong>Antitrust / merger control</strong> — clearance from the relevant competition authorities (FTC + DOJ in the US; European Commission under the EUMR for EU-dimension deals; CMA in the UK; national authorities in other jurisdictions). Detail below.</li>
+    <li><strong>Foreign Direct Investment (FDI) / national security</strong> — clearance under regimes like CFIUS (US), the NSI Act 2021 (UK), member-state FDI regimes (Germany, France, Italy, Spain, etc.). Detail below.</li>
+    <li><strong>Sectoral / sector-specific clearances</strong> — change-of-control approvals from sector regulators: financial-services regulators (PRA / FCA in UK; ECB-SSM, EBA in EU; OCC, Fed, FDIC, state insurance commissioners in US); telecoms regulators (Ofcom in UK); media regulators; healthcare regulators; energy regulators; defence-related foreign-investment screening; sanctions / export-control clearances.</li>
+  </ol>
+
+  <h3>Corporate CPs</h3>
+  <ul>
+    <li>Buyer-side board approval; Seller-side board approval (if not already obtained).</li>
+    <li>Shareholder approvals (e.g. if seller is a listed company and the disposal is a Class 1 transaction under UK Listing Rule 10).</li>
+    <li>Internal restructuring of the seller group to put the target into the form contemplated by the SPA.</li>
+  </ul>
+
+  <h3>Third-party consent CPs</h3>
+  <ul>
+    <li>Consents under change-of-control clauses in customer / supplier / lease / loan / IP-licence contracts.</li>
+    <li>Lender consents under existing financing documents.</li>
+    <li>Joint venture partner consents.</li>
+  </ul>
+
+  <h3>Bring-down of R&amp;Ws</h3>
+  <p>A CP that the seller's representations and warranties are repeated as at Closing and remain (subject to negotiated qualifications — typically <strong>"in all material respects"</strong> or <strong>"without giving rise to a Material Adverse Effect"</strong>) true. This converts the warranties from a static signing-date snapshot into a continuing condition for closing. Buyer-friendly variants: full bring-down, no materiality qualifier. Seller-friendly variants: bring-down only of certain <strong>"Fundamental Warranties"</strong> (title, capacity, no insolvency); for other warranties, only those breaches that would individually or in aggregate constitute a MAC.</p>
+
+  <h3>No-MAC CP</h3>
+  <p>A CP that no Material Adverse Change has occurred between signing and closing. Permits a buyer to walk away from the deal if a sufficiently catastrophic event affects the target. The single most-litigated CP in M&amp;A. Detail below.</p>
+
+  <h2>Antitrust / merger control — the three primary regimes</h2>
+
+  <h3>United States — Hart-Scott-Rodino (HSR) Act</h3>
+
+  <p>The <strong><span class="term" data-term="hsr">Hart-Scott-Rodino Antitrust Improvements Act of 1976 (HSR)</span></strong> is codified as §7A of the Clayton Act (15 USC §18a). It requires pre-merger notification to the Federal Trade Commission (FTC) and the Department of Justice (DOJ) Antitrust Division of any acquisition meeting specified size and structural thresholds, with a mandatory <strong>30-day waiting period</strong> before closing (15 days for cash tender offers and bankruptcy transactions).</p>
+
+  <p><strong>2026 thresholds (effective 17 February 2026):</strong></p>
+  <ul>
+    <li><strong><span class="term" data-term="size-of-transaction">Size of Transaction</span>:</strong> transactions valued above <strong>US$133.9 million</strong> are reportable (subject to the size-of-person test).</li>
+    <li><strong><span class="term" data-term="size-of-person">Size of Person</span>:</strong> if the transaction is between US$133.9m and US$535.5m, both the size-of-transaction <em>and</em> the size-of-person test must be met. Size-of-person is met where one party (and its ultimate parent) has total assets or annual net sales of US$267.8m or more, <em>and</em> the other party has total assets (or, for a manufacturer, annual net sales) of US$26.8m or more.</li>
+    <li><strong>Above US$535.5 million:</strong> size-of-transaction alone, regardless of size-of-person.</li>
+  </ul>
+
+  <p>If the FTC or DOJ has substantive concerns within the initial 30-day waiting period, it may issue a <strong><span class="term" data-term="second-request">Second Request</span></strong> — a wide-ranging document and data demand. The waiting period extends until 30 days after both parties have certified substantial compliance with the Second Request. Second Requests typically add 6–12 months to the timetable; only a small fraction of HSR filings (roughly 2–3%) attract Second Requests.</p>
+
+  <p><strong>Filing fees</strong> (2026): tiered, ranging from US$30,000 for the smallest reportable transactions to US$2.46 million for the largest. Filing fee is normally borne by the buyer.</p>
+
+  <p><strong>Penalties for non-filing or for "gun-jumping"</strong> (closing prior to expiry of the waiting period): up to US$53,088 per day per party (2026 inflation-adjusted), in addition to potential Section 7 Clayton Act unwinding remedies. Recent enforcement (Jet.com / Walmart 2018; Marathon Petroleum 2019; ValueAct 2016) has driven the average fine into the high-six / low-seven-figure range per matter.</p>
+
+  <h3>European Union — EU Merger Regulation (EUMR)</h3>
+
+  <p><strong>Council Regulation (EC) No 139/2004</strong> (the "<strong><span class="term" data-term="eumr">EUMR</span></strong>") provides a one-stop-shop merger control regime: a deal with a "<span class="term" data-term="community-dimension">Community dimension</span>" is notified once to the European Commission (Directorate-General for Competition, "<strong>DG COMP</strong>") and is exclusively reviewed at the EU level (subject to the Article 4 / Article 9 / Article 22 referral mechanisms).</p>
+
+  <p><strong>Turnover thresholds — primary test:</strong> a concentration has Community dimension where:</p>
+  <ul>
+    <li>combined aggregate <strong>worldwide turnover</strong> of all undertakings concerned &gt; <strong>€5 billion</strong>; AND</li>
+    <li>aggregate <strong>EU-wide turnover</strong> of each of at least two of the undertakings concerned &gt; <strong>€250 million</strong>;</li>
+    <li><em>unless</em> each of the parties achieves more than two-thirds of its EU-wide turnover in one and the same Member State (the "<span class="term" data-term="two-thirds-rule">two-thirds rule</span>" — if it bites, the deal goes back to the national authority).</li>
+  </ul>
+
+  <p><strong>Alternative thresholds:</strong> if the primary test is not met, the concentration nevertheless has Community dimension where:</p>
+  <ul>
+    <li>combined worldwide turnover &gt; <strong>€2.5 billion</strong>; AND</li>
+    <li>in each of at least three Member States, combined turnover &gt; <strong>€100 million</strong>; AND</li>
+    <li>in each of those three Member States, individual turnover of each of at least two undertakings &gt; <strong>€25 million</strong>; AND</li>
+    <li>aggregate EU-wide turnover of each of at least two undertakings &gt; <strong>€100 million</strong>;</li>
+    <li>(and again subject to the two-thirds carve-out).</li>
+  </ul>
+
+  <p><strong>Procedure:</strong></p>
+  <ul>
+    <li><strong><span class="term" data-term="phase-i">Phase I</span>:</strong> 25 working days from notification (extended to 35 working days if remedies are offered or a Member State requests referral). Outcomes: clearance (Article 6(1)(b)); clearance with commitments (Article 6(1)(b) + Article 6(2)); opening of Phase II (Article 6(1)(c)).</li>
+    <li><strong><span class="term" data-term="phase-ii">Phase II</span>:</strong> 90 working days (extendable by up to 35 working days). Most Phase II cases close with remedies; a small number are prohibited (rare — Hutchison/O2 UK in 2016, the proposed Wieland/Aurubis copper deal in 2019, Illumina/Grail in 2022 (later annulled by the European Court of Justice in 2024 on jurisdictional grounds, after the Commission had asserted jurisdiction via an Article 22 referral despite the deal being below thresholds — the ECJ judgment of 3 September 2024 in Cases C-611/22 P and C-625/22 P held that the Commission had over-extended its Article 22 referral powers)).</li>
+  </ul>
+
+  <p><strong><span class="term" data-term="standstill-obligation">Standstill obligation</span>:</strong> Article 7 EUMR — parties may not close a notifiable concentration before clearance. Breach is the basis for "gun-jumping" liability.</p>
+
+  <p><strong>Fines:</strong> up to <strong>10% of aggregate worldwide turnover</strong> of the undertakings concerned for failure to notify (Article 14(2)(a)) or for breach of standstill (Article 14(2)(b)). These two heads of liability are separate and cumulative — confirmed by the European Court of Justice's 2023 decision in <em>Altice Group Lux v. Commission</em> (Case C-746/21 P), upholding the Commission's two-fine practice.</p>
+
+  <h3>United Kingdom — Competition and Markets Authority (CMA)</h3>
+
+  <p>Post-Brexit, the UK has its own merger control regime, run by the Competition and Markets Authority (<strong><span class="term" data-term="cma">CMA</span></strong>). Two important features distinguish it from the US and EU regimes:</p>
+
+  <ol>
+    <li><strong>Voluntary notification.</strong> Unlike the HSR or EUMR, the UK regime is non-mandatory — there is no statutory pre-merger notification obligation. However, the CMA has the power to <strong>"call in"</strong> any qualifying merger for review, including post-completion, and to impose interim measures (initial enforcement orders, "<strong>IEOs</strong>") that can require rapid hold-separate of integration. In practice, parties to deals that meet the jurisdictional thresholds and present any plausible competition concern will notify voluntarily.</li>
+    <li><strong>Jurisdictional thresholds (post-DMCC Act).</strong> The <span class="term" data-term="dmcc-act">Digital Markets, Competition and Consumers Act 2024 (DMCC)</span> reformed the CMA jurisdictional thresholds with effect from <strong>1 January 2025</strong>:
+      <ul>
+        <li><strong>Turnover test (raised):</strong> target's UK turnover &gt; <strong>£100 million</strong> (previously £70m);</li>
+        <li><strong>Share-of-supply test (unchanged):</strong> the merger results in a combined share of supply of 25% or more of any goods or services in the UK or a substantial part of it, AND at least one party has UK turnover &gt; £10m;</li>
+        <li><strong>New "hybrid" / "acquirer" threshold:</strong> acquirer has &gt; 33% share of supply in the UK and UK turnover &gt; £350m, and the target has a UK nexus (UK turnover, UK presence, etc.);</li>
+        <li><strong>Small-merger safe harbour:</strong> transactions where each party has &lt; £10m UK turnover are out of scope.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><strong>Procedure:</strong></p>
+  <ul>
+    <li><strong>Phase 1:</strong> 40 working days from CMA satisfaction that a complete notification has been received. Outcomes: unconditional clearance; clearance with undertakings in lieu of reference ("<strong>UILs</strong>"); reference to Phase 2.</li>
+    <li><strong>Phase 2:</strong> initial 24 weeks (extendable by up to 8 weeks). Phase 2 is run by an independent panel of CMA members; outcomes: clearance; clearance with structural / behavioural remedies; prohibition.</li>
+  </ul>
+
+  <aside class="pitfall">
+    <h5>War story &mdash; <em>Microsoft / Activision Blizzard</em> (UK CMA, 2022&ndash;2023)</h5>
+    <p>The CMA's handling of Microsoft's US$68.7 billion acquisition of Activision Blizzard is the contemporary case study on how UK call-in really plays out. In April 2023 the CMA <strong>prohibited</strong> the original transaction on cloud-gaming grounds; the European Commission cleared the deal a few weeks later subject to behavioural remedies, and the FTC's adjudication failed in the US courts. To unstick the UK position, Microsoft <strong>restructured the deal</strong> by carving out and divesting Activision's <em>cloud-streaming rights for the next 15 years (outside the EEA)</em> to Ubisoft Entertainment SA before closing in respect of the UK. The CMA opened a fresh Phase 1 inquiry on the restructured deal in August 2023 and conditionally <strong>cleared it on 13 October 2023</strong>, subject to enforceability undertakings on the Ubisoft sale.</p>
+    <p>Lessons for the M&amp;A lawyer:</p>
+    <ul>
+      <li>UK call-in is real and the CMA does not blink at out-of-step outcomes &mdash; it cleared neither earlier nor in line with EU / US peers. Cross-jurisdictional divergence on cloud-gaming is now a textbook example.</li>
+      <li>A <strong>structural fix at the deal level</strong> (carve-and-divest of an entire vertical) can rescue an otherwise prohibited deal &mdash; but it requires re-notification and a fresh Phase 1 clock, plus extension of the Long Stop. Build the contingency into the SPA timetable.</li>
+      <li>The CMA insisted on <strong>upfront enforceability of the divestiture undertakings</strong>, including the right to direct Microsoft to take steps if Ubisoft were prevented from competing &mdash; modern UK remedy practice extends to monitoring trustee oversight long after closing.</li>
+    </ul>
+  </aside>
+
+  <h2>Gun-jumping — what it is and why it costs serious money</h2>
+
+  <p>"<strong><span class="term" data-term="gun-jumping">Gun-jumping</span></strong>" is the antitrust term for any of three distinct sins:</p>
+  <ol>
+    <li><strong>Failing to notify</strong> a notifiable transaction before closing.</li>
+    <li><strong>Breach of standstill</strong> — closing the deal (or doing the equivalent of closing — taking control, integrating businesses, exercising decision-making power over the target) before the regulator has cleared it.</li>
+    <li><strong>Pre-clearance information exchange</strong> of competitively sensitive information between buyer and target — going beyond what is needed for clean-team-mediated due diligence and bona fide deal preparation.</li>
+  </ol>
+
+  <h3>Recent landmark fines</h3>
+  <ul>
+    <li><strong>Altice / PT Portugal (EU):</strong> in 2018 the Commission imposed two separate fines totalling €124.5 million on Altice for (i) failing to notify the acquisition of PT Portugal under Article 14(2)(a) EUMR and (ii) breaching the standstill obligation under Article 14(2)(b). Altice had exercised material decision-making powers over PT Portugal in the period before notification, including instructing PT Portugal on commercial decisions and obtaining sensitive commercial information. The General Court (Case T-425/18, judgment 22 September 2021) reduced the <em>failure-to-notify</em> fine by 10%, while substantively upholding the standstill-breach fine. The Court of Justice (Case C-746/21 P, judgment 9 November 2023) further reduced the failure-to-notify fine by approximately €3.1m, leaving a final total of <strong>€115.15m</strong>; the Court upheld the Commission's central legal point that two separate fines for the two distinct infringements are permissible.</li>
+    <li><strong>Marine Harvest / Morpol (EU):</strong> an earlier €20 million fine (2014) on Marine Harvest for closing its acquisition of Morpol via market purchases of a 48.5% stake before notification. Marine Harvest argued the acquisition of de facto control had occurred via the bigger 87% stake-build and that the earlier 48.5% acquisition was a mere "step" in a single concentration. The General Court (T-704/14, 26 October 2017) and the Court of Justice (C-10/18 P, 4 March 2020) rejected this, confirming that a single concentration can give rise to two infringements where (as here) the two acquisitions were not "interconditional".</li>
+    <li><strong>Illumina / Grail (EU):</strong> in July 2023 the Commission imposed a record <strong>€432 million</strong> gun-jumping fine on Illumina, plus a symbolic €1,000 fine on Grail (the first time a target was fined for gun-jumping). The €432m represented 10% of Illumina's worldwide turnover — the maximum permitted under Article 14(2). The underlying transaction was a US$8 billion vertical acquisition of a cancer-screening company. Illumina closed the deal in August 2021 despite the Commission having opened a Phase II investigation following an Article 22 referral. The Commission ultimately prohibited the deal on the merits in September 2022; Illumina was ordered to divest Grail. The European Court of Justice's <strong>3 September 2024</strong> judgment in Cases C-611/22 P and C-625/22 P annulled the Commission's Article 22 referral as ultra vires (the Commission could not assert jurisdiction over a deal that did not meet the EUMR turnover thresholds and was not notified at the national level). Three days after that judgment, on <strong>6 September 2024</strong>, the Commission <em>formally withdrew</em> the prohibition, divestiture and gun-jumping decisions: the €432m fine is annulled, not merely under appeal. (Sources: Freshfields, Norton Rose Fulbright, Linklaters, Cleary Gottlieb &mdash; September 2024 client alerts.)</li>
+  </ul>
+
+  <p>The Illumina saga is the cautionary tale of the decade in a different sense than originally cast: it shows what happens when a deal team takes on closing risk in a high-stakes vertical merger, and what happens when a regulator over-extends jurisdictional reach. The headline fine is gone; the lessons on gun-jumping risk, on the cost of Phase II review, and on the limits of Article 22 referrals remain. The case also led to the December 2023 publication of revised Commission guidance on Article 22 referrals.</p>
+
+  <aside class="pitfall">
+    <h5>Practical implications for the M&amp;A lawyer</h5>
+    <ul>
+      <li>Build clean-team protocols for due diligence to avoid pre-closing information exchange that could be characterised as gun-jumping.</li>
+      <li>Avoid putting buyer representatives on the target's board, executive committee, or budget approval processes before closing.</li>
+      <li>Avoid commercial integration (joint sales calls, joint pricing, shared customer outreach) before clearance.</li>
+      <li>Use "hold-separate" documentation if the parties want to begin integration planning.</li>
+      <li>For multi-step acquisitions (initial stake + back-end take-up), structure as either truly separate concentrations or a single notifiable concentration — the Marine Harvest "in-between" position is a fine-magnet.</li>
+    </ul>
+  </aside>
+
+  <h3>Gun-jumping operating rules — what the deal teams can and cannot do</h3>
+
+  <p>The doctrinal categories above are useful but the deal-team question is operational: <em>"Which of our integration-planning meetings is OK and which one gets us the next Altice-style fine?"</em> The de facto rules antitrust counsel will police between signing and clearance:</p>
+  <ul>
+    <li><strong>Integration steering committee.</strong> Buyer and target may stand up a joint committee to plan Day-1 readiness, but it must not take or implement <em>operational</em> decisions affecting the target's pre-closing business. Permitted: workstream mapping, Day-1 communications planning, IT cut-over schedules, organogram design. Not permitted: pricing decisions, customer-allocation decisions, capex approvals, hiring / firing of target staff.</li>
+    <li><strong>Clean team / outside-counsel-only protocol.</strong> Competitively sensitive target data (customer pricing, margin data, commercial pipeline, granular sales-by-customer) flow only to a ring-fenced "<strong>clean team</strong>" of buyer-side personnel walled off from the buyer's commercial decision-makers, plus outside antitrust counsel and an outside economic consultant. Findings are anonymised / aggregated before reaching the deal team. Memorialise in a <strong><span class="term" data-term="clean-team-agreement">clean-team agreement</span></strong> signed by all clean-team members.</li>
+    <li><strong>Customer / supplier outreach.</strong> Target stays in the room and runs the meeting; buyer can be introduced to key counterparties post-signing but should not negotiate price, volume or contract terms with target customers before closing. Joint customer announcements are usually permitted.</li>
+    <li><strong>Business plans and budgets.</strong> Target retains autonomy over its own business plan and annual budget through closing; buyer can be informed and can flag concerns but cannot direct or veto.</li>
+    <li><strong>Information rights vs. control rights.</strong> Buyer is entitled to <em>information</em> rights (financial reporting, ordinary-course updates) under the SPA's interim covenants; control rights (board observer, veto over material transactions) are gun-jumping flags and should be confined to a defined list of "Restricted Actions" tied to value preservation, not commercial direction.</li>
+    <li><strong>Two-step / pre-positioning structures.</strong> Toehold acquisitions, share-purchase agreements with deferred closing, and option structures must not deliver de facto control before clearance — Marine Harvest is the cautionary tale on stake-build structures.</li>
+  </ul>
+
+  <h2>Foreign Direct Investment (FDI) screening</h2>
+
+  <p>Distinct from antitrust. FDI screening regimes scrutinise transactions for national-security implications — defence, critical infrastructure, sensitive technology, sensitive personal data. The post-2018 explosion of FDI regimes globally (driven by China-related concerns) means that an "easy" deal — small, no antitrust issues — can still face six months of FDI review.</p>
+
+  <h3>United States — CFIUS / FIRRMA</h3>
+
+  <p>The <strong><span class="term" data-term="cfius">Committee on Foreign Investment in the United States (CFIUS)</span></strong> is a Treasury-chaired interagency committee with authority under §721 of the Defense Production Act of 1950 to review covered transactions for US national security implications. The <strong><span class="term" data-term="firrma">Foreign Investment Risk Review Modernization Act of 2018 (FIRRMA)</span></strong> dramatically expanded CFIUS's jurisdiction:</p>
+
+  <ul>
+    <li>Beyond control transactions (the historic CFIUS focus), FIRRMA captures certain non-controlling investments by foreign persons in <strong><span class="term" data-term="tid-us-business">TID US Businesses</span></strong> (TID = <strong>T</strong>echnology, <strong>I</strong>nfrastructure, sensitive personal <strong>D</strong>ata).</li>
+    <li>"Covered investment" includes any investment that gives the foreign person access to material non-public technical information, board / observer rights, or substantive decision-making.</li>
+    <li><strong>Mandatory filings</strong> are required for (i) foreign-government-controlled investments acquiring a "substantial interest" (defined as ≥25% direct or indirect interest in a TID US Business by a foreign person in which a foreign government holds ≥49% interest); and (ii) certain investments in critical-technology TID businesses, where the underlying technology would require an export-control authorisation to export to the foreign person involved.</li>
+    <li>Filings are made by joint declaration (5-page short form, 30-day review period) or by full notice (28 CFR Part 800, 45-day review with possible 45-day extension and possible 90-day investigation).</li>
+    <li>Outcomes: clearance; mitigation agreement (CFIUS-imposed conditions, e.g. National Security Agreements, divestitures of sensitive assets, US-citizen requirements for board members or technical staff); referral to the President with recommendation to block.</li>
+    <li><strong>Penalties for non-filing or for breach of mitigation:</strong> Treasury issued a Final Rule on CFIUS mitigation and enforcement authority on <strong>26 November 2024</strong> (effective <strong>26 December 2024</strong>). For mitigation agreements entered on or after the effective date, the maximum penalty for a mitigation breach is the <strong>greatest of</strong> (i) US$5 million, (ii) the value of the foreign person's interest in the US business at the time of the transaction, (iii) at the time of the violation, or (iv) the transaction value notified to CFIUS. The four-prong matrix is materially more punitive than the prior framework (US$5m or transaction value, whichever greater).</li>
+  </ul>
+
+  <h3>United Kingdom — National Security and Investment Act 2021 (NSI Act)</h3>
+
+  <p>In force from <strong>4 January 2022</strong>, the <span class="term" data-term="nsi-act">NSI Act</span> gives the UK Secretary of State (currently the Cabinet Office Investment Security Unit, ISU) broad powers to call in any "trigger event" for national security review.</p>
+
+  <p><strong>Trigger event</strong> = an acquisition of (i) shares / voting rights crossing 25%, 50% or 75% in a target entity; or (ii) "material influence" over the target; or (iii) certain rights over assets (e.g. land, IP) used in connection with the UK national security.</p>
+
+  <p><strong>Mandatory notification</strong> is required for trigger events in <strong>17 specified sectors</strong>:</p>
+  <ol>
+    <li>Advanced Materials</li>
+    <li>Advanced Robotics</li>
+    <li>Artificial Intelligence</li>
+    <li>Civil Nuclear</li>
+    <li>Communications</li>
+    <li>Computing Hardware</li>
+    <li>Critical Suppliers to Government</li>
+    <li>Cryptographic Authentication</li>
+    <li>Data Infrastructure</li>
+    <li>Defence</li>
+    <li>Energy</li>
+    <li>Military and Dual-Use</li>
+    <li>Quantum Technologies</li>
+    <li>Satellite and Space Technologies</li>
+    <li>Suppliers to the Emergency Services</li>
+    <li>Synthetic Biology</li>
+    <li>Transport</li>
+  </ol>
+
+  <p>For deals outside the 17 sectors, notification is voluntary, but the Secretary of State has a 5-year retrospective call-in power (6 months from when the deal was on the Secretary's "reasonable awareness" radar).</p>
+
+  <p><strong>Procedure:</strong> initial 30-working-day review period; possible 45-working-day call-in assessment period; possible 45-working-day extension. <strong>Sanctions for completing a mandatory-notifiable trigger event without approval:</strong> the transaction is <strong>legally void</strong>; criminal liability (up to 5 years' imprisonment) for individuals; corporate fines up to the higher of £10 million or 5% of worldwide turnover.</p>
+
+  <h3>European Union — Regulation 2019/452 (FDI Screening)</h3>
+
+  <p><strong>Council Regulation (EU) 2019/452</strong> establishes a coordination framework for FDI screening across EU Member States, in force from October 2020. It does not itself confer Commission power to block a transaction (FDI screening remains a Member-State competence); it requires Member States to share information on screened deals and gives the Commission and other Member States a right to comment.</p>
+
+  <p>Key Member-State regimes (selection):</p>
+  <ul>
+    <li><strong>Germany — <em>Außenwirtschaftsverordnung</em> (Foreign Trade and Payments Ordinance, AWV).</strong> Investments by non-EU/non-EFTA investors in critical-sector German targets (≥10% voting rights for sensitive sectors; ≥20% / 25% for others) trigger mandatory notification to the Federal Ministry for Economic Affairs and Climate Action (BMWK). Approximately 19 sensitive sectors covered.</li>
+    <li><strong>France — <em>Investissements étrangers en France</em> (IEF) regime, <em>Code monétaire et financier</em> Articles L.151-3 et seq.</strong> Mandatory prior authorisation by the Ministry of Economy for non-EU investments in entities active in defence, dual-use, public order, public security, public health (broadly defined post-2020 reforms). Threshold lowered from 25% to 10% for listed companies post-2020 (extended through subsequent reforms).</li>
+    <li><strong>Italy — <span class="term" data-term="golden-power">Golden Power</span> regime, <em>Decreto-Legge</em> 21/2012 as expanded by <em>Decreto-Legge</em> 23/2020.</strong> Special powers for the Italian Council of Ministers (Presidency) to veto or impose conditions on acquisitions of strategic Italian companies in defence, energy, transport, telecommunications, financial-credit, technology and other "5G" sectors. Notification mandatory; failure to notify can render acts null and void and trigger fines up to twice the transaction value.</li>
+    <li><strong>Spain — Royal Decree-Law 8/2020, Article 7 bis.</strong> Mandatory authorisation for non-EU/non-EFTA investments of ≥10% (or that result in effective control) in Spanish strategic-sector companies (defence, energy, telecoms, food security, AI, biotechnology and others). Originally a COVID-era emergency measure, now a permanent feature.</li>
+  </ul>
+
+  <p><strong>Status of the revised Regulation (May 2026):</strong> the Council and the European Parliament reached a <strong>provisional political agreement on 11 December 2025</strong> on the revised FDI Screening Regulation; the agreed compromise text was endorsed at first reading by the Council on <strong>10 February 2026</strong> and adopted by the Parliament's Committee on International Trade on <strong>24 February 2026</strong>. Formal adoption is expected in mid-2026, with the new rules taking effect approximately <strong>18 months after entry into force</strong> (so substantive application is expected in late 2027 / early 2028). Headline changes from the original 2019/452 Regulation: (i) <strong>all Member States must operate a national screening mechanism</strong> aligned to harmonised minimum standards (Italy, Spain, Germany, France already have one; Greece, Bulgaria and a handful of others have to build one); (ii) a <strong>mandatory minimum sectoral list</strong> (defence and military, dual-use, critical raw materials, critical infrastructure including AI / cloud / quantum / semiconductors, biotech, energy); (iii) extension to <strong>indirect intra-EU acquisitions</strong> by EU vehicles ultimately controlled by a non-EU person; (iv) a <strong>standardised initial review period of 45 calendar days</strong> from completeness; and (v) a binding cooperation mechanism between Member States and the Commission. Until formal adoption and entry into force, the 2019/452 framework continues to apply unchanged. (Sources: Skadden, Cleary Gottlieb, Mayer Brown, Council and Parliament press notes, Q1 2026.)</p>
+
+  <h2>Sectoral / sector-specific clearances</h2>
+
+  <p>Beyond antitrust and FDI, individual industries trigger their own change-of-control approvals:</p>
+  <ul>
+    <li><strong>Banking / financial services:</strong> UK Prudential Regulation Authority (PRA) and Financial Conduct Authority (FCA) — change-in-control regime under Part XII of the Financial Services and Markets Act 2000 (FSMA); EU European Central Bank Single Supervisory Mechanism (ECB SSM) for "significant" credit institutions; US Office of the Comptroller of the Currency (OCC), Federal Reserve Board, and Federal Deposit Insurance Corporation (FDIC) under the Bank Holding Company Act and Change in Bank Control Act. State insurance regulators in the US under "Form A" filings.</li>
+    <li><strong>Telecoms:</strong> Federal Communications Commission (FCC) in the US (transfer of licences); Ofcom in the UK; national telecoms regulators in EU Member States.</li>
+    <li><strong>Defence:</strong> in addition to FDI, separate Department of Defence (US) novation procedures for federal defence contracts.</li>
+    <li><strong>Healthcare / pharma:</strong> in some jurisdictions, change-of-control of healthcare providers triggers regulatory approval (e.g. New York State, California). EMA / FDA permit-holder transfers required for marketing authorisations.</li>
+    <li><strong>Aviation / airlines:</strong> national-ownership rules requiring majority national ownership of airline operating certificates; particularly stringent in the US (Federal Aviation Act §40102) and EU.</li>
+    <li><strong>Sanctions / export control:</strong> OFAC clearance for transactions touching sanctioned parties; export-control assessments under the US Export Administration Regulations (EAR) and EU Dual-Use Regulation 2021/821.</li>
+  </ul>
+
+  <h2>MAC / MAE — the contractual walk-away and the Delaware case law</h2>
+
+  <p>A <strong><span class="term" data-term="mac">Material Adverse Change (MAC)</span></strong> clause (also "<strong><span class="term" data-term="mae">Material Adverse Effect (MAE)</span></strong>" — terms used interchangeably in many SPAs) is a contractual provision allowing the buyer to walk away from the deal, or refuse to close, if a sufficiently catastrophic event has occurred between signing and closing. It operates in two ways: (i) directly, as a standalone CP that "no MAC has occurred"; and (ii) indirectly, by qualifying the bring-down of certain warranties ("the warranties are true in all respects, save as would not have a Material Adverse Effect").</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck — typical MAE definition</h5>
+    <blockquote>
+      <p><strong>Material Adverse Effect</strong> means any effect (without giving effect to this Agreement and the transactions contemplated by this Agreement) that is, or could reasonably be expected to be, material and adverse to the results and/or financial condition of the Target or its assets, operations, affairs, prospects, future financial performance, condition (financial or otherwise), except to the extent that such material adverse effect results from or is caused by: (i) any change in worldwide, national or local economic, political or regulatory conditions, (ii) war, military actions, acts of terrorism, natural disasters and pandemics, (iii) changes generally affecting the industry in which the Target [operates], (iv) the announcement of this Agreement and the transactions contemplated by it, and (v) changes in Laws, except in the case of each of clauses (i), (ii), (iii) and (v) above, to the extent it does not have a materially disproportionate effect on the Target relative to other comparable entities operating in the industry in which the same operates.</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> defining the contractual deal-killer. What an M&amp;A lawyer reads here:
+      <ul>
+        <li><strong>General definition:</strong> broad — captures effects on results, financial condition, assets, operations, affairs, prospects, future financial performance, condition. The inclusion of "<em>prospects</em>" is notable: it pulls future-oriented effects within scope, though Delaware case law has tended to require the buyer to demonstrate concrete near-term impact rather than speculative future loss.</li>
+        <li><strong>"Could reasonably be expected to be":</strong> captures threatened MACs as well as occurred ones. Heavily contested.</li>
+        <li><strong>Carve-outs:</strong> five categories of cause are excluded — economic / political / regulatory environment changes; war / terrorism / natural disasters / pandemics; industry-wide changes; the announcement of the deal; changes in law. These carve-outs are seller-friendly: the buyer has assumed market and industry risk.</li>
+        <li><strong>Disproportionate-effect exception:</strong> in (i), (ii), (iii) and (v), if the effect is "<em>materially disproportionate</em>" on the target relative to industry comparables, the carve-out does not apply, and the effect counts towards a MAC. This is buyer-friendly — it brings back into scope industry / macro events that hit the target uniquely hard. Note carve-out (iv) — announcement of the deal — has <em>no</em> disproportionate-effect exception, because announcement effects are inherently target-specific and not really comparable to industry peers.</li>
+      </ul>
+    </div>
+  </aside>
+
+  <h3>The Delaware case law</h3>
+
+  <p>The MAC standard in Delaware has been shaped by a series of high-profile decisions.</p>
+
+  <p><strong><em>IBP, Inc. v. Tyson Foods, Inc.</em> (Del. Ch. 2001)</strong> — Vice Chancellor Strine held that a 64% drop in IBP's quarterly earnings was <em>not</em> a MAE. The standard he articulated has become the lodestar:</p>
+  <blockquote><em>"A buyer ought to have to make a strong showing to invoke a Material Adverse Effect exception to its obligation to close. … The Material Adverse Effect should be material when viewed from the longer-term perspective of a reasonable acquiror. … [T]he important consideration … is whether there has been an adverse change in the target's business that is consequential to the company's earnings power over a commercially reasonable period, which one would think would be measured in years rather than months."</em></blockquote>
+
+  <p><strong><em>Frontier Oil Corp. v. Holly Corp.</em> (Del. Ch. 2005)</strong> — a litigation-related MAE claim (asbestos exposure) failed because the buyer could not show the litigation would have a "<span class="term" data-term="durationally-significant">durationally significant</span>" impact on the target's earnings power.</p>
+
+  <p><strong><em>Hexion Specialty Chemicals, Inc. v. Huntsman Corp.</em> (Del. Ch. 2008)</strong> — the buyer (Apollo / Hexion) tried to walk away from the Huntsman deal by claiming MAE plus insolvency. The court held no MAE: the relevant comparison is the target's results year-over-year, not vs. forecasts; short-term performance fluctuations within a cyclical industry do not constitute a MAE; the buyer assumed the risk of cyclical market downturns.</p>
+
+  <p><strong><em>Akorn, Inc. v. Fresenius Kabi AG</em> (Del. Ch. 2018; aff'd Del. 2018)</strong> — the <strong>only</strong> Delaware case to find that a MAE had occurred. Vice Chancellor Laster's 246-page opinion held that Fresenius could terminate its US$4.75bn merger agreement with Akorn for two independent reasons:</p>
+  <ol>
+    <li><strong>MAE on operating results:</strong> Akorn's adjusted EBITDA had collapsed by 86% year-over-year over five quarters; revenue had dropped 25%; operating income had dropped 105%. The decline was "durationally significant" and "qualitatively significant"; not attributable to industry-wide effects.</li>
+    <li><strong>Breach of regulatory-compliance warranties:</strong> Akorn's data-integrity practices in the US Food and Drug Administration (FDA)-regulated manufacturing operations were so deficient that the warranties were breached at a level that would have a Material Adverse Effect on the company's earnings power.</li>
+  </ol>
+  <p>The Delaware Supreme Court affirmed in a brief order (2018), making <em>Akorn</em> the binding authority on MAE.</p>
+
+  <p><strong><em>Channel Medsystems v. Boston Scientific</em> (Del. Ch. 2019)</strong> — fact pattern superficially similar to <em>Akorn</em> (regulatory issues at the target post-signing) but distinguished by the court: the issues were caused by employee misconduct, were remedied in time for closing, and did not create a "durationally significant" earnings impact. No MAE; the merger was specifically performed against the buyer's wishes.</p>
+
+  <p><strong><em>AB Stable VIII LLC v. Maps Hotels &amp; Resorts One LLC</em> (Del. Ch. 2020; aff'd Del. 2021)</strong> — the COVID-19-era hotel-portfolio decision. The court held that COVID itself fell within the "natural disasters and calamities" carve-out, BUT the target's response to COVID (closing hotels, dramatically cutting operations) breached the "ordinary course of business" interim-period covenant. The buyer was permitted to terminate on the ordinary-course-breach ground, not on MAE grounds. This is a critical authority on the interaction between the MAE carve-out (which kept COVID itself out of MAE) and the interim-period covenants (which captured the target's COVID response).</p>
+
+  <aside class="lever buyer">
+    <h5>System lever &mdash; <em>AB Stable</em>: look here, not there</h5>
+    <p>The buyer in <em>AB Stable</em> won not on the MAE side &mdash; the COVID carve-out shut that door &mdash; but on the <strong>covenant side</strong>: the target's unilateral hotel-closure decisions breached the ordinary-course-of-business interim covenant. <strong>The structural lesson:</strong> a buyer can win on the covenant where it cannot win on MAE. So, if you want walk-away protection against pandemic-style events that you suspect the seller will carve out of MAE, push hard for a tight ordinary-course covenant <em>without</em> a "consistent with past practice" qualifier on the covenant side. Module 09 develops the covenant-side architecture; the two are inseparable in modern SPA drafting. (See also <em>Snow Phipps Group v. KCAKE</em> (Del. Ch. 2021) where the COVID-era buyer lost on MAE and on the covenant.)</p>
+  </aside>
+
+  <h3>The Delaware "durationally significant" test — what it actually means</h3>
+  <ul>
+    <li><strong>Magnitude:</strong> the effect must be substantially adverse, typically requiring something on the order of 40%+ decline in key financial metrics, sustained.</li>
+    <li><strong>Duration:</strong> the impact must be measured in <strong>years, not months</strong>. A bad quarter or two does not count.</li>
+    <li><strong>Qualitative:</strong> courts assess whether the effect is fundamental to the target's earnings power — not a temporary blip in working capital, not a one-quarter shipping issue.</li>
+    <li><strong>Carve-out application:</strong> the buyer bears the burden of showing both (i) that an effect occurred, AND (ii) that it does not fall within a carve-out (or, if it does fall within a carve-out subject to the disproportionate-effect exception, that the disproportionate-effect exception applies).</li>
+    <li><strong>Buyer's burden of proof:</strong> buyer bears the burden throughout. The seller does not have to disprove a MAE; the buyer must prove it.</li>
+  </ul>
+
+  <aside class="note">
+    <h5>Synthesis &mdash; drafting a 2026 MAE clause that survives <em>Akorn</em>, <em>AB Stable</em> and <em>Channel Medsystems</em></h5>
+    <p>Given the case law as it now stands &mdash; <em>Akorn</em> seven years old and still the only Delaware MAE finding; <em>AB Stable</em> the most recent appellate authority on covenant / MAE interaction &mdash; the question a partner will actually ask is: <em>"Where do we draft this clause to optimise for our side?"</em></p>
+    <ul>
+      <li><strong>Buyer side, post-2020:</strong> shorten the carve-out list (drop "pandemic" if you can; if you can't, build a tight disproportionate-effect exception that is explicitly <em>not</em> "materially" qualified); insert a comparator "the target's prior performance" rather than "industry participants"; pair MAE with a tight ordinary-course covenant <strong>without</strong> a "consistent with past practice" qualifier (<em>AB Stable</em>); insert a "regulatory non-compliance" arm (<em>Akorn</em>); insert a "knowledge scrape" so the disclosure is at full effect.</li>
+      <li><strong>Seller side, post-2020:</strong> expand the carve-outs (pandemics, public-health emergencies, government-mandated shutdowns expressly listed); insert "materially" before "disproportionate"; benchmark to "industry participants of comparable size"; pre-emptively define "ordinary course" with a "consistent with past practice and as modified to respond to extraordinary circumstances" overlay (post-<em>AB Stable</em> seller's drafting move); ensure the disproportionate-effect exception requires the buyer to prove a numerical threshold (e.g. 25% earnings hit greater than industry average).</li>
+      <li><strong>Reality check:</strong> Delaware courts have signalled in <em>AB Stable</em>, <em>Snow Phipps</em>, <em>Channel Medsystems</em> that they are reluctant to find a MAE on operating performance alone; the buyer's high-percentage path to walking away remains the <em>covenant</em> side, not the MAE side. Draft accordingly.</li>
+    </ul>
+  </aside>
+
+  <h2>Hell-or-high-water clauses and the spectrum of efforts standards</h2>
+
+  <p>Where a deal triggers regulatory clearances, a key SPA negotiation is over the buyer's obligation to do whatever is necessary to obtain clearance. The spectrum (ordered from buyer-friendly to seller-friendly):</p>
+
+  <ol>
+    <li><strong>"Use efforts to obtain"</strong> (no qualification). Buyer must take some action but has wide discretion. Rarely seen in modern practice; too vague.</li>
+    <li><strong>"Reasonable efforts" / "reasonable endeavours"</strong> (UK) — buyer must take steps a reasonable party in its position would take, but is not obliged to take loss-making steps. The leading English case is <em>Rhodia International Holdings v. Huntsman International</em> [2007] EWHC 292 (Comm) — "reasonable endeavours" allows a single attempt and is the lowest tier of efforts obligations.</li>
+    <li><strong>"Commercially reasonable efforts"</strong> — middle of the road. Buyer must take reasonable commercial steps but is not obliged to take steps that would adversely affect its commercial interests in a material way. Most heavily negotiated efforts standard in US SPAs.</li>
+    <li><strong>"All reasonable efforts" / "all reasonable endeavours"</strong> — UK formulation, more onerous than "reasonable endeavours". <em>Yewbelle Ltd v. London Green Developments Ltd</em> [2007] EWCA Civ 475 confirmed this is more demanding than plain "reasonable endeavours" — buyer must persist in efforts and try alternatives.</li>
+    <li><strong>"Best efforts" / "best endeavours"</strong> (UK) — buyer must take all steps a reasonable party would take, including steps potentially adverse to its commercial interests. The leading English authority is <em>Sheffield District Ry v. Great Central Ry</em> (1911) 27 TLR 451 — best endeavours requires the obligor to "leave no stone unturned" within the bounds of reason and prudence. Still does not require steps that are commercially suicidal.</li>
+    <li><strong><span class="term" data-term="hell-or-high-water">"Hell-or-high-water"</span></strong> — the maximum. Buyer must take <strong>whatever</strong> action is necessary to obtain clearance, including divesting any business or asset, accepting any behavioural condition, paying any "tax" of regulatory remedies. Buyer cannot use regulatory burden as an excuse to walk away. Highly seller-friendly. Typical in seller-led auctions where the seller wants total certainty of closing.</li>
+  </ol>
+
+  <p>A concrete example of how this matters: in <em>AT&amp;T / Time Warner</em> (2018), the merger agreement contained a "<span class="term" data-term="reasonable-best-efforts">reasonable best efforts</span>" antitrust covenant. When the DOJ sued to block the deal, AT&amp;T litigated through a seven-week trial (<em>US v. AT&amp;T, Inc.</em>, 310 F. Supp. 3d 161 (D.D.C. 2018)) and prevailed, closing the deal. Had Time Warner extracted a hell-or-high-water covenant, AT&amp;T would have been on the hook for whatever divestitures the DOJ demanded, no matter how value-destructive. Conversely, when the 2011 AT&amp;T / T-Mobile USA acquisition collapsed under DOJ challenge, AT&amp;T paid Deutsche Telekom an industry-record reverse-break package of approximately <strong>US$3 billion in cash plus US$1 billion in spectrum and roaming arrangements</strong> &mdash; a stark illustration of what happens when the buyer does not deliver the regulatory clearance and the regulatory effort obligation has real teeth.</p>
+
+  <h3>Burdensome condition and the divestiture cap</h3>
+
+  <p>Pure HOHW is rare. Most large-deal SPAs land on RBE coupled with a <strong><span class="term" data-term="divestiture-cap">divestiture cap</span></strong>: the buyer agrees to RBE up to a defined ceiling of forced divestitures, and is free to walk if the regulator demands more. The cap is denominated either by revenue or by EBITDA. A "<strong><span class="term" data-term="burdensome-condition">burdensome condition</span></strong>" carve-out runs alongside it: the buyer can refuse to accept any condition that would have a defined material adverse effect on the combined company.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; burdensome condition / divestiture cap</h5>
+    <ul>
+      <li><strong>Seller wants:</strong> objective, narrow definition. <em>"Buyer must accept any divestiture or behavioural condition imposed by a Governmental Authority other than those that would result in the divestiture of assets generating in aggregate more than US$X of consolidated revenue or representing more than Y% of target consolidated EBITDA."</em> Numerical, hard ceiling, no escape valve.</li>
+      <li><strong>Buyer wants:</strong> subjective definition tied to material adverse effect on the deal economics. <em>"Buyer is not obliged to accept any condition that would, individually or in the aggregate, reasonably be expected to have a material adverse effect on the combined company's business, results of operations or financial condition."</em> Soft, judgement-based, gives the buyer real flexibility.</li>
+      <li><strong>Typical compromise:</strong> a hybrid &mdash; an objective revenue or EBITDA cap (the seller's ceiling) coupled with a subjective override for conditions that would materially impair the deal rationale (e.g., divestiture of a target's flagship product or a non-compete covenant that constrains the buyer's existing business). On large public deals the cap is often quoted publicly to signal deal-certainty to the market.</li>
+    </ul>
+  </aside>
+
+  <h3>Negotiation pivots inside the MAC carve-out list</h3>
+
+  <p>Three live drafting pivots a partner will move through in any post-2020 MAC negotiation:</p>
+
+  <ul>
+    <li><strong>"Pandemic" explicit or implicit?</strong> Post-COVID, sellers want pandemics, epidemics and public-health emergencies expressly listed in the natural-disaster carve-out (with disproportionate-effect qualifier); buyers want them out (forcing the seller to argue COVID is a "calamity" within other words, as <em>AB Stable</em> shows it can be).</li>
+    <li><strong>"Materially disproportionate" vs. "disproportionate"?</strong> Adding "materially" raises the bar for the buyer to bring an industry-wide effect back into MAC scope; it is seller-friendly. Stripping "materially" is buyer-friendly.</li>
+    <li><strong>Comparator group?</strong> "Industry participants" (a wide peer set, easier for the seller to argue the target was not uniquely hit) vs. "the target's prior performance" (a self-comparison, easier for the buyer to argue durational significance).</li>
+  </ul>
+
+  <h2>Long Stop / Drop Dead Date, ticking fees, reverse termination fees</h2>
+
+  <h3>Long Stop Date (also Drop Dead Date, Outside Date)</h3>
+
+  <p>A <span class="term" data-term="long-stop-date">Long Stop Date</span> is a specified date by which Closing must occur. If Closing has not occurred by the Long Stop Date, either party (or only the non-defaulting party, depending on drafting) may terminate the SPA.</p>
+
+  <aside class="source-deck">
+    <h5>From the source deck — Long Stop Date</h5>
+    <blockquote>
+      <p>"It being however understood that in no case the Closing Date shall be set later than October 31, 2022 (the '<strong>Long Stop Date</strong>'), unless such Long Stop Date has been waived or postponed upon agreement of the Parties."</p>
+      <p>"The Parties agree that should Closing not take place by the Long Stop Date (as originally set forth by the Parties or as subsequently waived or postponed upon agreement of the Parties), this Agreement shall be terminated, subject to each Party's right to claim damages from the Party who has impeded the Closing in breach of this Agreement."</p>
+    </blockquote>
+    <div class="deck-explain">
+      <strong>What this is doing:</strong> setting a hard deadline by which Closing must happen. If the deal is not closed by 31 October 2022 (in this example), either party may walk; but the right to claim damages survives, so a party who has caused the delay (e.g. by failing to use reasonable efforts on its CPs) cannot use the Long Stop as a free escape. The Long Stop is also implicitly extendable by mutual agreement — a feature that allows the parties to re-paper a slipping regulatory timetable rather than rip up the deal.
+    </div>
+  </aside>
+
+  <p><strong>How long should the Long Stop be?</strong> Practical considerations:</p>
+  <ul>
+    <li>HSR clearance: 30 days plus possible Second Request adds 6–12 months. Typical Long Stop in HSR-only US deals: 6 months from signing; up to 12 months in cases with substantive antitrust issues; 15–18 months in mega-mergers with high antitrust risk.</li>
+    <li>EUMR: Phase II adds 4–5 months. For deals likely to face Phase II, Long Stop typically 9–12 months.</li>
+    <li>CFIUS: 30+45+90 = potentially 5 months for a full filing. Long Stop typically 6+ months.</li>
+    <li>NSI Act (UK): up to ~3 months for the standard process; longer if remedies are needed.</li>
+    <li>Multi-jurisdictional deals layer all of the above; for global mega-mergers Long Stops of 18 or even 24 months are seen.</li>
+  </ul>
+
+  <h3>Ticking fees</h3>
+
+  <p>A <span class="term" data-term="ticking-fee">ticking fee</span> is a premium on the consideration that accrues to the seller from a specified date (e.g. signing + 6 months) until Closing, designed to compensate the seller for delay. Typically expressed as additional cents-per-share per day or as a percentage of consideration per month. Common in long-fuse public-company deals. Seller-friendly: incentivises buyer to push hard for clearances.</p>
+
+  <h3>Reverse termination fees (also break fees)</h3>
+
+  <p>A <span class="term" data-term="reverse-termination-fee">reverse termination fee</span> is a pre-agreed cash payment from buyer to seller payable in defined termination scenarios — typically when the buyer cannot obtain regulatory clearance, or when the buyer's financing fails. The economic equivalent of an option premium: the buyer is buying the right to walk away under specified conditions; the reverse termination fee is the price of that option.</p>
+
+  <p><strong>Typical sizes (informal market practice, no single published source — varies materially by sector and deal size):</strong></p>
+  <ul>
+    <li>US public-company strategic deals: 3–5% of equity value as the reverse termination fee for an antitrust failure; sometimes 6–8% in deals with significant antitrust risk.</li>
+    <li>Private-equity bidders: typically more modest reverse termination fees (around 6% historically) reflecting the asymmetric ability to specifically perform a financial sponsor (US courts in <em>Hexion</em> and subsequent cases have shown reluctance to compel sponsors to fund equity contributions).</li>
+    <li>Naked no-fault termination fees (buyer can walk away for any reason and pay the fee): much higher, typically 10%+, and rare.</li>
+  </ul>
+
+  <p><strong>Termination triggers structured into reverse-termination-fee clauses:</strong></p>
+  <ul>
+    <li>Failure to obtain regulatory approvals;</li>
+    <li>Imposition of "burdensome conditions" by regulators;</li>
+    <li>Failure of buyer's financing;</li>
+    <li>Failure to close at the Long Stop Date;</li>
+    <li>Buyer's wilful breach.</li>
+  </ul>
+
+  <h4><span class="term" data-term="naked-rtf">Naked</span> vs. financing-conditional RTFs &mdash; the PE asymmetry</h4>
+  <p>RTFs split into two structural archetypes. A <strong>naked RTF</strong> is payable on a buyer-side failure-to-close <em>regardless of cause</em> &mdash; the buyer effectively buys an option to walk for the fee amount. A <strong>financing-conditional RTF</strong> (sometimes called a "two-tier RTF") is payable only on specified buyer-side failures (typically regulatory failure or financing failure), and the SPA <em>excludes specific performance</em> as a remedy: the seller's only remedy is the fee. This is the modern PE deal architecture.</p>
+  <p>The asymmetry matters because of <em><span class="term" data-term="hexion-huntsman">Hexion Specialty Chemicals v. Huntsman</span></em> (Del. Ch. 2008): Delaware courts have shown reluctance to compel sponsors to make equity contributions, so PE sellers know their effective remedy is the RTF, not specific performance. Result: PE deals routinely sit on a 5&ndash;7% RTF with the seller's specific-performance carve-out limited to the equity-funding obligation, while strategic deals run a 3&ndash;5% RTF with full specific-performance backup. <em>United Rentals v. RAM Holdings</em> (Del. Ch. 2007) and <em><span class="term" data-term="genesco-finish-line">Genesco Finish Line</span></em> are part of the foundational doctrine here.</p>
+
+  <h4>Marketing Period and SunGard provisions</h4>
+  <p>Between signing and closing, a debt-financed buyer may need a defined window to syndicate / market its debt before being forced to fund. The <strong><span class="term" data-term="marketing-period">Marketing Period</span></strong> clause guarantees the buyer (typically) <strong>15 to 20 consecutive business days</strong> with required financial information available before the closing obligation crystallises. Failure to deliver complete financial information re-starts the clock. <strong><span class="term" data-term="sungard-provisions">SunGard provisions</span></strong> &mdash; named after the 2005 SunGard LBO &mdash; are the modern PE-deal architecture pairing the Marketing Period with: (i) limited specific-performance, (ii) the financing-conditional RTF as the seller's exclusive remedy on financing failure, (iii) buyer-cooperation covenants from the seller (filling out lender-required information requests, attending bank meetings), and (iv) "<strong><span class="term" data-term="xerox-provision">Xerox provisions</span></strong>" giving the seller direct enforcement rights against the buyer's debt commitment letters. SunGard provisions are a system, not a single clause; they are how the entire signing-to-closing risk allocation between PE buyer and target gets compressed into the RTF.</p>
+
+  <h4>Regulatory MAE / efforts cliff</h4>
+  <p>A <strong><span class="term" data-term="regulatory-mae">"Regulatory MAE"</span></strong> is a defined sub-set of the burdensome-condition trigger, sometimes set at a different (lower) threshold than the general MAE: it captures regulator-imposed remedies that, alone or in aggregate, would have a defined material effect on the combined company. The <strong>"<span class="term" data-term="efforts-cliff">efforts cliff</span>"</strong> is the negotiation phenomenon where a small change in the verb (RBE → HOHW) triggers a wholesale rewriting of every related clause: divestiture cap, RTF, MAC trigger, financing condition. Partner-level shorthand: "if we move the verb, we move the box".</p>
+
+  <p><strong>Symmetric termination fees:</strong> seller may also owe a fee (a "<span class="term" data-term="break-fee">break fee</span>" or "termination fee") if it accepts a superior proposal from another bidder (pulling out of the deal mid-process). UK Takeover Code Rule 21.2 generally prohibits target break fees in public takeovers (since 2011 amendments), with limited exceptions.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 06 (Deal Structures) &mdash; the antitrust effort clause and divestiture cap are anchored at the structural-choice stage; share / asset / scheme / offer all sit at different points on the regulatory timetable. Module 07 (SPA) &mdash; CPs cross-reference defined terms (Material Adverse Effect, Fundamental Warranties, Bring-Down).</li>
+      <li><strong>Forwards:</strong> Module 09 (Interim &amp; MAC) &mdash; the <em>AB Stable</em> lesson is that a buyer can win on the <strong>covenant</strong> side what it cannot win on the MAC side, so the no-MAC CP and the ordinary-course covenant must be read together. Module 10 (Closing) &mdash; the bring-down certificate is the closing-day instrument that operationalises the bring-down CP. Module 11 (Purchase Price) &mdash; long signing-to-closing gaps are more painful for the seller in a Locked Box deal (no leakage protection, ticking-fee economics) and more painful for the buyer in a Completion Accounts deal (more time for value to leak away). Module 14 (W&amp;I) &mdash; the bring-down disclosure mechanic must align with the W&amp;I policy's "no-claims declaration" and warranty-spreadsheet exercise, or the insurer can deny coverage.</li>
+      <li><strong>Domino effect:</strong> if you extend the Long Stop by 3 months, the bring-down date moves; a fresh Disclosure Letter may be needed; the W&amp;I policy may be upcharged; ticking-fee accrual lengthens. If you move from RBE to HOHW, the divestiture cap, the RTF size, the financing condition, the MAC trigger and the burdensome-condition definition all have to move in sympathy. Move any one lever and three or four others have to follow.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>A CP suspends the obligation to close until satisfied or waived; failure of a CP gives termination rights but no damages claim (covenants do).</li>
+      <li>Big three regulatory CPs: antitrust, FDI / national security, sectoral. Plus corporate, third-party consents, bring-down of R&amp;Ws, no-MAC.</li>
+      <li>HSR (US) thresholds 2026: $133.9m / $535.5m / size-of-person; 30-day waiting period; Second Request adds 6–12 months. Vocabulary: timing agreement, pull-and-refile, fix-it-first, hold-separate, divestiture cap, burdensome condition, IEO, clean-team protocol.</li>
+      <li>EUMR (EU) primary thresholds: combined worldwide &gt;€5bn AND each of two parties EU-wide &gt;€250m, subject to two-thirds rule. Standstill obligation (Art. 7); fines up to 10% worldwide turnover (cumulative for failure-to-notify and standstill — <em>Altice</em>).</li>
+      <li>CMA (UK) post-DMCC thresholds (1 Jan 2025): target UK turnover &gt;£100m; share-of-supply 25%; new acquirer hybrid threshold &gt;33% &amp; £350m. Notification voluntary but call-in is real (<em>Microsoft / Activision</em>, October 2023).</li>
+      <li>Gun-jumping landmark fines: Altice €115.15m (final, after 2023 ECJ further reduction of failure-to-notify fine), Marine Harvest €20m, Illumina €432m (annulled by ECJ September 2024; Commission formally withdrew prohibition, divestiture and fine 6 September 2024).</li>
+      <li>FDI: CFIUS / FIRRMA captures non-controlling investments in TID US Businesses; CFIUS Final Rule November 2024 expands mitigation-breach penalties to a four-prong matrix; UK NSI Act has 17 mandatory sectors (failure = void deal); EU FDI Regulation 2019/452 revision endorsed at first reading 10 February 2026, application expected late 2027 / early 2028.</li>
+      <li>MAC / MAE: only one Delaware case has ever found a MAE — <em>Akorn v. Fresenius</em> (2018). Test is "durationally significant" — years not months — burden on buyer; buyer also bears industry / macro risk via carve-outs (subject to disproportionate-effect exceptions). Modern MAE drafting pairs with a tight ordinary-course covenant: <em>AB Stable</em> taught buyers to win on the covenant where they cannot win on MAE.</li>
+      <li>Efforts spectrum: "use efforts" → reasonable → commercially reasonable → all reasonable → best → hell-or-high-water. Each step adds buyer obligation. Pure HOHW is rare; modal compromise is RBE + divestiture cap + burdensome-condition carve-out.</li>
+      <li>Long Stop Date is the deal's outside date; ticking fees compensate seller for delay; reverse termination fees price buyer's regulatory walk-away option (typically 3–8% equity value); naked vs. financing-conditional RTFs differ on whether specific performance is excluded; SunGard provisions package the modern PE-deal architecture (Marketing Period, financing-conditional RTF, Xerox enforcement rights).</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards →</a>
+    <a href="../practice/quiz.html">Quiz this module →</a>
+    <a href="../practice/scenarios.html">Try scenarios →</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="07-spa-structure.html" class="prev">The SPA: Structure, Recitals &amp; Definitions</a>
+    <a href="09-interim-period.html" class="next">Interim Period &amp; MAC/MAE</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

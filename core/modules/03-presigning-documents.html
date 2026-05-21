@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Module 03 — Pre-Signing Documents · M&amp;A Course</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="module-id" content="03">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><a href="../index.html">M&amp;A Course</a></span>
+  <nav>
+    <a href="../index.html">Modules</a>
+    <a href="../practice/flashcards.html">Flashcards</a>
+    <a href="../practice/quiz.html">Quiz</a>
+    <a href="../practice/scenarios.html">Scenarios</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<main class="page">
+  <div class="mod-header">
+    <div class="mod-num">Module 03</div>
+    <h1>Pre-Signing Documents</h1>
+    <p class="subtitle">NDA, LOI, MOU, Term Sheet, Heads of Terms, Exclusivity, Process Letters &mdash; the short instruments that set the legal architecture of an M&amp;A deal before the SPA exists.</p>
+  </div>
+
+  <div class="lo">
+    <h4>Learning objectives</h4>
+    <ul>
+      <li>Distinguish a <span class="term" data-term="nda">Non-Disclosure Agreement (NDA)</span> from a <span class="term" data-term="loi">Letter of Intent (LOI)</span> / <span class="term" data-term="mou">Memorandum of Understanding (MOU)</span> / <span class="term" data-term="term-sheet">Term Sheet</span> / <span class="term" data-term="heads-of-terms">Heads of Terms</span> and explain why parties use one rather than the other in different contexts.</li>
+      <li>Identify which provisions in a pre-signing document are intended to be legally binding (confidentiality, exclusivity, costs, governing law, jurisdiction) and which are not (price, structure, key commercial terms), and articulate the legal effect of "<span class="term" data-term="subject-to-contract">subject to contract</span>" / "no binding obligation" language.</li>
+      <li>Explain the standstill, residuals, non-solicit, term and return-or-destroy mechanics of an NDA, and identify when each is most heavily negotiated.</li>
+      <li>Compare pre-contractual liability across English law (no general duty of good faith &mdash; <em>Walford v Miles</em>), US law (limited under <span class="term" data-term="promissory-estoppel">promissory estoppel</span> &mdash; Restatement (Second) of Contracts &sect;90), and civil law (<span class="term" data-term="culpa-in-contrahendo">culpa in contrahendo</span> under German B&uuml;rgerliches Gesetzbuch (BGB &mdash; German Civil Code) &sect;311(2) and Italian Civil Code Article 1337).</li>
+      <li>Describe an <span class="term" data-term="exclusivity-clause">exclusivity</span> / <span class="term" data-term="no-shop">no-shop</span> provision (typical 4&ndash;12 weeks), a <span class="term" data-term="break-fee">break-fee</span> mechanism, and the public-company "<span class="term" data-term="fiduciary-out">fiduciary out</span>".</li>
+    </ul>
+  </div>
+
+  <div class="why">
+    <strong>Why this matters in practice.</strong> Pre-signing documents look harmless &mdash; they are short, often signed before lawyers do deep work and frequently labelled "non-binding". They are not harmless. A poorly drafted NDA can let a competitor walk away with the seller's customer list and use it freely under a residuals clause. A loose LOI can convert into binding obligations in a German court under <em>culpa in contrahendo</em> (Latin: "fault in contracting"). A no-shop without a fiduciary out can expose target directors of a US public company to a <em>Revlon</em> claim by shareholders. And the choice of governing law in a six-page term sheet can determine whether good-faith negotiation is enforceable at all. M&amp;A lawyers spend disproportionate time on these documents because they set the legal architecture for everything that follows.
+  </div>
+
+  <aside class="lever both">
+    <h5>Partner phrasebook &mdash; what you'll actually hear</h5>
+    <p>If a senior M&amp;A lawyer drops one of these phrases in a meeting, you should not need to ask:</p>
+    <ul>
+      <li><strong>"Go-shop"</strong> &mdash; <span class="term" data-term="go-shop">a post-signing solicitation window</span> (typically 25&ndash;50 days) during which the target board can actively shop the deal. Common in PE take-privates (Dell 2013, Twitter pre-Musk) where the board wants comfort that it has tested the market. Lower break fee usually applies during the go-shop window than after; bidders surfacing during the window get "excluded party" status.</li>
+      <li><strong>"Matching rights"</strong> &mdash; <span class="term" data-term="matching-rights">existing buyer's right</span> to be told of, and given 3&ndash;5 business days to match or beat, any superior proposal received by the target. Usually <em>perpetual</em> &mdash; each material change in the alternative offer triggers a fresh notice period.</li>
+      <li><strong>"Specific performance under SunGard"</strong> &mdash; on a leveraged deal, the seller's right to compel BidCo to draw down the equity commitment and force the lenders to fund, conditional on satisfaction of the SunGard-clean closing conditions. The closer in spirit to a "hell-or-high-water" obligation on the financing side.</li>
+      <li><strong>"Hard vs. soft irrevocables"</strong> &mdash; in UK public M&amp;A, written undertakings from target shareholders to accept the offer. <em>Hard</em> irrevocable: binds even if a competing offer at a higher price emerges. <em>Soft</em>: falls away on a competing offer at a higher price (often by a defined margin, e.g. 5%). Hardness directly affects deal certainty.</li>
+      <li><strong>"Non-reliance language"</strong> &mdash; NDA / LOI clauses (and later the SPA) stating the buyer relies only on the express representations and not on any pre-contractual statements. <em>RAA Management v. Savage Sports</em> (Del. 2012) <em>upheld</em> a non-reliance disclaimer and dismissed the buyer's fraud claim &mdash; making it a powerful pro-disclaimer authority that buyers must negotiate around.</li>
+      <li><strong>"Wall-cross"</strong> &mdash; bringing a counterparty (e.g. a major shareholder) "over the wall" to share material non-public information, with the counterparty agreeing to insider-trading restrictions until the information is public. The verb form ("we'll wall-cross him on Thursday") signals a formalised confidentiality and trading-restriction regime.</li>
+      <li><strong>"Fiduciary out"</strong> &mdash; carve-out from the no-shop letting the target board terminate to accept a Superior Proposal, subject to matching rights and a break fee. Mandatory in US public M&amp;A under <em>Revlon</em>. UK structure replaces it with the Takeover Code's structural protections.</li>
+      <li><strong>"Sungard-clean"</strong> &mdash; the discipline that the financing conditions in a debt commitment letter are no broader than the SPA closing conditions; the buyer cannot be left signed but unfunded. See section below.</li>
+    </ul>
+  </aside>
+
+  <h2>The Non-Disclosure Agreement (NDA) / Confidentiality Agreement</h2>
+
+  <p>The <span class="term" data-term="nda">NDA</span> (also called a <span class="term" data-term="confidentiality-agreement">Confidentiality Agreement</span>, or "CA") is the first contract in almost every M&amp;A transaction. It allows the seller to share commercially sensitive information with the buyer (or in an auction, with multiple bidders) without that information leaking to competitors, employees, customers or the press. The NDA is typically signed before any data room is opened.</p>
+
+  <p><strong>Mutual vs. one-way.</strong> A <span class="term" data-term="one-way-nda">one-way NDA</span> protects only the seller's information; a <span class="term" data-term="mutual-nda">mutual NDA</span> protects both sides. Private equity (PE) buyouts and trade acquisitions are usually one-way; mergers of equals and joint ventures are mutual. In an auction the seller's bid letter mandates the form &mdash; bidders take it largely as drafted.</p>
+
+  <p><strong>Term.</strong> Two to five years is standard, perpetual for trade secrets. Shorter favours buyers; longer favours sellers.</p>
+
+  <p><strong>Permitted uses ("use clause").</strong> The "Permitted Purpose" &mdash; almost always "to evaluate a possible transaction with Discloser" &mdash; is a critical drafting pivot. A narrow use clause functions as an <em>implicit standstill</em>: if the buyer cannot use the information for any purpose other than evaluating an agreed transaction, it cannot launch a hostile tender offer or proxy contest using what it learned (<em>Martin Marietta v. Vulcan Materials</em>, 56 A.3d 1072 (Del. Ch. 2012)). Compare <em><span class="term" data-term="raa-management">RAA Management v. Savage Sports Holdings</span></em>, 45 A.3d 107 (Del. 2012), where the Delaware Supreme Court <strong>upheld</strong> a non-reliance / advance fraud-claim waiver in an NDA and dismissed the buyer's claim arising from undisclosed contingent liabilities. <em>RAA</em> is a powerful <strong>pro-disclaimer authority</strong>: a non-reliance clause in the NDA is upstream of the buyer's later misrepresentation claim under the SPA, and a tight clause can extinguish that claim. Buyers must negotiate around it; sellers know it is a powerful shield.</p>
+
+  <p><strong>Permitted disclosures.</strong> The NDA permits disclosure to "Representatives" &mdash; directors, officers, employees, advisers, financing sources &mdash; on a "need-to-know" basis, with the receiving party contractually responsible for breaches by its Representatives. PE funds push to include <em>potential</em> debt providers; sellers resist because each addition expands the leak surface area.</p>
+
+  <p><strong>Standstill.</strong> A <span class="term" data-term="standstill">standstill</span> is an undertaking by the receiving party not to acquire shares, launch a tender offer, solicit proxies or otherwise seek control of the disclosing party for a defined period (commonly 12&ndash;24 months). Standstills are nearly universal in NDAs covering public-company targets and nearly absent in private deals.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Public-target standstills must be drafted around the City Code's "put up or shut up" rule (Rule 2.6) and the prohibition on offer-related arrangements (Rule 21.2).</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>12&ndash;24 months standard; Delaware courts enforce strictly, including the implicit standstill embedded in a use clause.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>National law governs. In Germany standstills are enforceable but cannot offend BGB &sect;138 (<em>sittenwidrig</em>, "contrary to good morals"); French and Italian competition law impose similar limits.</p></aside>
+  </div>
+
+  <p><strong>Residuals clause.</strong> A <span class="term" data-term="residuals-clause">residuals clause</span> permits the buyer to use information "retained in the unaided memory" of its representatives. Pushed by sophisticated buyers (especially PE funds with multiple portfolio companies in the same sector) and resisted by sellers. Risk for the seller: the clause can effectively gut the NDA, because proving "use of document" rather than "memory of person" is evidentially very hard. Defensive drafting: limit residuals to "general industry knowledge"; carve out trade secrets, customer lists, pricing data, source code and personally identifiable information.</p>
+
+  <p><strong>Non-solicit.</strong> A <span class="term" data-term="non-solicit">non-solicit</span> clause prohibits the buyer from hiring (or soliciting) the seller's employees for 12&ndash;24 months. Carve-outs: general advertisements; inbound applications; ex-employees. California treats most non-solicits as unenforceable under Business and Professions Code &sect;16600; the US Federal Trade Commission's (FTC) 2024 attempt to ban non-competes nationwide was permanently enjoined by the US District Court for the Northern District of Texas (<em>Ryan LLC v. FTC</em>, 2024). The FTC <strong>dropped its appeal on 5 September 2025</strong> and abandoned the rule, shifting to case-by-case enforcement against allegedly anticompetitive non-competes under Section 5 of the FTC Act. UK courts apply a "reasonableness" test &mdash; broad non-solicits attached to NDAs survive only if narrowly drawn.</p>
+
+  <p><strong>Return-or-destroy.</strong> The <span class="term" data-term="return-or-destroy">return-or-destroy</span> clause provides that, at the end of discussions, the buyer returns hard copies and destroys electronic copies, with a written officer's certificate. Standard carve-outs: automated back-ups not readily accessible; documents lawyers must retain for professional-conduct reasons; board minutes recording the decision.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; residuals clause</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> A broad residuals clause covering "any information retained in unaided memory" so that deal-team members can move on to the next deal without forensic checking.</li>
+      <li><strong>Seller wants:</strong> No residuals clause. Failing that, an explicit carve-out for trade secrets, customer-identifying information, pricing data, source code and personal data.</li>
+      <li><strong>Typical compromise:</strong> A residuals clause limited to "general industry knowledge" with explicit carve-outs for the categories above; sometimes paired with disclosing the most sensitive material in tranches via a clean team (see Module 04).</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>No defined "purpose"</strong> &mdash; the receiving party can argue it can use the information for "any purpose related to its business".</li>
+      <li><strong>No requirement that representatives be bound.</strong> Some NDAs say the buyer "shall use reasonable efforts to ensure" representatives comply. Under English law that creates an evidential gap if a representative leaks. Better wording: the buyer is "responsible for any breach by its Representatives as if such breach were committed by the buyer itself".</li>
+      <li><strong>Boilerplate jurisdiction clause that doesn't fit.</strong> A New York-law NDA over a German target whose information will live on a German data room creates evidentiary headaches.</li>
+      <li><strong>No injunction language.</strong> Sophisticated NDAs include a stipulation that breach causes "irreparable harm for which damages would be inadequate" so the seller can obtain interim relief without arguing about it.</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>Worked example &mdash; Martin Marietta-style implicit standstill</h5>
+    <p>Buyer signs a one-way NDA with a software target. Use clause: "Recipient may use the Confidential Information solely to evaluate a possible negotiated business combination with Discloser." Eight months later the buyer launches a hostile tender offer. <em>Martin Marietta v. Vulcan Materials</em> logic: launching a hostile bid is not "evaluating a negotiated combination" &mdash; the use clause operates as an implicit standstill and the court enjoins the bid. The buyer should have negotiated an express carve-out for unsolicited offers.</p>
+  </aside>
+
+  <h2>Letter of Intent (LOI), Memorandum of Understanding (MOU), Term Sheet, Heads of Terms</h2>
+
+  <p>These four labels describe substantially the same document &mdash; a short pre-signing instrument capturing the <em>commercial outline</em> of a possible transaction &mdash; but the label varies by jurisdiction and context.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Label</th><th>Where used</th><th>Style</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Letter of Intent (LOI)</td><td>US, common in M&amp;A</td><td>Letter form, buyer to seller</td></tr>
+      <tr><td>Memorandum of Understanding (MOU)</td><td>Government, institutional, civil-law M&amp;A</td><td>Memorandum form</td></tr>
+      <tr><td>Term Sheet</td><td>Venture capital and PE; M&amp;A in US tech</td><td>Bullet-point outline, often jointly drafted</td></tr>
+      <tr><td>Heads of Terms (or "Heads of Agreement")</td><td>UK and Commonwealth, commercial deals</td><td>Joint or buyer-issued document</td></tr>
+    </tbody>
+  </table>
+
+  <p>The substance is what matters, not the label. All four typically capture: parties; perimeter of the target; price (or range, or formula); structure (share / asset / merger); conditions to signing (DD, financing, board approval); timetable; binding terms (confidentiality, exclusivity, costs, governing law); and a "subject to contract" disclaimer.</p>
+
+  <h3>What is binding vs. non-binding</h3>
+
+  <p>The critical drafting question:</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Provision</th><th>Binding?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Price</td><td>No</td></tr>
+      <tr><td>Structure</td><td>No</td></tr>
+      <tr><td>Key commercial terms</td><td>No</td></tr>
+      <tr><td>Confidentiality</td><td>Yes</td></tr>
+      <tr><td>Exclusivity / no-shop</td><td>Yes</td></tr>
+      <tr><td>Costs / break-up payment</td><td>Yes</td></tr>
+      <tr><td>Governing law / jurisdiction</td><td>Yes</td></tr>
+      <tr><td>Standstill (if applicable)</td><td>Yes</td></tr>
+      <tr><td>Good-faith negotiation</td><td>Jurisdiction-specific</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Pre-contractual liability and "subject to contract"</h3>
+
+  <div class="juris-grid">
+    <aside class="juris uk">
+      <h5>UK (English law)</h5>
+      <p>"<span class="term" data-term="subject-to-contract">Subject to contract</span>" is a powerful talisman. In <em>RTS Flexible Systems v. Molkerei Alois M&uuml;ller</em> [2010] UKSC 14 the Supreme Court reaffirmed that the wording prevents formation of a binding agreement until the formal contract is executed &mdash; although parties' conduct can in some cases override. In <em><span class="term" data-term="walford-v-miles">Walford v Miles</span></em> [1992] 2 AC 128, Lord Ackner held that "the concept of a duty to carry on negotiations in good faith is inherently repugnant to the adversarial position of the parties when involved in negotiations". A "lock-in" agreement (positive duty to negotiate in good faith) is unenforceable for uncertainty; a "lock-out" agreement (negative duty not to negotiate with third parties for a defined period) is enforceable. There is no general duty of good faith in English contract law. Pre-contractual liability claims must be pleaded under specific causes of action: misrepresentation (Misrepresentation Act 1967), breach of confidence, or proprietary estoppel.</p>
+    </aside>
+    <aside class="juris us">
+      <h5>US (Delaware)</h5>
+      <p>The Type I / Type II preliminary-agreement framework was articulated by Judge Pierre Leval in <em><span class="term" data-term="teachers-insurance-v-tribune">Teachers Insurance &amp; Annuity Association of America v. Tribune Co.</span></em>, 670 F. Supp. 491 (S.D.N.Y. 1987) and adopted by Delaware in <em>SIGA Technologies v. PharmAthene</em>, 132 A.3d 1108 (Del. 2015). A <strong>Type I</strong> preliminary agreement (all material terms agreed; binding subject only to formalisation) is enforceable. A <strong>Type II</strong> preliminary agreement (obligation to negotiate in good faith on open terms) can be enforceable; <em>SIGA</em>, on remand, awarded approximately <strong>$113 million</strong> in expectation damages for breach. Note: <em>Texaco v. Pennzoil</em> (Texas, 1987) is a different case &mdash; a tortious-interference matter relating to the Pennzoil/Getty merger, not a preliminary-agreement framework case. Restatement (Second) of Contracts &sect;90 (<span class="term" data-term="promissory-estoppel">promissory estoppel</span>) provides limited reliance-based recovery where a promise reasonably induces detrimental action.</p>
+    </aside>
+    <aside class="juris eu">
+      <h5>EU (civil law)</h5>
+      <p><em><span class="term" data-term="culpa-in-contrahendo">Culpa in contrahendo</span></em> (Latin: "fault in contracting") was developed by Rudolf von Jhering in 1861 and codified in 2002 in German BGB &sect;311(2) read with &sect;&sect;280(1) and 241(2). Pre-contractual breach of duties of disclosure, loyalty and care gives rise to damages &mdash; typically limited to the <em>negative interest</em> (out-of-pocket costs and lost opportunities) rather than <em>positive interest</em> (profits expected from the deal). Italy: Codice civile Art. 1337. France: Code civil Arts. 1112 and 1112-1 (post-2016 reform) &mdash; explicit duty of good faith in pre-contractual negotiations; bad-faith breaking off gives rise to liability, but damages do not cover lost deal profits.</p>
+    </aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; binding vs. non-binding scope</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> Maximum binding effect on the seller (long exclusivity, exclusive dealing, no shop), minimum binding effect on the buyer (no obligation to proceed if it doesn't like what it sees).</li>
+      <li><strong>Seller wants:</strong> Minimum binding effect on itself (short exclusivity, fiduciary out), some binding effect on the buyer (a minimum process letter, cost reimbursement if the buyer walks).</li>
+      <li><strong>Typical compromise:</strong> A short exclusivity period (4&ndash;8 weeks initially, extendable by mutual agreement); confidentiality fully binding; limited cost-reimbursement clause if the buyer walks for reasons outside agreed deal-breakers; no break fee from seller to buyer in private deals (these are very unusual outside public M&amp;A).</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>Implied binding obligations.</strong> A long, detailed LOI with no clear "non-binding" disclaimer may, especially in civil-law jurisdictions, look like a binding contract.</li>
+      <li><strong>"Best efforts" or "good faith" obligations to negotiate.</strong> Under English law these are unenforceable; under Delaware law (Type II) they may be enforceable; under German law they are mostly redundant because BGB &sect;311(2) already imposes them.</li>
+      <li><strong>No survival clause for confidentiality and exclusivity.</strong> If the LOI terminates these collapse. Always provide explicit survival.</li>
+      <li><strong>Inconsistent governing law.</strong> A binding exclusivity provision in an English-law LOI but the wider M&amp;A on US legal forms &mdash; courts will apply the LOI's governing law to that provision.</li>
+      <li><strong>No definition of "exclusivity period start date".</strong> Was it the date of execution? The date of signature by the last party? Begin and end dates should be in the document.</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>Worked example &mdash; "non-binding" LOI with German seller</h5>
+    <p>A US buyer issues a six-page LOI to a German <em>Mittelstand</em> (medium-sized, family-owned) target &mdash; countersigned, headed "Non-binding". After three months of DD the buyer walks for "general portfolio fit". The seller sues under BGB &sect;311(2) for <em>culpa in contrahendo</em> damages &mdash; &euro;1.4m of adviser fees plus a lost alternative bidder. A German court will likely award negative-interest damages if the withdrawal was not justified, <em>despite</em> the "non-binding" label. The buyer's lawyers should have inserted an explicit pre-contractual liability waiver, addressed cost responsibility in the LOI, and limited reliance.</p>
+  </aside>
+
+  <h2>Exclusivity / No-Shop / Lock-Out</h2>
+
+  <p>An <span class="term" data-term="exclusivity-clause">exclusivity</span> provision ("<span class="term" data-term="no-shop">no-shop</span>" in US deals, "lock-out" in UK private deals) prevents the seller from soliciting, encouraging or discussing competing offers for a defined period.</p>
+
+  <p><strong>Typical duration.</strong> 4&ndash;12 weeks for private deals. PE buyers push 8 weeks with extension; strategic buyers 4&ndash;6 weeks. Beyond 12 weeks signals bargaining-power imbalance.</p>
+
+  <p><strong>Scope.</strong> Covers <em>active</em> solicitation (initiating contact with rivals), <em>passive</em> receipt (substantive response to unsolicited approaches), and <em>dissemination</em> (providing DD to rivals). "No-talk" prohibits all discussions; "no-solicit" permits receiving (but not encouraging) unsolicited approaches.</p>
+
+  <p><strong>Break fee.</strong> A <span class="term" data-term="break-fee">break fee</span> is a sum the seller pays the buyer on termination to take a competing offer. US public M&amp;A: 2.5&ndash;4% of equity value (ABA M&amp;A Deal Points Studies). UK public M&amp;A: Takeover Code <strong>Rule 21.2</strong> generally prohibits offer-related arrangements that benefit the bidder. <em>Three narrow exceptions</em> permit a break fee, capped at <strong>1% of aggregate offer value on a fully diluted basis</strong> and payable only on a competing offer becoming or being declared unconditional: (i) where the target is in a <strong>formal sale process</strong> publicly announced under Rule 2.6(d); (ii) <strong>white-knight</strong> rescue of a hostile target (the target may pay a break fee to a friendly bidder competing with the hostile); (iii) where the target is in <strong>serious financial distress</strong>. <span class="term" data-term="reverse-break-fee">Reverse break fees</span> (buyer to seller, e.g., on regulatory or financing failure) are permitted in both jurisdictions and typically run higher (5&ndash;8% of equity value in heavily-regulated US deals because they underwrite a specific identifiable risk). <strong>2024 Rule 21 reforms (RS 2024/1, in force 3 February 2025):</strong> the Panel modernised Rule 21 to allow "ordinary course" or non-material actions during an offer period without Panel consent, and notably permits a 1% break fee in "Rule 21.1 transactions" (a competing transaction the bidder offers to the target during the offer period), expanding the exception list above.</p>
+
+  <aside class="lever both">
+    <h5>Worked numerical example &mdash; break-fee asymmetry</h5>
+    <p>On a £1bn target: a US-style <strong>termination fee</strong> at 2.5&ndash;3% = £25&ndash;30m; a <strong>reverse termination fee</strong> for antitrust failure at 5&ndash;7% = £50&ndash;70m. The asymmetry is not arbitrary &mdash; it reflects the <em>specific identifiable risk</em> being underwritten. A reverse break fee is the seller's compensation for the deal failing on a buyer-side risk (financing, antitrust, FDI). UK public deals are governed by Rule 21.2's 1% cap on break fees; reverse break fees are not subject to that cap.</p>
+  </aside>
+
+  <p><strong>Fiduciary out.</strong> A <span class="term" data-term="fiduciary-out">fiduciary out</span> is a contractual carve-out allowing the target board to terminate to accept a "<span class="term" data-term="superior-proposal">Superior Proposal</span>" where its fiduciary duties require. Mandatory in US public M&amp;A under the Delaware <em>Revlon</em> doctrine (<em>Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc.</em>, 506 A.2d 173 (Del. 1986)). Standard US structure: target may <em>consider</em> (not solicit) unsolicited proposals; on Superior Proposal determination, board may terminate subject to a "match right" (4&ndash;5 business days) and payment of break fee.</p>
+
+  <div class="juris-grid">
+    <aside class="juris uk"><h5>UK</h5><p>Public targets &mdash; <strong>Takeover Code Rule 21.2</strong> restricts offer-related arrangements; <strong>Rule 25</strong> requires the target board to publish its substantive recommendation; <strong>Rule 2.7</strong> requires a firm intention announcement only with committed financing. Together these structural protections substitute for an explicit contractual fiduciary out: the target board's duty to recommend a higher offer flows from the Code rather than from a contract clause. Private targets &mdash; fiduciary out rarely included.</p></aside>
+    <aside class="juris us"><h5>US (Delaware)</h5><p>Fiduciary outs universal in public M&amp;A. Match right + break fee (2.5&ndash;4%) is the standard package.</p></aside>
+    <aside class="juris eu"><h5>EU</h5><p>Germany (WpÜG), France (AMF), Italy (TUF/Consob) &mdash; statutory board fiduciary duties; explicit fiduciary outs less codified.</p></aside>
+  </div>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; exclusivity period</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> 12 weeks, automatically renewable for further 4-week increments while the buyer is "actively progressing diligence and the SPA". No fiduciary out.</li>
+      <li><strong>Seller wants:</strong> 4 weeks, no automatic extension; right to terminate if buyer drops below price. Fiduciary out for any superior proposal.</li>
+      <li><strong>Typical compromise:</strong> 6&ndash;8 weeks initial period; one extension of 2&ndash;4 weeks by mutual written consent; carve-out for receipt of unsolicited approaches with notification to buyer; in public M&amp;A, full fiduciary out with match right and modest break fee.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common drafting pitfalls</h5>
+    <ul>
+      <li><strong>No defined "competing offer".</strong> Without a clear definition, the seller cannot know whether a friendly chat at an industry conference triggered breach.</li>
+      <li><strong>Exclusivity "for the duration of negotiations"</strong> &mdash; duration is undefined; buyer can extend indefinitely by stringing the seller along.</li>
+      <li><strong>No mutual termination.</strong> If the buyer falls silent, the seller is stuck with exclusivity.</li>
+      <li><strong>Break fee disproportionate to losses.</strong> In English law, a break fee that is a <em>penalty</em> (rather than a genuine pre-estimate of loss) is unenforceable (<em>Cavendish Square Holding v. Talal El Makdessi</em> [2015] UKSC 67 reformulated the test, but penalty doctrine survives).</li>
+    </ul>
+  </aside>
+
+  <aside class="source-deck">
+    <h5>Worked example &mdash; unsolicited approach mid-exclusivity</h5>
+    <p>A PE firm signs a 12-week exclusivity letter with a &pound;200m target prohibiting the seller from "soliciting, encouraging or responding to" competing offers. Six weeks in, a trade buyer makes an unsolicited offer at &pound;230m. The seller's CEO replies: "We are flattered but in exclusivity until 31 October &mdash; please come back then." Probably not breach &mdash; the response is non-substantive and does not "encourage". A reply of "we would happily talk if you can do &pound;250m" would breach. Best practice: route every unsolicited approach through counsel and document the response in writing.</p>
+  </aside>
+
+  <h2>Process Letters</h2>
+
+  <p>In an auction (structured competitive sale run by the seller's investment bank), the <span class="term" data-term="process-letter">process letter</span> is the bank's formal communication to qualified bidders setting the round's rules.</p>
+
+  <p>Phase I process letter requests a <em>non-binding indicative offer</em> (NBIO): indicative price (range or point), assumed perimeter, financing source, conditions, key DD requirements, timetable. Bidders shortlisted for Phase II are sent a process letter requesting <em>binding offers</em> with marked-up SPA, equity and debt commitment letters.</p>
+
+  <p>The process letter is not a contract, but specific provisions can bind (confidentiality of bid, procedural compliance, bid validity period). It is the seller's primary tool for maintaining <em>competitive tension</em>.</p>
+
+  <h2>Debt and equity commitment letters</h2>
+
+  <p>Once the buyer has indicated its bid, the next pre-signing question is: <em>where is the money?</em> For a strategic buyer with cash on balance sheet the answer is a board resolution and a treasury confirmation; for a private-equity (PE) sponsor or a leveraged strategic, the answer is a stack of <em>commitment papers</em> &mdash; binding (or near-binding) financing commitments executed in parallel with the SPA. The commitment papers are the document set the financing parties live and die by, and their alignment with the SPA is a constant area of pre-signing risk.</p>
+
+  <h3>The debt commitment papers</h3>
+
+  <p>A buyer-side <span class="term" data-term="debt-commitment-letter">debt commitment letter</span> ("commit papers") is normally delivered by the lead arranging banks (or a single arranger) to the buyer at signing of the SPA. It comprises four documents typically executed together:</p>
+
+  <ol>
+    <li><strong>Commitment letter.</strong> The headline document. Lists the committed lenders, the aggregate commitment amount per facility, the conditions to funding, the form of security and guarantee package, the syndication arrangements and the expiry date (typically the longstop date in the SPA, sometimes plus a buffer of 5&ndash;30 days). The commitments are several &mdash; each lender is committed only for its own ticket &mdash; though in larger deals the <em>backstop</em> mechanic effectively makes them joint by allowing the arranger to reallocate a defaulting lender's commitment to others.</li>
+    <li><strong>Term sheet.</strong> Attached to the commitment letter; sets out the substantive terms of the facilities (Term Loan A, Term Loan B, Revolving Credit Facility, second-lien, mezz, high-yield bridge as applicable), the financial covenants, the Excess Cash Flow sweep, the mandatory and voluntary prepayment regime, the negative covenants, the events of default and the <em>flex</em> rights of the arrangers (limited rights to change pricing, amortisation, structure within agreed bounds during syndication if the market is uncooperative).</li>
+    <li><strong><span class="term" data-term="fee-letter">Fee letter</span> (often redacted).</strong> Sets out arrangement fees, ticking fees (a fee that accrues to the arrangers between signing and closing to compensate for capital reserved against the commitment), underwriting fees and any market-flex fees. The fee letter is commercially sensitive and is normally separated from the commitment letter so that it can be redacted from any document made public (e.g. on a Schedule TO or a court file in a take-private). The redaction must comply with applicable disclosure rules &mdash; SEC staff has historically permitted fee-letter redaction in commitment papers attached to filings.</li>
+    <li><strong>Interim / bridge facility.</strong> On large PE deals where the planned long-term debt structure includes high-yield bonds whose issuance carries market risk, the buyer takes out a <em>bridge facility</em> &mdash; a fully-committed loan that funds the deal at closing if the bonds cannot be placed, and that the buyer commits to refinance into bonds within a defined window post-closing (typically 12&ndash;18 months). The bridge ensures certainty of funds at closing despite the issuance risk; it is expensive to keep outstanding (penalty pricing escalates), which is the buyer's incentive to refinance promptly.</li>
+  </ol>
+
+  <h3>SunGard-clean conditionality</h3>
+
+  <p>The single most important alignment between the commitment papers and the SPA is the <em>conditionality</em> alignment. The conditions in the commitment letter must not be broader than the conditions to the buyer's obligation to close under the SPA &mdash; otherwise the buyer can be left having signed a binding SPA with a contractually-due-to-close obligation, but with the lenders entitled to walk because of a condition not mirrored in the SPA. The market term for the disciplined alignment is <span class="term" data-term="sungard-clean">"SunGard-clean"</span>, named after the 2005 take-private of <strong>SunGard Data Systems</strong> by a <strong>Silver Lake-led consortium of seven PE sponsors</strong> (Bain Capital, Blackstone, Goldman Sachs Capital Partners, KKR, Providence Equity Partners, Silver Lake and TPG; deal value approximately <strong>$11.3bn</strong>, comprising ~$3.5bn equity and ~$8bn debt). Until SunGard, leveraged-finance commitment papers tended to drift in conditionality; SunGard crystallised the now-standard discipline.</p>
+
+  <p>The SunGard model has three components. (1) The financing is conditional only on the satisfaction (or waiver by the buyer) of the SPA's own conditions to closing &mdash; the lenders cannot impose <em>incremental</em> conditions. (2) The accuracy of representations is split between (a) the SPA reps, which are subject to <em>SunGard-list</em> qualifications (typically: only a defined set of "specified representations" &mdash; corporate existence, authority, capitalisation, no conflict, due execution, sanctions/anti-money-laundering compliance, the validity of the security &mdash; need to be accurate as a condition to funding) and (b) <em>"Specified Acquisition Agreement Representations"</em> &mdash; the SPA reps that the buyer can refuse to close on if breached, with the lenders bound by that determination. (3) "Material adverse effect" is defined identically (or by reference to) the SPA's MAE definition; any change must be re-papered into the commitment letter. The result is that the buyer's conditionality flows down to the lenders, and the lenders cannot independently fault the deal.</p>
+
+  <h3>UK certain funds requirement</h3>
+
+  <p>Where the deal is a UK public offer subject to the Takeover Code, an additional layer applies. <strong>Rule 2.7</strong> requires that an offeror making a firm intention announcement must have committed financing. The financial adviser must give a public <strong>Rule 24.8 cash confirmation</strong> &mdash; a statement that, in the adviser's opinion, the offeror has sufficient resources available to satisfy the cash consideration. The confirmation is given on a <span class="term" data-term="certain-funds">certain funds</span> basis: the adviser is personally exposed if the financing is not in fact certain. As a consequence, UK take-private financing carries a tighter standard than US LBO financing &mdash; the commitment papers must include "certain funds" provisions limiting the lenders' ability to invoke conditions or events of default during the offer period (with bright-line carve-outs typically only for fundamental events such as illegality or insolvency of the buyer).</p>
+
+  <h3>Equity commitment letters</h3>
+
+  <p>On a PE-led acquisition, the BidCo signing the SPA is a thin acquisition vehicle with no assets. The seller therefore cannot rely on the BidCo's covenant strength alone. The standard mechanism is a <span class="term" data-term="equity-commitment-letter">equity commitment letter (ECL)</span> from one or more PE funds in the sponsor's family of funds, committing to fund a defined equity contribution to BidCo at closing.</p>
+
+  <p>Three structural questions dominate the ECL. (1) <strong>Enforceability by the seller.</strong> The ECL is addressed to BidCo, but the seller wants the right to enforce it directly against the funds, particularly if BidCo is failing to draw the equity. In England, the parties confer this enforcement right by an express provision making the seller a third-party beneficiary under the Contracts (Rights of Third Parties) Act 1999; in the US, the equivalent is express third-party beneficiary status under the relevant state law (Delaware: clear designation, with explicit standing). (2) <strong>Cap and survival.</strong> The ECL is normally capped at the amount of the committed equity, and survives until closing or termination of the SPA. Any contingent obligation on the funds beyond that cap (e.g. a reverse break fee) must be separately documented, usually in a <em>Limited Guarantee</em> from the funds capped at the reverse break-fee amount. The seller's recourse against the funds is the <em>aggregate</em> of the ECL cap and the Limited Guarantee cap. (3) <strong>Conditions to drawing.</strong> The ECL is conditional only on the SPA's conditions being satisfied (or waived by BidCo with the funds' consent) and the simultaneous funding of the debt; no incremental conditions imposed by the funds. Otherwise the SunGard-clean discipline of the debt commitment is undermined on the equity side.</p>
+
+  <aside class="lever both">
+    <h5>Negotiation lever &mdash; commitment papers</h5>
+    <ul>
+      <li><strong>Buyer wants:</strong> broad lender flex on pricing/amortisation; widely defined specified representations limited to existential matters; long ticking-fee grace period; ability to accept SPA waivers/amendments without lender consent except on material economic terms.</li>
+      <li><strong>Seller wants:</strong> visibility on the commitment papers (typically delivered at signing); ECL with seller as enforceable third-party beneficiary; alignment of MAE definitions; lender consent rights drafted narrowly so that buyer cannot use lender consent as a back-door termination.</li>
+      <li><strong>Typical compromise:</strong> SunGard-clean conditionality with a tightly-scoped specified-representation list; ECL with seller as third-party beneficiary capped at equity contribution; Limited Guarantee for reverse break fee; quarterly ticking fee accruing from signing.</li>
+    </ul>
+  </aside>
+
+  <aside class="pitfall">
+    <h5>Common pitfalls &mdash; commitment papers</h5>
+    <ul>
+      <li>Conditionality misalignment: a condition in the commitment letter that is not mirrored in the SPA (e.g. "no event of default by the buyer in any of its other facilities" &mdash; the SPA has no such condition) leaves the buyer signed but unfunded.</li>
+      <li>Failing to update the bridge facility expiry to match a longstop extension; bridge mature pre-closing means no money on the day.</li>
+      <li>Equity commitment letter without third-party beneficiary status: seller is reduced to suing BidCo, which has no assets, and cannot directly compel the funds.</li>
+      <li>Treating the fee letter as boilerplate &mdash; flex fees can be material and must be modelled into the deal economics, particularly on volatile syndication markets.</li>
+    </ul>
+  </aside>
+
+  <h2>Letters of Comfort</h2>
+
+  <p>A <span class="term" data-term="letter-of-comfort">letter of comfort</span> is a parent's written assurance to a counterparty (usually a creditor) that it will support a subsidiary in meeting its obligations. Legal effect ranges from morally binding to fully guarantee-equivalent. <em>Kleinwort Benson Ltd v. Malaysia Mining Corporation Bhd</em> [1989] 1 WLR 379 (CA) held that "it is our policy to ensure that [subsidiary] is at all times in a position to meet its liabilities" was a <em>statement of present policy</em>, not contractual. In M&amp;A, comfort letters are inadequate substitutes for equity and debt commitment letters.</p>
+
+  <h2>Bid Letters: EOI / NBIO / Binding Offer</h2>
+
+  <p>Auction bidder submissions, in sequence:</p>
+
+  <ol>
+    <li><strong>Expression of Interest (EOI)</strong> &mdash; one-pager at the first stage confirming the bidder qualifies.</li>
+    <li><strong><span class="term" data-term="nbio">Non-Binding Indicative Offer (NBIO)</span> / Indication of Interest (IOI)</strong> &mdash; end of Phase I; price range, structure, conditionality, financing, DD focus, timetable.</li>
+    <li><strong><span class="term" data-term="binding-offer">Binding Offer</span></strong> &mdash; end of Phase II; firm price, marked-up SPA, equity/debt commitment letters, regulatory analysis. Typically expires after 5&ndash;10 business days.</li>
+  </ol>
+
+  <p>"Binding" is qualified &mdash; the bidder generally remains free to walk on confirmatory DD; what binds is the price not being withdrawn during the validity period and the process commitments.</p>
+
+  <aside class="note">
+    <h5>How this connects</h5>
+    <ul>
+      <li><strong>Backwards:</strong> Module 00 contract-formation principles (offer / acceptance / consideration / intention) explain why a "subject to contract" label can prevent formation; <a href="00-foundations.html">Module 00</a>'s entire-agreement / non-reliance architecture is the upstream of every NDA disclaimer; <a href="01-corporate-law.html">Module 01</a>'s <em>Revlon</em> doctrine is what makes the fiduciary out mandatory in US public deals; <a href="02-ma-landscape.html">Module 02</a>'s auction process is what these documents implement.</li>
+      <li><strong>Forwards:</strong> NDA non-reliance language &rarr; <a href="12-reps-and-warranties.html">Module 12 (reps / disclaimer architecture)</a> &rarr; <a href="13-indemnification.html">Module 13 (indemnification claim survival)</a>; LOI's "non-binding price" &rarr; <a href="11-purchase-price.html">Module 11 (closing accounts vs locked box)</a>; commitment papers &rarr; <a href="08-conditions-precedent.html">Module 08 (financing / regulatory CPs)</a> &rarr; <a href="10-closing.html">Module 10 (closing certainty)</a>; standstill &amp; deal protection &rarr; <a href="18-public-and-specialized.html">Module 18 (public M&amp;A)</a>; clean teams referenced &rarr; <a href="04-due-diligence.html">Module 04 (DD)</a>.</li>
+      <li><strong>Domino effect:</strong> shorter exclusivity (4 weeks &rarr; 2 weeks) &rarr; less time for buyer DD &rarr; broader Disclosure Letter &rarr; weaker reps &rarr; smaller indemnity package. A tighter NDA non-reliance clause &rarr; buyer's later misrepresentation claim under the SPA is partly extinguished &rarr; W&amp;I broker re-prices retention. Move financing from a fully-committed bridge to a "best efforts" market-flex package &rarr; lender flex re-papered &rarr; SPA reverse break fee gets bigger to bridge the certainty gap. If the LOI is NY-law and the SPA is English-law, the no-shop's enforceability and the residuals clause's interpretation each switch jurisdictions &mdash; check governing-law clauses match.</li>
+    </ul>
+  </aside>
+
+  <div class="recap">
+    <h3>Module recap</h3>
+    <ul>
+      <li>The NDA is the first contract of an M&amp;A deal; key levers are mutuality, term, use clause, standstill, residuals, non-solicit and return-or-destroy.</li>
+      <li>A narrow use clause functions as an implicit standstill (<em>Martin Marietta v. Vulcan</em>); a residuals clause can gut an NDA if not carefully bounded.</li>
+      <li>LOI / MOU / Term Sheet / Heads of Terms are labels for the same document type; substance not label governs effect.</li>
+      <li>Binding provisions in an LOI are typically confidentiality, exclusivity, costs, governing law, jurisdiction and (where relevant) standstill; price and structure are non-binding.</li>
+      <li>English law: no general duty of good faith (<em>Walford v Miles</em>); lock-in unenforceable, lock-out enforceable. Delaware: Type I / Type II preliminary-agreement framework originated in <em>Teachers Insurance &amp; Annuity Association v. Tribune Co.</em>, 670 F. Supp. 491 (S.D.N.Y. 1987) (Leval, J.) and adopted in <em>SIGA</em> (Del. 2015) ($113m on remand). Germany: BGB &sect;311(2) imposes pre-contractual duties.</li>
+      <li>Exclusivity (no-shop / lock-out) usually 4&ndash;12 weeks in private deals; US public M&amp;A no-shop runs to closing with break fee 2.5&ndash;4% and fiduciary out under <em>Revlon</em>; reverse break fees in regulated deals run higher (5&ndash;8%).</li>
+      <li>UK Takeover Code Rule 21.2: 1% break-fee cap with three exceptions (formal sale process, white-knight, financial distress), payable only on a competing offer becoming unconditional; 2024 reforms (RS 2024/1, in force 3 Feb 2025) added a "Rule 21.1 transactions" exception. Reverse break fees benefiting the target are permitted and not capped at 1%.</li>
+      <li>FTC's 2024 non-compete ban was permanently enjoined in <em>Ryan LLC v. FTC</em>; the FTC dropped its appeal on 5 September 2025 and now enforces case-by-case under Section 5 of the FTC Act.</li>
+      <li><em>RAA Management v. Savage Sports</em> (Del. 2012) <em>upheld</em> the NDA's non-reliance disclaimer &mdash; a pro-disclaimer authority buyers must negotiate around.</li>
+      <li>Process letters set auction rules; EOI &rarr; NBIO &rarr; binding offer is the standard sequence; "binding" is qualified by the right to walk on confirmatory DD.</li>
+      <li>Letters of comfort range from non-binding moral assurance to enforceable undertaking depending on wording (<em>Kleinwort Benson v. Malaysia Mining</em>).</li>
+      <li>Buyer-side debt commitment papers comprise (i) commitment letter, (ii) term sheet, (iii) fee letter (often redacted) with arrangement, ticking and underwriting fees, and (iv) interim/bridge facility for take-out high-yield uncertainty. SunGard-clean conditionality requires the lenders' funding conditions to be no broader than the SPA's closing conditions, with a defined "specified representations" list. UK take-private deals add the Rule 24.8 cash confirmation on a "certain funds" basis.</li>
+      <li>PE equity commitment letters: enforceable by seller as third-party beneficiary (Contracts (Rights of Third Parties) Act 1999 UK; express designation in Delaware), capped at equity contribution, conditioned only on the SPA's closing conditions; survive alongside any Limited Guarantee covering reverse break fees.</li>
+    </ul>
+  </div>
+
+  <div class="practice-links">
+    <a href="../practice/flashcards.html">Practice flashcards &rarr;</a>
+    <a href="../practice/quiz.html">Quiz this module &rarr;</a>
+    <a href="../practice/scenarios.html">Try scenarios &rarr;</a>
+  </div>
+
+  <nav class="mod-nav">
+    <a href="02-ma-landscape.html" class="prev">The M&amp;A Landscape &amp; Process</a>
+    <a href="04-due-diligence.html" class="next">Due Diligence</a>
+  </nav>
+</main>
+
+<script src="../assets/progress.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
